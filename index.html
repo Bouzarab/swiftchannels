@@ -395,8 +395,8 @@ section{padding:clamp(62px,8.5vw,108px) 0;position:relative}
 .pay-steps li::before{content:counter(p);display:grid;place-items:center;width:26px;height:26px;
   border-radius:50%;background:rgba(47,107,255,.16);border:1px solid var(--blue-deep);
   font-family:var(--mono);font-size:11.5px;color:var(--cyan)}
-.pay-steps b{display:block;font-size:14.5px;font-weight:600}
-.pay-steps span{display:block;font-size:13.2px;color:var(--muted-2);margin-top:2px}
+.pay-steps b{grid-column:2;display:block;font-size:14.5px;font-weight:600}
+.pay-steps span{grid-column:2;display:block;font-size:13.2px;color:var(--muted-2);margin-top:2px}
 @media(max-width:560px){
   .pay-row{flex-wrap:wrap;gap:8px}
   .pay-row dt{min-width:0;width:100%}
