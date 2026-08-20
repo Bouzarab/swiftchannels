@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swift Channels — IPTV subscriptions</title>
+<meta name="description" content="Order a monthly or yearly IPTV subscription, or start a free 24-hour test. Credentials delivered in minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   TOKENS — blue
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --night:#050A18;
+  --night-2:#080F22;
+  --panel:#0D162F;
+  --panel-2:#111E3D;
+  --line:#1B2C54;
+  --line-soft:#152444;
+
+  --blue:#2F6BFF;
+  --blue-hi:#5A8CFF;
+  --blue-deep:#1B49C4;
+  --cyan:#49D9FF;
+  --glow:rgba(47,107,255,.30);
+
+  --ice:#E9EFFC;
+  --muted:#93A6CC;
+  --muted-2:#5F739B;
+
+  --display:'Sora',system-ui,sans-serif;
+  --body:'Inter','Helvetica Neue',Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+
+  --pad:clamp(20px,5vw,60px);
+  --maxw:1200px;
+  --r:14px;
+  --r-sm:9px;
+  --ease:cubic-bezier(.22,.8,.24,1);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--night);color:var(--ice);
+  font-family:var(--body);font-size:16px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+::selection{background:var(--blue);color:#fff}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+
+/* ---- ambient field ---- */
+.aurora{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.aurora i{
+  position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;display:block;
+}
+.aurora i:nth-child(1){width:52vw;height:52vw;left:-14vw;top:-18vw;background:radial-gradient(circle,rgba(47,107,255,.42),transparent 68%);animation:float1 26s ease-in-out infinite}
+.aurora i:nth-child(2){width:44vw;height:44vw;right:-12vw;top:22vh;background:radial-gradient(circle,rgba(73,217,255,.20),transparent 68%);animation:float2 32s ease-in-out infinite}
+.aurora i:nth-child(3){width:40vw;height:40vw;left:26vw;bottom:-16vw;background:radial-gradient(circle,rgba(27,73,196,.34),transparent 70%);animation:float1 38s ease-in-out infinite reverse}
+@keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(6vw,5vh)}}
+@keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-5vw,7vh)}}
+
+.grid-lines{
+  position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(47,107,255,.055) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(47,107,255,.055) 1px,transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000,transparent 78%);
+  mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000,transparent 78%);
+}
+
+/* ---- scroll progress ---- */
+#bar{position:fixed;top:0;left:0;height:2px;width:0;z-index:90;
+  background:linear-gradient(90deg,var(--blue),var(--cyan));box-shadow:0 0 12px var(--glow)}
+
+/* ═══════════════ TYPE ROLES ═══════════════ */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--cyan);
+}
+.eyebrow::before{content:'';width:22px;height:1px;background:var(--cyan);opacity:.6}
+h1,h2,h3,.dsp{font-family:var(--display);letter-spacing:-.03em;line-height:1.03;font-weight:800}
+
+/* ═══════════════ BUTTONS ═══════════════ */
+.btn{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--body);font-size:14.5px;font-weight:600;
+  padding:13px 24px;border-radius:100px;border:1px solid transparent;
+  cursor:pointer;overflow:hidden;white-space:nowrap;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s,color .3s,background .3s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-blue{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;box-shadow:0 8px 26px -8px var(--glow)}
+.btn-blue:hover{box-shadow:0 14px 34px -8px rgba(47,107,255,.55)}
+.btn-blue::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.28),transparent 70%);
+  transform:translateX(-130%);transition:transform .7s var(--ease);
+}
+.btn-blue:hover::after{transform:translateX(130%)}
+.btn-ghost{border-color:var(--line);color:var(--ice);background:rgba(13,22,47,.6)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue-hi);background:rgba(47,107,255,.09)}
+.btn-sm{padding:9px 18px;font-size:13.5px}
+.btn-lg{padding:16px 30px;font-size:15.5px}
+
+/* ═══════════════ NAV ═══════════════ */
+.nav{position:sticky;top:0;z-index:70;transition:background .35s,border-color .35s,backdrop-filter .35s;
+  border-bottom:1px solid transparent}
+.nav.stuck{background:rgba(5,10,24,.78);backdrop-filter:blur(18px);border-bottom-color:var(--line-soft)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);height:70px;
+  display:flex;align-items:center;gap:30px}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
+.brand-mark{width:32px;height:32px;flex:none;border-radius:9px;position:relative;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center}
+.brand-mark::after{content:'';width:11px;height:11px;border-radius:50%;
+  background:#fff;box-shadow:0 0 12px #fff}
+.brand-name{font-family:var(--display);font-weight:800;font-size:17.5px;letter-spacing:-.02em}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:14px;color:var(--muted);position:relative;transition:color .25s}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:1.5px;width:0;
+  background:var(--cyan);transition:width .3s var(--ease)}
+.nav-links a:hover{color:var(--ice)}
+.nav-links a:hover::after{width:100%}
+
+/* ═══════════════ HERO ═══════════════ */
+.hero{position:relative;padding:clamp(46px,7vw,86px) 0 clamp(40px,6vw,70px)}
+.hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(28px,4vw,56px);align-items:center}
+
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(73,217,255,.55)}70%{box-shadow:0 0 0 9px rgba(73,217,255,0)}100%{box-shadow:0 0 0 0 rgba(73,217,255,0)}}
+
+/* ---- scroll-to-top mouse ---- */
+.mouse-top{
+  position:fixed;left:clamp(14px,2.2vw,30px);bottom:clamp(20px,4vh,44px);z-index:80;
+  width:46px;height:78px;padding:0;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+  background:rgba(8,15,34,.72);border:1px solid var(--line);border-radius:100px;
+  backdrop-filter:blur(12px);
+  opacity:0;visibility:hidden;transform:translateY(14px);
+  transition:opacity .45s var(--ease),transform .45s var(--ease),
+             visibility .45s,border-color .3s,box-shadow .4s;
+}
+.mouse-top.show{opacity:1;visibility:visible;transform:none}
+.mouse-top:hover{border-color:var(--blue);
+  box-shadow:0 0 0 4px rgba(47,107,255,.12),0 14px 32px -14px var(--glow)}
+.mouse-top:active{transform:translateY(2px)}
+.mouse-top svg{width:21px;height:33px;margin-top:12px;stroke:var(--blue-hi);fill:none;stroke-width:1.6}
+.mouse-top .wheel{fill:var(--cyan);stroke:none;animation:wheel 2s var(--ease) infinite}
+@keyframes wheel{
+  0%{transform:translateY(3px);opacity:0}
+  40%{opacity:1}
+  100%{transform:translateY(-3px);opacity:0}
+}
+.mouse-top .arrows{display:flex;flex-direction:column;align-items:center;gap:3px;margin-top:6px}
+.mouse-top .arrows i{
+  width:7px;height:7px;border-left:1.5px solid var(--blue-hi);border-top:1.5px solid var(--blue-hi);
+  transform:rotate(45deg);animation:chev 2s var(--ease) infinite}
+.mouse-top .arrows i:nth-child(2){animation-delay:.24s}
+@keyframes chev{0%,100%{opacity:.22}50%{opacity:.95}}
+.mouse-top:hover .wheel,.mouse-top:hover .arrows i{animation-play-state:paused;opacity:1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media(max-width:720px){.mouse-top{width:40px;height:68px}.mouse-top svg{width:18px;height:28px;margin-top:10px}}
+@media (prefers-reduced-motion:reduce){.mouse-top .wheel,.mouse-top .arrows i{animation:none;opacity:1}}
+
+h1{font-size:clamp(37px,5.6vw,68px)}
+h1 .grad{
+  background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 60%,#fff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-sub{margin-top:22px;max-width:50ch;font-size:clamp(15px,1.5vw,17.5px);color:var(--muted)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
+.hero-note{margin-top:20px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted-2)}
+
+/* ---- hero visual ---- */
+.shot{position:relative;border-radius:var(--r);overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.85),0 0 0 1px rgba(47,107,255,.14) inset;
+  transform:perspective(1400px) rotateY(-7deg) rotateX(3deg);
+  transition:transform .9s var(--ease);
+  will-change:transform;
+}
+.shot:hover{transform:perspective(1400px) rotateY(-2deg) rotateX(1deg) scale(1.015)}
+.shot img{width:100%;height:auto;display:block;filter:saturate(1.12) contrast(1.05)}
+.shot::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(5,10,24,.06),rgba(5,10,24,.55)),
+             linear-gradient(75deg,rgba(47,107,255,.22),transparent 55%)}
+.shot-badge{
+  position:absolute;left:16px;bottom:16px;z-index:3;
+  display:flex;align-items:center;gap:9px;padding:8px 14px;
+  border-radius:100px;background:rgba(5,10,24,.72);border:1px solid var(--line);
+  backdrop-filter:blur(10px);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ice);
+}
+.shot-badge i{width:6px;height:6px;border-radius:50%;background:var(--cyan);
+  animation:pulse 2.4s ease-out infinite;font-style:normal}
+
+/* ═══════════════ MARQUEE ═══════════════ */
+.marquee{
+  border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
+  padding:16px 0;overflow:hidden;background:rgba(8,15,34,.55);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+}
+.marquee-track{display:flex;width:max-content;gap:44px;animation:slide 42s linear infinite}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee-track span{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted-2);display:flex;align-items:center;gap:44px;white-space:nowrap;
+}
+.marquee-track span::after{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue)}
+
+/* ═══════════════ STATS ═══════════════ */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line-soft);
+  border-radius:var(--r);overflow:hidden;border:1px solid var(--line);margin-top:clamp(40px,6vw,70px)}
+.stat{background:rgba(8,15,34,.9);padding:26px 24px;transition:background .35s}
+.stat:hover{background:rgba(17,30,61,.95)}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(24px,3vw,34px);
+  letter-spacing:-.03em;
+  background:linear-gradient(120deg,#fff,var(--blue-hi));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--muted-2);margin-top:8px}
+
+/* ═══════════════ SECTIONS ═══════════════ */
+section{padding:clamp(62px,8.5vw,108px) 0;position:relative}
+.sec-head{margin-bottom:46px;max-width:62ch}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head h2{font-size:clamp(28px,4.2vw,48px)}
+.sec-head p{margin-top:16px;color:var(--muted);font-size:16.5px}
+
+/* ---- reveal on scroll ---- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+.rv.d4{transition-delay:.32s}.rv.d5{transition-delay:.4s}
+
+/* ═══════════════ PLANS ═══════════════ */
+.conn-bar{display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:28px;
+  padding:16px 20px;border:1px solid var(--line);border-radius:var(--r);background:rgba(8,15,34,.7)}
+.conn-bar > label{font-size:14.5px;color:var(--muted)}
+.seg{display:flex;border:1px solid var(--line);border-radius:100px;overflow:hidden;background:var(--night-2)}
+.seg button{background:transparent;border:0;cursor:pointer;font-family:var(--mono);font-size:13px;
+  color:var(--muted);padding:9px 18px;transition:background .25s,color .25s}
+.seg button:hover{color:var(--ice)}
+.seg button[aria-pressed="true"]{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff}
+.conn-hint{font-family:var(--mono);font-size:11.5px;color:var(--muted-2);margin-left:auto}
+
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.plan{position:relative;display:flex;flex-direction:column;padding:30px 28px 28px;
+  border:1px solid var(--line);border-radius:var(--r);background:rgba(8,15,34,.78);
+  transition:transform .45s var(--ease),border-color .35s,box-shadow .45s var(--ease);overflow:hidden}
+.plan::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .45s;
+  background:radial-gradient(500px 260px at var(--mx,50%) var(--my,0%),rgba(47,107,255,.16),transparent 70%);
+  pointer-events:none}
+.plan:hover{transform:translateY(-6px);border-color:var(--blue);
+  box-shadow:0 26px 60px -26px rgba(47,107,255,.55)}
+.plan:hover::before{opacity:1}
+.plan.featured{background:linear-gradient(170deg,rgba(27,73,196,.22),rgba(8,15,34,.9));border-color:var(--blue-deep)}
+.plan-flag{position:absolute;top:16px;right:16px;padding:5px 12px;border-radius:100px;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));color:#05122E;
+  font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.plan-name{font-size:21px}
+.plan-term{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--muted-2);margin-top:8px}
+.plan-price{display:flex;align-items:baseline;gap:8px;margin:22px 0 4px}
+.plan-amount{font-family:var(--display);font-weight:800;font-size:clamp(36px,4.6vw,48px);
+  line-height:1;letter-spacing:-.04em}
+.plan-cur{font-family:var(--mono);font-size:13.5px;color:var(--muted)}
+.plan-per{font-family:var(--mono);font-size:11.5px;color:var(--muted-2);min-height:18px}
+.plan-list{list-style:none;margin:24px 0 28px;display:flex;flex-direction:column;gap:11px}
+.plan-list li{display:flex;gap:11px;font-size:14.2px;color:var(--muted);line-height:1.5}
+.plan-list li svg{width:15px;height:15px;flex:none;margin-top:3px;stroke:var(--cyan);fill:none;stroke-width:2.4}
+.plan .btn{margin-top:auto;width:100%}
+
+/* ═══════════════ INCLUDED ═══════════════ */
+.incl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{position:relative;padding:26px 24px;border:1px solid var(--line);border-radius:var(--r);
+  background:rgba(8,15,34,.72);transition:transform .4s var(--ease),border-color .35s,background .35s}
+.card:hover{transform:translateY(-4px);border-color:var(--blue);background:rgba(17,30,61,.8)}
+.card .ico{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;margin-bottom:16px;
+  background:linear-gradient(135deg,rgba(47,107,255,.24),rgba(73,217,255,.12));
+  border:1px solid rgba(47,107,255,.32)}
+.card .ico svg{width:19px;height:19px;stroke:var(--cyan);fill:none;stroke-width:1.7}
+.card h3{font-size:16.5px;margin-bottom:8px;letter-spacing:-.015em}
+.card p{font-size:14px;color:var(--muted)}
+
+/* ═══════════════ SPEED ═══════════════ */
+.speed-wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,52px);align-items:center}
+.meters{display:flex;flex-direction:column;gap:20px}
+.meter{border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;background:rgba(8,15,34,.72)}
+.meter-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.meter-top b{font-family:var(--display);font-weight:700;font-size:16px}
+.meter-top span{font-family:var(--mono);font-size:13px;color:var(--cyan)}
+.meter-rail{height:6px;border-radius:100px;background:var(--panel-2);overflow:hidden}
+.meter-fill{height:100%;width:0;border-radius:100px;
+  background:linear-gradient(90deg,var(--blue),var(--cyan));
+  transition:width 1.5s var(--ease);box-shadow:0 0 14px var(--glow)}
+.meter p{margin-top:11px;font-size:13.5px;color:var(--muted-2)}
+
+/* ═══════════════ DEVICES / APPS ═══════════════ */
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px}
+.app{padding:22px 22px;border:1px solid var(--line);border-radius:var(--r);
+  background:rgba(8,15,34,.72);transition:transform .4s var(--ease),border-color .35s}
+.app:hover{transform:translateY(-4px);border-color:var(--blue)}
+.app b{display:block;font-family:var(--display);font-weight:700;font-size:15.5px;margin-bottom:6px}
+.app span{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted-2);text-transform:uppercase}
+.app p{font-size:13.5px;color:var(--muted);margin-top:10px}
+
+.dev-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:2px;
+  background:var(--line-soft);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:22px}
+.dev{background:rgba(8,15,34,.92);padding:20px 18px;display:flex;flex-direction:column;gap:11px;
+  min-height:112px;transition:background .3s}
+.dev:hover{background:rgba(17,30,61,.95)}
+.dev svg{width:21px;height:21px;stroke:var(--blue-hi);fill:none;stroke-width:1.5}
+.dev b{font-size:13.8px;font-weight:600;display:block}
+.dev span{font-family:var(--mono);font-size:10px;color:var(--muted-2);letter-spacing:.08em}
+
+/* ═══════════════ STEPS ═══════════════ */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{position:relative;padding:28px 26px 30px;border:1px solid var(--line);border-radius:var(--r);
+  background:rgba(8,15,34,.72);transition:transform .4s var(--ease),border-color .35s}
+.step:hover{transform:translateY(-4px);border-color:var(--blue)}
+.step-n{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--cyan);margin-bottom:16px}
+.step h3{font-size:17.5px;margin-bottom:10px}
+.step p{font-size:14.2px;color:var(--muted)}
+
+/* ═══════════════ ORDER ═══════════════ */
+.order{background:linear-gradient(180deg,rgba(8,15,34,.9),rgba(5,10,24,.6));
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.order-grid{display:grid;grid-template-columns:1.22fr .88fr;gap:38px;align-items:start}
+
+.field{margin-bottom:20px}
+.field label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+.field .opt{color:var(--muted-2);letter-spacing:.05em}
+.field input,.field select,.field textarea{
+  width:100%;background:rgba(5,10,24,.75);color:var(--ice);
+  border:1px solid var(--line);border-radius:var(--r-sm);padding:13px 15px;
+  font-family:var(--body);font-size:15px;transition:border-color .25s,box-shadow .25s,background .25s}
+.field textarea{resize:vertical;min-height:92px}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted-2)}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--blue);background:var(--panel);
+  box-shadow:0 0 0 3px rgba(47,107,255,.16)}
+.field input.mono-in{font-family:var(--mono);letter-spacing:.06em}
+.field select{appearance:none;cursor:pointer;
+  background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);
+  background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;
+  background-size:6px 6px,6px 6px;background-repeat:no-repeat}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.err{display:none;font-family:var(--mono);font-size:11px;color:#FF7C9B;margin-top:8px}
+.field.invalid input,.field.invalid select{border-color:#FF7C9B;box-shadow:0 0 0 3px rgba(255,124,155,.13)}
+.field.invalid .err{display:block}
+.hidden{display:none !important}
+
+.check{display:flex;gap:12px;align-items:flex-start;margin:6px 0 22px;cursor:pointer}
+
+/* ---- payment panel ---- */
+.paypanel{
+  border:1px solid var(--blue-deep);border-radius:var(--r);padding:24px 24px 22px;margin:6px 0 24px;
+  background:linear-gradient(168deg,rgba(27,73,196,.20),rgba(8,15,34,.92));
+  animation:panelIn .5s var(--ease)}
+@keyframes panelIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.paypanel-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;
+  flex-wrap:wrap;margin-bottom:14px}
+.pay-amount{text-align:right}
+.pay-amount span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted-2)}
+.pay-amount b{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:-.035em;
+  background:linear-gradient(120deg,#fff,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.pay-note{font-size:14.2px;color:var(--muted);margin-bottom:18px}
+.pay-rows{display:flex;flex-direction:column;gap:2px;background:var(--line-soft);
+  border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden;margin-bottom:16px}
+.pay-rows:empty{display:none}
+.pay-row{display:flex;align-items:center;gap:14px;padding:12px 15px;background:rgba(5,10,24,.85)}
+.pay-row dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted-2);min-width:118px}
+.pay-row dd{font-family:var(--mono);font-size:14px;color:var(--ice);margin-right:auto;word-break:break-all}
+.copy{background:none;border:1px solid var(--line);border-radius:100px;cursor:pointer;flex:none;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);padding:6px 12px;transition:border-color .25s,color .25s,background .25s}
+.copy:hover{border-color:var(--blue);color:var(--blue-hi);background:rgba(47,107,255,.1)}
+.copy.done{border-color:var(--cyan);color:var(--cyan)}
+.pay-link{width:100%;margin-bottom:18px}
+.pay-steps{list-style:none;counter-reset:p;display:flex;flex-direction:column;gap:12px;
+  border-top:1px solid var(--line);padding-top:18px}
+.pay-steps li{counter-increment:p;display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start}
+.pay-steps li::before{content:counter(p);display:grid;place-items:center;width:26px;height:26px;
+  border-radius:50%;background:rgba(47,107,255,.16);border:1px solid var(--blue-deep);
+  font-family:var(--mono);font-size:11.5px;color:var(--cyan)}
+.pay-steps b{display:block;font-size:14.5px;font-weight:600}
+.pay-steps span{display:block;font-size:13.2px;color:var(--muted-2);margin-top:2px}
+@media(max-width:560px){
+  .pay-row{flex-wrap:wrap;gap:8px}
+  .pay-row dt{min-width:0;width:100%}
+}
+.check input{width:17px;height:17px;flex:none;margin-top:2px;accent-color:var(--blue)}
+.check span{font-size:13.8px;color:var(--muted);line-height:1.5}
+
+.ticket{position:sticky;top:88px;border:1px solid var(--line);border-radius:var(--r);
+  background:linear-gradient(175deg,rgba(17,30,61,.9),rgba(5,10,24,.92));overflow:hidden;
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.8)}
+.ticket-top{padding:18px 22px;border-bottom:1px solid var(--line-soft);
+  display:flex;justify-content:space-between;align-items:center}
+.ticket-top b{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.ticket-ref{font-family:var(--mono);font-size:11.5px;color:var(--cyan)}
+.ticket-body{padding:18px 22px}
+.trow{display:flex;justify-content:space-between;gap:16px;padding:10px 0;font-size:13.8px}
+.trow + .trow{border-top:1px solid var(--line-soft)}
+.trow dt{color:var(--muted-2);font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;
+  text-transform:uppercase;padding-top:3px}
+.trow dd{text-align:right;max-width:60%;word-break:break-word}
+.ticket-total{display:flex;justify-content:space-between;align-items:baseline;padding:20px 22px;
+  border-top:1px solid var(--line-soft);background:rgba(47,107,255,.1)}
+.ticket-total span{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.ticket-total b{font-family:var(--display);font-weight:800;font-size:32px;letter-spacing:-.035em}
+.ticket-total b small{font-family:var(--mono);font-size:12px;font-weight:400;color:var(--muted);margin-left:6px;letter-spacing:0}
+.ticket-actions{padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.ticket-note{padding:0 22px 22px;font-family:var(--mono);font-size:10.5px;line-height:1.65;
+  color:var(--muted-2);letter-spacing:.02em}
+.sent{margin:0 22px 22px;padding:14px 16px;border:1px solid var(--cyan);border-radius:var(--r-sm);
+  background:rgba(73,217,255,.09);font-size:13.5px;color:var(--cyan);display:none}
+.sent.show{display:block}
+
+/* ═══════════════ FAQ ═══════════════ */
+.faq-item{border:1px solid var(--line);border-radius:var(--r);background:rgba(8,15,34,.7);
+  margin-bottom:12px;overflow:hidden;transition:border-color .3s,background .3s}
+.faq-item.open{border-color:var(--blue);background:rgba(17,30,61,.75)}
+.faq-q{width:100%;background:none;border:0;cursor:pointer;color:var(--ice);
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:22px 24px;text-align:left;font-family:var(--display);font-weight:600;font-size:16.5px;
+  letter-spacing:-.015em;transition:color .25s}
+.faq-q:hover{color:var(--blue-hi)}
+.faq-item.open .faq-q{color:var(--blue-hi)}
+.faq-q i{font-style:normal;font-family:var(--mono);font-size:20px;color:var(--blue);flex:none;
+  transition:transform .35s var(--ease);line-height:1}
+.faq-item.open .faq-q i{transform:rotate(135deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+.faq-a p{padding:0 24px 24px;color:var(--muted);font-size:14.8px;max-width:78ch}
+.faq-a strong{color:var(--ice);font-weight:600}
+.faq-item.open .faq-a{max-height:400px}
+
+/* ═══════════════ CTA BAND ═══════════════ */
+.band{text-align:center;padding:clamp(56px,7vw,90px) 0;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:radial-gradient(ellipse 70% 100% at 50% 0%,rgba(47,107,255,.18),transparent 70%)}
+.band h2{font-size:clamp(27px,4vw,44px);max-width:20ch;margin:0 auto}
+.band p{margin:18px auto 30px;color:var(--muted);max-width:52ch}
+.band .hero-cta{justify-content:center}
+
+/* ═══════════════ FOOTER ═══════════════ */
+footer{padding:58px 0 40px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px;margin-bottom:40px}
+.foot-grid h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted-2);margin-bottom:15px}
+.foot-grid a,.foot-grid p{display:block;font-size:14px;color:var(--muted);margin-bottom:10px}
+.foot-grid a{transition:color .25s}
+.foot-grid a:hover{color:var(--blue-hi)}
+.legal{border:1px dashed var(--line);border-radius:var(--r);padding:18px 20px;
+  font-family:var(--mono);font-size:11px;line-height:1.75;color:var(--muted-2)}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:26px;
+  border-top:1px solid var(--line-soft);font-family:var(--mono);font-size:11px;color:var(--muted-2);letter-spacing:.06em}
+
+/* ═══════════════ RESPONSIVE ═══════════════ */
+@media(max-width:1000px){
+  .hero-grid,.speed-wrap,.order-grid{grid-template-columns:1fr}
+  .shot{transform:none;margin-top:6px}
+  .shot:hover{transform:scale(1.01)}
+  .ticket{position:static}
+  .plans,.steps{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .nav-links{display:none}
+  .field-row{grid-template-columns:1fr}
+  .conn-hint{margin-left:0;width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;scroll-behavior:auto !important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="aurora"><i></i><i></i><i></i></div>
+<div class="grid-lines"></div>
+<div id="bar"></div>
+
+<!-- ══════════════ SCROLL TO TOP ══════════════ -->
+<button class="mouse-top" id="toTop" type="button" title="Back to top">
+  <span class="sr">Back to top</span>
+  <svg viewBox="0 0 20 32" aria-hidden="true">
+    <rect x="1" y="1" width="18" height="30" rx="9"/>
+    <circle class="wheel" cx="10" cy="9" r="2.1"/>
+  </svg>
+  <span class="arrows" aria-hidden="true"><i></i><i></i></span>
+</button>
+
+<!-- ══════════════ NAV ══════════════ -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top">
+      <span class="brand-mark"></span>
+      <span class="brand-name" data-brand>Swift Channels</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#plans">Plans</a>
+      <a href="#included">What's included</a>
+      <a href="#devices">Devices &amp; apps</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-blue btn-sm" href="#order">Order now</a>
+  </div>
+</header>
+
+<!-- ══════════════ HERO ══════════════ -->
+<div id="top" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="rv in">Every channel you<br>watch, on <span class="grad">one line</span>.</h1>
+      <p class="hero-sub rv d2">
+        Live sports, films, series and news in 4K, HD and SD — with a full programme guide and
+        7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.
+      </p>
+      <div class="hero-cta rv d3">
+        <a class="btn btn-blue btn-lg" href="#order" data-preselect="test">Start the free 24-hour test</a>
+        <a class="btn btn-ghost btn-lg" href="#plans">See plans and prices</a>
+      </div>
+      <p class="hero-note rv d4">No contract · Cancel any time · Support 7 days a week</p>
+    </div>
+
+    <div class="shot rv d2" id="shot">
+      <img src="assets/hero-wall.jpg" alt="A viewer scrolling a wall of live channels with a remote control">
+      <div class="shot-badge"><i></i> Live now</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats rv d3">
+      <div class="stat"><b data-count="10000" data-suffix="+">0</b><span>Live channels</span></div>
+      <div class="stat"><b data-count="50000" data-suffix="+">0</b><span>Films &amp; series on demand</span></div>
+      <div class="stat"><b data-count="7" data-suffix=" days">0</b><span>Catch-up TV</span></div>
+      <div class="stat"><b data-count="99" data-suffix=".9%">0</b><span>Uptime target</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ MARQUEE ══════════════ -->
+<div class="marquee">
+  <div class="marquee-track" id="marq"></div>
+</div>
+
+<!-- ══════════════ PLANS ══════════════ -->
+<section id="plans">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Plans</span>
+      <h2>Pay for time, not for channels</h2>
+      <p>Every plan opens the same full library. The only things that change are how long it runs
+         and how many screens can play at once.</p>
+    </div>
+
+    <div class="conn-bar rv d1">
+      <label>Devices watching at the same time</label>
+      <div class="seg" id="connSeg" role="group" aria-label="Simultaneous connections">
+        <button type="button" data-conn="1" aria-pressed="true">1</button>
+        <button type="button" data-conn="2" aria-pressed="false">2</button>
+        <button type="button" data-conn="3" aria-pressed="false">3</button>
+        <button type="button" data-conn="4" aria-pressed="false">4</button>
+      </div>
+      <span class="conn-hint" id="connHint">One stream at a time. Prices update below.</span>
+    </div>
+
+    <div class="plans" id="planCards"></div>
+  </div>
+</section>
+
+<!-- ══════════════ INCLUDED ══════════════ -->
+<section id="included" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">What's included</span>
+      <h2>The whole library, on every plan</h2>
+      <p>Nothing is held back on the cheaper plan and nothing is sold as an add-on. Sports, films,
+         news and entertainment all come with the same line.</p>
+    </div>
+
+    <div class="incl">
+      <div class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5 6c4 3 10 3 14 0M5 18c4-3 10-3 14 0"/></svg></div>
+        <h3>10,000+ live channels</h3>
+        <p>Sports, movies, news and entertainment from more than 50 countries, in one channel list.</p>
+      </div>
+      <div class="card rv d1">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 9l6 3-6 3z"/></svg></div>
+        <h3>50,000+ on demand</h3>
+        <p>Films and full series box sets you can start whenever you like, not just when they air.</p>
+      </div>
+      <div class="card rv d2">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M7 5v14M12 9h6M12 13h4"/></svg></div>
+        <h3>4K, HD and SD</h3>
+        <p>Quality follows the source and your connection, so the picture stays steady either way.</p>
+      </div>
+      <div class="card rv d3">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M7 14h4M7 17h7"/></svg></div>
+        <h3>Guide and catch-up</h3>
+        <p>A full EPG plus 7 days of catch-up TV, so a match you missed last night is still there.</p>
+      </div>
+      <div class="card rv d4">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 4.5-3.2 7-8 8-4.8-1-8-3.5-8-8V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Anti-freeze technology</h3>
+        <p>Load balancing on the provider's side keeps the stream from stalling during big matches.</p>
+      </div>
+      <div class="card rv d5">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>24/7 support</h3>
+        <p>One thread on WhatsApp for setup, renewals and anything that stops working.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SPORTS ══════════════ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Live sports</span>
+      <h2>Every match night, no blackout</h2>
+      <p>All major sports channels are included: ESPN, Fox Sports, Sky Sports and beIN Sports,
+         plus international sport from over 50 countries.</p>
+    </div>
+    <div class="incl">
+      <div class="card rv"><h3>Football</h3><p>Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Champions League and Botola.</p></div>
+      <div class="card rv d1"><h3>US leagues</h3><p>NFL, NBA, MLB and NHL through the full regular season and the play-offs.</p></div>
+      <div class="card rv d2"><h3>Combat sports</h3><p>UFC and boxing, including the pay-per-view events, on the night they happen.</p></div>
+      <div class="card rv d3"><h3>Everything else</h3><p>Tennis, motorsport, cycling, rugby, athletics and cricket across the international feeds.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SPEED ══════════════ -->
+<section style="padding-top:0">
+  <div class="wrap speed-wrap">
+    <div class="sec-head rv" style="margin-bottom:0">
+      <span class="eyebrow">Your connection</span>
+      <h2>What internet speed you need</h2>
+      <p>Adaptive streaming adjusts the quality to whatever your line can carry, so you don't need
+         fibre to watch comfortably. These are the speeds we'd aim for.</p>
+      <p style="font-size:14px;color:var(--muted-2);margin-top:14px">
+        A wired connection or 5&nbsp;GHz Wi-Fi gives a noticeably steadier picture than 2.4&nbsp;GHz.</p>
+    </div>
+    <div class="meters">
+      <div class="meter rv d1">
+        <div class="meter-top"><b>4K channels</b><span>25 Mbps+</span></div>
+        <div class="meter-rail"><div class="meter-fill" data-fill="100"></div></div>
+        <p>Best on a wired connection. Ultra HD sport and films.</p>
+      </div>
+      <div class="meter rv d2">
+        <div class="meter-top"><b>HD channels</b><span>15 Mbps</span></div>
+        <div class="meter-rail"><div class="meter-fill" data-fill="60"></div></div>
+        <p>The sweet spot for most homes and most channels.</p>
+      </div>
+      <div class="meter rv d3">
+        <div class="meter-top"><b>SD channels</b><span>5 Mbps</span></div>
+        <div class="meter-rail"><div class="meter-fill" data-fill="20"></div></div>
+        <p>Works on mobile data and slower ADSL lines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ DEVICES & APPS ══════════════ -->
+<section id="devices" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Devices &amp; apps</span>
+      <h2>Works on what you already own</h2>
+      <p>Every app below supports the M3U playlist format we send you. Tell us your device when you
+         order and we include the setup steps written for it.</p>
+    </div>
+
+    <div class="apps">
+      <div class="app rv"><b>IPTV Smarters Pro</b><span>Most devices</span>
+        <p>The default choice. Android, iOS, Windows, Mac and most TV boxes.</p></div>
+      <div class="app rv d1"><b>GSE Smart IPTV</b><span>Apple devices</span>
+        <p>Best behaved on iPhone, iPad and Apple TV.</p></div>
+      <div class="app rv d2"><b>TiviMate</b><span>Android TV</span>
+        <p>The nicest guide and recording experience on Android TV and Firestick.</p></div>
+      <div class="app rv d3"><b>Smart IPTV</b><span>Samsung &amp; LG</span>
+        <p>Installs straight from the TV store on Samsung and LG sets.</p></div>
+    </div>
+
+    <div class="dev-strip rv d2">
+      <div class="dev"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg><div><b>Samsung &amp; LG TV</b><span>SMART IPTV · MAC</span></div></div>
+      <div class="dev"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="7" cy="12" r="1.4"/><path d="M11 12h7"/></svg><div><b>Android TV</b><span>TIVIMATE</span></div></div>
+      <div class="dev"><svg viewBox="0 0 24 24"><rect x="3" y="9" width="14" height="6" rx="3"/><path d="M17 12h4"/><circle cx="7" cy="12" r="1.2"/></svg><div><b>Fire Stick</b><span>SMARTERS PRO</span></div></div>
+      <div class="dev"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="1.5"/><path d="M6 11h3M6 14h6"/><circle cx="18" cy="11" r="1"/></svg><div><b>MAG box</b><span>PORTAL · MAC</span></div></div>
+      <div class="dev"><svg viewBox="0 0 24 24"><path d="M4 6h16v11H4z"/><path d="M9 20h6M12 17v3"/><path d="M7.5 9.5l3 2-3 2z"/></svg><div><b>Apple TV</b><span>GSE SMART IPTV</span></div></div>
+      <div class="dev"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></svg><div><b>Phone &amp; tablet</b><span>iOS · ANDROID</span></div></div>
+      <div class="dev"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="12" rx="1.5"/><path d="M2 20h20M9 16l-1 4M15 16l1 4"/></svg><div><b>Computer</b><span>WINDOWS · MAC · LINUX</span></div></div>
+      <div class="dev"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="17" cy="15" r="1.3"/></svg><div><b>Roku</b><span>PLAYER APP</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ HOW ══════════════ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">How it works</span>
+      <h2>Three steps, one message</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="step-n">STEP 01</div>
+        <h3>Choose and pay</h3>
+        <p>Pick your plan and payment method in the form below. The payment details appear straight
+           away — card, Cash Plus, Wafacash or PayPal.</p></div>
+      <div class="step rv d1"><div class="step-n">STEP 02</div>
+        <h3>Screenshot the receipt</h3>
+        <p>The confirmation page, the SMS, or a photo of the paper receipt from the agent. Anything
+           that shows the amount and the date.</p></div>
+      <div class="step rv d2"><div class="step-n">STEP 03</div>
+        <h3>Send it on WhatsApp</h3>
+        <p>One button writes your whole order into a WhatsApp message. Attach the screenshot, press
+           send, and your login details come back in minutes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ORDER ══════════════ -->
+<section id="order" class="order">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Order</span>
+      <h2>Tell us what you need</h2>
+      <p>This form doesn't send anything on its own — it writes your order into a message that you
+         send us. You keep a copy either way.</p>
+    </div>
+
+    <div class="order-grid">
+      <div class="rv d1">
+        <div class="field-row">
+          <div class="field" id="f-name">
+            <label for="name">Full name</label>
+            <input id="name" type="text" placeholder="How we should address you" autocomplete="name">
+            <div class="err">Add your name so we can label the account.</div>
+          </div>
+          <div class="field" id="f-phone">
+            <label for="phone">WhatsApp number</label>
+            <input id="phone" type="tel" class="mono-in" placeholder="+212 6 00 00 00 00" autocomplete="tel">
+            <div class="err">We send your credentials here. Include the country code.</div>
+          </div>
+        </div>
+
+        <div class="field" id="f-email">
+          <label for="email">Email <span class="opt">— optional backup</span></label>
+          <input id="email" type="email" placeholder="you@example.com" autocomplete="email">
+          <div class="err">That email address doesn't look complete.</div>
+        </div>
+
+        <div class="field-row">
+          <div class="field" id="f-plan">
+            <label for="plan">Plan</label>
+            <select id="plan"></select>
+          </div>
+          <div class="field" id="f-conn">
+            <label for="conn">Simultaneous devices</label>
+            <select id="conn">
+              <option value="1">1 device</option><option value="2">2 devices</option>
+              <option value="3">3 devices</option><option value="4">4 devices</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field" id="f-device">
+            <label for="device">What will you watch on?</label>
+            <select id="device">
+              <option value="">Select a device</option>
+              <option>Samsung Smart TV</option><option>LG Smart TV</option>
+              <option>Android TV box</option><option>Amazon Fire Stick</option>
+              <option>MAG box</option><option>Apple TV</option><option>Roku</option>
+              <option>Phone or tablet</option><option>Windows, Mac or Linux</option><option>Other</option>
+            </select>
+            <div class="err">Pick a device so we send the right setup steps.</div>
+          </div>
+          <div class="field hidden" id="f-mac">
+            <label for="mac">Device MAC address</label>
+            <input id="mac" type="text" class="mono-in" placeholder="00:1A:79:XX:XX:XX" maxlength="17">
+            <div class="err">This device needs a MAC in the format 00:1A:79:XX:XX:XX.</div>
+          </div>
+        </div>
+
+        <div class="field" id="f-pay">
+          <label for="pay">How would you like to pay?</label>
+          <select id="pay"></select>
+          <div class="err">Choose a payment method.</div>
+        </div>
+
+        <!-- payment instructions -->
+        <div class="paypanel hidden" id="payPanel">
+          <div class="paypanel-head">
+            <span class="eyebrow" style="color:var(--cyan)">Pay before you send</span>
+            <div class="pay-amount">
+              <span id="pp-method">—</span>
+              <b id="pp-amount">—</b>
+            </div>
+          </div>
+          <p class="pay-note" id="pp-note"></p>
+          <div class="pay-rows" id="pp-rows"></div>
+          <a class="btn btn-blue pay-link hidden" id="pp-link" target="_blank" rel="noopener">Pay now</a>
+          <ol class="pay-steps">
+            <li><b>Pay the amount above</b><span>Use the exact total so we can match it to your order.</span></li>
+            <li><b>Screenshot the receipt</b><span>The confirmation page, the SMS, or a photo of the paper receipt.</span></li>
+            <li><b>Send it on WhatsApp</b><span>Press the button in the summary — then attach the screenshot to the message.</span></li>
+          </ol>
+        </div>
+
+        <div class="field">
+          <label for="notes">Anything else <span class="opt">— optional</span></label>
+          <textarea id="notes" placeholder="Country packs you want, sports you follow, a channel you can't do without."></textarea>
+        </div>
+
+        <label class="check" for="agree">
+          <input id="agree" type="checkbox">
+          <span>I'm ordering for my own household and I accept the terms of service.</span>
+        </label>
+        <div class="err" id="agreeErr" style="margin:-14px 0 20px">Tick the box to continue.</div>
+      </div>
+
+      <aside class="ticket rv d2">
+        <div class="ticket-top"><b>Order summary</b><span class="ticket-ref" id="ref">—</span></div>
+        <dl class="ticket-body">
+          <div class="trow"><dt>Plan</dt><dd id="t-plan">—</dd></div>
+          <div class="trow"><dt>Runs for</dt><dd id="t-term">—</dd></div>
+          <div class="trow"><dt>Devices</dt><dd id="t-conn">1 device</dd></div>
+          <div class="trow"><dt>Watching on</dt><dd id="t-device">Not chosen</dd></div>
+          <div class="trow"><dt>Payment</dt><dd id="t-pay">Not chosen</dd></div>
+        </dl>
+        <div class="ticket-total"><span>Total</span><b id="t-total">—</b></div>
+        <div class="ticket-actions">
+          <button class="btn btn-blue" type="button" id="sendWa">Send order on WhatsApp</button>
+          <button class="btn btn-ghost" type="button" id="copyOrder">Copy order details</button>
+          <button class="btn btn-ghost" type="button" id="sendMail">Send by email instead</button>
+        </div>
+        <p class="ticket-note" id="ticketNote">Nothing is charged here. We confirm the price in the
+           chat before you pay, then open your line.</p>
+        <div class="sent" id="sent"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FAQ ══════════════ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Questions</span>
+      <h2>Before you order</h2>
+    </div>
+    <div id="faqList" class="rv d1"></div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA BAND ══════════════ -->
+<div class="band">
+  <div class="wrap">
+    <h2 class="rv">Try it tonight. Decide tomorrow.</h2>
+    <p class="rv d1">The 24-hour test is the whole service, unrestricted. No card, no deposit,
+       no automatic renewal — just watch it on your own TV and see.</p>
+    <div class="hero-cta rv d2">
+      <a class="btn btn-blue btn-lg" href="#order" data-preselect="test">Start the free test</a>
+      <a class="btn btn-ghost btn-lg" href="#plans">Compare the plans</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:16px">
+          <span class="brand-mark"></span><span class="brand-name" data-brand>Swift Channels</span>
+        </a>
+        <p style="max-width:36ch">Subscriptions opened and supported by us, delivered on a licensed
+           streaming platform.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="#plans">Plans</a><a href="#included">What's included</a>
+        <a href="#devices">Devices &amp; apps</a><a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Talk to us</h4>
+        <a href="#" data-wa-link>WhatsApp</a><a href="#" data-tg-link>Telegram</a>
+        <a href="#" data-mail-link>Email</a>
+        <p style="font-family:var(--mono);font-size:11px;letter-spacing:.08em">SUPPORT 09:00–23:00 GMT+1</p>
+      </div>
+    </div>
+
+    <div class="legal">
+      [ LEGAL BLOCK — REPLACE ONCE THE PROVIDER AGREEMENT IS SIGNED ]<br>
+      Reseller: <span data-brand-plain>Swift Channels</span> · Registered trade name and ID: —<br>
+      Operating under a reseller agreement, ref. —<br>
+      Content is licensed and delivered by the platform operator. Subscriptions are for private
+      household use; redistribution and public screening are not permitted.<br>
+      Terms of service · Refund policy · Privacy notice — links to be added.
+    </div>
+
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> <span data-brand-plain>Swift Channels</span></span>
+      <span>MADE IN MOROCCO</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   1. CONFIG — edit this block only.
+   ═══════════════════════════════════════════════════════════ */
+const CONFIG = {
+  brand:    'Swift Channels',
+
+  whatsapp: '212699764804',        // digits only, country code, no + or spaces
+  telegram: 'yourhandle',
+  email:    'contact@swiftchannels.com',
+
+  currency: '€',
+
+  plans: [
+    { id:'test',    name:'Free test', term:'24 hours', price:0, featured:false,
+      per:'One-time, one per household',
+      features:['The full channel list, nothing held back','Runs 24 hours from activation',
+                'No card, no deposit, no auto-renewal','Sent within minutes during support hours'] },
+
+    { id:'monthly', name:'Monthly',   term:'30 days',  price:12, featured:false,
+      per:'per month',
+      features:['10,000+ live channels and 50,000+ VOD','7-day catch-up and full programme guide',
+                '4K, HD and SD where the source allows','Free replacement line if yours goes down',
+                'Renew by message — nothing automatic'] },
+
+    { id:'yearly',  name:'Yearly',    term:'12 months', price:35, featured:true,
+      per:'per year — under 3 a month',
+      features:['Everything in the monthly plan','By far the cheapest way to run the service',
+                'Priority queue for support replies','One free device change during the year'] }
+  ],
+
+  connMultiplier: { 1:1, 2:1.6, 3:2.1, 4:2.5 },
+
+  payMethods: ['Credit card','PayPal','Cash Plus (Morocco only)','Wafacash (Morocco only)'],
+
+  /* ── PayPal Pay Links, one per paid plan. Card and PayPal both use these. ── */
+  payLinks: {
+    monthly: 'https://www.paypal.com/ncp/payment/3B8UZHQMP5KZ4',
+    yearly:  'https://www.paypal.com/ncp/payment/3WFXJNMP76W2N'
+  },
+
+  /* ── Payment instructions shown after a paid plan is chosen ──
+     'rows' become copy-to-clipboard lines.
+     'usePayLink: true' pulls that plan's link from payLinks above. */
+  payDetails: {
+    'Credit card': {
+      note: 'Pay by debit or credit card on the secure PayPal checkout page — in most cases you do not need a PayPal account. Screenshot the confirmation page when it is done.',
+      usePayLink: true, label: 'Pay by card',
+      rows: []
+    },
+    'PayPal': {
+      note: 'Pay from your PayPal balance or a linked card, then screenshot the receipt.',
+      usePayLink: true, label: 'Pay with PayPal',
+      rows: []
+    },
+    'Cash Plus (Morocco only)': {
+      note: 'Go to any Cash Plus agent and send the amount to the name and number below. Keep the paper receipt and photograph it.',
+      rows: [
+        ['Recipient name','ABDELOUAHD BOUZAR'],
+        ['Phone number','0699764804'],
+        ['City','Fès']
+      ]
+    },
+    'Wafacash (Morocco only)': {
+      note: 'Any Wafacash counter can send this. Ask for a cash transfer to the name below and keep the receipt.',
+      rows: [
+        ['Recipient name','ABDELOUAHD BOUZAR'],
+        ['Phone number','0699764804'],
+        ['City','Fès'],
+        ['ID number','—']
+      ]
+    }
+  },
+
+  marquee: ['Live sports','4K · HD · SD','7-day catch-up','10,000+ channels','50,000+ films & series',
+            'Anti-freeze','Full EPG','24/7 support','50+ countries','No contract'],
+
+  faq: [
+    ["What's included?",
+     "All plans include <strong>10,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support."],
+    ['Can I watch live sports and PPV events?',
+     'Yes. <strong>NFL, NBA, MLB, NHL, Premier League, UFC and boxing</strong> are all there, along with the major sports channels — ESPN, Fox Sports, Sky Sports and beIN Sports — plus international sport from more than 50 countries.'],
+    ['What devices are supported?',
+     'It works on Smart TVs (Samsung, LG, Android TV), phones and tablets (iOS and Android), computers (Windows, Mac and Linux), Fire Stick, Roku, Apple TV and more. Use an app like <strong>GSE Smart IPTV</strong> or <strong>IPTV Smarters</strong>.'],
+    ['Which IPTV app should I use on my device?',
+     'We recommend <strong>IPTV Smarters Pro</strong> for most devices, <strong>GSE Smart IPTV</strong> for Apple devices, <strong>TiviMate</strong> for Android TV and <strong>Smart IPTV</strong> for Samsung and LG sets. All of them support the M3U playlist format we send you.'],
+    ['What internet speed do I need for 4K streaming?',
+     'For the best picture: <strong>25 Mbps or more</strong> for 4K channels, <strong>15 Mbps</strong> for HD and <strong>5 Mbps</strong> for SD. Adaptive streaming adjusts the quality automatically to match your connection.'],
+    ['Is the free 24-hour test really free?',
+     "Yes. One 24-hour line per household, no card and no deposit. We open it, you try it on your own device, and if it isn't right for you nothing happens next."],
+    ['How fast do I get my login details?',
+     'Usually under ten minutes during support hours. If you order overnight, your details are waiting for you first thing in the morning.'],
+    ['What if a channel stops working?',
+     'Message us in the same thread. Most issues are fixed within minutes, and if a line is genuinely down we replace it and add the lost time to your subscription.'],
+    ['How do I renew?',
+     'Send us a message before your end date and we extend the same line. Your username, password and favourites all stay exactly as they are.']
+  ]
+};
+
+/* ═══════════════ 2. Brand ═══════════════ */
+document.querySelectorAll('[data-brand],[data-brand-plain]').forEach(e => e.textContent = CONFIG.brand);
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.title = CONFIG.brand + ' — IPTV subscriptions';
+
+const waBase = 'https://wa.me/' + CONFIG.whatsapp;
+document.querySelector('[data-wa-link]').href = waBase;
+document.querySelector('[data-tg-link]').href = 'https://t.me/' + CONFIG.telegram;
+document.querySelector('[data-mail-link]').href = 'mailto:' + CONFIG.email;
+
+const money = n => new Intl.NumberFormat('en-US',{maximumFractionDigits:0}).format(Math.round(n));
+const $ = id => document.getElementById(id);
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ═══════════════ 3. Marquee ═══════════════ */
+(function(){
+  const html = CONFIG.marquee.map(t => '<span>' + t + '</span>').join('');
+  $('marq').innerHTML = html + html;
+})();
+
+/* ═══════════════ 4. Scroll: progress, nav, reveals ═══════════════ */
+const bar = $('bar'), nav = $('nav'), toTop = $('toTop');
+let ticking = false;
+function onScroll(){
+  const h = document.documentElement;
+  bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+  nav.classList.toggle('stuck', h.scrollTop > 20);
+  toTop.classList.toggle('show', h.scrollTop > 420);
+  ticking = false;
+}
+toTop.addEventListener('click', () => {
+  scrollTo({top:0, behavior: reduced ? 'auto' : 'smooth'});
+});
+addEventListener('scroll', () => { if(!ticking){ requestAnimationFrame(onScroll); ticking = true; } }, {passive:true});
+onScroll();
+
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:.14, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* counters */
+const cio = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if(!e.isIntersecting) return;
+    cio.unobserve(e.target);
+    const el = e.target, end = +el.dataset.count, sfx = el.dataset.suffix || '';
+    if(reduced){ el.textContent = money(end) + sfx; return; }
+    const t0 = performance.now(), dur = 1500;
+    (function step(t){
+      const p = Math.min((t - t0) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = money(end * eased) + sfx;
+      if(p < 1) requestAnimationFrame(step);
+    })(t0);
+  });
+}, {threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+/* meters */
+const mio = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if(!e.isIntersecting) return;
+    mio.unobserve(e.target);
+    e.target.style.width = e.target.dataset.fill + '%';
+  });
+}, {threshold:.5});
+document.querySelectorAll('.meter-fill').forEach(el => mio.observe(el));
+
+/* hero parallax */
+const shot = $('shot');
+if(shot && !reduced){
+  addEventListener('scroll', () => {
+    const y = Math.min(scrollY, 700);
+    shot.style.translate = '0 ' + (y * -0.045) + 'px';
+  }, {passive:true});
+}
+
+/* ═══════════════ 5. State + plans ═══════════════ */
+let state = { conn:1 };
+const planById = id => CONFIG.plans.find(p => p.id === id);
+const priceFor = (p, c) => p.price === 0 ? 0 : p.price * (CONFIG.connMultiplier[c] || 1);
+const tick = '<svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"/></svg>';
+
+const planCards = $('planCards');
+function renderPlans(){
+  planCards.innerHTML = '';
+  CONFIG.plans.forEach(p => {
+    const free = p.price === 0, cost = priceFor(p, state.conn);
+    const card = document.createElement('article');
+    card.className = 'plan' + (p.featured ? ' featured' : '');
+    card.innerHTML = `
+      ${p.featured ? '<div class="plan-flag">Best value</div>' : ''}
+      <h3 class="plan-name">${p.name}</h3>
+      <div class="plan-term">${p.term}</div>
+      <div class="plan-price">
+        <span class="plan-amount">${free ? 'Free' : money(cost)}</span>
+        ${free ? '' : '<span class="plan-cur">' + CONFIG.currency + '</span>'}
+      </div>
+      <div class="plan-per">${free ? p.per : (state.conn > 1 ? p.per + ' · ' + state.conn + ' devices' : p.per)}</div>
+      <ul class="plan-list">${p.features.map(f => '<li>' + tick + '<span>' + f + '</span></li>').join('')}</ul>
+      <button class="btn ${p.featured ? 'btn-blue' : 'btn-ghost'}" type="button" data-choose="${p.id}">
+        ${free ? 'Start the free test' : 'Choose ' + p.name.toLowerCase()}
+      </button>`;
+
+    card.addEventListener('pointermove', ev => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (ev.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (ev.clientY - r.top) + 'px');
+    });
+    planCards.appendChild(card);
+  });
+
+  planCards.querySelectorAll('[data-choose]').forEach(b => {
+    b.addEventListener('click', () => {
+      planSel.value = b.dataset.choose;
+      syncPlanUI();
+      $('order').scrollIntoView({behavior:'smooth'});
+      setTimeout(() => $('name').focus(), 650);
+    });
+  });
+}
+
+const connHint = $('connHint');
+document.querySelectorAll('#connSeg button').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('#connSeg button').forEach(x => x.setAttribute('aria-pressed','false'));
+    b.setAttribute('aria-pressed','true');
+    state.conn = +b.dataset.conn;
+    connSel.value = state.conn;
+    connHint.textContent = state.conn === 1
+      ? 'One stream at a time. Prices update below.'
+      : state.conn + ' screens can play different channels at once.';
+    renderPlans(); updateTicket();
+  });
+});
+
+/* ═══════════════ 6. Form ═══════════════ */
+const planSel = $('plan'), connSel = $('conn'), devSel = $('device'), paySel = $('pay');
+
+CONFIG.plans.forEach(p => {
+  const o = document.createElement('option');
+  o.value = p.id; o.textContent = p.name + ' — ' + p.term;
+  planSel.appendChild(o);
+});
+planSel.value = 'yearly';
+paySel.innerHTML = '<option value="">Select a method</option>' +
+  CONFIG.payMethods.map(m => '<option>' + m + '</option>').join('');
+
+const MAC_DEVICES = ['Samsung Smart TV','LG Smart TV','MAG box'];
+function syncPlanUI(){
+  const free = planById(planSel.value).price === 0;
+  $('f-pay').classList.toggle('hidden', free);
+  if(free) $('payPanel').classList.add('hidden');
+  updateTicket();
+}
+devSel.addEventListener('change', () => {
+  $('f-mac').classList.toggle('hidden', !MAC_DEVICES.includes(devSel.value));
+  updateTicket();
+});
+planSel.addEventListener('change', syncPlanUI);
+connSel.addEventListener('change', () => {
+  state.conn = +connSel.value;
+  document.querySelectorAll('#connSeg button').forEach(x =>
+    x.setAttribute('aria-pressed', String(+x.dataset.conn === state.conn)));
+  renderPlans(); updateTicket();
+});
+['name','phone','email','mac','notes'].forEach(id => $(id).addEventListener('input', updateTicket));
+paySel.addEventListener('change', updateTicket);
+
+const REF = 'ORD-' + Math.random().toString(36).slice(2,7).toUpperCase();
+$('ref').textContent = REF;
+
+function renderPayPanel(){
+  const p = planById(planSel.value), free = p.price === 0;
+  const panel = $('payPanel');
+  const d = CONFIG.payDetails[paySel.value];
+
+  if(free || !paySel.value || !d){ panel.classList.add('hidden'); return; }
+  panel.classList.remove('hidden');
+
+  $('pp-method').textContent = 'Pay by ' + paySel.value;
+  $('pp-amount').textContent = money(priceFor(p, state.conn)) + ' ' + CONFIG.currency;
+  $('pp-note').textContent = d.note || '';
+
+  const rows = $('pp-rows');
+  rows.innerHTML = '';
+  (d.rows || []).forEach(([k,v]) => {
+    const r = document.createElement('dl');
+    r.className = 'pay-row';
+    r.innerHTML = '<dt>' + k + '</dt><dd>' + v + '</dd>' +
+                  '<button class="copy" type="button">Copy</button>';
+    r.querySelector('.copy').addEventListener('click', async function(){
+      try { await navigator.clipboard.writeText(v); } catch(e){}
+      this.textContent = 'Copied';
+      this.classList.add('done');
+      setTimeout(() => { this.textContent = 'Copy'; this.classList.remove('done'); }, 1800);
+    });
+    rows.appendChild(r);
+  });
+
+  const link = $('pp-link');
+  const url = d.usePayLink ? CONFIG.payLinks[planSel.value] : (d.link && d.link.url);
+  if(url){
+    link.href = url;
+    link.textContent = d.label || (d.link && d.link.label) || 'Pay now';
+    link.classList.remove('hidden');
+    link.onclick = () => { saveOrder(); };
+  } else link.classList.add('hidden');
+}
+
+/* Stores the order locally so thank-you.html can recover it after checkout. */
+function saveOrder(){
+  const p = planById(planSel.value);
+  try {
+    localStorage.setItem('order:last', JSON.stringify({
+      ref:    REF,
+      name:   $('name').value.trim(),
+      phone:  $('phone').value.trim(),
+      plan:   p.name,
+      term:   p.term,
+      conn:   state.conn,
+      device: devSel.value,
+      mac:    MAC_DEVICES.includes(devSel.value) ? $('mac').value.trim().toUpperCase() : '',
+      method: paySel.value,
+      total:  money(priceFor(p, state.conn)) + ' ' + CONFIG.currency,
+      notes:  $('notes').value.trim(),
+      at:     Date.now()
+    }));
+  } catch(e){}
+}
+
+function updateTicket(){
+  const p = planById(planSel.value), free = p.price === 0, cost = priceFor(p, state.conn);
+  $('t-plan').textContent   = p.name;
+  $('t-term').textContent   = p.term;
+  $('t-conn').textContent   = state.conn + (state.conn > 1 ? ' devices' : ' device');
+  $('t-device').textContent = devSel.value || 'Not chosen';
+  $('t-pay').textContent    = free ? 'Not needed' : (paySel.value || 'Not chosen');
+  $('t-total').innerHTML    = free ? 'Free' : money(cost) + ' <small>' + CONFIG.currency + '</small>';
+
+  $('sendWa').textContent = free
+    ? 'Send order on WhatsApp'
+    : 'Send payment proof on WhatsApp';
+  $('ticketNote').textContent = free
+    ? 'Nothing is charged here. Free tests skip payment entirely — send the order and we open your line.'
+    : 'Pay first using the details in the form, screenshot the receipt, then send it here. We open your line as soon as we see it.';
+
+  renderPayPanel();
+}
+
+/* ═══════════════ 7. Validation + send ═══════════════ */
+const setErr = (id, bad) => $(id).classList.toggle('invalid', bad);
+
+function validate(){
+  const free = planById(planSel.value).price === 0;
+  let ok = true;
+
+  const nameBad = $('name').value.trim().length < 2;      setErr('f-name', nameBad);   ok = ok && !nameBad;
+  const phoneBad = $('phone').value.replace(/\D/g,'').length < 8; setErr('f-phone', phoneBad); ok = ok && !phoneBad;
+
+  const em = $('email').value.trim();
+  const emailBad = em && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em);
+  setErr('f-email', emailBad); ok = ok && !emailBad;
+
+  const devBad = !devSel.value; setErr('f-device', devBad); ok = ok && !devBad;
+
+  if(MAC_DEVICES.includes(devSel.value)){
+    const macBad = !/^([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}$/.test($('mac').value.trim());
+    setErr('f-mac', macBad); ok = ok && !macBad;
+  } else setErr('f-mac', false);
+
+  if(!free){ const payBad = !paySel.value; setErr('f-pay', payBad); ok = ok && !payBad; }
+  else setErr('f-pay', false);
+
+  const agreeBad = !$('agree').checked;
+  $('agreeErr').style.display = agreeBad ? 'block' : 'none';
+  ok = ok && !agreeBad;
+
+  if(!ok){
+    const first = document.querySelector('.field.invalid') || (agreeBad ? $('agree') : null);
+    if(first) first.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+  return ok;
+}
+
+function buildMessage(){
+  const p = planById(planSel.value), free = p.price === 0, cost = priceFor(p, state.conn);
+  const L = ['NEW ORDER — ' + REF, '——————————————'];
+  L.push('Name:      ' + $('name').value.trim());
+  L.push('WhatsApp:  ' + $('phone').value.trim());
+  if($('email').value.trim()) L.push('Email:     ' + $('email').value.trim());
+  L.push('Plan:      ' + p.name + ' (' + p.term + ')');
+  L.push('Devices:   ' + state.conn);
+  L.push('Watch on:  ' + devSel.value);
+  if(MAC_DEVICES.includes(devSel.value)) L.push('MAC:       ' + $('mac').value.trim().toUpperCase());
+  L.push('Payment:   ' + (free ? 'not needed — free test' : paySel.value));
+  L.push('Total:     ' + (free ? 'Free' : money(cost) + ' ' + CONFIG.currency));
+  if($('notes').value.trim()){ L.push('——————————————'); L.push('Notes: ' + $('notes').value.trim()); }
+  if(!free){
+    L.push('——————————————');
+    L.push('Payment sent — screenshot of the receipt attached.');
+  }
+  return L.join('\n');
+}
+
+const confirmSent = t => { const b = $('sent'); b.textContent = t; b.classList.add('show'); };
+
+$('sendWa').addEventListener('click', () => {
+  if(!validate()) return;
+  const free = planById(planSel.value).price === 0;
+  window.open(waBase + '?text=' + encodeURIComponent(buildMessage()), '_blank');
+  confirmSent(free
+    ? 'Order ' + REF + ' is open in WhatsApp. Press send there and we\'ll reply shortly.'
+    : 'Order ' + REF + ' is open in WhatsApp. Attach your payment screenshot with the paperclip, then press send.');
+});
+$('sendMail').addEventListener('click', () => {
+  if(!validate()) return;
+  location.href = 'mailto:' + CONFIG.email +
+    '?subject=' + encodeURIComponent('Order ' + REF + ' — ' + planById(planSel.value).name) +
+    '&body=' + encodeURIComponent(buildMessage());
+  confirmSent('Order ' + REF + ' is open in your email app.');
+});
+$('copyOrder').addEventListener('click', async () => {
+  if(!validate()) return;
+  const text = buildMessage();
+  try { await navigator.clipboard.writeText(text); }
+  catch(e){
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); ta.remove();
+  }
+  confirmSent('Order ' + REF + ' copied. Paste it to us on WhatsApp, Telegram or email.');
+});
+
+document.querySelectorAll('[data-preselect]').forEach(a => {
+  a.addEventListener('click', () => { planSel.value = a.dataset.preselect; syncPlanUI(); });
+});
+
+/* ═══════════════ 8. FAQ ═══════════════ */
+const faqList = $('faqList');
+CONFIG.faq.forEach(([q,a], i) => {
+  const item = document.createElement('div');
+  item.className = 'faq-item';
+  item.innerHTML =
+    '<button class="faq-q" type="button" aria-expanded="false" aria-controls="fa' + i + '">' +
+      '<span>' + q + '</span><i>+</i></button>' +
+    '<div class="faq-a" id="fa' + i + '"><p>' + a + '</p></div>';
+  item.querySelector('.faq-q').addEventListener('click', function(){
+    const open = item.classList.toggle('open');
+    this.setAttribute('aria-expanded', String(open));
+  });
+  faqList.appendChild(item);
+});
+
+/* ═══════════════ 9. Boot ═══════════════ */
+renderPlans();
+syncPlanUI();
+</script>
+</body>
+</html>
