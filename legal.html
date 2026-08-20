@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms, refunds and privacy — Swift Channels</title>
+<meta name="description" content="Terms of service, refund policy and privacy notice for Swift Channels.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#050A18;--night-2:#080F22;--panel:#0D162F;--panel-2:#111E3D;
+  --line:#1B2C54;--line-soft:#152444;
+  --blue:#2F6BFF;--blue-hi:#5A8CFF;--blue-deep:#1B49C4;--cyan:#49D9FF;
+  --glow:rgba(47,107,255,.30);
+  --ice:#E9EFFC;--muted:#93A6CC;--muted-2:#5F739B;
+  --display:'Sora',system-ui,sans-serif;--body:'Inter',Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --pad:clamp(20px,5vw,60px);--r:14px;--ease:cubic-bezier(.22,.8,.24,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--ice);font-family:var(--body);font-size:16px;
+  line-height:1.68;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--blue-hi);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+
+.aurora{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.4;display:block}
+.aurora i:nth-child(1){width:52vw;height:52vw;left:-16vw;top:-22vw;
+  background:radial-gradient(circle,rgba(47,107,255,.40),transparent 68%)}
+.aurora i:nth-child(2){width:42vw;height:42vw;right:-14vw;bottom:0;
+  background:radial-gradient(circle,rgba(73,217,255,.14),transparent 68%)}
+
+.top{padding:24px var(--pad);border-bottom:1px solid var(--line-soft)}
+.top-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:20px}
+.brand{display:inline-flex;align-items:center;gap:11px;margin-right:auto}
+.brand-mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--cyan))}
+.brand-mark::after{content:'';width:10px;height:10px;border-radius:50%;background:#fff}
+.brand-name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;color:var(--ice)}
+.brand:hover{text-decoration:none}
+.top a.back{font-size:14px;color:var(--muted)}
+
+main{max-width:860px;margin:0 auto;padding:clamp(34px,6vw,64px) var(--pad) 70px}
+
+h1{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.05;
+  font-size:clamp(30px,5vw,46px)}
+.updated{margin-top:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted-2)}
+
+.who{margin-top:28px;border:1px solid var(--line);border-radius:var(--r);
+  background:rgba(8,15,34,.75);padding:22px 24px}
+.who dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;font-size:14.5px}
+.who dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted-2);padding-top:3px}
+.who dd{color:var(--ice)}
+
+nav.toc{margin:34px 0 10px;border-top:1px solid var(--line-soft);
+  border-bottom:1px solid var(--line-soft);padding:18px 0;
+  display:flex;flex-wrap:wrap;gap:8px 22px}
+nav.toc a{font-size:14px;color:var(--muted)}
+
+section{padding-top:42px}
+h2{font-family:var(--display);font-weight:800;letter-spacing:-.025em;
+  font-size:clamp(22px,3.2vw,31px);padding-bottom:14px;
+  border-bottom:1px solid var(--line-soft);margin-bottom:22px}
+h3{font-family:var(--display);font-weight:600;font-size:17px;letter-spacing:-.015em;
+  margin:26px 0 8px}
+p{color:var(--muted);margin-bottom:14px}
+strong{color:var(--ice);font-weight:600}
+ul{margin:0 0 16px 20px;color:var(--muted)}
+li{margin-bottom:8px}
+
+.callout{border:1px solid var(--blue-deep);border-radius:var(--r);
+  background:linear-gradient(165deg,rgba(27,73,196,.18),rgba(8,15,34,.9));
+  padding:20px 22px;margin:22px 0}
+.callout p:last-child{margin-bottom:0}
+.callout .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:9px}
+
+footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
+.foot-in{max-width:860px;margin:0 auto;display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:11px;color:var(--muted-2);letter-spacing:.05em}
+</style>
+</head>
+<body>
+
+<div class="aurora"><i></i><i></i></div>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
+    </a>
+    <a class="back" href="index.html">← Back to the site</a>
+  </div>
+</header>
+
+<main>
+  <h1>Terms, refunds and privacy</h1>
+  <p class="updated">Last updated 20 August 2026</p>
+
+  <div class="who">
+    <dl>
+      <dt>Trading name</dt><dd>Swift Channels</dd>
+      <dt>Operated by</dt><dd>Abdelouahd Bouzar, sole trader</dd>
+      <dt>Based in</dt><dd>Fès, Morocco</dd>
+      <dt>Contact</dt><dd><a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a> · WhatsApp +212 699 764 804</dd>
+    </dl>
+  </div>
+
+  <nav class="toc">
+    <a href="#terms">1. Terms of service</a>
+    <a href="#refunds">2. Refund policy</a>
+    <a href="#privacy">3. Privacy notice</a>
+  </nav>
+
+  <!-- ═══════════ TERMS ═══════════ -->
+  <section id="terms">
+    <h2>1. Terms of service</h2>
+
+    <h3>Who we are and what we sell</h3>
+    <p>Swift Channels is a trading name of Abdelouahd Bouzar, a sole trader based in Fès, Morocco.
+      We resell access to a streaming television service operated by a third-party platform. We
+      supply you with login credentials for that platform; we do not own, produce, license or
+      control the content it carries.</p>
+
+    <h3>What you are buying</h3>
+    <p>A subscription is access to the platform for a fixed period — 30 days or 12 months — for the
+      number of simultaneous connections you selected. Channel line-ups, on-demand catalogues and
+      programme guides are set by the platform operator and can change at any time without notice.
+      We cannot guarantee that any particular channel, match, film or series will be available for
+      the whole of your subscription.</p>
+
+    <h3>Household use only</h3>
+    <p>Your credentials are for private use in a single household. You may not resell them, share
+      them publicly, use them for commercial or public screening, or redistribute the stream. If we
+      find credentials being used this way, we may close the account without a refund.</p>
+
+    <h3>Your responsibilities</h3>
+    <ul>
+      <li>Give accurate contact details so we can deliver your credentials.</li>
+      <li>Provide your own internet connection and a compatible device. Roughly 5&nbsp;Mbps is needed
+        for SD, 15&nbsp;Mbps for HD and 25&nbsp;Mbps for 4K.</li>
+      <li>Keep your credentials private.</li>
+      <li>Comply with the laws that apply where you live, including any rules about which broadcast
+        content you may lawfully access. You are responsible for that; we cannot advise on it.</li>
+    </ul>
+
+    <h3>Delivery</h3>
+    <p>We aim to send credentials within ten minutes during support hours. Orders placed overnight
+      are handled the following morning. Delivery is by WhatsApp or email to the contact details you
+      gave us.</p>
+
+    <h3>Availability and interruptions</h3>
+    <p>We target high availability but cannot promise an uninterrupted service. Outages on the
+      platform operator's side, on your internet connection, or on your device are outside our
+      control. Where a line is genuinely down for an extended period, we will replace it and extend
+      your subscription by the time lost. That is the remedy we offer.</p>
+
+    <h3>Free 24-hour test</h3>
+    <p>One free test per household, lasting 24 hours from activation. It is the full service so you
+      can judge it before paying. We may decline a test if we believe the offer is being abused.</p>
+
+    <h3>Ending a subscription</h3>
+    <p>Subscriptions do not renew automatically. Yours simply ends on its expiry date unless you
+      message us to extend it. You can stop using the service at any time; see the refund policy
+      below for what that means financially.</p>
+
+    <h3>Our liability</h3>
+    <p>Our liability to you is limited to the amount you paid for your current subscription period.
+      We are not liable for indirect losses. Nothing here limits liability that cannot lawfully be
+      limited.</p>
+
+    <h3>Changes to these terms</h3>
+    <p>We may update these terms. The version on this page at the time of your order is the one that
+      applies to that order.</p>
+
+    <h3>Law</h3>
+    <p>These terms are governed by Moroccan law. If you are a consumer resident in the EU or UK,
+      this does not deprive you of the protection of mandatory consumer law in your country of
+      residence, and you keep the right to bring proceedings there.</p>
+  </section>
+
+  <!-- ═══════════ REFUNDS ═══════════ -->
+  <section id="refunds">
+    <h2>2. Refund policy</h2>
+
+    <div class="callout">
+      <span class="tag">In short</span>
+      <p><strong>Once your credentials have been sent, the subscription is not refundable.</strong>
+        The free 24-hour test exists so you can try the full service on your own device before you
+        pay anything.</p>
+    </div>
+
+    <h3>Why</h3>
+    <p>A subscription is digital content delivered immediately. Once credentials are issued the
+      access has been granted and cannot be returned.</p>
+
+    <h3>Your EU right of withdrawal, and how it applies</h3>
+    <p>If you are a consumer in the EU or UK, you normally have 14 days to withdraw from an online
+      purchase. For digital content delivered immediately, that right is lost once delivery begins —
+      but only if you asked for immediate delivery and acknowledged that you would lose the right.</p>
+    <p>That is exactly what the confirmation box on our order form does. By ticking it you ask us to
+      supply your credentials straight away and accept that your 14-day withdrawal right ends when
+      we send them.</p>
+    <p><strong>If you have not yet received your credentials, the withdrawal right still stands.</strong>
+      Message us before delivery and we will refund you in full.</p>
+
+    <h3>When we do refund</h3>
+    <ul>
+      <li>You paid but we never delivered your credentials.</li>
+      <li>You were charged twice for the same subscription.</li>
+      <li>We are unable to provide the service at all for a sustained period and cannot replace your
+        line.</li>
+    </ul>
+    <p>In those cases we refund to the original payment method. Allow up to ten working days for it
+      to appear.</p>
+
+    <h3>When we do not refund</h3>
+    <ul>
+      <li>You changed your mind after receiving working credentials.</li>
+      <li>A specific channel or event you wanted is not carried, or was removed by the platform.</li>
+      <li>Your internet connection or device cannot handle the stream.</li>
+      <li>Your account was closed for breaching the household-use rule.</li>
+    </ul>
+
+    <h3>Problems before you ask for money back</h3>
+    <p>Most faults are fixable in minutes. Message us on WhatsApp first — replacing a line, resetting
+      credentials or reconfiguring an app resolves the large majority of issues, and we add any lost
+      time to your subscription.</p>
+  </section>
+
+  <!-- ═══════════ PRIVACY ═══════════ -->
+  <section id="privacy">
+    <h2>3. Privacy notice</h2>
+
+    <h3>Who controls your data</h3>
+    <p>Abdelouahd Bouzar, trading as Swift Channels, Fès, Morocco.
+      Contact: <a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a>.</p>
+
+    <div class="callout">
+      <span class="tag">Worth knowing</span>
+      <p>This website has no database, no accounts and no tracking. The order form runs entirely in
+        your browser and builds a message for you to send us. Nothing is submitted to a server here.</p>
+    </div>
+
+    <h3>What we collect and why</h3>
+    <ul>
+      <li><strong>What you send us</strong> — your name, WhatsApp number, email if you give one, your
+        device and any MAC address, and your order details. We need these to create your account and
+        deliver your credentials. Legal basis: performance of a contract.</li>
+      <li><strong>Payment records</strong> — we see the name, amount and date associated with your
+        payment, and the receipt you send us. We never see your card number. Legal basis: contract
+        and legal record-keeping.</li>
+      <li><strong>Your messages</strong> — the WhatsApp or email conversation, kept so we can support
+        you and handle renewals or disputes.</li>
+    </ul>
+
+    <h3>What we do not collect</h3>
+    <ul>
+      <li>No cookies, analytics, advertising pixels or visitor tracking on this site.</li>
+      <li>No card or bank details — payments are handled entirely by PayPal, Cash Plus or Wafacash.</li>
+      <li>No record of what you watch. We do not have access to your viewing activity.</li>
+    </ul>
+
+    <h3>Local storage</h3>
+    <p>When you click through to pay, your order details are saved in your own browser so the
+      confirmation page can show them back to you. This stays on your device, is never transmitted to
+      us, and you can clear it through your browser at any time.</p>
+
+    <h3>Who we share it with</h3>
+    <ul>
+      <li><strong>The platform operator</strong> — the minimum needed to create and maintain your
+        account.</li>
+      <li><strong>Payment providers</strong> — PayPal, Cash Plus or Wafacash, who process your
+        payment under their own privacy policies.</li>
+      <li><strong>WhatsApp</strong> — as the channel we communicate through, under Meta's policies.</li>
+    </ul>
+    <p>We do not sell your data or share it for marketing.</p>
+
+    <h3>International transfers</h3>
+    <p>We are based in Morocco, so if you are in the EU or UK your data is processed outside your
+      country. We keep transfers to the minimum needed to run your subscription.</p>
+
+    <h3>How long we keep it</h3>
+    <p>Order and payment records for three years after your subscription ends, so we can handle
+      disputes and meet record-keeping obligations. Message threads are kept while you are a
+      customer and for a reasonable period afterwards.</p>
+
+    <h3>Your rights</h3>
+    <p>If you are in the EU or UK you can ask us to give you a copy of your data, correct it, delete
+      it, restrict how we use it, or object to our using it. Email
+      <a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a> and we will respond
+      within 30 days. If you are unhappy with our response you can complain to the data protection
+      authority in your country.</p>
+
+    <h3>Children</h3>
+    <p>This service is not intended for anyone under 18 and we do not knowingly collect data from
+      children.</p>
+
+    <h3>Changes</h3>
+    <p>If we change this notice we will update the date at the top of this page.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-in">
+    <span>© <span id="yr"></span> Swift Channels · Abdelouahd Bouzar</span>
+    <span><a href="index.html">swiftchannels.com</a></span>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
