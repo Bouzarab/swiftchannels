@@ -187,6 +187,14 @@ h1,h2,h3,.dsp{font-family:var(--display);letter-spacing:-.03em;line-height:1.03;
 @media (prefers-reduced-motion:reduce){.mouse-top .wheel,.mouse-top .arrows i{animation:none;opacity:1}}
 
 h1{font-size:clamp(37px,5.6vw,68px)}
+/* hero headline: each line stays on one line, sized to fit its column */
+.hero-copy{min-width:0}
+.hero h1{font-size:clamp(26px,6.4vw,64px);line-height:1.06;letter-spacing:-.015em}
+.hero h1 .hl{display:block;white-space:nowrap}
+@supports (font-size:1cqw){
+  .hero-copy{container-type:inline-size}
+  .hero h1{font-size:min(64px,8.9cqw)}
+}
 h1 .grad{
   background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 60%,#fff);
   -webkit-background-clip:text;background-clip:text;color:transparent;
@@ -517,7 +525,7 @@ footer{padding:58px 0 40px}
 /* ═══════════════ RESPONSIVE ═══════════════ */
 @media(max-width:1000px){
   .hero-grid,.speed-wrap,.order-grid{grid-template-columns:1fr}
-  .shot{margin-top:6px}
+  .shot{margin-top:6px;max-width:540px;margin-inline:auto}
   .shot img{transform:none}
   .shot:hover img{transform:scale(1.02)}
   .ticket{position:static}
@@ -573,8 +581,8 @@ footer{padding:58px 0 40px}
 <!-- ══════════════ HERO ══════════════ -->
 <div id="top" class="hero">
   <div class="wrap hero-grid">
-    <div>
-      <h1 class="rv in">Every channel you<br>watch, on <span class="grad">one line</span>.</h1>
+    <div class="hero-copy">
+      <h1 class="rv in"><span class="hl">Every channel you</span><span class="hl">watch, on <span class="grad">one line</span>.</span></h1>
       <p class="hero-sub rv d2">
         Live sports, films, series and news in 4K, HD and SD — with a full programme guide and
         7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.
