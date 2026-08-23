@@ -193,7 +193,7 @@ h1{font-size:clamp(37px,5.6vw,68px)}
 .hero h1 .hl{display:block;white-space:nowrap}
 @supports (font-size:1cqw){
   .hero-copy{container-type:inline-size}
-  .hero h1{font-size:min(64px,8.9cqw)}
+  .hero h1{font-size:min(64px,8.5cqw)}
 }
 h1 .grad{
   background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 60%,#fff);
@@ -522,6 +522,73 @@ footer{padding:58px 0 40px}
 .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:26px;
   border-top:1px solid var(--line-soft);font-family:var(--mono);font-size:11px;color:var(--muted-2);letter-spacing:.06em}
 
+/* ═══════════════ LANGUAGE SWITCHER ═══════════════ */
+.lang{position:relative;display:flex;align-items:center;gap:7px}
+.lang-opts{display:flex;gap:7px}
+.lang-b,.lang-cur{
+  width:34px;height:34px;flex:0 0 34px;border-radius:50%;padding:0;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--muted);
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.03em;
+  transition:color .25s,border-color .25s,background .3s,transform .25s,box-shadow .3s;
+}
+.lang-b:hover,.lang-cur:hover{color:var(--ice);border-color:var(--blue-hi);transform:translateY(-1px)}
+.lang-b[aria-current="true"]{
+  background:linear-gradient(135deg,var(--blue),var(--blue-hi));
+  border-color:transparent;color:#fff;box-shadow:0 8px 20px -8px var(--glow)}
+.lang-cur{display:none}
+.lang-cur[aria-expanded="true"]{border-color:var(--blue-hi);color:var(--ice)}
+@media(max-width:980px){
+  .lang-cur{display:flex}
+  .lang-opts{
+    position:absolute;top:calc(100% + 12px);inset-inline-end:0;z-index:70;
+    flex-direction:column;gap:6px;padding:7px;border-radius:20px;
+    background:rgba(8,15,34,.94);border:1px solid var(--line);backdrop-filter:blur(14px);
+    box-shadow:0 24px 46px -18px rgba(0,0,0,.85);
+    opacity:0;visibility:hidden;transform:translateY(-8px) scale(.96);transform-origin:top;
+    transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
+  .lang.open .lang-opts{opacity:1;visibility:visible;transform:none}
+}
+@media(max-width:760px){
+  .nav-in{gap:12px}
+  .brand-name{white-space:nowrap;font-size:16.5px}
+}
+@media(max-width:440px){
+  .nav-in{gap:9px}
+  .brand{gap:8px}
+  .brand-mark{width:28px;height:28px;border-radius:8px}
+  .brand-name{font-size:15px}
+  .lang-b,.lang-cur{width:30px;height:30px;flex-basis:30px;font-size:10px}
+  .nav-in .btn-sm{padding:8px 13px;font-size:12.5px;white-space:nowrap}
+}
+
+/* ═══════════════ RIGHT-TO-LEFT (Arabic) ═══════════════ */
+html[dir="rtl"] body{font-family:'Tajawal',var(--body);letter-spacing:0}
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] h4,
+html[dir="rtl"] .brand-name,html[dir="rtl"] .plan-name,html[dir="rtl"] .plan-amount{
+  font-family:'Cairo','Tajawal',var(--display);letter-spacing:0}
+html[dir="rtl"] .eyebrow,html[dir="rtl"] .hero-note,html[dir="rtl"] .step-n,
+html[dir="rtl"] .conn-hint,html[dir="rtl"] .shot-badge,html[dir="rtl"] .plan-flag,
+html[dir="rtl"] .marquee-track span,html[dir="rtl"] .foot-bottom,html[dir="rtl"] .dev span{
+  font-family:'Tajawal',var(--mono);letter-spacing:.02em}
+html[dir="rtl"] .brand{margin-right:0;margin-left:auto}
+html[dir="rtl"] .nav-links a::after{left:auto;right:0}
+html[dir="rtl"] .conn-hint{margin-left:0;margin-right:auto}
+html[dir="rtl"] .plan-flag{right:auto;left:16px}
+html[dir="rtl"] .pay-amount{text-align:left}
+html[dir="rtl"] .pay-row dd{margin-right:0;margin-left:auto}
+html[dir="rtl"] .trow dd{text-align:left}
+html[dir="rtl"] .ticket-total b small{margin-left:0;margin-right:6px}
+html[dir="rtl"] .faq-q{text-align:right}
+html[dir="rtl"] .mouse-top{left:auto;right:clamp(14px,2.2vw,30px)}
+html[dir="rtl"] .shot img{transform:perspective(1400px) rotateY(4deg) rotateX(2deg)}
+html[dir="rtl"] .shot:hover img{transform:perspective(1400px) rotateY(1deg) rotateX(1deg) scale(1.03)}
+html[dir="rtl"] .stat b,
+html[dir="rtl"] .plan-price,
+html[dir="rtl"] .ticket-total b,
+html[dir="rtl"] .pay-amount b{direction:ltr;unicode-bidi:isolate}
+@media(max-width:980px){html[dir="rtl"] .conn-hint{margin-right:0}}
+
 /* ═══════════════ RESPONSIVE ═══════════════ */
 @media(max-width:1000px){
   .hero-grid,.speed-wrap,.order-grid{grid-template-columns:1fr}
@@ -574,6 +641,16 @@ footer{padding:58px 0 40px}
       <a href="#devices">Devices &amp; apps</a>
       <a href="#faq">FAQ</a>
     </nav>
+    <div class="lang" id="lang">
+      <button class="lang-cur" type="button" id="langCur" aria-haspopup="true" aria-expanded="false"
+              aria-label="Language">EN</button>
+      <div class="lang-opts" id="langOpts">
+        <button class="lang-b" type="button" data-lang="en" aria-current="true" lang="en" title="English">EN</button>
+        <button class="lang-b" type="button" data-lang="fr" aria-current="false" lang="fr" title="Français">FR</button>
+        <button class="lang-b" type="button" data-lang="de" aria-current="false" lang="de" title="Deutsch">DE</button>
+        <button class="lang-b" type="button" data-lang="ar" aria-current="false" lang="ar" title="العربية">AR</button>
+      </div>
+    </div>
     <a class="btn btn-blue btn-sm" href="#order">Order now</a>
   </div>
 </header>
@@ -582,7 +659,7 @@ footer{padding:58px 0 40px}
 <div id="top" class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <h1 class="rv in"><span class="hl">Every channel you</span><span class="hl">watch, on <span class="grad">one line</span>.</span></h1>
+      <h1 class="rv in" data-i18n-html="__h1"><span class="hl">Every channel you</span><span class="hl">watch, on <span class="grad">one line</span>.</span></h1>
       <p class="hero-sub rv d2">
         Live sports, films, series and news in 4K, HD and SD — with a full programme guide and
         7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.
@@ -842,10 +919,16 @@ footer{padding:58px 0 40px}
             <label for="device">What will you watch on?</label>
             <select id="device">
               <option value="">Select a device</option>
-              <option>Samsung Smart TV</option><option>LG Smart TV</option>
-              <option>Android TV box</option><option>Amazon Fire Stick</option>
-              <option>MAG box</option><option>Apple TV</option><option>Roku</option>
-              <option>Phone or tablet</option><option>Windows, Mac or Linux</option><option>Other</option>
+              <option value="Samsung Smart TV">Samsung Smart TV</option>
+              <option value="LG Smart TV">LG Smart TV</option>
+              <option value="Android TV box">Android TV box</option>
+              <option value="Amazon Fire Stick">Amazon Fire Stick</option>
+              <option value="MAG box">MAG box</option>
+              <option value="Apple TV">Apple TV</option>
+              <option value="Roku">Roku</option>
+              <option value="Phone or tablet">Phone or tablet</option>
+              <option value="Windows, Mac or Linux">Windows, Mac or Linux</option>
+              <option value="Other">Other</option>
             </select>
             <div class="err">Pick a device so we send the right setup steps.</div>
           </div>
@@ -888,7 +971,7 @@ footer{padding:58px 0 40px}
 
         <label class="check" for="agree">
           <input id="agree" type="checkbox">
-          <span>I'm ordering for my own household and I accept the
+          <span data-i18n-html="__consent">I'm ordering for my own household and I accept the
             <a href="legal.html" target="_blank">terms, refund policy and privacy notice</a>.
             I ask for my credentials to be sent immediately and understand that my 14-day right to
             withdraw ends once they are delivered.</span>
@@ -967,7 +1050,7 @@ footer{padding:58px 0 40px}
       </div>
     </div>
 
-    <div class="legal">
+    <div class="legal" data-i18n-html="__footlegal">
       Swift Channels is a trading name of Abdelouahd Bouzar, sole trader, Fès, Morocco.<br>
       We resell access to a third-party streaming platform. Content is licensed and delivered by
       that platform operator. Subscriptions are for private household use; redistribution and
@@ -982,6 +1065,8 @@ footer{padding:58px 0 40px}
   </div>
 </footer>
 
+<!-- translations: English source text → fr / de / ar -->
+<script src="assets/i18n.js"></script>
 <script>
 /* ═══════════════════════════════════════════════════════════
    1. CONFIG — edit this block only.
@@ -1079,10 +1164,17 @@ const CONFIG = {
   ]
 };
 
+/* ═══════════════════════════════════════════════════════════
+   1b. LANGUAGES — the engine and the translation tables both
+   live in assets/i18n.js. English source text is the key.
+   ═══════════════════════════════════════════════════════════ */
+const t  = s => window.i18n.t(s);
+const tf = (s, v) => window.i18n.tf(s, v);
+Object.defineProperty(window, 'LANG', { get: () => window.i18n.lang });
+
 /* ═══════════════ 2. Brand ═══════════════ */
 document.querySelectorAll('[data-brand],[data-brand-plain]').forEach(e => e.textContent = CONFIG.brand);
 document.getElementById('yr').textContent = new Date().getFullYear();
-document.title = CONFIG.brand + ' — IPTV subscriptions';
 
 const waBase = 'https://wa.me/' + CONFIG.whatsapp;
 document.querySelector('[data-wa-link]').href = waBase;
@@ -1093,10 +1185,10 @@ const $ = id => document.getElementById(id);
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ═══════════════ 3. Marquee ═══════════════ */
-(function(){
-  const html = CONFIG.marquee.map(t => '<span>' + t + '</span>').join('');
+function renderMarquee(){
+  const html = CONFIG.marquee.map(s => '<span>' + t(s) + '</span>').join('');
   $('marq').innerHTML = html + html;
-})();
+}
 
 /* ═══════════════ 4. Scroll: progress, nav, reveals ═══════════════ */
 const bar = $('bar'), nav = $('nav'), toTop = $('toTop');
@@ -1119,19 +1211,29 @@ const io = new IntersectionObserver(es => {
 }, {threshold:.14, rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.rv').forEach(el => io.observe(el));
 
-/* counters */
+/* counters — the suffix (" days") is translated, the number is not */
+function countSuffix(el){
+  const s = el.dataset.suffix || '';
+  const w = s.trim();
+  return w ? s.replace(w, t(w)) : s;
+}
+function refreshCounters(){
+  document.querySelectorAll('[data-count][data-done]').forEach(el => {
+    el.textContent = money(+el.dataset.count) + countSuffix(el);
+  });
+}
 const cio = new IntersectionObserver(es => {
   es.forEach(e => {
     if(!e.isIntersecting) return;
     cio.unobserve(e.target);
-    const el = e.target, end = +el.dataset.count, sfx = el.dataset.suffix || '';
-    if(reduced){ el.textContent = money(end) + sfx; return; }
+    const el = e.target, end = +el.dataset.count;
+    if(reduced){ el.textContent = money(end) + countSuffix(el); el.dataset.done = '1'; return; }
     const t0 = performance.now(), dur = 1500;
-    (function step(t){
-      const p = Math.min((t - t0) / dur, 1);
+    (function step(ts){
+      const p = Math.min((ts - t0) / dur, 1);
       const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = money(end * eased) + sfx;
-      if(p < 1) requestAnimationFrame(step);
+      el.textContent = money(end * eased) + countSuffix(el);
+      if(p < 1) requestAnimationFrame(step); else el.dataset.done = '1';
     })(t0);
   });
 }, {threshold:.5});
@@ -1170,17 +1272,19 @@ function renderPlans(){
     const card = document.createElement('article');
     card.className = 'plan' + (p.featured ? ' featured' : '');
     card.innerHTML = `
-      ${p.featured ? '<div class="plan-flag">Best value</div>' : ''}
-      <h3 class="plan-name">${p.name}</h3>
-      <div class="plan-term">${p.term}</div>
+      ${p.featured ? '<div class="plan-flag">' + t('Best value') + '</div>' : ''}
+      <h3 class="plan-name">${t(p.name)}</h3>
+      <div class="plan-term">${t(p.term)}</div>
       <div class="plan-price">
-        <span class="plan-amount">${free ? 'Free' : money(cost)}</span>
+        <span class="plan-amount">${free ? t('Free') : money(cost)}</span>
         ${free ? '' : '<span class="plan-cur">' + CONFIG.currency + '</span>'}
       </div>
-      <div class="plan-per">${free ? p.per : (state.conn > 1 ? p.per + ' · ' + state.conn + ' devices' : p.per)}</div>
-      <ul class="plan-list">${p.features.map(f => '<li>' + tick + '<span>' + f + '</span></li>').join('')}</ul>
+      <div class="plan-per">${free || state.conn === 1 ? t(p.per)
+                              : t(p.per) + ' · ' + t(state.conn + ' devices')}</div>
+      <ul class="plan-list">${p.features.map(f => '<li>' + tick + '<span>' + t(f) + '</span></li>').join('')}</ul>
       <button class="btn ${p.featured ? 'btn-blue' : 'btn-ghost'}" type="button" data-choose="${p.id}">
-        ${free ? 'Start the free test' : 'Choose ' + p.name.toLowerCase()}
+        ${free ? t('Start the free test')
+               : tf('Choose {plan}', {plan: LANG === 'en' ? p.name.toLowerCase() : t(p.name)})}
       </button>`;
 
     card.addEventListener('pointermove', ev => {
@@ -1202,15 +1306,18 @@ function renderPlans(){
 }
 
 const connHint = $('connHint');
+function updateConnHint(){
+  connHint.textContent = state.conn === 1
+    ? t('One stream at a time. Prices update below.')
+    : tf('{n} screens can play different channels at once.', {n: state.conn});
+}
 document.querySelectorAll('#connSeg button').forEach(b => {
   b.addEventListener('click', () => {
     document.querySelectorAll('#connSeg button').forEach(x => x.setAttribute('aria-pressed','false'));
     b.setAttribute('aria-pressed','true');
     state.conn = +b.dataset.conn;
     connSel.value = state.conn;
-    connHint.textContent = state.conn === 1
-      ? 'One stream at a time. Prices update below.'
-      : state.conn + ' screens can play different channels at once.';
+    updateConnHint();
     renderPlans(); updateTicket();
   });
 });
@@ -1218,14 +1325,27 @@ document.querySelectorAll('#connSeg button').forEach(b => {
 /* ═══════════════ 6. Form ═══════════════ */
 const planSel = $('plan'), connSel = $('conn'), devSel = $('device'), paySel = $('pay');
 
-CONFIG.plans.forEach(p => {
-  const o = document.createElement('option');
-  o.value = p.id; o.textContent = p.name + ' — ' + p.term;
-  planSel.appendChild(o);
-});
+/* Plan and payment options carry stable English values; only labels translate. */
+function renderPlanOptions(){
+  const keep = planSel.value;
+  planSel.innerHTML = '';
+  CONFIG.plans.forEach(p => {
+    const o = document.createElement('option');
+    o.value = p.id;
+    o.textContent = t(p.name) + ' — ' + t(p.term);
+    planSel.appendChild(o);
+  });
+  planSel.value = keep || 'yearly';
+}
+function renderPayOptions(){
+  const keep = paySel.value;
+  paySel.innerHTML = '<option value="">' + t('Select a method') + '</option>' +
+    CONFIG.payMethods.map(m => '<option value="' + m + '">' + t(m) + '</option>').join('');
+  paySel.value = keep;
+}
+renderPlanOptions();
 planSel.value = 'yearly';
-paySel.innerHTML = '<option value="">Select a method</option>' +
-  CONFIG.payMethods.map(m => '<option>' + m + '</option>').join('');
+renderPayOptions();
 
 const MAC_DEVICES = ['Samsung Smart TV','LG Smart TV','MAG box'];
 function syncPlanUI(){
@@ -1259,22 +1379,22 @@ function renderPayPanel(){
   if(free || !paySel.value || !d){ panel.classList.add('hidden'); return; }
   panel.classList.remove('hidden');
 
-  $('pp-method').textContent = 'Pay by ' + paySel.value;
+  $('pp-method').textContent = t('Pay by ' + paySel.value);
   $('pp-amount').textContent = money(priceFor(p, state.conn)) + ' ' + CONFIG.currency;
-  $('pp-note').textContent = d.note || '';
+  $('pp-note').textContent = d.note ? t(d.note) : '';
 
   const rows = $('pp-rows');
   rows.innerHTML = '';
   (d.rows || []).forEach(([k,v]) => {
     const r = document.createElement('dl');
     r.className = 'pay-row';
-    r.innerHTML = '<dt>' + k + '</dt><dd>' + v + '</dd>' +
-                  '<button class="copy" type="button">Copy</button>';
+    r.innerHTML = '<dt>' + t(k) + '</dt><dd>' + v + '</dd>' +
+                  '<button class="copy" type="button">' + t('Copy') + '</button>';
     r.querySelector('.copy').addEventListener('click', async function(){
       try { await navigator.clipboard.writeText(v); } catch(e){}
-      this.textContent = 'Copied';
+      this.textContent = t('Copied');
       this.classList.add('done');
-      setTimeout(() => { this.textContent = 'Copy'; this.classList.remove('done'); }, 1800);
+      setTimeout(() => { this.textContent = t('Copy'); this.classList.remove('done'); }, 1800);
     });
     rows.appendChild(r);
   });
@@ -1283,7 +1403,7 @@ function renderPayPanel(){
   const url = d.usePayLink ? CONFIG.payLinks[planSel.value] : (d.link && d.link.url);
   if(url){
     link.href = url;
-    link.textContent = d.label || (d.link && d.link.label) || 'Pay now';
+    link.textContent = t(d.label || (d.link && d.link.label) || 'Pay now');
     link.classList.remove('hidden');
     link.onclick = () => { saveOrder(); };
   } else link.classList.add('hidden');
@@ -1312,19 +1432,19 @@ function saveOrder(){
 
 function updateTicket(){
   const p = planById(planSel.value), free = p.price === 0, cost = priceFor(p, state.conn);
-  $('t-plan').textContent   = p.name;
-  $('t-term').textContent   = p.term;
-  $('t-conn').textContent   = state.conn + (state.conn > 1 ? ' devices' : ' device');
-  $('t-device').textContent = devSel.value || 'Not chosen';
-  $('t-pay').textContent    = free ? 'Not needed' : (paySel.value || 'Not chosen');
-  $('t-total').innerHTML    = free ? 'Free' : money(cost) + ' <small>' + CONFIG.currency + '</small>';
+  $('t-plan').textContent   = t(p.name);
+  $('t-term').textContent   = t(p.term);
+  $('t-conn').textContent   = t(state.conn === 1 ? '1 device' : state.conn + ' devices');
+  $('t-device').textContent = devSel.value ? t(devSel.value) : t('Not chosen');
+  $('t-pay').textContent    = free ? t('Not needed') : (paySel.value ? t(paySel.value) : t('Not chosen'));
+  $('t-total').innerHTML    = free ? t('Free') : money(cost) + ' <small>' + CONFIG.currency + '</small>';
 
-  $('sendWa').textContent = free
+  $('sendWa').textContent = t(free
     ? 'Send order on WhatsApp'
-    : 'Send payment proof on WhatsApp';
-  $('ticketNote').textContent = free
+    : 'Send payment proof on WhatsApp');
+  $('ticketNote').textContent = t(free
     ? 'Nothing is charged here. Free tests skip payment entirely — send the order and we open your line.'
-    : 'Pay first using the details in the form, screenshot the receipt, then send it here. We open your line as soon as we see it.';
+    : 'Pay first using the details in the form, screenshot the receipt, then send it here. We open your line as soon as we see it.');
 
   renderPayPanel();
 }
@@ -1390,16 +1510,17 @@ $('sendWa').addEventListener('click', () => {
   if(!validate()) return;
   const free = planById(planSel.value).price === 0;
   window.open(waBase + '?text=' + encodeURIComponent(buildMessage()), '_blank');
-  confirmSent(free
-    ? 'Order ' + REF + ' is open in WhatsApp. Press send there and we\'ll reply shortly.'
-    : 'Order ' + REF + ' is open in WhatsApp. Attach your payment screenshot with the paperclip, then press send.');
+  confirmSent(tf(free
+    ? 'Order {ref} is open in WhatsApp. Press send there and we\'ll reply shortly.'
+    : 'Order {ref} is open in WhatsApp. Attach your payment screenshot with the paperclip, then press send.',
+    {ref: REF}));
 });
 $('sendMail').addEventListener('click', () => {
   if(!validate()) return;
   location.href = 'mailto:' + CONFIG.email +
     '?subject=' + encodeURIComponent('Order ' + REF + ' — ' + planById(planSel.value).name) +
     '&body=' + encodeURIComponent(buildMessage());
-  confirmSent('Order ' + REF + ' is open in your email app.');
+  confirmSent(tf('Order {ref} is open in your email app.', {ref: REF}));
 });
 $('copyOrder').addEventListener('click', async () => {
   if(!validate()) return;
@@ -1410,7 +1531,7 @@ $('copyOrder').addEventListener('click', async () => {
     ta.value = text; document.body.appendChild(ta); ta.select();
     document.execCommand('copy'); ta.remove();
   }
-  confirmSent('Order ' + REF + ' copied. Paste it to us on WhatsApp or email.');
+  confirmSent(tf('Order {ref} copied. Paste it to us on WhatsApp or email.', {ref: REF}));
 });
 
 document.querySelectorAll('[data-preselect]').forEach(a => {
@@ -1419,23 +1540,41 @@ document.querySelectorAll('[data-preselect]').forEach(a => {
 
 /* ═══════════════ 8. FAQ ═══════════════ */
 const faqList = $('faqList');
-CONFIG.faq.forEach(([q,a], i) => {
-  const item = document.createElement('div');
-  item.className = 'faq-item';
-  item.innerHTML =
-    '<button class="faq-q" type="button" aria-expanded="false" aria-controls="fa' + i + '">' +
-      '<span>' + q + '</span><i>+</i></button>' +
-    '<div class="faq-a" id="fa' + i + '"><p>' + a + '</p></div>';
-  item.querySelector('.faq-q').addEventListener('click', function(){
-    const open = item.classList.toggle('open');
-    this.setAttribute('aria-expanded', String(open));
+function renderFaq(){
+  faqList.innerHTML = '';
+  CONFIG.faq.forEach(([q,a], i) => {
+    const item = document.createElement('div');
+    item.className = 'faq-item';
+    item.innerHTML =
+      '<button class="faq-q" type="button" aria-expanded="false" aria-controls="fa' + i + '">' +
+        '<span>' + t(q) + '</span><i>+</i></button>' +
+      '<div class="faq-a" id="fa' + i + '"><p>' + t(a) + '</p></div>';
+    item.querySelector('.faq-q').addEventListener('click', function(){
+      const open = item.classList.toggle('open');
+      this.setAttribute('aria-expanded', String(open));
+    });
+    faqList.appendChild(item);
   });
-  faqList.appendChild(item);
-});
+}
 
 /* ═══════════════ 9. Boot ═══════════════ */
+renderMarquee();
+renderFaq();
 renderPlans();
 syncPlanUI();
+window.i18n.boot({
+  skip: '#marq,#planCards,#faqList,#pp-rows,#plan,#pay',
+  onApply: function(){
+    renderMarquee();
+    renderPlanOptions();
+    renderPayOptions();
+    renderFaq();
+    renderPlans();
+    updateConnHint();
+    updateTicket();
+    refreshCounters();
+  }
+});
 </script>
 </body>
 </html>
