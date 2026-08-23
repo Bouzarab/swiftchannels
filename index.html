@@ -196,24 +196,49 @@ h1 .grad{
 .hero-note{margin-top:20px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--muted-2)}
 
-/* ---- hero visual ---- */
-.shot{position:relative;border-radius:var(--r);overflow:hidden;
-  border:1px solid var(--line);
-  box-shadow:0 40px 90px -30px rgba(0,0,0,.85),0 0 0 1px rgba(47,107,255,.14) inset;
-  transform:perspective(1400px) rotateY(-7deg) rotateX(3deg);
-  transition:transform .9s var(--ease);
-  will-change:transform;
+/* ---- hero visual (floating cut-out) ---- */
+.shot{position:relative;isolation:isolate}
+/* soft glow pooled behind the artwork */
+.shot::before{content:'';position:absolute;z-index:0;pointer-events:none;
+  left:6%;right:6%;top:8%;bottom:4%;
+  background:radial-gradient(58% 52% at 50% 45%,rgba(47,107,255,.28),transparent 70%),
+             radial-gradient(46% 40% at 62% 66%,rgba(56,203,255,.16),transparent 72%);
+  filter:blur(38px)}
+/* ground shadow so it reads as hovering above the page */
+.shot::after{content:'';position:absolute;z-index:0;pointer-events:none;
+  left:16%;right:16%;bottom:2%;height:26px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(0,0,0,.6),transparent 78%);
+  filter:blur(12px);
+  animation:shotShadow 7s var(--ease) infinite}
+.shot img{position:relative;z-index:1;width:100%;height:auto;display:block;
+  filter:saturate(1.1) contrast(1.03)
+         drop-shadow(0 18px 26px rgba(0,0,0,.55))
+         drop-shadow(0 42px 70px rgba(0,0,0,.45))
+         drop-shadow(0 0 30px rgba(47,107,255,.20));
+  transform:perspective(1400px) rotateY(-4deg) rotateX(2deg);
+  transform-origin:50% 60%;
+  transition:transform .9s var(--ease),filter .9s var(--ease);
+  will-change:transform,translate;
+  animation:shotFloat 7s var(--ease) infinite}
+.shot:hover img{transform:perspective(1400px) rotateY(-1deg) rotateX(1deg) scale(1.03);
+  filter:saturate(1.14) contrast(1.05)
+         drop-shadow(0 22px 30px rgba(0,0,0,.55))
+         drop-shadow(0 54px 84px rgba(0,0,0,.48))
+         drop-shadow(0 0 40px rgba(47,107,255,.30))}
+@keyframes shotFloat{
+  0%,100%{translate:0 0}
+  50%{translate:0 -14px}
 }
-.shot:hover{transform:perspective(1400px) rotateY(-2deg) rotateX(1deg) scale(1.015)}
-.shot img{width:100%;height:auto;display:block;filter:saturate(1.12) contrast(1.05)}
-.shot::after{content:'';position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg,rgba(5,10,24,.06),rgba(5,10,24,.55)),
-             linear-gradient(75deg,rgba(47,107,255,.22),transparent 55%)}
+@keyframes shotShadow{
+  0%,100%{transform:scaleX(1);opacity:.85}
+  50%{transform:scaleX(.88);opacity:.5}
+}
 .shot-badge{
-  position:absolute;left:16px;bottom:16px;z-index:3;
+  position:absolute;left:50%;translate:-50% 0;bottom:-4px;z-index:3;
   display:flex;align-items:center;gap:9px;padding:8px 14px;
   border-radius:100px;background:rgba(5,10,24,.72);border:1px solid var(--line);
   backdrop-filter:blur(10px);
+  box-shadow:0 14px 30px -10px rgba(0,0,0,.75);
   font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ice);
 }
 .shot-badge i{width:6px;height:6px;border-radius:50%;background:var(--cyan);
@@ -492,8 +517,9 @@ footer{padding:58px 0 40px}
 /* ═══════════════ RESPONSIVE ═══════════════ */
 @media(max-width:1000px){
   .hero-grid,.speed-wrap,.order-grid{grid-template-columns:1fr}
-  .shot{transform:none;margin-top:6px}
-  .shot:hover{transform:scale(1.01)}
+  .shot{margin-top:6px}
+  .shot img{transform:none}
+  .shot:hover img{transform:scale(1.02)}
   .ticket{position:static}
   .plans,.steps{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr 1fr}
@@ -561,7 +587,7 @@ footer{padding:58px 0 40px}
     </div>
 
     <div class="shot rv d2" id="shot">
-      <img src="assets/hero-wall.jpg" alt="A viewer scrolling a wall of live channels with a remote control">
+      <img src="assets/hero-wall.png" alt="A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels">
       <div class="shot-badge"><i></i> Live now</div>
     </div>
   </div>
