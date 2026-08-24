@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Channel list — Swift Channels</title>
+<meta name="description" content="Every channel on Swift Channels — over 8,000 live channels across 54 countries, searchable by name or country.">
+<link rel="canonical" href="https://swiftchannels.com/channels.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Swift Channels">
+<meta property="og:url" content="https://swiftchannels.com/channels.html">
+<meta property="og:title" content="Channel list — Swift Channels">
+<meta property="og:description" content="Over 8,000 live channels across 54 countries. Search by channel or browse by country.">
+<meta property="og:image" content="https://swiftchannels.com/assets/og-card.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="theme-color" content="#050A18">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#050A18;--night-2:#080F22;--panel:#0D162F;--panel-2:#111E3D;
+  --line:#1B2C54;--line-soft:#152444;
+  --blue:#2F6BFF;--blue-hi:#5A8CFF;--blue-deep:#1B49C4;--cyan:#49D9FF;
+  --glow:rgba(47,107,255,.30);
+  --ice:#E9EFFC;--muted:#93A6CC;--muted-2:#5F739B;
+  --display:'Sora',system-ui,sans-serif;--body:'Inter',Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --pad:clamp(20px,5vw,60px);--maxw:1320px;--r:14px;--ease:cubic-bezier(.22,.8,.24,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--ice);font-family:var(--body);font-size:16px;
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+img,svg{display:block;max-width:100%}
+
+.aurora{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;display:block}
+.aurora i:nth-child(1){width:54vw;height:54vw;left:-16vw;top:-20vw;
+  background:radial-gradient(circle,rgba(47,107,255,.40),transparent 68%)}
+.aurora i:nth-child(2){width:42vw;height:42vw;right:-12vw;top:30vh;
+  background:radial-gradient(circle,rgba(73,217,255,.14),transparent 68%)}
+
+/* ── top bar ── */
+.top{position:sticky;top:0;z-index:40;background:rgba(5,10,24,.86);
+  backdrop-filter:blur(18px);border-bottom:1px solid var(--line-soft)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);height:68px;
+  display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
+.brand-mark{width:30px;height:30px;flex:none;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--cyan))}
+.brand-mark::after{content:'';width:11px;height:11px;border-radius:50%;background:#fff;
+  box-shadow:0 0 12px #fff}
+.brand-name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;
+  white-space:nowrap}
+.back{font-size:14px;color:var(--muted)}
+.back:hover{color:var(--ice)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-weight:600;border-radius:100px;border:1px solid transparent;cursor:pointer;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s,color .3s}
+.btn:hover{transform:translateY(-1px)}
+.btn-blue{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;
+  box-shadow:0 10px 26px -10px var(--glow)}
+.btn-sm{padding:9px 17px;font-size:13.5px;white-space:nowrap}
+
+/* ── hero strip ── */
+.head{max-width:var(--maxw);margin:0 auto;padding:clamp(28px,4vw,48px) var(--pad) 0;width:100%}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--cyan);display:block;margin-bottom:12px}
+h1{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.06;
+  font-size:clamp(30px,4.6vw,52px)}
+h1 .grad{background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 60%,#fff);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.head p{margin-top:14px;color:var(--muted);max-width:60ch;font-size:16px}
+
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:24px}
+.stat b{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;display:block}
+.stat span{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted-2)}
+
+/* ── search ── */
+.search-wrap{max-width:var(--maxw);margin:0 auto;padding:26px var(--pad) 0;width:100%}
+.search{position:relative;max-width:520px}
+.search input{width:100%;background:rgba(8,15,34,.8);color:var(--ice);
+  border:1px solid var(--line);border-radius:100px;padding:14px 46px 14px 46px;
+  font-family:var(--body);font-size:15px;transition:border-color .25s,box-shadow .25s}
+.search input::placeholder{color:var(--muted-2)}
+.search input:focus{outline:none;border-color:var(--blue);
+  box-shadow:0 0 0 4px rgba(47,107,255,.12)}
+.search svg{position:absolute;left:17px;top:50%;transform:translateY(-50%);
+  width:17px;height:17px;stroke:var(--muted-2);fill:none;stroke-width:2}
+.search .clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  background:none;border:none;color:var(--muted-2);cursor:pointer;font-size:20px;
+  padding:6px 12px;display:none}
+.search .clear:hover{color:var(--ice)}
+.search.has .clear{display:block}
+
+/* ── main split ── */
+.split{max-width:var(--maxw);margin:0 auto;padding:26px var(--pad) 70px;width:100%;flex:1;
+  display:grid;grid-template-columns:264px 1fr;gap:26px;align-items:start}
+
+.rail{position:sticky;top:88px;background:rgba(8,15,34,.72);border:1px solid var(--line);
+  border-radius:20px;overflow:hidden;max-height:calc(100vh - 116px);display:flex;flex-direction:column}
+.rail-h{padding:15px 18px;border-bottom:1px solid var(--line-soft);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--muted-2)}
+.rail-list{overflow-y:auto;padding:8px;display:flex;flex-direction:column;gap:2px}
+.ct{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;
+  background:none;border:none;border-radius:12px;padding:9px 10px;color:var(--muted);
+  font-family:var(--body);transition:background .2s,color .2s}
+.ct:hover{background:rgba(47,107,255,.10);color:var(--ice)}
+.ct[aria-selected="true"]{background:rgba(47,107,255,.16);color:var(--ice)}
+.ct-code{width:38px;height:38px;flex:none;border-radius:50%;display:grid;place-items:center;
+  overflow:hidden;position:relative;
+  background:linear-gradient(140deg,var(--panel-2),var(--panel));
+  box-shadow:0 0 0 1px var(--line);
+  font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.02em;color:var(--muted);
+  transition:box-shadow .25s,transform .25s;filter:saturate(.72);opacity:.72}
+.ct-code img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.ct:hover .ct-code{filter:none;opacity:1}
+.ct[aria-selected="true"] .ct-code{filter:none;opacity:1;transform:scale(1.04);
+  box-shadow:0 0 0 2px var(--blue-hi),0 8px 18px -6px var(--glow)}
+.ct[aria-selected="true"] .ct-code:not(:has(img)){color:#fff;
+  background:linear-gradient(140deg,var(--blue),var(--blue-deep))}
+.ct-name{flex:1;min-width:0;font-size:14.5px;font-weight:500;line-height:1.25;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ct-n{font-family:var(--mono);font-size:11px;color:var(--muted-2);font-variant-numeric:tabular-nums}
+
+/* ── channel pane ── */
+.pane{min-width:0}
+.pane-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.pane-h h2{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em}
+.pane-h span{font-family:var(--mono);font-size:11.5px;color:var(--muted-2);
+  font-variant-numeric:tabular-nums}
+
+.scroller{border:1px solid var(--line);border-radius:20px;background:rgba(8,15,34,.55);
+  height:calc(100vh - 116px);overflow-y:auto;overscroll-behavior:contain;padding:12px}
+.scroller::-webkit-scrollbar{width:10px}
+.scroller::-webkit-scrollbar-track{background:transparent}
+.scroller::-webkit-scrollbar-thumb{background:var(--line);border-radius:20px;
+  border:3px solid transparent;background-clip:content-box}
+.scroller::-webkit-scrollbar-thumb:hover{background:var(--blue-deep);background-clip:content-box}
+.scroller{scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.chans{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:9px}
+.ch{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;
+  background:rgba(13,22,47,.62);border:1px solid var(--line-soft);
+  transition:border-color .2s,background .2s,transform .2s}
+.ch:hover{border-color:var(--blue);background:rgba(47,107,255,.09);transform:translateY(-1px)}
+.ch-dot{width:7px;height:7px;flex:none;border-radius:50%;background:var(--blue-deep)}
+.ch.q4 .ch-dot{background:var(--cyan);box-shadow:0 0 8px rgba(73,217,255,.6)}
+.ch-name{flex:1;min-width:0;font-size:14px;line-height:1.3;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;padding:3px 7px;
+  border-radius:5px;border:1px solid var(--line);color:var(--muted-2);flex:none}
+.tag.t4K{border-color:rgba(73,217,255,.5);color:var(--cyan)}
+.tag.tFHD,.tag.tHD{border-color:rgba(90,140,255,.42);color:var(--blue-hi)}
+.ch-from{font-family:var(--mono);font-size:10px;color:var(--muted-2);flex:none}
+
+.sentinel{height:1px}
+.loading{padding:16px;text-align:center;font-family:var(--mono);font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2)}
+.empty{padding:50px 10px;text-align:center;color:var(--muted-2);font-size:15px}
+
+/* ── closing band ── */
+.band{border-top:1px solid var(--line-soft);background:
+  radial-gradient(70% 130% at 50% 0%,rgba(47,107,255,.16),transparent 70%)}
+.band-in{max-width:var(--maxw);margin:0 auto;padding:52px var(--pad);text-align:center}
+.band h3{font-family:var(--display);font-weight:800;font-size:clamp(22px,3vw,30px);
+  letter-spacing:-.02em}
+.band p{color:var(--muted);margin:12px auto 24px;max-width:56ch;font-size:15.5px}
+.btn-lg{padding:15px 30px;font-size:15.5px}
+
+footer{border-top:1px solid var(--line-soft);padding:24px var(--pad);
+  font-family:var(--mono);font-size:11px;color:var(--muted-2);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  max-width:var(--maxw);margin:0 auto;width:100%}
+footer a:hover{color:var(--blue-hi)}
+
+@media(max-width:640px){
+  .back{display:none}                 /* the brand already goes home */
+  .top-in{height:60px;gap:12px}
+  .brand-name{font-size:16px}
+}
+@media(max-width:900px){
+  .split{grid-template-columns:1fr;gap:18px}
+  .scroller{height:72vh}
+  .rail{position:static;max-height:none}
+  .rail-list{flex-direction:row;overflow-x:auto;overflow-y:hidden;padding:10px}
+  .ct{width:auto;flex:none;padding:8px 12px 8px 8px}
+  .ct-name{white-space:nowrap}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important;
+    scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<div class="aurora"><i></i><i></i></div>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
+    </a>
+    <a class="back" href="index.html">← Back to the site</a>
+    <a class="btn btn-blue btn-sm" href="index.html#order">Order now</a>
+  </div>
+</header>
+
+<div class="head">
+  <span class="eyebrow">Channel list</span>
+  <h1>Every channel,<br>in <span class="grad">one place</span>.</h1>
+  <p>Browse by country or search for the channel you can't do without. This is the full
+    line-up carried on the platform — the same list on every plan.</p>
+  <div class="stats">
+    <div class="stat"><b id="sChan">—</b><span>Channels</span></div>
+    <div class="stat"><b id="sCtry">—</b><span>Countries</span></div>
+    <div class="stat"><b>50,000+</b><span>Films &amp; series</span></div>
+    <div class="stat"><b>7 days</b><span>Catch-up</span></div>
+  </div>
+</div>
+
+<div class="search-wrap">
+  <div class="search" id="searchWrap">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Search 8,000+ channels — try “Sky Sports” or “beIN”"
+           autocomplete="off" aria-label="Search channels">
+    <button class="clear" type="button" id="clearQ" aria-label="Clear search">&times;</button>
+  </div>
+</div>
+
+<div class="split">
+  <aside class="rail">
+    <div class="rail-h">Countries</div>
+    <div class="rail-list" id="rail" role="tablist" aria-label="Countries"></div>
+  </aside>
+
+  <main class="pane">
+    <div class="pane-h"><h2 id="paneTitle">—</h2><span id="paneCount"></span></div>
+    <div class="scroller" id="scroller">
+      <div class="chans" id="chans"></div>
+      <div class="loading" id="loading" hidden>Loading more…</div>
+      <div class="sentinel" id="sentinel"></div>
+      <div class="empty" id="empty" hidden>Nothing matches that. Try a shorter word — or ask us on WhatsApp.</div>
+    </div>
+  </main>
+</div>
+
+<div class="band">
+  <div class="band-in">
+    <h3>Can't find a channel you need?</h3>
+    <p>Ask before you order. If it's carried we'll tell you, and if it isn't we'll say so —
+      the free 24-hour test lets you check it on your own TV either way.</p>
+    <a class="btn btn-blue btn-lg" href="index.html#order">Start the free 24-hour test</a>
+  </div>
+</div>
+
+<footer>
+  <span>© <span id="yr"></span> Swift Channels · Line-ups are set by the platform and can change</span>
+  <span><a href="index.html">swiftchannels.com</a> · <a href="legal.html">Terms &amp; privacy</a></span>
+</footer>
+
+<script src="assets/channels.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const DATA = window.CHANNELS || [];
+const TAGS = ['', '4K', 'FHD', 'HD', 'SD'];
+const PAGE = 200;                       /* rows drawn per chunk while scrolling */
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+const totalCh = DATA.reduce((n, c) => n + c.ch.length, 0);
+$('sChan').textContent = totalCh.toLocaleString('en-GB');
+$('sCtry').textContent = DATA.length;
+
+/* ── country rail ── */
+let current = 0;
+const rail = $('rail');
+DATA.forEach((c, i) => {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'ct';
+  b.setAttribute('role','tab');
+  b.setAttribute('aria-selected', String(i === 0));
+  const badge = c.f
+    ? '<span class="ct-code"><img src="assets/flags/' + c.f + '.webp" alt="" width="38" height="38" loading="lazy"></span>'
+    : '<span class="ct-code">' + c.k + '</span>';
+  b.innerHTML = badge + '<span class="ct-name">' + c.c + '</span>' +
+                '<span class="ct-n">' + c.ch.length + '</span>';
+  b.addEventListener('click', () => {
+    $('q').value = '';
+    $('searchWrap').classList.remove('has');
+    select(i);
+  });
+  rail.appendChild(b);
+});
+
+function markRail(i){
+  [...rail.children].forEach((b, n) => b.setAttribute('aria-selected', String(n === i)));
+}
+
+/* ── drawing ── */
+let rows = [], drawn = 0;
+
+function draw(reset){
+  const box = $('chans');
+  if(reset){ box.innerHTML = ''; drawn = 0; $('scroller').scrollTop = 0; }
+  const slice = rows.slice(drawn, drawn + PAGE);
+  const frag = document.createDocumentFragment();
+  slice.forEach(r => {
+    const [name, q, from] = r;
+    const el = document.createElement('div');
+    el.className = 'ch' + (q === 1 ? ' q4' : '');
+    let html = '<span class="ch-dot"></span><span class="ch-name">' + name + '</span>';
+    if(from) html += '<span class="ch-from">' + from + '</span>';
+    if(q) html += '<span class="tag t' + TAGS[q] + '">' + TAGS[q] + '</span>';
+    el.innerHTML = html;
+    frag.appendChild(el);
+  });
+  box.appendChild(frag);
+  drawn += slice.length;
+  $('loading').hidden = drawn >= rows.length;
+  $('empty').hidden = rows.length > 0;
+}
+
+/* keep filling as the column is scrolled */
+const io = new IntersectionObserver(es => {
+  if(es[0].isIntersecting && drawn < rows.length) draw(false);
+}, { root: $('scroller'), rootMargin: '600px' });
+io.observe($('sentinel'));
+
+function select(i){
+  current = i;
+  markRail(i);
+  const c = DATA[i];
+  $('paneTitle').textContent = c.c;
+  $('paneCount').textContent = c.ch.length.toLocaleString('en-GB') + ' channels';
+  rows = c.ch.map(x => [x[0], x[1], '']);
+  draw(true);
+}
+
+/* ── search across every country ── */
+let timer;
+$('q').addEventListener('input', e => {
+  const raw = e.target.value.trim();
+  $('searchWrap').classList.toggle('has', raw.length > 0);
+  clearTimeout(timer);
+  timer = setTimeout(() => runSearch(raw), 140);
+});
+$('clearQ').addEventListener('click', () => {
+  $('q').value = '';
+  $('searchWrap').classList.remove('has');
+  select(current);
+  $('q').focus();
+});
+
+function runSearch(raw){
+  if(raw.length < 2){ select(current); return; }
+  const needle = raw.toLowerCase();
+  const hits = [];
+  for(const c of DATA){
+    for(const [name, q] of c.ch){
+      if(name.toLowerCase().includes(needle)) hits.push([name, q, c.k]);
+      if(hits.length > 3000) break;
+    }
+    if(hits.length > 3000) break;
+  }
+  markRail(-1);
+  $('paneTitle').textContent = 'Results for “' + raw + '”';
+  $('paneCount').textContent = hits.length.toLocaleString('en-GB') +
+    (hits.length === 3001 ? '+ matches' : ' matches');
+  rows = hits;
+  draw(true);
+}
+
+select(0);
+</script>
+</body>
+</html>

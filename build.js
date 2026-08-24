@@ -165,6 +165,9 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
   ).join('\n') +
   `\n      <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('')}legal.html"/>`;
 
+  /* pages that exist in English only for now */
+  const ENGLISH_ONLY = ['channels.html'];
+
   const entries = LANGS.map(l => `  <url>
     <loc>${urlFor(l.folder)}</loc>
 ${alternates}
@@ -180,11 +183,19 @@ ${legalAlternates}
     <priority>0.3</priority>
   </url>`).join('\n');
 
+  const extra = ENGLISH_ONLY.filter(f => fs.existsSync(path.join(ROOT, f))).map(f => `
+  <url>
+    <loc>${SITE}/${f}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+
   fs.writeFileSync(path.join(ROOT,'sitemap.xml'),
 `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${entries}
+${entries}${extra}
 </urlset>
 `, 'utf8');
   console.log('  ✓ sitemap.xml');
