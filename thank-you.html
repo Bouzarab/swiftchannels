@@ -138,18 +138,20 @@ footer a:hover{color:var(--blue-hi)}
 /* ═══════════════ LANGUAGE SWITCHER ═══════════════ */
 .top{display:flex;align-items:center;justify-content:space-between;gap:14px}
 .lang{position:relative;display:flex;align-items:center;gap:7px}
-.lang-opts{display:flex;gap:7px}
+.lang-opts{display:flex;gap:6px}
 .lang-b,.lang-cur{
-  width:34px;height:34px;flex:0 0 34px;border-radius:50%;padding:0;cursor:pointer;
+  width:32px;height:32px;flex:0 0 32px;border-radius:50%;padding:0;cursor:pointer;overflow:hidden;
   display:flex;align-items:center;justify-content:center;
   background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--muted);
-  font-family:var(--mono);font-size:11px;font-weight:500;
-  transition:color .25s,border-color .25s,background .3s,transform .25s,box-shadow .3s;
+  font-family:var(--mono);font-size:10px;font-weight:500;
+  transition:opacity .25s,filter .3s,border-color .25s,transform .25s,box-shadow .3s;
 }
-.lang-b:hover,.lang-cur:hover{color:var(--ice);border-color:var(--blue-hi);transform:translateY(-1px)}
+.lang-b img,.lang-cur img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.lang-b{opacity:.5;filter:saturate(.55)}
+.lang-b:hover,.lang-cur:hover{opacity:1;filter:none;border-color:var(--blue-hi);transform:translateY(-1px)}
 .lang-b[aria-current="true"]{
-  background:linear-gradient(135deg,var(--blue),var(--blue-hi));
-  border-color:transparent;color:#fff;box-shadow:0 8px 20px -8px var(--glow)}
+  opacity:1;filter:none;border-color:transparent;
+  box-shadow:0 0 0 2px var(--blue-hi),0 8px 20px -8px var(--glow)}
 .lang-cur{display:none}
 @media(max-width:640px){
   .lang-cur{display:flex}
@@ -187,13 +189,14 @@ html[dir="rtl"] .steps li{grid-template-columns:30px 1fr}
     <span class="brand-mark"></span><span class="brand-name" data-brand>Swift Channels</span>
   </a>
   <div class="lang" id="lang">
-    <button class="lang-cur" type="button" id="langCur" aria-haspopup="true" aria-expanded="false"
-            aria-label="Language">EN</button>
+    <button class="lang-cur" type="button" id="langCur" aria-haspopup="true"
+            aria-expanded="false" aria-label="Language"><img src="assets/flag-en.webp" alt="" width="34" height="34"></button>
     <div class="lang-opts" id="langOpts">
-      <button class="lang-b" type="button" data-lang="en" aria-current="true" lang="en" title="English">EN</button>
-      <button class="lang-b" type="button" data-lang="fr" aria-current="false" lang="fr" title="Français">FR</button>
-      <button class="lang-b" type="button" data-lang="de" aria-current="false" lang="de" title="Deutsch">DE</button>
-      <button class="lang-b" type="button" data-lang="ar" aria-current="false" lang="ar" title="العربية">AR</button>
+      <button class="lang-b" type="button" data-lang="en" aria-current="true" aria-label="English" title="English"><img src="assets/flag-en.webp" alt="English" width="34" height="34"></button>
+      <button class="lang-b" type="button" data-lang="fr" aria-current="false" aria-label="Français" title="Français"><img src="assets/flag-fr.webp" alt="Français" width="34" height="34"></button>
+      <button class="lang-b" type="button" data-lang="es" aria-current="false" aria-label="Español" title="Español"><img src="assets/flag-es.webp" alt="Español" width="34" height="34"></button>
+      <button class="lang-b" type="button" data-lang="de" aria-current="false" aria-label="Deutsch" title="Deutsch"><img src="assets/flag-de.webp" alt="Deutsch" width="34" height="34"></button>
+      <button class="lang-b" type="button" data-lang="ar" aria-current="false" aria-label="العربية" title="العربية"><img src="assets/flag-ar.webp" alt="العربية" width="34" height="34"></button>
     </div>
   </div>
 </div>
