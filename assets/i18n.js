@@ -44,7 +44,7 @@ fr: {
 
   /* ── thank-you page ── */
   '__ty_title': 'Paiement reçu — une dernière étape',
-  '__ty_h1': 'Paiement reçu.<br><span class="grad">Une dernière étape.</span>',
+  '__ty_h1': 'Paiement reçu. <br><span class="grad">Une dernière étape.</span>',
   "We can't open your line until we can match the payment to you. Send us the receipt on WhatsApp and your login details come straight back — usually within ten minutes.":
     'Nous ne pouvons ouvrir votre ligne qu’une fois le paiement rattaché à vous. Envoyez-nous le reçu sur WhatsApp et vos identifiants reviennent aussitôt — en général en moins de dix minutes.',
   'Your order': 'Votre commande',
@@ -73,7 +73,7 @@ fr: {
   'Devices & apps': 'Appareils et applis',
   'FAQ': 'FAQ',
   'Order now': 'Commander',
-  '__h1': '<span class="hl">Toutes vos chaînes,</span><span class="hl">sur <span class="grad">une seule ligne</span>.</span>',
+  '__h1': '<span class="hl">Toutes vos chaînes,</span> <span class="hl">sur <span class="grad">une seule ligne</span>.</span>',
   'Live sports, films, series and news in 4K, HD and SD — with a full programme guide and 7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.':
     'Sport en direct, films, séries et infos en 4K, HD et SD — avec un guide des programmes complet et 7 jours de replay. Choisissez une offre, indiquez votre appareil, et vos identifiants arrivent en quelques minutes.',
   'Start the free 24-hour test': 'Lancer le test gratuit de 24 h',
@@ -410,7 +410,7 @@ de: {
 
   /* ── thank-you page ── */
   '__ty_title': 'Zahlung erhalten — ein Schritt fehlt',
-  '__ty_h1': 'Zahlung erhalten.<br><span class="grad">Ein Schritt fehlt.</span>',
+  '__ty_h1': 'Zahlung erhalten. <br><span class="grad">Ein Schritt fehlt.</span>',
   "We can't open your line until we can match the payment to you. Send us the receipt on WhatsApp and your login details come straight back — usually within ten minutes.":
     'Wir können Ihre Leitung erst freischalten, wenn wir die Zahlung Ihnen zuordnen können. Senden Sie uns den Beleg per WhatsApp, und Ihre Zugangsdaten kommen sofort zurück — meist in unter zehn Minuten.',
   'Your order': 'Ihre Bestellung',
@@ -438,7 +438,7 @@ de: {
   'Devices & apps': 'Geräte & Apps',
   'FAQ': 'FAQ',
   'Order now': 'Jetzt bestellen',
-  '__h1': '<span class="hl">Alle Ihre Sender,</span><span class="hl">auf <span class="grad">einer Leitung</span>.</span>',
+  '__h1': '<span class="hl">Alle Ihre Sender,</span> <span class="hl">auf <span class="grad">einer Leitung</span>.</span>',
   'Live sports, films, series and news in 4K, HD and SD — with a full programme guide and 7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.':
     'Live-Sport, Filme, Serien und Nachrichten in 4K, HD und SD — mit vollständigem Programmführer und 7 Tagen Mediathek. Tarif wählen, Gerät nennen, und Ihre Zugangsdaten kommen in wenigen Minuten.',
   'Start the free 24-hour test': 'Kostenlosen 24-Stunden-Test starten',
@@ -763,7 +763,7 @@ es: {
 
   /* ── thank-you page ── */
   '__ty_title': 'Pago recibido — falta un paso',
-  '__ty_h1': 'Pago recibido.<br><span class="grad">Falta un paso.</span>',
+  '__ty_h1': 'Pago recibido. <br><span class="grad">Falta un paso.</span>',
   "We can't open your line until we can match the payment to you. Send us the receipt on WhatsApp and your login details come straight back — usually within ten minutes.":
     'No podemos activar tu línea hasta poder asociar el pago contigo. Envíanos el recibo por WhatsApp y tus datos de acceso vuelven enseguida — normalmente en menos de diez minutos.',
   'Your order': 'Tu pedido',
@@ -792,7 +792,7 @@ es: {
   'Devices & apps': 'Dispositivos y apps',
   'FAQ': 'Preguntas',
   'Order now': 'Contratar',
-  '__h1': '<span class="hl">Todos tus canales,</span><span class="hl">en <span class="grad">una sola línea</span>.</span>',
+  '__h1': '<span class="hl">Todos tus canales,</span> <span class="hl">en <span class="grad">una sola línea</span>.</span>',
   'Live sports, films, series and news in 4K, HD and SD — with a full programme guide and 7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.':
     'Deportes en directo, películas, series y noticias en 4K, HD y SD — con guía de programación completa y 7 días de repetición. Elige un plan, dinos tu dispositivo y tus datos de acceso llegan en minutos.',
   'Start the free 24-hour test': 'Empezar la prueba gratis de 24 h',
@@ -1129,7 +1129,7 @@ ar: {
 
   /* ── thank-you page ── */
   '__ty_title': 'تم استلام الدفع — خطوة واحدة متبقية',
-  '__ty_h1': 'تم استلام الدفع.<br><span class="grad">بقيت خطوة واحدة.</span>',
+  '__ty_h1': 'تم استلام الدفع. <br><span class="grad">بقيت خطوة واحدة.</span>',
   "We can't open your line until we can match the payment to you. Send us the receipt on WhatsApp and your login details come straight back — usually within ten minutes.":
     'لا يمكننا فتح خطك قبل أن نربط الدفع باسمك. أرسل لنا الإيصال على واتساب وتعود إليك بيانات الدخول فورًا — عادة في أقل من عشر دقائق.',
   'Your order': 'طلبك',
@@ -1157,7 +1157,7 @@ ar: {
   'Devices & apps': 'الأجهزة والتطبيقات',
   'FAQ': 'الأسئلة الشائعة',
   'Order now': 'اطلب الآن',
-  '__h1': '<span class="hl">كل قنواتك المفضلة،</span><span class="hl">على <span class="grad">خط واحد</span>.</span>',
+  '__h1': '<span class="hl">كل قنواتك المفضلة،</span> <span class="hl">على <span class="grad">خط واحد</span>.</span>',
   'Live sports, films, series and news in 4K, HD and SD — with a full programme guide and 7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.':
     'رياضة مباشرة وأفلام ومسلسلات وأخبار بجودة 4K و HD و SD — مع دليل برامج كامل وإعادة مشاهدة لسبعة أيام. اختر باقة، أخبرنا بجهازك، وتصلك بيانات الدخول خلال دقائق.',
   'Start the free 24-hour test': 'ابدأ التجربة المجانية 24 ساعة',
