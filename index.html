@@ -1420,23 +1420,62 @@ $('sendWa').addEventListener('click', () => {
   confirmSent(tf('Order {ref} is open in WhatsApp. Press send there and we\'ll reply with the payment details shortly.',
     {ref: REF}));
 });
+/* Copies text without waiting on the clipboard promise, so it still works
+   inside a click handler on browsers that block the async API. */
+function copyText(text){
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly','');
+    ta.style.cssText = 'position:fixed;top:-1000px;opacity:0';
+    document.body.appendChild(ta);
+    ta.select();
+    ta.setSelectionRange(0, text.length);
+    document.execCommand('copy');
+    ta.remove();
+  } catch(e){}
+  if(navigator.clipboard) navigator.clipboard.writeText(text).catch(() => {});
+}
+
+/* Not every visitor has a mail app wired to mailto: links — on those machines
+   the link does nothing at all. So we copy the order first, try to open the
+   mail app, and if the page never loses focus we say so and give the address. */
 $('sendMail').addEventListener('click', () => {
   if(!validate()) return;
   saveOrder();
-  location.href = 'mailto:' + CONFIG.email +
+
+  const body = buildMessage();
+  copyText(body);
+
+  const url = 'mailto:' + CONFIG.email +
     '?subject=' + encodeURIComponent('Order ' + REF + ' — ' + planById(planSel.value).name) +
-    '&body=' + encodeURIComponent(buildMessage());
-  confirmSent(tf('Order {ref} is open in your email app.', {ref: REF}));
+    '&body=' + encodeURIComponent(body);
+
+  let handled = false;
+  const mark = () => { handled = true; };
+  addEventListener('blur', mark);
+  addEventListener('pagehide', mark);
+  document.addEventListener('visibilitychange', mark);
+
+  const tab = window.open(url, '_blank');
+  if(!tab) location.href = url;
+
+  setTimeout(() => {
+    removeEventListener('blur', mark);
+    removeEventListener('pagehide', mark);
+    document.removeEventListener('visibilitychange', mark);
+    if(tab && !tab.closed){ try { tab.close(); } catch(e){} }
+
+    confirmSent(handled
+      ? tf('Order {ref} is open in your email app.', {ref: REF})
+      : tf('No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}, or use the WhatsApp button.',
+           {ref: REF, mail: CONFIG.email}));
+  }, 1500);
 });
-$('copyOrder').addEventListener('click', async () => {
+
+$('copyOrder').addEventListener('click', () => {
   if(!validate()) return;
-  const text = buildMessage();
-  try { await navigator.clipboard.writeText(text); }
-  catch(e){
-    const ta = document.createElement('textarea');
-    ta.value = text; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); ta.remove();
-  }
+  copyText(buildMessage());
   confirmSent(tf('Order {ref} copied. Paste it to us on WhatsApp or email.', {ref: REF}));
 });
 
