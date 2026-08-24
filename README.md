@@ -177,6 +177,26 @@ pass, then rebuild.
    `legal.html`.
 4. `node build.js`.
 
+### Telling Bing immediately (IndexNow)
+
+Bing supports IndexNow: instead of waiting to be crawled, you push a list of
+URLs. Google does not use it — for Google, see below.
+
+```bash
+node indexnow.js --dry-run   # shows what would be sent
+node indexnow.js             # sends it
+```
+
+It reads every `<loc>` from `sitemap.xml`, so it always submits the current set
+of pages. Run it **after** `git push`, once the pages are actually live.
+
+The key lives in `d119da91893e4ec4910f7aabe77209dd.txt` at the repo root and must
+stay reachable at `https://swiftchannels.com/d119da91893e4ec4910f7aabe77209dd.txt`.
+Do not delete or rename it. It is public by design — the key proves you control
+the domain, it is not a secret.
+
+`HTTP 200` or `202` means accepted. `403` means Bing could not read the key file.
+
 ### Getting the pages into Google
 
 After the first push, in Search Console: submit `sitemap.xml`, then use URL
