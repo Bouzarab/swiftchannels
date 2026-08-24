@@ -302,7 +302,7 @@ fr: {
   'Terms & privacy': 'Conditions et confidentialité',
   'Talk to us': 'Nous contacter',
   'SUPPORT 09:00–23:00 GMT+1': 'SUPPORT 09:00–23:00 GMT+1',
-  '__footlegal': 'Swift Channels est un nom commercial d’Abdelouahd Bouzar, entrepreneur individuel, Fès, Maroc.<br>Nous revendons l’accès à une plateforme de streaming tierce. Les contenus sont sous licence et diffusés par l’opérateur de cette plateforme. Les abonnements sont destinés à un usage privé au sein du foyer ; la redistribution et la diffusion publique ne sont pas autorisées.<br><a href="legal.html">Conditions de service · Politique de remboursement · Confidentialité</a>',
+  '__footlegal': 'Nous revendons l’accès à une plateforme de streaming tierce. Les contenus sont sous licence et diffusés par l’opérateur de cette plateforme. Les abonnements sont destinés à un usage privé au sein du foyer ; la redistribution et la diffusion publique ne sont pas autorisées.<br><a href="legal.html">Conditions de service · Politique de remboursement · Confidentialité</a>',
   'MADE IN MOROCCO': 'FAIT AU MAROC',
 
   /* marquee */
@@ -628,7 +628,7 @@ de: {
   'Terms & privacy': 'AGB & Datenschutz',
   'Talk to us': 'Kontakt',
   'SUPPORT 09:00–23:00 GMT+1': 'SUPPORT 09:00–23:00 GMT+1',
-  '__footlegal': 'Swift Channels ist ein Handelsname von Abdelouahd Bouzar, Einzelunternehmer, Fès, Marokko.<br>Wir vertreiben den Zugang zu einer Streaming-Plattform eines Drittanbieters. Die Inhalte sind lizenziert und werden von deren Betreiber ausgeliefert. Abos sind für den privaten Haushaltsgebrauch bestimmt; Weiterverbreitung und öffentliche Vorführung sind nicht gestattet.<br><a href="legal.html">AGB · Erstattungsrichtlinie · Datenschutz</a>',
+  '__footlegal': 'Wir vertreiben den Zugang zu einer Streaming-Plattform eines Drittanbieters. Die Inhalte sind lizenziert und werden von deren Betreiber ausgeliefert. Abos sind für den privaten Haushaltsgebrauch bestimmt; Weiterverbreitung und öffentliche Vorführung sind nicht gestattet.<br><a href="legal.html">AGB · Erstattungsrichtlinie · Datenschutz</a>',
   'MADE IN MOROCCO': 'HERGESTELLT IN MAROKKO',
 
   '4K · HD · SD': '4K · HD · SD',
@@ -963,7 +963,7 @@ es: {
   'Terms & privacy': 'Términos y privacidad',
   'Talk to us': 'Habla con nosotros',
   'SUPPORT 09:00–23:00 GMT+1': 'SOPORTE 09:00–23:00 GMT+1',
-  '__footlegal': 'Swift Channels es un nombre comercial de Abdelouahd Bouzar, autónomo, Fez, Marruecos.<br>Revendemos el acceso a una plataforma de streaming de terceros. Los contenidos tienen licencia y los sirve el operador de esa plataforma. Las suscripciones son para uso privado en el hogar; no se permite la redistribución ni la exhibición pública.<br><a href="legal.html">Términos del servicio · Política de reembolso · Aviso de privacidad</a>',
+  '__footlegal': 'Revendemos el acceso a una plataforma de streaming de terceros. Los contenidos tienen licencia y los sirve el operador de esa plataforma. Las suscripciones son para uso privado en el hogar; no se permite la redistribución ni la exhibición pública.<br><a href="legal.html">Términos del servicio · Política de reembolso · Aviso de privacidad</a>',
   'MADE IN MOROCCO': 'HECHO EN MARRUECOS',
 
   /* marquee */
@@ -1293,7 +1293,7 @@ ar: {
   'Talk to us': 'تواصل معنا',
   'WhatsApp': 'واتساب',
   'SUPPORT 09:00–23:00 GMT+1': 'الدعم 09:00–23:00 بتوقيت غرينتش+1',
-  '__footlegal': 'سويفت تشانلز اسم تجاري لعبد الواحد بوزار، مقاول ذاتي، فاس، المغرب.<br>نحن نعيد بيع الوصول إلى منصة بث تابعة لطرف ثالث. المحتوى مرخّص ويُقدَّم من مشغّل تلك المنصة. الاشتراكات مخصّصة للاستعمال المنزلي الخاص؛ ولا يُسمح بإعادة التوزيع أو العرض العمومي.<br><a href="legal.html">شروط الخدمة · سياسة الاسترجاع · إشعار الخصوصية</a>',
+  '__footlegal': 'نحن نعيد بيع الوصول إلى منصة بث تابعة لطرف ثالث. المحتوى مرخّص ويُقدَّم من مشغّل تلك المنصة. الاشتراكات مخصّصة للاستعمال المنزلي الخاص؛ ولا يُسمح بإعادة التوزيع أو العرض العمومي.<br><a href="legal.html">شروط الخدمة · سياسة الاسترجاع · إشعار الخصوصية</a>',
   'MADE IN MOROCCO': 'صُنع في المغرب',
 
   '4K · HD · SD': '4K · HD · SD',
