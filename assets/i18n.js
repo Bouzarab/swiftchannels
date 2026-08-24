@@ -13,6 +13,32 @@ fr: {
   '__meta_title': 'Swift Channels — abonnements IPTV',
   '__meta_desc': 'Commandez un abonnement IPTV mensuel ou annuel, ou lancez un test gratuit de 24 heures. Identifiants livrés en quelques minutes.',
 
+  /* ── ask panel ── */
+  'Quick answers':
+    'Réponses rapides',
+  'Support 09:00–23:00 GMT+1':
+    'Support 09:00–23:00 GMT+1',
+  'Questions? Answers are one tap away.':
+    'Une question ? La réponse est à un clic.',
+  'I have another question':
+    'J’ai une autre question',
+  'Hello — I have a question about Swift Channels.':
+    'Bonjour — j’ai une question au sujet de Swift Channels.',
+  'Open quick answers':
+    'Ouvrir les réponses rapides',
+  'Close quick answers':
+    'Fermer les réponses rapides',
+  'Dismiss':
+    'Fermer',
+  'How much does it cost?':
+    'Combien ça coûte ?',
+  'Two paid plans, both opening the full library: <strong>15 € a month</strong> or <strong>57 € a year</strong> — about 5 € a month. That covers one screen at a time; 2, 3 or 4 screens cost more. There is also a <strong>free 24-hour test</strong> before you pay anything.':
+    'Deux offres payantes, toutes deux avec la bibliothèque complète : <strong>15 € par mois</strong> ou <strong>57 € par an</strong> — environ 5 € par mois. C’est pour un écran à la fois ; 2, 3 ou 4 écrans coûtent plus cher. Et il y a un <strong>test gratuit de 24 heures</strong> avant de payer quoi que ce soit.',
+  'How do I pay?':
+    'Comment payer ?',
+  'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.':
+    'Par carte ou PayPal. Vous ne payez pas sur ce site : envoyez votre commande sur WhatsApp, nous confirmons le prix et vous envoyons le lien de paiement, et votre ligne s’ouvre dès réception.',
+
   'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
     'Un téléviseur, un ordinateur portable, une tablette et un téléphone diffusant du sport, des films et des séries sur Swift Channels',
 
@@ -379,6 +405,32 @@ de: {
   '__meta_title': 'Swift Channels — IPTV-Abonnements',
   '__meta_desc': 'Bestellen Sie ein monatliches oder jährliches IPTV-Abo oder starten Sie einen kostenlosen 24-Stunden-Test. Zugangsdaten in wenigen Minuten.',
 
+  /* ── ask panel ── */
+  'Quick answers':
+    'Schnelle Antworten',
+  'Support 09:00–23:00 GMT+1':
+    'Support 09:00–23:00 GMT+1',
+  'Questions? Answers are one tap away.':
+    'Fragen? Die Antwort ist einen Klick entfernt.',
+  'I have another question':
+    'Ich habe eine andere Frage',
+  'Hello — I have a question about Swift Channels.':
+    'Hallo — ich habe eine Frage zu Swift Channels.',
+  'Open quick answers':
+    'Schnelle Antworten öffnen',
+  'Close quick answers':
+    'Schnelle Antworten schließen',
+  'Dismiss':
+    'Schließen',
+  'How much does it cost?':
+    'Was kostet es?',
+  'Two paid plans, both opening the full library: <strong>15 € a month</strong> or <strong>57 € a year</strong> — about 5 € a month. That covers one screen at a time; 2, 3 or 4 screens cost more. There is also a <strong>free 24-hour test</strong> before you pay anything.':
+    'Zwei kostenpflichtige Tarife, beide mit der vollen Bibliothek: <strong>15 € im Monat</strong> oder <strong>57 € im Jahr</strong> — rund 5 € monatlich. Das gilt für einen Bildschirm gleichzeitig; 2, 3 oder 4 Bildschirme kosten mehr. Davor gibt es einen <strong>kostenlosen 24-Stunden-Test</strong>.',
+  'How do I pay?':
+    'Wie bezahle ich?',
+  'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.':
+    'Karte oder PayPal. Sie zahlen nicht auf dieser Website — senden Sie Ihre Bestellung per WhatsApp, wir bestätigen den Preis und schicken den Zahlungslink; Ihre Leitung wird freigeschaltet, sobald die Zahlung da ist.',
+
   'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
     'Ein Fernseher, ein Laptop, ein Tablet und ein Handy mit Sport, Filmen und Serien auf Swift Channels',
 
@@ -731,6 +783,32 @@ de: {
 es: {
   '__meta_title': 'Swift Channels — suscripciones IPTV',
   '__meta_desc': 'Contrata una suscripción IPTV mensual o anual, o empieza una prueba gratuita de 24 horas. Recibes los datos de acceso en minutos.',
+
+  /* ── ask panel ── */
+  'Quick answers':
+    'Respuestas rápidas',
+  'Support 09:00–23:00 GMT+1':
+    'Soporte 09:00–23:00 GMT+1',
+  'Questions? Answers are one tap away.':
+    '¿Alguna duda? La respuesta está a un toque.',
+  'I have another question':
+    'Tengo otra pregunta',
+  'Hello — I have a question about Swift Channels.':
+    'Hola — tengo una pregunta sobre Swift Channels.',
+  'Open quick answers':
+    'Abrir respuestas rápidas',
+  'Close quick answers':
+    'Cerrar respuestas rápidas',
+  'Dismiss':
+    'Cerrar',
+  'How much does it cost?':
+    '¿Cuánto cuesta?',
+  'Two paid plans, both opening the full library: <strong>15 € a month</strong> or <strong>57 € a year</strong> — about 5 € a month. That covers one screen at a time; 2, 3 or 4 screens cost more. There is also a <strong>free 24-hour test</strong> before you pay anything.':
+    'Dos planes de pago, ambos con la biblioteca completa: <strong>15 € al mes</strong> o <strong>57 € al año</strong> — unos 5 € al mes. Es para una pantalla a la vez; 2, 3 o 4 pantallas cuestan más. Y hay una <strong>prueba gratuita de 24 horas</strong> antes de pagar nada.',
+  'How do I pay?':
+    '¿Cómo se paga?',
+  'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.':
+    'Con tarjeta o PayPal. No se paga en esta web: envía tu pedido por WhatsApp, confirmamos el precio y te mandamos el enlace de pago, y tu línea se activa en cuanto llega.',
 
   'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
     'Un televisor, un portátil, una tablet y un móvil reproduciendo deporte, películas y series en Swift Channels',
@@ -1098,6 +1176,32 @@ ar: {
   '__meta_title': 'سويفت تشانلز — اشتراكات IPTV',
   '__meta_desc': 'اطلب اشتراك IPTV شهريًا أو سنويًا، أو ابدأ تجربة مجانية لمدة 24 ساعة. تصلك بيانات الدخول خلال دقائق.',
 
+  /* ── ask panel ── */
+  'Quick answers':
+    'إجابات سريعة',
+  'Support 09:00–23:00 GMT+1':
+    'الدعم من 09:00 إلى 23:00 بتوقيت غرينتش+1',
+  'Questions? Answers are one tap away.':
+    'عندك سؤال؟ الجواب على بعد نقرة.',
+  'I have another question':
+    'لدي سؤال آخر',
+  'Hello — I have a question about Swift Channels.':
+    'مرحبًا — لدي سؤال بخصوص سويفت تشانلز.',
+  'Open quick answers':
+    'افتح الإجابات السريعة',
+  'Close quick answers':
+    'أغلق الإجابات السريعة',
+  'Dismiss':
+    'إغلاق',
+  'How much does it cost?':
+    'كم يكلّف؟',
+  'Two paid plans, both opening the full library: <strong>15 € a month</strong> or <strong>57 € a year</strong> — about 5 € a month. That covers one screen at a time; 2, 3 or 4 screens cost more. There is also a <strong>free 24-hour test</strong> before you pay anything.':
+    'باقتان مدفوعتان، وكلتاهما تفتح المكتبة كاملة: <strong>15 € في الشهر</strong> أو <strong>57 € في السنة</strong> — نحو 5 € شهريًا. وهذا لشاشة واحدة في الوقت نفسه؛ أما 2 أو 3 أو 4 شاشات فتكلّف أكثر. وهناك <strong>تجربة مجانية لمدة 24 ساعة</strong> قبل أن تدفع أي شيء.',
+  'How do I pay?':
+    'كيف أدفع؟',
+  'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.':
+    'بالبطاقة أو عبر باي بال. أنت لا تدفع في هذا الموقع — أرسل طلبك على واتساب، ونؤكد لك السعر ونرسل رابط الدفع، ويُفتح خطك بمجرد وصول الدفعة.',
+
   'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
     'تلفاز وحاسوب محمول ولوحي وهاتف تعرض الرياضة والأفلام والمسلسلات على سويفت تشانلز',
 
@@ -1408,7 +1512,7 @@ ar: {
   'Terms & privacy': 'الشروط والخصوصية',
   'Talk to us': 'تواصل معنا',
   'WhatsApp': 'واتساب',
-  'SUPPORT 09:00–23:00 GMT+1': 'الدعم 09:00–23:00 بتوقيت غرينتش+1',
+  'SUPPORT 09:00–23:00 GMT+1': 'الدعم من 09:00 إلى 23:00 بتوقيت غرينتش+1',
   '__footlegal': 'نحن نعيد بيع الوصول إلى منصة بث تابعة لطرف ثالث. المحتوى مرخّص ويُقدَّم من مشغّل تلك المنصة. الاشتراكات مخصّصة للاستعمال المنزلي الخاص؛ ولا يُسمح بإعادة التوزيع أو العرض العمومي.<br><a href="legal.html">شروط الخدمة · سياسة الاسترجاع · إشعار الخصوصية</a>',
   'MADE IN MOROCCO': 'صُنع في المغرب',
 

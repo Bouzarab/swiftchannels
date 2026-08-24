@@ -599,6 +599,88 @@ html[dir="rtl"] .ticket-total b,
 html[dir="rtl"] .pay-amount b{direction:ltr;unicode-bidi:isolate}
 @media(max-width:980px){html[dir="rtl"] .conn-hint{margin-right:0}}
 
+/* ═══════════════ HELP PANEL ═══════════════ */
+.ask-launch{
+  position:fixed;right:clamp(14px,2.2vw,30px);bottom:clamp(20px,4vh,44px);z-index:85;
+  width:58px;height:58px;border-radius:50%;padding:0;cursor:pointer;border:none;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--blue-deep));
+  box-shadow:0 14px 34px -10px var(--glow),0 0 0 1px rgba(90,140,255,.35);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.ask-launch:hover{transform:translateY(-2px);box-shadow:0 20px 44px -10px rgba(47,107,255,.6)}
+.ask-launch svg{width:26px;height:26px;fill:#fff;transition:opacity .25s,transform .25s}
+.ask-launch .x{position:absolute;opacity:0;transform:rotate(-45deg) scale(.7)}
+.ask.open .ask-launch .chat{opacity:0;transform:rotate(45deg) scale(.7)}
+.ask.open .ask-launch .x{opacity:1;transform:none}
+
+.ask-teaser{
+  position:fixed;right:calc(clamp(14px,2.2vw,30px) + 70px);bottom:calc(clamp(20px,4vh,44px) + 13px);
+  z-index:85;display:flex;align-items:center;gap:10px;max-width:min(74vw,262px);
+  padding:11px 14px;border-radius:14px;
+  background:rgba(8,15,34,.94);border:1px solid var(--line);backdrop-filter:blur(14px);
+  box-shadow:0 20px 40px -16px rgba(0,0,0,.8);
+  font-size:13.5px;color:var(--ice);
+  opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .4s var(--ease),transform .4s var(--ease),visibility .4s}
+.ask-teaser.show{opacity:1;visibility:visible;transform:none}
+.ask-teaser button{background:none;border:none;color:var(--muted-2);cursor:pointer;
+  font-size:17px;line-height:1;padding:0 2px}
+.ask-teaser button:hover{color:var(--ice)}
+
+.ask-panel{
+  position:fixed;right:clamp(14px,2.2vw,30px);bottom:calc(clamp(20px,4vh,44px) + 72px);z-index:86;
+  width:min(92vw,352px);max-height:min(70vh,540px);display:flex;flex-direction:column;
+  border-radius:20px;overflow:hidden;
+  background:rgba(8,15,34,.97);border:1px solid var(--line);backdrop-filter:blur(20px);
+  box-shadow:0 34px 70px -22px rgba(0,0,0,.9);
+  opacity:0;visibility:hidden;transform:translateY(14px) scale(.97);transform-origin:bottom right;
+  transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s}
+.ask.open .ask-panel{opacity:1;visibility:visible;transform:none}
+
+.ask-head{display:flex;align-items:center;gap:12px;padding:16px 18px;
+  border-bottom:1px solid var(--line-soft);
+  background:linear-gradient(150deg,rgba(47,107,255,.20),transparent)}
+.ask-head .brand-mark{width:34px;height:34px;border-radius:10px;flex:none}
+.ask-head .brand-mark::after{width:12px;height:12px}
+.ask-head b{display:block;font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:-.01em}
+.ask-head span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted-2);margin-top:3px}
+.ask-head .close{margin-inline-start:auto;background:none;border:none;cursor:pointer;
+  color:var(--muted);font-size:21px;line-height:1;padding:2px 4px}
+.ask-head .close:hover{color:var(--ice)}
+
+.ask-body{overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:7px}
+.ask-q{width:100%;text-align:start;cursor:pointer;
+  background:rgba(13,22,47,.7);border:1px solid var(--line-soft);border-radius:13px;
+  padding:12px 14px;color:var(--ice);font-family:var(--body);font-size:14px;line-height:1.45;
+  transition:border-color .25s,background .25s,color .25s}
+.ask-q:hover{border-color:var(--blue);background:rgba(47,107,255,.11)}
+.ask-q[aria-expanded="true"]{border-color:var(--blue);background:rgba(47,107,255,.14);
+  border-end-start-radius:0;border-end-end-radius:0}
+.ask-a{display:none;font-size:13.4px;line-height:1.62;color:var(--muted);
+  padding:12px 14px 14px;border:1px solid var(--blue);border-top:none;
+  border-end-start-radius:13px;border-end-end-radius:13px;background:rgba(47,107,255,.06);
+  margin-top:-7px}
+.ask-a.show{display:block}
+.ask-a strong{color:var(--ice);font-weight:600}
+
+.ask-foot{padding:12px;border-top:1px solid var(--line-soft);background:rgba(5,10,24,.6)}
+.ask-wa{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;
+  padding:13px 16px;border-radius:100px;font-size:14px;font-weight:600;
+  background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;
+  box-shadow:0 10px 26px -10px var(--glow);transition:transform .25s var(--ease),box-shadow .3s}
+.ask-wa:hover{transform:translateY(-1px);box-shadow:0 16px 34px -10px rgba(47,107,255,.6)}
+.ask-wa svg{width:17px;height:17px;fill:currentColor;flex:none}
+
+html[dir="rtl"] .ask-launch{right:auto;left:clamp(14px,2.2vw,30px)}
+html[dir="rtl"] .ask-panel{right:auto;left:clamp(14px,2.2vw,30px);transform-origin:bottom left}
+html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
+@media(max-width:520px){
+  .ask-panel{width:calc(100vw - 24px);right:12px;max-height:74vh}
+  html[dir="rtl"] .ask-panel{left:12px;right:auto}
+  .ask-teaser{max-width:56vw}
+}
+
 /* ═══════════════ RESPONSIVE ═══════════════ */
 @media(max-width:1000px){
   .hero-grid,.speed-wrap,.order-grid{grid-template-columns:1fr}
@@ -1022,7 +1104,7 @@ html[dir="rtl"] .pay-amount b{direction:ltr;unicode-bidi:isolate}
       <span class="eyebrow">أسئلة</span>
       <h2>قبل أن تطلب</h2>
     </div>
-    <div id="faqList" class="rv d1"><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa0"><span>ما الذي يشمله الاشتراك؟</span><i>+</i></button><div class="faq-a" id="fa0"><p>كل الباقات تشمل <strong>أكثر من 10,000 قناة مباشرة</strong> تغطي الرياضة والأفلام والأخبار والترفيه، و<strong>أكثر من 50,000 فيلم ومسلسل عند الطلب</strong>، وجودة 4K و HD، ودليل برامج كامل، وإعادة مشاهدة، ودعمًا على مدار الساعة.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa1"><span>هل يمكنني مشاهدة الرياضة المباشرة ونزالات الدفع لكل مشاهدة؟</span><i>+</i></button><div class="faq-a" id="fa1"><p>نعم. <strong>NFL و NBA و MLB و NHL والبريميرليغ و UFC والملاكمة</strong> كلها موجودة، مع القنوات الرياضية الكبرى — ESPN و Fox Sports و Sky Sports و beIN Sports — إضافة إلى الرياضة العالمية من أكثر من 50 دولة.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa2"><span>ما الأجهزة المدعومة؟</span><i>+</i></button><div class="faq-a" id="fa2"><p>يعمل على التلفازات الذكية (سامسونغ و LG وأندرويد تي في)، والهواتف واللوحيات (iOS وأندرويد)، والحواسيب (ويندوز وماك ولينكس)، وفاير ستيك وروكو وآبل تي في وغيرها. استعمل تطبيقًا مثل <strong>GSE Smart IPTV</strong> أو <strong>IPTV Smarters</strong>.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa3"><span>أي تطبيق IPTV أستعمل على جهازي؟</span><i>+</i></button><div class="faq-a" id="fa3"><p>ننصح بـ <strong>IPTV Smarters Pro</strong> لأغلب الأجهزة، و<strong>GSE Smart IPTV</strong> لأجهزة أبل، و<strong>TiviMate</strong> لأندرويد تي في، و<strong>Smart IPTV</strong> لتلفازات سامسونغ و LG. وكلها تدعم صيغة M3U التي نرسلها لك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa4"><span>ما السرعة اللازمة للبث بجودة 4K؟</span><i>+</i></button><div class="faq-a" id="fa4"><p>لأفضل صورة: <strong>25 ميغابت/ث أو أكثر</strong> لقنوات 4K، و<strong>15 ميغابت/ث</strong> لـ HD، و<strong>5 ميغابت/ث</strong> لـ SD. والبث التكيّفي يضبط الجودة تلقائيًا حسب اتصالك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa5"><span>هل تجربة 24 ساعة مجانية فعلًا؟</span><i>+</i></button><div class="faq-a" id="fa5"><p>نعم. خط واحد لمدة 24 ساعة لكل منزل، بدون بطاقة وبدون ضمان. نفتحه، وتجرّبه على جهازك، وإن لم يناسبك فلا شيء بعد ذلك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa6"><span>متى تصلني بيانات الدخول؟</span><i>+</i></button><div class="faq-a" id="fa6"><p>عادة في أقل من عشر دقائق خلال أوقات الدعم. وإذا طلبت ليلًا، تجد بياناتك في انتظارك أول الصباح.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa7"><span>ماذا لو توقفت قناة عن العمل؟</span><i>+</i></button><div class="faq-a" id="fa7"><p>راسلنا في المحادثة نفسها. أغلب المشاكل تُحل في دقائق، وإذا توقف خط فعلًا نستبدله ونضيف الوقت الضائع إلى اشتراكك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa8"><span>كيف أجدّد؟</span><i>+</i></button><div class="faq-a" id="fa8"><p>أرسل لنا رسالة قبل تاريخ الانتهاء ونمدّد الخط نفسه. يبقى اسم المستخدم وكلمة السر والمفضلات كما هي تمامًا.</p></div></div></div>
+    <div id="faqList" class="rv d1"><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa0"><span>كم يكلّف؟</span><i>+</i></button><div class="faq-a" id="fa0"><p>باقتان مدفوعتان، وكلتاهما تفتح المكتبة كاملة: <strong>15 € في الشهر</strong> أو <strong>57 € في السنة</strong> — نحو 5 € شهريًا. وهذا لشاشة واحدة في الوقت نفسه؛ أما 2 أو 3 أو 4 شاشات فتكلّف أكثر. وهناك <strong>تجربة مجانية لمدة 24 ساعة</strong> قبل أن تدفع أي شيء.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa1"><span>كيف أدفع؟</span><i>+</i></button><div class="faq-a" id="fa1"><p>بالبطاقة أو عبر باي بال. أنت لا تدفع في هذا الموقع — أرسل طلبك على واتساب، ونؤكد لك السعر ونرسل رابط الدفع، ويُفتح خطك بمجرد وصول الدفعة.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa2"><span>ما الذي يشمله الاشتراك؟</span><i>+</i></button><div class="faq-a" id="fa2"><p>كل الباقات تشمل <strong>أكثر من 10,000 قناة مباشرة</strong> تغطي الرياضة والأفلام والأخبار والترفيه، و<strong>أكثر من 50,000 فيلم ومسلسل عند الطلب</strong>، وجودة 4K و HD، ودليل برامج كامل، وإعادة مشاهدة، ودعمًا على مدار الساعة.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa3"><span>هل يمكنني مشاهدة الرياضة المباشرة ونزالات الدفع لكل مشاهدة؟</span><i>+</i></button><div class="faq-a" id="fa3"><p>نعم. <strong>NFL و NBA و MLB و NHL والبريميرليغ و UFC والملاكمة</strong> كلها موجودة، مع القنوات الرياضية الكبرى — ESPN و Fox Sports و Sky Sports و beIN Sports — إضافة إلى الرياضة العالمية من أكثر من 50 دولة.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa4"><span>ما الأجهزة المدعومة؟</span><i>+</i></button><div class="faq-a" id="fa4"><p>يعمل على التلفازات الذكية (سامسونغ و LG وأندرويد تي في)، والهواتف واللوحيات (iOS وأندرويد)، والحواسيب (ويندوز وماك ولينكس)، وفاير ستيك وروكو وآبل تي في وغيرها. استعمل تطبيقًا مثل <strong>GSE Smart IPTV</strong> أو <strong>IPTV Smarters</strong>.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa5"><span>أي تطبيق IPTV أستعمل على جهازي؟</span><i>+</i></button><div class="faq-a" id="fa5"><p>ننصح بـ <strong>IPTV Smarters Pro</strong> لأغلب الأجهزة، و<strong>GSE Smart IPTV</strong> لأجهزة أبل، و<strong>TiviMate</strong> لأندرويد تي في، و<strong>Smart IPTV</strong> لتلفازات سامسونغ و LG. وكلها تدعم صيغة M3U التي نرسلها لك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa6"><span>ما السرعة اللازمة للبث بجودة 4K؟</span><i>+</i></button><div class="faq-a" id="fa6"><p>لأفضل صورة: <strong>25 ميغابت/ث أو أكثر</strong> لقنوات 4K، و<strong>15 ميغابت/ث</strong> لـ HD، و<strong>5 ميغابت/ث</strong> لـ SD. والبث التكيّفي يضبط الجودة تلقائيًا حسب اتصالك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa7"><span>هل تجربة 24 ساعة مجانية فعلًا؟</span><i>+</i></button><div class="faq-a" id="fa7"><p>نعم. خط واحد لمدة 24 ساعة لكل منزل، بدون بطاقة وبدون ضمان. نفتحه، وتجرّبه على جهازك، وإن لم يناسبك فلا شيء بعد ذلك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa8"><span>متى تصلني بيانات الدخول؟</span><i>+</i></button><div class="faq-a" id="fa8"><p>عادة في أقل من عشر دقائق خلال أوقات الدعم. وإذا طلبت ليلًا، تجد بياناتك في انتظارك أول الصباح.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa9"><span>ماذا لو توقفت قناة عن العمل؟</span><i>+</i></button><div class="faq-a" id="fa9"><p>راسلنا في المحادثة نفسها. أغلب المشاكل تُحل في دقائق، وإذا توقف خط فعلًا نستبدله ونضيف الوقت الضائع إلى اشتراكك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa10"><span>كيف أجدّد؟</span><i>+</i></button><div class="faq-a" id="fa10"><p>أرسل لنا رسالة قبل تاريخ الانتهاء ونمدّد الخط نفسه. يبقى اسم المستخدم وكلمة السر والمفضلات كما هي تمامًا.</p></div></div></div>
   </div>
 </section>
 
@@ -1057,7 +1139,7 @@ html[dir="rtl"] .pay-amount b{direction:ltr;unicode-bidi:isolate}
         <h4>تواصل معنا</h4>
         <a href="https://wa.me/212699764804" data-wa-link="">واتساب</a>
         <a href="mailto:contact@swiftchannels.com" data-mail-link="">البريد الإلكتروني</a>
-        <p style="font-family:var(--mono);font-size:11px;letter-spacing:.08em">الدعم 09:00–23:00 بتوقيت غرينتش+1</p>
+        <p style="font-family:var(--mono);font-size:11px;letter-spacing:.08em">الدعم من 09:00 إلى 23:00 بتوقيت غرينتش+1</p>
       </div>
     </div>
 
@@ -1069,6 +1151,35 @@ html[dir="rtl"] .pay-amount b{direction:ltr;unicode-bidi:isolate}
     </div>
   </div>
 </footer>
+
+<!-- ══════════════ ASK PANEL ══════════════ -->
+<div class="ask" id="ask">
+  <div class="ask-teaser" id="askTeaser">
+    <span>عندك سؤال؟ الجواب على بعد نقرة.</span>
+    <button type="button" id="askTeaserX" aria-label="إغلاق">×</button>
+  </div>
+
+  <div class="ask-panel" id="askPanel" role="dialog" aria-modal="false" aria-labelledby="askTitle">
+    <div class="ask-head">
+      <span class="brand-mark"></span>
+      <div>
+        <b id="askTitle">إجابات سريعة</b>
+        <span id="askHours">الدعم من 09:00 إلى 23:00 بتوقيت غرينتش+1</span>
+      </div>
+      <button class="close" type="button" id="askClose" aria-label="Close">×</button>
+    </div>
+    <div class="ask-body" id="askBody"><button type="button" class="ask-q" aria-expanded="false" aria-controls="aska0">كم يكلّف؟</button><div class="ask-a" id="aska0"></div><button type="button" class="ask-q" aria-expanded="false" aria-controls="aska1">كيف أدفع؟</button><div class="ask-a" id="aska1"></div><button type="button" class="ask-q" aria-expanded="false" aria-controls="aska2">ما الذي يشمله الاشتراك؟</button><div class="ask-a" id="aska2"></div><button type="button" class="ask-q" aria-expanded="false" aria-controls="aska3">هل يمكنني مشاهدة الرياضة المباشرة ونزالات الدفع لكل مشاهدة؟</button><div class="ask-a" id="aska3"></div><button type="button" class="ask-q" aria-expanded="false" aria-controls="aska4">ما الأجهزة المدعومة؟</button><div class="ask-a" id="aska4"></div><button type="button" class="ask-q" aria-expanded="false" aria-controls="aska5">أي تطبيق IPTV أستعمل على جهازي؟</button><div class="ask-a" id="aska5"></div><button type="button" class="ask-q" aria-expanded="false" aria-controls="aska6">ما السرعة اللازمة للبث بجودة 4K؟</button><div class="ask-a" id="aska6"></div><button type="button" class="ask-q" aria-expanded="false" aria-controls="aska7">هل تجربة 24 ساعة مجانية فعلًا؟</button><div class="ask-a" id="aska7"></div><button type="button" class="ask-q" aria-expanded="false" aria-controls="aska8">متى تصلني بيانات الدخول؟</button><div class="ask-a" id="aska8"></div><button type="button" class="ask-q" aria-expanded="false" aria-controls="aska9">ماذا لو توقفت قناة عن العمل؟</button><div class="ask-a" id="aska9"></div><button type="button" class="ask-q" aria-expanded="false" aria-controls="aska10">كيف أجدّد؟</button><div class="ask-a" id="aska10"></div></div>
+    <div class="ask-foot">
+      <a class="btn ask-wa" id="askWa" target="_blank" rel="noopener" href="https://wa.me/212699764804?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%E2%80%94%20%D9%84%D8%AF%D9%8A%20%D8%B3%D8%A4%D8%A7%D9%84%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20%D8%B3%D9%88%D9%8A%D9%81%D8%AA%20%D8%AA%D8%B4%D8%A7%D9%86%D9%84%D8%B2."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.5-1.2-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.6-.1 1.3z"></path></svg>
+        <span id="askWaLabel">لدي سؤال آخر</span></a>
+    </div>
+  </div>
+
+  <button class="ask-launch" type="button" id="askLaunch" aria-expanded="false" aria-controls="askPanel" aria-label="افتح الإجابات السريعة">
+    <svg class="chat" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4a2 2 0 00-2 2v12a2 2 0 002 2h4l4 4 4-4h4a2 2 0 002-2V4a2 2 0 00-2-2zM7 9h10v2H7V9zm0 4h7v2H7v-2zM7 5h10v2H7V5z"></path></svg>
+    <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"></path></svg>
+  </button>
+</div>
 
 <!-- translations: English source text → fr / de / ar -->
 <script>window.PAGE_LANG='ar';</script><script src="../assets/i18n.js"></script>
@@ -1113,6 +1224,10 @@ const CONFIG = {
             'Anti-freeze','Full EPG','24/7 support','50+ countries','No contract'],
 
   faq: [
+    ['How much does it cost?',
+     'Two paid plans, both opening the full library: <strong>15 € a month</strong> or <strong>57 € a year</strong> — about 5 € a month. That covers one screen at a time; 2, 3 or 4 screens cost more. There is also a <strong>free 24-hour test</strong> before you pay anything.'],
+    ['How do I pay?',
+     'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.'],
     ["What's included?",
      "All plans include <strong>10,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support."],
     ['Can I watch live sports and PPV events?',
@@ -1522,9 +1637,80 @@ function renderFaq(){
   });
 }
 
+/* ═══════════════ 8b. Ask panel ═══════════════ */
+/* Same questions as the FAQ, in a panel that opens over any part of the page.
+   Answers are injected only when a question is tapped, so the page source
+   never carries the text twice. Anything not on the list goes to WhatsApp. */
+const ask = $('ask'), askBody = $('askBody'), askLaunch = $('askLaunch');
+
+function renderAsk(){
+  askBody.innerHTML = '';
+  CONFIG.faq.forEach(([q, a], i) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'ask-q';
+    btn.setAttribute('aria-expanded','false');
+    btn.setAttribute('aria-controls','aska' + i);
+    btn.textContent = t(q);
+
+    const ans = document.createElement('div');
+    ans.className = 'ask-a';
+    ans.id = 'aska' + i;
+
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      askBody.querySelectorAll('.ask-q').forEach(b => b.setAttribute('aria-expanded','false'));
+      askBody.querySelectorAll('.ask-a').forEach(x => x.classList.remove('show'));
+      if(open) return;
+      if(!ans.dataset.filled){ ans.innerHTML = t(a); ans.dataset.filled = '1'; }
+      btn.setAttribute('aria-expanded','true');
+      ans.classList.add('show');
+      ans.scrollIntoView({ block:'nearest', behavior: reduced ? 'auto' : 'smooth' });
+    });
+
+    askBody.appendChild(btn);
+    askBody.appendChild(ans);
+  });
+
+  $('askWa').href = waBase + '?text=' +
+    encodeURIComponent(t('Hello — I have a question about Swift Channels.'));
+}
+
+function askOpen(open){
+  ask.classList.toggle('open', open);
+  askLaunch.setAttribute('aria-expanded', String(open));
+  askLaunch.setAttribute('aria-label', t(open ? 'Close quick answers' : 'Open quick answers'));
+  hideTeaser();
+  if(open) setTimeout(() => { const f = askBody.querySelector('.ask-q'); if(f) f.focus(); }, 320);
+}
+askLaunch.addEventListener('click', () => askOpen(!ask.classList.contains('open')));
+$('askClose').addEventListener('click', () => { askOpen(false); askLaunch.focus(); });
+document.addEventListener('click', e => {
+  if(ask.classList.contains('open') && !ask.contains(e.target)) askOpen(false);
+});
+addEventListener('keydown', e => {
+  if(e.key === 'Escape' && ask.classList.contains('open')){ askOpen(false); askLaunch.focus(); }
+});
+
+/* a single, dismissible nudge — no storage, so it never follows anyone around */
+const teaser = $('askTeaser');
+let teaserTimer;
+function hideTeaser(){ clearTimeout(teaserTimer); teaser.classList.remove('show'); }
+$('askTeaserX').addEventListener('click', e => { e.stopPropagation(); hideTeaser(); });
+teaser.addEventListener('click', () => askOpen(true));
+if(!reduced){
+  setTimeout(() => {
+    if(!ask.classList.contains('open')){
+      teaser.classList.add('show');
+      teaserTimer = setTimeout(hideTeaser, 11000);
+    }
+  }, 9000);
+}
+
 /* ═══════════════ 9. Boot ═══════════════ */
 renderMarquee();
 renderFaq();
+renderAsk();
 renderPlans();
 syncPlanUI();
 /* This file is the English source. build.js generates fr/ es/ de/ ar/ from it —
@@ -1538,6 +1724,7 @@ window.i18n.boot({
     renderPlanOptions();
     renderPayOptions();
     renderFaq();
+    renderAsk();
     renderPlans();
     updateConnHint();
     updateTicket();
