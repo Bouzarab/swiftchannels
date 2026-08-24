@@ -159,7 +159,8 @@ translation engine to switch language, and saves the result as a static page —
 so the generated pages can never drift from the live behaviour. It also rewrites
 `sitemap.xml` with the hreflang alternates.
 
-First time only: `npm install playwright` (the build needs a headless browser).
+First time only: `npm install` (pulls Playwright for the headless browser, plus
+the Sora and Inter fonts used by the share card). `node_modules/` is git-ignored.
 
 ### Adding or changing wording
 
@@ -176,6 +177,24 @@ pass, then rebuild.
 3. Add a flag to `assets/` and a link to the switcher in `index.html` **and**
    `legal.html`.
 4. `node build.js`.
+
+### The share card
+
+`assets/og-card.jpg` is the 1200×630 image WhatsApp, Facebook and X show when
+someone shares the site. It is **generated**, not hand-drawn:
+
+```bash
+node build-og.js      # assets/og-card.html  →  assets/og-card.jpg
+```
+
+Edit the prices or wording in `assets/og-card.html`, then rerun it. Never edit
+the .jpg directly — the next render overwrites it.
+
+After pushing a new card, the old one stays cached for a while. Force a refresh:
+
+- Facebook — https://developers.facebook.com/tools/debug/ → paste URL → Scrape Again
+- X — https://cards-dev.twitter.com/validator
+- WhatsApp caches per device; a brand-new chat usually pulls the new one
 
 ### Telling Bing immediately (IndexNow)
 

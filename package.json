@@ -1,0 +1,15 @@
+{
+  "name": "swiftchannels",
+  "private": true,
+  "description": "Static site for swiftchannels.com — build scripts only, nothing is bundled into the site.",
+  "scripts": {
+    "build": "node build.js",
+    "og": "node build-og.js",
+    "indexnow": "node indexnow.js"
+  },
+  "devDependencies": {
+    "@fontsource/inter": "^5.0.0",
+    "@fontsource/sora": "^5.0.0",
+    "playwright": "^1.40.0"
+  }
+}
