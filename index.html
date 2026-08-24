@@ -10,7 +10,7 @@
 <meta property="og:site_name" content="Swift Channels">
 <meta property="og:url" content="https://swiftchannels.com/">
 <meta property="og:title" content="Swift Channels — every channel you watch, on one line">
-<meta property="og:description" content="Live sports, films and series in 4K. 15 € a month or 73 € a year — try the whole service free for 24 hours.">
+<meta property="og:description" content="Live sports, films and series in 4K. 15 € a month or 57 € a year — try the whole service free for 24 hours.">
 <meta property="og:image" content="https://swiftchannels.com/assets/og-card.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -859,17 +859,17 @@ html[dir="rtl"] .pay-amount b{direction:ltr;unicode-bidi:isolate}
     </div>
     <div class="steps">
       <div class="step rv"><div class="step-n">STEP 01</div>
-        <h3>Choose and pay</h3>
-        <p>Pick your plan and payment method in the form below. The payment details appear straight
-           away — card, Cash Plus, Wafacash or PayPal.</p></div>
+        <h3>Fill in the form</h3>
+        <p>Your name, WhatsApp number, the plan you want, how many devices and how you'd like to
+           pay. It takes about a minute.</p></div>
       <div class="step rv d1"><div class="step-n">STEP 02</div>
-        <h3>Screenshot the receipt</h3>
-        <p>The confirmation page, the SMS, or a photo of the paper receipt from the agent. Anything
-           that shows the amount and the date.</p></div>
-      <div class="step rv d2"><div class="step-n">STEP 03</div>
         <h3>Send it on WhatsApp</h3>
-        <p>One button writes your whole order into a WhatsApp message. Attach the screenshot, press
-           send, and your login details come back in minutes.</p></div>
+        <p>One button writes your whole order into a WhatsApp message. Press send — nothing is
+           charged and nothing is committed yet.</p></div>
+      <div class="step rv d2"><div class="step-n">STEP 03</div>
+        <h3>We take it from there</h3>
+        <p>We confirm the price, send you the payment details for the method you chose, and once
+           it's settled your login details and setup guide come straight back.</p></div>
     </div>
   </div>
 </section>
@@ -945,28 +945,9 @@ html[dir="rtl"] .pay-amount b{direction:ltr;unicode-bidi:isolate}
         </div>
 
         <div class="field" id="f-pay">
-          <label for="pay">How would you like to pay?</label>
+          <label for="pay">Preferred payment method</label>
           <select id="pay"></select>
-          <div class="err">Choose a payment method.</div>
-        </div>
-
-        <!-- payment instructions -->
-        <div class="paypanel hidden" id="payPanel">
-          <div class="paypanel-head">
-            <span class="eyebrow" style="color:var(--cyan)">Pay before you send</span>
-            <div class="pay-amount">
-              <span id="pp-method">—</span>
-              <b id="pp-amount">—</b>
-            </div>
-          </div>
-          <p class="pay-note" id="pp-note"></p>
-          <div class="pay-rows" id="pp-rows"></div>
-          <a class="btn btn-blue pay-link hidden" id="pp-link" target="_blank" rel="noopener">Pay now</a>
-          <ol class="pay-steps">
-            <li><b>Pay the amount above</b><span>Use the exact total so we can match it to your order.</span></li>
-            <li><b>Screenshot the receipt</b><span>The confirmation page, the SMS, or a photo of the paper receipt.</span></li>
-            <li><b>Send it on WhatsApp</b><span>Press the button in the summary — then attach the screenshot to the message.</span></li>
-          </ol>
+          <div class="err">Pick how you'd like to pay so we can send the details.</div>
         </div>
 
         <div class="field">
@@ -1065,7 +1046,6 @@ html[dir="rtl"] .pay-amount b{direction:ltr;unicode-bidi:isolate}
 
     <div class="foot-bottom">
       <span>© <span id="yr"></span> <span data-brand-plain>Swift Channels</span></span>
-      <span>MADE IN MOROCCO</span>
     </div>
   </div>
 </footer>
@@ -1096,8 +1076,8 @@ const CONFIG = {
                 '4K, HD and SD where the source allows','Free replacement line if yours goes down',
                 'Renew by message — nothing automatic'] },
 
-    { id:'yearly',  name:'Yearly',    term:'12 months', price:73, featured:true,
-      per:'per year — about 6 a month',
+    { id:'yearly',  name:'Yearly',    term:'12 months', price:57, featured:true,
+      per:'per year — about 5 a month',
       features:['Everything in the monthly plan','By far the cheapest way to run the service',
                 'Priority queue for support replies','One free device change during the year'] }
   ],
@@ -1106,43 +1086,8 @@ const CONFIG = {
 
   payMethods: ['Credit card','PayPal','Cash Plus (Morocco only)','Wafacash (Morocco only)'],
 
-  /* ── PayPal Pay Links, one per paid plan. Card and PayPal both use these. ── */
-  payLinks: {
-    monthly: 'https://www.paypal.com/ncp/payment/3B8UZHQMP5KZ4',
-    yearly:  'https://www.paypal.com/ncp/payment/3WFXJNMP76W2N'
-  },
-
-  /* ── Payment instructions shown after a paid plan is chosen ──
-     'rows' become copy-to-clipboard lines.
-     'usePayLink: true' pulls that plan's link from payLinks above. */
-  payDetails: {
-    'Credit card': {
-      note: 'Pay by debit or credit card on the secure PayPal checkout page — in most cases you do not need a PayPal account. Screenshot the confirmation page when it is done.',
-      usePayLink: true, label: 'Pay by card',
-      rows: []
-    },
-    'PayPal': {
-      note: 'Pay from your PayPal balance or a linked card, then screenshot the receipt.',
-      usePayLink: true, label: 'Pay with PayPal',
-      rows: []
-    },
-    'Cash Plus (Morocco only)': {
-      note: 'Go to any Cash Plus agent and send the amount to the name and number below. Keep the paper receipt and photograph it.',
-      rows: [
-        ['Recipient name','ABDELOUAHD BOUZAR'],
-        ['Phone number','0699764804'],
-        ['City','Fès']
-      ]
-    },
-    'Wafacash (Morocco only)': {
-      note: 'Any Wafacash counter can send this. Ask for a cash transfer to the name below and keep the receipt.',
-      rows: [
-        ['Recipient name','ABDELOUAHD BOUZAR'],
-        ['Phone number','0699764804'],
-        ['City','Fès']
-      ]
-    }
-  },
+  /* Payment happens after the order reaches us on WhatsApp — the customer just
+     tells us which method they prefer, and staff send the details in the chat. */
 
   marquee: ['Live sports','4K · HD · SD','7-day catch-up','10,000+ channels','50,000+ films & series',
             'Anti-freeze','Full EPG','24/7 support','50+ countries','No contract'],
@@ -1356,7 +1301,6 @@ const MAC_DEVICES = ['Samsung Smart TV','LG Smart TV','MAG box'];
 function syncPlanUI(){
   const free = planById(planSel.value).price === 0;
   $('f-pay').classList.toggle('hidden', free);
-  if(free) $('payPanel').classList.add('hidden');
   updateTicket();
 }
 devSel.addEventListener('change', () => {
@@ -1375,44 +1319,6 @@ paySel.addEventListener('change', updateTicket);
 
 const REF = 'ORD-' + Math.random().toString(36).slice(2,7).toUpperCase();
 $('ref').textContent = REF;
-
-function renderPayPanel(){
-  const p = planById(planSel.value), free = p.price === 0;
-  const panel = $('payPanel');
-  const d = CONFIG.payDetails[paySel.value];
-
-  if(free || !paySel.value || !d){ panel.classList.add('hidden'); return; }
-  panel.classList.remove('hidden');
-
-  $('pp-method').textContent = t('Pay by ' + paySel.value);
-  $('pp-amount').textContent = money(priceFor(p, state.conn)) + ' ' + CONFIG.currency;
-  $('pp-note').textContent = d.note ? t(d.note) : '';
-
-  const rows = $('pp-rows');
-  rows.innerHTML = '';
-  (d.rows || []).forEach(([k,v]) => {
-    const r = document.createElement('dl');
-    r.className = 'pay-row';
-    r.innerHTML = '<dt>' + t(k) + '</dt><dd>' + v + '</dd>' +
-                  '<button class="copy" type="button">' + t('Copy') + '</button>';
-    r.querySelector('.copy').addEventListener('click', async function(){
-      try { await navigator.clipboard.writeText(v); } catch(e){}
-      this.textContent = t('Copied');
-      this.classList.add('done');
-      setTimeout(() => { this.textContent = t('Copy'); this.classList.remove('done'); }, 1800);
-    });
-    rows.appendChild(r);
-  });
-
-  const link = $('pp-link');
-  const url = d.usePayLink ? CONFIG.payLinks[planSel.value] : (d.link && d.link.url);
-  if(url){
-    link.href = url;
-    link.textContent = t(d.label || (d.link && d.link.label) || 'Pay now');
-    link.classList.remove('hidden');
-    link.onclick = () => { saveOrder(); };
-  } else link.classList.add('hidden');
-}
 
 /* Stores the order locally so thank-you.html can recover it after checkout. */
 function saveOrder(){
@@ -1444,14 +1350,10 @@ function updateTicket(){
   $('t-pay').textContent    = free ? t('Not needed') : (paySel.value ? t(paySel.value) : t('Not chosen'));
   $('t-total').innerHTML    = free ? t('Free') : money(cost) + ' <small>' + CONFIG.currency + '</small>';
 
-  $('sendWa').textContent = t(free
-    ? 'Send order on WhatsApp'
-    : 'Send payment proof on WhatsApp');
+  $('sendWa').textContent = t('Send my order on WhatsApp');
   $('ticketNote').textContent = t(free
     ? 'Nothing is charged here. Free tests skip payment entirely — send the order and we open your line.'
-    : 'Pay first using the details in the form, screenshot the receipt, then send it here. We open your line as soon as we see it.');
-
-  renderPayPanel();
+    : 'Nothing is charged here. Send your order and we reply on WhatsApp with the payment details for the method you chose.');
 }
 
 /* ═══════════════ 7. Validation + send ═══════════════ */
@@ -1499,13 +1401,13 @@ function buildMessage(){
   L.push('Devices:   ' + state.conn);
   L.push('Watch on:  ' + devSel.value);
   if(MAC_DEVICES.includes(devSel.value)) L.push('MAC:       ' + $('mac').value.trim().toUpperCase());
-  L.push('Payment:   ' + (free ? 'not needed — free test' : paySel.value));
+  L.push('Pay by:    ' + (free ? 'not needed — free test' : paySel.value));
   L.push('Total:     ' + (free ? 'Free' : money(cost) + ' ' + CONFIG.currency));
   if($('notes').value.trim()){ L.push('——————————————'); L.push('Notes: ' + $('notes').value.trim()); }
-  if(!free){
-    L.push('——————————————');
-    L.push('Payment sent — screenshot of the receipt attached.');
-  }
+  L.push('——————————————');
+  L.push(free
+    ? 'Please open my free 24-hour test.'
+    : 'Please send me the payment details for this order.');
   return L.join('\n');
 }
 
@@ -1513,15 +1415,14 @@ const confirmSent = t => { const b = $('sent'); b.textContent = t; b.classList.a
 
 $('sendWa').addEventListener('click', () => {
   if(!validate()) return;
-  const free = planById(planSel.value).price === 0;
+  saveOrder();
   window.open(waBase + '?text=' + encodeURIComponent(buildMessage()), '_blank');
-  confirmSent(tf(free
-    ? 'Order {ref} is open in WhatsApp. Press send there and we\'ll reply shortly.'
-    : 'Order {ref} is open in WhatsApp. Attach your payment screenshot with the paperclip, then press send.',
+  confirmSent(tf('Order {ref} is open in WhatsApp. Press send there and we\'ll reply with the payment details shortly.',
     {ref: REF}));
 });
 $('sendMail').addEventListener('click', () => {
   if(!validate()) return;
+  saveOrder();
   location.href = 'mailto:' + CONFIG.email +
     '?subject=' + encodeURIComponent('Order ' + REF + ' — ' + planById(planSel.value).name) +
     '&body=' + encodeURIComponent(buildMessage());
@@ -1568,7 +1469,7 @@ renderFaq();
 renderPlans();
 syncPlanUI();
 window.i18n.boot({
-  skip: '#marq,#planCards,#faqList,#pp-rows,#plan,#pay',
+  skip: '#marq,#planCards,#faqList,#plan,#pay',
   onApply: function(){
     renderMarquee();
     renderPlanOptions();
