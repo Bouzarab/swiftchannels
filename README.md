@@ -127,27 +127,29 @@ of the `<script>` tag in `index.html`:
 The site is published at five addresses so Google can index each language
 separately:
 
-| Address                        | Language |
-|--------------------------------|----------|
-| `swiftchannels.com/`           | English  |
-| `swiftchannels.com/fr/`        | French   |
-| `swiftchannels.com/es/`        | Spanish  |
-| `swiftchannels.com/de/`        | German   |
-| `swiftchannels.com/ar/`        | Arabic (right-to-left) |
+| Address                             | Language |
+|-------------------------------------|----------|
+| `swiftchannels.com/` + `/legal.html`    | English  |
+| `swiftchannels.com/fr/` + `/fr/legal.html` | French   |
+| `swiftchannels.com/es/` + `/es/legal.html` | Spanish  |
+| `swiftchannels.com/de/` + `/de/legal.html` | German   |
+| `swiftchannels.com/ar/` + `/ar/legal.html` | Arabic (right-to-left) |
 
-**Only two files are ever edited by hand:**
+**Only four files are ever edited by hand:**
 
 - `index.html` — the English page, and the source for all the others
-- `assets/i18n.js` — the translations, keyed by the English sentence
+- `legal.html` — the English terms, refunds and privacy page
+- `assets/i18n.js` — translations for the main page, keyed by the English sentence
+- `assets/legal-i18n.js` — translations for the legal page, same idea
 
 `fr/`, `es/`, `de/` and `ar/` are **generated**. Never edit them directly; your
 changes will be overwritten on the next build.
 
-### After any change to index.html or assets/i18n.js
+### After any change to index.html, legal.html or the two i18n files
 
 ```bash
 cd ~/swiftchannels
-node build.js          # regenerates fr/ es/ de/ ar/ and sitemap.xml
+node build.js          # regenerates all 8 translated pages and sitemap.xml
 git add . && git commit -m "what changed"
 git push
 ```
@@ -168,10 +170,20 @@ pass, then rebuild.
 
 ### Adding a sixth language
 
-1. Add its block to `assets/i18n.js`, copying the shape of `es`.
+1. Add its block to `assets/i18n.js` and to `assets/legal-i18n.js`, copying the
+   shape of `es`.
 2. Add its code to `LANGS` at the top of `assets/i18n.js` and of `build.js`.
-3. Add a flag to `assets/` and a link to the switcher in `index.html`.
+3. Add a flag to `assets/` and a link to the switcher in `index.html` **and**
+   `legal.html`.
 4. `node build.js`.
+
+### Getting the pages into Google
+
+After the first push, in Search Console: submit `sitemap.xml`, then use URL
+Inspection → **Request indexing** on each of the ten addresses. The sitemap alone
+gets them crawled eventually; requesting indexing usually takes days rather than
+weeks. Do the language homepages first — the legal pages will be found through the
+links on them.
 
 ---
 

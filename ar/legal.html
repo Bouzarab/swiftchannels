@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الشروط والاسترجاع والخصوصية — سويفت تشانلز</title>
+<meta name="description" content="اطلب اشتراك IPTV شهريًا أو سنويًا، أو ابدأ تجربة مجانية لمدة 24 ساعة. تصلك بيانات الدخول خلال دقائق.">
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#050A18;--night-2:#080F22;--panel:#0D162F;--panel-2:#111E3D;
+  --line:#1B2C54;--line-soft:#152444;
+  --blue:#2F6BFF;--blue-hi:#5A8CFF;--blue-deep:#1B49C4;--cyan:#49D9FF;
+  --glow:rgba(47,107,255,.30);
+  --ice:#E9EFFC;--muted:#93A6CC;--muted-2:#5F739B;
+  --display:'Sora',system-ui,sans-serif;--body:'Inter',Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --pad:clamp(20px,5vw,60px);--r:14px;--ease:cubic-bezier(.22,.8,.24,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--ice);font-family:var(--body);font-size:16px;
+  line-height:1.68;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--blue-hi);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+
+.aurora{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.4;display:block}
+.aurora i:nth-child(1){width:52vw;height:52vw;left:-16vw;top:-22vw;
+  background:radial-gradient(circle,rgba(47,107,255,.40),transparent 68%)}
+.aurora i:nth-child(2){width:42vw;height:42vw;right:-14vw;bottom:0;
+  background:radial-gradient(circle,rgba(73,217,255,.14),transparent 68%)}
+
+.top{padding:24px var(--pad);border-bottom:1px solid var(--line-soft)}
+.lang{position:relative;display:flex;align-items:center;gap:6px;margin-inline-start:auto}
+.lang-opts{display:flex;gap:6px}
+.lang-b,.lang-cur{
+  width:32px;height:32px;flex:0 0 32px;border-radius:50%;padding:0;cursor:pointer;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  transition:opacity .25s,filter .3s,border-color .25s,transform .25s,box-shadow .3s}
+.lang-b img,.lang-cur img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.lang-b{opacity:.5;filter:saturate(.55)}
+.lang-b:hover,.lang-cur:hover{opacity:1;filter:none;border-color:var(--blue-hi);transform:translateY(-1px)}
+.lang-b[aria-current="true"]{opacity:1;filter:none;border-color:transparent;
+  box-shadow:0 0 0 2px var(--blue-hi),0 8px 20px -8px var(--glow)}
+.lang-cur{display:none}
+@media(max-width:640px){
+  .top a.back{display:none}
+  .lang-cur{display:flex}
+  .lang-opts{position:absolute;top:calc(100% + 12px);inset-inline-end:0;z-index:70;
+    flex-direction:column;gap:6px;padding:7px;border-radius:20px;
+    background:rgba(8,15,34,.94);border:1px solid var(--line);backdrop-filter:blur(14px);
+    box-shadow:0 24px 46px -18px rgba(0,0,0,.85);
+    opacity:0;visibility:hidden;transform:translateY(-8px) scale(.96);transform-origin:top;
+    transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
+  .lang.open .lang-opts{opacity:1;visibility:visible;transform:none}
+}
+html[dir="rtl"] body{font-family:'Tajawal',var(--body)}
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] .brand-name{
+  font-family:'Cairo','Tajawal',var(--display);letter-spacing:0}
+.top-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:20px}
+.brand{display:inline-flex;align-items:center;gap:11px;margin-right:auto}
+.brand-mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--cyan))}
+.brand-mark::after{content:'';width:10px;height:10px;border-radius:50%;background:#fff}
+.brand-name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;color:var(--ice)}
+.brand:hover{text-decoration:none}
+.top a.back{font-size:14px;color:var(--muted)}
+
+main{max-width:860px;margin:0 auto;padding:clamp(34px,6vw,64px) var(--pad) 70px}
+
+h1{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.05;
+  font-size:clamp(30px,5vw,46px)}
+.updated{margin-top:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted-2)}
+
+.who{margin-top:28px;border:1px solid var(--line);border-radius:var(--r);
+  background:rgba(8,15,34,.75);padding:22px 24px}
+.who dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;font-size:14.5px}
+.who dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted-2);padding-top:3px}
+.who dd{color:var(--ice)}
+
+nav.toc{margin:34px 0 10px;border-top:1px solid var(--line-soft);
+  border-bottom:1px solid var(--line-soft);padding:18px 0;
+  display:flex;flex-wrap:wrap;gap:8px 22px}
+nav.toc a{font-size:14px;color:var(--muted)}
+
+section{padding-top:42px}
+h2{font-family:var(--display);font-weight:800;letter-spacing:-.025em;
+  font-size:clamp(22px,3.2vw,31px);padding-bottom:14px;
+  border-bottom:1px solid var(--line-soft);margin-bottom:22px}
+h3{font-family:var(--display);font-weight:600;font-size:17px;letter-spacing:-.015em;
+  margin:26px 0 8px}
+p{color:var(--muted);margin-bottom:14px}
+strong{color:var(--ice);font-weight:600}
+ul{margin:0 0 16px 20px;color:var(--muted)}
+li{margin-bottom:8px}
+
+.callout{border:1px solid var(--blue-deep);border-radius:var(--r);
+  background:linear-gradient(165deg,rgba(27,73,196,.18),rgba(8,15,34,.9));
+  padding:20px 22px;margin:22px 0}
+.callout p:last-child{margin-bottom:0}
+.callout .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:9px}
+
+footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
+.foot-in{max-width:860px;margin:0 auto;display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:11px;color:var(--muted-2);letter-spacing:.05em}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&amp;family=Tajawal:wght@400;500;700&amp;display=swap"><link rel="canonical" href="https://swiftchannels.com/ar/legal.html"><link rel="alternate" hreflang="en" href="https://swiftchannels.com/legal.html"><link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/legal.html"><link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/legal.html"><link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/legal.html"><link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/legal.html"><link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/legal.html"></head>
+<body>
+
+<div class="aurora"><i></i><i></i></div>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
+    </a>
+    <a class="back" href="index.html">← العودة إلى الموقع</a>
+    <div class="lang" id="lang">
+      <button class="lang-cur" type="button" id="langCur" aria-haspopup="true" aria-expanded="false" aria-label="Language"><img src="../assets/flag-ar.webp" alt="" width="32" height="32"></button>
+      <div class="lang-opts" id="langOpts">
+        <a class="lang-b" href="../legal.html" data-lang="en" hreflang="en" aria-current="false" title="English"><img src="../assets/flag-en.webp" alt="English" width="32" height="32"></a>
+        <a class="lang-b" href="../fr/legal.html" data-lang="fr" hreflang="fr" aria-current="false" title="Français"><img src="../assets/flag-fr.webp" alt="Français" width="32" height="32"></a>
+        <a class="lang-b" href="../es/legal.html" data-lang="es" hreflang="es" aria-current="false" title="Español"><img src="../assets/flag-es.webp" alt="Español" width="32" height="32"></a>
+        <a class="lang-b" href="../de/legal.html" data-lang="de" hreflang="de" aria-current="false" title="Deutsch"><img src="../assets/flag-de.webp" alt="Deutsch" width="32" height="32"></a>
+        <a class="lang-b" href="../ar/legal.html" data-lang="ar" hreflang="ar" aria-current="true" title="العربية"><img src="../assets/flag-ar.webp" alt="العربية" width="32" height="32"></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>الشروط والاسترجاع والخصوصية</h1>
+  <p class="updated">آخر تحديث: 24 غشت 2026</p>
+
+  <div class="who">
+    <dl>
+      <dt>الاسم التجاري</dt><dd>Swift Channels</dd>
+      <!-- TODO: restore once the company is registered:
+      <dt>Operated by</dt><dd>COMPANY NAME</dd>
+      <dt>Registered in</dt><dd>JURISDICTION · REGISTRATION NUMBER</dd> -->
+      <dt>التواصل</dt><dd><a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a> · WhatsApp +212 699 764 804</dd>
+    </dl>
+  </div>
+
+  <nav class="toc">
+    <a href="#terms">1. شروط الخدمة</a>
+    <a href="#refunds">2. سياسة الاسترجاع</a>
+    <a href="#privacy">3. إشعار الخصوصية</a>
+  </nav>
+
+  <!-- ═══════════ TERMS ═══════════ -->
+  <section id="terms">
+    <h2>1. شروط الخدمة</h2>
+
+    <h3>من نحن وما الذي نبيعه</h3>
+    <!-- TODO: name the operating company in this paragraph once it is registered. -->
+    <p>تعيد سويفت تشانلز بيع الوصول إلى خدمة تلفزيون بالبث تديرها منصة تابعة لطرف ثالث. نحن نزوّدك ببيانات الدخول إلى تلك المنصة؛ ولا نملك المحتوى الذي تبثه ولا ننتجه ولا نرخّصه ولا نتحكم فيه.</p>
+
+    <h3>ما الذي تشتريه</h3>
+    <p>الاشتراك هو وصول إلى المنصة لمدة محددة — 30 يومًا أو 12 شهرًا — بعدد الاتصالات المتزامنة الذي اخترته. قوائم القنوات وكتالوجات المحتوى عند الطلب وأدلة البرامج يحددها مشغّل المنصة ويمكن أن تتغير في أي وقت دون إشعار. ولا يمكننا ضمان بقاء قناة أو مباراة أو فيلم أو مسلسل بعينه متاحًا طوال مدة اشتراكك.</p>
+
+    <h3>للاستعمال المنزلي فقط</h3>
+    <p>بيانات الدخول مخصّصة للاستعمال الخاص داخل منزل واحد. ولا يجوز لك إعادة بيعها أو مشاركتها علنًا أو استعمالها للعرض التجاري أو العمومي أو إعادة توزيع البث. وإذا وجدنا استعمالًا من هذا النوع، جاز لنا إغلاق الحساب دون استرجاع.</p>
+
+    <h3>مسؤولياتك</h3>
+    <ul>
+      <li>تقديم بيانات تواصل صحيحة حتى نتمكن من تسليم بيانات الدخول.</li>
+      <li>توفير اتصال إنترنت خاص بك وجهاز متوافق. يلزم نحو 5 ميغابت/ث لجودة SD، و15 ميغابت/ث لـ HD، و25 ميغابت/ث لـ 4K.</li>
+      <li>الحفاظ على سرية بيانات الدخول.</li>
+      <li>الالتزام بالقوانين السارية في مكان إقامتك، بما فيها القواعد المتعلقة بالمحتوى المُذاع الذي يحق لك الوصول إليه قانونًا. وهذه مسؤوليتك أنت؛ ولا يمكننا تقديم المشورة بشأنها.</li>
+    </ul>
+
+    <h3>التسليم</h3>
+    <p>نسعى لإرسال بيانات الدخول خلال عشر دقائق في أوقات الدعم. والطلبات الليلية تُعالَج صباح اليوم التالي. ويتم التسليم عبر واتساب أو البريد الإلكتروني إلى البيانات التي زوّدتنا بها.</p>
+
+    <h3>التوفّر والانقطاعات</h3>
+    <p>نستهدف توفّرًا عاليًا لكننا لا نستطيع الوعد بخدمة بلا انقطاع. فالأعطال لدى مشغّل المنصة أو في اتصالك بالإنترنت أو في جهازك خارجة عن سيطرتنا. وحين يتوقف خط فعلًا لمدة طويلة، نستبدله ونمدّد اشتراكك بمقدار الوقت الضائع. وهذا هو الحل الذي نقدّمه.</p>
+
+    <h3>تجربة مجانية 24 ساعة</h3>
+    <p>تجربة مجانية واحدة لكل منزل، مدتها 24 ساعة من التفعيل. وهي الخدمة كاملة حتى تحكم عليها قبل الدفع. ويجوز لنا رفض التجربة إذا رأينا أن العرض يُساء استعماله.</p>
+
+    <h3>إنهاء الاشتراك</h3>
+    <p>الاشتراكات لا تتجدّد تلقائيًا. فاشتراكك ينتهي ببساطة في تاريخ انتهائه ما لم تراسلنا لتمديده. ويمكنك التوقف عن استعمال الخدمة في أي وقت؛ وانظر سياسة الاسترجاع أدناه لمعرفة الأثر المالي لذلك.</p>
+
+    <h3>مسؤوليتنا</h3>
+    <p>تقتصر مسؤوليتنا تجاهك على المبلغ الذي دفعته عن فترة اشتراكك الحالية. ولا نتحمل مسؤولية الخسائر غير المباشرة. ولا شيء هنا يحدّ من مسؤولية لا يجوز قانونًا الحدّ منها.</p>
+
+    <h3>تعديل هذه الشروط</h3>
+    <p>يجوز لنا تحديث هذه الشروط. والنسخة الموجودة في هذه الصفحة وقت طلبك هي التي تسري على ذلك الطلب.</p>
+
+    <h3>القانون المطبّق</h3>
+    <p>تخضع هذه الشروط للقانون المغربي. وإذا كنت مستهلكًا مقيمًا في الاتحاد الأوروبي أو المملكة المتحدة، فإن ذلك لا يحرمك من حماية القواعد الآمرة لحماية المستهلك في بلد إقامتك، وتحتفظ بحق التقاضي هناك.</p>
+  </section>
+
+  <!-- ═══════════ REFUNDS ═══════════ -->
+  <section id="refunds">
+    <h2>2. سياسة الاسترجاع</h2>
+
+    <div class="callout">
+      <span class="tag">باختصار</span>
+      <p><strong>بمجرد إرسال بيانات الدخول، لا يكون الاشتراك قابلًا للاسترجاع.</strong>
+        التجربة المجانية لمدة 24 ساعة موجودة تحديدًا لتجرّب الخدمة كاملة على جهازك قبل أن تدفع أي شيء.</p>
+    </div>
+
+    <h3>لماذا</h3>
+    <p>الاشتراك محتوى رقمي يُسلَّم فورًا. وبمجرد إصدار بيانات الدخول يكون الوصول قد مُنح ولا يمكن إعادته.</p>
+
+    <h3>حقك في التراجع داخل الاتحاد الأوروبي وكيف يسري</h3>
+    <p>إذا كنت مستهلكًا في الاتحاد الأوروبي أو المملكة المتحدة، فلك عادةً 14 يومًا للتراجع عن شراء إلكتروني. وفي المحتوى الرقمي المسلَّم فورًا يسقط هذا الحق بمجرد بدء التسليم — لكن فقط إذا طلبت التسليم الفوري وأقررت بأنك ستفقد هذا الحق.</p>
+    <p>وهذا بالضبط ما يفعله مربع التأكيد في نموذج الطلب لدينا. فبوضع العلامة فيه تطلب منا تزويدك ببيانات الدخول فورًا وتقبل أن حقك في التراجع خلال 14 يومًا ينتهي عند إرسالها.</p>
+    <p><strong>وإذا لم تكن قد استلمت بيانات الدخول بعد، فحق التراجع ما يزال قائمًا.</strong>
+      راسلنا قبل التسليم وسنعيد لك المبلغ كاملًا.</p>
+
+    <h3>متى نُرجع المبلغ</h3>
+    <ul>
+      <li>دفعت ولم نسلّمك بيانات الدخول إطلاقًا.</li>
+      <li>خُصم منك مرتين مقابل الاشتراك نفسه.</li>
+      <li>عجزنا تمامًا عن تقديم الخدمة لفترة ممتدة ولم نستطع استبدال خطك.</li>
+    </ul>
+    <p>في هذه الحالات نُرجع المبلغ إلى وسيلة الدفع الأصلية. وقد يستغرق ظهوره حتى عشرة أيام عمل.</p>
+
+    <h3>متى لا نُرجع المبلغ</h3>
+    <ul>
+      <li>غيّرت رأيك بعد استلام بيانات دخول تعمل.</li>
+      <li>قناة أو حدث بعينه أردته غير متوفر، أو أزالته المنصة.</li>
+      <li>اتصالك بالإنترنت أو جهازك لا يتحمّل البث.</li>
+      <li>أُغلق حسابك لمخالفة قاعدة الاستعمال المنزلي.</li>
+    </ul>
+
+    <h3>المشاكل قبل طلب استرجاع المال</h3>
+    <p>أغلب الأعطال تُصلَح في دقائق. راسلنا على واتساب أولًا — فاستبدال خط أو إعادة ضبط بيانات الدخول أو إعادة إعداد التطبيق يحل الغالبية العظمى من المشاكل، ونضيف أي وقت ضائع إلى اشتراكك.</p>
+  </section>
+
+  <!-- ═══════════ PRIVACY ═══════════ -->
+  <section id="privacy">
+    <h2>3. إشعار الخصوصية</h2>
+
+    <h3>من يتحكم في بياناتك</h3>
+    <!-- TODO: the data controller must be a named legal entity before EU customers are served. -->
+    <p>سويفت تشانلز. للتواصل: <a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a>.</p>
+
+    <div class="callout">
+      <span class="tag">من المفيد معرفته</span>
+      <p>هذا الموقع بلا قاعدة بيانات وبلا حسابات وبلا تتبّع. ونموذج الطلب يعمل بالكامل داخل متصفحك ويكوّن رسالة ترسلها أنت إلينا. ولا يُرسَل شيء إلى أي خادم هنا.</p>
+    </div>
+
+    <h3>ما الذي نجمعه ولماذا</h3>
+    <ul>
+      <li><strong>ما ترسله إلينا</strong> — اسمك ورقم واتساب وبريدك الإلكتروني إن قدّمته وجهازك وعنوان MAC إن وُجد وتفاصيل طلبك. ونحتاج هذه البيانات لإنشاء حسابك وتسليم بيانات الدخول. الأساس القانوني: تنفيذ عقد.</li>
+      <li><strong>سجلات الدفع</strong> — نرى الاسم والمبلغ والتاريخ المرتبطة بدفعتك، والإيصال الذي ترسله إلينا. ولا نرى رقم بطاقتك أبدًا. الأساس القانوني: العقد وحفظ السجلات القانونية.</li>
+      <li><strong>رسائلك</strong> — محادثة واتساب أو البريد، تُحفَظ لنتمكن من دعمك ومعالجة التجديدات أو النزاعات.</li>
+    </ul>
+
+    <h3>ما لا نجمعه</h3>
+    <ul>
+      <li>لا ملفات تعريف ارتباط ولا تحليلات ولا بكسلات إعلانية ولا تتبّع للزوار في هذا الموقع.</li>
+      <li>لا بيانات بطاقات أو بنوك — المدفوعات يعالجها باي بال بالكامل.</li>
+      <li>لا سجل لما تشاهده. ولا نملك أي وصول إلى نشاط مشاهدتك.</li>
+    </ul>
+
+    <h3>التخزين المحلي</h3>
+    <p>عند انتقالك إلى الدفع تُحفَظ تفاصيل طلبك داخل متصفحك أنت لتتمكن صفحة التأكيد من عرضها عليك. وتبقى هذه البيانات على جهازك ولا تُرسَل إلينا أبدًا، ويمكنك مسحها من متصفحك في أي وقت.</p>
+
+    <h3>مع من نتشاركها</h3>
+    <ul>
+      <li><strong>مشغّل المنصة</strong> — الحد الأدنى اللازم لإنشاء حسابك والحفاظ عليه.</li>
+      <li><strong>مزوّدو الدفع</strong> — باي بال، الذي يعالج دفعتك وفق سياسة الخصوصية الخاصة به.</li>
+      <li><strong>واتساب</strong> — بوصفه قناة التواصل بيننا، وفق سياسات ميتا.</li>
+    </ul>
+    <p>نحن لا نبيع بياناتك ولا نتشاركها لأغراض تسويقية.</p>
+
+    <h3>النقل الدولي للبيانات</h3>
+    <p>مقرّنا في المغرب، لذا إذا كنت في الاتحاد الأوروبي أو المملكة المتحدة فإن بياناتك تُعالَج خارج بلدك. ونُبقي عمليات النقل عند الحد الأدنى اللازم لتشغيل اشتراكك.</p>
+
+    <h3>مدة الاحتفاظ بها</h3>
+    <p>سجلات الطلب والدفع لمدة ثلاث سنوات بعد انتهاء اشتراكك، لنتمكن من معالجة النزاعات والوفاء بالتزامات حفظ السجلات. أما المحادثات فتُحفَظ ما دمت زبونًا ولمدة معقولة بعد ذلك.</p>
+
+    <h3>حقوقك</h3>
+    <p>إذا كنت في الاتحاد الأوروبي أو المملكة المتحدة، يمكنك أن تطلب منا نسخة من بياناتك أو تصحيحها أو حذفها أو تقييد استعمالنا لها أو الاعتراض عليه. راسلنا على
+      <a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a> وسنرد خلال 30 يومًا. وإذا لم يُرضك ردّنا، يمكنك تقديم شكوى إلى سلطة حماية البيانات في بلدك.</p>
+
+    <h3>القاصرون</h3>
+    <p>هذه الخدمة ليست موجّهة لمن هم دون 18 سنة، ولا نجمع عن علم أي بيانات تخص الأطفال.</p>
+
+    <h3>التعديلات</h3>
+    <p>إذا عدّلنا هذا الإشعار فسنحدّث التاريخ في أعلى هذه الصفحة.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-in">
+    <span>© <span id="yr">2026</span> Swift Channels</span>
+    <span><a href="index.html">swiftchannels.com</a></span>
+  </div>
+</footer>
+
+<script>window.PAGE_LANG='ar';</script><script src="../assets/i18n.js"></script>
+<script src="../assets/legal-i18n.js"></script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+window.i18n.boot({ titleKey: '__legal_title', lang: 'en' });
+</script>
+
+
+</body></html>

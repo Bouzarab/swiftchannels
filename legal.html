@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terms, refunds and privacy — Swift Channels</title>
 <meta name="description" content="Terms of service, refund policy and privacy notice for Swift Channels.">
+<link rel="canonical" href="https://swiftchannels.com/legal.html">
+<link rel="alternate" hreflang="en" href="https://swiftchannels.com/legal.html">
+<link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/legal.html">
+<link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/legal.html">
+<link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/legal.html">
+<link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/legal.html">
+<link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/legal.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -35,6 +42,33 @@ a:hover{text-decoration:underline}
   background:radial-gradient(circle,rgba(73,217,255,.14),transparent 68%)}
 
 .top{padding:24px var(--pad);border-bottom:1px solid var(--line-soft)}
+.lang{position:relative;display:flex;align-items:center;gap:6px;margin-inline-start:auto}
+.lang-opts{display:flex;gap:6px}
+.lang-b,.lang-cur{
+  width:32px;height:32px;flex:0 0 32px;border-radius:50%;padding:0;cursor:pointer;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  transition:opacity .25s,filter .3s,border-color .25s,transform .25s,box-shadow .3s}
+.lang-b img,.lang-cur img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.lang-b{opacity:.5;filter:saturate(.55)}
+.lang-b:hover,.lang-cur:hover{opacity:1;filter:none;border-color:var(--blue-hi);transform:translateY(-1px)}
+.lang-b[aria-current="true"]{opacity:1;filter:none;border-color:transparent;
+  box-shadow:0 0 0 2px var(--blue-hi),0 8px 20px -8px var(--glow)}
+.lang-cur{display:none}
+@media(max-width:640px){
+  .top a.back{display:none}
+  .lang-cur{display:flex}
+  .lang-opts{position:absolute;top:calc(100% + 12px);inset-inline-end:0;z-index:70;
+    flex-direction:column;gap:6px;padding:7px;border-radius:20px;
+    background:rgba(8,15,34,.94);border:1px solid var(--line);backdrop-filter:blur(14px);
+    box-shadow:0 24px 46px -18px rgba(0,0,0,.85);
+    opacity:0;visibility:hidden;transform:translateY(-8px) scale(.96);transform-origin:top;
+    transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
+  .lang.open .lang-opts{opacity:1;visibility:visible;transform:none}
+}
+html[dir="rtl"] body{font-family:'Tajawal',var(--body)}
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] .brand-name{
+  font-family:'Cairo','Tajawal',var(--display);letter-spacing:0}
 .top-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:20px}
 .brand{display:inline-flex;align-items:center;gap:11px;margin-right:auto}
 .brand-mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
@@ -96,12 +130,23 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
       <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
     </a>
     <a class="back" href="index.html">← Back to the site</a>
+    <div class="lang" id="lang">
+      <button class="lang-cur" type="button" id="langCur" aria-haspopup="true"
+              aria-expanded="false" aria-label="Language"><img src="assets/flag-en.webp" alt="" width="32" height="32"></button>
+      <div class="lang-opts" id="langOpts">
+        <a class="lang-b" href="legal.html"    data-lang="en" hreflang="en" aria-current="true"  title="English"><img src="assets/flag-en.webp" alt="English" width="32" height="32"></a>
+        <a class="lang-b" href="fr/legal.html" data-lang="fr" hreflang="fr" aria-current="false" title="Français"><img src="assets/flag-fr.webp" alt="Français" width="32" height="32"></a>
+        <a class="lang-b" href="es/legal.html" data-lang="es" hreflang="es" aria-current="false" title="Español"><img src="assets/flag-es.webp" alt="Español" width="32" height="32"></a>
+        <a class="lang-b" href="de/legal.html" data-lang="de" hreflang="de" aria-current="false" title="Deutsch"><img src="assets/flag-de.webp" alt="Deutsch" width="32" height="32"></a>
+        <a class="lang-b" href="ar/legal.html" data-lang="ar" hreflang="ar" aria-current="false" title="العربية"><img src="assets/flag-ar.webp" alt="العربية" width="32" height="32"></a>
+      </div>
+    </div>
   </div>
 </header>
 
 <main>
   <h1>Terms, refunds and privacy</h1>
-  <p class="updated">Last updated 20 August 2026</p>
+  <p class="updated">Last updated 24 August 2026</p>
 
   <div class="who">
     <dl>
@@ -266,7 +311,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
     <h3>What we do not collect</h3>
     <ul>
       <li>No cookies, analytics, advertising pixels or visitor tracking on this site.</li>
-      <li>No card or bank details — payments are handled entirely by PayPal, Cash Plus or Wafacash.</li>
+      <li>No card or bank details — payments are handled entirely by PayPal.</li>
       <li>No record of what you watch. We do not have access to your viewing activity.</li>
     </ul>
 
@@ -279,8 +324,8 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
     <ul>
       <li><strong>The platform operator</strong> — the minimum needed to create and maintain your
         account.</li>
-      <li><strong>Payment providers</strong> — PayPal, Cash Plus or Wafacash, who process your
-        payment under their own privacy policies.</li>
+      <li><strong>Payment providers</strong> — PayPal, which processes your payment under its
+        own privacy policy.</li>
       <li><strong>WhatsApp</strong> — as the channel we communicate through, under Meta's policies.</li>
     </ul>
     <p>We do not sell your data or share it for marketing.</p>
@@ -317,6 +362,11 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
   </div>
 </footer>
 
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script src="assets/i18n.js"></script>
+<script src="assets/legal-i18n.js"></script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+window.i18n.boot({ titleKey: '__legal_title', lang: 'en' });
+</script>
 </body>
 </html>

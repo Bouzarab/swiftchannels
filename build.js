@@ -39,31 +39,41 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
   const browser = await chromium.launch();
   const built = [];
 
-  for (const L of LANGS.filter(l => l.folder)) {
+  /* Each source page and the marker that says it has finished booting. */
+  const PAGES = [
+    { file:'index.html', ready:() => window.i18n && document.querySelector('.plan') },
+    { file:'legal.html', ready:() => window.i18n && document.querySelector('.who') }
+  ];
+
+  for (const L of LANGS.filter(l => l.folder))
+  for (const SRC of PAGES) {
     const page = await browser.newPage();
     const errors = [];
     page.on('pageerror', e => errors.push(e.message));
 
-    await page.goto('file://' + path.join(ROOT, 'index.html'));
-    await page.waitForFunction(() => window.i18n && document.querySelector('.plan'));
+    await page.goto('file://' + path.join(ROOT, SRC.file));
+    await page.waitForFunction(SRC.ready);
 
     /* the site's own engine does the translating — one implementation, not two */
     await page.evaluate(l => window.i18n.apply(l, false), L.code);
     await page.waitForTimeout(350);
 
     const html = await page.evaluate(cfg => {
-      const { code, dir, folder, ogLocale, site, langs } = cfg;
+      const { code, dir, folder, ogLocale, site, langs, file } = cfg;
       const abs = f => f ? site + '/' + f + '/' : site + '/';
 
       document.documentElement.setAttribute('lang', code);
       document.documentElement.setAttribute('dir', dir);
 
-      /* the page now lives one folder down */
+      /* The page now lives one folder down, so relative paths need ../ —
+         except links to pages that also have a copy in this folder. */
+      const SAME_FOLDER = ['legal.html', 'index.html'];
       document.querySelectorAll('[src],[href]').forEach(el => {
         for (const attr of ['src','href']) {
           const v = el.getAttribute(attr);
           if (!v) continue;
           if (/^(https?:|mailto:|tel:|#|\/|\.\.\/|data:)/.test(v)) continue;
+          if (SAME_FOLDER.includes(v.split('#')[0])) continue;
           el.setAttribute(attr, '../' + v);
         }
       });
@@ -74,27 +84,27 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
 
       const canon = document.createElement('link');
       canon.rel = 'canonical';
-      canon.href = abs(folder);
+      canon.href = abs(folder) + file;
       head.appendChild(canon);
 
       langs.forEach(l => {
         const a = document.createElement('link');
         a.rel = 'alternate';
         a.hreflang = l.code;
-        a.href = abs(l.folder);
+        a.href = abs(l.folder) + file;
         head.appendChild(a);
       });
       const xd = document.createElement('link');
       xd.rel = 'alternate';
       xd.hreflang = 'x-default';
-      xd.href = abs('');
+      xd.href = abs('') + file;
       head.appendChild(xd);
 
       const setMeta = (sel, val) => {
         const m = head.querySelector(sel);
         if (m) m.setAttribute('content', val);
       };
-      setMeta('meta[property="og:url"]', abs(folder));
+      setMeta('meta[property="og:url"]', abs(folder) + file);
       setMeta('meta[property="og:locale"]', ogLocale);
       setMeta('meta[property="og:title"]', document.title);
       const desc = head.querySelector('meta[name="description"]');
@@ -108,7 +118,8 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
       document.querySelectorAll('.lang-b').forEach(a => {
         const to = a.getAttribute('data-lang');
         const target = langs.find(l => l.code === to);
-        a.setAttribute('href', target.folder ? '../' + target.folder + '/' : '../');
+        const base = target.folder ? '../' + target.folder + '/' : '../';
+        a.setAttribute('href', base + file);
         a.setAttribute('aria-current', String(to === code));
       });
 
@@ -124,18 +135,19 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
       if (ref) ref.textContent = '—';
 
       return '<!DOCTYPE html>\n' + document.documentElement.outerHTML + '\n';
-    }, { code:L.code, dir:L.dir, folder:L.folder, ogLocale:L.ogLocale, site:SITE, langs:LANGS });
+    }, { code:L.code, dir:L.dir, folder:L.folder, ogLocale:L.ogLocale, site:SITE, langs:LANGS,
+         file: SRC.file === 'index.html' ? '' : SRC.file });
 
     if (errors.length) {
-      console.error(`  ✗ ${L.code}: ${errors.join(' | ')}`);
+      console.error(`  ✗ ${L.code}/${SRC.file}: ${errors.join(' | ')}`);
       process.exitCode = 1;
     }
 
     const dir = path.join(ROOT, L.folder);
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
-    console.log(`  ✓ ${L.folder}/index.html  (${(html.length/1024).toFixed(0)} KB)`);
-    built.push(L);
+    fs.writeFileSync(path.join(dir, SRC.file), html, 'utf8');
+    console.log(`  ✓ ${L.folder}/${SRC.file}  (${(html.length/1024).toFixed(0)} KB)`);
+    built.push(L.code + '/' + SRC.file);
     await page.close();
   }
 
@@ -148,12 +160,24 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
   ).join('\n') +
   `\n      <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('')}"/>`;
 
+  const legalAlternates = LANGS.map(l =>
+    `      <xhtml:link rel="alternate" hreflang="${l.code}" href="${urlFor(l.folder)}legal.html"/>`
+  ).join('\n') +
+  `\n      <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('')}legal.html"/>`;
+
   const entries = LANGS.map(l => `  <url>
     <loc>${urlFor(l.folder)}</loc>
 ${alternates}
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${l.folder ? '0.9' : '1.0'}</priority>
+  </url>`).join('\n') + '\n' +
+  LANGS.map(l => `  <url>
+    <loc>${urlFor(l.folder)}legal.html</loc>
+${legalAlternates}
+    <lastmod>${today}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>`).join('\n');
 
   fs.writeFileSync(path.join(ROOT,'sitemap.xml'),
@@ -161,14 +185,8 @@ ${alternates}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${entries}
-  <url>
-    <loc>${SITE}/legal.html</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
 </urlset>
 `, 'utf8');
   console.log('  ✓ sitemap.xml');
-  console.log(`\nBuilt ${built.length} language pages. Commit and push.`);
+  console.log(`\nBuilt ${built.length} pages. Commit and push.`);
 })();

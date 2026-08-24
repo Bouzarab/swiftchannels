@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conditions, remboursements et confidentialité — Swift Channels</title>
+<meta name="description" content="Commandez un abonnement IPTV mensuel ou annuel, ou lancez un test gratuit de 24 heures. Identifiants livrés en quelques minutes.">
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#050A18;--night-2:#080F22;--panel:#0D162F;--panel-2:#111E3D;
+  --line:#1B2C54;--line-soft:#152444;
+  --blue:#2F6BFF;--blue-hi:#5A8CFF;--blue-deep:#1B49C4;--cyan:#49D9FF;
+  --glow:rgba(47,107,255,.30);
+  --ice:#E9EFFC;--muted:#93A6CC;--muted-2:#5F739B;
+  --display:'Sora',system-ui,sans-serif;--body:'Inter',Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --pad:clamp(20px,5vw,60px);--r:14px;--ease:cubic-bezier(.22,.8,.24,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--ice);font-family:var(--body);font-size:16px;
+  line-height:1.68;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--blue-hi);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+
+.aurora{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.4;display:block}
+.aurora i:nth-child(1){width:52vw;height:52vw;left:-16vw;top:-22vw;
+  background:radial-gradient(circle,rgba(47,107,255,.40),transparent 68%)}
+.aurora i:nth-child(2){width:42vw;height:42vw;right:-14vw;bottom:0;
+  background:radial-gradient(circle,rgba(73,217,255,.14),transparent 68%)}
+
+.top{padding:24px var(--pad);border-bottom:1px solid var(--line-soft)}
+.lang{position:relative;display:flex;align-items:center;gap:6px;margin-inline-start:auto}
+.lang-opts{display:flex;gap:6px}
+.lang-b,.lang-cur{
+  width:32px;height:32px;flex:0 0 32px;border-radius:50%;padding:0;cursor:pointer;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  transition:opacity .25s,filter .3s,border-color .25s,transform .25s,box-shadow .3s}
+.lang-b img,.lang-cur img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.lang-b{opacity:.5;filter:saturate(.55)}
+.lang-b:hover,.lang-cur:hover{opacity:1;filter:none;border-color:var(--blue-hi);transform:translateY(-1px)}
+.lang-b[aria-current="true"]{opacity:1;filter:none;border-color:transparent;
+  box-shadow:0 0 0 2px var(--blue-hi),0 8px 20px -8px var(--glow)}
+.lang-cur{display:none}
+@media(max-width:640px){
+  .top a.back{display:none}
+  .lang-cur{display:flex}
+  .lang-opts{position:absolute;top:calc(100% + 12px);inset-inline-end:0;z-index:70;
+    flex-direction:column;gap:6px;padding:7px;border-radius:20px;
+    background:rgba(8,15,34,.94);border:1px solid var(--line);backdrop-filter:blur(14px);
+    box-shadow:0 24px 46px -18px rgba(0,0,0,.85);
+    opacity:0;visibility:hidden;transform:translateY(-8px) scale(.96);transform-origin:top;
+    transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
+  .lang.open .lang-opts{opacity:1;visibility:visible;transform:none}
+}
+html[dir="rtl"] body{font-family:'Tajawal',var(--body)}
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] .brand-name{
+  font-family:'Cairo','Tajawal',var(--display);letter-spacing:0}
+.top-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:20px}
+.brand{display:inline-flex;align-items:center;gap:11px;margin-right:auto}
+.brand-mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--cyan))}
+.brand-mark::after{content:'';width:10px;height:10px;border-radius:50%;background:#fff}
+.brand-name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;color:var(--ice)}
+.brand:hover{text-decoration:none}
+.top a.back{font-size:14px;color:var(--muted)}
+
+main{max-width:860px;margin:0 auto;padding:clamp(34px,6vw,64px) var(--pad) 70px}
+
+h1{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.05;
+  font-size:clamp(30px,5vw,46px)}
+.updated{margin-top:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted-2)}
+
+.who{margin-top:28px;border:1px solid var(--line);border-radius:var(--r);
+  background:rgba(8,15,34,.75);padding:22px 24px}
+.who dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;font-size:14.5px}
+.who dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted-2);padding-top:3px}
+.who dd{color:var(--ice)}
+
+nav.toc{margin:34px 0 10px;border-top:1px solid var(--line-soft);
+  border-bottom:1px solid var(--line-soft);padding:18px 0;
+  display:flex;flex-wrap:wrap;gap:8px 22px}
+nav.toc a{font-size:14px;color:var(--muted)}
+
+section{padding-top:42px}
+h2{font-family:var(--display);font-weight:800;letter-spacing:-.025em;
+  font-size:clamp(22px,3.2vw,31px);padding-bottom:14px;
+  border-bottom:1px solid var(--line-soft);margin-bottom:22px}
+h3{font-family:var(--display);font-weight:600;font-size:17px;letter-spacing:-.015em;
+  margin:26px 0 8px}
+p{color:var(--muted);margin-bottom:14px}
+strong{color:var(--ice);font-weight:600}
+ul{margin:0 0 16px 20px;color:var(--muted)}
+li{margin-bottom:8px}
+
+.callout{border:1px solid var(--blue-deep);border-radius:var(--r);
+  background:linear-gradient(165deg,rgba(27,73,196,.18),rgba(8,15,34,.9));
+  padding:20px 22px;margin:22px 0}
+.callout p:last-child{margin-bottom:0}
+.callout .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:9px}
+
+footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
+.foot-in{max-width:860px;margin:0 auto;display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:11px;color:var(--muted-2);letter-spacing:.05em}
+</style>
+<link rel="canonical" href="https://swiftchannels.com/fr/legal.html"><link rel="alternate" hreflang="en" href="https://swiftchannels.com/legal.html"><link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/legal.html"><link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/legal.html"><link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/legal.html"><link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/legal.html"><link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/legal.html"></head>
+<body>
+
+<div class="aurora"><i></i><i></i></div>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
+    </a>
+    <a class="back" href="index.html">← Retour au site</a>
+    <div class="lang" id="lang">
+      <button class="lang-cur" type="button" id="langCur" aria-haspopup="true" aria-expanded="false" aria-label="Language"><img src="../assets/flag-fr.webp" alt="" width="32" height="32"></button>
+      <div class="lang-opts" id="langOpts">
+        <a class="lang-b" href="../legal.html" data-lang="en" hreflang="en" aria-current="false" title="English"><img src="../assets/flag-en.webp" alt="English" width="32" height="32"></a>
+        <a class="lang-b" href="../fr/legal.html" data-lang="fr" hreflang="fr" aria-current="true" title="Français"><img src="../assets/flag-fr.webp" alt="Français" width="32" height="32"></a>
+        <a class="lang-b" href="../es/legal.html" data-lang="es" hreflang="es" aria-current="false" title="Español"><img src="../assets/flag-es.webp" alt="Español" width="32" height="32"></a>
+        <a class="lang-b" href="../de/legal.html" data-lang="de" hreflang="de" aria-current="false" title="Deutsch"><img src="../assets/flag-de.webp" alt="Deutsch" width="32" height="32"></a>
+        <a class="lang-b" href="../ar/legal.html" data-lang="ar" hreflang="ar" aria-current="false" title="العربية"><img src="../assets/flag-ar.webp" alt="العربية" width="32" height="32"></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Conditions, remboursements et confidentialité</h1>
+  <p class="updated">Dernière mise à jour : 24 août 2026</p>
+
+  <div class="who">
+    <dl>
+      <dt>Nom commercial</dt><dd>Swift Channels</dd>
+      <!-- TODO: restore once the company is registered:
+      <dt>Operated by</dt><dd>COMPANY NAME</dd>
+      <dt>Registered in</dt><dd>JURISDICTION · REGISTRATION NUMBER</dd> -->
+      <dt>Contact</dt><dd><a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a> · WhatsApp +212 699 764 804</dd>
+    </dl>
+  </div>
+
+  <nav class="toc">
+    <a href="#terms">1. Conditions de service</a>
+    <a href="#refunds">2. Politique de remboursement</a>
+    <a href="#privacy">3. Notice de confidentialité</a>
+  </nav>
+
+  <!-- ═══════════ TERMS ═══════════ -->
+  <section id="terms">
+    <h2>1. Conditions de service</h2>
+
+    <h3>Qui nous sommes et ce que nous vendons</h3>
+    <!-- TODO: name the operating company in this paragraph once it is registered. -->
+    <p>Swift Channels revend l’accès à un service de télévision en streaming exploité par une plateforme tierce. Nous vous fournissons des identifiants de connexion à cette plateforme ; nous ne possédons, ne produisons, ne concédons sous licence ni ne contrôlons les contenus qu’elle diffuse.</p>
+
+    <h3>Ce que vous achetez</h3>
+    <p>Un abonnement donne accès à la plateforme pour une durée déterminée — 30 jours ou 12 mois — pour le nombre de connexions simultanées que vous avez choisi. Les grilles de chaînes, les catalogues à la demande et les guides de programmes sont définis par l’opérateur de la plateforme et peuvent changer à tout moment sans préavis. Nous ne pouvons garantir qu’une chaîne, un match, un film ou une série en particulier restera disponible pendant toute la durée de votre abonnement.</p>
+
+    <h3>Usage domestique uniquement</h3>
+    <p>Vos identifiants sont destinés à un usage privé au sein d’un seul foyer. Vous ne pouvez pas les revendre, les partager publiquement, les utiliser pour une diffusion commerciale ou publique, ni redistribuer le flux. Si nous constatons un tel usage, nous pouvons fermer le compte sans remboursement.</p>
+
+    <h3>Vos responsabilités</h3>
+    <ul>
+      <li>Donner des coordonnées exactes pour que nous puissions vous livrer vos identifiants.</li>
+      <li>Fournir votre propre connexion internet et un appareil compatible. Il faut environ 5 Mbps pour la SD, 15 Mbps pour la HD et 25 Mbps pour la 4K.</li>
+      <li>Garder vos identifiants confidentiels.</li>
+      <li>Respecter les lois applicables là où vous résidez, y compris les règles relatives aux contenus audiovisuels auxquels vous pouvez légalement accéder. Cela relève de votre responsabilité ; nous ne pouvons pas vous conseiller sur ce point.</li>
+    </ul>
+
+    <h3>Livraison</h3>
+    <p>Nous visons un envoi des identifiants en moins de dix minutes pendant les heures de support. Les commandes passées la nuit sont traitées le lendemain matin. La livraison se fait par WhatsApp ou par e-mail, aux coordonnées que vous nous avez données.</p>
+
+    <h3>Disponibilité et interruptions</h3>
+    <p>Nous visons une disponibilité élevée mais ne pouvons pas promettre un service ininterrompu. Les pannes du côté de l’opérateur de la plateforme, de votre connexion internet ou de votre appareil échappent à notre contrôle. Lorsqu’une ligne est réellement hors service pendant une période prolongée, nous la remplaçons et prolongeons votre abonnement de la durée perdue. C’est la solution que nous proposons.</p>
+
+    <h3>Test gratuit de 24 heures</h3>
+    <p>Un test gratuit par foyer, d’une durée de 24 heures à partir de l’activation. Il s’agit du service complet, afin que vous puissiez juger avant de payer. Nous pouvons refuser un test si nous estimons que l’offre fait l’objet d’un abus.</p>
+
+    <h3>Fin d’un abonnement</h3>
+    <p>Les abonnements ne se renouvellent pas automatiquement. Le vôtre prend simplement fin à sa date d’expiration, sauf si vous nous écrivez pour le prolonger. Vous pouvez cesser d’utiliser le service à tout moment ; voyez la politique de remboursement ci-dessous pour les conséquences financières.</p>
+
+    <h3>Notre responsabilité</h3>
+    <p>Notre responsabilité envers vous est limitée au montant payé pour la période d’abonnement en cours. Nous ne sommes pas responsables des dommages indirects. Rien ici ne limite une responsabilité qui ne peut légalement l’être.</p>
+
+    <h3>Modification des présentes conditions</h3>
+    <p>Nous pouvons mettre à jour ces conditions. La version figurant sur cette page au moment de votre commande est celle qui s’applique à cette commande.</p>
+
+    <h3>Droit applicable</h3>
+    <p>Les présentes conditions sont régies par le droit marocain. Si vous êtes un consommateur résidant dans l’UE ou au Royaume-Uni, cela ne vous prive pas de la protection des dispositions impératives du droit de la consommation de votre pays de résidence, et vous conservez le droit d’agir en justice dans ce pays.</p>
+  </section>
+
+  <!-- ═══════════ REFUNDS ═══════════ -->
+  <section id="refunds">
+    <h2>2. Politique de remboursement</h2>
+
+    <div class="callout">
+      <span class="tag">En bref</span>
+      <p><strong>Une fois vos identifiants envoyés, l’abonnement n’est pas remboursable.</strong>
+        Le test gratuit de 24 heures existe précisément pour que vous puissiez essayer le service complet sur votre appareil avant de payer quoi que ce soit.</p>
+    </div>
+
+    <h3>Pourquoi</h3>
+    <p>Un abonnement est un contenu numérique fourni immédiatement. Une fois les identifiants émis, l’accès est accordé et ne peut pas être restitué.</p>
+
+    <h3>Votre droit de rétractation dans l’UE, et son application</h3>
+    <p>Si vous êtes un consommateur dans l’UE ou au Royaume-Uni, vous disposez normalement de 14 jours pour vous rétracter d’un achat en ligne. Pour un contenu numérique fourni immédiatement, ce droit est perdu dès le début de la fourniture — mais uniquement si vous avez demandé cette fourniture immédiate et reconnu que vous perdiez ce droit.</p>
+    <p>C’est exactement la fonction de la case de confirmation de notre formulaire de commande. En la cochant, vous nous demandez de vous fournir vos identifiants immédiatement et acceptez que votre droit de rétractation de 14 jours prenne fin lorsque nous les envoyons.</p>
+    <p><strong>Si vous n’avez pas encore reçu vos identifiants, le droit de rétractation demeure.</strong>
+      Écrivez-nous avant la livraison et nous vous rembourserons intégralement.</p>
+
+    <h3>Quand nous remboursons</h3>
+    <ul>
+      <li>Vous avez payé mais nous ne vous avons jamais livré vos identifiants.</li>
+      <li>Vous avez été débité deux fois pour le même abonnement.</li>
+      <li>Nous sommes totalement incapables de fournir le service pendant une période prolongée et ne pouvons pas remplacer votre ligne.</li>
+    </ul>
+    <p>Dans ces cas, nous remboursons sur le moyen de paiement d’origine. Comptez jusqu’à dix jours ouvrables avant que la somme apparaisse.</p>
+
+    <h3>Quand nous ne remboursons pas</h3>
+    <ul>
+      <li>Vous avez changé d’avis après avoir reçu des identifiants fonctionnels.</li>
+      <li>Une chaîne ou un événement précis que vous vouliez n’est pas proposé, ou a été retiré par la plateforme.</li>
+      <li>Votre connexion internet ou votre appareil ne peut pas supporter le flux.</li>
+      <li>Votre compte a été fermé pour non-respect de la règle d’usage domestique.</li>
+    </ul>
+
+    <h3>Les problèmes avant une demande de remboursement</h3>
+    <p>La plupart des pannes se règlent en quelques minutes. Écrivez-nous d’abord sur WhatsApp — remplacer une ligne, réinitialiser des identifiants ou reconfigurer une application résout la grande majorité des problèmes, et nous ajoutons le temps perdu à votre abonnement.</p>
+  </section>
+
+  <!-- ═══════════ PRIVACY ═══════════ -->
+  <section id="privacy">
+    <h2>3. Notice de confidentialité</h2>
+
+    <h3>Qui est responsable de vos données</h3>
+    <!-- TODO: the data controller must be a named legal entity before EU customers are served. -->
+    <p>Swift Channels. Contact : <a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a>.</p>
+
+    <div class="callout">
+      <span class="tag">Bon à savoir</span>
+      <p>Ce site n’a ni base de données, ni comptes, ni traçage. Le formulaire de commande fonctionne entièrement dans votre navigateur et compose un message que vous nous envoyez vous-même. Rien n’est transmis à un serveur ici.</p>
+    </div>
+
+    <h3>Ce que nous collectons et pourquoi</h3>
+    <ul>
+      <li><strong>Ce que vous nous envoyez</strong> — votre nom, votre numéro WhatsApp, votre e-mail le cas échéant, votre appareil et son adresse MAC éventuelle, ainsi que les détails de votre commande. Ces éléments nous sont nécessaires pour créer votre compte et vous livrer vos identifiants. Base légale : exécution d’un contrat.</li>
+      <li><strong>Traces de paiement</strong> — nous voyons le nom, le montant et la date associés à votre paiement, ainsi que le reçu que vous nous envoyez. Nous ne voyons jamais votre numéro de carte. Base légale : contrat et obligations de conservation.</li>
+      <li><strong>Vos messages</strong> — la conversation WhatsApp ou e-mail, conservée pour pouvoir vous assister et gérer les renouvellements ou les litiges.</li>
+    </ul>
+
+    <h3>Ce que nous ne collectons pas</h3>
+    <ul>
+      <li>Aucun cookie, aucune analyse d’audience, aucun pixel publicitaire, aucun suivi des visiteurs sur ce site.</li>
+      <li>Aucune donnée bancaire — les paiements sont entièrement traités par PayPal.</li>
+      <li>Aucun relevé de ce que vous regardez. Nous n’avons pas accès à votre activité de visionnage.</li>
+    </ul>
+
+    <h3>Stockage local</h3>
+    <p>Lorsque vous poursuivez vers le paiement, les détails de votre commande sont enregistrés dans votre propre navigateur afin que la page de confirmation puisse vous les réafficher. Ces données restent sur votre appareil, ne nous sont jamais transmises, et vous pouvez les effacer depuis votre navigateur à tout moment.</p>
+
+    <h3>Avec qui nous les partageons</h3>
+    <ul>
+      <li><strong>L’opérateur de la plateforme</strong> — le minimum nécessaire pour créer et maintenir votre compte.</li>
+      <li><strong>Prestataires de paiement</strong> — PayPal, qui traite votre paiement selon sa propre politique de confidentialité.</li>
+      <li><strong>WhatsApp</strong> — en tant que canal de communication, selon les règles de Meta.</li>
+    </ul>
+    <p>Nous ne vendons pas vos données et ne les partageons pas à des fins de marketing.</p>
+
+    <h3>Transferts internationaux</h3>
+    <p>Nous sommes établis au Maroc : si vous êtes dans l’UE ou au Royaume-Uni, vos données sont donc traitées hors de votre pays. Nous limitons les transferts au strict nécessaire pour gérer votre abonnement.</p>
+
+    <h3>Durée de conservation</h3>
+    <p>Les traces de commande et de paiement sont conservées trois ans après la fin de votre abonnement, afin de gérer les litiges et de respecter nos obligations de conservation. Les conversations sont conservées tant que vous êtes client et pendant une période raisonnable ensuite.</p>
+
+    <h3>Vos droits</h3>
+    <p>Si vous êtes dans l’UE ou au Royaume-Uni, vous pouvez nous demander une copie de vos données, leur rectification, leur effacement, la limitation de leur utilisation, ou vous opposer à celle-ci. Écrivez à
+      <a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a> et nous répondrons sous 30 jours. Si notre réponse ne vous satisfait pas, vous pouvez saisir l’autorité de protection des données de votre pays.</p>
+
+    <h3>Mineurs</h3>
+    <p>Ce service n’est pas destiné aux personnes de moins de 18 ans et nous ne collectons pas sciemment de données concernant des enfants.</p>
+
+    <h3>Modifications</h3>
+    <p>Si nous modifions cette notice, nous mettrons à jour la date en haut de cette page.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-in">
+    <span>© <span id="yr">2026</span> Swift Channels</span>
+    <span><a href="index.html">swiftchannels.com</a></span>
+  </div>
+</footer>
+
+<script>window.PAGE_LANG='fr';</script><script src="../assets/i18n.js"></script>
+<script src="../assets/legal-i18n.js"></script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+window.i18n.boot({ titleKey: '__legal_title', lang: 'en' });
+</script>
+
+
+</body></html>

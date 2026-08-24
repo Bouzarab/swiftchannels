@@ -1523,6 +1523,7 @@ window.i18n = (function(){
 
   let onApply = null;
   let titleKey = '__meta_title';
+  let descKey  = '__meta_desc';
 
   function apply(lang, remember){
     LANG = (lang === 'en' || DICT[lang]) ? lang : 'en';
@@ -1543,7 +1544,7 @@ window.i18n = (function(){
     const d = DICT[LANG] || {};
     document.title = d[titleKey] || META.title;
     const md = document.querySelector('meta[name="description"]');
-    if(md) md.setAttribute('content', d.__meta_desc || META.desc);
+    if(md) md.setAttribute('content', d[descKey] || META.desc);
 
     document.querySelectorAll('.lang-b').forEach(b => {
       b.setAttribute('aria-current', String(b.dataset.lang === LANG));
@@ -1620,6 +1621,7 @@ window.i18n = (function(){
       opts = opts || {};
       onApply = opts.onApply || null;
       titleKey = opts.titleKey || '__meta_title';
+      descKey  = opts.descKey  || '__meta_desc';
 
       /* A generated page declares window.PAGE_LANG before this file loads. */
       if(opts.prerendered || window.PAGE_LANG){
