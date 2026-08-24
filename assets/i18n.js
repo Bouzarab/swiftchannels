@@ -13,6 +13,32 @@ fr: {
   '__meta_title': 'Swift Channels — abonnements IPTV',
   '__meta_desc': 'Commandez un abonnement IPTV mensuel ou annuel, ou lancez un test gratuit de 24 heures. Identifiants livrés en quelques minutes.',
 
+  /* ── WhatsApp-first ordering ── */
+  'Fill in the form':
+    'Remplissez le formulaire',
+  'Your name, WhatsApp number, the plan you want, how many devices and how you\'d like to pay. It takes about a minute.':
+    'Votre nom, votre numéro WhatsApp, l’offre voulue, le nombre d’appareils et votre moyen de paiement préféré. Cela prend environ une minute.',
+  'One button writes your whole order into a WhatsApp message. Press send — nothing is charged and nothing is committed yet.':
+    'Un bouton écrit toute votre commande dans un message WhatsApp. Appuyez sur envoyer — rien n’est débité et rien n’est encore engagé.',
+  'We take it from there':
+    'Nous prenons le relais',
+  'We confirm the price, send you the payment details for the method you chose, and once it\'s settled your login details and setup guide come straight back.':
+    'Nous confirmons le prix, nous vous envoyons les coordonnées de paiement pour le moyen choisi, et une fois réglé vos identifiants et le guide d’installation vous reviennent aussitôt.',
+  'Preferred payment method':
+    'Moyen de paiement préféré',
+  'Pick how you\'d like to pay so we can send the details.':
+    'Choisissez votre moyen de paiement pour que nous puissions vous envoyer les coordonnées.',
+  'Send my order on WhatsApp':
+    'Envoyer ma commande sur WhatsApp',
+  'Nothing is charged here. Send your order and we reply on WhatsApp with the payment details for the method you chose.':
+    'Rien n’est débité ici. Envoyez votre commande et nous répondons sur WhatsApp avec les coordonnées de paiement du moyen choisi.',
+  'per year — about 5 a month':
+    'par an — environ 5 € par mois',
+  'Order {ref} is open in WhatsApp. Press send there and we\'ll reply with the payment details shortly.':
+    'La commande {ref} est ouverte dans WhatsApp. Appuyez sur envoyer et nous vous répondons rapidement avec les coordonnées de paiement.',
+  'No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}, or use the WhatsApp button.':
+    'Aucune application e-mail ne s’est ouverte sur cet appareil. La commande {ref} est copiée — collez-la dans un e-mail adressé à {mail}, ou utilisez le bouton WhatsApp.',
+
   /* ── thank-you page ── */
   '__ty_title': 'Paiement reçu — une dernière étape',
   '__ty_h1': 'Paiement reçu.<br><span class="grad">Une dernière étape.</span>',
@@ -350,6 +376,32 @@ de: {
   '__meta_title': 'Swift Channels — IPTV-Abonnements',
   '__meta_desc': 'Bestellen Sie ein monatliches oder jährliches IPTV-Abo oder starten Sie einen kostenlosen 24-Stunden-Test. Zugangsdaten in wenigen Minuten.',
 
+  /* ── WhatsApp-first ordering ── */
+  'Fill in the form':
+    'Formular ausfüllen',
+  'Your name, WhatsApp number, the plan you want, how many devices and how you\'d like to pay. It takes about a minute.':
+    'Ihr Name, Ihre WhatsApp-Nummer, der gewünschte Tarif, wie viele Geräte und wie Sie zahlen möchten. Dauert etwa eine Minute.',
+  'One button writes your whole order into a WhatsApp message. Press send — nothing is charged and nothing is committed yet.':
+    'Ein Knopf schreibt Ihre ganze Bestellung in eine WhatsApp-Nachricht. Auf Senden drücken — es wird nichts abgebucht und nichts ist verbindlich.',
+  'We take it from there':
+    'Den Rest übernehmen wir',
+  'We confirm the price, send you the payment details for the method you chose, and once it\'s settled your login details and setup guide come straight back.':
+    'Wir bestätigen den Preis, senden Ihnen die Zahlungsdaten für die gewählte Methode, und sobald sie beglichen ist, kommen Ihre Zugangsdaten und die Anleitung sofort zurück.',
+  'Preferred payment method':
+    'Bevorzugte Zahlungsart',
+  'Pick how you\'d like to pay so we can send the details.':
+    'Wählen Sie, wie Sie zahlen möchten, damit wir die Daten senden können.',
+  'Send my order on WhatsApp':
+    'Bestellung per WhatsApp senden',
+  'Nothing is charged here. Send your order and we reply on WhatsApp with the payment details for the method you chose.':
+    'Hier wird nichts abgebucht. Senden Sie Ihre Bestellung, und wir antworten per WhatsApp mit den Zahlungsdaten für die gewählte Methode.',
+  'per year — about 5 a month':
+    'pro Jahr — rund 5 € im Monat',
+  'Order {ref} is open in WhatsApp. Press send there and we\'ll reply with the payment details shortly.':
+    'Bestellung {ref} ist in WhatsApp geöffnet. Dort auf Senden drücken — wir antworten kurz darauf mit den Zahlungsdaten.',
+  'No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}, or use the WhatsApp button.':
+    'Auf diesem Gerät hat sich kein E-Mail-Programm geöffnet. Bestellung {ref} ist kopiert — fügen Sie sie in eine E-Mail an {mail} ein oder nutzen Sie den WhatsApp-Knopf.',
+
   /* ── thank-you page ── */
   '__ty_title': 'Zahlung erhalten — ein Schritt fehlt',
   '__ty_h1': 'Zahlung erhalten.<br><span class="grad">Ein Schritt fehlt.</span>',
@@ -673,6 +725,32 @@ de: {
 es: {
   '__meta_title': 'Swift Channels — suscripciones IPTV',
   '__meta_desc': 'Contrata una suscripción IPTV mensual o anual, o empieza una prueba gratuita de 24 horas. Recibes los datos de acceso en minutos.',
+
+  /* ── WhatsApp-first ordering ── */
+  'Fill in the form':
+    'Rellena el formulario',
+  'Your name, WhatsApp number, the plan you want, how many devices and how you\'d like to pay. It takes about a minute.':
+    'Tu nombre, tu número de WhatsApp, el plan que quieres, cuántos dispositivos y cómo prefieres pagar. Se tarda un minuto.',
+  'One button writes your whole order into a WhatsApp message. Press send — nothing is charged and nothing is committed yet.':
+    'Un botón escribe todo tu pedido en un mensaje de WhatsApp. Pulsa enviar — no se cobra nada y todavía no te compromete a nada.',
+  'We take it from there':
+    'Nosotros nos encargamos',
+  'We confirm the price, send you the payment details for the method you chose, and once it\'s settled your login details and setup guide come straight back.':
+    'Confirmamos el precio, te enviamos los datos de pago del método que elegiste y, en cuanto esté abonado, te llegan tus datos de acceso y la guía de instalación.',
+  'Preferred payment method':
+    'Método de pago preferido',
+  'Pick how you\'d like to pay so we can send the details.':
+    'Elige cómo prefieres pagar para que podamos enviarte los datos.',
+  'Send my order on WhatsApp':
+    'Enviar mi pedido por WhatsApp',
+  'Nothing is charged here. Send your order and we reply on WhatsApp with the payment details for the method you chose.':
+    'Aquí no se cobra nada. Envía tu pedido y te respondemos por WhatsApp con los datos de pago del método que elegiste.',
+  'per year — about 5 a month':
+    'al año — unos 5 € al mes',
+  'Order {ref} is open in WhatsApp. Press send there and we\'ll reply with the payment details shortly.':
+    'El pedido {ref} está abierto en WhatsApp. Pulsa enviar y te respondemos enseguida con los datos de pago.',
+  'No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}, or use the WhatsApp button.':
+    'No se ha abierto ninguna aplicación de correo en este dispositivo. El pedido {ref} está copiado — pégalo en un correo a {mail}, o usa el botón de WhatsApp.',
 
   /* ── thank-you page ── */
   '__ty_title': 'Pago recibido — falta un paso',
@@ -1010,6 +1088,32 @@ es: {
 ar: {
   '__meta_title': 'سويفت تشانلز — اشتراكات IPTV',
   '__meta_desc': 'اطلب اشتراك IPTV شهريًا أو سنويًا، أو ابدأ تجربة مجانية لمدة 24 ساعة. تصلك بيانات الدخول خلال دقائق.',
+
+  /* ── WhatsApp-first ordering ── */
+  'Fill in the form':
+    'املأ النموذج',
+  'Your name, WhatsApp number, the plan you want, how many devices and how you\'d like to pay. It takes about a minute.':
+    'اسمك، رقم واتساب، الباقة التي تريدها، عدد الأجهزة، وطريقة الدفع المفضّلة لديك. يستغرق الأمر دقيقة تقريبًا.',
+  'One button writes your whole order into a WhatsApp message. Press send — nothing is charged and nothing is committed yet.':
+    'زر واحد يكتب طلبك كاملًا في رسالة واتساب. اضغط إرسال — لا يُخصم شيء ولا يلزمك شيء بعد.',
+  'We take it from there':
+    'ونتكفّل نحن بالباقي',
+  'We confirm the price, send you the payment details for the method you chose, and once it\'s settled your login details and setup guide come straight back.':
+    'نؤكد السعر، ونرسل لك تفاصيل الدفع للطريقة التي اخترتها، وبمجرد تسويتها تصلك بيانات الدخول ودليل التركيب فورًا.',
+  'Preferred payment method':
+    'طريقة الدفع المفضّلة',
+  'Pick how you\'d like to pay so we can send the details.':
+    'اختر طريقة الدفع حتى نتمكن من إرسال التفاصيل.',
+  'Send my order on WhatsApp':
+    'أرسل طلبي على واتساب',
+  'Nothing is charged here. Send your order and we reply on WhatsApp with the payment details for the method you chose.':
+    'لا يُخصم شيء هنا. أرسل طلبك ونرد عليك على واتساب بتفاصيل الدفع للطريقة التي اخترتها.',
+  'per year — about 5 a month':
+    'في السنة — نحو 5 € في الشهر',
+  'Order {ref} is open in WhatsApp. Press send there and we\'ll reply with the payment details shortly.':
+    'الطلب {ref} مفتوح في واتساب. اضغط إرسال وسنرد عليك قريبًا بتفاصيل الدفع.',
+  'No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}, or use the WhatsApp button.':
+    'لم يُفتح أي تطبيق بريد على هذا الجهاز. الطلب {ref} منسوخ — الصقه في رسالة إلى {mail}، أو استعمل زر واتساب.',
 
   /* ── thank-you page ── */
   '__ty_title': 'تم استلام الدفع — خطوة واحدة متبقية',
