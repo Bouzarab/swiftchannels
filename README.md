@@ -114,13 +114,64 @@ of the `<script>` tag in `index.html`:
 | `email`      | Contact address                                    |
 | `currency`   | Symbol shown next to prices                        |
 | `plans`      | Names, terms, prices, feature lists                |
-| `payLinks`   | PayPal Pay Link per plan                           |
-| `payDetails` | Payment instructions and copyable details          |
 | `payMethods` | Which methods appear in the dropdown               |
 | `faq`        | Questions and answers                              |
 
 `thank-you.html` has its own smaller `CONFIG` with `brand`, `whatsapp` and `email`.
 **If you change the WhatsApp number, change it in both files.**
+
+---
+
+## Languages — read this before changing any text
+
+The site is published at five addresses so Google can index each language
+separately:
+
+| Address                        | Language |
+|--------------------------------|----------|
+| `swiftchannels.com/`           | English  |
+| `swiftchannels.com/fr/`        | French   |
+| `swiftchannels.com/es/`        | Spanish  |
+| `swiftchannels.com/de/`        | German   |
+| `swiftchannels.com/ar/`        | Arabic (right-to-left) |
+
+**Only two files are ever edited by hand:**
+
+- `index.html` — the English page, and the source for all the others
+- `assets/i18n.js` — the translations, keyed by the English sentence
+
+`fr/`, `es/`, `de/` and `ar/` are **generated**. Never edit them directly; your
+changes will be overwritten on the next build.
+
+### After any change to index.html or assets/i18n.js
+
+```bash
+cd ~/swiftchannels
+node build.js          # regenerates fr/ es/ de/ ar/ and sitemap.xml
+git add . && git commit -m "what changed"
+git push
+```
+
+`build.js` opens the English page in a real browser, uses the site's own
+translation engine to switch language, and saves the result as a static page —
+so the generated pages can never drift from the live behaviour. It also rewrites
+`sitemap.xml` with the hreflang alternates.
+
+First time only: `npm install playwright` (the build needs a headless browser).
+
+### Adding or changing wording
+
+Because translations are keyed by the English sentence, **rewriting an English
+sentence silently drops that line back to English** on the other four pages. When
+you change English copy, update the matching key in `assets/i18n.js` in the same
+pass, then rebuild.
+
+### Adding a sixth language
+
+1. Add its block to `assets/i18n.js`, copying the shape of `es`.
+2. Add its code to `LANGS` at the top of `assets/i18n.js` and of `build.js`.
+3. Add a flag to `assets/` and a link to the switcher in `index.html`.
+4. `node build.js`.
 
 ---
 

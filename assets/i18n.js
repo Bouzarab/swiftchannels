@@ -13,6 +13,9 @@ fr: {
   '__meta_title': 'Swift Channels — abonnements IPTV',
   '__meta_desc': 'Commandez un abonnement IPTV mensuel ou annuel, ou lancez un test gratuit de 24 heures. Identifiants livrés en quelques minutes.',
 
+  'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
+    'Un téléviseur, un ordinateur portable, une tablette et un téléphone diffusant du sport, des films et des séries sur Swift Channels',
+
   /* ── WhatsApp-first ordering ── */
   'Fill in the form':
     'Remplissez le formulaire',
@@ -376,6 +379,9 @@ de: {
   '__meta_title': 'Swift Channels — IPTV-Abonnements',
   '__meta_desc': 'Bestellen Sie ein monatliches oder jährliches IPTV-Abo oder starten Sie einen kostenlosen 24-Stunden-Test. Zugangsdaten in wenigen Minuten.',
 
+  'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
+    'Ein Fernseher, ein Laptop, ein Tablet und ein Handy mit Sport, Filmen und Serien auf Swift Channels',
+
   /* ── WhatsApp-first ordering ── */
   'Fill in the form':
     'Formular ausfüllen',
@@ -725,6 +731,9 @@ de: {
 es: {
   '__meta_title': 'Swift Channels — suscripciones IPTV',
   '__meta_desc': 'Contrata una suscripción IPTV mensual o anual, o empieza una prueba gratuita de 24 horas. Recibes los datos de acceso en minutos.',
+
+  'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
+    'Un televisor, un portátil, una tablet y un móvil reproduciendo deporte, películas y series en Swift Channels',
 
   /* ── WhatsApp-first ordering ── */
   'Fill in the form':
@@ -1088,6 +1097,9 @@ es: {
 ar: {
   '__meta_title': 'سويفت تشانلز — اشتراكات IPTV',
   '__meta_desc': 'اطلب اشتراك IPTV شهريًا أو سنويًا، أو ابدأ تجربة مجانية لمدة 24 ساعة. تصلك بيانات الدخول خلال دقائق.',
+
+  'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
+    'تلفاز وحاسوب محمول ولوحي وهاتف تعرض الرياضة والأفلام والمسلسلات على سويفت تشانلز',
 
   /* ── WhatsApp-first ordering ── */
   'Fill in the form':
@@ -1566,7 +1578,10 @@ window.i18n = (function(){
     return nav.find(x => LANGS.includes(x)) || 'en';
   }
 
-  function wireSwitcher(){
+  /* interactive = the flags switch language in place (thank-you page).
+     When false the flags are ordinary links to /fr/, /es/ … and only the
+     mobile open/close toggle needs wiring. */
+  function wireSwitcher(interactive){
     const box = document.getElementById('lang');
     const cur = document.getElementById('langCur');
     if(!box || !cur) return;
@@ -1575,13 +1590,15 @@ window.i18n = (function(){
       const open = box.classList.toggle('open');
       cur.setAttribute('aria-expanded', String(open));
     });
-    box.querySelectorAll('.lang-b').forEach(b => {
-      b.addEventListener('click', () => {
-        apply(b.dataset.lang);
-        box.classList.remove('open');
-        cur.setAttribute('aria-expanded','false');
+    if(interactive){
+      box.querySelectorAll('button.lang-b').forEach(b => {
+        b.addEventListener('click', () => {
+          apply(b.dataset.lang);
+          box.classList.remove('open');
+          cur.setAttribute('aria-expanded','false');
+        });
       });
-    });
+    }
     const close = () => {
       box.classList.remove('open');
       cur.setAttribute('aria-expanded','false');
@@ -1593,14 +1610,31 @@ window.i18n = (function(){
   return {
     t, tf, apply, langs: LANGS,
     get lang(){ return LANG; },
-    /* opts: { skip: 'css,selectors', onApply: fn } */
+    /* opts:
+         { prerendered: true, lang: 'fr' }  — the page's static text is already
+           in that language (one URL per language). Nothing is re-translated;
+           only the parts JavaScript builds are rendered, in that language.
+         { skip: 'css,selectors', onApply: fn } — single-page mode: the text is
+           English in the file and swapped in the browser. */
     boot(opts){
       opts = opts || {};
       onApply = opts.onApply || null;
       titleKey = opts.titleKey || '__meta_title';
+
+      /* A generated page declares window.PAGE_LANG before this file loads. */
+      if(opts.prerendered || window.PAGE_LANG){
+        const l = window.PAGE_LANG || opts.lang ||
+                  document.documentElement.getAttribute('lang') || 'en';
+        LANG = (l === 'en' || DICT[l]) ? l : 'en';
+        if(LANG === 'ar') loadArabicFont();
+        wireSwitcher(false);
+        if(onApply) onApply(LANG);
+        return;
+      }
+
       snapshot(opts.skip);
-      wireSwitcher();
-      apply(initial(), false);
+      wireSwitcher(true);
+      apply(opts.lang || initial(), false);
     }
   };
 })();
