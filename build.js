@@ -42,7 +42,8 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
   /* Each source page and the marker that says it has finished booting. */
   const PAGES = [
     { file:'index.html', ready:() => window.i18n && document.querySelector('.plan') },
-    { file:'legal.html', ready:() => window.i18n && document.querySelector('.who') }
+    { file:'legal.html', ready:() => window.i18n && document.querySelector('.who') },
+    { file:'channels.html', ready:() => window.i18n && document.querySelector('.ct') }
   ];
 
   for (const L of LANGS.filter(l => l.folder))
@@ -67,7 +68,7 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
 
       /* The page now lives one folder down, so relative paths need ../ —
          except links to pages that also have a copy in this folder. */
-      const SAME_FOLDER = ['legal.html', 'index.html'];
+      const SAME_FOLDER = ['legal.html', 'index.html', 'channels.html'];
       document.querySelectorAll('[src],[href]').forEach(el => {
         for (const attr of ['src','href']) {
           const v = el.getAttribute(attr);
@@ -165,8 +166,10 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
   ).join('\n') +
   `\n      <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('')}legal.html"/>`;
 
-  /* pages that exist in English only for now */
-  const ENGLISH_ONLY = ['channels.html'];
+  const channelsAlternates = LANGS.map(l =>
+    `      <xhtml:link rel="alternate" hreflang="${l.code}" href="${urlFor(l.folder)}channels.html"/>`
+  ).join('\n') +
+  `\n      <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('')}channels.html"/>`;
 
   const entries = LANGS.map(l => `  <url>
     <loc>${urlFor(l.folder)}</loc>
@@ -183,13 +186,13 @@ ${legalAlternates}
     <priority>0.3</priority>
   </url>`).join('\n');
 
-  const extra = ENGLISH_ONLY.filter(f => fs.existsSync(path.join(ROOT, f))).map(f => `
-  <url>
-    <loc>${SITE}/${f}</loc>
+  const extra = '\n' + LANGS.map(l => `  <url>
+    <loc>${urlFor(l.folder)}channels.html</loc>
+${channelsAlternates}
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>`).join('');
+  </url>`).join('\n');
 
   fs.writeFileSync(path.join(ROOT,'sitemap.xml'),
 `<?xml version="1.0" encoding="UTF-8"?>

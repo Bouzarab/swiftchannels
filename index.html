@@ -147,7 +147,7 @@ h1,h2,h3,.dsp{font-family:var(--display);letter-spacing:-.03em;line-height:1.03;
 .brand-mark::after{content:'';width:11px;height:11px;border-radius:50%;
   background:#fff;box-shadow:0 0 12px #fff}
 .brand-name{font-family:var(--display);font-weight:800;font-size:17.5px;letter-spacing:-.02em}
-.nav-links{display:flex;gap:28px}
+.nav-links{display:flex;gap:24px}
 .nav-links a{font-size:14px;color:var(--muted);position:relative;transition:color .25s}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:1.5px;width:0;
   background:var(--cyan);transition:width .3s var(--ease)}
@@ -280,6 +280,9 @@ h1 .grad{
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line-soft);
   border-radius:var(--r);overflow:hidden;border:1px solid var(--line);margin-top:clamp(40px,6vw,70px)}
 .stat{background:rgba(8,15,34,.9);padding:26px 24px;transition:background .35s}
+.stat-link{display:inline-block;margin-top:9px;font-size:12.5px;color:var(--blue-hi);
+  border-bottom:1px solid transparent;transition:border-color .25s}
+.stat-link:hover{border-bottom-color:currentColor}
 .stat:hover{background:rgba(17,30,61,.95)}
 .stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(24px,3vw,34px);
   letter-spacing:-.03em;
@@ -730,6 +733,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     </a>
     <nav class="nav-links">
       <a href="#plans">Plans</a>
+      <a href="channels.html">Channels</a>
       <a href="#included">What's included</a>
       <a href="#devices">Devices &amp; apps</a>
       <a href="#faq">FAQ</a>
@@ -773,7 +777,8 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
 
   <div class="wrap">
     <div class="stats rv d3">
-      <div class="stat"><b data-count="10000" data-suffix="+">0</b><span>Live channels</span></div>
+      <div class="stat"><b data-count="8000" data-suffix="+">0</b><span>Live channels</span>
+        <a class="stat-link" href="channels.html">See the full list →</a></div>
       <div class="stat"><b data-count="50000" data-suffix="+">0</b><span>Films &amp; series on demand</span></div>
       <div class="stat"><b data-count="7" data-suffix=" days">0</b><span>Catch-up TV</span></div>
       <div class="stat"><b data-count="99" data-suffix=".9%">0</b><span>Uptime target</span></div>
@@ -824,7 +829,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     <div class="incl">
       <div class="card rv">
         <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5 6c4 3 10 3 14 0M5 18c4-3 10-3 14 0"/></svg></div>
-        <h3>10,000+ live channels</h3>
+        <h3>8,000+ live channels</h3>
         <p>Sports, movies, news and entertainment from more than 50 countries, in one channel list.</p>
       </div>
       <div class="card rv d1">
@@ -1114,7 +1119,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
       </div>
       <div>
         <h4>Pages</h4>
-        <a href="#plans">Plans</a><a href="#included">What's included</a>
+        <a href="#plans">Plans</a><a href="channels.html">Channels</a><a href="#included">What's included</a>
         <a href="#devices">Devices &amp; apps</a><a href="#faq">FAQ</a><a href="legal.html">Terms &amp; privacy</a>
       </div>
       <div>
@@ -1191,7 +1196,7 @@ const CONFIG = {
 
     { id:'monthly', name:'Monthly',   term:'30 days',  price:15, featured:false,
       per:'per month',
-      features:['10,000+ live channels and 50,000+ VOD','7-day catch-up and full programme guide',
+      features:['8,000+ live channels and 50,000+ VOD','7-day catch-up and full programme guide',
                 '4K, HD and SD where the source allows','Free replacement line if yours goes down',
                 'Renew by message — nothing automatic'] },
 
@@ -1208,7 +1213,7 @@ const CONFIG = {
   /* Payment happens after the order reaches us on WhatsApp — the customer just
      tells us which method they prefer, and staff send the details in the chat. */
 
-  marquee: ['Live sports','4K · HD · SD','7-day catch-up','10,000+ channels','50,000+ films & series',
+  marquee: ['Live sports','4K · HD · SD','7-day catch-up','8,000+ channels','50,000+ films & series',
             'Anti-freeze','Full EPG','24/7 support','50+ countries','No contract'],
 
   faq: [
@@ -1217,7 +1222,7 @@ const CONFIG = {
     ['How do I pay?',
      'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.'],
     ["What's included?",
-     "All plans include <strong>10,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support."],
+     "All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support."],
     ['Can I watch live sports and PPV events?',
      'Yes. <strong>NFL, NBA, MLB, NHL, Premier League, UFC and boxing</strong> are all there, along with the major sports channels — ESPN, Fox Sports, Sky Sports and beIN Sports — plus international sport from more than 50 countries.'],
     ['What devices are supported?',

@@ -9,7 +9,7 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/"/>
       <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/"/>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -21,7 +21,7 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/"/>
       <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/"/>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -33,7 +33,7 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/"/>
       <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/"/>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -45,7 +45,7 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/"/>
       <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/"/>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -57,7 +57,7 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/"/>
       <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/"/>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -69,7 +69,7 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/legal.html"/>
       <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/legal.html"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/legal.html"/>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -81,7 +81,7 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/legal.html"/>
       <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/legal.html"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/legal.html"/>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -93,7 +93,7 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/legal.html"/>
       <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/legal.html"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/legal.html"/>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -105,7 +105,7 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/legal.html"/>
       <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/legal.html"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/legal.html"/>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -117,13 +117,67 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/legal.html"/>
       <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/legal.html"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/legal.html"/>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://swiftchannels.com/channels.html</loc>
-    <lastmod>2026-08-24</lastmod>
+      <xhtml:link rel="alternate" hreflang="en" href="https://swiftchannels.com/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/channels.html"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://swiftchannels.com/fr/channels.html</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://swiftchannels.com/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/channels.html"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://swiftchannels.com/es/channels.html</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://swiftchannels.com/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/channels.html"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://swiftchannels.com/de/channels.html</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://swiftchannels.com/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/channels.html"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://swiftchannels.com/ar/channels.html</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://swiftchannels.com/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/channels.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/channels.html"/>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

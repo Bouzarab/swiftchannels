@@ -1,3 +1,4 @@
 # build tooling only — never published to the site
 node_modules/
 .DS_Store
+channel-name-changes.txt

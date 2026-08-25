@@ -146,7 +146,7 @@ h1,h2,h3,.dsp{font-family:var(--display);letter-spacing:-.03em;line-height:1.03;
 .brand-mark::after{content:'';width:11px;height:11px;border-radius:50%;
   background:#fff;box-shadow:0 0 12px #fff}
 .brand-name{font-family:var(--display);font-weight:800;font-size:17.5px;letter-spacing:-.02em}
-.nav-links{display:flex;gap:28px}
+.nav-links{display:flex;gap:24px}
 .nav-links a{font-size:14px;color:var(--muted);position:relative;transition:color .25s}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:1.5px;width:0;
   background:var(--cyan);transition:width .3s var(--ease)}
@@ -279,6 +279,9 @@ h1 .grad{
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line-soft);
   border-radius:var(--r);overflow:hidden;border:1px solid var(--line);margin-top:clamp(40px,6vw,70px)}
 .stat{background:rgba(8,15,34,.9);padding:26px 24px;transition:background .35s}
+.stat-link{display:inline-block;margin-top:9px;font-size:12.5px;color:var(--blue-hi);
+  border-bottom:1px solid transparent;transition:border-color .25s}
+.stat-link:hover{border-bottom-color:currentColor}
 .stat:hover{background:rgba(17,30,61,.95)}
 .stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(24px,3vw,34px);
   letter-spacing:-.03em;
@@ -729,6 +732,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     </a>
     <nav class="nav-links">
       <a href="#plans">الباقات</a>
+      <a href="channels.html">القنوات</a>
       <a href="#included">ما الذي يشمله</a>
       <a href="#devices">الأجهزة والتطبيقات</a>
       <a href="#faq">الأسئلة الشائعة</a>
@@ -770,7 +774,8 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
 
   <div class="wrap">
     <div class="stats rv d3">
-      <div class="stat"><b data-count="10000" data-suffix="+">0</b><span>قناة مباشرة</span></div>
+      <div class="stat"><b data-count="8000" data-suffix="+">0</b><span>قناة مباشرة</span>
+        <a class="stat-link" href="channels.html">← اطّلع على القائمة الكاملة</a></div>
       <div class="stat"><b data-count="50000" data-suffix="+">0</b><span>فيلم ومسلسل عند الطلب</span></div>
       <div class="stat"><b data-count="7" data-suffix=" days">0</b><span>إعادة المشاهدة</span></div>
       <div class="stat"><b data-count="99" data-suffix=".9%">0</b><span>نسبة التشغيل المستهدفة</span></div>
@@ -780,7 +785,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
 
 <!-- ══════════════ MARQUEE ══════════════ -->
 <div class="marquee">
-  <div class="marquee-track" id="marq"><span>الرياضة المباشرة</span><span>4K · HD · SD</span><span>إعادة مشاهدة 7 أيام</span><span>أكثر من 10,000 قناة</span><span>أكثر من 50,000 فيلم ومسلسل</span><span>منع التقطيع</span><span>دليل برامج كامل</span><span>دعم على مدار الساعة</span><span>أكثر من 50 دولة</span><span>بدون التزام</span><span>الرياضة المباشرة</span><span>4K · HD · SD</span><span>إعادة مشاهدة 7 أيام</span><span>أكثر من 10,000 قناة</span><span>أكثر من 50,000 فيلم ومسلسل</span><span>منع التقطيع</span><span>دليل برامج كامل</span><span>دعم على مدار الساعة</span><span>أكثر من 50 دولة</span><span>بدون التزام</span></div>
+  <div class="marquee-track" id="marq"><span>الرياضة المباشرة</span><span>4K · HD · SD</span><span>إعادة مشاهدة 7 أيام</span><span>أكثر من 8,000 قناة</span><span>أكثر من 50,000 فيلم ومسلسل</span><span>منع التقطيع</span><span>دليل برامج كامل</span><span>دعم على مدار الساعة</span><span>أكثر من 50 دولة</span><span>بدون التزام</span><span>الرياضة المباشرة</span><span>4K · HD · SD</span><span>إعادة مشاهدة 7 أيام</span><span>أكثر من 8,000 قناة</span><span>أكثر من 50,000 فيلم ومسلسل</span><span>منع التقطيع</span><span>دليل برامج كامل</span><span>دعم على مدار الساعة</span><span>أكثر من 50 دولة</span><span>بدون التزام</span></div>
 </div>
 
 <!-- ══════════════ PLANS ══════════════ -->
@@ -824,7 +829,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
         <span class="plan-cur">€</span>
       </div>
       <div class="plan-per">في الشهر</div>
-      <ul class="plan-list"><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>أكثر من 10,000 قناة مباشرة و 50,000 عمل عند الطلب</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>إعادة مشاهدة 7 أيام ودليل برامج كامل</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>4K و HD و SD حسب ما يتيحه المصدر</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>خط بديل مجاني إذا توقف خطك</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>التجديد برسالة — لا شيء تلقائي</span></li></ul>
+      <ul class="plan-list"><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>أكثر من 8,000 قناة مباشرة و 50,000 عمل عند الطلب</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>إعادة مشاهدة 7 أيام ودليل برامج كامل</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>4K و HD و SD حسب ما يتيحه المصدر</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>خط بديل مجاني إذا توقف خطك</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>التجديد برسالة — لا شيء تلقائي</span></li></ul>
       <button class="btn btn-ghost" type="button" data-choose="monthly">
         اختر باقة شهري
       </button></article><article class="plan featured">
@@ -855,7 +860,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     <div class="incl">
       <div class="card rv">
         <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 3v18M3 12h18M5 6c4 3 10 3 14 0M5 18c4-3 10-3 14 0"></path></svg></div>
-        <h3>أكثر من 10,000 قناة مباشرة</h3>
+        <h3>أكثر من 8,000 قناة مباشرة</h3>
         <p>رياضة وأفلام وأخبار وترفيه من أكثر من 50 دولة، في قائمة قنوات واحدة.</p>
       </div>
       <div class="card rv d1">
@@ -1104,7 +1109,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
       <span class="eyebrow">أسئلة</span>
       <h2>قبل أن تطلب</h2>
     </div>
-    <div id="faqList" class="rv d1"><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa0"><span>كم يكلّف؟</span><i>+</i></button><div class="faq-a" id="fa0"><p>باقتان مدفوعتان، وكلتاهما تفتح المكتبة كاملة: <strong>15 € في الشهر</strong> أو <strong>57 € في السنة</strong> — نحو 5 € شهريًا. وهذا لشاشة واحدة في الوقت نفسه؛ أما 2 أو 3 أو 4 شاشات فتكلّف أكثر. وهناك <strong>تجربة مجانية لمدة 24 ساعة</strong> قبل أن تدفع أي شيء.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa1"><span>كيف أدفع؟</span><i>+</i></button><div class="faq-a" id="fa1"><p>بالبطاقة أو عبر باي بال. أنت لا تدفع في هذا الموقع — أرسل طلبك على واتساب، ونؤكد لك السعر ونرسل رابط الدفع، ويُفتح خطك بمجرد وصول الدفعة.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa2"><span>ما الذي يشمله الاشتراك؟</span><i>+</i></button><div class="faq-a" id="fa2"><p>كل الباقات تشمل <strong>أكثر من 10,000 قناة مباشرة</strong> تغطي الرياضة والأفلام والأخبار والترفيه، و<strong>أكثر من 50,000 فيلم ومسلسل عند الطلب</strong>، وجودة 4K و HD، ودليل برامج كامل، وإعادة مشاهدة، ودعمًا على مدار الساعة.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa3"><span>هل يمكنني مشاهدة الرياضة المباشرة ونزالات الدفع لكل مشاهدة؟</span><i>+</i></button><div class="faq-a" id="fa3"><p>نعم. <strong>NFL و NBA و MLB و NHL والبريميرليغ و UFC والملاكمة</strong> كلها موجودة، مع القنوات الرياضية الكبرى — ESPN و Fox Sports و Sky Sports و beIN Sports — إضافة إلى الرياضة العالمية من أكثر من 50 دولة.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa4"><span>ما الأجهزة المدعومة؟</span><i>+</i></button><div class="faq-a" id="fa4"><p>يعمل على التلفازات الذكية (سامسونغ و LG وأندرويد تي في)، والهواتف واللوحيات (iOS وأندرويد)، والحواسيب (ويندوز وماك ولينكس)، وفاير ستيك وروكو وآبل تي في وغيرها. استعمل تطبيقًا مثل <strong>GSE Smart IPTV</strong> أو <strong>IPTV Smarters</strong>.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa5"><span>أي تطبيق IPTV أستعمل على جهازي؟</span><i>+</i></button><div class="faq-a" id="fa5"><p>ننصح بـ <strong>IPTV Smarters Pro</strong> لأغلب الأجهزة، و<strong>GSE Smart IPTV</strong> لأجهزة أبل، و<strong>TiviMate</strong> لأندرويد تي في، و<strong>Smart IPTV</strong> لتلفازات سامسونغ و LG. وكلها تدعم صيغة M3U التي نرسلها لك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa6"><span>ما السرعة اللازمة للبث بجودة 4K؟</span><i>+</i></button><div class="faq-a" id="fa6"><p>لأفضل صورة: <strong>25 ميغابت/ث أو أكثر</strong> لقنوات 4K، و<strong>15 ميغابت/ث</strong> لـ HD، و<strong>5 ميغابت/ث</strong> لـ SD. والبث التكيّفي يضبط الجودة تلقائيًا حسب اتصالك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa7"><span>هل تجربة 24 ساعة مجانية فعلًا؟</span><i>+</i></button><div class="faq-a" id="fa7"><p>نعم. خط واحد لمدة 24 ساعة لكل منزل، بدون بطاقة وبدون ضمان. نفتحه، وتجرّبه على جهازك، وإن لم يناسبك فلا شيء بعد ذلك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa8"><span>متى تصلني بيانات الدخول؟</span><i>+</i></button><div class="faq-a" id="fa8"><p>عادة في أقل من عشر دقائق خلال أوقات الدعم. وإذا طلبت ليلًا، تجد بياناتك في انتظارك أول الصباح.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa9"><span>ماذا لو توقفت قناة عن العمل؟</span><i>+</i></button><div class="faq-a" id="fa9"><p>راسلنا في المحادثة نفسها. أغلب المشاكل تُحل في دقائق، وإذا توقف خط فعلًا نستبدله ونضيف الوقت الضائع إلى اشتراكك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa10"><span>كيف أجدّد؟</span><i>+</i></button><div class="faq-a" id="fa10"><p>أرسل لنا رسالة قبل تاريخ الانتهاء ونمدّد الخط نفسه. يبقى اسم المستخدم وكلمة السر والمفضلات كما هي تمامًا.</p></div></div></div>
+    <div id="faqList" class="rv d1"><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa0"><span>كم يكلّف؟</span><i>+</i></button><div class="faq-a" id="fa0"><p>باقتان مدفوعتان، وكلتاهما تفتح المكتبة كاملة: <strong>15 € في الشهر</strong> أو <strong>57 € في السنة</strong> — نحو 5 € شهريًا. وهذا لشاشة واحدة في الوقت نفسه؛ أما 2 أو 3 أو 4 شاشات فتكلّف أكثر. وهناك <strong>تجربة مجانية لمدة 24 ساعة</strong> قبل أن تدفع أي شيء.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa1"><span>كيف أدفع؟</span><i>+</i></button><div class="faq-a" id="fa1"><p>بالبطاقة أو عبر باي بال. أنت لا تدفع في هذا الموقع — أرسل طلبك على واتساب، ونؤكد لك السعر ونرسل رابط الدفع، ويُفتح خطك بمجرد وصول الدفعة.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa2"><span>ما الذي يشمله الاشتراك؟</span><i>+</i></button><div class="faq-a" id="fa2"><p>كل الباقات تشمل <strong>أكثر من 8,000 قناة مباشرة</strong> تغطي الرياضة والأفلام والأخبار والترفيه، و<strong>أكثر من 50,000 فيلم ومسلسل عند الطلب</strong>، وجودة 4K و HD، ودليل برامج كامل، وإعادة مشاهدة، ودعمًا على مدار الساعة.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa3"><span>هل يمكنني مشاهدة الرياضة المباشرة ونزالات الدفع لكل مشاهدة؟</span><i>+</i></button><div class="faq-a" id="fa3"><p>نعم. <strong>NFL و NBA و MLB و NHL والبريميرليغ و UFC والملاكمة</strong> كلها موجودة، مع القنوات الرياضية الكبرى — ESPN و Fox Sports و Sky Sports و beIN Sports — إضافة إلى الرياضة العالمية من أكثر من 50 دولة.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa4"><span>ما الأجهزة المدعومة؟</span><i>+</i></button><div class="faq-a" id="fa4"><p>يعمل على التلفازات الذكية (سامسونغ و LG وأندرويد تي في)، والهواتف واللوحيات (iOS وأندرويد)، والحواسيب (ويندوز وماك ولينكس)، وفاير ستيك وروكو وآبل تي في وغيرها. استعمل تطبيقًا مثل <strong>GSE Smart IPTV</strong> أو <strong>IPTV Smarters</strong>.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa5"><span>أي تطبيق IPTV أستعمل على جهازي؟</span><i>+</i></button><div class="faq-a" id="fa5"><p>ننصح بـ <strong>IPTV Smarters Pro</strong> لأغلب الأجهزة، و<strong>GSE Smart IPTV</strong> لأجهزة أبل، و<strong>TiviMate</strong> لأندرويد تي في، و<strong>Smart IPTV</strong> لتلفازات سامسونغ و LG. وكلها تدعم صيغة M3U التي نرسلها لك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa6"><span>ما السرعة اللازمة للبث بجودة 4K؟</span><i>+</i></button><div class="faq-a" id="fa6"><p>لأفضل صورة: <strong>25 ميغابت/ث أو أكثر</strong> لقنوات 4K، و<strong>15 ميغابت/ث</strong> لـ HD، و<strong>5 ميغابت/ث</strong> لـ SD. والبث التكيّفي يضبط الجودة تلقائيًا حسب اتصالك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa7"><span>هل تجربة 24 ساعة مجانية فعلًا؟</span><i>+</i></button><div class="faq-a" id="fa7"><p>نعم. خط واحد لمدة 24 ساعة لكل منزل، بدون بطاقة وبدون ضمان. نفتحه، وتجرّبه على جهازك، وإن لم يناسبك فلا شيء بعد ذلك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa8"><span>متى تصلني بيانات الدخول؟</span><i>+</i></button><div class="faq-a" id="fa8"><p>عادة في أقل من عشر دقائق خلال أوقات الدعم. وإذا طلبت ليلًا، تجد بياناتك في انتظارك أول الصباح.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa9"><span>ماذا لو توقفت قناة عن العمل؟</span><i>+</i></button><div class="faq-a" id="fa9"><p>راسلنا في المحادثة نفسها. أغلب المشاكل تُحل في دقائق، وإذا توقف خط فعلًا نستبدله ونضيف الوقت الضائع إلى اشتراكك.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa10"><span>كيف أجدّد؟</span><i>+</i></button><div class="faq-a" id="fa10"><p>أرسل لنا رسالة قبل تاريخ الانتهاء ونمدّد الخط نفسه. يبقى اسم المستخدم وكلمة السر والمفضلات كما هي تمامًا.</p></div></div></div>
   </div>
 </section>
 
@@ -1132,7 +1137,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
       </div>
       <div>
         <h4>الصفحات</h4>
-        <a href="#plans">الباقات</a><a href="#included">ما الذي يشمله</a>
+        <a href="#plans">الباقات</a><a href="channels.html">القنوات</a><a href="#included">ما الذي يشمله</a>
         <a href="#devices">الأجهزة والتطبيقات</a><a href="#faq">الأسئلة الشائعة</a><a href="legal.html">الشروط والخصوصية</a>
       </div>
       <div>
@@ -1203,7 +1208,7 @@ const CONFIG = {
 
     { id:'monthly', name:'Monthly',   term:'30 days',  price:15, featured:false,
       per:'per month',
-      features:['10,000+ live channels and 50,000+ VOD','7-day catch-up and full programme guide',
+      features:['8,000+ live channels and 50,000+ VOD','7-day catch-up and full programme guide',
                 '4K, HD and SD where the source allows','Free replacement line if yours goes down',
                 'Renew by message — nothing automatic'] },
 
@@ -1220,7 +1225,7 @@ const CONFIG = {
   /* Payment happens after the order reaches us on WhatsApp — the customer just
      tells us which method they prefer, and staff send the details in the chat. */
 
-  marquee: ['Live sports','4K · HD · SD','7-day catch-up','10,000+ channels','50,000+ films & series',
+  marquee: ['Live sports','4K · HD · SD','7-day catch-up','8,000+ channels','50,000+ films & series',
             'Anti-freeze','Full EPG','24/7 support','50+ countries','No contract'],
 
   faq: [
@@ -1229,7 +1234,7 @@ const CONFIG = {
     ['How do I pay?',
      'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.'],
     ["What's included?",
-     "All plans include <strong>10,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support."],
+     "All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support."],
     ['Can I watch live sports and PPV events?',
      'Yes. <strong>NFL, NBA, MLB, NHL, Premier League, UFC and boxing</strong> are all there, along with the major sports channels — ESPN, Fox Sports, Sky Sports and beIN Sports — plus international sport from more than 50 countries.'],
     ['What devices are supported?',

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liste des chaînes — Swift Channels</title>
+<meta name="description" content="Toutes les chaînes de Swift Channels — plus de 8 000 chaînes en direct dans 54 pays, avec recherche par nom ou par pays.">
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Swift Channels">
+<meta property="og:url" content="https://swiftchannels.com/fr/channels.html">
+<meta property="og:title" content="Liste des chaînes — Swift Channels">
+<meta property="og:description" content="Toutes les chaînes de Swift Channels — plus de 8 000 chaînes en direct dans 54 pays, avec recherche par nom ou par pays.">
+<meta property="og:image" content="https://swiftchannels.com/assets/og-card.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#050A18">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#050A18;--night-2:#080F22;--panel:#0D162F;--panel-2:#111E3D;
+  --line:#1B2C54;--line-soft:#152444;
+  --blue:#2F6BFF;--blue-hi:#5A8CFF;--blue-deep:#1B49C4;--cyan:#49D9FF;
+  --glow:rgba(47,107,255,.30);
+  --ice:#E9EFFC;--muted:#93A6CC;--muted-2:#5F739B;
+  --display:'Sora',system-ui,sans-serif;--body:'Inter',Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --pad:clamp(20px,5vw,60px);--maxw:1320px;--r:14px;--ease:cubic-bezier(.22,.8,.24,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--ice);font-family:var(--body);font-size:16px;
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+img,svg{display:block;max-width:100%}
+
+.aurora{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;display:block}
+.aurora i:nth-child(1){width:54vw;height:54vw;left:-16vw;top:-20vw;
+  background:radial-gradient(circle,rgba(47,107,255,.40),transparent 68%)}
+.aurora i:nth-child(2){width:42vw;height:42vw;right:-12vw;top:30vh;
+  background:radial-gradient(circle,rgba(73,217,255,.14),transparent 68%)}
+
+/* ── top bar ── */
+.top{position:sticky;top:0;z-index:40;background:rgba(5,10,24,.86);
+  backdrop-filter:blur(18px);border-bottom:1px solid var(--line-soft)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);height:68px;
+  display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
+.brand-mark{width:30px;height:30px;flex:none;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--cyan))}
+.brand-mark::after{content:'';width:11px;height:11px;border-radius:50%;background:#fff;
+  box-shadow:0 0 12px #fff}
+.brand-name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;
+  white-space:nowrap}
+.back{font-size:14px;color:var(--muted)}
+.back:hover{color:var(--ice)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-weight:600;border-radius:100px;border:1px solid transparent;cursor:pointer;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s,color .3s}
+.btn:hover{transform:translateY(-1px)}
+.btn-blue{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;
+  box-shadow:0 10px 26px -10px var(--glow)}
+.btn-sm{padding:9px 17px;font-size:13.5px;white-space:nowrap}
+
+.lang{position:relative;display:flex;align-items:center;gap:6px}
+.lang-opts{display:flex;gap:6px}
+.lang-b,.lang-cur{width:32px;height:32px;flex:0 0 32px;border-radius:50%;padding:0;cursor:pointer;
+  overflow:hidden;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  transition:opacity .25s,filter .3s,border-color .25s,transform .25s,box-shadow .3s}
+.lang-b img,.lang-cur img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.lang-b{opacity:.5;filter:saturate(.55)}
+.lang-b:hover,.lang-cur:hover{opacity:1;filter:none;border-color:var(--blue-hi);transform:translateY(-1px)}
+.lang-b[aria-current="true"]{opacity:1;filter:none;border-color:transparent;
+  box-shadow:0 0 0 2px var(--blue-hi),0 8px 20px -8px var(--glow)}
+.lang-cur{display:none}
+@media(max-width:860px){
+  .lang-cur{display:flex}
+  .lang-opts{position:absolute;top:calc(100% + 12px);inset-inline-end:0;z-index:70;
+    flex-direction:column;gap:6px;padding:7px;border-radius:20px;
+    background:rgba(8,15,34,.94);border:1px solid var(--line);backdrop-filter:blur(14px);
+    box-shadow:0 24px 46px -18px rgba(0,0,0,.85);
+    opacity:0;visibility:hidden;transform:translateY(-8px) scale(.96);transform-origin:top;
+    transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
+  .lang.open .lang-opts{opacity:1;visibility:visible;transform:none}
+}
+html[dir="rtl"] .brand{margin-right:0;margin-left:auto}
+html[dir="rtl"] .ct{text-align:right}
+html[dir="rtl"] .search input{padding:14px 46px 14px 46px}
+html[dir="rtl"] .search svg{left:auto;right:17px}
+html[dir="rtl"] .stat b{direction:ltr;unicode-bidi:isolate}
+html[dir="rtl"] .ct-n{direction:ltr;unicode-bidi:isolate}
+html[dir="rtl"] .search .clear{right:auto;left:8px}
+html[dir="rtl"] body{font-family:'Tajawal',var(--body)}
+html[dir="rtl"] h1,html[dir="rtl"] .pane-h h2,html[dir="rtl"] .band h3,html[dir="rtl"] .brand-name,
+html[dir="rtl"] .stat b{font-family:'Cairo','Tajawal',var(--display);letter-spacing:0}
+
+/* ── hero strip ── */
+.head{max-width:var(--maxw);margin:0 auto;padding:clamp(28px,4vw,48px) var(--pad) 0;width:100%}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--cyan);display:block;margin-bottom:12px}
+h1{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.06;
+  font-size:clamp(30px,4.6vw,52px)}
+h1 .grad{background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 60%,#fff);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.head p{margin-top:14px;color:var(--muted);max-width:60ch;font-size:16px}
+
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:24px}
+.stat b{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;display:block}
+.stat span{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted-2)}
+
+/* ── search ── */
+.search-wrap{max-width:var(--maxw);margin:0 auto;padding:26px var(--pad) 0;width:100%}
+.search{position:relative;max-width:520px}
+.search input{width:100%;background:rgba(8,15,34,.8);color:var(--ice);
+  border:1px solid var(--line);border-radius:100px;padding:14px 46px 14px 46px;
+  font-family:var(--body);font-size:15px;transition:border-color .25s,box-shadow .25s}
+.search input::placeholder{color:var(--muted-2)}
+.search input:focus{outline:none;border-color:var(--blue);
+  box-shadow:0 0 0 4px rgba(47,107,255,.12)}
+.search svg{position:absolute;left:17px;top:50%;transform:translateY(-50%);
+  width:17px;height:17px;stroke:var(--muted-2);fill:none;stroke-width:2}
+.search .clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  background:none;border:none;color:var(--muted-2);cursor:pointer;font-size:20px;
+  padding:6px 12px;display:none}
+.search .clear:hover{color:var(--ice)}
+.search.has .clear{display:block}
+
+/* ── main split ── */
+.split{max-width:var(--maxw);margin:0 auto;padding:26px var(--pad) 70px;width:100%;flex:1;
+  display:grid;grid-template-columns:264px 1fr;gap:26px;align-items:start}
+
+.rail{position:sticky;top:88px;background:rgba(8,15,34,.72);border:1px solid var(--line);
+  border-radius:20px;overflow:hidden;max-height:calc(100vh - 116px);display:flex;flex-direction:column}
+.rail-h{padding:15px 18px;border-bottom:1px solid var(--line-soft);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--muted-2)}
+.rail-list{overflow-y:auto;padding:8px;display:flex;flex-direction:column;gap:2px}
+.ct{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;
+  background:none;border:none;border-radius:12px;padding:9px 10px;color:var(--muted);
+  font-family:var(--body);transition:background .2s,color .2s}
+.ct:hover{background:rgba(47,107,255,.10);color:var(--ice)}
+.ct[aria-selected="true"]{background:rgba(47,107,255,.16);color:var(--ice)}
+.ct-code{width:38px;height:38px;flex:none;border-radius:50%;display:grid;place-items:center;
+  overflow:hidden;position:relative;
+  background:linear-gradient(140deg,var(--panel-2),var(--panel));
+  box-shadow:0 0 0 1px var(--line);
+  font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.02em;color:var(--muted);
+  transition:box-shadow .25s,transform .25s;filter:saturate(.72);opacity:.72}
+.ct-code img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.ct:hover .ct-code{filter:none;opacity:1}
+.ct[aria-selected="true"] .ct-code{filter:none;opacity:1;transform:scale(1.04);
+  box-shadow:0 0 0 2px var(--blue-hi),0 8px 18px -6px var(--glow)}
+.ct[aria-selected="true"] .ct-code:not(:has(img)){color:#fff;
+  background:linear-gradient(140deg,var(--blue),var(--blue-deep))}
+.ct-name{flex:1;min-width:0;font-size:14.5px;font-weight:500;line-height:1.25;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ct-n{font-family:var(--mono);font-size:11px;color:var(--muted-2);font-variant-numeric:tabular-nums}
+
+/* ── channel pane ── */
+.pane{min-width:0}
+.pane-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.pane-h h2{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em}
+.pane-h span{font-family:var(--mono);font-size:11.5px;color:var(--muted-2);
+  font-variant-numeric:tabular-nums}
+
+.scroller{border:1px solid var(--line);border-radius:20px;background:rgba(8,15,34,.55);
+  height:calc(100vh - 116px);overflow-y:auto;overscroll-behavior:contain;padding:12px}
+.scroller::-webkit-scrollbar{width:10px}
+.scroller::-webkit-scrollbar-track{background:transparent}
+.scroller::-webkit-scrollbar-thumb{background:var(--line);border-radius:20px;
+  border:3px solid transparent;background-clip:content-box}
+.scroller::-webkit-scrollbar-thumb:hover{background:var(--blue-deep);background-clip:content-box}
+.scroller{scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.chans{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:9px}
+.ch{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;
+  background:rgba(13,22,47,.62);border:1px solid var(--line-soft);
+  transition:border-color .2s,background .2s,transform .2s}
+.ch:hover{border-color:var(--blue);background:rgba(47,107,255,.09);transform:translateY(-1px)}
+.ch-dot{width:7px;height:7px;flex:none;border-radius:50%;background:var(--blue-deep)}
+.ch.q4 .ch-dot{background:var(--cyan);box-shadow:0 0 8px rgba(73,217,255,.6)}
+.ch-name{flex:1;min-width:0;font-size:14px;line-height:1.3;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;padding:3px 7px;
+  border-radius:5px;border:1px solid var(--line);color:var(--muted-2);flex:none}
+.tag.t4K{border-color:rgba(73,217,255,.5);color:var(--cyan)}
+.tag.tFHD,.tag.tHD{border-color:rgba(90,140,255,.42);color:var(--blue-hi)}
+.ch-from{font-family:var(--mono);font-size:10px;color:var(--muted-2);flex:none}
+
+.sentinel{height:1px}
+.loading{padding:16px;text-align:center;font-family:var(--mono);font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2)}
+.empty{padding:50px 10px;text-align:center;color:var(--muted-2);font-size:15px}
+
+/* ── closing band ── */
+.band{border-top:1px solid var(--line-soft);background:
+  radial-gradient(70% 130% at 50% 0%,rgba(47,107,255,.16),transparent 70%)}
+.band-in{max-width:var(--maxw);margin:0 auto;padding:52px var(--pad);text-align:center}
+.band h3{font-family:var(--display);font-weight:800;font-size:clamp(22px,3vw,30px);
+  letter-spacing:-.02em}
+.band p{color:var(--muted);margin:12px auto 24px;max-width:56ch;font-size:15.5px}
+.btn-lg{padding:15px 30px;font-size:15.5px}
+
+footer{border-top:1px solid var(--line-soft);padding:24px var(--pad);
+  font-family:var(--mono);font-size:11px;color:var(--muted-2);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  max-width:var(--maxw);margin:0 auto;width:100%}
+footer a:hover{color:var(--blue-hi)}
+
+@media(max-width:640px){
+  .back{display:none}                 /* the brand already goes home */
+  .top-in{height:60px;gap:12px}
+  .brand-name{font-size:16px}
+}
+@media(max-width:900px){
+  .split{grid-template-columns:1fr;gap:18px}
+  .scroller{height:72vh}
+  .rail{position:static;max-height:none}
+  .rail-list{flex-direction:row;overflow-x:auto;overflow-y:hidden;padding:10px}
+  .ct{width:auto;flex:none;padding:8px 12px 8px 8px}
+  .ct-name{white-space:nowrap}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important;
+    scroll-behavior:auto!important}
+}
+</style>
+<link rel="canonical" href="https://swiftchannels.com/fr/channels.html"><link rel="alternate" hreflang="en" href="https://swiftchannels.com/channels.html"><link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/channels.html"><link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/channels.html"><link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/channels.html"><link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/channels.html"><link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/channels.html"></head>
+<body>
+
+<div class="aurora"><i></i><i></i></div>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
+    </a>
+    <a class="back" href="index.html">← Retour au site</a>
+    <div class="lang" id="lang">
+      <button class="lang-cur" type="button" id="langCur" aria-haspopup="true" aria-expanded="false" aria-label="Language"><img src="../assets/flag-fr.webp" alt="" width="32" height="32"></button>
+      <div class="lang-opts" id="langOpts">
+        <a class="lang-b" href="../channels.html" data-lang="en" hreflang="en" aria-current="false" title="English"><img src="../assets/flag-en.webp" alt="English" width="32" height="32"></a>
+        <a class="lang-b" href="../fr/channels.html" data-lang="fr" hreflang="fr" aria-current="true" title="Français"><img src="../assets/flag-fr.webp" alt="Français" width="32" height="32"></a>
+        <a class="lang-b" href="../es/channels.html" data-lang="es" hreflang="es" aria-current="false" title="Español"><img src="../assets/flag-es.webp" alt="Español" width="32" height="32"></a>
+        <a class="lang-b" href="../de/channels.html" data-lang="de" hreflang="de" aria-current="false" title="Deutsch"><img src="../assets/flag-de.webp" alt="Deutsch" width="32" height="32"></a>
+        <a class="lang-b" href="../ar/channels.html" data-lang="ar" hreflang="ar" aria-current="false" title="العربية"><img src="../assets/flag-ar.webp" alt="العربية" width="32" height="32"></a>
+      </div>
+    </div>
+    <a class="btn btn-blue btn-sm" href="index.html#order">Commander</a>
+  </div>
+</header>
+
+<div class="head">
+  <span class="eyebrow">Liste des chaînes</span>
+  <h1 data-i18n-html="__ch_h1">Toutes les chaînes,<br>au <span class="grad">même endroit</span>.</h1>
+  <p>Parcourez par pays ou cherchez la chaîne dont vous ne pouvez pas vous passer. Voici la grille complète diffusée sur la plateforme — la même pour toutes les offres.</p>
+  <div class="stats">
+    <div class="stat"><b id="sChan">8 103</b><span>Chaînes</span></div>
+    <div class="stat"><b id="sCtry">54</b><span>Pays</span></div>
+    <div class="stat"><b>50,000+</b><span>Films et séries</span></div>
+    <div class="stat"><b>7 jours</b><span>Replay</span></div>
+  </div>
+</div>
+
+<div class="search-wrap">
+  <div class="search" id="searchWrap">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+    <input id="q" type="search" placeholder="Rechercher parmi 8 000+ chaînes — essayez « Sky Sports » ou « beIN »" autocomplete="off" aria-label="Rechercher des chaînes">
+    <button class="clear" type="button" id="clearQ" aria-label="Effacer la recherche">×</button>
+  </div>
+</div>
+
+<div class="split">
+  <aside class="rail">
+    <div class="rail-h" data-i18n-html="__ch_rail">Pays</div>
+    <div class="rail-list" id="rail" role="tablist" aria-label="Pays"><button type="button" class="ct" role="tab" aria-selected="true"><span class="ct-code"><img src="../assets/flags/us.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">États-Unis</span><span class="ct-n">1 372</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/gb.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Royaume-Uni</span><span class="ct-n">620</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/de.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Allemagne</span><span class="ct-n">545</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/tr.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Turquie</span><span class="ct-n">438</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/nl.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Pays-Bas</span><span class="ct-n">436</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/rs.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Ex-Yougoslavie</span><span class="ct-n">430</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/fr.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">France</span><span class="ct-n">314</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/es.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Espagne</span><span class="ct-n">305</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">ASIA</span><span class="ct-name">Asie</span><span class="ct-n">280</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ro.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Roumanie</span><span class="ct-n">279</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/al.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Albanie</span><span class="ct-n">275</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ca.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Canada</span><span class="ct-n">252</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/pt.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Portugal</span><span class="ct-n">226</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/in.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Inde</span><span class="ct-n">181</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/az.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Kurdistan et Azerbaïdjan</span><span class="ct-n">172</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/be.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Belgique</span><span class="ct-n">158</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/dk.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Danemark</span><span class="ct-n">149</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/au.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Australie</span><span class="ct-n">143</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">AR</span><span class="ct-name">Sport arabe</span><span class="ct-n">136</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/pk.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Pakistan</span><span class="ct-n">122</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ma.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Maroc</span><span class="ct-n">120</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">LAT</span><span class="ct-name">Amérique latine</span><span class="ct-n">118</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/mt.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Malte</span><span class="ct-n">115</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ru.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Russie</span><span class="ct-n">103</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/cz.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Tchéquie</span><span class="ct-n">100</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/eg.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Égypte</span><span class="ct-n">87</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/iq.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Irak</span><span class="ct-n">75</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/cn.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Chine et Japon</span><span class="ct-n">61</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">AR</span><span class="ct-name">Arabe — tout</span><span class="ct-n">52</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">F1</span><span class="ct-name">Formule 1 et MotoGP</span><span class="ct-n">45</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">DNC</span><span class="ct-name">Danse latine</span><span class="ct-n">42</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/cl.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Chili</span><span class="ct-n">32</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/am.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Arménie</span><span class="ct-n">31</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/dz.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Algérie</span><span class="ct-n">29</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/kw.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Koweït</span><span class="ct-n">26</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/co.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Colombie</span><span class="ct-n">24</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/sy.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Syrie</span><span class="ct-n">24</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/bh.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Bahreïn et Jordanie</span><span class="ct-n">23</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ae.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Émirats arabes unis</span><span class="ct-n">23</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ie.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Irlande</span><span class="ct-n">20</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/tn.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Tunisie</span><span class="ct-n">16</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ge.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Géorgie</span><span class="ct-n">15</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/cy.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Chypre</span><span class="ct-n">13</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/sk.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Slovaquie</span><span class="ct-n">11</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/lv.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Lettonie</span><span class="ct-n">9</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ps.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Palestine</span><span class="ct-n">9</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">DAZN</span><span class="ct-name">DAZN</span><span class="ct-n">7</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/me.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Monténégro</span><span class="ct-n">7</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/qa.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Qatar</span><span class="ct-n">7</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/bh.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Bahreïn</span><span class="ct-n">6</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ee.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Estonie</span><span class="ct-n">6</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/pe.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Pérou</span><span class="ct-n">6</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/lu.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Luxembourg</span><span class="ct-n">4</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/np.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Népal</span><span class="ct-n">4</span></button></div>
+  </aside>
+
+  <main class="pane">
+    <div class="pane-h"><h2 id="paneTitle">États-Unis</h2><span id="paneCount">1 372 chaînes</span></div>
+    <div class="scroller" id="scroller">
+      <div class="chans" id="chans"><div class="ch"><span class="ch-dot"></span><span class="ch-name">Trinidad &amp; Tobago</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">TTT HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">CCN TV6 HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">DIX TV HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">CNC3 Trinidad FHD</span><span class="tag tFHD">FHD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">WIN TV HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Synergy HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Miami</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Univision 33 (KTVW) Phoenix</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Atlante</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Univision 34 HD |LOS Angeles</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Univision 41 (WXTV) NEW YORK</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Univision 41 (KWEX) SAN Antonio</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">UNIVISION45 (KXLN) Houston</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Univision 61 (WQHS) Cleveland)</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Univision 65 (WUVP) NEW Jersey</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Univision 66 (WGBO) Chicago</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Telemundo</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">NEW YORK</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Telemundo 51 HD |Miami</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Chicago</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Doral</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">SAN Diego</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Telemundo HD North [LAS Vegas]</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Phoenix</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Telemundo 24 HD |Chico-Redding</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Telemundo 30 HD |Oklahoma City</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Telemundo 31 HD |Hartford</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Telemundo 31 HD |Orlando</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Telemundo 42 HD |New Orleans</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Telemundo 44 HD |Washington DC</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Baltimore</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cleveland</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">SAN Francisco</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Telemundo 62 HD |Philadelphia</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cinema</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cinemax HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cinemax HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cinemax MovieMax HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cinemax Moremax HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cinemax OuterMax HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cinemax Actionmax HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cinemax Thrillermax HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cinemax 5 Starmax HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cinemax Action 2 HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cinema 05 PPV</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Series / TV Shows</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">AMC HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Amc+Hd</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">AMC Presents</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">COZI HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Movies</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">5StarMax HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">EPIX Hits HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">EPIX HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">EPIX 2 HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">EPIX Drive-In HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Fuse HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">FXM HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">FX West HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">FX East HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Fxxhd</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">FXX West HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">FXX East HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Hbohd</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO 2HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO 2 HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO 2 HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO Comedy HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO Comedy HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO Comedy HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO Family HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO Family HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO ZONE HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO ZONE HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO Latino HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO Latino HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO Signature HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HBO Signature HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Hallmark Channel HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Hallmark Drama HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Hallmark Movies &amp; Mysteries HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">CinePlex HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">RetroPlex FHD</span><span class="tag tFHD">FHD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">IndiePlex HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">SFI HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">SYFY HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">SYFY HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">SYFY HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Sundancehd</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Tnthd</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">TNT HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">TNT HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Earth TV HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">MTC HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Cinema HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Cinema HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz EDGE East FHD</span><span class="tag tFHD">FHD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz EDGE West HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Encore HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Encore HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Encore Black FHD</span><span class="tag tFHD">FHD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Encore Classic HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Encore Family FHD</span><span class="tag tFHD">FHD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Encore Action HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Encore Westerns FHD</span><span class="tag tFHD">FHD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Encore Espanol HD (East)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Encore Espanol HD (West)</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Encore Suspense HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Kids &amp; Family HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz in Black HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Starz Comedy HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Showtime East HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Showtime West HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Showtime 2 HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Showtime BET HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Showtime Extreme HD East</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Showtime Extreme HD West</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Showtime Family Zone HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Showtime Women HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Showtime Next HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Showtime Showcase HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Lifetime Movie Network HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Heroes &amp; Icons</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">GRIT TV HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Cine Life HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Turner Classic Movies HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Sony Movie Channel HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">HDNet Movies HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">SHO x BET HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Netflix</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Action</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Drama</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Romance</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Cinema Comedy</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Marvel</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Horror</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Crime</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies War</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Western</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Animation</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Christmas</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Reality</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Bruce Willis</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies TOM Cruise</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Gerard Butler</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Nicolas CAGE</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Jason Statham</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies MATT Damon</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Documentary</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Robert De Niro</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Dwayne Johnson</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies BRAD PITT</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Jackie CHAN</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Sylvester Stallone</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Dicaprio</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Angelina Jolie</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Movies Scarlett Johansson</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Kids</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Tom &amp; Jerry</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Pink Panther</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Vlad &amp; Niki</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Peppa PIG</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Mickey Mouse</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids SpongeBob</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Zig &amp; Sharko</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids OGGY</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Grizzy</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids My Little Pony</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Rabbids</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Cocomelon</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Booba</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Babybus</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Ben &amp; Holly’s</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Kids Shaun the Sheep</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Game</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Game FIFA</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Game PUBG</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Game Fortnite</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Game GTA</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Entertainment</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Got Talent World</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Just for Laughs</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Reality Show</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Documentary</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Planet Netflix</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Docu Relax</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Documentary TV HD</span><span class="tag tHD">HD</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Music</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Music English</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Music Hits</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Music Rap</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Music Mix</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Music Remix</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Music Acoustic</span></div><div class="ch"><span class="ch-dot"></span><span class="ch-name">Pop Music Chill</span></div></div>
+      <div class="loading" id="loading">Chargement…</div>
+      <div class="sentinel" id="sentinel"></div>
+      <div class="empty" id="empty" hidden="">Aucun résultat. Essayez un mot plus court — ou demandez-nous sur WhatsApp.</div>
+    </div>
+  </main>
+</div>
+
+<div class="band">
+  <div class="band-in">
+    <h3>Vous ne trouvez pas une chaîne ?</h3>
+    <p>Demandez avant de commander. Si elle est diffusée nous vous le dirons, et si elle ne l’est pas nous le dirons aussi — le test gratuit de 24 heures vous permet de vérifier sur votre propre TV.</p>
+    <a class="btn btn-blue btn-lg" href="index.html#order">Lancer le test gratuit de 24 h</a>
+  </div>
+</div>
+
+<footer>
+  <span>© <span id="yr">2026</span> Swift Channels · <span>Les grilles sont définies par la plateforme et peuvent changer</span></span>
+  <span><a href="index.html">swiftchannels.com</a> · <a href="legal.html">Conditions et confidentialité</a></span>
+</footer>
+
+<script>window.PAGE_LANG='fr';</script><script src="../assets/i18n.js"></script>
+<script src="../assets/channels-i18n.js"></script>
+<script src="../assets/channels.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const DATA = window.CHANNELS || [];
+const TAGS = ['', '4K', 'FHD', 'HD', 'SD'];
+const PAGE = 200;                       /* rows drawn per chunk while scrolling */
+
+/* generated language pages sit one folder down */
+const ABASE = window.PAGE_LANG ? '../' : '';
+
+const t  = s => window.i18n ? window.i18n.t(s) : s;
+const tf = (s, v) => window.i18n ? window.i18n.tf(s, v) : s;
+
+/* Country names come from the browser's own locale data, so 43 country
+   names never have to be translated by hand. The handful of entries that
+   aren't countries (Ex-Yu, Latin America …) carry no ISO code and fall
+   back to the translation table. */
+let NAMES = null, NUM = 'en-GB';
+function localeSetup(lang){
+  NUM = (lang === 'ar') ? 'en-GB' : ({ en:'en-GB', fr:'fr-FR', es:'es-ES', de:'de-DE' }[lang] || 'en-GB');
+  try { NAMES = new Intl.DisplayNames([lang], { type: 'region' }); }
+  catch(e){ NAMES = null; }
+}
+const cname = c => (c.r && NAMES && NAMES.of(c.r)) || t(c.c);
+const num   = n => n.toLocaleString(NUM);
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ── country rail ── */
+let current = 0;
+const rail = $('rail');
+
+function buildRail(){
+  rail.innerHTML = '';
+  DATA.forEach((c, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'ct';
+    b.setAttribute('role','tab');
+    b.setAttribute('aria-selected', String(i === current));
+    const badge = c.f
+      ? '<span class="ct-code"><img src="' + ABASE + 'assets/flags/' + c.f + '.webp" alt="" width="38" height="38" loading="lazy"></span>'
+      : '<span class="ct-code">' + c.k + '</span>';
+    b.innerHTML = badge + '<span class="ct-name"></span>' +
+                  '<span class="ct-n">' + num(c.ch.length) + '</span>';
+    b.querySelector('.ct-name').textContent = cname(c);
+    b.addEventListener('click', () => {
+      $('q').value = '';
+      $('searchWrap').classList.remove('has');
+      select(i);
+    });
+    rail.appendChild(b);
+  });
+}
+
+function markRail(i){
+  [...rail.children].forEach((b, n) => b.setAttribute('aria-selected', String(n === i)));
+}
+
+/* ── drawing ── */
+let rows = [], drawn = 0;
+
+function draw(reset){
+  const box = $('chans');
+  if(reset){ box.innerHTML = ''; drawn = 0; $('scroller').scrollTop = 0; }
+  const slice = rows.slice(drawn, drawn + PAGE);
+  const frag = document.createDocumentFragment();
+  slice.forEach(r => {
+    const [name, q, from] = r;
+    const el = document.createElement('div');
+    el.className = 'ch' + (q === 1 ? ' q4' : '');
+    let html = '<span class="ch-dot"></span><span class="ch-name">' + name + '</span>';
+    if(from) html += '<span class="ch-from">' + from + '</span>';
+    if(q) html += '<span class="tag t' + TAGS[q] + '">' + TAGS[q] + '</span>';
+    el.innerHTML = html;
+    frag.appendChild(el);
+  });
+  box.appendChild(frag);
+  drawn += slice.length;
+  $('loading').hidden = drawn >= rows.length;
+  $('empty').hidden = rows.length > 0;
+}
+
+/* keep filling as the column is scrolled */
+const io = new IntersectionObserver(es => {
+  if(es[0].isIntersecting && drawn < rows.length) draw(false);
+}, { root: $('scroller'), rootMargin: '600px' });
+io.observe($('sentinel'));
+
+function select(i){
+  current = i;
+  markRail(i);
+  const c = DATA[i];
+  $('paneTitle').textContent = cname(c);
+  $('paneCount').textContent = tf('{n} channels', { n: num(c.ch.length) });
+  rows = c.ch.map(x => [x[0], x[1], '']);
+  draw(true);
+}
+
+/* ── search across every country ── */
+let timer;
+$('q').addEventListener('input', e => {
+  const raw = e.target.value.trim();
+  $('searchWrap').classList.toggle('has', raw.length > 0);
+  clearTimeout(timer);
+  timer = setTimeout(() => runSearch(raw), 140);
+});
+$('clearQ').addEventListener('click', () => {
+  $('q').value = '';
+  $('searchWrap').classList.remove('has');
+  select(current);
+  $('q').focus();
+});
+
+function runSearch(raw){
+  if(raw.length < 2){ select(current); return; }
+  const needle = raw.toLowerCase();
+  const hits = [];
+  for(const c of DATA){
+    for(const [name, q] of c.ch){
+      if(name.toLowerCase().includes(needle)) hits.push([name, q, c.k]);
+      if(hits.length > 3000) break;
+    }
+    if(hits.length > 3000) break;
+  }
+  markRail(-1);
+  $('paneTitle').textContent = tf('Results for “{q}”', { q: raw });
+  $('paneCount').textContent = tf('{n} matches', { n: num(hits.length) }) +
+    (hits.length === 3001 ? '+' : '');
+  rows = hits;
+  draw(true);
+}
+
+window.i18n.boot({
+  skip: '#rail,#chans,#paneTitle,#paneCount,#sChan,#sCtry',
+  titleKey: '__ch_title',
+  descKey: '__ch_desc',
+  lang: 'en',
+  onApply: lang => {
+    localeSetup(lang);
+    const totalCh = DATA.reduce((n, c) => n + c.ch.length, 0);
+    $('sChan').textContent = num(totalCh);
+    $('sCtry').textContent = num(DATA.length);
+    buildRail();
+    select(current);
+  }
+});
+</script>
+
+
+</body></html>

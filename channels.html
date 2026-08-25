@@ -6,6 +6,12 @@
 <title>Channel list — Swift Channels</title>
 <meta name="description" content="Every channel on Swift Channels — over 8,000 live channels across 54 countries, searchable by name or country.">
 <link rel="canonical" href="https://swiftchannels.com/channels.html">
+<link rel="alternate" hreflang="en" href="https://swiftchannels.com/channels.html">
+<link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/channels.html">
+<link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/channels.html">
+<link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/channels.html">
+<link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/channels.html">
+<link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/channels.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Swift Channels">
 <meta property="og:url" content="https://swiftchannels.com/channels.html">
@@ -66,6 +72,39 @@ img,svg{display:block;max-width:100%}
 .btn-blue{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;
   box-shadow:0 10px 26px -10px var(--glow)}
 .btn-sm{padding:9px 17px;font-size:13.5px;white-space:nowrap}
+
+.lang{position:relative;display:flex;align-items:center;gap:6px}
+.lang-opts{display:flex;gap:6px}
+.lang-b,.lang-cur{width:32px;height:32px;flex:0 0 32px;border-radius:50%;padding:0;cursor:pointer;
+  overflow:hidden;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  transition:opacity .25s,filter .3s,border-color .25s,transform .25s,box-shadow .3s}
+.lang-b img,.lang-cur img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.lang-b{opacity:.5;filter:saturate(.55)}
+.lang-b:hover,.lang-cur:hover{opacity:1;filter:none;border-color:var(--blue-hi);transform:translateY(-1px)}
+.lang-b[aria-current="true"]{opacity:1;filter:none;border-color:transparent;
+  box-shadow:0 0 0 2px var(--blue-hi),0 8px 20px -8px var(--glow)}
+.lang-cur{display:none}
+@media(max-width:860px){
+  .lang-cur{display:flex}
+  .lang-opts{position:absolute;top:calc(100% + 12px);inset-inline-end:0;z-index:70;
+    flex-direction:column;gap:6px;padding:7px;border-radius:20px;
+    background:rgba(8,15,34,.94);border:1px solid var(--line);backdrop-filter:blur(14px);
+    box-shadow:0 24px 46px -18px rgba(0,0,0,.85);
+    opacity:0;visibility:hidden;transform:translateY(-8px) scale(.96);transform-origin:top;
+    transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
+  .lang.open .lang-opts{opacity:1;visibility:visible;transform:none}
+}
+html[dir="rtl"] .brand{margin-right:0;margin-left:auto}
+html[dir="rtl"] .ct{text-align:right}
+html[dir="rtl"] .search input{padding:14px 46px 14px 46px}
+html[dir="rtl"] .search svg{left:auto;right:17px}
+html[dir="rtl"] .stat b{direction:ltr;unicode-bidi:isolate}
+html[dir="rtl"] .ct-n{direction:ltr;unicode-bidi:isolate}
+html[dir="rtl"] .search .clear{right:auto;left:8px}
+html[dir="rtl"] body{font-family:'Tajawal',var(--body)}
+html[dir="rtl"] h1,html[dir="rtl"] .pane-h h2,html[dir="rtl"] .band h3,html[dir="rtl"] .brand-name,
+html[dir="rtl"] .stat b{font-family:'Cairo','Tajawal',var(--display);letter-spacing:0}
 
 /* ── hero strip ── */
 .head{max-width:var(--maxw);margin:0 auto;padding:clamp(28px,4vw,48px) var(--pad) 0;width:100%}
@@ -210,13 +249,24 @@ footer a:hover{color:var(--blue-hi)}
       <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
     </a>
     <a class="back" href="index.html">← Back to the site</a>
+    <div class="lang" id="lang">
+      <button class="lang-cur" type="button" id="langCur" aria-haspopup="true"
+              aria-expanded="false" aria-label="Language"><img src="assets/flag-en.webp" alt="" width="32" height="32"></button>
+      <div class="lang-opts" id="langOpts">
+        <a class="lang-b" href="channels.html"    data-lang="en" hreflang="en" aria-current="true"  title="English"><img src="assets/flag-en.webp" alt="English" width="32" height="32"></a>
+        <a class="lang-b" href="fr/channels.html" data-lang="fr" hreflang="fr" aria-current="false" title="Français"><img src="assets/flag-fr.webp" alt="Français" width="32" height="32"></a>
+        <a class="lang-b" href="es/channels.html" data-lang="es" hreflang="es" aria-current="false" title="Español"><img src="assets/flag-es.webp" alt="Español" width="32" height="32"></a>
+        <a class="lang-b" href="de/channels.html" data-lang="de" hreflang="de" aria-current="false" title="Deutsch"><img src="assets/flag-de.webp" alt="Deutsch" width="32" height="32"></a>
+        <a class="lang-b" href="ar/channels.html" data-lang="ar" hreflang="ar" aria-current="false" title="العربية"><img src="assets/flag-ar.webp" alt="العربية" width="32" height="32"></a>
+      </div>
+    </div>
     <a class="btn btn-blue btn-sm" href="index.html#order">Order now</a>
   </div>
 </header>
 
 <div class="head">
   <span class="eyebrow">Channel list</span>
-  <h1>Every channel,<br>in <span class="grad">one place</span>.</h1>
+  <h1 data-i18n-html="__ch_h1">Every channel,<br>in <span class="grad">one place</span>.</h1>
   <p>Browse by country or search for the channel you can't do without. This is the full
     line-up carried on the platform — the same list on every plan.</p>
   <div class="stats">
@@ -238,7 +288,7 @@ footer a:hover{color:var(--blue-hi)}
 
 <div class="split">
   <aside class="rail">
-    <div class="rail-h">Countries</div>
+    <div class="rail-h" data-i18n-html="__ch_rail">Countries</div>
     <div class="rail-list" id="rail" role="tablist" aria-label="Countries"></div>
   </aside>
 
@@ -263,10 +313,12 @@ footer a:hover{color:var(--blue-hi)}
 </div>
 
 <footer>
-  <span>© <span id="yr"></span> Swift Channels · Line-ups are set by the platform and can change</span>
+  <span>© <span id="yr"></span> Swift Channels · <span>Line-ups are set by the platform and can change</span></span>
   <span><a href="index.html">swiftchannels.com</a> · <a href="legal.html">Terms &amp; privacy</a></span>
 </footer>
 
+<script src="assets/i18n.js"></script>
+<script src="assets/channels-i18n.js"></script>
 <script src="assets/channels.js"></script>
 <script>
 const $ = id => document.getElementById(id);
@@ -274,33 +326,53 @@ const DATA = window.CHANNELS || [];
 const TAGS = ['', '4K', 'FHD', 'HD', 'SD'];
 const PAGE = 200;                       /* rows drawn per chunk while scrolling */
 
-document.getElementById('yr').textContent = new Date().getFullYear();
+/* generated language pages sit one folder down */
+const ABASE = window.PAGE_LANG ? '../' : '';
 
-const totalCh = DATA.reduce((n, c) => n + c.ch.length, 0);
-$('sChan').textContent = totalCh.toLocaleString('en-GB');
-$('sCtry').textContent = DATA.length;
+const t  = s => window.i18n ? window.i18n.t(s) : s;
+const tf = (s, v) => window.i18n ? window.i18n.tf(s, v) : s;
+
+/* Country names come from the browser's own locale data, so 43 country
+   names never have to be translated by hand. The handful of entries that
+   aren't countries (Ex-Yu, Latin America …) carry no ISO code and fall
+   back to the translation table. */
+let NAMES = null, NUM = 'en-GB';
+function localeSetup(lang){
+  NUM = (lang === 'ar') ? 'en-GB' : ({ en:'en-GB', fr:'fr-FR', es:'es-ES', de:'de-DE' }[lang] || 'en-GB');
+  try { NAMES = new Intl.DisplayNames([lang], { type: 'region' }); }
+  catch(e){ NAMES = null; }
+}
+const cname = c => (c.r && NAMES && NAMES.of(c.r)) || t(c.c);
+const num   = n => n.toLocaleString(NUM);
+
+document.getElementById('yr').textContent = new Date().getFullYear();
 
 /* ── country rail ── */
 let current = 0;
 const rail = $('rail');
-DATA.forEach((c, i) => {
-  const b = document.createElement('button');
-  b.type = 'button';
-  b.className = 'ct';
-  b.setAttribute('role','tab');
-  b.setAttribute('aria-selected', String(i === 0));
-  const badge = c.f
-    ? '<span class="ct-code"><img src="assets/flags/' + c.f + '.webp" alt="" width="38" height="38" loading="lazy"></span>'
-    : '<span class="ct-code">' + c.k + '</span>';
-  b.innerHTML = badge + '<span class="ct-name">' + c.c + '</span>' +
-                '<span class="ct-n">' + c.ch.length + '</span>';
-  b.addEventListener('click', () => {
-    $('q').value = '';
-    $('searchWrap').classList.remove('has');
-    select(i);
+
+function buildRail(){
+  rail.innerHTML = '';
+  DATA.forEach((c, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'ct';
+    b.setAttribute('role','tab');
+    b.setAttribute('aria-selected', String(i === current));
+    const badge = c.f
+      ? '<span class="ct-code"><img src="' + ABASE + 'assets/flags/' + c.f + '.webp" alt="" width="38" height="38" loading="lazy"></span>'
+      : '<span class="ct-code">' + c.k + '</span>';
+    b.innerHTML = badge + '<span class="ct-name"></span>' +
+                  '<span class="ct-n">' + num(c.ch.length) + '</span>';
+    b.querySelector('.ct-name').textContent = cname(c);
+    b.addEventListener('click', () => {
+      $('q').value = '';
+      $('searchWrap').classList.remove('has');
+      select(i);
+    });
+    rail.appendChild(b);
   });
-  rail.appendChild(b);
-});
+}
 
 function markRail(i){
   [...rail.children].forEach((b, n) => b.setAttribute('aria-selected', String(n === i)));
@@ -340,8 +412,8 @@ function select(i){
   current = i;
   markRail(i);
   const c = DATA[i];
-  $('paneTitle').textContent = c.c;
-  $('paneCount').textContent = c.ch.length.toLocaleString('en-GB') + ' channels';
+  $('paneTitle').textContent = cname(c);
+  $('paneCount').textContent = tf('{n} channels', { n: num(c.ch.length) });
   rows = c.ch.map(x => [x[0], x[1], '']);
   draw(true);
 }
@@ -373,14 +445,27 @@ function runSearch(raw){
     if(hits.length > 3000) break;
   }
   markRail(-1);
-  $('paneTitle').textContent = 'Results for “' + raw + '”';
-  $('paneCount').textContent = hits.length.toLocaleString('en-GB') +
-    (hits.length === 3001 ? '+ matches' : ' matches');
+  $('paneTitle').textContent = tf('Results for “{q}”', { q: raw });
+  $('paneCount').textContent = tf('{n} matches', { n: num(hits.length) }) +
+    (hits.length === 3001 ? '+' : '');
   rows = hits;
   draw(true);
 }
 
-select(0);
+window.i18n.boot({
+  skip: '#rail,#chans,#paneTitle,#paneCount,#sChan,#sCtry',
+  titleKey: '__ch_title',
+  descKey: '__ch_desc',
+  lang: 'en',
+  onApply: lang => {
+    localeSetup(lang);
+    const totalCh = DATA.reduce((n, c) => n + c.ch.length, 0);
+    $('sChan').textContent = num(totalCh);
+    $('sCtry').textContent = num(DATA.length);
+    buildRail();
+    select(current);
+  }
+});
 </script>
 </body>
 </html>

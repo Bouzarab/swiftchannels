@@ -127,29 +127,35 @@ of the `<script>` tag in `index.html`:
 The site is published at five addresses so Google can index each language
 separately:
 
-| Address                             | Language |
-|-------------------------------------|----------|
-| `swiftchannels.com/` + `/legal.html`    | English  |
-| `swiftchannels.com/fr/` + `/fr/legal.html` | French   |
-| `swiftchannels.com/es/` + `/es/legal.html` | Spanish  |
-| `swiftchannels.com/de/` + `/de/legal.html` | German   |
-| `swiftchannels.com/ar/` + `/ar/legal.html` | Arabic (right-to-left) |
+Each language has three pages — the main page, the channel list and the legal
+page — so fifteen addresses in all:
 
-**Only four files are ever edited by hand:**
+| Language | Main page | Channel list | Legal |
+|----------|-----------|--------------|-------|
+| English  | `/`     | `/channels.html`    | `/legal.html`    |
+| French   | `/fr/`  | `/fr/channels.html` | `/fr/legal.html` |
+| Spanish  | `/es/`  | `/es/channels.html` | `/es/legal.html` |
+| German   | `/de/`  | `/de/channels.html` | `/de/legal.html` |
+| Arabic (right-to-left) | `/ar/` | `/ar/channels.html` | `/ar/legal.html` |
+
+**Only these files are ever edited by hand:**
 
 - `index.html` — the English page, and the source for all the others
+- `channels.html` — the English channel list
 - `legal.html` — the English terms, refunds and privacy page
 - `assets/i18n.js` — translations for the main page, keyed by the English sentence
 - `assets/legal-i18n.js` — translations for the legal page, same idea
+- `assets/channels-i18n.js` — translations for the channel-list page's own wording
+- `assets/channels.js` — the channel data itself (see below)
 
 `fr/`, `es/`, `de/` and `ar/` are **generated**. Never edit them directly; your
 changes will be overwritten on the next build.
 
-### After any change to index.html, legal.html or the two i18n files
+### After any change to a hand-edited file
 
 ```bash
 cd ~/swiftchannels
-node build.js          # regenerates all 8 translated pages and sitemap.xml
+node build.js          # regenerates all 12 translated pages and sitemap.xml
 git add . && git commit -m "what changed"
 git push
 ```
@@ -171,12 +177,30 @@ pass, then rebuild.
 
 ### Adding a sixth language
 
-1. Add its block to `assets/i18n.js` and to `assets/legal-i18n.js`, copying the
-   shape of `es`.
+1. Add its block to `assets/i18n.js`, `assets/legal-i18n.js` and
+   `assets/channels-i18n.js`, copying the shape of `es`.
 2. Add its code to `LANGS` at the top of `assets/i18n.js` and of `build.js`.
-3. Add a flag to `assets/` and a link to the switcher in `index.html` **and**
-   `legal.html`.
+3. Add a flag to `assets/` and a link to the switcher in `index.html`,
+   `legal.html` **and** `channels.html`.
 4. `node build.js`.
+
+### The channel list
+
+`assets/channels.js` holds the data — one entry per country:
+
+```js
+{ c:"United States", k:"US", f:"us", r:"US", ch:[["TTT HD",3], …] }
+```
+
+`c` is the English name, `k` the two-letter label used when there is no flag,
+`f` the flag file in `assets/flags/`, `r` the ISO code the browser uses to
+translate the country name by itself, and `ch` the channels — `[name, quality]`
+where quality is `1`=4K, `2`=FHD, `3`=HD, `4`=SD, `0`=unspecified.
+
+Because country names come from the browser's own locale data, **43 country
+names never need translating**. Only the eleven entries that aren't countries
+(`Ex-Yu`, `Latin America`, `Arabic Sport` …) carry no `r` and are translated in
+`assets/channels-i18n.js`.
 
 ### The share card
 

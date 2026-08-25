@@ -146,7 +146,7 @@ h1,h2,h3,.dsp{font-family:var(--display);letter-spacing:-.03em;line-height:1.03;
 .brand-mark::after{content:'';width:11px;height:11px;border-radius:50%;
   background:#fff;box-shadow:0 0 12px #fff}
 .brand-name{font-family:var(--display);font-weight:800;font-size:17.5px;letter-spacing:-.02em}
-.nav-links{display:flex;gap:28px}
+.nav-links{display:flex;gap:24px}
 .nav-links a{font-size:14px;color:var(--muted);position:relative;transition:color .25s}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:1.5px;width:0;
   background:var(--cyan);transition:width .3s var(--ease)}
@@ -279,6 +279,9 @@ h1 .grad{
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line-soft);
   border-radius:var(--r);overflow:hidden;border:1px solid var(--line);margin-top:clamp(40px,6vw,70px)}
 .stat{background:rgba(8,15,34,.9);padding:26px 24px;transition:background .35s}
+.stat-link{display:inline-block;margin-top:9px;font-size:12.5px;color:var(--blue-hi);
+  border-bottom:1px solid transparent;transition:border-color .25s}
+.stat-link:hover{border-bottom-color:currentColor}
 .stat:hover{background:rgba(17,30,61,.95)}
 .stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(24px,3vw,34px);
   letter-spacing:-.03em;
@@ -729,6 +732,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     </a>
     <nav class="nav-links">
       <a href="#plans">Offres</a>
+      <a href="channels.html">Chaînes</a>
       <a href="#included">Ce qui est inclus</a>
       <a href="#devices">Appareils et applis</a>
       <a href="#faq">FAQ</a>
@@ -770,7 +774,8 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
 
   <div class="wrap">
     <div class="stats rv d3">
-      <div class="stat"><b data-count="10000" data-suffix="+">0</b><span>Chaînes en direct</span></div>
+      <div class="stat"><b data-count="8000" data-suffix="+">0</b><span>Chaînes en direct</span>
+        <a class="stat-link" href="channels.html">Voir la liste complète →</a></div>
       <div class="stat"><b data-count="50000" data-suffix="+">0</b><span>Films et séries à la demande</span></div>
       <div class="stat"><b data-count="7" data-suffix=" days">0</b><span>Replay</span></div>
       <div class="stat"><b data-count="99" data-suffix=".9%">0</b><span>Disponibilité visée</span></div>
@@ -780,7 +785,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
 
 <!-- ══════════════ MARQUEE ══════════════ -->
 <div class="marquee">
-  <div class="marquee-track" id="marq"><span>Sport en direct</span><span>4K · HD · SD</span><span>7 jours de replay</span><span>10 000+ chaînes</span><span>50 000+ films et séries</span><span>Anti-coupure</span><span>EPG complet</span><span>Support 24/7</span><span>50+ pays</span><span>Sans engagement</span><span>Sport en direct</span><span>4K · HD · SD</span><span>7 jours de replay</span><span>10 000+ chaînes</span><span>50 000+ films et séries</span><span>Anti-coupure</span><span>EPG complet</span><span>Support 24/7</span><span>50+ pays</span><span>Sans engagement</span></div>
+  <div class="marquee-track" id="marq"><span>Sport en direct</span><span>4K · HD · SD</span><span>7 jours de replay</span><span>8 000+ chaînes</span><span>50 000+ films et séries</span><span>Anti-coupure</span><span>EPG complet</span><span>Support 24/7</span><span>50+ pays</span><span>Sans engagement</span><span>Sport en direct</span><span>4K · HD · SD</span><span>7 jours de replay</span><span>8 000+ chaînes</span><span>50 000+ films et séries</span><span>Anti-coupure</span><span>EPG complet</span><span>Support 24/7</span><span>50+ pays</span><span>Sans engagement</span></div>
 </div>
 
 <!-- ══════════════ PLANS ══════════════ -->
@@ -824,7 +829,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
         <span class="plan-cur">€</span>
       </div>
       <div class="plan-per">par mois</div>
-      <ul class="plan-list"><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>Plus de 10 000 chaînes en direct et 50 000 VOD</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>7 jours de replay et guide des programmes complet</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>4K, HD et SD selon la source</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>Ligne de remplacement gratuite en cas de panne</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>Renouvellement par message — rien d’automatique</span></li></ul>
+      <ul class="plan-list"><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>Plus de 8 000 chaînes en direct et 50 000 VOD</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>7 jours de replay et guide des programmes complet</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>4K, HD et SD selon la source</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>Ligne de remplacement gratuite en cas de panne</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>Renouvellement par message — rien d’automatique</span></li></ul>
       <button class="btn btn-ghost" type="button" data-choose="monthly">
         Choisir l’offre Mensuel
       </button></article><article class="plan featured">
@@ -855,7 +860,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     <div class="incl">
       <div class="card rv">
         <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 3v18M3 12h18M5 6c4 3 10 3 14 0M5 18c4-3 10-3 14 0"></path></svg></div>
-        <h3>Plus de 10 000 chaînes en direct</h3>
+        <h3>Plus de 8 000 chaînes en direct</h3>
         <p>Sport, films, infos et divertissement de plus de 50 pays, dans une seule liste.</p>
       </div>
       <div class="card rv d1">
@@ -1104,7 +1109,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
       <span class="eyebrow">Questions</span>
       <h2>Avant de commander</h2>
     </div>
-    <div id="faqList" class="rv d1"><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa0"><span>Combien ça coûte ?</span><i>+</i></button><div class="faq-a" id="fa0"><p>Deux offres payantes, toutes deux avec la bibliothèque complète : <strong>15 € par mois</strong> ou <strong>57 € par an</strong> — environ 5 € par mois. C’est pour un écran à la fois ; 2, 3 ou 4 écrans coûtent plus cher. Et il y a un <strong>test gratuit de 24 heures</strong> avant de payer quoi que ce soit.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa1"><span>Comment payer ?</span><i>+</i></button><div class="faq-a" id="fa1"><p>Par carte ou PayPal. Vous ne payez pas sur ce site : envoyez votre commande sur WhatsApp, nous confirmons le prix et vous envoyons le lien de paiement, et votre ligne s’ouvre dès réception.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa2"><span>Qu’est-ce qui est inclus ?</span><i>+</i></button><div class="faq-a" id="fa2"><p>Toutes les offres comprennent <strong>plus de 10 000 chaînes en direct</strong> couvrant le sport, les films, l’info et le divertissement, <strong>plus de 50 000 films et séries à la demande</strong>, la qualité 4K et HD, un guide EPG complet, le replay et un support 24/7.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa3"><span>Puis-je regarder le sport en direct et les événements PPV ?</span><i>+</i></button><div class="faq-a" id="fa3"><p>Oui. <strong>NFL, NBA, MLB, NHL, Premier League, UFC et boxe</strong> sont tous là, avec les grandes chaînes de sport — ESPN, Fox Sports, Sky Sports et beIN Sports — plus le sport international de plus de 50 pays.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa4"><span>Quels appareils sont pris en charge ?</span><i>+</i></button><div class="faq-a" id="fa4"><p>Cela fonctionne sur les Smart TV (Samsung, LG, Android TV), téléphones et tablettes (iOS et Android), ordinateurs (Windows, Mac et Linux), Fire Stick, Roku, Apple TV et d’autres. Utilisez une appli comme <strong>GSE Smart IPTV</strong> ou <strong>IPTV Smarters</strong>.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa5"><span>Quelle appli IPTV utiliser sur mon appareil ?</span><i>+</i></button><div class="faq-a" id="fa5"><p>Nous recommandons <strong>IPTV Smarters Pro</strong> pour la plupart des appareils, <strong>GSE Smart IPTV</strong> pour les appareils Apple, <strong>TiviMate</strong> pour Android TV et <strong>Smart IPTV</strong> pour les TV Samsung et LG. Toutes acceptent le format de playlist M3U que nous envoyons.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa6"><span>Quel débit faut-il pour la 4K ?</span><i>+</i></button><div class="faq-a" id="fa6"><p>Pour la meilleure image : <strong>25 Mbps ou plus</strong> pour les chaînes 4K, <strong>15 Mbps</strong> pour la HD et <strong>5 Mbps</strong> pour la SD. Le streaming adaptatif ajuste automatiquement la qualité à votre connexion.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa7"><span>Le test gratuit de 24 h est-il vraiment gratuit ?</span><i>+</i></button><div class="faq-a" id="fa7"><p>Oui. Une ligne de 24 heures par foyer, sans carte et sans caution. Nous l’ouvrons, vous l’essayez sur votre appareil, et si cela ne vous convient pas il ne se passe rien de plus.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa8"><span>En combien de temps je reçois mes identifiants ?</span><i>+</i></button><div class="faq-a" id="fa8"><p>En général en moins de dix minutes pendant les heures de support. Si vous commandez la nuit, vos identifiants vous attendent au réveil.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa9"><span>Et si une chaîne ne marche plus ?</span><i>+</i></button><div class="faq-a" id="fa9"><p>Écrivez-nous dans la même conversation. La plupart des soucis sont réglés en quelques minutes, et si une ligne est réellement hors service nous la remplaçons et ajoutons le temps perdu à votre abonnement.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa10"><span>Comment renouveler ?</span><i>+</i></button><div class="faq-a" id="fa10"><p>Envoyez-nous un message avant votre date de fin et nous prolongeons la même ligne. Votre identifiant, votre mot de passe et vos favoris restent exactement les mêmes.</p></div></div></div>
+    <div id="faqList" class="rv d1"><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa0"><span>Combien ça coûte ?</span><i>+</i></button><div class="faq-a" id="fa0"><p>Deux offres payantes, toutes deux avec la bibliothèque complète : <strong>15 € par mois</strong> ou <strong>57 € par an</strong> — environ 5 € par mois. C’est pour un écran à la fois ; 2, 3 ou 4 écrans coûtent plus cher. Et il y a un <strong>test gratuit de 24 heures</strong> avant de payer quoi que ce soit.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa1"><span>Comment payer ?</span><i>+</i></button><div class="faq-a" id="fa1"><p>Par carte ou PayPal. Vous ne payez pas sur ce site : envoyez votre commande sur WhatsApp, nous confirmons le prix et vous envoyons le lien de paiement, et votre ligne s’ouvre dès réception.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa2"><span>Qu’est-ce qui est inclus ?</span><i>+</i></button><div class="faq-a" id="fa2"><p>Toutes les offres comprennent <strong>plus de 8 000 chaînes en direct</strong> couvrant le sport, les films, l’info et le divertissement, <strong>plus de 50 000 films et séries à la demande</strong>, la qualité 4K et HD, un guide EPG complet, le replay et un support 24/7.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa3"><span>Puis-je regarder le sport en direct et les événements PPV ?</span><i>+</i></button><div class="faq-a" id="fa3"><p>Oui. <strong>NFL, NBA, MLB, NHL, Premier League, UFC et boxe</strong> sont tous là, avec les grandes chaînes de sport — ESPN, Fox Sports, Sky Sports et beIN Sports — plus le sport international de plus de 50 pays.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa4"><span>Quels appareils sont pris en charge ?</span><i>+</i></button><div class="faq-a" id="fa4"><p>Cela fonctionne sur les Smart TV (Samsung, LG, Android TV), téléphones et tablettes (iOS et Android), ordinateurs (Windows, Mac et Linux), Fire Stick, Roku, Apple TV et d’autres. Utilisez une appli comme <strong>GSE Smart IPTV</strong> ou <strong>IPTV Smarters</strong>.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa5"><span>Quelle appli IPTV utiliser sur mon appareil ?</span><i>+</i></button><div class="faq-a" id="fa5"><p>Nous recommandons <strong>IPTV Smarters Pro</strong> pour la plupart des appareils, <strong>GSE Smart IPTV</strong> pour les appareils Apple, <strong>TiviMate</strong> pour Android TV et <strong>Smart IPTV</strong> pour les TV Samsung et LG. Toutes acceptent le format de playlist M3U que nous envoyons.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa6"><span>Quel débit faut-il pour la 4K ?</span><i>+</i></button><div class="faq-a" id="fa6"><p>Pour la meilleure image : <strong>25 Mbps ou plus</strong> pour les chaînes 4K, <strong>15 Mbps</strong> pour la HD et <strong>5 Mbps</strong> pour la SD. Le streaming adaptatif ajuste automatiquement la qualité à votre connexion.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa7"><span>Le test gratuit de 24 h est-il vraiment gratuit ?</span><i>+</i></button><div class="faq-a" id="fa7"><p>Oui. Une ligne de 24 heures par foyer, sans carte et sans caution. Nous l’ouvrons, vous l’essayez sur votre appareil, et si cela ne vous convient pas il ne se passe rien de plus.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa8"><span>En combien de temps je reçois mes identifiants ?</span><i>+</i></button><div class="faq-a" id="fa8"><p>En général en moins de dix minutes pendant les heures de support. Si vous commandez la nuit, vos identifiants vous attendent au réveil.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa9"><span>Et si une chaîne ne marche plus ?</span><i>+</i></button><div class="faq-a" id="fa9"><p>Écrivez-nous dans la même conversation. La plupart des soucis sont réglés en quelques minutes, et si une ligne est réellement hors service nous la remplaçons et ajoutons le temps perdu à votre abonnement.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa10"><span>Comment renouveler ?</span><i>+</i></button><div class="faq-a" id="fa10"><p>Envoyez-nous un message avant votre date de fin et nous prolongeons la même ligne. Votre identifiant, votre mot de passe et vos favoris restent exactement les mêmes.</p></div></div></div>
   </div>
 </section>
 
@@ -1132,7 +1137,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
       </div>
       <div>
         <h4>Pages</h4>
-        <a href="#plans">Offres</a><a href="#included">Ce qui est inclus</a>
+        <a href="#plans">Offres</a><a href="channels.html">Chaînes</a><a href="#included">Ce qui est inclus</a>
         <a href="#devices">Appareils et applis</a><a href="#faq">FAQ</a><a href="legal.html">Conditions et confidentialité</a>
       </div>
       <div>
@@ -1203,7 +1208,7 @@ const CONFIG = {
 
     { id:'monthly', name:'Monthly',   term:'30 days',  price:15, featured:false,
       per:'per month',
-      features:['10,000+ live channels and 50,000+ VOD','7-day catch-up and full programme guide',
+      features:['8,000+ live channels and 50,000+ VOD','7-day catch-up and full programme guide',
                 '4K, HD and SD where the source allows','Free replacement line if yours goes down',
                 'Renew by message — nothing automatic'] },
 
@@ -1220,7 +1225,7 @@ const CONFIG = {
   /* Payment happens after the order reaches us on WhatsApp — the customer just
      tells us which method they prefer, and staff send the details in the chat. */
 
-  marquee: ['Live sports','4K · HD · SD','7-day catch-up','10,000+ channels','50,000+ films & series',
+  marquee: ['Live sports','4K · HD · SD','7-day catch-up','8,000+ channels','50,000+ films & series',
             'Anti-freeze','Full EPG','24/7 support','50+ countries','No contract'],
 
   faq: [
@@ -1229,7 +1234,7 @@ const CONFIG = {
     ['How do I pay?',
      'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.'],
     ["What's included?",
-     "All plans include <strong>10,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support."],
+     "All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support."],
     ['Can I watch live sports and PPV events?',
      'Yes. <strong>NFL, NBA, MLB, NHL, Premier League, UFC and boxing</strong> are all there, along with the major sports channels — ESPN, Fox Sports, Sky Sports and beIN Sports — plus international sport from more than 50 countries.'],
     ['What devices are supported?',

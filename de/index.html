@@ -146,7 +146,7 @@ h1,h2,h3,.dsp{font-family:var(--display);letter-spacing:-.03em;line-height:1.03;
 .brand-mark::after{content:'';width:11px;height:11px;border-radius:50%;
   background:#fff;box-shadow:0 0 12px #fff}
 .brand-name{font-family:var(--display);font-weight:800;font-size:17.5px;letter-spacing:-.02em}
-.nav-links{display:flex;gap:28px}
+.nav-links{display:flex;gap:24px}
 .nav-links a{font-size:14px;color:var(--muted);position:relative;transition:color .25s}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:1.5px;width:0;
   background:var(--cyan);transition:width .3s var(--ease)}
@@ -279,6 +279,9 @@ h1 .grad{
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line-soft);
   border-radius:var(--r);overflow:hidden;border:1px solid var(--line);margin-top:clamp(40px,6vw,70px)}
 .stat{background:rgba(8,15,34,.9);padding:26px 24px;transition:background .35s}
+.stat-link{display:inline-block;margin-top:9px;font-size:12.5px;color:var(--blue-hi);
+  border-bottom:1px solid transparent;transition:border-color .25s}
+.stat-link:hover{border-bottom-color:currentColor}
 .stat:hover{background:rgba(17,30,61,.95)}
 .stat b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(24px,3vw,34px);
   letter-spacing:-.03em;
@@ -729,6 +732,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     </a>
     <nav class="nav-links">
       <a href="#plans">Tarife</a>
+      <a href="channels.html">Sender</a>
       <a href="#included">Enthalten</a>
       <a href="#devices">Geräte &amp; Apps</a>
       <a href="#faq">FAQ</a>
@@ -770,7 +774,8 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
 
   <div class="wrap">
     <div class="stats rv d3">
-      <div class="stat"><b data-count="10000" data-suffix="+">0</b><span>Live-Sender</span></div>
+      <div class="stat"><b data-count="8000" data-suffix="+">0</b><span>Live-Sender</span>
+        <a class="stat-link" href="channels.html">Zur vollständigen Liste →</a></div>
       <div class="stat"><b data-count="50000" data-suffix="+">0</b><span>Filme &amp; Serien auf Abruf</span></div>
       <div class="stat"><b data-count="7" data-suffix=" days">0</b><span>Mediathek</span></div>
       <div class="stat"><b data-count="99" data-suffix=".9%">0</b><span>Angestrebte Verfügbarkeit</span></div>
@@ -780,7 +785,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
 
 <!-- ══════════════ MARQUEE ══════════════ -->
 <div class="marquee">
-  <div class="marquee-track" id="marq"><span>Live-Sport</span><span>4K · HD · SD</span><span>7 Tage Mediathek</span><span>10.000+ Sender</span><span>50.000+ Filme &amp; Serien</span><span>Anti-Freeze</span><span>Voller EPG</span><span>Support rund um die Uhr</span><span>50+ Länder</span><span>Keine Bindung</span><span>Live-Sport</span><span>4K · HD · SD</span><span>7 Tage Mediathek</span><span>10.000+ Sender</span><span>50.000+ Filme &amp; Serien</span><span>Anti-Freeze</span><span>Voller EPG</span><span>Support rund um die Uhr</span><span>50+ Länder</span><span>Keine Bindung</span></div>
+  <div class="marquee-track" id="marq"><span>Live-Sport</span><span>4K · HD · SD</span><span>7 Tage Mediathek</span><span>8.000+ Sender</span><span>50.000+ Filme &amp; Serien</span><span>Anti-Freeze</span><span>Voller EPG</span><span>Support rund um die Uhr</span><span>50+ Länder</span><span>Keine Bindung</span><span>Live-Sport</span><span>4K · HD · SD</span><span>7 Tage Mediathek</span><span>8.000+ Sender</span><span>50.000+ Filme &amp; Serien</span><span>Anti-Freeze</span><span>Voller EPG</span><span>Support rund um die Uhr</span><span>50+ Länder</span><span>Keine Bindung</span></div>
 </div>
 
 <!-- ══════════════ PLANS ══════════════ -->
@@ -824,7 +829,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
         <span class="plan-cur">€</span>
       </div>
       <div class="plan-per">pro Monat</div>
-      <ul class="plan-list"><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>Über 10.000 Live-Sender und 50.000 VOD</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>7 Tage Mediathek und voller Programmführer</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>4K, HD und SD, soweit die Quelle es zulässt</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>Kostenlose Ersatzleitung bei Ausfall</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>Verlängerung per Nachricht — nichts automatisch</span></li></ul>
+      <ul class="plan-list"><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>Über 8.000 Live-Sender und 50.000 VOD</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>7 Tage Mediathek und voller Programmführer</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>4K, HD und SD, soweit die Quelle es zulässt</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>Kostenlose Ersatzleitung bei Ausfall</span></li><li><svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"></path></svg><span>Verlängerung per Nachricht — nichts automatisch</span></li></ul>
       <button class="btn btn-ghost" type="button" data-choose="monthly">
         Tarif Monatlich wählen
       </button></article><article class="plan featured">
@@ -855,7 +860,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     <div class="incl">
       <div class="card rv">
         <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 3v18M3 12h18M5 6c4 3 10 3 14 0M5 18c4-3 10-3 14 0"></path></svg></div>
-        <h3>Über 10.000 Live-Sender</h3>
+        <h3>Über 8.000 Live-Sender</h3>
         <p>Sport, Filme, Nachrichten und Unterhaltung aus über 50 Ländern, in einer Senderliste.</p>
       </div>
       <div class="card rv d1">
@@ -1104,7 +1109,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
       <span class="eyebrow">Fragen</span>
       <h2>Bevor Sie bestellen</h2>
     </div>
-    <div id="faqList" class="rv d1"><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa0"><span>Was kostet es?</span><i>+</i></button><div class="faq-a" id="fa0"><p>Zwei kostenpflichtige Tarife, beide mit der vollen Bibliothek: <strong>15 € im Monat</strong> oder <strong>57 € im Jahr</strong> — rund 5 € monatlich. Das gilt für einen Bildschirm gleichzeitig; 2, 3 oder 4 Bildschirme kosten mehr. Davor gibt es einen <strong>kostenlosen 24-Stunden-Test</strong>.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa1"><span>Wie bezahle ich?</span><i>+</i></button><div class="faq-a" id="fa1"><p>Karte oder PayPal. Sie zahlen nicht auf dieser Website — senden Sie Ihre Bestellung per WhatsApp, wir bestätigen den Preis und schicken den Zahlungslink; Ihre Leitung wird freigeschaltet, sobald die Zahlung da ist.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa2"><span>Was ist enthalten?</span><i>+</i></button><div class="faq-a" id="fa2"><p>Alle Tarife enthalten <strong>über 10.000 Live-Sender</strong> aus Sport, Film, Nachrichten und Unterhaltung, <strong>über 50.000 Filme und Serien auf Abruf</strong>, 4K- und HD-Qualität, einen vollständigen EPG, Mediathek und Support rund um die Uhr.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa3"><span>Kann ich Live-Sport und PPV-Events sehen?</span><i>+</i></button><div class="faq-a" id="fa3"><p>Ja. <strong>NFL, NBA, MLB, NHL, Premier League, UFC und Boxen</strong> sind dabei, dazu die großen Sportsender — ESPN, Fox Sports, Sky Sports und beIN Sports — und internationaler Sport aus über 50 Ländern.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa4"><span>Welche Geräte werden unterstützt?</span><i>+</i></button><div class="faq-a" id="fa4"><p>Es läuft auf Smart-TVs (Samsung, LG, Android TV), Handys und Tablets (iOS und Android), Computern (Windows, Mac und Linux), Fire Stick, Roku, Apple TV und mehr. Nutzen Sie eine App wie <strong>GSE Smart IPTV</strong> oder <strong>IPTV Smarters</strong>.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa5"><span>Welche IPTV-App soll ich nehmen?</span><i>+</i></button><div class="faq-a" id="fa5"><p>Wir empfehlen <strong>IPTV Smarters Pro</strong> für die meisten Geräte, <strong>GSE Smart IPTV</strong> für Apple-Geräte, <strong>TiviMate</strong> für Android TV und <strong>Smart IPTV</strong> für Samsung- und LG-Fernseher. Alle unterstützen das M3U-Format, das wir schicken.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa6"><span>Welche Geschwindigkeit brauche ich für 4K?</span><i>+</i></button><div class="faq-a" id="fa6"><p>Für das beste Bild: <strong>25 Mbit/s oder mehr</strong> für 4K-Sender, <strong>15 Mbit/s</strong> für HD und <strong>5 Mbit/s</strong> für SD. Adaptives Streaming passt die Qualität automatisch an Ihre Verbindung an.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa7"><span>Ist der 24-Stunden-Test wirklich gratis?</span><i>+</i></button><div class="faq-a" id="fa7"><p>Ja. Eine 24-Stunden-Leitung pro Haushalt, ohne Karte und ohne Kaution. Wir schalten sie frei, Sie testen sie auf Ihrem Gerät, und wenn es nicht passt, passiert nichts weiter.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa8"><span>Wie schnell bekomme ich meine Zugangsdaten?</span><i>+</i></button><div class="faq-a" id="fa8"><p>In der Regel unter zehn Minuten während der Supportzeiten. Bestellen Sie nachts, liegen die Daten am frühen Morgen bereit.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa9"><span>Was, wenn ein Sender ausfällt?</span><i>+</i></button><div class="faq-a" id="fa9"><p>Schreiben Sie uns im selben Verlauf. Die meisten Probleme sind in Minuten gelöst, und wenn eine Leitung wirklich ausfällt, ersetzen wir sie und schreiben die verlorene Zeit gut.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa10"><span>Wie verlängere ich?</span><i>+</i></button><div class="faq-a" id="fa10"><p>Schreiben Sie uns vor Ihrem Enddatum, und wir verlängern dieselbe Leitung. Benutzername, Passwort und Favoriten bleiben genau so, wie sie sind.</p></div></div></div>
+    <div id="faqList" class="rv d1"><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa0"><span>Was kostet es?</span><i>+</i></button><div class="faq-a" id="fa0"><p>Zwei kostenpflichtige Tarife, beide mit der vollen Bibliothek: <strong>15 € im Monat</strong> oder <strong>57 € im Jahr</strong> — rund 5 € monatlich. Das gilt für einen Bildschirm gleichzeitig; 2, 3 oder 4 Bildschirme kosten mehr. Davor gibt es einen <strong>kostenlosen 24-Stunden-Test</strong>.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa1"><span>Wie bezahle ich?</span><i>+</i></button><div class="faq-a" id="fa1"><p>Karte oder PayPal. Sie zahlen nicht auf dieser Website — senden Sie Ihre Bestellung per WhatsApp, wir bestätigen den Preis und schicken den Zahlungslink; Ihre Leitung wird freigeschaltet, sobald die Zahlung da ist.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa2"><span>Was ist enthalten?</span><i>+</i></button><div class="faq-a" id="fa2"><p>Alle Tarife enthalten <strong>über 8.000 Live-Sender</strong> aus Sport, Film, Nachrichten und Unterhaltung, <strong>über 50.000 Filme und Serien auf Abruf</strong>, 4K- und HD-Qualität, einen vollständigen EPG, Mediathek und Support rund um die Uhr.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa3"><span>Kann ich Live-Sport und PPV-Events sehen?</span><i>+</i></button><div class="faq-a" id="fa3"><p>Ja. <strong>NFL, NBA, MLB, NHL, Premier League, UFC und Boxen</strong> sind dabei, dazu die großen Sportsender — ESPN, Fox Sports, Sky Sports und beIN Sports — und internationaler Sport aus über 50 Ländern.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa4"><span>Welche Geräte werden unterstützt?</span><i>+</i></button><div class="faq-a" id="fa4"><p>Es läuft auf Smart-TVs (Samsung, LG, Android TV), Handys und Tablets (iOS und Android), Computern (Windows, Mac und Linux), Fire Stick, Roku, Apple TV und mehr. Nutzen Sie eine App wie <strong>GSE Smart IPTV</strong> oder <strong>IPTV Smarters</strong>.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa5"><span>Welche IPTV-App soll ich nehmen?</span><i>+</i></button><div class="faq-a" id="fa5"><p>Wir empfehlen <strong>IPTV Smarters Pro</strong> für die meisten Geräte, <strong>GSE Smart IPTV</strong> für Apple-Geräte, <strong>TiviMate</strong> für Android TV und <strong>Smart IPTV</strong> für Samsung- und LG-Fernseher. Alle unterstützen das M3U-Format, das wir schicken.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa6"><span>Welche Geschwindigkeit brauche ich für 4K?</span><i>+</i></button><div class="faq-a" id="fa6"><p>Für das beste Bild: <strong>25 Mbit/s oder mehr</strong> für 4K-Sender, <strong>15 Mbit/s</strong> für HD und <strong>5 Mbit/s</strong> für SD. Adaptives Streaming passt die Qualität automatisch an Ihre Verbindung an.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa7"><span>Ist der 24-Stunden-Test wirklich gratis?</span><i>+</i></button><div class="faq-a" id="fa7"><p>Ja. Eine 24-Stunden-Leitung pro Haushalt, ohne Karte und ohne Kaution. Wir schalten sie frei, Sie testen sie auf Ihrem Gerät, und wenn es nicht passt, passiert nichts weiter.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa8"><span>Wie schnell bekomme ich meine Zugangsdaten?</span><i>+</i></button><div class="faq-a" id="fa8"><p>In der Regel unter zehn Minuten während der Supportzeiten. Bestellen Sie nachts, liegen die Daten am frühen Morgen bereit.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa9"><span>Was, wenn ein Sender ausfällt?</span><i>+</i></button><div class="faq-a" id="fa9"><p>Schreiben Sie uns im selben Verlauf. Die meisten Probleme sind in Minuten gelöst, und wenn eine Leitung wirklich ausfällt, ersetzen wir sie und schreiben die verlorene Zeit gut.</p></div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa10"><span>Wie verlängere ich?</span><i>+</i></button><div class="faq-a" id="fa10"><p>Schreiben Sie uns vor Ihrem Enddatum, und wir verlängern dieselbe Leitung. Benutzername, Passwort und Favoriten bleiben genau so, wie sie sind.</p></div></div></div>
   </div>
 </section>
 
@@ -1132,7 +1137,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
       </div>
       <div>
         <h4>Seiten</h4>
-        <a href="#plans">Tarife</a><a href="#included">Enthalten</a>
+        <a href="#plans">Tarife</a><a href="channels.html">Sender</a><a href="#included">Enthalten</a>
         <a href="#devices">Geräte &amp; Apps</a><a href="#faq">FAQ</a><a href="legal.html">AGB &amp; Datenschutz</a>
       </div>
       <div>
@@ -1203,7 +1208,7 @@ const CONFIG = {
 
     { id:'monthly', name:'Monthly',   term:'30 days',  price:15, featured:false,
       per:'per month',
-      features:['10,000+ live channels and 50,000+ VOD','7-day catch-up and full programme guide',
+      features:['8,000+ live channels and 50,000+ VOD','7-day catch-up and full programme guide',
                 '4K, HD and SD where the source allows','Free replacement line if yours goes down',
                 'Renew by message — nothing automatic'] },
 
@@ -1220,7 +1225,7 @@ const CONFIG = {
   /* Payment happens after the order reaches us on WhatsApp — the customer just
      tells us which method they prefer, and staff send the details in the chat. */
 
-  marquee: ['Live sports','4K · HD · SD','7-day catch-up','10,000+ channels','50,000+ films & series',
+  marquee: ['Live sports','4K · HD · SD','7-day catch-up','8,000+ channels','50,000+ films & series',
             'Anti-freeze','Full EPG','24/7 support','50+ countries','No contract'],
 
   faq: [
@@ -1229,7 +1234,7 @@ const CONFIG = {
     ['How do I pay?',
      'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.'],
     ["What's included?",
-     "All plans include <strong>10,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support."],
+     "All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support."],
     ['Can I watch live sports and PPV events?',
      'Yes. <strong>NFL, NBA, MLB, NHL, Premier League, UFC and boxing</strong> are all there, along with the major sports channels — ESPN, Fox Sports, Sky Sports and beIN Sports — plus international sport from more than 50 countries.'],
     ['What devices are supported?',

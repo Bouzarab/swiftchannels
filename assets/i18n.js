@@ -98,6 +98,8 @@ fr: {
   "What's included": 'Ce qui est inclus',
   'Devices & apps': 'Appareils et applis',
   'FAQ': 'FAQ',
+  'Channels': 'Chaînes',
+  'See the full list →': 'Voir la liste complète →',
   'Order now': 'Commander',
   '__h1': '<span class="hl">Toutes vos chaînes,</span> <span class="hl">sur <span class="grad">une seule ligne</span>.</span>',
   'Live sports, films, series and news in 4K, HD and SD — with a full programme guide and 7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.':
@@ -138,7 +140,7 @@ fr: {
   'Runs 24 hours from activation': 'Actif 24 heures à partir de l’activation',
   'No card, no deposit, no auto-renewal': 'Sans carte, sans caution, sans reconduction',
   'Sent within minutes during support hours': 'Envoyé en quelques minutes pendant les heures de support',
-  '10,000+ live channels and 50,000+ VOD': 'Plus de 10 000 chaînes en direct et 50 000 VOD',
+  '8,000+ live channels and 50,000+ VOD': 'Plus de 8 000 chaînes en direct et 50 000 VOD',
   '7-day catch-up and full programme guide': '7 jours de replay et guide des programmes complet',
   '4K, HD and SD where the source allows': '4K, HD et SD selon la source',
   'Free replacement line if yours goes down': 'Ligne de remplacement gratuite en cas de panne',
@@ -152,7 +154,7 @@ fr: {
   'The whole library, on every plan': 'Toute la bibliothèque, sur chaque offre',
   'Nothing is held back on the cheaper plan and nothing is sold as an add-on. Sports, films, news and entertainment all come with the same line.':
     'Rien n’est retiré de l’offre la moins chère et rien n’est vendu en supplément. Sport, films, infos et divertissement arrivent sur la même ligne.',
-  '10,000+ live channels': 'Plus de 10 000 chaînes en direct',
+  '8,000+ live channels': 'Plus de 8 000 chaînes en direct',
   'Sports, movies, news and entertainment from more than 50 countries, in one channel list.':
     'Sport, films, infos et divertissement de plus de 50 pays, dans une seule liste.',
   '50,000+ on demand': 'Plus de 50 000 à la demande',
@@ -363,7 +365,7 @@ fr: {
   /* marquee */
   '4K · HD · SD': '4K · HD · SD',
   '7-day catch-up': '7 jours de replay',
-  '10,000+ channels': '10 000+ chaînes',
+  '8,000+ channels': '8 000+ chaînes',
   '50,000+ films & series': '50 000+ films et séries',
   'Anti-freeze': 'Anti-coupure',
   'Full EPG': 'EPG complet',
@@ -372,8 +374,8 @@ fr: {
 
   /* faq content */
   "What's included?": 'Qu’est-ce qui est inclus ?',
-  'All plans include <strong>10,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support.':
-    'Toutes les offres comprennent <strong>plus de 10 000 chaînes en direct</strong> couvrant le sport, les films, l’info et le divertissement, <strong>plus de 50 000 films et séries à la demande</strong>, la qualité 4K et HD, un guide EPG complet, le replay et un support 24/7.',
+  'All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support.':
+    'Toutes les offres comprennent <strong>plus de 8 000 chaînes en direct</strong> couvrant le sport, les films, l’info et le divertissement, <strong>plus de 50 000 films et séries à la demande</strong>, la qualité 4K et HD, un guide EPG complet, le replay et un support 24/7.',
   'Can I watch live sports and PPV events?': 'Puis-je regarder le sport en direct et les événements PPV ?',
   'Yes. <strong>NFL, NBA, MLB, NHL, Premier League, UFC and boxing</strong> are all there, along with the major sports channels — ESPN, Fox Sports, Sky Sports and beIN Sports — plus international sport from more than 50 countries.':
     'Oui. <strong>NFL, NBA, MLB, NHL, Premier League, UFC et boxe</strong> sont tous là, avec les grandes chaînes de sport — ESPN, Fox Sports, Sky Sports et beIN Sports — plus le sport international de plus de 50 pays.',
@@ -489,6 +491,8 @@ de: {
   "What's included": 'Enthalten',
   'Devices & apps': 'Geräte & Apps',
   'FAQ': 'FAQ',
+  'Channels': 'Sender',
+  'See the full list →': 'Zur vollständigen Liste →',
   'Order now': 'Jetzt bestellen',
   '__h1': '<span class="hl">Alle Ihre Sender,</span> <span class="hl">auf <span class="grad">einer Leitung</span>.</span>',
   'Live sports, films, series and news in 4K, HD and SD — with a full programme guide and 7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.':
@@ -528,7 +532,7 @@ de: {
   'Runs 24 hours from activation': 'Läuft 24 Stunden ab Freischaltung',
   'No card, no deposit, no auto-renewal': 'Keine Karte, keine Kaution, keine Verlängerung',
   'Sent within minutes during support hours': 'Versand in Minuten während der Supportzeiten',
-  '10,000+ live channels and 50,000+ VOD': 'Über 10.000 Live-Sender und 50.000 VOD',
+  '8,000+ live channels and 50,000+ VOD': 'Über 8.000 Live-Sender und 50.000 VOD',
   '7-day catch-up and full programme guide': '7 Tage Mediathek und voller Programmführer',
   '4K, HD and SD where the source allows': '4K, HD und SD, soweit die Quelle es zulässt',
   'Free replacement line if yours goes down': 'Kostenlose Ersatzleitung bei Ausfall',
@@ -541,7 +545,7 @@ de: {
   'The whole library, on every plan': 'Die ganze Bibliothek, in jedem Tarif',
   'Nothing is held back on the cheaper plan and nothing is sold as an add-on. Sports, films, news and entertainment all come with the same line.':
     'Im günstigeren Tarif wird nichts zurückgehalten und nichts als Zusatzpaket verkauft. Sport, Filme, Nachrichten und Unterhaltung kommen über dieselbe Leitung.',
-  '10,000+ live channels': 'Über 10.000 Live-Sender',
+  '8,000+ live channels': 'Über 8.000 Live-Sender',
   'Sports, movies, news and entertainment from more than 50 countries, in one channel list.':
     'Sport, Filme, Nachrichten und Unterhaltung aus über 50 Ländern, in einer Senderliste.',
   '50,000+ on demand': 'Über 50.000 auf Abruf',
@@ -743,7 +747,7 @@ de: {
 
   '4K · HD · SD': '4K · HD · SD',
   '7-day catch-up': '7 Tage Mediathek',
-  '10,000+ channels': '10.000+ Sender',
+  '8,000+ channels': '8.000+ Sender',
   '50,000+ films & series': '50.000+ Filme & Serien',
   'Anti-freeze': 'Anti-Freeze',
   'Full EPG': 'Voller EPG',
@@ -751,8 +755,8 @@ de: {
   'No contract': 'Keine Bindung',
 
   "What's included?": 'Was ist enthalten?',
-  'All plans include <strong>10,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support.':
-    'Alle Tarife enthalten <strong>über 10.000 Live-Sender</strong> aus Sport, Film, Nachrichten und Unterhaltung, <strong>über 50.000 Filme und Serien auf Abruf</strong>, 4K- und HD-Qualität, einen vollständigen EPG, Mediathek und Support rund um die Uhr.',
+  'All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support.':
+    'Alle Tarife enthalten <strong>über 8.000 Live-Sender</strong> aus Sport, Film, Nachrichten und Unterhaltung, <strong>über 50.000 Filme und Serien auf Abruf</strong>, 4K- und HD-Qualität, einen vollständigen EPG, Mediathek und Support rund um die Uhr.',
   'Can I watch live sports and PPV events?': 'Kann ich Live-Sport und PPV-Events sehen?',
   'Yes. <strong>NFL, NBA, MLB, NHL, Premier League, UFC and boxing</strong> are all there, along with the major sports channels — ESPN, Fox Sports, Sky Sports and beIN Sports — plus international sport from more than 50 countries.':
     'Ja. <strong>NFL, NBA, MLB, NHL, Premier League, UFC und Boxen</strong> sind dabei, dazu die großen Sportsender — ESPN, Fox Sports, Sky Sports und beIN Sports — und internationaler Sport aus über 50 Ländern.',
@@ -869,6 +873,8 @@ es: {
   "What's included": 'Qué incluye',
   'Devices & apps': 'Dispositivos y apps',
   'FAQ': 'Preguntas',
+  'Channels': 'Canales',
+  'See the full list →': 'Ver la lista completa →',
   'Order now': 'Contratar',
   '__h1': '<span class="hl">Todos tus canales,</span> <span class="hl">en <span class="grad">una sola línea</span>.</span>',
   'Live sports, films, series and news in 4K, HD and SD — with a full programme guide and 7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.':
@@ -909,7 +915,7 @@ es: {
   'Runs 24 hours from activation': 'Dura 24 horas desde la activación',
   'No card, no deposit, no auto-renewal': 'Sin tarjeta, sin depósito, sin renovación automática',
   'Sent within minutes during support hours': 'Se envía en minutos dentro del horario de soporte',
-  '10,000+ live channels and 50,000+ VOD': 'Más de 10.000 canales en directo y 50.000 a la carta',
+  '8,000+ live channels and 50,000+ VOD': 'Más de 8.000 canales en directo y 50.000 a la carta',
   '7-day catch-up and full programme guide': '7 días de repetición y guía completa',
   '4K, HD and SD where the source allows': '4K, HD y SD según lo permita la fuente',
   'Free replacement line if yours goes down': 'Línea de repuesto gratis si la tuya falla',
@@ -923,7 +929,7 @@ es: {
   'The whole library, on every plan': 'Toda la biblioteca, en todos los planes',
   'Nothing is held back on the cheaper plan and nothing is sold as an add-on. Sports, films, news and entertainment all come with the same line.':
     'No se recorta nada en el plan más barato ni se vende nada aparte. Deportes, películas, noticias y entretenimiento vienen todos en la misma línea.',
-  '10,000+ live channels': 'Más de 10.000 canales en directo',
+  '8,000+ live channels': 'Más de 8.000 canales en directo',
   'Sports, movies, news and entertainment from more than 50 countries, in one channel list.':
     'Deportes, cine, noticias y entretenimiento de más de 50 países, en una sola lista de canales.',
   '50,000+ on demand': 'Más de 50.000 a la carta',
@@ -1134,7 +1140,7 @@ es: {
   /* marquee */
   '4K · HD · SD': '4K · HD · SD',
   '7-day catch-up': '7 días de repetición',
-  '10,000+ channels': 'Más de 10.000 canales',
+  '8,000+ channels': 'Más de 8.000 canales',
   '50,000+ films & series': 'Más de 50.000 películas y series',
   'Anti-freeze': 'Anticortes',
   'Full EPG': 'EPG completa',
@@ -1143,8 +1149,8 @@ es: {
 
   /* faq content */
   "What's included?": '¿Qué incluye?',
-  'All plans include <strong>10,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support.':
-    'Todos los planes incluyen <strong>más de 10.000 canales en directo</strong> de deportes, cine, noticias y entretenimiento, <strong>más de 50.000 películas y series a la carta</strong>, calidad 4K y HD, una guía EPG completa, repetición y soporte 24/7.',
+  'All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support.':
+    'Todos los planes incluyen <strong>más de 8.000 canales en directo</strong> de deportes, cine, noticias y entretenimiento, <strong>más de 50.000 películas y series a la carta</strong>, calidad 4K y HD, una guía EPG completa, repetición y soporte 24/7.',
   'Can I watch live sports and PPV events?': '¿Puedo ver deporte en directo y eventos de pago por visión?',
   'Yes. <strong>NFL, NBA, MLB, NHL, Premier League, UFC and boxing</strong> are all there, along with the major sports channels — ESPN, Fox Sports, Sky Sports and beIN Sports — plus international sport from more than 50 countries.':
     'Sí. <strong>NFL, NBA, MLB, NHL, Premier League, UFC y boxeo</strong> están todos, junto con los grandes canales deportivos — ESPN, Fox Sports, Sky Sports y beIN Sports — además de deporte internacional de más de 50 países.',
@@ -1260,6 +1266,8 @@ ar: {
   "What's included": 'ما الذي يشمله',
   'Devices & apps': 'الأجهزة والتطبيقات',
   'FAQ': 'الأسئلة الشائعة',
+  'Channels': 'القنوات',
+  'See the full list →': '← اطّلع على القائمة الكاملة',
   'Order now': 'اطلب الآن',
   '__h1': '<span class="hl">كل قنواتك المفضلة،</span> <span class="hl">على <span class="grad">خط واحد</span>.</span>',
   'Live sports, films, series and news in 4K, HD and SD — with a full programme guide and 7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.':
@@ -1299,7 +1307,7 @@ ar: {
   'Runs 24 hours from activation': 'تعمل 24 ساعة من لحظة التفعيل',
   'No card, no deposit, no auto-renewal': 'بدون بطاقة، بدون ضمان، بدون تجديد تلقائي',
   'Sent within minutes during support hours': 'تُرسل خلال دقائق في أوقات الدعم',
-  '10,000+ live channels and 50,000+ VOD': 'أكثر من 10,000 قناة مباشرة و 50,000 عمل عند الطلب',
+  '8,000+ live channels and 50,000+ VOD': 'أكثر من 8,000 قناة مباشرة و 50,000 عمل عند الطلب',
   '7-day catch-up and full programme guide': 'إعادة مشاهدة 7 أيام ودليل برامج كامل',
   '4K, HD and SD where the source allows': '4K و HD و SD حسب ما يتيحه المصدر',
   'Free replacement line if yours goes down': 'خط بديل مجاني إذا توقف خطك',
@@ -1312,7 +1320,7 @@ ar: {
   'The whole library, on every plan': 'المكتبة كاملة، في كل باقة',
   'Nothing is held back on the cheaper plan and nothing is sold as an add-on. Sports, films, news and entertainment all come with the same line.':
     'لا شيء محجوب في الباقة الأرخص ولا شيء يُباع كإضافة. الرياضة والأفلام والأخبار والترفيه تأتي كلها على الخط نفسه.',
-  '10,000+ live channels': 'أكثر من 10,000 قناة مباشرة',
+  '8,000+ live channels': 'أكثر من 8,000 قناة مباشرة',
   'Sports, movies, news and entertainment from more than 50 countries, in one channel list.':
     'رياضة وأفلام وأخبار وترفيه من أكثر من 50 دولة، في قائمة قنوات واحدة.',
   '50,000+ on demand': 'أكثر من 50,000 عند الطلب',
@@ -1518,7 +1526,7 @@ ar: {
 
   '4K · HD · SD': '4K · HD · SD',
   '7-day catch-up': 'إعادة مشاهدة 7 أيام',
-  '10,000+ channels': 'أكثر من 10,000 قناة',
+  '8,000+ channels': 'أكثر من 8,000 قناة',
   '50,000+ films & series': 'أكثر من 50,000 فيلم ومسلسل',
   'Anti-freeze': 'منع التقطيع',
   'Full EPG': 'دليل برامج كامل',
@@ -1527,8 +1535,8 @@ ar: {
   'No contract': 'بدون التزام',
 
   "What's included?": 'ما الذي يشمله الاشتراك؟',
-  'All plans include <strong>10,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support.':
-    'كل الباقات تشمل <strong>أكثر من 10,000 قناة مباشرة</strong> تغطي الرياضة والأفلام والأخبار والترفيه، و<strong>أكثر من 50,000 فيلم ومسلسل عند الطلب</strong>، وجودة 4K و HD، ودليل برامج كامل، وإعادة مشاهدة، ودعمًا على مدار الساعة.',
+  'All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support.':
+    'كل الباقات تشمل <strong>أكثر من 8,000 قناة مباشرة</strong> تغطي الرياضة والأفلام والأخبار والترفيه، و<strong>أكثر من 50,000 فيلم ومسلسل عند الطلب</strong>، وجودة 4K و HD، ودليل برامج كامل، وإعادة مشاهدة، ودعمًا على مدار الساعة.',
   'Can I watch live sports and PPV events?': 'هل يمكنني مشاهدة الرياضة المباشرة ونزالات الدفع لكل مشاهدة؟',
   'Yes. <strong>NFL, NBA, MLB, NHL, Premier League, UFC and boxing</strong> are all there, along with the major sports channels — ESPN, Fox Sports, Sky Sports and beIN Sports — plus international sport from more than 50 countries.':
     'نعم. <strong>NFL و NBA و MLB و NHL والبريميرليغ و UFC والملاكمة</strong> كلها موجودة، مع القنوات الرياضية الكبرى — ESPN و Fox Sports و Sky Sports و beIN Sports — إضافة إلى الرياضة العالمية من أكثر من 50 دولة.',
