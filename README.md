@@ -188,8 +188,14 @@ pass, then rebuild.
 
 ### The setup guide
 
-`install.html` covers Samsung and LG smart TVs, Firestick, Android TV and boxes,
-Android phones, iPhone and iPad, Apple TV, and Windows and Mac.
+`install.html` is a glass rail with one panel at a time: nine entries — *Before
+you start*, seven devices, and *If it will not work*. Clicking a rail item swaps
+the panel and writes a hash (`install.html#firestick`), so you can link straight
+to one device from a WhatsApp reply. On phones the rail becomes a horizontal
+strip of chips above the panel and the chosen chip scrolls itself into view.
+
+Only one panel is ever on screen, which is the point: the visitor reads four
+short steps, not the whole guide.
 
 Its numbered steps and coloured notes carry `data-i18n-html` keys (`__s_ios3`,
 `__n_firestick` …) so each one is translated as a whole sentence — word order is
@@ -201,8 +207,8 @@ in `dir="ltr"` so they don't reverse.
 The page never states which credentials a customer gets — it says we send either
 an activation code or a server login, depending on the device. If that ever
 becomes one fixed method, the wording to change is the key beginning
-`'After you order we send you what your device needs…'` plus the matching
-`__s_…4` step in each device section.
+`'We send them on WhatsApp after you order…'` in the *Before you start* panel,
+plus the last step of each device section.
 
 ### The channel list
 

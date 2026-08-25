@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Installation guide — Swift Channels</title>
-<meta name="description" content="Set up Swift Channels on a Samsung or LG TV, Firestick, Android, iPhone, Apple TV, Windows or Mac — step by step, in about ten minutes.">
+<meta name="description" content="Set up Swift Channels on a Samsung or LG TV, Firestick, Android, iPhone, Apple TV, Windows or Mac. Pick your device, follow four steps.">
 <link rel="canonical" href="https://swiftchannels.com/install.html">
 <link rel="alternate" hreflang="en" href="https://swiftchannels.com/install.html">
 <link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/install.html">
@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Swift Channels">
 <meta property="og:url" content="https://swiftchannels.com/install.html">
 <meta property="og:title" content="Installation guide — Swift Channels">
-<meta property="og:description" content="Step-by-step setup for smart TVs, Firestick, Android, Apple and computers.">
+<meta property="og:description" content="Pick your device, follow four steps.">
 <meta property="og:image" content="https://swiftchannels.com/assets/og-card.jpg">
 <meta property="og:locale" content="en_GB">
 <meta name="theme-color" content="#050A18">
@@ -26,14 +26,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --night:#050A18;--night-2:#080F22;--panel:#0D162F;--panel-2:#111E3D;
+  --night:#050A18;--night-2:#080F22;
   --line:#1B2C54;--line-soft:#152444;
   --blue:#2F6BFF;--blue-hi:#5A8CFF;--blue-deep:#1B49C4;--cyan:#49D9FF;
   --glow:rgba(47,107,255,.30);
   --ice:#E9EFFC;--muted:#93A6CC;--muted-2:#5F739B;
   --display:'Sora',system-ui,sans-serif;--body:'Inter',Arial,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
-  --pad:clamp(20px,5vw,60px);--maxw:1320px;--r:14px;--ease:cubic-bezier(.22,.8,.24,1);
+  --pad:clamp(18px,4vw,56px);--maxw:1240px;--ease:cubic-bezier(.22,.8,.24,1);
+  --g-bg:linear-gradient(158deg,rgba(255,255,255,.11),rgba(255,255,255,.028));
+  --g-line:rgba(255,255,255,.15);
+  --g-shadow:0 30px 70px -32px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.16);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -44,18 +47,26 @@ a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
 img,svg{display:block;max-width:100%}
 
+/* ── the blurred field the glass sits on ── */
 .aurora{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
-.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;display:block}
-.aurora i:nth-child(1){width:54vw;height:54vw;left:-16vw;top:-20vw;
-  background:radial-gradient(circle,rgba(47,107,255,.40),transparent 68%)}
-.aurora i:nth-child(2){width:42vw;height:42vw;right:-12vw;top:30vh;
-  background:radial-gradient(circle,rgba(73,217,255,.14),transparent 68%)}
+.aurora i{position:absolute;border-radius:50%;filter:blur(100px);display:block}
+.aurora i:nth-child(1){width:58vw;height:58vw;left:-16vw;top:-20vw;opacity:.62;
+  background:radial-gradient(circle,rgba(47,107,255,.62),transparent 68%)}
+.aurora i:nth-child(2){width:52vw;height:52vw;right:-16vw;top:34vh;opacity:.5;
+  background:radial-gradient(circle,rgba(73,217,255,.40),transparent 68%)}
+.aurora i:nth-child(3){width:58vw;height:58vw;left:8vw;top:52vh;opacity:.45;
+  background:radial-gradient(circle,rgba(124,92,255,.52),transparent 70%)}
+
+.glass{background:var(--g-bg);border:1px solid var(--g-line);
+  backdrop-filter:blur(26px) saturate(150%);-webkit-backdrop-filter:blur(26px) saturate(150%);
+  box-shadow:var(--g-shadow)}
 
 /* ── top bar ── */
-.top{position:sticky;top:0;z-index:40;background:rgba(5,10,24,.86);
-  backdrop-filter:blur(18px);border-bottom:1px solid var(--line-soft)}
-.top-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);height:68px;
-  display:flex;align-items:center;gap:18px}
+.top{position:sticky;top:0;z-index:40;background:rgba(5,10,24,.62);
+  backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);
+  border-bottom:1px solid rgba(255,255,255,.08)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);height:66px;
+  display:flex;align-items:center;gap:16px}
 .brand{display:flex;align-items:center;gap:11px;margin-right:auto}
 .brand-mark{width:30px;height:30px;flex:none;border-radius:9px;display:grid;place-items:center;
   background:linear-gradient(135deg,var(--blue),var(--cyan))}
@@ -71,16 +82,17 @@ img,svg{display:block;max-width:100%}
 .btn:hover{transform:translateY(-1px)}
 .btn-blue{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;
   box-shadow:0 10px 26px -10px var(--glow)}
-.btn-ghost{border-color:var(--line);color:var(--ice);background:rgba(255,255,255,.03)}
-.btn-ghost:hover{border-color:var(--blue-hi)}
+.btn-glass{border-color:var(--g-line);color:var(--ice);background:rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.btn-glass:hover{border-color:rgba(255,255,255,.34)}
 .btn-sm{padding:9px 17px;font-size:13.5px;white-space:nowrap}
-.btn-lg{padding:15px 30px;font-size:15.5px}
+.btn-lg{padding:14px 26px;font-size:15px}
 
 .lang{position:relative;display:flex;align-items:center;gap:6px}
 .lang-opts{display:flex;gap:6px}
 .lang-b,.lang-cur{width:32px;height:32px;flex:0 0 32px;border-radius:50%;padding:0;cursor:pointer;
   overflow:hidden;display:flex;align-items:center;justify-content:center;
-  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  background:rgba(255,255,255,.06);border:1px solid var(--g-line);
   transition:opacity .25s,filter .3s,border-color .25s,transform .25s,box-shadow .3s}
 .lang-b img,.lang-cur img{width:100%;height:100%;object-fit:cover;border-radius:50%}
 .lang-b{opacity:.5;filter:saturate(.55)}
@@ -92,7 +104,7 @@ img,svg{display:block;max-width:100%}
   .lang-cur{display:flex}
   .lang-opts{position:absolute;top:calc(100% + 12px);inset-inline-end:0;z-index:70;
     flex-direction:column;gap:6px;padding:7px;border-radius:20px;
-    background:rgba(8,15,34,.94);border:1px solid var(--line);backdrop-filter:blur(14px);
+    background:rgba(8,15,34,.9);border:1px solid var(--g-line);backdrop-filter:blur(16px);
     box-shadow:0 24px 46px -18px rgba(0,0,0,.85);
     opacity:0;visibility:hidden;transform:translateY(-8px) scale(.96);transform-origin:top;
     transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
@@ -100,77 +112,82 @@ img,svg{display:block;max-width:100%}
 }
 
 /* ── hero ── */
-.head{max-width:var(--maxw);margin:0 auto;padding:clamp(28px,4vw,48px) var(--pad) 0;width:100%}
+.head{max-width:var(--maxw);margin:0 auto;padding:clamp(20px,3vw,34px) var(--pad) 0;width:100%}
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--cyan);display:block;margin-bottom:12px}
-h1{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.06;
-  font-size:clamp(30px,4.6vw,52px)}
-h1 .grad{background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 60%,#fff);
+  color:var(--cyan);display:block;margin-bottom:11px}
+h1{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.05;
+  font-size:clamp(27px,3.8vw,42px)}
+h1 .grad{background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 62%,#fff);
   -webkit-background-clip:text;background-clip:text;color:transparent}
-.head p.lead{margin-top:14px;color:var(--muted);max-width:62ch;font-size:16px}
+.head p{margin-top:10px;color:var(--muted);max-width:48ch;font-size:15px}
 
-/* ── before you start ── */
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);width:100%}
-.need{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
-.need-c{background:rgba(8,15,34,.72);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
-.need-c b{display:block;font-family:var(--display);font-weight:700;font-size:15.5px;margin-bottom:7px}
-.need-c p{color:var(--muted);font-size:14.5px;line-height:1.55}
-.need-n{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--cyan);
-  display:block;margin-bottom:10px}
+/* ── rail + panel ── */
+.shell{max-width:var(--maxw);margin:0 auto;padding:22px var(--pad) 60px;width:100%;flex:1;
+  display:grid;grid-template-columns:262px 1fr;gap:18px;align-items:start}
 
-/* ── device nav ── */
-.devnav{display:flex;gap:9px;flex-wrap:wrap;margin-top:42px;padding-bottom:4px}
-.devnav a{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:100px;
-  border:1px solid var(--line);background:rgba(8,15,34,.6);font-size:13.5px;color:var(--muted);
-  transition:border-color .25s,color .25s,background .25s;white-space:nowrap}
-.devnav a:hover{border-color:var(--blue-hi);color:var(--ice);background:rgba(47,107,255,.08)}
-.devnav svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7;flex:none}
+.rail{border-radius:26px;overflow:hidden;position:sticky;top:80px;
+  max-height:calc(100vh - 100px);display:flex}
+.rail-list{display:flex;flex-direction:column;gap:4px;padding:10px;width:100%;
+  overflow-y:auto;scrollbar-width:none;-ms-overflow-style:none}
+.rail-list::-webkit-scrollbar{display:none}
+.ri{display:flex;align-items:center;gap:12px;width:100%;text-align:start;cursor:pointer;
+  padding:9px 13px;border-radius:15px;border:1px solid transparent;background:transparent;
+  color:var(--muted);font-family:var(--body);font-size:14.5px;line-height:1.35;
+  transition:background .28s var(--ease),color .28s,box-shadow .3s var(--ease),transform .28s var(--ease)}
+.ri:hover{background:rgba(255,255,255,.07);color:var(--ice)}
+.ri-i{width:31px;height:31px;flex:none;border-radius:11px;display:grid;place-items:center;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);
+  transition:background .28s,border-color .28s}
+.ri svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.75;
+  stroke-linecap:round;stroke-linejoin:round}
+.ri[aria-selected="true"]{background:rgba(255,255,255,.94);color:#0A1430;font-weight:600;
+  box-shadow:0 14px 32px -14px rgba(0,0,0,.8)}
+.ri[aria-selected="true"] .ri-i{background:rgba(47,107,255,.16);border-color:rgba(47,107,255,.34)}
+.rail-sep{height:1px;flex:none;background:rgba(255,255,255,.09);margin:5px 12px}
 
-/* ── device sections ── */
-.guide{max-width:var(--maxw);margin:0 auto;padding:34px var(--pad) 0;width:100%;flex:1}
-.dev{background:rgba(8,15,34,.62);border:1px solid var(--line);border-radius:22px;
-  padding:26px clamp(20px,3vw,32px);margin-bottom:16px;scroll-margin-top:88px}
-.dev-h{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.dev-i{width:42px;height:42px;flex:none;border-radius:12px;display:grid;place-items:center;
-  background:linear-gradient(135deg,rgba(47,107,255,.22),rgba(73,217,255,.12));
-  border:1px solid var(--line)}
-.dev-i svg{width:21px;height:21px;stroke:var(--blue-hi);fill:none;stroke-width:1.7}
-.dev h2{font-family:var(--display);font-weight:800;font-size:clamp(18px,2.3vw,22px);
+/* ── panel ── */
+.panel{border-radius:26px;padding:clamp(20px,2.6vw,32px);min-height:min(560px,calc(100vh - 100px))}
+.pane[hidden]{display:none}
+.pane{animation:fade .38s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.p-h{display:flex;align-items:center;gap:13px;flex-wrap:wrap;
+  padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.09)}
+.p-i{width:40px;height:40px;flex:none;border-radius:13px;display:grid;place-items:center;
+  background:linear-gradient(150deg,rgba(90,140,255,.30),rgba(73,217,255,.12));
+  border:1px solid rgba(255,255,255,.16)}
+.p-i svg{width:20px;height:20px;stroke:#DCE7FF;fill:none;stroke-width:1.75;
+  stroke-linecap:round;stroke-linejoin:round}
+.panel h2{font-family:var(--display);font-weight:800;font-size:clamp(19px,2.4vw,25px);
   letter-spacing:-.02em;margin-right:auto}
-.dev-app{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted-2);
-  border:1px solid var(--line-soft);border-radius:100px;padding:6px 13px}
-.steps{margin:20px 0 0;padding:0;list-style:none;counter-reset:s}
-.steps li{counter-increment:s;position:relative;padding-inline-start:38px;padding-bottom:15px;
-  color:var(--muted);font-size:15px;line-height:1.62}
-.steps li::before{content:counter(s);position:absolute;inset-inline-start:0;top:1px;
-  width:25px;height:25px;border-radius:50%;display:grid;place-items:center;
-  background:rgba(47,107,255,.14);border:1px solid var(--line);
-  font-family:var(--mono);font-size:11.5px;color:var(--blue-hi)}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:#CBD9F5;
+  border:1px solid var(--g-line);background:rgba(255,255,255,.07);
+  border-radius:100px;padding:6px 13px;white-space:nowrap}
+
+.steps{list-style:none;counter-reset:s;margin-top:20px}
+.steps li{counter-increment:s;position:relative;padding-inline-start:40px;padding-bottom:16px;
+  color:#C3D2EE;font-size:15.5px;line-height:1.6}
+.steps li::before{content:counter(s);position:absolute;inset-inline-start:0;top:0;
+  width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);
+  font-family:var(--mono);font-size:11.5px;color:#fff}
 .steps li:last-child{padding-bottom:0}
-.steps strong{color:var(--ice);font-weight:600}
-.note{margin-top:18px;padding:13px 16px;border-radius:13px;font-size:14px;color:var(--muted);
-  background:rgba(73,217,255,.06);border:1px solid rgba(73,217,255,.18)}
-.note b{color:var(--ice);font-weight:600}
+.steps strong{color:#fff;font-weight:600}
+.note{margin-top:20px;padding:13px 16px;border-radius:15px;font-size:14px;color:#B7C7E6;
+  background:rgba(73,217,255,.07);border:1px solid rgba(73,217,255,.20)}
+.note b{color:#EAF3FF;font-weight:600}
 
-/* ── troubleshooting ── */
-.tr{max-width:var(--maxw);margin:0 auto;padding:44px var(--pad) 0;width:100%}
-.tr h2{font-family:var(--display);font-weight:800;font-size:clamp(20px,2.6vw,26px);
-  letter-spacing:-.02em;margin-bottom:18px}
-.tr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.tr-c{background:rgba(8,15,34,.62);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
-.tr-c b{display:block;font-family:var(--display);font-weight:700;font-size:15px;margin-bottom:7px}
-.tr-c p{color:var(--muted);font-size:14.5px;line-height:1.58}
+/* plain lines (Before you start / troubleshooting) */
+.lines{list-style:none;margin-top:20px;display:grid;gap:12px}
+.lines li{padding:15px 18px;border-radius:16px;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.09);font-size:15px;color:#C3D2EE;line-height:1.55}
+.lines b{display:block;color:#fff;font-family:var(--display);font-weight:700;
+  font-size:15px;margin-bottom:4px}
 
-/* ── closing band ── */
-.band{border-top:1px solid var(--line-soft);margin-top:56px;background:
-  radial-gradient(70% 130% at 50% 0%,rgba(47,107,255,.16),transparent 70%)}
-.band-in{max-width:var(--maxw);margin:0 auto;padding:52px var(--pad);text-align:center}
-.band h3{font-family:var(--display);font-weight:800;font-size:clamp(22px,3vw,30px);
-  letter-spacing:-.02em}
-.band p{color:var(--muted);margin:12px auto 24px;max-width:56ch;font-size:15.5px}
-.band-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.p-foot{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.09);
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.p-foot span{color:var(--muted);font-size:14px;margin-right:auto}
 
-footer{border-top:1px solid var(--line-soft);padding:24px var(--pad);
+footer{border-top:1px solid rgba(255,255,255,.08);padding:22px var(--pad);
   font-family:var(--mono);font-size:11px;color:var(--muted-2);
   display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
   max-width:var(--maxw);margin:0 auto;width:100%}
@@ -178,22 +195,31 @@ footer a:hover{color:var(--blue-hi)}
 
 /* ── right-to-left ── */
 html[dir="rtl"] .brand{margin-right:0;margin-left:auto}
-html[dir="rtl"] .dev h2{margin-right:0;margin-left:auto}
+html[dir="rtl"] .panel h2{margin-right:0;margin-left:auto}
+html[dir="rtl"] .p-foot span{margin-right:0;margin-left:auto}
 html[dir="rtl"] body{font-family:'Tajawal',var(--body)}
-html[dir="rtl"] h1,html[dir="rtl"] .dev h2,html[dir="rtl"] .band h3,html[dir="rtl"] .tr h2,
-html[dir="rtl"] .brand-name,html[dir="rtl"] .need-c b,html[dir="rtl"] .tr-c b{
-  font-family:'Cairo','Tajawal',var(--display);letter-spacing:0}
-html[dir="rtl"] .dev-app{direction:ltr;unicode-bidi:isolate}
+html[dir="rtl"] h1,html[dir="rtl"] .panel h2,html[dir="rtl"] .lines b,
+html[dir="rtl"] .brand-name{font-family:'Cairo','Tajawal',var(--display);letter-spacing:0}
+html[dir="rtl"] .chip{direction:ltr;unicode-bidi:isolate}
 
+/* ── phones and small tablets ── */
 @media(max-width:900px){
-  .need{grid-template-columns:1fr}
-  .tr-grid{grid-template-columns:1fr}
+  .shell{grid-template-columns:1fr;gap:14px;padding-top:20px}
+  .rail{position:static;border-radius:20px}
+  .rail-list{flex-direction:row;gap:7px;padding:9px;overflow-x:auto;
+    scrollbar-width:none;-ms-overflow-style:none;scroll-snap-type:x proximity}
+  .rail-list::-webkit-scrollbar{display:none}
+  .ri{width:auto;flex:none;white-space:nowrap;padding:8px 14px 8px 8px;font-size:13.5px;
+    scroll-snap-align:start}
+  .rail-sep{display:none}
+  .panel{min-height:0;border-radius:20px}
 }
 @media(max-width:640px){
   .back{display:none}
-  .top-in{height:60px;gap:12px}
+  .top-in{height:58px;gap:11px}
   .brand-name{font-size:16px}
-  .dev-app{display:none}
+  .chip{display:none}
+  .steps li{font-size:15px;padding-inline-start:36px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important;
@@ -203,7 +229,7 @@ html[dir="rtl"] .dev-app{direction:ltr;unicode-bidi:isolate}
 </head>
 <body>
 
-<div class="aurora"><i></i><i></i></div>
+<div class="aurora"><i></i><i></i><i></i></div>
 
 <header class="top">
   <div class="top-in">
@@ -228,200 +254,233 @@ html[dir="rtl"] .dev-app{direction:ltr;unicode-bidi:isolate}
 
 <div class="head">
   <span class="eyebrow">Installation guide</span>
-  <h1 data-i18n-html="__in_h1">Watching in about<br><span class="grad">ten minutes</span>.</h1>
-  <p class="lead">Find your device below and follow the steps. Every device works the same way: install a
-    player app, then enter the details we sent you. If anything looks different on your screen,
-    message us and we will walk you through it.</p>
+  <h1 data-i18n-html="__in_h1">Pick your device.<br><span class="grad">Four steps.</span></h1>
+  <p>Ten minutes, once. After that the app remembers everything.</p>
 </div>
 
-<div class="wrap">
-  <div class="need">
-    <div class="need-c">
-      <span class="need-n">01</span>
-      <b>Your details from us</b>
-      <p>After you order we send you what your device needs on WhatsApp — either an activation code,
-        or a login made of a server address, a username and a password. Which one depends on the
-        device. Use whatever is in our message.</p>
-    </div>
-    <div class="need-c">
-      <span class="need-n">02</span>
-      <b>A steady connection</b>
-      <p>About 15 Mbps is enough for HD and 25 Mbps for 4K. A cable to the TV or router is steadier
-        than Wi-Fi, and a 5 GHz Wi-Fi band is steadier than 2.4 GHz.</p>
-    </div>
-    <div class="need-c">
-      <span class="need-n">03</span>
-      <b>Ten minutes</b>
-      <p>Most people are watching within ten minutes. Do it once and the app remembers everything —
-        you will not have to enter anything again.</p>
-    </div>
-  </div>
+<div class="shell">
 
-  <nav class="devnav" aria-label="Devices">
-    <a href="#smarttv"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg>Samsung &amp; LG TV</a>
-    <a href="#firestick"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="14" height="6" rx="3"/><path d="M17 12h4"/></svg>Firestick</a>
-    <a href="#androidtv"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 4l2 3M17 4l-2 3"/></svg>Android TV &amp; box</a>
-    <a href="#android"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Android phone</a>
-    <a href="#ios"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></svg>iPhone &amp; iPad</a>
-    <a href="#appletv"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M9 21h6"/></svg>Apple TV</a>
-    <a href="#computer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>Windows &amp; Mac</a>
+  <!-- ══ device rail ══ -->
+  <nav class="rail glass">
+    <div class="rail-list" id="rail" role="tablist" aria-label="Devices">
+
+      <button class="ri" type="button" role="tab" data-p="start" aria-selected="true">
+        <span class="ri-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span>
+        <span>Before you start</span>
+      </button>
+
+      <span class="rail-sep"></span>
+
+      <button class="ri" type="button" role="tab" data-p="smarttv" aria-selected="false">
+        <span class="ri-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg></span>
+        <span>Samsung &amp; LG TV</span>
+      </button>
+
+      <button class="ri" type="button" role="tab" data-p="firestick" aria-selected="false">
+        <span class="ri-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="13" height="6" rx="3"/><path d="M16 12h5"/></svg></span>
+        <span>Firestick</span>
+      </button>
+
+      <button class="ri" type="button" role="tab" data-p="androidtv" aria-selected="false">
+        <span class="ri-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 3.5L9 7M17 3.5L15 7"/></svg></span>
+        <span>Android TV &amp; box</span>
+      </button>
+
+      <button class="ri" type="button" role="tab" data-p="android" aria-selected="false">
+        <span class="ri-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
+        <span>Android phone</span>
+      </button>
+
+      <button class="ri" type="button" role="tab" data-p="ios" aria-selected="false">
+        <span class="ri-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="2" width="11" height="20" rx="3"/><path d="M10.5 5.2h3"/></svg></span>
+        <span>iPhone &amp; iPad</span>
+      </button>
+
+      <button class="ri" type="button" role="tab" data-p="appletv" aria-selected="false">
+        <span class="ri-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2.5"/><path d="M9.5 21h5"/></svg></span>
+        <span>Apple TV</span>
+      </button>
+
+      <button class="ri" type="button" role="tab" data-p="computer" aria-selected="false">
+        <span class="ri-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></span>
+        <span>Windows &amp; Mac</span>
+      </button>
+
+      <span class="rail-sep"></span>
+
+      <button class="ri" type="button" role="tab" data-p="help" aria-selected="false">
+        <span class="ri-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></span>
+        <span>If it will not work</span>
+      </button>
+
+    </div>
   </nav>
-</div>
 
-<main class="guide">
+  <!-- ══ panel ══ -->
+  <main class="panel glass" id="panel">
 
-  <section class="dev" id="smarttv">
-    <div class="dev-h">
-      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg></span>
-      <h2>Samsung &amp; LG smart TV</h2>
-      <span class="dev-app">IBO Player · Smart IPTV · IPTV Smarters</span>
-    </div>
-    <ol class="steps">
-      <li data-i18n-html="__s_smarttv1">Open the app store on your TV — <strong>Samsung Apps</strong> on a Samsung, <strong>LG Content Store</strong> on an LG.</li>
-      <li data-i18n-html="__s_smarttv2">Search for <strong>IBO Player</strong> and install it. If you cannot find it, try <strong>Smart IPTV</strong>, <strong>Set IPTV</strong> or <strong>IPTV Smarters</strong> — any of them works, and we support all four.</li>
-      <li data-i18n-html="__s_smarttv3">Open the app. It will show you a <strong>device key</strong> or a <strong>MAC address</strong> on the screen. Send that to us on WhatsApp.</li>
-      <li data-i18n-html="__s_smarttv4">We link your subscription to that key from our side. It takes a minute or two.</li>
-      <li data-i18n-html="__s_smarttv5">Close the app fully and open it again. Your channels will be there.</li>
-    </ol>
-    <p class="note" data-i18n-html="__n_smarttv"><b>Note:</b> these TV apps usually charge a small one-off activation fee of a few euros,
-      paid to the app maker, not to us. It is charged once per TV and it is not part of your subscription.</p>
-  </section>
+    <section class="pane" id="p-start" role="tabpanel">
+      <div class="p-h">
+        <span class="p-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span>
+        <h2>Before you start</h2>
+      </div>
+      <ul class="lines">
+        <li><b>Your details</b>We send them on WhatsApp after you order — an activation code, or a server address with a username and password. Which one depends on your device.</li>
+        <li><b>Your connection</b>15 Mbps is enough for HD, 25 for 4K. A cable beats Wi-Fi, and 5 GHz Wi-Fi beats 2.4 GHz.</li>
+        <li><b>Your device</b>Pick it from the list. Every guide is four steps or fewer.</li>
+      </ul>
+      <div class="p-foot">
+        <span>Would you rather we did it with you?</span>
+        <a class="btn btn-glass btn-lg" href="#" data-wa-link>Message us on WhatsApp</a>
+      </div>
+    </section>
 
-  <section class="dev" id="firestick">
-    <div class="dev-h">
-      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="14" height="6" rx="3"/><path d="M17 12h4"/></svg></span>
-      <h2>Amazon Firestick &amp; Fire TV</h2>
-      <span class="dev-app">Downloader → TiviMate or IPTV Smarters</span>
-    </div>
-    <ol class="steps">
-      <li data-i18n-html="__s_firestick1">From the Fire TV home screen, search for <strong>Downloader</strong> and install it.</li>
-      <li data-i18n-html="__s_firestick2">Go to <strong>Settings → My Fire TV → Developer options</strong> and turn on <strong>Install unknown apps</strong> for Downloader. On some remotes you first need to open <strong>Settings → My Fire TV → About</strong> and click the Fire TV name seven times to make Developer options appear.</li>
-      <li data-i18n-html="__s_firestick3">Open Downloader and enter the download address we send you. Install the player when it finishes.</li>
-      <li data-i18n-html="__s_firestick4">Open the player and enter the details from our message — the activation code, or the server address with your username and password.</li>
-      <li data-i18n-html="__s_firestick5">Give it a moment to load the channel list, then start watching.</li>
-    </ol>
-    <p class="note" data-i18n-html="__n_firestick"><b>Tip:</b> <b>TiviMate</b> has the nicest programme guide on a Firestick;
-      <b>IPTV Smarters</b> is simpler to set up. Tell us which you prefer and we will send the right link.</p>
-  </section>
+    <section class="pane" id="p-smarttv" role="tabpanel" hidden>
+      <div class="p-h">
+        <span class="p-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg></span>
+        <h2>Samsung &amp; LG TV</h2>
+        <span class="chip">IBO Player</span>
+      </div>
+      <ol class="steps">
+        <li data-i18n-html="__s_smarttv1">Open <strong>Samsung Apps</strong> or the <strong>LG Content Store</strong>.</li>
+        <li data-i18n-html="__s_smarttv2">Install <strong>IBO Player</strong>. Smart IPTV, Set IPTV and IPTV Smarters work too.</li>
+        <li data-i18n-html="__s_smarttv3">The app shows a <strong>device key</strong>. Send it to us on WhatsApp.</li>
+        <li data-i18n-html="__s_smarttv4">We link it in a minute. Close the app, open it again.</li>
+      </ol>
+      <p class="note" data-i18n-html="__n_smarttv"><b>One-off fee:</b> TV apps charge a few euros to activate, paid to the app maker, once per TV. Not part of your subscription.</p>
+      <div class="p-foot">
+        <span>Stuck on this step?</span>
+        <a class="btn btn-glass btn-lg" href="#" data-wa-link>Message us on WhatsApp</a>
+      </div>
+    </section>
 
-  <section class="dev" id="androidtv">
-    <div class="dev-h">
-      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 4l2 3M17 4l-2 3"/></svg></span>
-      <h2>Android TV, Google TV &amp; Android box</h2>
-      <span class="dev-app">Google Play → TiviMate or IPTV Smarters</span>
-    </div>
-    <ol class="steps">
-      <li data-i18n-html="__s_androidtv1">Open the <strong>Google Play Store</strong> on the device.</li>
-      <li data-i18n-html="__s_androidtv2">Search for <strong>TiviMate</strong> or <strong>IPTV Smarters Pro</strong> and install it.</li>
-      <li data-i18n-html="__s_androidtv3">Open the app and choose to add a playlist or a new user.</li>
-      <li data-i18n-html="__s_androidtv4">Enter the details from our message — the activation code, or the server address with your username and password.</li>
-      <li data-i18n-html="__s_androidtv5">Wait for the channel list to load. That is it.</li>
-    </ol>
-    <p class="note" data-i18n-html="__n_androidtv"><b>Note:</b> on a cheaper Android box, turn the app's picture buffer up a little if the
-      picture stutters. We can talk you through it on WhatsApp.</p>
-  </section>
+    <section class="pane" id="p-firestick" role="tabpanel" hidden>
+      <div class="p-h">
+        <span class="p-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="13" height="6" rx="3"/><path d="M16 12h5"/></svg></span>
+        <h2>Firestick &amp; Fire TV</h2>
+        <span class="chip">Downloader + TiviMate</span>
+      </div>
+      <ol class="steps">
+        <li data-i18n-html="__s_firestick1">Install <strong>Downloader</strong> from the Fire TV home screen.</li>
+        <li data-i18n-html="__s_firestick2">In <strong dir="ltr">Settings → My Fire TV → Developer options</strong>, let Downloader install apps.</li>
+        <li data-i18n-html="__s_firestick3">Open Downloader, enter the address we send you, install the player.</li>
+        <li data-i18n-html="__s_firestick4">Open it and enter your details.</li>
+      </ol>
+      <p class="note" data-i18n-html="__n_firestick"><b>Which player?</b> TiviMate has the better programme guide, IPTV Smarters is simpler. Tell us which and we send the right address.</p>
+      <div class="p-foot">
+        <span>Stuck on this step?</span>
+        <a class="btn btn-glass btn-lg" href="#" data-wa-link>Message us on WhatsApp</a>
+      </div>
+    </section>
 
-  <section class="dev" id="android">
-    <div class="dev-h">
-      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
-      <h2>Android phone &amp; tablet</h2>
-      <span class="dev-app">Google Play → IPTV Smarters Pro</span>
-    </div>
-    <ol class="steps">
-      <li data-i18n-html="__s_android1">Open the <strong>Google Play Store</strong>.</li>
-      <li data-i18n-html="__s_android2">Search for <strong>IPTV Smarters Pro</strong> and install it.</li>
-      <li data-i18n-html="__s_android3">Open the app and accept the terms it shows you.</li>
-      <li data-i18n-html="__s_android4">Choose to log in, then enter the details from our message — the activation code, or the server address with your username and password.</li>
-      <li data-i18n-html="__s_android5">Your channels, films and series appear in the app.</li>
-    </ol>
-  </section>
+    <section class="pane" id="p-androidtv" role="tabpanel" hidden>
+      <div class="p-h">
+        <span class="p-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="11" rx="2"/><path d="M7 3.5L9 7M17 3.5L15 7"/></svg></span>
+        <h2>Android TV &amp; box</h2>
+        <span class="chip">TiviMate</span>
+      </div>
+      <ol class="steps">
+        <li data-i18n-html="__s_androidtv1">Open the <strong dir="ltr">Google Play Store</strong>.</li>
+        <li data-i18n-html="__s_androidtv2">Install <strong>TiviMate</strong> or <strong>IPTV Smarters Pro</strong>.</li>
+        <li data-i18n-html="__s_androidtv3">Choose to add a new playlist or user.</li>
+        <li data-i18n-html="__s_androidtv4">Enter your details and wait for the channel list.</li>
+      </ol>
+      <div class="p-foot">
+        <span>Stuck on this step?</span>
+        <a class="btn btn-glass btn-lg" href="#" data-wa-link>Message us on WhatsApp</a>
+      </div>
+    </section>
 
-  <section class="dev" id="ios">
-    <div class="dev-h">
-      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
-      <h2>iPhone &amp; iPad</h2>
-      <span class="dev-app">App Store → IPTV Smarters Player Lite</span>
-    </div>
-    <ol class="steps">
-      <li data-i18n-html="__s_ios1">Open the <strong>App Store</strong>.</li>
-      <li data-i18n-html="__s_ios2">Search for <strong>IPTV Smarters Player Lite</strong> and install it.</li>
-      <li data-i18n-html="__s_ios3">Open the app and accept the terms it shows you.</li>
-      <li data-i18n-html="__s_ios4">Enter the details from our message — the activation code, or the server address with your username and password.</li>
-      <li data-i18n-html="__s_ios5">Your channels load and you are ready.</li>
-    </ol>
-    <p class="note" data-i18n-html="__n_ios"><b>Note:</b> Apple sometimes renames or removes these players. If you cannot find that
-      exact name, message us and we will tell you which one is currently in the store.</p>
-  </section>
+    <section class="pane" id="p-android" role="tabpanel" hidden>
+      <div class="p-h">
+        <span class="p-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
+        <h2>Android phone &amp; tablet</h2>
+        <span class="chip">IPTV Smarters Pro</span>
+      </div>
+      <ol class="steps">
+        <li data-i18n-html="__s_android1">Open the <strong dir="ltr">Google Play Store</strong>.</li>
+        <li data-i18n-html="__s_android2">Install <strong>IPTV Smarters Pro</strong>.</li>
+        <li data-i18n-html="__s_android3">Open it and accept the terms.</li>
+        <li data-i18n-html="__s_android4">Enter your details. Channels, films and series appear.</li>
+      </ol>
+      <div class="p-foot">
+        <span>Stuck on this step?</span>
+        <a class="btn btn-glass btn-lg" href="#" data-wa-link>Message us on WhatsApp</a>
+      </div>
+    </section>
 
-  <section class="dev" id="appletv">
-    <div class="dev-h">
-      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M9 21h6"/></svg></span>
-      <h2>Apple TV</h2>
-      <span class="dev-app">App Store → IPTV Smarters Player Lite</span>
-    </div>
-    <ol class="steps">
-      <li data-i18n-html="__s_appletv1">Open the <strong>App Store</strong> on your Apple TV. This needs a 4th-generation Apple TV or newer.</li>
-      <li data-i18n-html="__s_appletv2">Search for <strong>IPTV Smarters Player Lite</strong> and install it.</li>
-      <li data-i18n-html="__s_appletv3">Open the app and enter the details from our message.</li>
-      <li data-i18n-html="__s_appletv4">Typing with the Apple TV remote is slow — you can use the keyboard on your iPhone instead when it offers.</li>
-      <li data-i18n-html="__s_appletv5">Wait for the channel list, then start watching.</li>
-    </ol>
-  </section>
+    <section class="pane" id="p-ios" role="tabpanel" hidden>
+      <div class="p-h">
+        <span class="p-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="2" width="11" height="20" rx="3"/><path d="M10.5 5.2h3"/></svg></span>
+        <h2>iPhone &amp; iPad</h2>
+        <span class="chip">Smarters Player Lite</span>
+      </div>
+      <ol class="steps">
+        <li data-i18n-html="__s_ios1">Open the <strong dir="ltr">App Store</strong>.</li>
+        <li data-i18n-html="__s_ios2">Install <strong>IPTV Smarters Player Lite</strong>.</li>
+        <li data-i18n-html="__s_ios3">Open it and accept the terms.</li>
+        <li data-i18n-html="__s_ios4">Enter your details and start watching.</li>
+      </ol>
+      <p class="note" data-i18n-html="__n_ios"><b>Cannot find it?</b> Apple renames these players now and then. Ask us and we will tell you which one is in the store today.</p>
+      <div class="p-foot">
+        <span>Stuck on this step?</span>
+        <a class="btn btn-glass btn-lg" href="#" data-wa-link>Message us on WhatsApp</a>
+      </div>
+    </section>
 
-  <section class="dev" id="computer">
-    <div class="dev-h">
-      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></span>
-      <h2>Windows &amp; Mac</h2>
-      <span class="dev-app">VLC or IPTV Smarters for PC</span>
-    </div>
-    <ol class="steps">
-      <li data-i18n-html="__s_computer1">Install <strong>VLC Media Player</strong> from videolan.org, or <strong>IPTV Smarters for PC</strong> if you want a proper TV interface with a programme guide.</li>
-      <li data-i18n-html="__s_computer2">In VLC, open <strong>Media → Open Network Stream</strong>. In IPTV Smarters, choose to add a new user.</li>
-      <li data-i18n-html="__s_computer3">Paste the playlist link we sent you, or enter the server address with your username and password.</li>
-      <li data-i18n-html="__s_computer4">The channel list opens. In VLC you can save it as a favourite so it is one click next time.</li>
-    </ol>
-    <p class="note" data-i18n-html="__n_computer"><b>Note:</b> VLC plays the channels but has no programme guide and no catch-up.
-      For the full experience on a computer, use IPTV Smarters.</p>
-  </section>
+    <section class="pane" id="p-appletv" role="tabpanel" hidden>
+      <div class="p-h">
+        <span class="p-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2.5"/><path d="M9.5 21h5"/></svg></span>
+        <h2>Apple TV</h2>
+        <span class="chip">Smarters Player Lite</span>
+      </div>
+      <ol class="steps">
+        <li data-i18n-html="__s_appletv1">Open the <strong dir="ltr">App Store</strong>. Needs Apple TV 4 or newer.</li>
+        <li data-i18n-html="__s_appletv2">Install <strong>IPTV Smarters Player Lite</strong>.</li>
+        <li data-i18n-html="__s_appletv3">Enter your details — use your iPhone keyboard when it offers.</li>
+      </ol>
+      <div class="p-foot">
+        <span>Stuck on this step?</span>
+        <a class="btn btn-glass btn-lg" href="#" data-wa-link>Message us on WhatsApp</a>
+      </div>
+    </section>
 
-</main>
+    <section class="pane" id="p-computer" role="tabpanel" hidden>
+      <div class="p-h">
+        <span class="p-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></span>
+        <h2>Windows &amp; Mac</h2>
+        <span class="chip">VLC or Smarters</span>
+      </div>
+      <ol class="steps">
+        <li data-i18n-html="__s_computer1">Install <strong>VLC</strong> from videolan.org, or <strong>IPTV Smarters for PC</strong>.</li>
+        <li data-i18n-html="__s_computer2">VLC: <strong dir="ltr">Media → Open Network Stream</strong>. Smarters: add a new user.</li>
+        <li data-i18n-html="__s_computer3">Paste the link we sent, or enter the server, username and password.</li>
+      </ol>
+      <p class="note" data-i18n-html="__n_computer"><b>Note:</b> VLC plays the channels but has no programme guide and no catch-up. Use IPTV Smarters for both.</p>
+      <div class="p-foot">
+        <span>Stuck on this step?</span>
+        <a class="btn btn-glass btn-lg" href="#" data-wa-link>Message us on WhatsApp</a>
+      </div>
+    </section>
 
-<section class="tr">
-  <h2>If something is not right</h2>
-  <div class="tr-grid">
-    <div class="tr-c">
-      <b>The picture keeps stopping</b>
-      <p>Almost always the connection, not the service. Try a cable instead of Wi-Fi, or move closer to
-        the router. If it only happens on one channel, tell us which one — we will check it from our side.</p>
-    </div>
-    <div class="tr-c">
-      <b>It says the login is wrong</b>
-      <p>Check for a capital letter or a space that crept in while typing. Copy and paste from our
-        WhatsApp message rather than typing it out. If it still refuses, message us — we will resend it.</p>
-    </div>
-    <div class="tr-c">
-      <b>A channel I want is missing</b>
-      <p>Line-ups are set by the platform and do change. Send us the channel name and we will tell you
-        whether it is carried and where to find it in the list.</p>
-    </div>
-    <div class="tr-c">
-      <b>Nothing loads at all</b>
-      <p>Some internet providers slow down streaming at busy times. Restart the router, then try again.
-        If it is still dead, message us with your device and what you see on screen.</p>
-    </div>
-  </div>
-</section>
+    <section class="pane" id="p-help" role="tabpanel" hidden>
+      <div class="p-h">
+        <span class="p-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></span>
+        <h2>If it will not work</h2>
+      </div>
+      <ul class="lines">
+        <li><b>The picture keeps stopping</b>Almost always the connection. Try a cable, or move closer to the router. If it is one channel only, send us its name.</li>
+        <li><b>It says the login is wrong</b>Copy and paste from our WhatsApp message instead of typing. A stray space is usually the culprit.</li>
+        <li><b>A channel is missing</b>Line-ups change. Send us the name and we will tell you where it is.</li>
+        <li><b>Nothing loads at all</b>Restart the router and try again. Still dead? Message us with your device and what is on screen.</li>
+      </ul>
+      <div class="p-foot">
+        <span>None of these?</span>
+        <a class="btn btn-glass btn-lg" href="#" data-wa-link>Message us on WhatsApp</a>
+      </div>
+    </section>
 
-<div class="band">
-  <div class="band-in">
-    <h3>Would you rather we did it with you?</h3>
-    <p>Send us a message and we will walk you through it step by step, on your device, while you watch.
-      Setup help is included with every subscription — there is nothing extra to pay.</p>
-    <div class="band-btns">
-      <a class="btn btn-blue btn-lg" href="#" data-wa-link>Message us on WhatsApp</a>
-      <a class="btn btn-ghost btn-lg" href="index.html#order">Start the free 24-hour test</a>
-    </div>
-  </div>
+  </main>
 </div>
 
 <footer>
@@ -432,14 +491,50 @@ html[dir="rtl"] .dev-app{direction:ltr;unicode-bidi:isolate}
 <script src="assets/i18n.js"></script>
 <script src="assets/install-i18n.js"></script>
 <script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-document.querySelector('[data-wa-link]').href = 'https://wa.me/212699764804';
-window.i18n.boot({
-  skip: '#yr',
-  titleKey: '__in_title',
-  descKey: '__in_desc',
-  lang: 'en'
-});
+(function(){
+  const rail = document.getElementById('rail');
+  const tabs = [...rail.querySelectorAll('.ri')];
+  const ids  = tabs.map(t => t.dataset.p);
+
+  function show(id, push){
+    if(!ids.includes(id)) id = ids[0];
+    tabs.forEach(t => t.setAttribute('aria-selected', String(t.dataset.p === id)));
+    ids.forEach(p => { document.getElementById('p-' + p).hidden = (p !== id); });
+    if(push && location.hash.slice(1) !== id) history.replaceState(null, '', '#' + id);
+    /* on a phone the rail scrolls sideways — keep the chosen chip in view */
+    const t = tabs.find(t => t.dataset.p === id);
+    if(t && rail.scrollWidth > rail.clientWidth){
+      t.scrollIntoView({ block:'nearest', inline:'center', behavior:'smooth' });
+    }
+  }
+
+  tabs.forEach(t => t.addEventListener('click', () => show(t.dataset.p, true)));
+
+  /* arrow keys move along the rail */
+  rail.addEventListener('keydown', e => {
+    const i = tabs.indexOf(document.activeElement);
+    if(i < 0) return;
+    const step = (e.key === 'ArrowDown' || e.key === 'ArrowRight') ? 1
+              : (e.key === 'ArrowUp'   || e.key === 'ArrowLeft')  ? -1 : 0;
+    if(!step) return;
+    e.preventDefault();
+    const n = tabs[(i + step + tabs.length) % tabs.length];
+    n.focus(); show(n.dataset.p, true);
+  });
+
+  addEventListener('hashchange', () => show(location.hash.slice(1), false));
+  show(location.hash.slice(1) || ids[0], false);
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.querySelectorAll('[data-wa-link]').forEach(a => a.href = 'https://wa.me/212699764804');
+
+  window.i18n.boot({
+    skip: '#yr',
+    titleKey: '__in_title',
+    descKey: '__in_desc',
+    lang: 'en'
+  });
+})();
 </script>
 </body>
 </html>
