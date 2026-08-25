@@ -133,6 +133,12 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
 
       /* reveal classes and the generated order reference are runtime noise */
       document.querySelectorAll('.rv.in').forEach(e => e.classList.remove('in'));
+      /* the card flow builds its own dots and state at runtime */
+      const fd = document.getElementById('flowDots');
+      if (fd) fd.innerHTML = '';
+      document.querySelectorAll('.fc.is-on').forEach(e => e.classList.remove('is-on'));
+      document.querySelectorAll('.flow.touched').forEach(e => e.classList.remove('touched'));
+      document.querySelectorAll('.fc[role="listitem"]').forEach(e => e.removeAttribute('role'));
       const ref = document.getElementById('ref');
       if (ref) ref.textContent = '—';
 
