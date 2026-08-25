@@ -127,25 +127,27 @@ of the `<script>` tag in `index.html`:
 The site is published at five addresses so Google can index each language
 separately:
 
-Each language has three pages — the main page, the channel list and the legal
-page — so fifteen addresses in all:
+Each language has four pages — the main page, the channel list, the setup guide
+and the legal page — so twenty addresses in all:
 
-| Language | Main page | Channel list | Legal |
-|----------|-----------|--------------|-------|
-| English  | `/`     | `/channels.html`    | `/legal.html`    |
-| French   | `/fr/`  | `/fr/channels.html` | `/fr/legal.html` |
-| Spanish  | `/es/`  | `/es/channels.html` | `/es/legal.html` |
-| German   | `/de/`  | `/de/channels.html` | `/de/legal.html` |
-| Arabic (right-to-left) | `/ar/` | `/ar/channels.html` | `/ar/legal.html` |
+| Language | Main page | Channel list | Setup guide | Legal |
+|----------|-----------|--------------|-------------|-------|
+| English  | `/`     | `/channels.html`    | `/install.html`    | `/legal.html`    |
+| French   | `/fr/`  | `/fr/channels.html` | `/fr/install.html` | `/fr/legal.html` |
+| Spanish  | `/es/`  | `/es/channels.html` | `/es/install.html` | `/es/legal.html` |
+| German   | `/de/`  | `/de/channels.html` | `/de/install.html` | `/de/legal.html` |
+| Arabic (right-to-left) | `/ar/` | `/ar/channels.html` | `/ar/install.html` | `/ar/legal.html` |
 
 **Only these files are ever edited by hand:**
 
 - `index.html` — the English page, and the source for all the others
 - `channels.html` — the English channel list
+- `install.html` — the English setup guide
 - `legal.html` — the English terms, refunds and privacy page
 - `assets/i18n.js` — translations for the main page, keyed by the English sentence
 - `assets/legal-i18n.js` — translations for the legal page, same idea
 - `assets/channels-i18n.js` — translations for the channel-list page's own wording
+- `assets/install-i18n.js` — translations for the setup guide
 - `assets/channels.js` — the channel data itself (see below)
 
 `fr/`, `es/`, `de/` and `ar/` are **generated**. Never edit them directly; your
@@ -155,7 +157,7 @@ changes will be overwritten on the next build.
 
 ```bash
 cd ~/swiftchannels
-node build.js          # regenerates all 12 translated pages and sitemap.xml
+node build.js          # regenerates all 16 translated pages and sitemap.xml
 git add . && git commit -m "what changed"
 git push
 ```
@@ -177,12 +179,30 @@ pass, then rebuild.
 
 ### Adding a sixth language
 
-1. Add its block to `assets/i18n.js`, `assets/legal-i18n.js` and
-   `assets/channels-i18n.js`, copying the shape of `es`.
+1. Add its block to `assets/i18n.js`, `assets/legal-i18n.js`,
+   `assets/channels-i18n.js` and `assets/install-i18n.js`, copying the shape of `es`.
 2. Add its code to `LANGS` at the top of `assets/i18n.js` and of `build.js`.
 3. Add a flag to `assets/` and a link to the switcher in `index.html`,
-   `legal.html` **and** `channels.html`.
+   `legal.html`, `channels.html` **and** `install.html`.
 4. `node build.js`.
+
+### The setup guide
+
+`install.html` covers Samsung and LG smart TVs, Firestick, Android TV and boxes,
+Android phones, iPhone and iPad, Apple TV, and Windows and Mac.
+
+Its numbered steps and coloured notes carry `data-i18n-html` keys (`__s_ios3`,
+`__n_firestick` …) so each one is translated as a whole sentence — word order is
+free to change, which matters most in German and Arabic. App names and on-screen
+menu paths are deliberately **not** translated: a customer has to find them
+spelled that way on their own screen. In the Arabic file those paths are wrapped
+in `dir="ltr"` so they don't reverse.
+
+The page never states which credentials a customer gets — it says we send either
+an activation code or a server login, depending on the device. If that ever
+becomes one fixed method, the wording to change is the key beginning
+`'After you order we send you what your device needs…'` plus the matching
+`__s_…4` step in each device section.
 
 ### The channel list
 

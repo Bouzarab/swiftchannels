@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide d’installation — Swift Channels</title>
+<meta name="description" content="Installez Swift Channels sur une TV Samsung ou LG, un Firestick, Android, iPhone, Apple TV, Windows ou Mac — étape par étape, en une dizaine de minutes.">
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Swift Channels">
+<meta property="og:url" content="https://swiftchannels.com/fr/install.html">
+<meta property="og:title" content="Guide d’installation — Swift Channels">
+<meta property="og:description" content="Installez Swift Channels sur une TV Samsung ou LG, un Firestick, Android, iPhone, Apple TV, Windows ou Mac — étape par étape, en une dizaine de minutes.">
+<meta property="og:image" content="https://swiftchannels.com/assets/og-card.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#050A18">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#050A18;--night-2:#080F22;--panel:#0D162F;--panel-2:#111E3D;
+  --line:#1B2C54;--line-soft:#152444;
+  --blue:#2F6BFF;--blue-hi:#5A8CFF;--blue-deep:#1B49C4;--cyan:#49D9FF;
+  --glow:rgba(47,107,255,.30);
+  --ice:#E9EFFC;--muted:#93A6CC;--muted-2:#5F739B;
+  --display:'Sora',system-ui,sans-serif;--body:'Inter',Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --pad:clamp(20px,5vw,60px);--maxw:1320px;--r:14px;--ease:cubic-bezier(.22,.8,.24,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--ice);font-family:var(--body);font-size:16px;
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+img,svg{display:block;max-width:100%}
+
+.aurora{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;display:block}
+.aurora i:nth-child(1){width:54vw;height:54vw;left:-16vw;top:-20vw;
+  background:radial-gradient(circle,rgba(47,107,255,.40),transparent 68%)}
+.aurora i:nth-child(2){width:42vw;height:42vw;right:-12vw;top:30vh;
+  background:radial-gradient(circle,rgba(73,217,255,.14),transparent 68%)}
+
+/* ── top bar ── */
+.top{position:sticky;top:0;z-index:40;background:rgba(5,10,24,.86);
+  backdrop-filter:blur(18px);border-bottom:1px solid var(--line-soft)}
+.top-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);height:68px;
+  display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
+.brand-mark{width:30px;height:30px;flex:none;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--cyan))}
+.brand-mark::after{content:'';width:11px;height:11px;border-radius:50%;background:#fff;
+  box-shadow:0 0 12px #fff}
+.brand-name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;
+  white-space:nowrap}
+.back{font-size:14px;color:var(--muted)}
+.back:hover{color:var(--ice)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-weight:600;border-radius:100px;border:1px solid transparent;cursor:pointer;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s,color .3s}
+.btn:hover{transform:translateY(-1px)}
+.btn-blue{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;
+  box-shadow:0 10px 26px -10px var(--glow)}
+.btn-ghost{border-color:var(--line);color:var(--ice);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--blue-hi)}
+.btn-sm{padding:9px 17px;font-size:13.5px;white-space:nowrap}
+.btn-lg{padding:15px 30px;font-size:15.5px}
+
+.lang{position:relative;display:flex;align-items:center;gap:6px}
+.lang-opts{display:flex;gap:6px}
+.lang-b,.lang-cur{width:32px;height:32px;flex:0 0 32px;border-radius:50%;padding:0;cursor:pointer;
+  overflow:hidden;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  transition:opacity .25s,filter .3s,border-color .25s,transform .25s,box-shadow .3s}
+.lang-b img,.lang-cur img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.lang-b{opacity:.5;filter:saturate(.55)}
+.lang-b:hover,.lang-cur:hover{opacity:1;filter:none;border-color:var(--blue-hi);transform:translateY(-1px)}
+.lang-b[aria-current="true"]{opacity:1;filter:none;border-color:transparent;
+  box-shadow:0 0 0 2px var(--blue-hi),0 8px 20px -8px var(--glow)}
+.lang-cur{display:none}
+@media(max-width:860px){
+  .lang-cur{display:flex}
+  .lang-opts{position:absolute;top:calc(100% + 12px);inset-inline-end:0;z-index:70;
+    flex-direction:column;gap:6px;padding:7px;border-radius:20px;
+    background:rgba(8,15,34,.94);border:1px solid var(--line);backdrop-filter:blur(14px);
+    box-shadow:0 24px 46px -18px rgba(0,0,0,.85);
+    opacity:0;visibility:hidden;transform:translateY(-8px) scale(.96);transform-origin:top;
+    transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
+  .lang.open .lang-opts{opacity:1;visibility:visible;transform:none}
+}
+
+/* ── hero ── */
+.head{max-width:var(--maxw);margin:0 auto;padding:clamp(28px,4vw,48px) var(--pad) 0;width:100%}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--cyan);display:block;margin-bottom:12px}
+h1{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.06;
+  font-size:clamp(30px,4.6vw,52px)}
+h1 .grad{background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 60%,#fff);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.head p.lead{margin-top:14px;color:var(--muted);max-width:62ch;font-size:16px}
+
+/* ── before you start ── */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);width:100%}
+.need{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.need-c{background:rgba(8,15,34,.72);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.need-c b{display:block;font-family:var(--display);font-weight:700;font-size:15.5px;margin-bottom:7px}
+.need-c p{color:var(--muted);font-size:14.5px;line-height:1.55}
+.need-n{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--cyan);
+  display:block;margin-bottom:10px}
+
+/* ── device nav ── */
+.devnav{display:flex;gap:9px;flex-wrap:wrap;margin-top:42px;padding-bottom:4px}
+.devnav a{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:100px;
+  border:1px solid var(--line);background:rgba(8,15,34,.6);font-size:13.5px;color:var(--muted);
+  transition:border-color .25s,color .25s,background .25s;white-space:nowrap}
+.devnav a:hover{border-color:var(--blue-hi);color:var(--ice);background:rgba(47,107,255,.08)}
+.devnav svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7;flex:none}
+
+/* ── device sections ── */
+.guide{max-width:var(--maxw);margin:0 auto;padding:34px var(--pad) 0;width:100%;flex:1}
+.dev{background:rgba(8,15,34,.62);border:1px solid var(--line);border-radius:22px;
+  padding:26px clamp(20px,3vw,32px);margin-bottom:16px;scroll-margin-top:88px}
+.dev-h{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.dev-i{width:42px;height:42px;flex:none;border-radius:12px;display:grid;place-items:center;
+  background:linear-gradient(135deg,rgba(47,107,255,.22),rgba(73,217,255,.12));
+  border:1px solid var(--line)}
+.dev-i svg{width:21px;height:21px;stroke:var(--blue-hi);fill:none;stroke-width:1.7}
+.dev h2{font-family:var(--display);font-weight:800;font-size:clamp(18px,2.3vw,22px);
+  letter-spacing:-.02em;margin-right:auto}
+.dev-app{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted-2);
+  border:1px solid var(--line-soft);border-radius:100px;padding:6px 13px}
+.steps{margin:20px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding-inline-start:38px;padding-bottom:15px;
+  color:var(--muted);font-size:15px;line-height:1.62}
+.steps li::before{content:counter(s);position:absolute;inset-inline-start:0;top:1px;
+  width:25px;height:25px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(47,107,255,.14);border:1px solid var(--line);
+  font-family:var(--mono);font-size:11.5px;color:var(--blue-hi)}
+.steps li:last-child{padding-bottom:0}
+.steps strong{color:var(--ice);font-weight:600}
+.note{margin-top:18px;padding:13px 16px;border-radius:13px;font-size:14px;color:var(--muted);
+  background:rgba(73,217,255,.06);border:1px solid rgba(73,217,255,.18)}
+.note b{color:var(--ice);font-weight:600}
+
+/* ── troubleshooting ── */
+.tr{max-width:var(--maxw);margin:0 auto;padding:44px var(--pad) 0;width:100%}
+.tr h2{font-family:var(--display);font-weight:800;font-size:clamp(20px,2.6vw,26px);
+  letter-spacing:-.02em;margin-bottom:18px}
+.tr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.tr-c{background:rgba(8,15,34,.62);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.tr-c b{display:block;font-family:var(--display);font-weight:700;font-size:15px;margin-bottom:7px}
+.tr-c p{color:var(--muted);font-size:14.5px;line-height:1.58}
+
+/* ── closing band ── */
+.band{border-top:1px solid var(--line-soft);margin-top:56px;background:
+  radial-gradient(70% 130% at 50% 0%,rgba(47,107,255,.16),transparent 70%)}
+.band-in{max-width:var(--maxw);margin:0 auto;padding:52px var(--pad);text-align:center}
+.band h3{font-family:var(--display);font-weight:800;font-size:clamp(22px,3vw,30px);
+  letter-spacing:-.02em}
+.band p{color:var(--muted);margin:12px auto 24px;max-width:56ch;font-size:15.5px}
+.band-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+footer{border-top:1px solid var(--line-soft);padding:24px var(--pad);
+  font-family:var(--mono);font-size:11px;color:var(--muted-2);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  max-width:var(--maxw);margin:0 auto;width:100%}
+footer a:hover{color:var(--blue-hi)}
+
+/* ── right-to-left ── */
+html[dir="rtl"] .brand{margin-right:0;margin-left:auto}
+html[dir="rtl"] .dev h2{margin-right:0;margin-left:auto}
+html[dir="rtl"] body{font-family:'Tajawal',var(--body)}
+html[dir="rtl"] h1,html[dir="rtl"] .dev h2,html[dir="rtl"] .band h3,html[dir="rtl"] .tr h2,
+html[dir="rtl"] .brand-name,html[dir="rtl"] .need-c b,html[dir="rtl"] .tr-c b{
+  font-family:'Cairo','Tajawal',var(--display);letter-spacing:0}
+html[dir="rtl"] .dev-app{direction:ltr;unicode-bidi:isolate}
+
+@media(max-width:900px){
+  .need{grid-template-columns:1fr}
+  .tr-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .back{display:none}
+  .top-in{height:60px;gap:12px}
+  .brand-name{font-size:16px}
+  .dev-app{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important;
+    scroll-behavior:auto!important}
+}
+</style>
+<link rel="canonical" href="https://swiftchannels.com/fr/install.html"><link rel="alternate" hreflang="en" href="https://swiftchannels.com/install.html"><link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/install.html"><link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/install.html"><link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/install.html"><link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/install.html"><link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/install.html"></head>
+<body>
+
+<div class="aurora"><i></i><i></i></div>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
+    </a>
+    <a class="back" href="index.html">← Retour au site</a>
+    <div class="lang" id="lang">
+      <button class="lang-cur" type="button" id="langCur" aria-haspopup="true" aria-expanded="false" aria-label="Language"><img src="../assets/flag-fr.webp" alt="" width="32" height="32"></button>
+      <div class="lang-opts" id="langOpts">
+        <a class="lang-b" href="../install.html" data-lang="en" hreflang="en" aria-current="false" title="English"><img src="../assets/flag-en.webp" alt="English" width="32" height="32"></a>
+        <a class="lang-b" href="../fr/install.html" data-lang="fr" hreflang="fr" aria-current="true" title="Français"><img src="../assets/flag-fr.webp" alt="Français" width="32" height="32"></a>
+        <a class="lang-b" href="../es/install.html" data-lang="es" hreflang="es" aria-current="false" title="Español"><img src="../assets/flag-es.webp" alt="Español" width="32" height="32"></a>
+        <a class="lang-b" href="../de/install.html" data-lang="de" hreflang="de" aria-current="false" title="Deutsch"><img src="../assets/flag-de.webp" alt="Deutsch" width="32" height="32"></a>
+        <a class="lang-b" href="../ar/install.html" data-lang="ar" hreflang="ar" aria-current="false" title="العربية"><img src="../assets/flag-ar.webp" alt="العربية" width="32" height="32"></a>
+      </div>
+    </div>
+    <a class="btn btn-blue btn-sm" href="index.html#order">Commander</a>
+  </div>
+</header>
+
+<div class="head">
+  <span class="eyebrow">Guide d’installation</span>
+  <h1 data-i18n-html="__in_h1">Vous regardez dans<br><span class="grad">dix minutes</span>.</h1>
+  <p class="lead">Trouvez votre appareil ci-dessous et suivez les étapes. Le principe est le même partout : installez une application de lecture, puis saisissez les informations que nous vous avons envoyées. Si votre écran ne ressemble pas à ce qui est décrit, écrivez-nous et nous vous guiderons.</p>
+</div>
+
+<div class="wrap">
+  <div class="need">
+    <div class="need-c">
+      <span class="need-n">01</span>
+      <b>Vos informations</b>
+      <p>Après votre commande, nous vous envoyons sur WhatsApp ce dont votre appareil a besoin : soit un code d’activation, soit un identifiant composé d’une adresse de serveur, d’un nom d’utilisateur et d’un mot de passe. Cela dépend de l’appareil. Utilisez ce qui figure dans notre message.</p>
+    </div>
+    <div class="need-c">
+      <span class="need-n">02</span>
+      <b>Une connexion stable</b>
+      <p>Environ 15 Mb/s suffisent pour la HD et 25 Mb/s pour la 4K. Un câble entre la TV et la box est plus stable que le Wi-Fi, et la bande Wi-Fi 5 GHz est plus stable que la 2,4 GHz.</p>
+    </div>
+    <div class="need-c">
+      <span class="need-n">03</span>
+      <b>Dix minutes</b>
+      <p>La plupart des clients regardent en moins de dix minutes. Une fois configurée, l’application retient tout — vous n’aurez plus rien à saisir.</p>
+    </div>
+  </div>
+
+  <nav class="devnav" aria-label="Appareils">
+    <a href="#smarttv"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"></rect><path d="M8 21h8"></path></svg>TV Samsung et LG</a>
+    <a href="#firestick"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="14" height="6" rx="3"></rect><path d="M17 12h4"></path></svg>Firestick</a>
+    <a href="#androidtv"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="11" rx="2"></rect><path d="M7 4l2 3M17 4l-2 3"></path></svg>Android TV et box</a>
+    <a href="#android"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M10.5 18.5h3"></path></svg>Téléphone Android</a>
+    <a href="#ios"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M10.5 18.5h3"></path></svg>iPhone et iPad</a>
+    <a href="#appletv"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M9 21h6"></path></svg>Apple TV</a>
+    <a href="#computer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg>Windows et Mac</a>
+  </nav>
+</div>
+
+<main class="guide">
+
+  <section class="dev" id="smarttv">
+    <div class="dev-h">
+      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"></rect><path d="M8 21h8"></path></svg></span>
+      <h2>TV connectée Samsung et LG</h2>
+      <span class="dev-app">IBO Player · Smart IPTV · IPTV Smarters</span>
+    </div>
+    <ol class="steps">
+      <li data-i18n-html="__s_smarttv1">Ouvrez la boutique d’applications de votre TV — <strong>Samsung Apps</strong> sur un Samsung, <strong>LG Content Store</strong> sur un LG.</li>
+      <li data-i18n-html="__s_smarttv2">Cherchez <strong>IBO Player</strong> et installez-le. Si vous ne le trouvez pas, essayez <strong>Smart IPTV</strong>, <strong>Set IPTV</strong> ou <strong>IPTV Smarters</strong> — les quatre fonctionnent et nous les prenons tous en charge.</li>
+      <li data-i18n-html="__s_smarttv3">Ouvrez l’application. Elle affiche une <strong>clé d’appareil</strong> ou une <strong>adresse MAC</strong> à l’écran. Envoyez-la-nous sur WhatsApp.</li>
+      <li data-i18n-html="__s_smarttv4">Nous relions votre abonnement à cette clé de notre côté. Cela prend une minute ou deux.</li>
+      <li data-i18n-html="__s_smarttv5">Fermez complètement l’application puis rouvrez-la. Vos chaînes seront là.</li>
+    </ol>
+    <p class="note" data-i18n-html="__n_smarttv"><b>À noter :</b> ces applications de TV facturent en général une petite activation unique de quelques euros, payée à l’éditeur de l’application et non à nous. Elle est due une seule fois par téléviseur et ne fait pas partie de votre abonnement.</p>
+  </section>
+
+  <section class="dev" id="firestick">
+    <div class="dev-h">
+      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="14" height="6" rx="3"></rect><path d="M17 12h4"></path></svg></span>
+      <h2>Amazon Firestick et Fire TV</h2>
+      <span class="dev-app">Downloader → TiviMate ou IPTV Smarters</span>
+    </div>
+    <ol class="steps">
+      <li data-i18n-html="__s_firestick1">Depuis l’écran d’accueil du Fire TV, cherchez <strong>Downloader</strong> et installez-le.</li>
+      <li data-i18n-html="__s_firestick2">Allez dans <strong dir="ltr">Settings → My Fire TV → Developer options</strong> et activez <strong dir="ltr">Install unknown apps</strong> pour Downloader. Sur certaines télécommandes, il faut d’abord ouvrir <strong dir="ltr">Settings → My Fire TV → About</strong> et cliquer sept fois sur le nom du Fire TV pour faire apparaître les options de développeur.</li>
+      <li data-i18n-html="__s_firestick3">Ouvrez Downloader et saisissez l’adresse de téléchargement que nous vous envoyons. Installez le lecteur une fois le téléchargement terminé.</li>
+      <li data-i18n-html="__s_firestick4">Ouvrez le lecteur et saisissez les informations de notre message — le code d’activation, ou l’adresse du serveur avec votre nom d’utilisateur et votre mot de passe.</li>
+      <li data-i18n-html="__s_firestick5">Laissez-lui un instant pour charger la liste des chaînes, puis regardez.</li>
+    </ol>
+    <p class="note" data-i18n-html="__n_firestick"><b>Conseil :</b> <b>TiviMate</b> offre le plus beau guide des programmes sur Firestick ; <b>IPTV Smarters</b> est plus simple à configurer. Dites-nous lequel vous préférez et nous vous enverrons le bon lien.</p>
+  </section>
+
+  <section class="dev" id="androidtv">
+    <div class="dev-h">
+      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="11" rx="2"></rect><path d="M7 4l2 3M17 4l-2 3"></path></svg></span>
+      <h2>Android TV, Google TV et box Android</h2>
+      <span class="dev-app">Google Play → TiviMate ou IPTV Smarters</span>
+    </div>
+    <ol class="steps">
+      <li data-i18n-html="__s_androidtv1">Ouvrez le <strong dir="ltr">Google Play Store</strong> sur l’appareil.</li>
+      <li data-i18n-html="__s_androidtv2">Cherchez <strong>TiviMate</strong> ou <strong>IPTV Smarters Pro</strong> et installez-le.</li>
+      <li data-i18n-html="__s_androidtv3">Ouvrez l’application et choisissez d’ajouter une playlist ou un nouvel utilisateur.</li>
+      <li data-i18n-html="__s_androidtv4">Saisissez les informations de notre message — le code d’activation, ou l’adresse du serveur avec votre nom d’utilisateur et votre mot de passe.</li>
+      <li data-i18n-html="__s_androidtv5">Attendez le chargement de la liste des chaînes. C’est tout.</li>
+    </ol>
+    <p class="note" data-i18n-html="__n_androidtv"><b>À noter :</b> sur une box Android d’entrée de gamme, augmentez un peu la mémoire tampon de l’application si l’image saccade. Nous pouvons vous guider sur WhatsApp.</p>
+  </section>
+
+  <section class="dev" id="android">
+    <div class="dev-h">
+      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M10.5 18.5h3"></path></svg></span>
+      <h2>Téléphone et tablette Android</h2>
+      <span class="dev-app">Google Play → IPTV Smarters Pro</span>
+    </div>
+    <ol class="steps">
+      <li data-i18n-html="__s_android1">Ouvrez le <strong dir="ltr">Google Play Store</strong>.</li>
+      <li data-i18n-html="__s_android2">Cherchez <strong>IPTV Smarters Pro</strong> et installez-le.</li>
+      <li data-i18n-html="__s_android3">Ouvrez l’application et acceptez les conditions affichées.</li>
+      <li data-i18n-html="__s_android4">Choisissez de vous connecter, puis saisissez les informations de notre message — le code d’activation, ou l’adresse du serveur avec votre nom d’utilisateur et votre mot de passe.</li>
+      <li data-i18n-html="__s_android5">Vos chaînes, films et séries apparaissent dans l’application.</li>
+    </ol>
+  </section>
+
+  <section class="dev" id="ios">
+    <div class="dev-h">
+      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M10.5 18.5h3"></path></svg></span>
+      <h2>iPhone et iPad</h2>
+      <span class="dev-app">App Store → IPTV Smarters Player Lite</span>
+    </div>
+    <ol class="steps">
+      <li data-i18n-html="__s_ios1">Ouvrez l’<strong dir="ltr">App Store</strong>.</li>
+      <li data-i18n-html="__s_ios2">Cherchez <strong>IPTV Smarters Player Lite</strong> et installez-le.</li>
+      <li data-i18n-html="__s_ios3">Ouvrez l’application et acceptez les conditions affichées.</li>
+      <li data-i18n-html="__s_ios4">Saisissez les informations de notre message — le code d’activation, ou l’adresse du serveur avec votre nom d’utilisateur et votre mot de passe.</li>
+      <li data-i18n-html="__s_ios5">Vos chaînes se chargent et vous êtes prêt.</li>
+    </ol>
+    <p class="note" data-i18n-html="__n_ios"><b>À noter :</b> Apple renomme ou retire parfois ces lecteurs. Si vous ne trouvez pas ce nom exact, écrivez-nous et nous vous dirons lequel est actuellement disponible.</p>
+  </section>
+
+  <section class="dev" id="appletv">
+    <div class="dev-h">
+      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M9 21h6"></path></svg></span>
+      <h2>Apple TV</h2>
+      <span class="dev-app">App Store → IPTV Smarters Player Lite</span>
+    </div>
+    <ol class="steps">
+      <li data-i18n-html="__s_appletv1">Ouvrez l’<strong dir="ltr">App Store</strong> de votre Apple TV. Il faut une Apple TV de 4ᵉ génération ou plus récente.</li>
+      <li data-i18n-html="__s_appletv2">Cherchez <strong>IPTV Smarters Player Lite</strong> et installez-le.</li>
+      <li data-i18n-html="__s_appletv3">Ouvrez l’application et saisissez les informations de notre message.</li>
+      <li data-i18n-html="__s_appletv4">Taper avec la télécommande Apple TV est lent — vous pouvez utiliser le clavier de votre iPhone lorsqu’il vous le propose.</li>
+      <li data-i18n-html="__s_appletv5">Attendez la liste des chaînes, puis regardez.</li>
+    </ol>
+  </section>
+
+  <section class="dev" id="computer">
+    <div class="dev-h">
+      <span class="dev-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg></span>
+      <h2>Windows et Mac</h2>
+      <span class="dev-app">VLC ou IPTV Smarters for PC</span>
+    </div>
+    <ol class="steps">
+      <li data-i18n-html="__s_computer1">Installez <strong>VLC Media Player</strong> depuis videolan.org, ou <strong>IPTV Smarters for PC</strong> si vous voulez une vraie interface TV avec guide des programmes.</li>
+      <li data-i18n-html="__s_computer2">Dans VLC, ouvrez <strong dir="ltr">Media → Open Network Stream</strong>. Dans IPTV Smarters, choisissez d’ajouter un nouvel utilisateur.</li>
+      <li data-i18n-html="__s_computer3">Collez le lien de playlist que nous vous avons envoyé, ou saisissez l’adresse du serveur avec votre nom d’utilisateur et votre mot de passe.</li>
+      <li data-i18n-html="__s_computer4">La liste des chaînes s’ouvre. Dans VLC, enregistrez-la en favori pour y accéder en un clic la prochaine fois.</li>
+    </ol>
+    <p class="note" data-i18n-html="__n_computer"><b>À noter :</b> VLC lit les chaînes mais n’a ni guide des programmes ni replay. Pour l’expérience complète sur ordinateur, utilisez IPTV Smarters.</p>
+  </section>
+
+</main>
+
+<section class="tr">
+  <h2>Si quelque chose ne va pas</h2>
+  <div class="tr-grid">
+    <div class="tr-c">
+      <b>L’image se coupe sans arrêt</b>
+      <p>C’est presque toujours la connexion, pas le service. Essayez un câble plutôt que le Wi-Fi, ou rapprochez-vous de la box. Si cela n’arrive que sur une chaîne, dites-nous laquelle — nous la vérifierons de notre côté.</p>
+    </div>
+    <div class="tr-c">
+      <b>Il dit que l’identifiant est incorrect</b>
+      <p>Vérifiez qu’une majuscule ou un espace ne s’est pas glissé pendant la saisie. Copiez-collez depuis notre message WhatsApp plutôt que de taper. Si cela refuse toujours, écrivez-nous — nous vous le renverrons.</p>
+    </div>
+    <div class="tr-c">
+      <b>Une chaîne que je veux n’est pas là</b>
+      <p>Les grilles sont définies par la plateforme et évoluent. Envoyez-nous le nom de la chaîne et nous vous dirons si elle est diffusée et où la trouver dans la liste.</p>
+    </div>
+    <div class="tr-c">
+      <b>Rien ne se charge du tout</b>
+      <p>Certains fournisseurs d’accès ralentissent le streaming aux heures de pointe. Redémarrez la box, puis réessayez. Si rien ne bouge, écrivez-nous en précisant votre appareil et ce que vous voyez à l’écran.</p>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="band-in">
+    <h3>Vous préférez qu’on le fasse avec vous ?</h3>
+    <p>Écrivez-nous et nous vous guiderons étape par étape, sur votre appareil, pendant que vous suivez. L’aide à l’installation est comprise dans chaque abonnement — rien de plus à payer.</p>
+    <div class="band-btns">
+      <a class="btn btn-blue btn-lg" href="https://wa.me/212699764804" data-wa-link="">Écrivez-nous sur WhatsApp</a>
+      <a class="btn btn-ghost btn-lg" href="index.html#order">Lancer le test gratuit de 24 h</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>© <span id="yr">2026</span> Swift Channels · <span>L’aide à l’installation est comprise dans chaque offre</span></span>
+  <span><a href="index.html">swiftchannels.com</a> · <a href="channels.html">Chaînes</a> · <a href="legal.html">Conditions et confidentialité</a></span>
+</footer>
+
+<script>window.PAGE_LANG='fr';</script><script src="../assets/i18n.js"></script>
+<script src="../assets/install-i18n.js"></script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.querySelector('[data-wa-link]').href = 'https://wa.me/212699764804';
+window.i18n.boot({
+  skip: '#yr',
+  titleKey: '__in_title',
+  descKey: '__in_desc',
+  lang: 'en'
+});
+</script>
+
+
+</body></html>

@@ -17,6 +17,7 @@ fr: {
   '__ch_desc': 'Toutes les chaînes de Swift Channels — plus de 8 000 chaînes en direct dans 54 pays, avec recherche par nom ou par pays.',
   '__ch_h1': 'Toutes les chaînes,<br>au <span class="grad">même endroit</span>.',
   'Channel list': 'Liste des chaînes',
+  'Setup guide': 'Guide d’installation',
   "Browse by country or search for the channel you can't do without. This is the full line-up carried on the platform — the same list on every plan.":
     'Parcourez par pays ou cherchez la chaîne dont vous ne pouvez pas vous passer. Voici la grille complète diffusée sur la plateforme — la même pour toutes les offres.',
     '__ch_rail': 'Pays',
@@ -59,6 +60,7 @@ es: {
   '__ch_desc': 'Todos los canales de Swift Channels — más de 8.000 canales en directo de 54 países, con búsqueda por nombre o país.',
   '__ch_h1': 'Todos los canales,<br>en <span class="grad">un solo sitio</span>.',
   'Channel list': 'Lista de canales',
+  'Setup guide': 'Guía de instalación',
   "Browse by country or search for the channel you can't do without. This is the full line-up carried on the platform — the same list on every plan.":
     'Navega por país o busca el canal del que no puedes prescindir. Esta es la parrilla completa que ofrece la plataforma — la misma en todos los planes.',
     '__ch_rail': 'Países',
@@ -100,6 +102,7 @@ de: {
   '__ch_desc': 'Alle Sender von Swift Channels — über 8.000 Live-Sender aus 54 Ländern, durchsuchbar nach Name oder Land.',
   '__ch_h1': 'Alle Sender,<br>an <span class="grad">einem Ort</span>.',
   'Channel list': 'Senderliste',
+  'Setup guide': 'Installationsanleitung',
   "Browse by country or search for the channel you can't do without. This is the full line-up carried on the platform — the same list on every plan.":
     'Nach Land stöbern oder den Sender suchen, auf den Sie nicht verzichten wollen. Das ist die vollständige Belegung der Plattform — in jedem Tarif dieselbe.',
     '__ch_rail': 'Länder',
@@ -141,6 +144,7 @@ ar: {
   '__ch_desc': 'كل قنوات سويفت تشانلز — أكثر من 8000 قناة مباشرة من 54 دولة، مع البحث بالاسم أو بالدولة.',
   '__ch_h1': 'كل القنوات،<br>في <span class="grad">مكان واحد</span>.',
   'Channel list': 'قائمة القنوات',
+  'Setup guide': 'دليل التثبيت',
   "Browse by country or search for the channel you can't do without. This is the full line-up carried on the platform — the same list on every plan.":
     'تصفّح حسب الدولة أو ابحث عن القناة التي لا تستغني عنها. هذه هي الشبكة الكاملة المتوفرة على المنصة — وهي نفسها في كل الباقات.',
     '__ch_rail': 'الدول',

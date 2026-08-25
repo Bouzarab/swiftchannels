@@ -43,7 +43,8 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
   const PAGES = [
     { file:'index.html', ready:() => window.i18n && document.querySelector('.plan') },
     { file:'legal.html', ready:() => window.i18n && document.querySelector('.who') },
-    { file:'channels.html', ready:() => window.i18n && document.querySelector('.ct') }
+    { file:'channels.html', ready:() => window.i18n && document.querySelector('.ct') },
+    { file:'install.html', ready:() => window.i18n && document.querySelector('.dev') }
   ];
 
   for (const L of LANGS.filter(l => l.folder))
@@ -68,7 +69,7 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
 
       /* The page now lives one folder down, so relative paths need ../ —
          except links to pages that also have a copy in this folder. */
-      const SAME_FOLDER = ['legal.html', 'index.html', 'channels.html'];
+      const SAME_FOLDER = ['legal.html', 'index.html', 'channels.html', 'install.html'];
       document.querySelectorAll('[src],[href]').forEach(el => {
         for (const attr of ['src','href']) {
           const v = el.getAttribute(attr);
@@ -166,6 +167,11 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
   ).join('\n') +
   `\n      <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('')}legal.html"/>`;
 
+  const installAlternates = LANGS.map(l =>
+    `      <xhtml:link rel="alternate" hreflang="${l.code}" href="${urlFor(l.folder)}install.html"/>`
+  ).join('\n') +
+  `\n      <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('')}install.html"/>`;
+
   const channelsAlternates = LANGS.map(l =>
     `      <xhtml:link rel="alternate" hreflang="${l.code}" href="${urlFor(l.folder)}channels.html"/>`
   ).join('\n') +
@@ -192,6 +198,13 @@ ${channelsAlternates}
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>`).join('\n') + '\n' +
+  LANGS.map(l => `  <url>
+    <loc>${urlFor(l.folder)}install.html</loc>
+${installAlternates}
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>`).join('\n');
 
   fs.writeFileSync(path.join(ROOT,'sitemap.xml'),
