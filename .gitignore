@@ -2,3 +2,5 @@
 node_modules/
 .DS_Store
 channel-name-changes.txt
+CLAUDE.md
+_to_delete/
