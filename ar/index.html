@@ -575,6 +575,112 @@ footer{padding:58px 0 40px}
   .nav-in .btn-sm{padding:8px 13px;font-size:12.5px;white-space:nowrap}
 }
 
+/* ═══════════════ ONE-AT-A-TIME CARD FLOW ═══════════════ */
+section[id]{scroll-margin-top:86px}
+.flow{position:relative;margin-top:38px}
+.flow-track{display:flex;gap:clamp(14px,2vw,26px);overflow-x:auto;overflow-y:hidden;
+  scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:38px 0 34px;
+  scrollbar-width:none;-ms-overflow-style:none}
+.flow-track::-webkit-scrollbar{display:none}
+.flow-track::before,.flow-track::after{content:'';flex:0 0 calc(50% - min(18.5vw,196px))}
+
+.fc{position:relative;flex:0 0 auto;width:clamp(252px,37vw,392px);aspect-ratio:3/4;
+  border-radius:30px;overflow:hidden;isolation:isolate;scroll-snap-align:center;
+  background:#070C1C;
+  transform:scale(.82) translateY(6px);opacity:.34;filter:saturate(.45) brightness(.8);
+  transition:transform .7s var(--ease),opacity .7s var(--ease),
+             filter .7s var(--ease),box-shadow .7s var(--ease)}
+.fc::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  padding:1px;background:linear-gradient(150deg,rgba(255,255,255,.42),rgba(255,255,255,.05) 38%,
+    transparent 62%,rgba(255,255,255,.16));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  mask-composite:exclude;opacity:.5;transition:opacity .7s var(--ease)}
+.fc.is-on{transform:none;opacity:1;filter:none;
+  box-shadow:0 54px 100px -38px rgba(0,0,0,.96),0 0 90px -40px var(--glow)}
+.fc.is-on::after{opacity:1}
+
+.fc-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3;
+  transform:scale(1.02)}
+.fc.is-on .fc-img{animation:kenburns 14s ease-out forwards}
+@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.13)}}
+.fc-tint{position:absolute;inset:0;z-index:-2;background-image:var(--tint)}
+.fc-scrim{position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(124deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,.02) 32%,transparent 54%),
+  linear-gradient(177deg,rgba(4,8,20,0) 0%,rgba(4,8,20,.26) 38%,
+                  rgba(4,8,20,.82) 74%,rgba(4,8,20,.96) 100%)}
+
+.fc-in{height:100%;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:clamp(20px,2.4vw,30px)}
+.fc-i{position:absolute;top:clamp(17px,2.1vw,24px);inset-inline-start:clamp(17px,2.1vw,24px);
+  width:46px;height:46px;border-radius:15px;display:grid;place-items:center;
+  background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);
+  backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);
+  box-shadow:0 8px 22px -10px rgba(0,0,0,.8)}
+.fc-i svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round}
+.fc-tag{position:absolute;top:clamp(17px,2.1vw,24px);inset-inline-end:clamp(17px,2.1vw,24px);
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:#F2F7FF;background:rgba(10,18,38,.42);border:1px solid rgba(255,255,255,.26);
+  border-radius:100px;padding:6px 12px;
+  backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%)}
+.fc h3{font-family:var(--display);font-weight:800;letter-spacing:-.022em;
+  font-size:clamp(19px,2.3vw,24px);line-height:1.16;color:#fff;
+  text-shadow:0 2px 20px rgba(0,0,0,.55)}
+.fc p{margin-top:9px;font-size:14.5px;line-height:1.52;color:rgba(228,238,255,.88);
+  text-shadow:0 1px 14px rgba(0,0,0,.6)}
+
+.flow-nav{position:absolute;top:calc(50% - 2px);z-index:6;width:50px;height:50px;border-radius:50%;
+  display:grid;place-items:center;cursor:pointer;color:var(--ice);
+  background:rgba(8,15,34,.62);border:1px solid rgba(255,255,255,.2);
+  backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);
+  box-shadow:0 16px 34px -16px rgba(0,0,0,.9);
+  transition:background .3s,border-color .3s,transform .35s var(--ease)}
+.flow-nav:hover{background:rgba(47,107,255,.42);border-color:var(--blue-hi);transform:scale(1.08)}
+.flow-nav svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;
+  stroke-linecap:round;stroke-linejoin:round}
+.flow-nav.prev{inset-inline-start:max(10px,calc(50% - min(18.5vw,196px) - 78px))}
+.flow-nav.next{inset-inline-end:max(10px,calc(50% - min(18.5vw,196px) - 78px))}
+html[dir="rtl"] .flow-nav svg{transform:scaleX(-1)}
+
+.flow-foot{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:6px}
+.flow-dots{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.flow-dots button{position:relative;width:8px;height:8px;padding:0;border:none;border-radius:50%;
+  cursor:pointer;background:rgba(255,255,255,.24);overflow:hidden;
+  transition:background .35s,width .45s var(--ease)}
+.flow-dots button:hover{background:rgba(255,255,255,.5)}
+.flow-dots button[aria-current="true"]{width:34px;border-radius:100px;background:rgba(255,255,255,.2)}
+.flow-dots button i{position:absolute;inset-block:0;inset-inline-start:0;display:block;width:0;
+  border-radius:inherit;background:linear-gradient(90deg,var(--blue-hi),var(--cyan))}
+.flow-dots button[aria-current="true"] i{width:100%}
+.flow-dots button[aria-current="true"].run i{animation:dotfill var(--auto,5200ms) linear forwards}
+@keyframes dotfill{from{width:0}to{width:100%}}
+
+.flow-hint{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);
+  transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.flow-hint svg{width:26px;height:12px;stroke:currentColor;fill:none;stroke-width:1.6;
+  stroke-linecap:round;stroke-linejoin:round;animation:nudge 1.9s var(--ease) infinite}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(7px)}}
+html[dir="rtl"] .flow-hint svg{transform:scaleX(-1)}
+html[dir="rtl"] .flow-hint svg{animation-name:nudge-rtl}
+@keyframes nudge-rtl{0%,100%{transform:scaleX(-1) translateX(0)}
+  50%{transform:scaleX(-1) translateX(7px)}}
+.flow.touched .flow-hint{opacity:0;transform:translateY(6px);pointer-events:none}
+
+@media(max-width:760px){
+  .flow-track::before,.flow-track::after{flex:0 0 calc(50% - min(42vw,172px))}
+  .fc{width:min(84vw,344px);aspect-ratio:4/5}
+  .flow-nav{display:none}
+  .flow-track{padding:26px 0 26px}
+}
+@media (prefers-reduced-motion:reduce){
+  .flow-track{scroll-behavior:auto}
+  .fc.is-on .fc-img{animation:none}
+  .flow-hint svg{animation:none}
+  .flow-dots button[aria-current="true"].run i{animation:none;width:100%}
+}
+
 /* ═══════════════ RIGHT-TO-LEFT (Arabic) ═══════════════ */
 html[dir="rtl"] body{font-family:'Tajawal',var(--body);letter-spacing:0}
 html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] h4,
@@ -852,60 +958,95 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
 <!-- ══════════════ INCLUDED ══════════════ -->
 <section id="included" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head rv">
+    <div class="sec-head rv" style="text-align:center;max-width:62ch;margin-inline:auto">
       <span class="eyebrow">ما الذي يشمله</span>
-      <h2>المكتبة كاملة، في كل باقة</h2>
-      <p>لا شيء محجوب في الباقة الأرخص ولا شيء يُباع كإضافة. الرياضة والأفلام والأخبار والترفيه تأتي كلها على الخط نفسه.</p>
-    </div>
-
-    <div class="incl">
-      <div class="card rv">
-        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 3v18M3 12h18M5 6c4 3 10 3 14 0M5 18c4-3 10-3 14 0"></path></svg></div>
-        <h3>أكثر من 8,000 قناة مباشرة</h3>
-        <p>رياضة وأفلام وأخبار وترفيه من أكثر من 50 دولة، في قائمة قنوات واحدة.</p>
-      </div>
-      <div class="card rv d1">
-        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M9 9l6 3-6 3z"></path></svg></div>
-        <h3>أكثر من 50,000 عند الطلب</h3>
-        <p>أفلام ومسلسلات كاملة تبدأها متى شئت، وليس فقط وقت العرض.</p>
-      </div>
-      <div class="card rv d2">
-        <div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M7 5v14M12 9h6M12 13h4"></path></svg></div>
-        <h3>4K و HD و SD</h3>
-        <p>الجودة تتبع المصدر واتصالك، فتبقى الصورة ثابتة في الحالتين.</p>
-      </div>
-      <div class="card rv d3">
-        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 10h18M7 14h4M7 17h7"></path></svg></div>
-        <h3>الدليل وإعادة المشاهدة</h3>
-        <p>دليل برامج كامل مع 7 أيام من إعادة المشاهدة، فالمباراة التي فاتتك البارحة ما زالت موجودة.</p>
-      </div>
-      <div class="card rv d4">
-        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 4.5-3.2 7-8 8-4.8-1-8-3.5-8-8V7z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
-        <h3>تقنية منع التقطيع</h3>
-        <p>توزيع الحمل من جهة المزوّد يمنع توقف البث أثناء المباريات الكبرى.</p>
-      </div>
-      <div class="card rv d5">
-        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg></div>
-        <h3>دعم على مدار الساعة</h3>
-        <p>محادثة واحدة على واتساب للتركيب والتجديد وأي شيء يتوقف عن العمل.</p>
-      </div>
+      <h2>كل شيء، في كل باقة</h2>
+      <p>خط واحد وسعر واحد — رياضة وأفلام وأخبار وترفيه، دون أي انتقاص في الباقة الأرخص ودون إضافات مدفوعة. وتشمل ESPN و Fox Sports و Sky Sports و beIN Sports.</p>
     </div>
   </div>
-</section>
 
-<!-- ══════════════ SPORTS ══════════════ -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">الرياضة المباشرة</span>
-      <h2>كل ليلة مباراة، دون انقطاع</h2>
-      <p>كل القنوات الرياضية الكبرى مشمولة: ESPN و Fox Sports و Sky Sports و beIN Sports، إضافة إلى الرياضة العالمية من أكثر من 50 دولة.</p>
+  <div class="flow" id="flow">
+    <div class="flow-track" id="flowTrack" role="list" aria-label="What's included">
+      <article class="fc" data-k="channels" style="--tint:radial-gradient(126% 88% at 16% 6%,rgba(0,102,220,.58),rgba(0,102,220,.12) 46%,transparent 68%),radial-gradient(118% 82% at 90% 24%,rgba(40,180,255,.40),transparent 64%)">
+        <img class="fc-img" src="../assets/cards/channels.webp" alt="" width="900" height="1200" loading="lazy" decoding="async">
+        <span class="fc-tint"></span><span class="fc-scrim"></span>
+        <span class="fc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.5 6.5c3.6 2.6 9.4 2.6 13 0M5.5 17.5c3.6-2.6 9.4-2.6 13 0"/></svg></span>
+        <span class="fc-tag">مشمول</span>
+        <div class="fc-in"><h3>أكثر من 8,000 قناة مباشرة</h3><p>رياضة وأفلام وأخبار وترفيه من أكثر من 50 دولة، في قائمة قنوات واحدة.</p></div>
+      </article>
+      <article class="fc" data-k="vod" style="--tint:radial-gradient(126% 88% at 16% 6%,rgba(208,118,68,.58),rgba(208,118,68,.12) 46%,transparent 68%),radial-gradient(118% 82% at 90% 24%,rgba(190,32,22,.40),transparent 64%)">
+        <img class="fc-img" src="../assets/cards/vod.webp" alt="" width="900" height="1200" loading="lazy" decoding="async">
+        <span class="fc-tint"></span><span class="fc-scrim"></span>
+        <span class="fc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M10 9.2l5.5 2.8L10 14.8z"/></svg></span>
+        <span class="fc-tag">مشمول</span>
+        <div class="fc-in"><h3>أكثر من 50,000 عند الطلب</h3><p>أفلام ومسلسلات كاملة تبدأها متى شئت، وليس فقط وقت العرض.</p></div>
+      </article>
+      <article class="fc" data-k="quality" style="--tint:radial-gradient(126% 88% at 16% 6%,rgba(200,155,20,.58),rgba(200,155,20,.12) 46%,transparent 68%),radial-gradient(118% 82% at 90% 24%,rgba(255,205,90,.40),transparent 64%)">
+        <img class="fc-img" src="../assets/cards/quality.webp" alt="" width="900" height="1200" loading="lazy" decoding="async">
+        <span class="fc-tint"></span><span class="fc-scrim"></span>
+        <span class="fc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M7 5v14M12 9.5h6M12 13.5h4"/></svg></span>
+        <span class="fc-tag">مشمول</span>
+        <div class="fc-in"><h3>4K و HD و SD</h3><p>الجودة تتبع المصدر واتصالك، فتبقى الصورة ثابتة في الحالتين.</p></div>
+      </article>
+      <article class="fc" data-k="guide" style="--tint:radial-gradient(126% 88% at 16% 6%,rgba(247,0,160,.58),rgba(247,0,160,.12) 46%,transparent 68%),radial-gradient(118% 82% at 90% 24%,rgba(150,45,255,.40),transparent 64%)">
+        <img class="fc-img" src="../assets/cards/guide.webp" alt="" width="900" height="1200" loading="lazy" decoding="async">
+        <span class="fc-tint"></span><span class="fc-scrim"></span>
+        <span class="fc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M8 3v4M16 3v4M3 10h18M7 14h4M7 17.2h7"/></svg></span>
+        <span class="fc-tag">مشمول</span>
+        <div class="fc-in"><h3>الدليل وإعادة المشاهدة</h3><p>دليل برامج كامل مع 7 أيام من إعادة المشاهدة، فالمباراة التي فاتتك البارحة ما زالت موجودة.</p></div>
+      </article>
+      <article class="fc" data-k="antifreeze" style="--tint:radial-gradient(126% 88% at 16% 6%,rgba(0,140,215,.58),rgba(0,140,215,.12) 46%,transparent 68%),radial-gradient(118% 82% at 90% 24%,rgba(96,205,255,.40),transparent 64%)">
+        <img class="fc-img" src="../assets/cards/antifreeze.webp" alt="" width="900" height="1200" loading="lazy" decoding="async">
+        <span class="fc-tint"></span><span class="fc-scrim"></span>
+        <span class="fc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3.8v5.9c0 4.4-3.2 6.9-8 8.3-4.8-1.4-8-3.9-8-8.3V6.8z"/><path d="M9 12.2l2.1 2.1 3.9-4"/></svg></span>
+        <span class="fc-tag">مشمول</span>
+        <div class="fc-in"><h3>تقنية منع التقطيع</h3><p>توزيع الحمل من جهة المزوّد يمنع توقف البث أثناء المباريات الكبرى.</p></div>
+      </article>
+      <article class="fc" data-k="support" style="--tint:radial-gradient(126% 88% at 16% 6%,rgba(47,107,255,.58),rgba(47,107,255,.12) 46%,transparent 68%),radial-gradient(118% 82% at 90% 24%,rgba(73,217,255,.40),transparent 64%)">
+        <img class="fc-img" src="../assets/cards/support.webp" alt="" width="900" height="1200" loading="lazy" decoding="async">
+        <span class="fc-tint"></span><span class="fc-scrim"></span>
+        <span class="fc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 14.6a2.2 2.2 0 01-2.2 2.2H8.2L3.5 20.5V5.4A2.2 2.2 0 015.7 3.2h13.1A2.2 2.2 0 0121 5.4z"/></svg></span>
+        <span class="fc-tag">مشمول</span>
+        <div class="fc-in"><h3>دعم على مدار الساعة</h3><p>محادثة واحدة على واتساب للتركيب والتجديد وأي شيء يتوقف عن العمل.</p></div>
+      </article>
+      <article class="fc" data-k="football" style="--tint:radial-gradient(126% 88% at 16% 6%,rgba(0,112,192,.58),rgba(0,112,192,.12) 46%,transparent 68%),radial-gradient(118% 82% at 90% 24%,rgba(62,192,132,.40),transparent 64%)">
+        <img class="fc-img" src="../assets/cards/football.webp" alt="" width="900" height="1200" loading="lazy" decoding="async">
+        <span class="fc-tint"></span><span class="fc-scrim"></span>
+        <span class="fc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4l3.3 2.4-1.3 3.9H10l-1.3-3.9z"/><path d="M12 3v4.4M4.2 9.8l4.5 0M19.8 9.8l-4.5 0M7.3 19.5L10 13.7M16.7 19.5L14 13.7"/></svg></span>
+        <span class="fc-tag">رياضة</span>
+        <div class="fc-in"><h3>كرة القدم</h3><p>البريميرليغ والليغا والكالتشيو والبوندسليغا والليغ 1 ودوري الأبطال والبطولة المغربية.</p></div>
+      </article>
+      <article class="fc" data-k="usleagues" style="--tint:radial-gradient(126% 88% at 16% 6%,rgba(216,72,82,.58),rgba(216,72,82,.12) 46%,transparent 68%),radial-gradient(118% 82% at 90% 24%,rgba(42,124,212,.40),transparent 64%)">
+        <img class="fc-img" src="../assets/cards/usleagues.webp" alt="" width="900" height="1200" loading="lazy" decoding="async">
+        <span class="fc-tint"></span><span class="fc-scrim"></span>
+        <span class="fc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="9" ry="5.6" transform="rotate(-38 12 12)"/><path d="M9.2 14.8l5.6-5.6M10.6 11l1.4 1.4M13 8.6l1.4 1.4"/></svg></span>
+        <span class="fc-tag">رياضة</span>
+        <div class="fc-in"><h3>الدوريات الأمريكية</h3><p>NFL و NBA و MLB و NHL طوال الموسم العادي والأدوار الإقصائية.</p></div>
+      </article>
+      <article class="fc" data-k="combat" style="--tint:radial-gradient(126% 88% at 16% 6%,rgba(172,216,80,.58),rgba(172,216,80,.12) 46%,transparent 68%),radial-gradient(118% 82% at 90% 24%,rgba(58,182,172,.40),transparent 64%)">
+        <img class="fc-img" src="../assets/cards/combat.webp" alt="" width="900" height="1200" loading="lazy" decoding="async">
+        <span class="fc-tint"></span><span class="fc-scrim"></span>
+        <span class="fc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 10.2V6.6A2.4 2.4 0 018.9 4.2h5.4a3.3 3.3 0 013.3 3.3v3.6a4.6 4.6 0 01-4.6 4.6h-1.8a4.7 4.7 0 01-4.7-4.7z"/><path d="M7.6 15.6v2.1a2.1 2.1 0 002.1 2.1h4.3a2.1 2.1 0 002.1-2.1v-2.2"/></svg></span>
+        <span class="fc-tag">رياضة</span>
+        <div class="fc-in"><h3>رياضات القتال</h3><p>UFC والملاكمة، بما فيها نزالات الدفع لكل مشاهدة، ليلة إقامتها.</p></div>
+      </article>
+      <article class="fc" data-k="everything" style="--tint:radial-gradient(126% 88% at 16% 6%,rgba(24,104,206,.58),rgba(24,104,206,.12) 46%,transparent 68%),radial-gradient(118% 82% at 90% 24%,rgba(62,164,224,.40),transparent 64%)">
+        <img class="fc-img" src="../assets/cards/everything.webp" alt="" width="900" height="1200" loading="lazy" decoding="async">
+        <span class="fc-tint"></span><span class="fc-scrim"></span>
+        <span class="fc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4l2.5 5.4 5.9.7-4.4 4 1.2 5.8-5.2-3-5.2 3 1.2-5.8-4.4-4 5.9-.7z"/></svg></span>
+        <span class="fc-tag">رياضة</span>
+        <div class="fc-in"><h3>وكل ما عدا ذلك</h3><p>التنس وسباقات السيارات والدراجات والرغبي وألعاب القوى والكريكت على القنوات العالمية.</p></div>
+      </article>
     </div>
-    <div class="incl">
-      <div class="card rv"><h3>كرة القدم</h3><p>البريميرليغ والليغا والكالتشيو والبوندسليغا والليغ 1 ودوري الأبطال والبطولة المغربية.</p></div>
-      <div class="card rv d1"><h3>الدوريات الأمريكية</h3><p>NFL و NBA و MLB و NHL طوال الموسم العادي والأدوار الإقصائية.</p></div>
-      <div class="card rv d2"><h3>رياضات القتال</h3><p>UFC والملاكمة، بما فيها نزالات الدفع لكل مشاهدة، ليلة إقامتها.</p></div>
-      <div class="card rv d3"><h3>وكل ما عدا ذلك</h3><p>التنس وسباقات السيارات والدراجات والرغبي وألعاب القوى والكريكت على القنوات العالمية.</p></div>
+    <button class="flow-nav prev" type="button" id="flowPrev" aria-label="السابق">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="flow-nav next" type="button" id="flowNext" aria-label="التالي">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="flow-foot">
+      <div class="flow-dots" id="flowDots"></div>
+      <span class="flow-hint" id="flowHint">اسحب
+        <svg viewBox="0 0 30 12" aria-hidden="true"><path d="M1 6h26M22 1.5L27.5 6 22 10.5"/></svg>
+      </span>
     </div>
   </div>
 </section>
@@ -1723,6 +1864,120 @@ syncPlanUI();
 /* This file is the English source. build.js generates fr/ es/ de/ ar/ from it —
    those pages set window.PAGE_LANG, which switches the engine to pre-rendered
    mode automatically. Nothing here needs changing per language. */
+/* ═══════════ one-at-a-time card flow ═══════════ */
+(function(){
+  const flow  = document.getElementById('flow');
+  const track = document.getElementById('flowTrack');
+  if(!track) return;
+  const cards  = [...track.querySelectorAll('.fc')];
+  const dotBox = document.getElementById('flowDots');
+  const AUTO   = 5200;
+  const calm   = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let at = 0, timer = null, held = 0, seen = false;
+
+  /* generated pages are serialised after this script has run once —
+     clear anything it left behind before building it again */
+  dotBox.innerHTML = '';
+  flow.classList.remove('touched');
+  cards.forEach((c,i) => {
+    c.setAttribute('role','listitem');
+    const d = document.createElement('button');
+    d.type = 'button';
+    d.setAttribute('aria-label', String(i + 1));
+    d.innerHTML = '<i></i>';
+    d.addEventListener('click', () => { touched(); goTo(i); });
+    dotBox.appendChild(d);
+  });
+  const dots = [...dotBox.children];
+  dotBox.style.setProperty('--auto', AUTO + 'ms');
+
+  /* the card nearest the middle of the strip is the live one */
+  function mark(){
+    const mid = track.getBoundingClientRect().left + track.clientWidth / 2;
+    let best = 0, bestD = Infinity;
+    cards.forEach((c,i) => {
+      const r = c.getBoundingClientRect();
+      const d = Math.abs(r.left + r.width / 2 - mid);
+      if(d < bestD){ bestD = d; best = i; }
+    });
+    if(best === at && cards[at].classList.contains('is-on')) return;
+    at = best;
+    cards.forEach((c,i) => c.classList.toggle('is-on', i === at));
+    dots.forEach((d,i) => {
+      d.setAttribute('aria-current', String(i === at));
+      d.classList.remove('run');
+    });
+    if(timer){ void dots[at].offsetWidth; dots[at].classList.add('run'); }
+  }
+
+  /* a measured delta scrolls correctly in both reading directions */
+  function goTo(i){
+    const c = cards[(i + cards.length) % cards.length];
+    const t = track.getBoundingClientRect(), r = c.getBoundingClientRect();
+    track.scrollBy({ left: (r.left + r.width / 2) - (t.left + t.width / 2),
+                     behavior: calm ? 'auto' : 'smooth' });
+  }
+
+  function touched(){ flow.classList.add('touched'); held = Date.now(); }
+
+  function play(){
+    if(calm || timer) return;
+    timer = setInterval(() => {
+      if(Date.now() - held < 7000) return;
+      if(document.hidden) return;
+      goTo(at + 1);
+    }, AUTO);
+    void dots[at].offsetWidth; dots[at].classList.add('run');
+  }
+  function pause(){
+    if(!timer) return;
+    clearInterval(timer); timer = null;
+    dots.forEach(d => d.classList.remove('run'));
+  }
+
+  document.getElementById('flowPrev').addEventListener('click', () => { touched(); goTo(at - 1); });
+  document.getElementById('flowNext').addEventListener('click', () => { touched(); goTo(at + 1); });
+  flow.addEventListener('pointerenter', pause);
+  flow.addEventListener('pointerleave', play);
+  flow.addEventListener('focusin', pause);
+  flow.addEventListener('focusout', play);
+  track.addEventListener('pointerdown', touched);
+  track.addEventListener('wheel', touched, { passive:true });
+
+  let tick;
+  track.addEventListener('scroll', () => {
+    if(tick) return;
+    tick = requestAnimationFrame(() => { tick = null; mark(); });
+  }, { passive:true });
+  addEventListener('resize', mark);
+
+  track.addEventListener('keydown', e => {
+    if(e.key === 'ArrowRight'){ e.preventDefault(); touched(); goTo(at + 1); }
+    if(e.key === 'ArrowLeft'){ e.preventDefault(); touched(); goTo(at - 1); }
+  });
+  track.tabIndex = 0;
+
+  /* land on the first card whatever order the fonts and images settle in */
+  function reset(tries){
+    const t = track.getBoundingClientRect(), r = cards[0].getBoundingClientRect();
+    const d = (r.left + r.width / 2) - (t.left + t.width / 2);
+    if(Math.abs(d) > 1) track.scrollBy({ left:d, behavior:'auto' });
+    mark();
+    if(tries > 0) requestAnimationFrame(() => reset(tries - 1));
+  }
+  reset(4);
+  if(document.readyState === 'complete') setTimeout(() => reset(2), 90);
+  else addEventListener('load', () => setTimeout(() => reset(2), 90));
+
+  /* only run while the section is actually on screen */
+  new IntersectionObserver(es => {
+    es.forEach(e => {
+      if(e.isIntersecting){ seen = true; play(); } else pause();
+    });
+  }, { threshold: 0.28 }).observe(flow);
+  document.addEventListener('visibilitychange', () => document.hidden ? pause() : (seen && play()));
+})();
+
 window.i18n.boot({
   skip: '#marq,#planCards,#faqList,#plan,#pay',
   lang: 'en',
