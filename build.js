@@ -45,7 +45,8 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
     { file:'legal.html', ready:() => window.i18n && document.querySelector('.who') },
     { file:'channels.html', ready:() => window.i18n && document.querySelector('.ct') },
     { file:'install.html', ready:() => window.i18n && document.querySelector('.ri') },
-    { file:'order.html', ready:() => window.i18n && document.getElementById('send') }
+    { file:'order.html', ready:() => window.i18n && document.getElementById('send') },
+    { file:'thank-you.html', ready:() => window.i18n && document.querySelector('.up') }
   ];
 
   for (const L of LANGS.filter(l => l.folder))

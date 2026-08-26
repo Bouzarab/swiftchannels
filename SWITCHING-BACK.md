@@ -8,66 +8,19 @@ Everything here is temporary. When you have the new number, read
 
 ---
 
-## 1. Finish the Google Form (one-time, ~15 minutes)
+## 1. The Google Form — done
 
-Until this is done, the send button falls back to opening the customer's own
-email app addressed to `contact@swiftchannels.com`. That works, but it depends
-on them having an email app set up, and nothing is collected in a sheet — so
-do this soon.
+Orders now post to the Google Form and land in its Google Sheet. If `action`
+in `assets/order-config.js` is ever emptied, the send button falls back to
+opening the customer's own email app addressed to `contact@swiftchannels.com`,
+so nothing breaks — it just stops collecting into the sheet.
 
-**Build the form**
+**Step-by-step instructions are in [GOOGLE-FORM-SETUP.md](GOOGLE-FORM-SETUP.md).**
 
-1. Go to <https://forms.google.com> and start a blank form. Call it
-   *Swift Channels — orders*.
-2. Add **twelve short-answer questions**, in this order and with these titles:
-
-   `Reference`, `Name`, `Phone`, `Email`, `Plan`, `Devices`,
-   `Watch on`, `MAC`, `Pay by`, `Total`, `Notes`, `Language`
-
-   Do not mark any of them required — a customer who leaves the notes box
-   empty must still get through.
-3. Click **Responses → Link to Sheets → Create new spreadsheet**. That sheet is
-   your CSV; **File → Download → CSV** any time you want it as a file.
-4. Still under **Responses**, open the three-dot menu and tick
-   **Get email notifications for new responses**. Make sure the Google account
-   you built the form with is the one that reads `contact@swiftchannels.com`,
-   or set up forwarding.
-
-**Find the twelve field ids**
-
-1. Click **Send → link icon → copy** to get the public form URL, open it.
-2. Right-click the page → **View page source**, then search the source for
-   `entry.` — you will find `entry.123456789` once per question, in the same
-   order as your questions.
-3. Note them down, one per question.
-
-**Paste them into the site**
-
-Open `order.html` and find the `CONFIG` block near the bottom. Fill it in:
-
-```js
-const CONFIG = {
-  email: 'contact@swiftchannels.com',
-  orderForm: {
-    action: 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse',
-    fields: {
-      ref:  'entry.111111111',  name:   'entry.222222222',
-      phone:'entry.333333333',  email:  'entry.444444444',
-      plan: 'entry.555555555',  devices:'entry.666666666',
-      device:'entry.777777777', mac:    'entry.888888888',
-      method:'entry.999999999', total:  'entry.101010101',
-      notes:'entry.111111112',  lang:   'entry.121212121'
-    }
-  }
-};
-```
-
-`YOUR_FORM_ID` is the long string in the form URL between `/d/e/` and
-`/viewform`. The address must end in **`/formResponse`**, not `/viewform`.
-
-Then run `node build.js` so the four translated copies pick up the same
-config, and push. Place a test order yourself and check the row lands in the
-sheet.
+The short version: build a twelve-question Google Form, link it to a sheet,
+read the twelve `entry.` ids off a pre-filled link, and paste them into
+`assets/order-config.js`. That single file is read by all five language
+versions, so there is nothing else to edit and no rebuild to run.
 
 ---
 

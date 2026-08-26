@@ -71,8 +71,8 @@ fr: {
   /* ── thank-you page ── */
   '__ty_title': 'Paiement reçu — une dernière étape',
   '__ty_h1': 'Paiement reçu. <br><span class="grad">Une dernière étape.</span>',
-  "We can't open your line until we can match the payment to you. Send us the receipt on WhatsApp and your login details come straight back — usually within ten minutes.":
-    'Nous ne pouvons ouvrir votre ligne qu’une fois le paiement rattaché à vous. Envoyez-nous le reçu sur WhatsApp et vos identifiants reviennent aussitôt — en général en moins de dix minutes.',
+  "We can't open your line until we can match the payment to you. Email us the receipt and your login details come straight back — usually within ten minutes.":
+    'Nous ne pouvons ouvrir votre ligne qu’une fois le paiement rattaché à vous. Envoyez-nous le reçu par e-mail et vos identifiants reviennent aussitôt — en général en moins de dix minutes.',
   'Your order': 'Votre commande',
   'Name': 'Nom',
   'Payment sent': 'Paiement envoyé',
@@ -490,8 +490,8 @@ de: {
   /* ── thank-you page ── */
   '__ty_title': 'Zahlung erhalten — ein Schritt fehlt',
   '__ty_h1': 'Zahlung erhalten. <br><span class="grad">Ein Schritt fehlt.</span>',
-  "We can't open your line until we can match the payment to you. Send us the receipt on WhatsApp and your login details come straight back — usually within ten minutes.":
-    'Wir können Ihre Leitung erst freischalten, wenn wir die Zahlung Ihnen zuordnen können. Senden Sie uns den Beleg per WhatsApp, und Ihre Zugangsdaten kommen sofort zurück — meist in unter zehn Minuten.',
+  "We can't open your line until we can match the payment to you. Email us the receipt and your login details come straight back — usually within ten minutes.":
+    'Wir können Ihre Leitung erst freischalten, wenn wir die Zahlung Ihnen zuordnen können. Senden Sie uns den Beleg per E-Mail, und Ihre Zugangsdaten kommen sofort zurück — meist in unter zehn Minuten.',
   'Your order': 'Ihre Bestellung',
   'Name': 'Name',
   'Payment sent': 'Zahlung gesendet',
@@ -896,8 +896,8 @@ es: {
   /* ── thank-you page ── */
   '__ty_title': 'Pago recibido — falta un paso',
   '__ty_h1': 'Pago recibido. <br><span class="grad">Falta un paso.</span>',
-  "We can't open your line until we can match the payment to you. Send us the receipt on WhatsApp and your login details come straight back — usually within ten minutes.":
-    'No podemos activar tu línea hasta poder asociar el pago contigo. Envíanos el recibo por WhatsApp y tus datos de acceso vuelven enseguida — normalmente en menos de diez minutos.',
+  "We can't open your line until we can match the payment to you. Email us the receipt and your login details come straight back — usually within ten minutes.":
+    'No podemos activar tu línea hasta poder asociar el pago contigo. Envíanos el recibo por correo y tus datos de acceso vuelven enseguida — normalmente en menos de diez minutos.',
   'Your order': 'Tu pedido',
   'Name': 'Nombre',
   'Payment sent': 'Pago enviado',
@@ -1315,8 +1315,8 @@ ar: {
   /* ── thank-you page ── */
   '__ty_title': 'تم استلام الدفع — خطوة واحدة متبقية',
   '__ty_h1': 'تم استلام الدفع. <br><span class="grad">بقيت خطوة واحدة.</span>',
-  "We can't open your line until we can match the payment to you. Send us the receipt on WhatsApp and your login details come straight back — usually within ten minutes.":
-    'لا يمكننا فتح خطك قبل أن نربط الدفع باسمك. أرسل لنا الإيصال على واتساب وتعود إليك بيانات الدخول فورًا — عادة في أقل من عشر دقائق.',
+  "We can't open your line until we can match the payment to you. Email us the receipt and your login details come straight back — usually within ten minutes.":
+    'لا يمكننا فتح خطك قبل أن نربط الدفع باسمك. أرسل لنا الإيصال بالبريد الإلكتروني وتعود إليك بيانات الدخول فورًا — عادة في أقل من عشر دقائق.',
   'Your order': 'طلبك',
   'Name': 'الاسم',
   'Payment sent': 'تم إرسال الدفع',

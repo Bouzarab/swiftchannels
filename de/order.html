@@ -145,24 +145,11 @@ html[dir="rtl"] .row b{direction:rtl}
 <script>window.PAGE_LANG='de';</script>
 <script src="../assets/i18n.js"></script>
 <script src="../assets/order-i18n.js"></script>
+<script src="../assets/order-config.js"></script>
 <script>
-/* ═══════════════════════════════════════════════════════════════════
-   WHATSAPP IS OFF. Orders are posted to a Google Form, whose responses
-   land in a Google Sheet and are emailed on. See SWITCHING-BACK.md.
-   Fill `action` and the `fields` ids and the button posts straight to
-   the sheet; leave `action` empty and it falls back to the customer's
-   own email app, addressed to CONFIG.email.
-   ═══════════════════════════════════════════════════════════════════ */
-const CONFIG = {
-  email: 'contact@swiftchannels.com',
-  orderForm: {
-    action: '',            /* https://docs.google.com/forms/d/e/FORM_ID/formResponse */
-    fields: {              /* entry.123456789 — one per column of the sheet */
-      ref: '', name: '', phone: '', email: '', plan: '', devices: '',
-      device: '', mac: '', method: '', total: '', notes: '', lang: ''
-    }
-  }
-};
+/* Settings live in assets/order-config.js — edit that one file.
+   See GOOGLE-FORM-SETUP.md. */
+const CONFIG = window.ORDER_CONFIG;
 
 const $ = id => document.getElementById(id);
 $('yr').textContent = new Date().getFullYear();

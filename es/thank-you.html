@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Payment received — one step left</title>
+<title>Pago recibido — falta un paso</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -178,6 +178,13 @@ html[dir="rtl"] .steps li{grid-template-columns:30px 1fr}
   .tick svg{stroke-dashoffset:0}
 }
 </style>
+<link rel="canonical" href="https://swiftchannels.com/es/thank-you.html">
+<link rel="alternate" hreflang="en" href="https://swiftchannels.com/thank-you.html">
+<link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/thank-you.html">
+<link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/thank-you.html">
+<link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/thank-you.html">
+<link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/thank-you.html">
+<link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/thank-you.html">
 </head>
 <body>
 
@@ -190,13 +197,13 @@ html[dir="rtl"] .steps li{grid-template-columns:30px 1fr}
   </a>
   <div class="lang" id="lang">
     <button class="lang-cur" type="button" id="langCur" aria-haspopup="true"
-            aria-expanded="false" aria-label="Language"><img src="assets/flag-en.webp" alt="" width="34" height="34"></button>
+            aria-expanded="false" aria-label="Language"><img src="../assets/flag-es.webp" alt="" width="34" height="34"></button>
     <div class="lang-opts" id="langOpts">
-      <button class="lang-b" type="button" data-lang="en" aria-current="true" aria-label="English" title="English"><img src="assets/flag-en.webp" alt="English" width="34" height="34"></button>
-      <button class="lang-b" type="button" data-lang="fr" aria-current="false" aria-label="Français" title="Français"><img src="assets/flag-fr.webp" alt="Français" width="34" height="34"></button>
-      <button class="lang-b" type="button" data-lang="es" aria-current="false" aria-label="Español" title="Español"><img src="assets/flag-es.webp" alt="Español" width="34" height="34"></button>
-      <button class="lang-b" type="button" data-lang="de" aria-current="false" aria-label="Deutsch" title="Deutsch"><img src="assets/flag-de.webp" alt="Deutsch" width="34" height="34"></button>
-      <button class="lang-b" type="button" data-lang="ar" aria-current="false" aria-label="العربية" title="العربية"><img src="assets/flag-ar.webp" alt="العربية" width="34" height="34"></button>
+      <button class="lang-b" type="button" data-lang="en" aria-current="false" aria-label="English" title="English" href="../thank-you.html"><img src="../assets/flag-en.webp" alt="English" width="34" height="34"></button>
+      <button class="lang-b" type="button" data-lang="fr" aria-current="false" aria-label="Français" title="Français" href="../fr/thank-you.html"><img src="../assets/flag-fr.webp" alt="Français" width="34" height="34"></button>
+      <button class="lang-b" type="button" data-lang="es" aria-current="true" aria-label="Español" title="Español" href="../es/thank-you.html"><img src="../assets/flag-es.webp" alt="Español" width="34" height="34"></button>
+      <button class="lang-b" type="button" data-lang="de" aria-current="false" aria-label="Deutsch" title="Deutsch" href="../de/thank-you.html"><img src="../assets/flag-de.webp" alt="Deutsch" width="34" height="34"></button>
+      <button class="lang-b" type="button" data-lang="ar" aria-current="false" aria-label="العربية" title="العربية" href="../ar/thank-you.html"><img src="../assets/flag-ar.webp" alt="العربية" width="34" height="34"></button>
     </div>
   </div>
 </div>
@@ -206,59 +213,56 @@ html[dir="rtl"] .steps li{grid-template-columns:30px 1fr}
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5.2 5.2L20 7"/></svg>
   </div>
 
-  <h1 class="up u1" data-i18n-html="__ty_h1">Payment received. <br><span class="grad">One step left.</span></h1>
+  <h1 class="up u1" data-i18n-html="__ty_h1">Pago recibido. <br><span class="grad">Falta un paso.</span></h1>
   <p class="lede up u2">
-    We can't open your line until we can match the payment to you. Email us the receipt
-    and your login details come straight back — usually within ten minutes.
+    No podemos activar tu línea hasta poder asociar el pago contigo. Envíanos el recibo por correo y tus datos de acceso vuelven enseguida — normalmente en menos de diez minutos.
   </p>
 
   <div class="recap hidden up u3" id="recap">
-    <div class="recap-top"><b>Your order</b><span class="recap-ref" id="r-ref">—</span></div>
+    <div class="recap-top"><b>Tu pedido</b><span class="recap-ref" id="r-ref">—</span></div>
     <dl>
-      <div class="rrow"><dt>Name</dt><dd id="r-name">—</dd></div>
+      <div class="rrow"><dt>Nombre</dt><dd id="r-name">—</dd></div>
       <div class="rrow"><dt>Plan</dt><dd id="r-plan">—</dd></div>
-      <div class="rrow"><dt>Devices</dt><dd id="r-conn">—</dd></div>
-      <div class="rrow"><dt>Watching on</dt><dd id="r-device">—</dd></div>
+      <div class="rrow"><dt>Dispositivos</dt><dd id="r-conn">—</dd></div>
+      <div class="rrow"><dt>Se ve en</dt><dd id="r-device">—</dd></div>
       <div class="rrow"><dt>Total</dt><dd id="r-total">—</dd></div>
     </dl>
   </div>
 
   <ol class="steps up u3">
-    <li class="done"><b>Payment sent</b><span>PayPal has your payment.</span></li>
-    <li><b>Screenshot your receipt</b>
-      <span>The PayPal confirmation page or the email receipt — anything showing the amount and date.</span></li>
-    <li><b>Email it to us</b>
-      <span>The button below opens a chat with your order already written. Attach the screenshot with
-        the paperclip, then press send.</span></li>
+    <li class="done"><b>Pago enviado</b><span>PayPal ya tiene tu pago.</span></li>
+    <li><b>Haz una captura del recibo</b>
+      <span>La página de confirmación de PayPal o el recibo por correo — cualquier cosa que muestre el importe y la fecha.</span></li>
+    <li><b>Envíanoslo por correo</b>
+      <span>El botón de abajo abre un chat con tu pedido ya escrito. Adjunta la captura con el clip y pulsa enviar.</span></li>
   </ol>
 
   <div class="cta up u4">
     <button class="btn btn-blue pulse" type="button" id="wa">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.5-1.2-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.6-.1 1.3z"/></svg>
-      Email my receipt
+      Enviar mi recibo por correo
     </button>
-    <a class="btn btn-ghost" href="index.html">Back to the site</a>
+    <a class="btn btn-ghost" href="index.html">Volver al sitio</a>
   </div>
 
   <div class="manual up u5" id="manual">
-    <label for="mref">Your name or order reference</label>
-    <p>We couldn't find your order on this device — if you paid from a different browser or phone,
-      just tell us who you are so we can match the payment.</p>
-    <input id="mref" type="text" placeholder="e.g. Youssef B. — yearly plan" autocomplete="name">
+    <label for="mref">Tu nombre o referencia de pedido</label>
+    <p>No hemos encontrado tu pedido en este dispositivo — si pagaste desde otro navegador o teléfono, dinos quién eres para poder asociar el pago.</p>
+    <input id="mref" type="text" placeholder="p. ej. Youssef B. — plan anual" autocomplete="name">
   </div>
 
   <p class="note up u5">
-    KEEP THIS RECEIPT UNTIL YOUR LINE IS ACTIVE. IF YOU DON'T HEAR FROM US WITHIN A FEW HOURS DURING
-    SUPPORT TIMES, MESSAGE US AGAIN — YOUR PAYMENT IS SAFE EITHER WAY.
+    GUARDA ESTE RECIBO HASTA QUE TU LÍNEA ESTÉ ACTIVA. SI NO TIENES NOTICIAS NUESTRAS EN UNAS HORAS DENTRO DEL HORARIO DE SOPORTE, ESCRÍBENOS OTRA VEZ — TU PAGO ESTÁ SEGURO EN CUALQUIER CASO.
   </p>
 </main>
 
 <footer>
-  <span>© <span id="yr"></span> <span data-brand>Swift Channels</span></span>
-  <span><a href="#" id="wa2">WhatsApp</a> · <a href="#" id="mail">Email</a> · <a href="legal.html">Terms</a></span>
+  <span>© <span id="yr">2026</span> <span data-brand>Swift Channels</span></span>
+  <span><a href="mailto:contact@swiftchannels.com" id="mail">Correo electrónico</a> · <a href="legal.html">Términos</a></span>
 </footer>
 
-<script src="assets/i18n.js"></script>
+<script>window.PAGE_LANG='es';</script>
+<script src="../assets/i18n.js"></script>
 <script>
 /* ═══════════════════════════════════════════════════════════
    CONFIG — must match index.html
