@@ -42,8 +42,8 @@ fr: {
   'Comply with the laws that apply where you live, including any rules about which broadcast content you may lawfully access. You are responsible for that; we cannot advise on it.':
     'Respecter les lois applicables là où vous résidez, y compris les règles relatives aux contenus audiovisuels auxquels vous pouvez légalement accéder. Cela relève de votre responsabilité ; nous ne pouvons pas vous conseiller sur ce point.',
   'Delivery': 'Livraison',
-  'We aim to send credentials within ten minutes during support hours. Orders placed overnight are handled the following morning. Delivery is by WhatsApp or email to the contact details you gave us.':
-    'Nous visons un envoi des identifiants en moins de dix minutes pendant les heures de support. Les commandes passées la nuit sont traitées le lendemain matin. La livraison se fait par WhatsApp ou par e-mail, aux coordonnées que vous nous avez données.',
+  'We aim to send credentials within ten minutes during support hours. Orders placed overnight are handled the following morning. Delivery is by email to the contact details you gave us.':
+    'Nous visons un envoi des identifiants en moins de dix minutes pendant les heures de support. Les commandes passées la nuit sont traitées le lendemain matin. La livraison se fait par e-mail, aux coordonnées que vous nous avez données.',
   'Availability and interruptions': 'Disponibilité et interruptions',
   "We target high availability but cannot promise an uninterrupted service. Outages on the platform operator's side, on your internet connection, or on your device are outside our control. Where a line is genuinely down for an extended period, we will replace it and extend your subscription by the time lost. That is the remedy we offer.":
     'Nous visons une disponibilité élevée mais ne pouvons pas promettre un service ininterrompu. Les pannes du côté de l’opérateur de la plateforme, de votre connexion internet ou de votre appareil échappent à notre contrôle. Lorsqu’une ligne est réellement hors service pendant une période prolongée, nous la remplaçons et prolongeons votre abonnement de la durée perdue. C’est la solution que nous proposons.',
@@ -99,8 +99,8 @@ fr: {
   'Your account was closed for breaching the household-use rule.':
     'Votre compte a été fermé pour non-respect de la règle d’usage domestique.',
   'Problems before you ask for money back': 'Les problèmes avant une demande de remboursement',
-  'Most faults are fixable in minutes. Message us on WhatsApp first — replacing a line, resetting credentials or reconfiguring an app resolves the large majority of issues, and we add any lost time to your subscription.':
-    'La plupart des pannes se règlent en quelques minutes. Écrivez-nous d’abord sur WhatsApp — remplacer une ligne, réinitialiser des identifiants ou reconfigurer une application résout la grande majorité des problèmes, et nous ajoutons le temps perdu à votre abonnement.',
+  'Most faults are fixable in minutes. Email us first — replacing a line, resetting credentials or reconfiguring an app resolves the large majority of issues, and we add any lost time to your subscription.':
+    'La plupart des pannes se règlent en quelques minutes. Écrivez-nous d’abord par e-mail — remplacer une ligne, réinitialiser des identifiants ou reconfigurer une application résout la grande majorité des problèmes, et nous ajoutons le temps perdu à votre abonnement.',
 
   'Who controls your data': 'Qui est responsable de vos données',
   'Swift Channels. Contact:': 'Swift Channels. Contact :',
@@ -188,8 +188,8 @@ es: {
   'Comply with the laws that apply where you live, including any rules about which broadcast content you may lawfully access. You are responsible for that; we cannot advise on it.':
     'Cumplir las leyes de tu lugar de residencia, incluidas las normas sobre qué contenidos audiovisuales puedes ver legalmente. Eso es responsabilidad tuya; no podemos asesorarte al respecto.',
   'Delivery': 'Entrega',
-  'We aim to send credentials within ten minutes during support hours. Orders placed overnight are handled the following morning. Delivery is by WhatsApp or email to the contact details you gave us.':
-    'Procuramos enviar los accesos en menos de diez minutos dentro del horario de soporte. Los pedidos hechos de madrugada se atienden a la mañana siguiente. La entrega se hace por WhatsApp o correo a los datos que nos diste.',
+  'We aim to send credentials within ten minutes during support hours. Orders placed overnight are handled the following morning. Delivery is by email to the contact details you gave us.':
+    'Procuramos enviar los accesos en menos de diez minutos dentro del horario de soporte. Los pedidos hechos de madrugada se atienden a la mañana siguiente. La entrega se hace por correo a los datos que nos diste.',
   'Availability and interruptions': 'Disponibilidad e interrupciones',
   "We target high availability but cannot promise an uninterrupted service. Outages on the platform operator's side, on your internet connection, or on your device are outside our control. Where a line is genuinely down for an extended period, we will replace it and extend your subscription by the time lost. That is the remedy we offer.":
     'Aspiramos a una alta disponibilidad, pero no podemos prometer un servicio ininterrumpido. Las caídas del lado del operador de la plataforma, de tu conexión o de tu dispositivo quedan fuera de nuestro control. Cuando una línea está realmente caída durante un periodo prolongado, la sustituimos y ampliamos tu suscripción por el tiempo perdido. Esa es la solución que ofrecemos.',
@@ -245,8 +245,8 @@ es: {
   'Your account was closed for breaching the household-use rule.':
     'Tu cuenta se cerró por incumplir la norma de uso doméstico.',
   'Problems before you ask for money back': 'Problemas antes de pedir el dinero',
-  'Most faults are fixable in minutes. Message us on WhatsApp first — replacing a line, resetting credentials or reconfiguring an app resolves the large majority of issues, and we add any lost time to your subscription.':
-    'La mayoría de fallos se arreglan en minutos. Escríbenos primero por WhatsApp — sustituir una línea, restablecer los accesos o reconfigurar una app resuelve la gran mayoría de incidencias, y añadimos el tiempo perdido a tu suscripción.',
+  'Most faults are fixable in minutes. Email us first — replacing a line, resetting credentials or reconfiguring an app resolves the large majority of issues, and we add any lost time to your subscription.':
+    'La mayoría de fallos se arreglan en minutos. Escríbenos primero por correo — sustituir una línea, restablecer los accesos o reconfigurar una app resuelve la gran mayoría de incidencias, y añadimos el tiempo perdido a tu suscripción.',
 
   'Who controls your data': 'Quién controla tus datos',
   'Swift Channels. Contact:': 'Swift Channels. Contacto:',
@@ -334,8 +334,8 @@ de: {
   'Comply with the laws that apply where you live, including any rules about which broadcast content you may lawfully access. You are responsible for that; we cannot advise on it.':
     'Die an Ihrem Wohnort geltenden Gesetze einhalten, einschließlich der Regeln dazu, welche Rundfunkinhalte Sie rechtmäßig nutzen dürfen. Dafür sind Sie verantwortlich; wir können dazu nicht beraten.',
   'Delivery': 'Lieferung',
-  'We aim to send credentials within ten minutes during support hours. Orders placed overnight are handled the following morning. Delivery is by WhatsApp or email to the contact details you gave us.':
-    'Wir streben an, Zugangsdaten innerhalb von zehn Minuten während der Supportzeiten zu versenden. Nachts aufgegebene Bestellungen werden am folgenden Morgen bearbeitet. Die Lieferung erfolgt per WhatsApp oder E-Mail an die von Ihnen angegebenen Kontaktdaten.',
+  'We aim to send credentials within ten minutes during support hours. Orders placed overnight are handled the following morning. Delivery is by email to the contact details you gave us.':
+    'Wir streben an, Zugangsdaten innerhalb von zehn Minuten während der Supportzeiten zu versenden. Nachts aufgegebene Bestellungen werden am folgenden Morgen bearbeitet. Die Lieferung erfolgt per E-Mail an die von Ihnen angegebenen Kontaktdaten.',
   'Availability and interruptions': 'Verfügbarkeit und Störungen',
   "We target high availability but cannot promise an uninterrupted service. Outages on the platform operator's side, on your internet connection, or on your device are outside our control. Where a line is genuinely down for an extended period, we will replace it and extend your subscription by the time lost. That is the remedy we offer.":
     'Wir streben hohe Verfügbarkeit an, können einen unterbrechungsfreien Dienst aber nicht zusichern. Störungen beim Plattformbetreiber, an Ihrer Internetverbindung oder an Ihrem Gerät liegen außerhalb unseres Einflusses. Fällt eine Leitung tatsächlich über längere Zeit aus, ersetzen wir sie und verlängern Ihr Abonnement um die verlorene Zeit. Das ist die Abhilfe, die wir anbieten.',
@@ -391,8 +391,8 @@ de: {
   'Your account was closed for breaching the household-use rule.':
     'Ihr Konto wurde wegen Verstoßes gegen die Haushaltsregel geschlossen.',
   'Problems before you ask for money back': 'Probleme, bevor Sie Geld zurückfordern',
-  'Most faults are fixable in minutes. Message us on WhatsApp first — replacing a line, resetting credentials or reconfiguring an app resolves the large majority of issues, and we add any lost time to your subscription.':
-    'Die meisten Störungen sind in Minuten behoben. Schreiben Sie uns zuerst per WhatsApp — eine neue Leitung, zurückgesetzte Zugangsdaten oder eine neu eingerichtete App lösen die große Mehrheit der Fälle, und verlorene Zeit schreiben wir Ihrem Abo gut.',
+  'Most faults are fixable in minutes. Email us first — replacing a line, resetting credentials or reconfiguring an app resolves the large majority of issues, and we add any lost time to your subscription.':
+    'Die meisten Störungen sind in Minuten behoben. Schreiben Sie uns zuerst per E-Mail — eine neue Leitung, zurückgesetzte Zugangsdaten oder eine neu eingerichtete App lösen die große Mehrheit der Fälle, und verlorene Zeit schreiben wir Ihrem Abo gut.',
 
   'Who controls your data': 'Wer über Ihre Daten entscheidet',
   'Swift Channels. Contact:': 'Swift Channels. Kontakt:',
@@ -480,8 +480,8 @@ ar: {
   'Comply with the laws that apply where you live, including any rules about which broadcast content you may lawfully access. You are responsible for that; we cannot advise on it.':
     'الالتزام بالقوانين السارية في مكان إقامتك، بما فيها القواعد المتعلقة بالمحتوى المُذاع الذي يحق لك الوصول إليه قانونًا. وهذه مسؤوليتك أنت؛ ولا يمكننا تقديم المشورة بشأنها.',
   'Delivery': 'التسليم',
-  'We aim to send credentials within ten minutes during support hours. Orders placed overnight are handled the following morning. Delivery is by WhatsApp or email to the contact details you gave us.':
-    'نسعى لإرسال بيانات الدخول خلال عشر دقائق في أوقات الدعم. والطلبات الليلية تُعالَج صباح اليوم التالي. ويتم التسليم عبر واتساب أو البريد الإلكتروني إلى البيانات التي زوّدتنا بها.',
+  'We aim to send credentials within ten minutes during support hours. Orders placed overnight are handled the following morning. Delivery is by email to the contact details you gave us.':
+    'نسعى لإرسال بيانات الدخول خلال عشر دقائق في أوقات الدعم. والطلبات الليلية تُعالَج صباح اليوم التالي. ويتم التسليم عبر البريد الإلكتروني إلى البيانات التي زوّدتنا بها.',
   'Availability and interruptions': 'التوفّر والانقطاعات',
   "We target high availability but cannot promise an uninterrupted service. Outages on the platform operator's side, on your internet connection, or on your device are outside our control. Where a line is genuinely down for an extended period, we will replace it and extend your subscription by the time lost. That is the remedy we offer.":
     'نستهدف توفّرًا عاليًا لكننا لا نستطيع الوعد بخدمة بلا انقطاع. فالأعطال لدى مشغّل المنصة أو في اتصالك بالإنترنت أو في جهازك خارجة عن سيطرتنا. وحين يتوقف خط فعلًا لمدة طويلة، نستبدله ونمدّد اشتراكك بمقدار الوقت الضائع. وهذا هو الحل الذي نقدّمه.',
@@ -537,8 +537,8 @@ ar: {
   'Your account was closed for breaching the household-use rule.':
     'أُغلق حسابك لمخالفة قاعدة الاستعمال المنزلي.',
   'Problems before you ask for money back': 'المشاكل قبل طلب استرجاع المال',
-  'Most faults are fixable in minutes. Message us on WhatsApp first — replacing a line, resetting credentials or reconfiguring an app resolves the large majority of issues, and we add any lost time to your subscription.':
-    'أغلب الأعطال تُصلَح في دقائق. راسلنا على واتساب أولًا — فاستبدال خط أو إعادة ضبط بيانات الدخول أو إعادة إعداد التطبيق يحل الغالبية العظمى من المشاكل، ونضيف أي وقت ضائع إلى اشتراكك.',
+  'Most faults are fixable in minutes. Email us first — replacing a line, resetting credentials or reconfiguring an app resolves the large majority of issues, and we add any lost time to your subscription.':
+    'أغلب الأعطال تُصلَح في دقائق. راسلنا بالبريد الإلكتروني أولًا — فاستبدال خط أو إعادة ضبط بيانات الدخول أو إعادة إعداد التطبيق يحل الغالبية العظمى من المشاكل، ونضيف أي وقت ضائع إلى اشتراكك.',
 
   'Who controls your data': 'من يتحكم في بياناتك',
   'Swift Channels. Contact:': 'سويفت تشانلز. للتواصل:',

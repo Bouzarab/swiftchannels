@@ -208,7 +208,7 @@ html[dir="rtl"] .steps li{grid-template-columns:30px 1fr}
 
   <h1 class="up u1" data-i18n-html="__ty_h1">Payment received. <br><span class="grad">One step left.</span></h1>
   <p class="lede up u2">
-    We can't open your line until we can match the payment to you. Send us the receipt on WhatsApp
+    We can't open your line until we can match the payment to you. Email us the receipt
     and your login details come straight back — usually within ten minutes.
   </p>
 
@@ -227,7 +227,7 @@ html[dir="rtl"] .steps li{grid-template-columns:30px 1fr}
     <li class="done"><b>Payment sent</b><span>PayPal has your payment.</span></li>
     <li><b>Screenshot your receipt</b>
       <span>The PayPal confirmation page or the email receipt — anything showing the amount and date.</span></li>
-    <li><b>Send it on WhatsApp</b>
+    <li><b>Email it to us</b>
       <span>The button below opens a chat with your order already written. Attach the screenshot with
         the paperclip, then press send.</span></li>
   </ol>
@@ -235,7 +235,7 @@ html[dir="rtl"] .steps li{grid-template-columns:30px 1fr}
   <div class="cta up u4">
     <button class="btn btn-blue pulse" type="button" id="wa">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.5-1.2-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.6-.1 1.3z"/></svg>
-      Send my receipt on WhatsApp
+      Email my receipt
     </button>
     <a class="btn btn-ghost" href="index.html">Back to the site</a>
   </div>
@@ -265,7 +265,7 @@ html[dir="rtl"] .steps li{grid-template-columns:30px 1fr}
    ═══════════════════════════════════════════════════════════ */
 const CONFIG = {
   brand:    'Swift Channels',
-  whatsapp: '212699764804',        // digits only, country code, no + or spaces
+  whatsapp: '',                    // EMPTY = WhatsApp off. See SWITCHING-BACK.md
   email:    'contact@swiftchannels.com'
 };
 
@@ -273,8 +273,8 @@ const $ = id => document.getElementById(id);
 document.querySelectorAll('[data-brand]').forEach(e => e.textContent = CONFIG.brand);
 $('yr').textContent = new Date().getFullYear();
 
-const waBase = 'https://wa.me/' + CONFIG.whatsapp;
-$('wa2').href = waBase;
+const waBase = CONFIG.whatsapp ? 'https://wa.me/' + CONFIG.whatsapp : '';
+$('wa2').href = waBase || ('mailto:' + CONFIG.email);
 $('mail').href = 'mailto:' + CONFIG.email;
 
 /* ── recover the order saved by index.html before checkout ── */
@@ -351,7 +351,11 @@ function buildMessage(){
 }
 
 $('wa').addEventListener('click', () => {
-  window.open(waBase + '?text=' + encodeURIComponent(buildMessage()), '_blank');
+  const msg = buildMessage();
+  if(waBase){ window.open(waBase + '?text=' + encodeURIComponent(msg), '_blank'); }
+  else { location.href = 'mailto:' + CONFIG.email +
+    '?subject=' + encodeURIComponent('Payment receipt') +
+    '&body=' + encodeURIComponent(msg); }
 });
 
 /* ═══════════════ Languages ═══════════════ */

@@ -44,7 +44,8 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
     { file:'index.html', ready:() => window.i18n && document.querySelector('.plan') },
     { file:'legal.html', ready:() => window.i18n && document.querySelector('.who') },
     { file:'channels.html', ready:() => window.i18n && document.querySelector('.ct') },
-    { file:'install.html', ready:() => window.i18n && document.querySelector('.ri') }
+    { file:'install.html', ready:() => window.i18n && document.querySelector('.ri') },
+    { file:'order.html', ready:() => window.i18n && document.getElementById('send') }
   ];
 
   for (const L of LANGS.filter(l => l.folder))
@@ -69,7 +70,8 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
 
       /* The page now lives one folder down, so relative paths need ../ —
          except links to pages that also have a copy in this folder. */
-      const SAME_FOLDER = ['legal.html', 'index.html', 'channels.html', 'install.html'];
+      const SAME_FOLDER = ['legal.html', 'index.html', 'channels.html', 'install.html',
+                          'order.html', 'thank-you.html'];
       document.querySelectorAll('[src],[href]').forEach(el => {
         for (const attr of ['src','href']) {
           const v = el.getAttribute(attr);

@@ -977,7 +977,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
         <span class="fc-tint"></span><span class="fc-scrim"></span>
         <span class="fc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 14.6a2.2 2.2 0 01-2.2 2.2H8.2L3.5 20.5V5.4A2.2 2.2 0 015.7 3.2h13.1A2.2 2.2 0 0121 5.4z"/></svg></span>
         <span class="fc-tag">Included</span>
-        <div class="fc-in"><h3>24/7 support</h3><p>One thread on WhatsApp for setup, renewals and anything that stops working.</p></div>
+        <div class="fc-in"><h3>24/7 support</h3><p>One thread with us for setup, renewals and anything that stops working.</p></div>
       </article>
       <article class="fc" data-k="football" style="--tint:radial-gradient(126% 88% at 16% 6%,rgba(0,112,192,.58),rgba(0,112,192,.12) 46%,transparent 68%),radial-gradient(118% 82% at 90% 24%,rgba(62,192,132,.40),transparent 64%)">
         <img class="fc-img" src="assets/cards/football.webp" alt="" width="900" height="1200" loading="lazy" decoding="async">
@@ -1099,9 +1099,9 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
         <p>Your name, WhatsApp number, the plan you want, how many devices and how you'd like to
            pay. It takes about a minute.</p></div>
       <div class="step rv d1"><div class="step-n">STEP 02</div>
-        <h3>Send it on WhatsApp</h3>
-        <p>One button writes your whole order into a WhatsApp message. Press send — nothing is
-           charged and nothing is committed yet.</p></div>
+        <h3>Send it in one click</h3>
+        <p>One button hands your whole order to us. Nothing is charged and nothing is
+           committed yet.</p></div>
       <div class="step rv d2"><div class="step-n">STEP 03</div>
         <h3>We take it from there</h3>
         <p>We confirm the price, send you the payment details for the method you chose, and once
@@ -1212,7 +1212,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
         </dl>
         <div class="ticket-total"><span>Total</span><b id="t-total">—</b></div>
         <div class="ticket-actions">
-          <button class="btn btn-blue" type="button" id="sendWa">Send order on WhatsApp</button>
+          <button class="btn btn-blue" type="button" id="sendWa">Send my order</button>
           <button class="btn btn-ghost" type="button" id="copyOrder">Copy order details</button>
           <button class="btn btn-ghost" type="button" id="sendMail">Send by email instead</button>
         </div>
@@ -1326,7 +1326,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
 const CONFIG = {
   brand:    'Swift Channels',
 
-  whatsapp: '212699764804',        // digits only, country code, no + or spaces
+  whatsapp: '',                    // EMPTY = WhatsApp off. See SWITCHING-BACK.md
   email:    'contact@swiftchannels.com',
 
   currency: '€',
@@ -1363,7 +1363,7 @@ const CONFIG = {
     ['How much does it cost?',
      'Two paid plans, both opening the full library: <strong>15 € a month</strong> or <strong>57 € a year</strong> — about 5 € a month. That covers one screen at a time; 2, 3 or 4 screens cost more. There is also a <strong>free 24-hour test</strong> before you pay anything.'],
     ['How do I pay?',
-     'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.'],
+     'Card or PayPal. You do not pay on this website — send your order from this page, we confirm the price by email and send you the payment link, and your line opens as soon as the payment lands.'],
     ["What's included?",
      "All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support."],
     ['Can I watch live sports and PPV events?',
@@ -1397,8 +1397,19 @@ Object.defineProperty(window, 'LANG', { get: () => window.i18n.lang });
 document.querySelectorAll('[data-brand],[data-brand-plain]').forEach(e => e.textContent = CONFIG.brand);
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-const waBase = 'https://wa.me/' + CONFIG.whatsapp;
-document.querySelector('[data-wa-link]').href = waBase;
+const waBase = CONFIG.whatsapp ? 'https://wa.me/' + CONFIG.whatsapp : '';
+const waLink = document.querySelector('[data-wa-link]');
+if(waLink){
+  if(waBase){ waLink.href = waBase; }
+  else {
+    /* no number yet — drop the link rather than point it at nothing.
+       Generated pages are serialised after this has already run once,
+       so the element may be gone by the time this loads again. */
+    const sep = waLink.nextSibling;
+    if(sep && sep.nodeType === 3) sep.remove();
+    waLink.remove();
+  }
+}
 document.querySelector('[data-mail-link]').href = 'mailto:' + CONFIG.email;
 
 const money = n => new Intl.NumberFormat('en-US',{maximumFractionDigits:0}).format(Math.round(n));
@@ -1599,6 +1610,7 @@ function saveOrder(){
       ref:    REF,
       name:   $('name').value.trim(),
       phone:  $('phone').value.trim(),
+      email:  $('email').value.trim(),
       plan:   p.name,
       term:   p.term,
       conn:   state.conn,
@@ -1621,10 +1633,10 @@ function updateTicket(){
   $('t-pay').textContent    = free ? t('Not needed') : (paySel.value ? t(paySel.value) : t('Not chosen'));
   $('t-total').innerHTML    = free ? t('Free') : money(cost) + ' <small>' + CONFIG.currency + '</small>';
 
-  $('sendWa').textContent = t('Send my order on WhatsApp');
+  $('sendWa').textContent = t('Send my order');
   $('ticketNote').textContent = t(free
     ? 'Nothing is charged here. Free tests skip payment entirely — send the order and we open your line.'
-    : 'Nothing is charged here. Send your order and we reply on WhatsApp with the payment details for the method you chose.');
+    : 'Nothing is charged here. Send your order and we reply by email with the payment details for the method you chose.');
 }
 
 /* ═══════════════ 7. Validation + send ═══════════════ */
@@ -1687,9 +1699,13 @@ const confirmSent = t => { const b = $('sent'); b.textContent = t; b.classList.a
 $('sendWa').addEventListener('click', () => {
   if(!validate()) return;
   saveOrder();
-  window.open(waBase + '?text=' + encodeURIComponent(buildMessage()), '_blank');
-  confirmSent(tf('Order {ref} is open in WhatsApp. Press send there and we\'ll reply with the payment details shortly.',
-    {ref: REF}));
+  if(waBase){
+    window.open(waBase + '?text=' + encodeURIComponent(buildMessage()), '_blank');
+    confirmSent(tf('Order {ref} is open in WhatsApp. Press send there and we\'ll reply with the payment details shortly.',
+      {ref: REF}));
+    return;
+  }
+  location.href = 'order.html';
 });
 /* Copies text without waiting on the clipboard promise, so it still works
    inside a click handler on browsers that block the async API. */
@@ -1739,7 +1755,7 @@ $('sendMail').addEventListener('click', () => {
 
     confirmSent(handled
       ? tf('Order {ref} is open in your email app.', {ref: REF})
-      : tf('No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}, or use the WhatsApp button.',
+      : tf('No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}.',
            {ref: REF, mail: CONFIG.email}));
   }, 1500);
 });
@@ -1747,7 +1763,7 @@ $('sendMail').addEventListener('click', () => {
 $('copyOrder').addEventListener('click', () => {
   if(!validate()) return;
   copyText(buildMessage());
-  confirmSent(tf('Order {ref} copied. Paste it to us on WhatsApp or email.', {ref: REF}));
+  confirmSent(tf('Order {ref} copied. Paste it into an email to us.', {ref: REF}));
 });
 
 document.querySelectorAll('[data-preselect]').forEach(a => {
@@ -1808,8 +1824,10 @@ function renderAsk(){
     askBody.appendChild(ans);
   });
 
-  $('askWa').href = waBase + '?text=' +
-    encodeURIComponent(t('Hello — I have a question about Swift Channels.'));
+  $('askWa').href = waBase
+    ? waBase + '?text=' + encodeURIComponent(t('Hello — I have a question about Swift Channels.'))
+    : 'mailto:' + CONFIG.email + '?subject=' +
+      encodeURIComponent(t('Hello — I have a question about Swift Channels.'));
 }
 
 function askOpen(open){

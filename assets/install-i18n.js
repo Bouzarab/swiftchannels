@@ -19,6 +19,11 @@ fr: {
   '__in_desc': 'Installez Swift Channels sur TV Samsung ou LG, Firestick, Android, iPhone, Apple TV, Windows ou Mac. Choisissez votre appareil, suivez quatre étapes.',
   '__in_h1': 'Choisissez votre appareil.<br><span class="grad">Quatre étapes.</span>',
   'Installation guide': 'Guide d’installation',
+  'Email us': 'Écrivez-nous par e-mail',
+  'Copy and paste from our email instead of typing. A stray space is usually the culprit.':
+    'Copiez-collez depuis notre e-mail plutôt que de taper. Un espace de trop est souvent le coupable.',
+  'We send them by email after you order — an activation code, or a server address with a username and password. Which one depends on your device.':
+    'Nous vous les envoyons par e-mail après votre commande : un code d’activation, ou une adresse de serveur avec identifiant et mot de passe. Cela dépend de votre appareil.',
   '← Back to the site': '← Retour au site',
   'Ten minutes, once. After that the app remembers everything.':
     'Dix minutes, une seule fois. Ensuite l’application retient tout.',
@@ -55,7 +60,7 @@ fr: {
 
   '__s_smarttv1': 'Ouvrez <strong>Samsung Apps</strong> ou le <strong>LG Content Store</strong>.',
   '__s_smarttv2': 'Installez <strong>IBO Player</strong>. Smart IPTV, Set IPTV et IPTV Smarters marchent aussi.',
-  '__s_smarttv3': 'L’application affiche une <strong>clé d’appareil</strong>. Envoyez-la-nous sur WhatsApp.',
+  '__s_smarttv3': 'L’application affiche une <strong>clé d’appareil</strong>. Envoyez-la-nous par e-mail.',
   '__s_smarttv4': 'Nous la relions en une minute. Fermez l’application, rouvrez-la.',
   '__n_smarttv': '<b>Frais unique :</b> les applications de TV facturent quelques euros pour l’activation, payés à l’éditeur, une fois par téléviseur. Cela ne fait pas partie de votre abonnement.',
 
@@ -112,6 +117,11 @@ es: {
   '__in_desc': 'Instala Swift Channels en una tele Samsung o LG, Firestick, Android, iPhone, Apple TV, Windows o Mac. Elige tu dispositivo y sigue cuatro pasos.',
   '__in_h1': 'Elige tu dispositivo.<br><span class="grad">Cuatro pasos.</span>',
   'Installation guide': 'Guía de instalación',
+  'Email us': 'Escríbenos por correo',
+  'Copy and paste from our email instead of typing. A stray space is usually the culprit.':
+    'Copia y pega desde nuestro correo en vez de teclearlo. Un espacio de más suele ser el culpable.',
+  'We send them by email after you order — an activation code, or a server address with a username and password. Which one depends on your device.':
+    'Te los enviamos por correo después de contratar: un código de activación, o una dirección de servidor con usuario y contraseña. Depende de tu dispositivo.',
   '← Back to the site': '← Volver al sitio',
   'Ten minutes, once. After that the app remembers everything.':
     'Diez minutos, una sola vez. Después la aplicación lo recuerda todo.',
@@ -148,7 +158,7 @@ es: {
 
   '__s_smarttv1': 'Abre <strong>Samsung Apps</strong> o la <strong>LG Content Store</strong>.',
   '__s_smarttv2': 'Instala <strong>IBO Player</strong>. Smart IPTV, Set IPTV e IPTV Smarters también sirven.',
-  '__s_smarttv3': 'La aplicación muestra una <strong>clave de dispositivo</strong>. Envíanosla por WhatsApp.',
+  '__s_smarttv3': 'La aplicación muestra una <strong>clave de dispositivo</strong>. Envíanosla por correo.',
   '__s_smarttv4': 'La vinculamos en un minuto. Cierra la aplicación y vuelve a abrirla.',
   '__n_smarttv': '<b>Pago único:</b> las aplicaciones de tele cobran unos pocos euros por la activación, al creador de la aplicación, una vez por televisor. No forma parte de tu suscripción.',
 
@@ -205,6 +215,11 @@ de: {
   '__in_desc': 'Swift Channels auf Samsung- oder LG-TV, Firestick, Android, iPhone, Apple TV, Windows oder Mac einrichten. Gerät wählen, vier Schritte folgen.',
   '__in_h1': 'Gerät wählen.<br><span class="grad">Vier Schritte.</span>',
   'Installation guide': 'Installationsanleitung',
+  'Email us': 'Schreiben Sie uns eine E-Mail',
+  'Copy and paste from our email instead of typing. A stray space is usually the culprit.':
+    'Kopieren Sie aus unserer E-Mail, statt zu tippen. Meist ist ein überzähliges Leerzeichen schuld.',
+  'We send them by email after you order — an activation code, or a server address with a username and password. Which one depends on your device.':
+    'Wir schicken sie nach der Bestellung per E-Mail: entweder einen Aktivierungscode oder eine Serveradresse mit Benutzername und Passwort. Was davon, hängt von Ihrem Gerät ab.',
   '← Back to the site': '← Zurück zur Website',
   'Ten minutes, once. After that the app remembers everything.':
     'Zehn Minuten, einmalig. Danach merkt sich die App alles.',
@@ -241,7 +256,7 @@ de: {
 
   '__s_smarttv1': 'Öffnen Sie <strong>Samsung Apps</strong> oder den <strong>LG Content Store</strong>.',
   '__s_smarttv2': 'Installieren Sie <strong>IBO Player</strong>. Smart IPTV, Set IPTV und IPTV Smarters gehen auch.',
-  '__s_smarttv3': 'Die App zeigt einen <strong>Geräteschlüssel</strong>. Schicken Sie ihn uns per WhatsApp.',
+  '__s_smarttv3': 'Die App zeigt einen <strong>Geräteschlüssel</strong>. Schicken Sie ihn uns per E-Mail.',
   '__s_smarttv4': 'Wir verbinden ihn in einer Minute. App ganz schließen, neu öffnen.',
   '__n_smarttv': '<b>Einmalige Gebühr:</b> TV-Apps verlangen ein paar Euro für die Freischaltung, an den App-Anbieter, einmal pro Fernseher. Nicht Teil Ihres Abos.',
 
@@ -298,6 +313,11 @@ ar: {
   '__in_desc': 'ثبّت سويفت تشانلز على تلفاز سامسونغ أو إل جي، أو Firestick أو أندرويد أو آيفون أو Apple TV أو ويندوز أو ماك. اختر جهازك واتبع أربع خطوات.',
   '__in_h1': 'اختر جهازك.<br><span class="grad">أربع خطوات.</span>',
   'Installation guide': 'دليل التثبيت',
+  'Email us': 'راسلنا بالبريد الإلكتروني',
+  'Copy and paste from our email instead of typing. A stray space is usually the culprit.':
+    'انسخ البيانات من رسالتنا بدل كتابتها. المسافة الزائدة هي السبب عادةً.',
+  'We send them by email after you order — an activation code, or a server address with a username and password. Which one depends on your device.':
+    'نرسلها لك بالبريد الإلكتروني بعد الطلب: رمز تفعيل، أو عنوان خادم مع اسم مستخدم وكلمة مرور. ويتوقّف ذلك على جهازك.',
   '← Back to the site': '← العودة إلى الموقع',
   'Ten minutes, once. After that the app remembers everything.':
     'عشر دقائق، مرة واحدة فقط. بعدها يحفظ التطبيق كل شيء.',
@@ -334,7 +354,7 @@ ar: {
 
   '__s_smarttv1': 'افتح <strong dir="ltr">Samsung Apps</strong> أو <strong dir="ltr">LG Content Store</strong>.',
   '__s_smarttv2': 'ثبّت <strong dir="ltr">IBO Player</strong>. وتعمل أيضًا <span dir="ltr">Smart IPTV</span> و<span dir="ltr">Set IPTV</span> و<span dir="ltr">IPTV Smarters</span>.',
-  '__s_smarttv3': 'يعرض التطبيق <strong>مفتاح الجهاز</strong>. أرسله إلينا على واتساب.',
+  '__s_smarttv3': 'يعرض التطبيق <strong>مفتاح الجهاز</strong>. أرسله إلينا بالبريد الإلكتروني.',
   '__s_smarttv4': 'نربطه خلال دقيقة. أغلق التطبيق ثم افتحه من جديد.',
   '__n_smarttv': '<b>رسم لمرة واحدة:</b> تطلب تطبيقات التلفاز بضعة يوروهات للتفعيل، تُدفع لمطوّر التطبيق، مرة واحدة لكل تلفاز. وليست جزءًا من اشتراكك.',
 

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enviar tu pedido — Swift Channels</title>
+<meta name="description" content="Revisa tu pedido y envíanoslo con un clic.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://swiftchannels.com/es/order.html">
+<meta name="theme-color" content="#050A18">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#050A18;--line:#1B2C54;--line-soft:#152444;
+  --blue:#2F6BFF;--blue-hi:#5A8CFF;--blue-deep:#1B49C4;--cyan:#49D9FF;
+  --glow:rgba(47,107,255,.30);
+  --ice:#E9EFFC;--muted:#93A6CC;--muted-2:#5F739B;
+  --display:'Sora',system-ui,sans-serif;--body:'Inter',Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --pad:clamp(18px,4vw,56px);--ease:cubic-bezier(.22,.8,.24,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--night);color:var(--ice);font-family:var(--body);font-size:16px;
+  line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;
+  display:flex;flex-direction:column;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+img,svg{display:block;max-width:100%}
+
+.aurora{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.aurora i{position:absolute;border-radius:50%;filter:blur(100px);display:block}
+.aurora i:nth-child(1){width:58vw;height:58vw;left:-18vw;top:-24vw;opacity:.6;
+  background:radial-gradient(circle,rgba(47,107,255,.6),transparent 68%)}
+.aurora i:nth-child(2){width:50vw;height:50vw;right:-16vw;bottom:-20vw;opacity:.42;
+  background:radial-gradient(circle,rgba(73,217,255,.4),transparent 68%)}
+
+.top{border-bottom:1px solid rgba(255,255,255,.08);background:rgba(5,10,24,.6);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.top-in{max-width:760px;margin:0 auto;padding:0 var(--pad);height:66px;
+  display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
+.brand-mark{width:30px;height:30px;flex:none;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--cyan))}
+.brand-mark::after{content:'';width:11px;height:11px;border-radius:50%;background:#fff;
+  box-shadow:0 0 12px #fff}
+.brand-name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em}
+.back{font-size:14px;color:var(--muted)}
+.back:hover{color:var(--ice)}
+
+main{flex:1;width:100%;max-width:760px;margin:0 auto;padding:clamp(28px,5vw,54px) var(--pad) 70px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--cyan);display:block;margin-bottom:12px}
+h1{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.06;
+  font-size:clamp(29px,4.6vw,44px)}
+h1 .grad{background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 62%,#fff);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{margin-top:12px;color:var(--muted);max-width:52ch}
+
+.card{margin-top:30px;border-radius:24px;padding:clamp(20px,3vw,30px);
+  background:linear-gradient(158deg,rgba(255,255,255,.10),rgba(255,255,255,.028));
+  border:1px solid rgba(255,255,255,.15);
+  backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);
+  box-shadow:0 30px 70px -32px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.16)}
+.card h2{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.01em;
+  color:var(--muted);margin-bottom:16px}
+.rows{display:grid;gap:1px;background:rgba(255,255,255,.08);border-radius:14px;overflow:hidden}
+.row{display:flex;gap:16px;align-items:baseline;padding:12px 16px;background:rgba(8,14,32,.72);
+  font-size:15px}
+.row span{color:var(--muted-2);font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;flex:0 0 116px}
+.row b{font-weight:600;word-break:break-word}
+.row.total b{font-family:var(--display);font-size:19px}
+.row.total{background:rgba(47,107,255,.14)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;
+  font-family:var(--body);font-weight:600;font-size:16px;padding:17px 26px;border-radius:100px;
+  border:1px solid transparent;cursor:pointer;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),opacity .3s}
+.btn:hover{transform:translateY(-1px)}
+.btn[disabled]{opacity:.6;cursor:default;transform:none}
+.btn-blue{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;
+  box-shadow:0 14px 34px -12px var(--glow);margin-top:24px}
+.btn-ghost{border-color:var(--line);color:var(--ice);background:rgba(255,255,255,.04);
+  margin-top:12px;font-size:14.5px;padding:13px 22px}
+.btn-ghost:hover{border-color:var(--blue-hi)}
+.note{margin-top:16px;font-size:13.5px;color:var(--muted-2);text-align:center}
+.empty{text-align:center;padding:34px 10px;color:var(--muted)}
+.sent{margin-top:18px;padding:14px 18px;border-radius:14px;font-size:14.5px;
+  background:rgba(52,199,123,.10);border:1px solid rgba(52,199,123,.28);color:#BEEBD3;
+  display:none}
+.sent.show{display:block}
+
+footer{border-top:1px solid rgba(255,255,255,.08);padding:22px var(--pad);
+  font-family:var(--mono);font-size:11px;color:var(--muted-2);text-align:center}
+
+html[dir="rtl"] .brand{margin-right:0;margin-left:auto}
+html[dir="rtl"] body{font-family:'Tajawal',var(--body)}
+html[dir="rtl"] h1,html[dir="rtl"] .row.total b{font-family:'Cairo','Tajawal',var(--display);
+  letter-spacing:0}
+html[dir="rtl"] .row b{direction:rtl}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+</style>
+</head>
+<body>
+
+<div class="aurora"><i></i><i></i></div>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
+    </a>
+    <a class="back" href="index.html#order">← Cambiar mi pedido</a>
+  </div>
+</header>
+
+<main>
+  <span class="eyebrow">Último paso</span>
+  <h1 data-i18n-html="__or_h1">Un clic y<br><span class="grad">lo tenemos</span>.</h1>
+  <p class="lead">Revisa los datos de abajo y pulsa el botón. No se cobra nada — leemos tu pedido y te respondemos con los datos de pago del método que elegiste.</p>
+
+  <div class="card" id="card">
+    <h2>Tu pedido</h2>
+    <div class="rows" id="rows"></div>
+    <button class="btn btn-blue" type="button" id="send">Enviar mi pedido</button>
+    <a class="btn btn-ghost" href="index.html#order">Cambiar algo antes</a>
+    <p class="note">Respondemos al correo o al teléfono que nos diste.</p>
+    <div class="sent" id="sent"></div>
+  </div>
+
+  <div class="card empty" id="empty" hidden>
+    <p>No encontramos ningún pedido en este dispositivo. Rellena el formulario y vuelve.</p>
+    <a class="btn btn-blue" href="index.html#order" style="max-width:280px;margin:20px auto 0">Ir al formulario</a>
+  </div>
+</main>
+
+<footer>© <span id="yr"></span> Swift Channels</footer>
+
+<iframe name="ghost" id="ghost" style="display:none" title="submit" aria-hidden="true"></iframe>
+<form id="post" method="POST" target="ghost" style="display:none"></form>
+
+<script>window.PAGE_LANG='es';</script>
+<script src="../assets/i18n.js"></script>
+<script src="../assets/order-i18n.js"></script>
+<script>
+/* ═══════════════════════════════════════════════════════════════════
+   WHATSAPP IS OFF. Orders are posted to a Google Form, whose responses
+   land in a Google Sheet and are emailed on. See SWITCHING-BACK.md.
+   Fill `action` and the `fields` ids and the button posts straight to
+   the sheet; leave `action` empty and it falls back to the customer's
+   own email app, addressed to CONFIG.email.
+   ═══════════════════════════════════════════════════════════════════ */
+const CONFIG = {
+  email: 'contact@swiftchannels.com',
+  orderForm: {
+    action: '',            /* https://docs.google.com/forms/d/e/FORM_ID/formResponse */
+    fields: {              /* entry.123456789 — one per column of the sheet */
+      ref: '', name: '', phone: '', email: '', plan: '', devices: '',
+      device: '', mac: '', method: '', total: '', notes: '', lang: ''
+    }
+  }
+};
+
+const $ = id => document.getElementById(id);
+$('yr').textContent = new Date().getFullYear();
+
+let order = null;
+try { const raw = localStorage.getItem('order:last'); if(raw) order = JSON.parse(raw); } catch(e){}
+
+const t  = s => window.i18n ? window.i18n.t(s) : s;
+const tf = (s,v) => window.i18n ? window.i18n.tf(s,v) : s;
+
+function draw(){
+  const have = !!(order && order.ref);
+  $('card').hidden  = !have;
+  $('empty').hidden = have;
+  if(!have) return;
+  const line = (label, value, cls) => {
+    if(!value) return '';
+    const d = document.createElement('div');
+    d.className = 'row' + (cls ? ' ' + cls : '');
+    const s = document.createElement('span'); s.textContent = t(label);
+    const b = document.createElement('b');    b.textContent = value;
+    d.appendChild(s); d.appendChild(b);
+    return d;
+  };
+  const box = $('rows');
+  box.innerHTML = '';
+  [ ['Reference', order.ref], ['Name', order.name], ['Phone', order.phone],
+    ['Email', order.email], ['Plan', t(order.plan) + (order.term ? ' — ' + t(order.term) : '')],
+    ['Devices', String(order.conn || '')], ['Watch on', order.device],
+    ['MAC address', order.mac], ['Pay by', t(order.method || '')],
+    ['Notes', order.notes], ['Total', order.total, 'total']
+  ].forEach(([l,v,c]) => { const el = line(l,v,c); if(el) box.appendChild(el); });
+}
+
+function orderText(){
+  const L = ['NEW ORDER — ' + order.ref, '——————————————'];
+  const add = (k,v) => { if(v) L.push((k + ':').padEnd(11) + v); };
+  add('Name', order.name);   add('Phone', order.phone);  add('Email', order.email);
+  add('Plan', order.plan + (order.term ? ' (' + order.term + ')' : ''));
+  add('Devices', order.conn); add('Watch on', order.device); add('MAC', order.mac);
+  add('Pay by', order.method); add('Total', order.total);   add('Notes', order.notes);
+  add('Language', document.documentElement.lang);
+  return L.join('\n');
+}
+
+function done(){
+  const b = $('sent');
+  b.textContent = tf('Order {ref} is on its way to us. We reply within a few hours.', {ref: order.ref});
+  b.classList.add('show');
+  setTimeout(() => { location.href = 'thank-you.html?plan=' +
+    encodeURIComponent((order.plan || '').toLowerCase().indexOf('year') > -1 ? 'yearly' : 'monthly'); }, 1400);
+}
+
+$('send').addEventListener('click', () => {
+  if(!order) return;
+  const btn = $('send');
+  btn.disabled = true;
+  btn.textContent = t('Sending…');
+
+  const F = CONFIG.orderForm;
+  if(F.action && F.fields.ref){
+    const f = $('post');
+    f.action = F.action;
+    f.innerHTML = '';
+    const put = (key, val) => {
+      const id = F.fields[key];
+      if(!id || !val) return;
+      const i = document.createElement('input');
+      i.type = 'hidden'; i.name = id; i.value = val;
+      f.appendChild(i);
+    };
+    put('ref', order.ref);        put('name', order.name);     put('phone', order.phone);
+    put('email', order.email);    put('plan', order.plan + (order.term ? ' (' + order.term + ')' : ''));
+    put('devices', String(order.conn || '')); put('device', order.device);
+    put('mac', order.mac);        put('method', order.method); put('total', order.total);
+    put('notes', order.notes);    put('lang', document.documentElement.lang);
+    let fired = false;
+    const finish = () => { if(fired) return; fired = true; done(); };
+    $('ghost').addEventListener('load', finish);
+    setTimeout(finish, 6000);
+    f.submit();
+    return;
+  }
+
+  /* no form set up yet — hand it to the customer's own email app */
+  location.href = 'mailto:' + CONFIG.email +
+    '?subject=' + encodeURIComponent('Order ' + order.ref) +
+    '&body=' + encodeURIComponent(orderText());
+  setTimeout(() => { btn.disabled = false; btn.textContent = t('Send my order'); done(); }, 1200);
+});
+
+window.i18n.boot({
+  skip: '#rows,#yr,#sent',
+  titleKey: '__or_title',
+  descKey: '__or_desc',
+  lang: 'en',
+  onApply: draw
+});
+</script>
+</body>
+</html>

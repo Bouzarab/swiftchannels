@@ -99,6 +99,22 @@ fr: {
   'Devices & apps': 'Appareils et applis',
   'FAQ': 'FAQ',
   'Channels': 'Chaînes',
+  'Send my order': 'Envoyer ma commande',
+  'Send it in one click': 'Envoyez-la en un clic',
+  'One button hands your whole order to us. Nothing is charged and nothing is committed yet.':
+    'Un bouton nous transmet toute votre commande. Rien n’est débité et rien n’est encore engagé.',
+  'One thread with us for setup, renewals and anything that stops working.':
+    'Un seul fil avec nous pour l’installation, les renouvellements et tout ce qui cesse de fonctionner.',
+  'Card or PayPal. You do not pay on this website — send your order from this page, we confirm the price by email and send you the payment link, and your line opens as soon as the payment lands.':
+    'Carte ou PayPal. Vous ne payez pas sur ce site — envoyez votre commande depuis cette page, nous confirmons le prix par e-mail et vous envoyons le lien de paiement, et votre ligne s’ouvre dès réception.',
+  'Nothing is charged here. Send your order and we reply by email with the payment details for the method you chose.':
+    'Rien n’est débité ici. Envoyez votre commande et nous répondons par e-mail avec les informations de paiement pour le moyen choisi.',
+  'Order {ref} copied. Paste it into an email to us.':
+    'Commande {ref} copiée. Collez-la dans un e-mail à notre adresse.',
+  'No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}.':
+    'Aucune application e-mail ne s’est ouverte. La commande {ref} est copiée — collez-la dans un e-mail à {mail}.',
+  'Email my receipt': 'Envoyer mon reçu par e-mail',
+  'Email it to us': 'Envoyez-le-nous par e-mail',
   'Swipe': 'Glissez',
   'Everything, on every plan': 'Tout est inclus, dans chaque offre',
   "One line, one price — sport, films, news and entertainment, with nothing held back on the cheaper plan and nothing sold as an add-on. ESPN, Fox Sports, Sky Sports and beIN Sports are all in it.": 'Une seule ligne, un seul prix — sport, films, info et divertissement, sans rien retenir sur l’offre la moins chère et sans option payante. ESPN, Fox Sports, Sky Sports et beIN Sports y sont tous.',
@@ -501,6 +517,22 @@ de: {
   'Devices & apps': 'Geräte & Apps',
   'FAQ': 'FAQ',
   'Channels': 'Sender',
+  'Send my order': 'Bestellung senden',
+  'Send it in one click': 'Mit einem Klick senden',
+  'One button hands your whole order to us. Nothing is charged and nothing is committed yet.':
+    'Ein Knopf übergibt uns Ihre ganze Bestellung. Es wird nichts abgebucht und nichts verbindlich.',
+  'One thread with us for setup, renewals and anything that stops working.':
+    'Ein Kanal zu uns für Einrichtung, Verlängerungen und alles, was nicht mehr läuft.',
+  'Card or PayPal. You do not pay on this website — send your order from this page, we confirm the price by email and send you the payment link, and your line opens as soon as the payment lands.':
+    'Karte oder PayPal. Sie zahlen nicht auf dieser Website — schicken Sie Ihre Bestellung von dieser Seite, wir bestätigen den Preis per E-Mail und senden den Zahlungslink; Ihre Leitung öffnet, sobald die Zahlung da ist.',
+  'Nothing is charged here. Send your order and we reply by email with the payment details for the method you chose.':
+    'Hier wird nichts abgebucht. Schicken Sie Ihre Bestellung, wir antworten per E-Mail mit den Zahlungsdaten für die gewählte Methode.',
+  'Order {ref} copied. Paste it into an email to us.':
+    'Bestellung {ref} kopiert. Fügen Sie sie in eine E-Mail an uns ein.',
+  'No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}.':
+    'Es hat sich kein E-Mail-Programm geöffnet. Bestellung {ref} ist kopiert — fügen Sie sie in eine E-Mail an {mail} ein.',
+  'Email my receipt': 'Beleg per E-Mail senden',
+  'Email it to us': 'Schicken Sie ihn uns per E-Mail',
   'Swipe': 'Wischen',
   'Everything, on every plan': 'Alles, in jedem Tarif',
   "One line, one price — sport, films, news and entertainment, with nothing held back on the cheaper plan and nothing sold as an add-on. ESPN, Fox Sports, Sky Sports and beIN Sports are all in it.": 'Eine Leitung, ein Preis — Sport, Filme, Nachrichten und Unterhaltung, ohne Abstriche im günstigeren Tarif und ohne Zusatzpakete. ESPN, Fox Sports, Sky Sports und beIN Sports sind alle dabei.',
@@ -892,6 +924,22 @@ es: {
   'Devices & apps': 'Dispositivos y apps',
   'FAQ': 'Preguntas',
   'Channels': 'Canales',
+  'Send my order': 'Enviar mi pedido',
+  'Send it in one click': 'Envíalo en un clic',
+  'One button hands your whole order to us. Nothing is charged and nothing is committed yet.':
+    'Un botón nos entrega todo tu pedido. No se cobra nada y aún no te comprometes a nada.',
+  'One thread with us for setup, renewals and anything that stops working.':
+    'Un solo hilo con nosotros para la instalación, las renovaciones y cualquier cosa que deje de funcionar.',
+  'Card or PayPal. You do not pay on this website — send your order from this page, we confirm the price by email and send you the payment link, and your line opens as soon as the payment lands.':
+    'Tarjeta o PayPal. No pagas en esta web — envía tu pedido desde esta página, confirmamos el precio por correo y te enviamos el enlace de pago, y tu línea se abre en cuanto llega.',
+  'Nothing is charged here. Send your order and we reply by email with the payment details for the method you chose.':
+    'Aquí no se cobra nada. Envía tu pedido y te respondemos por correo con los datos de pago del método que elegiste.',
+  'Order {ref} copied. Paste it into an email to us.':
+    'Pedido {ref} copiado. Pégalo en un correo dirigido a nosotros.',
+  'No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}.':
+    'No se abrió ninguna aplicación de correo. El pedido {ref} está copiado — pégalo en un correo a {mail}.',
+  'Email my receipt': 'Enviar mi recibo por correo',
+  'Email it to us': 'Envíanoslo por correo',
   'Swipe': 'Desliza',
   'Everything, on every plan': 'Todo, en cada plan',
   "One line, one price — sport, films, news and entertainment, with nothing held back on the cheaper plan and nothing sold as an add-on. ESPN, Fox Sports, Sky Sports and beIN Sports are all in it.": 'Una línea, un precio — deporte, cine, noticias y entretenimiento, sin recortes en el plan más barato y sin extras de pago. ESPN, Fox Sports, Sky Sports y beIN Sports están todos incluidos.',
@@ -1294,6 +1342,22 @@ ar: {
   'Devices & apps': 'الأجهزة والتطبيقات',
   'FAQ': 'الأسئلة الشائعة',
   'Channels': 'القنوات',
+  'Send my order': 'أرسل طلبي',
+  'Send it in one click': 'أرسلها بنقرة واحدة',
+  'One button hands your whole order to us. Nothing is charged and nothing is committed yet.':
+    'زر واحد يسلّمنا طلبك كاملًا. لا يُخصم شيء ولا تلتزم بشيء بعد.',
+  'One thread with us for setup, renewals and anything that stops working.':
+    'محادثة واحدة معنا للتثبيت والتجديد وأي شيء يتوقف عن العمل.',
+  'Card or PayPal. You do not pay on this website — send your order from this page, we confirm the price by email and send you the payment link, and your line opens as soon as the payment lands.':
+    'بطاقة أو باي بال. لا تدفع على هذا الموقع — أرسل طلبك من هذه الصفحة، ونؤكد لك السعر بالبريد الإلكتروني ونرسل رابط الدفع، ويُفتح خطك فور وصول المبلغ.',
+  'Nothing is charged here. Send your order and we reply by email with the payment details for the method you chose.':
+    'لا يُخصم أي مبلغ هنا. أرسل طلبك وسنرد عليك بالبريد الإلكتروني ببيانات الدفع بالطريقة التي اخترتها.',
+  'Order {ref} copied. Paste it into an email to us.':
+    'تم نسخ الطلب {ref}. الصقه في رسالة بريد إلكتروني إلينا.',
+  'No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}.':
+    'لم يُفتح أي تطبيق بريد على هذا الجهاز. الطلب {ref} منسوخ — الصقه في رسالة إلى {mail}.',
+  'Email my receipt': 'أرسل إيصالي بالبريد',
+  'Email it to us': 'أرسله إلينا بالبريد',
   'Swipe': 'اسحب',
   'Everything, on every plan': 'كل شيء، في كل باقة',
   "One line, one price — sport, films, news and entertainment, with nothing held back on the cheaper plan and nothing sold as an add-on. ESPN, Fox Sports, Sky Sports and beIN Sports are all in it.": 'خط واحد وسعر واحد — رياضة وأفلام وأخبار وترفيه، دون أي انتقاص في الباقة الأرخص ودون إضافات مدفوعة. وتشمل ESPN و Fox Sports و Sky Sports و beIN Sports.',
