@@ -489,6 +489,10 @@ section{padding:clamp(62px,8.5vw,108px) 0;position:relative}
 .ticket-actions{padding:20px 22px;display:flex;flex-direction:column;gap:10px}
 .ticket-note{padding:0 22px 22px;font-family:var(--mono);font-size:10.5px;line-height:1.65;
   color:var(--muted-2);letter-spacing:.02em}
+.recall{margin:-10px 0 20px;font-size:12.5px;color:var(--muted-2)}
+.recall button{background:none;border:0;padding:0;font:inherit;color:var(--blue-hi);
+  cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.recall button:hover{color:var(--ice)}
 .sent{margin:0 22px 22px;padding:14px 16px;border:1px solid var(--cyan);border-radius:var(--r-sm);
   background:rgba(73,217,255,.09);font-size:13.5px;color:var(--cyan);display:none}
 .sent.show{display:block}
@@ -1199,6 +1203,9 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
             withdraw ends once they are delivered.</span>
         </label>
         <div class="err" id="agreeErr" style="margin:-14px 0 20px">Tick the box to continue.</div>
+
+        <p class="recall" id="recallRow" hidden>Filled in from what you typed last time.
+          <button type="button" id="forget">Clear the saved details</button></p>
       </div>
 
       <aside class="ticket rv d2">
@@ -1602,7 +1609,72 @@ paySel.addEventListener('change', updateTicket);
 const REF = 'ORD-' + Math.random().toString(36).slice(2,7).toUpperCase();
 $('ref').textContent = REF;
 
-/* Stores the order locally so thank-you.html can recover it after checkout. */
+/* ═══════════════ REMEMBER WHAT THEY TYPED ═══════════════
+   Kept in this browser's own storage, on their device. Nothing is sent
+   anywhere until they press the button, and the box below the form clears
+   it in one click. The consent tick is deliberately never remembered.
+   ═══════════════════════════════════════════════════════ */
+const MEMORY = 'sc:profile';
+const REMEMBERED = ['name', 'phone', 'email', 'notes', 'mac', 'device', 'pay'];
+
+function rememberNow(){
+  const p = {};
+  REMEMBERED.forEach(id => {
+    const el = $(id);
+    if(el && el.value) p[id] = el.value;
+  });
+  try {
+    if(Object.keys(p).length) localStorage.setItem(MEMORY, JSON.stringify(p));
+    else localStorage.removeItem(MEMORY);
+  } catch(e){}
+}
+
+function recall(){
+  let p = null;
+  try { p = JSON.parse(localStorage.getItem(MEMORY) || 'null'); } catch(e){}
+  if(!p || typeof p !== 'object') return;
+
+  let filled = 0;
+  REMEMBERED.forEach(id => {
+    const el = $(id);
+    if(!el || !p[id]) return;
+    /* a select can only take a value it actually offers */
+    if(el.tagName === 'SELECT' && ![...el.options].some(o => o.value === p[id])) return;
+    el.value = p[id];
+    filled++;
+  });
+  if(!filled) return;
+
+  $('f-mac').classList.toggle('hidden', !MAC_DEVICES.includes(devSel.value));
+  updateTicket();
+
+  const row = $('recallRow');
+  if(row) row.hidden = false;
+}
+
+REMEMBERED.forEach(id => {
+  const el = $(id);
+  if(el) el.addEventListener('change', rememberNow);
+});
+['name', 'phone', 'email', 'notes', 'mac'].forEach(id => {
+  const el = $(id);
+  if(el) el.addEventListener('input', rememberNow);
+});
+
+$('forget').addEventListener('click', () => {
+  try { localStorage.removeItem(MEMORY); } catch(e){}
+  REMEMBERED.forEach(id => { const el = $(id); if(el) el.value = ''; });
+  $('f-mac').classList.add('hidden');
+  $('recallRow').hidden = true;
+  updateTicket();
+  $("name").focus();
+});
+
+/* the label text is already in the page, in the right language — the i18n
+   engine has not booted yet at this point, so do not touch it here */
+recall();
+
+/* Stores the order locally so order.html can show it back before sending. */
 function saveOrder(){
   const p = planById(planSel.value);
   try {

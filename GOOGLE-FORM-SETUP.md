@@ -51,7 +51,13 @@ nothing is collected in a sheet either.
    > order where that box is empty (a customer with no notes, a phone with no
    > MAC address) is silently rejected and never reaches you.
 
-5. Click the **⚙ Settings** tab at the top and check these:
+5. **Click the blue “Publish” button at the top right.** This is the step
+   everyone misses. Until you do it the form is a private draft: the Responses
+   tab says *“No responses. Publish your form to start accepting responses”*
+   and every submission from the site is silently thrown away. When the dialog
+   asks who can respond, choose **Anyone with the link**.
+
+6. Click the **⚙ Settings** tab at the top and check these:
    - **Collect email addresses** → **Off** (we already ask for it ourselves)
    - **Limit to 1 response** → **Off**
    - **Restrict to users in your organisation** (if shown) → **Off**
@@ -174,8 +180,11 @@ post to the same sheet.
 ## If something goes wrong
 
 **Nothing arrives in the sheet.**
-Check the `action` ends in `/formResponse`, not `/viewform`. Then check that
-no question in the form is marked *Required*.
+First check the form is **published** — open it and look at the Responses tab.
+If it says *“Publish your form to start accepting responses”*, press the blue
+**Publish** button and choose **Anyone with the link**. That accounts for most
+cases. Then check the `action` ends in `/formResponse`, not `/viewform`, and
+that no question in the form is marked *Required*.
 
 **Some columns are empty.**
 Two ids are swapped or one is mistyped. Re-do Part 3 and compare carefully —

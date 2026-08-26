@@ -196,11 +196,16 @@ function orderText(){
 }
 
 function done(){
+  /* The order has reached us — nothing has been paid yet. We reply with the
+     payment details, so this page must not talk about a payment received. */
   const b = $('sent');
-  b.textContent = tf('Order {ref} is on its way to us. We reply within a few hours.', {ref: order.ref});
+  b.textContent = tf('Order {ref} is with us. We reply with the payment details for the method '
+    + 'you picked — usually within a few hours during support hours.', {ref: order.ref});
   b.classList.add('show');
-  setTimeout(() => { location.href = 'thank-you.html?plan=' +
-    encodeURIComponent((order.plan || '').toLowerCase().indexOf('year') > -1 ? 'yearly' : 'monthly'); }, 1400);
+  const btn = $('send');
+  if(btn) btn.remove();
+  const note = document.querySelector('.card .note');
+  if(note) note.remove();
 }
 
 $('send').addEventListener('click', () => {

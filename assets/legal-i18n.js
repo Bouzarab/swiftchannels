@@ -118,8 +118,8 @@ fr: {
   '— the WhatsApp or email conversation, kept so we can support you and handle renewals or disputes.':
     '— la conversation WhatsApp ou e-mail, conservée pour pouvoir vous assister et gérer les renouvellements ou les litiges.',
   'What we do not collect': 'Ce que nous ne collectons pas',
-  'No cookies, analytics, advertising pixels or visitor tracking on this site.':
-    'Aucun cookie, aucune analyse d’audience, aucun pixel publicitaire, aucun suivi des visiteurs sur ce site.',
+  'No cookies, analytics, advertising pixels or visitor tracking on this site. The order form does remember what you typed in your own browser’s storage so you do not have to type it twice — it stays on your device, we never see it until you press send, and one click under the form clears it.':
+    'Aucun cookie, aucune analyse d’audience, aucun pixel publicitaire, aucun suivi des visiteurs sur ce site. Le formulaire de commande retient ce que vous avez saisi dans le stockage de votre propre navigateur pour vous éviter de tout retaper — cela reste sur votre appareil, nous ne le voyons qu’au moment où vous appuyez sur envoyer, et un clic sous le formulaire l’efface.',
   'No card or bank details — payments are handled entirely by PayPal.':
     'Aucune donnée bancaire — les paiements sont entièrement traités par PayPal.',
   'No record of what you watch. We do not have access to your viewing activity.':
@@ -264,8 +264,8 @@ es: {
   '— the WhatsApp or email conversation, kept so we can support you and handle renewals or disputes.':
     '— la conversación de WhatsApp o correo, guardada para poder atenderte y gestionar renovaciones o reclamaciones.',
   'What we do not collect': 'Qué no recogemos',
-  'No cookies, analytics, advertising pixels or visitor tracking on this site.':
-    'Ni cookies, ni analítica, ni píxeles publicitarios, ni seguimiento de visitantes en este sitio.',
+  'No cookies, analytics, advertising pixels or visitor tracking on this site. The order form does remember what you typed in your own browser’s storage so you do not have to type it twice — it stays on your device, we never see it until you press send, and one click under the form clears it.':
+    'Ni cookies, ni analítica, ni píxeles publicitarios, ni seguimiento de visitantes en este sitio. El formulario de pedido sí recuerda lo que escribiste en el almacenamiento de tu propio navegador para que no tengas que teclearlo dos veces — se queda en tu dispositivo, no lo vemos hasta que pulsas enviar, y un clic bajo el formulario lo borra.',
   'No card or bank details — payments are handled entirely by PayPal.':
     'Ningún dato bancario — los pagos los gestiona íntegramente PayPal.',
   'No record of what you watch. We do not have access to your viewing activity.':
@@ -410,8 +410,8 @@ de: {
   '— the WhatsApp or email conversation, kept so we can support you and handle renewals or disputes.':
     '— den WhatsApp- oder E-Mail-Verlauf, aufbewahrt, damit wir Sie betreuen und Verlängerungen oder Streitfälle bearbeiten können.',
   'What we do not collect': 'Was wir nicht erheben',
-  'No cookies, analytics, advertising pixels or visitor tracking on this site.':
-    'Keine Cookies, keine Analyse, keine Werbe-Pixel, kein Besucher-Tracking auf dieser Seite.',
+  'No cookies, analytics, advertising pixels or visitor tracking on this site. The order form does remember what you typed in your own browser’s storage so you do not have to type it twice — it stays on your device, we never see it until you press send, and one click under the form clears it.':
+    'Keine Cookies, keine Analyse, keine Werbe-Pixel, kein Besucher-Tracking auf dieser Seite. Das Bestellformular merkt sich Ihre Eingaben im Speicher Ihres eigenen Browsers, damit Sie nichts zweimal tippen müssen — das bleibt auf Ihrem Gerät, wir sehen es erst, wenn Sie auf Senden drücken, und ein Klick unter dem Formular löscht es.',
   'No card or bank details — payments are handled entirely by PayPal.':
     'Keine Karten- oder Bankdaten — Zahlungen wickelt vollständig PayPal ab.',
   'No record of what you watch. We do not have access to your viewing activity.':
@@ -556,8 +556,8 @@ ar: {
   '— the WhatsApp or email conversation, kept so we can support you and handle renewals or disputes.':
     '— محادثة واتساب أو البريد، تُحفَظ لنتمكن من دعمك ومعالجة التجديدات أو النزاعات.',
   'What we do not collect': 'ما لا نجمعه',
-  'No cookies, analytics, advertising pixels or visitor tracking on this site.':
-    'لا ملفات تعريف ارتباط ولا تحليلات ولا بكسلات إعلانية ولا تتبّع للزوار في هذا الموقع.',
+  'No cookies, analytics, advertising pixels or visitor tracking on this site. The order form does remember what you typed in your own browser’s storage so you do not have to type it twice — it stays on your device, we never see it until you press send, and one click under the form clears it.':
+    'لا ملفات تعريف ارتباط ولا تحليلات ولا بكسلات إعلانية ولا تتبّع للزوار في هذا الموقع. غير أن نموذج الطلب يحتفظ بما كتبته في تخزين متصفّحك حتى لا تعيد كتابته — ويبقى على جهازك، ولا نراه إلا عند ضغطك على إرسال، ونقرة واحدة أسفل النموذج تمسحه.',
   'No card or bank details — payments are handled entirely by PayPal.':
     'لا بيانات بطاقات أو بنوك — المدفوعات يعالجها باي بال بالكامل.',
   'No record of what you watch. We do not have access to your viewing activity.':

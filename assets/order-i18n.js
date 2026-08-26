@@ -26,6 +26,8 @@ fr: {
   'Go to the order form': 'Aller au formulaire',
   'Order {ref} is on its way to us. We reply within a few hours.':
     'La commande {ref} nous est envoyée. Nous répondons dans les heures qui suivent.',
+  'Order {ref} is with us. We reply with the payment details for the method you picked — usually within a few hours during support hours.':
+    'La commande {ref} nous est parvenue. Nous répondons avec les informations de paiement pour le moyen que vous avez choisi — en général en quelques heures pendant les heures de support.',
   'Reference': 'Référence', 'Name': 'Nom', 'Phone': 'Téléphone', 'Email': 'E-mail',
   'Plan': 'Offre', 'Devices': 'Appareils', 'Watch on': 'Regarder sur',
   'MAC address': 'Adresse MAC', 'Pay by': 'Payer par', 'Notes': 'Remarques', 'Total': 'Total'
@@ -50,6 +52,8 @@ es: {
   'Go to the order form': 'Ir al formulario',
   'Order {ref} is on its way to us. We reply within a few hours.':
     'El pedido {ref} va de camino. Respondemos en unas horas.',
+  'Order {ref} is with us. We reply with the payment details for the method you picked — usually within a few hours during support hours.':
+    'El pedido {ref} ya está con nosotros. Te respondemos con los datos de pago del método que elegiste — normalmente en unas horas dentro del horario de soporte.',
   'Reference': 'Referencia', 'Name': 'Nombre', 'Phone': 'Teléfono', 'Email': 'Correo',
   'Plan': 'Plan', 'Devices': 'Dispositivos', 'Watch on': 'Ver en',
   'MAC address': 'Dirección MAC', 'Pay by': 'Pagar con', 'Notes': 'Notas', 'Total': 'Total'
@@ -74,6 +78,8 @@ de: {
   'Go to the order form': 'Zum Bestellformular',
   'Order {ref} is on its way to us. We reply within a few hours.':
     'Bestellung {ref} ist unterwegs zu uns. Wir antworten innerhalb weniger Stunden.',
+  'Order {ref} is with us. We reply with the payment details for the method you picked — usually within a few hours during support hours.':
+    'Bestellung {ref} ist bei uns. Wir antworten mit den Zahlungsdaten für die von Ihnen gewählte Methode — meist innerhalb weniger Stunden während der Supportzeiten.',
   'Reference': 'Referenz', 'Name': 'Name', 'Phone': 'Telefon', 'Email': 'E-Mail',
   'Plan': 'Tarif', 'Devices': 'Geräte', 'Watch on': 'Ansehen auf',
   'MAC address': 'MAC-Adresse', 'Pay by': 'Zahlen mit', 'Notes': 'Anmerkungen', 'Total': 'Gesamt'
@@ -98,6 +104,8 @@ ar: {
   'Go to the order form': 'اذهب إلى نموذج الطلب',
   'Order {ref} is on its way to us. We reply within a few hours.':
     'الطلب {ref} في طريقه إلينا. سنرد خلال ساعات قليلة.',
+  'Order {ref} is with us. We reply with the payment details for the method you picked — usually within a few hours during support hours.':
+    'وصلنا طلبك {ref}. سنرد عليك ببيانات الدفع للطريقة التي اخترتها — عادة خلال ساعات قليلة في أوقات الدعم.',
   'Reference': 'المرجع', 'Name': 'الاسم', 'Phone': 'الهاتف', 'Email': 'البريد الإلكتروني',
   'Plan': 'الباقة', 'Devices': 'الأجهزة', 'Watch on': 'المشاهدة على',
   'MAC address': 'عنوان MAC', 'Pay by': 'الدفع عبر', 'Notes': 'ملاحظات', 'Total': 'المجموع'
