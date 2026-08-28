@@ -304,6 +304,9 @@ fr: {
     'Cet appareil demande une adresse MAC au format 00:1A:79:XX:XX:XX.',
   'How would you like to pay?': 'Comment souhaitez-vous payer ?',
   'Select a method': 'Choisir un moyen',
+  'Ready in': 'Prêt en',
+  '~10 minutes': '~10 minutes',
+  'Backup servers': 'Serveurs de secours',
   'Filled in from what you typed last time.':
     'Rempli à partir de ce que vous avez saisi la dernière fois.',
   'Clear the saved details':
@@ -719,6 +722,9 @@ de: {
     'Dieses Gerät braucht eine MAC im Format 00:1A:79:XX:XX:XX.',
   'How would you like to pay?': 'Wie möchten Sie bezahlen?',
   'Select a method': 'Zahlungsart wählen',
+  'Ready in': 'Bereit in',
+  '~10 minutes': '~10 Minuten',
+  'Backup servers': 'Backup-Server',
   'Filled in from what you typed last time.':
     'Ausgefüllt mit dem, was Sie zuletzt eingegeben haben.',
   'Clear the saved details':
@@ -1137,6 +1143,9 @@ es: {
     'Este dispositivo necesita una MAC con el formato 00:1A:79:XX:XX:XX.',
   'How would you like to pay?': '¿Cómo prefieres pagar?',
   'Select a method': 'Elige un método',
+  'Ready in': 'Listo en',
+  '~10 minutes': '~10 minutos',
+  'Backup servers': 'Servidores de respaldo',
   'Filled in from what you typed last time.':
     'Rellenado con lo que escribiste la última vez.',
   'Clear the saved details':
@@ -1555,6 +1564,9 @@ ar: {
     'هذا الجهاز يحتاج عنوان MAC بالصيغة 00:1A:79:XX:XX:XX.',
   'How would you like to pay?': 'كيف تريد الدفع؟',
   'Select a method': 'اختر طريقة',
+  'Ready in': 'جاهز خلال',
+  '~10 minutes': '‏~10 دقائق',
+  'Backup servers': 'خوادم احتياطية',
   'Filled in from what you typed last time.':
     'مملوء بما أدخلته في المرة الماضية.',
   'Clear the saved details':
