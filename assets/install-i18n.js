@@ -15,7 +15,7 @@
 
 /* ═════════════════════════ FRENCH ═════════════════════════ */
 fr: {
-  '__in_title': 'Guide d’installation — Swift Channels',
+  '__in_title': 'Installer l’IPTV — Firestick, TV Samsung, Smarters | Swift Channels',
   '__in_desc': 'Installez Swift Channels sur TV Samsung ou LG, Firestick, Android, iPhone, Apple TV, Windows ou Mac. Choisissez votre appareil, suivez quatre étapes.',
   '__in_h1': 'Choisissez votre appareil.<br><span class="grad">Quatre étapes.</span>',
   'Installation guide': 'Guide d’installation',
@@ -113,7 +113,7 @@ fr: {
 
 /* ═════════════════════════ SPANISH ═════════════════════════ */
 es: {
-  '__in_title': 'Guía de instalación — Swift Channels',
+  '__in_title': 'Configurar IPTV — Firestick, Smart TV, Smarters | Swift Channels',
   '__in_desc': 'Instala Swift Channels en una tele Samsung o LG, Firestick, Android, iPhone, Apple TV, Windows o Mac. Elige tu dispositivo y sigue cuatro pasos.',
   '__in_h1': 'Elige tu dispositivo.<br><span class="grad">Cuatro pasos.</span>',
   'Installation guide': 'Guía de instalación',
@@ -211,7 +211,7 @@ es: {
 
 /* ═════════════════════════ GERMAN ═════════════════════════ */
 de: {
-  '__in_title': 'Installationsanleitung — Swift Channels',
+  '__in_title': 'IPTV einrichten — Fire TV Stick, Smart TV, Smarters | Swift Channels',
   '__in_desc': 'Swift Channels auf Samsung- oder LG-TV, Firestick, Android, iPhone, Apple TV, Windows oder Mac einrichten. Gerät wählen, vier Schritte folgen.',
   '__in_h1': 'Gerät wählen.<br><span class="grad">Vier Schritte.</span>',
   'Installation guide': 'Installationsanleitung',
@@ -309,7 +309,7 @@ de: {
 
 /* ═════════════════════════ ARABIC ═════════════════════════ */
 ar: {
-  '__in_title': 'دليل التثبيت — سويفت تشانلز',
+  '__in_title': 'تثبيت IPTV — فاير ستيك، التلفزيون الذكي، Smarters | سويفت تشانلز',
   '__in_desc': 'ثبّت سويفت تشانلز على تلفاز سامسونغ أو إل جي، أو Firestick أو أندرويد أو آيفون أو Apple TV أو ويندوز أو ماك. اختر جهازك واتبع أربع خطوات.',
   '__in_h1': 'اختر جهازك.<br><span class="grad">أربع خطوات.</span>',
   'Installation guide': 'دليل التثبيت',

@@ -10,8 +10,28 @@ window.I18N = {
 
 /* ═══════════════════════ FRENCH ═══════════════════════ */
 fr: {
-  '__meta_title': 'Swift Channels — abonnements IPTV',
-  '__meta_desc': 'Commandez un abonnement IPTV mensuel ou annuel, ou lancez un test gratuit de 24 heures. Identifiants livrés en quelques minutes.',
+  'A montage of athletes from tennis, motorsport, cricket, rugby and athletics':
+    'Un montage d’athlètes de tennis, de sport automobile, de cricket, de rugby et d’athlétisme',
+  'Two combat-sports fighters facing each other before a bout':
+    'Deux combattants face à face avant un combat',
+  'A montage of American team-sport players with league trophies':
+    'Un montage de joueurs de sports d’équipe américains avec des trophées',
+  'A football on the grass of a floodlit stadium at night':
+    'Un ballon de football sur la pelouse d’un stade éclairé la nuit',
+  'The numbers 24:7 handwritten in white on a black background':
+    'Les chiffres 24:7 écrits à la main en blanc sur fond noir',
+  'Water droplets and melting ice on a clear surface':
+    'Des gouttes d’eau et de la glace qui fond sur une surface transparente',
+  'The word replay in white on a bright pink background':
+    'Le mot replay en blanc sur fond rose vif',
+  'The words 4K Ultra HD in gold lettering':
+    'Les mots 4K Ultra HD en lettres dorées',
+  'A grid of film and series poster artwork':
+    'Une grille d’affiches de films et de séries',
+  'A curved wall of television screens showing many different channels at once':
+    'Un mur incurvé d’écrans de télévision diffusant de nombreuses chaînes à la fois',
+  '__meta_title': 'Abonnement IPTV 12 mois — 8 000+ chaînes | Swift Channels',
+  '__meta_desc': 'Abonnement IPTV mensuel ou 12 mois : plus de 8 000 chaînes et 50 000 films. Compatible IPTV Smarters, TiviMate et Smart IPTV sur Firestick, TV Samsung et LG. Test gratuit 24 h.',
 
   /* ── ask panel ── */
   'Quick answers':
@@ -436,8 +456,28 @@ fr: {
 
 /* ═══════════════════════ GERMAN ═══════════════════════ */
 de: {
-  '__meta_title': 'Swift Channels — IPTV-Abonnements',
-  '__meta_desc': 'Bestellen Sie ein monatliches oder jährliches IPTV-Abo oder starten Sie einen kostenlosen 24-Stunden-Test. Zugangsdaten in wenigen Minuten.',
+  'A montage of athletes from tennis, motorsport, cricket, rugby and athletics':
+    'Eine Montage von Sportlern aus Tennis, Motorsport, Cricket, Rugby und Leichtathletik',
+  'Two combat-sports fighters facing each other before a bout':
+    'Zwei Kampfsportler stehen sich vor einem Kampf gegenüber',
+  'A montage of American team-sport players with league trophies':
+    'Eine Montage US-amerikanischer Mannschaftssportler mit Pokalen',
+  'A football on the grass of a floodlit stadium at night':
+    'Ein Fußball auf dem Rasen eines nachts beleuchteten Stadions',
+  'The numbers 24:7 handwritten in white on a black background':
+    'Die Zahlen 24:7 handschriftlich in Weiß auf schwarzem Hintergrund',
+  'Water droplets and melting ice on a clear surface':
+    'Wassertropfen und schmelzendes Eis auf einer klaren Oberfläche',
+  'The word replay in white on a bright pink background':
+    'Das Wort replay in Weiß auf leuchtend rosa Hintergrund',
+  'The words 4K Ultra HD in gold lettering':
+    'Die Worte 4K Ultra HD in goldenen Buchstaben',
+  'A grid of film and series poster artwork':
+    'Ein Raster aus Film- und Serienpostern',
+  'A curved wall of television screens showing many different channels at once':
+    'Eine gebogene Wand aus Fernsehbildschirmen mit vielen Sendern gleichzeitig',
+  '__meta_title': 'IPTV Abo & Anbieter — 8.000+ Sender | Swift Channels',
+  '__meta_desc': 'IPTV Abo monatlich oder jährlich: über 8.000 Sender und 50.000 Filme. Läuft mit IPTV Smarters, TiviMate und Smart IPTV auf Fire TV Stick, Smart TV und Handy. Kostenloser 24-Stunden-Test.',
 
   /* ── ask panel ── */
   'Quick answers':
@@ -849,8 +889,28 @@ de: {
 
 /* ═══════════════════════ SPANISH ═══════════════════════ */
 es: {
-  '__meta_title': 'Swift Channels — suscripciones IPTV',
-  '__meta_desc': 'Contrata una suscripción IPTV mensual o anual, o empieza una prueba gratuita de 24 horas. Recibes los datos de acceso en minutos.',
+  'A montage of athletes from tennis, motorsport, cricket, rugby and athletics':
+    'Un montaje de atletas de tenis, automovilismo, críquet, rugby y atletismo',
+  'Two combat-sports fighters facing each other before a bout':
+    'Dos luchadores frente a frente antes de un combate',
+  'A montage of American team-sport players with league trophies':
+    'Un montaje de jugadores de deportes de equipo estadounidenses con trofeos',
+  'A football on the grass of a floodlit stadium at night':
+    'Un balón de fútbol sobre el césped de un estadio iluminado de noche',
+  'The numbers 24:7 handwritten in white on a black background':
+    'Los números 24:7 escritos a mano en blanco sobre fondo negro',
+  'Water droplets and melting ice on a clear surface':
+    'Gotas de agua y hielo derritiéndose sobre una superficie transparente',
+  'The word replay in white on a bright pink background':
+    'La palabra replay en blanco sobre un fondo rosa intenso',
+  'The words 4K Ultra HD in gold lettering':
+    'Las palabras 4K Ultra HD en letras doradas',
+  'A grid of film and series poster artwork':
+    'Una cuadrícula de carteles de películas y series',
+  'A curved wall of television screens showing many different channels at once':
+    'Un muro curvo de pantallas de televisión mostrando muchos canales a la vez',
+  '__meta_title': 'Suscripción IPTV — más de 8.000 canales | Swift Channels',
+  '__meta_desc': 'Suscripción IPTV mensual o anual: más de 8.000 canales y 50.000 películas. Compatible con IPTV Smarters, TiviMate y Smart IPTV en Firestick, Smart TV y móvil. Prueba gratis de 24 h.',
 
   /* ── ask panel ── */
   'Quick answers':
@@ -1275,8 +1335,28 @@ es: {
 
 /* ═══════════════════════ ARABIC ═══════════════════════ */
 ar: {
-  '__meta_title': 'سويفت تشانلز — اشتراكات IPTV',
-  '__meta_desc': 'اطلب اشتراك IPTV شهريًا أو سنويًا، أو ابدأ تجربة مجانية لمدة 24 ساعة. تصلك بيانات الدخول خلال دقائق.',
+  'A montage of athletes from tennis, motorsport, cricket, rugby and athletics':
+    'مجموعة من رياضيي التنس ورياضة السيارات والكريكيت والرغبي وألعاب القوى',
+  'Two combat-sports fighters facing each other before a bout':
+    'مقاتلان يتواجهان قبل النزال',
+  'A montage of American team-sport players with league trophies':
+    'مجموعة من لاعبي الرياضات الجماعية الأمريكية مع الكؤوس',
+  'A football on the grass of a floodlit stadium at night':
+    'كرة قدم على عشب ملعب مضاء ليلًا',
+  'The numbers 24:7 handwritten in white on a black background':
+    'الرقمان 24:7 مكتوبان بخط اليد بالأبيض على خلفية سوداء',
+  'Water droplets and melting ice on a clear surface':
+    'قطرات ماء وثلج ذائب على سطح شفاف',
+  'The word replay in white on a bright pink background':
+    'كلمة replay بالأبيض على خلفية وردية زاهية',
+  'The words 4K Ultra HD in gold lettering':
+    'عبارة 4K Ultra HD بحروف ذهبية',
+  'A grid of film and series poster artwork':
+    'شبكة من ملصقات الأفلام والمسلسلات',
+  'A curved wall of television screens showing many different channels at once':
+    'جدار منحنٍ من شاشات التلفزيون يعرض قنوات كثيرة في وقت واحد',
+  '__meta_title': 'اشتراك IPTV — أكثر من 8000 قناة | سويفت تشانلز',
+  '__meta_desc': 'اشتراك IPTV شهري أو سنوي: أكثر من 8000 قناة و50000 فيلم ومسلسل. يعمل مع IPTV Smarters وTiviMate وSmart IPTV على فاير ستيك والتلفزيون الذكي والهاتف. تجربة مجانية 24 ساعة.',
 
   /* ── ask panel ── */
   'Quick answers':

@@ -13,7 +13,7 @@
 
 /* ═════════ FRENCH ═════════ */
 fr: {
-  '__ch_title': 'Liste des chaînes — Swift Channels',
+  '__ch_title': 'Liste des chaînes IPTV — 8 000+ chaînes par pays | Swift Channels',
   '__ch_desc': 'Toutes les chaînes de Swift Channels — plus de 8 000 chaînes en direct dans 54 pays, avec recherche par nom ou par pays.',
   '__ch_h1': 'Toutes les chaînes,<br>au <span class="grad">même endroit</span>.',
   'Channel list': 'Liste des chaînes',
@@ -58,7 +58,7 @@ fr: {
 
 /* ═════════ SPANISH ═════════ */
 es: {
-  '__ch_title': 'Lista de canales — Swift Channels',
+  '__ch_title': 'Lista de canales IPTV — más de 8.000 por país | Swift Channels',
   '__ch_desc': 'Todos los canales de Swift Channels — más de 8.000 canales en directo de 54 países, con búsqueda por nombre o país.',
   '__ch_h1': 'Todos los canales,<br>en <span class="grad">un solo sitio</span>.',
   'Channel list': 'Lista de canales',
@@ -102,7 +102,7 @@ es: {
 
 /* ═════════ GERMAN ═════════ */
 de: {
-  '__ch_title': 'Senderliste — Swift Channels',
+  '__ch_title': 'IPTV Senderliste — über 8.000 Sender nach Land | Swift Channels',
   '__ch_desc': 'Alle Sender von Swift Channels — über 8.000 Live-Sender aus 54 Ländern, durchsuchbar nach Name oder Land.',
   '__ch_h1': 'Alle Sender,<br>an <span class="grad">einem Ort</span>.',
   'Channel list': 'Senderliste',
@@ -146,7 +146,7 @@ de: {
 
 /* ═════════ ARABIC ═════════ */
 ar: {
-  '__ch_title': 'قائمة القنوات — سويفت تشانلز',
+  '__ch_title': 'قائمة قنوات IPTV — أكثر من 8000 قناة حسب البلد | سويفت تشانلز',
   '__ch_desc': 'كل قنوات سويفت تشانلز — أكثر من 8000 قناة مباشرة من 54 دولة، مع البحث بالاسم أو بالدولة.',
   '__ch_h1': 'كل القنوات،<br>في <span class="grad">مكان واحد</span>.',
   'Channel list': 'قائمة القنوات',
