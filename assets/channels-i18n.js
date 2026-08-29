@@ -13,6 +13,20 @@
 
 /* ═════════ FRENCH ═════════ */
 fr: {
+  'About this channel list':
+    'À propos de cette liste de chaînes',
+  'What the list covers':
+    'Ce que couvre la liste',
+  'Every channel here is carried on the platform we resell, grouped by the country it broadcasts from. Sport, films, series, news, documentaries and children\'s channels are all in the same line-up — there is no package to upgrade to and no add-on to buy. The list is identical on the monthly plan, the 12-month plan and the free 24-hour test.':
+    'Chaque chaîne présentée ici est diffusée sur la plateforme que nous revendons, regroupée par pays d’émission. Sport, films, séries, information, documentaires et chaînes jeunesse font partie du même bouquet — il n’y a pas de formule supérieure ni d’option à acheter. La liste est identique sur l’abonnement mensuel, l’abonnement 12 mois et le test gratuit de 24 heures.',
+  'Quality and what you need':
+    'Qualité et prérequis',
+  'Channels stream in 4K, Full HD, HD or SD depending on the source broadcaster, and the badge beside each name tells you which. You need roughly 5 Mbps for SD, 15 Mbps for HD and 25 Mbps for 4K. A 7-day catch-up and a full programme guide come with every channel that supports them.':
+    'Les chaînes sont diffusées en 4K, Full HD, HD ou SD selon le diffuseur d’origine, et le badge à côté de chaque nom vous l’indique. Comptez environ 5 Mbps pour la SD, 15 Mbps pour la HD et 25 Mbps pour la 4K. Le replay 7 jours et le guide des programmes complet accompagnent chaque chaîne qui les prend en charge.',
+  'How current this list is':
+    'À quel point cette liste est à jour',
+  'Line-ups are set by the platform operator, not by us, so channels are added and removed without notice. If a specific channel or a particular match matters to you, ask us before you order, or open the free 24-hour test and check it on your own television first.':
+    'Les bouquets sont définis par l’opérateur de la plateforme, pas par nous : des chaînes sont ajoutées et retirées sans préavis. Si une chaîne précise ou un match particulier compte pour vous, demandez-nous avant de commander, ou ouvrez le test gratuit de 24 heures et vérifiez-le d’abord sur votre propre téléviseur.',
   '__ch_title': 'Liste des chaînes IPTV — 8 000+ chaînes par pays | Swift Channels',
   '__ch_desc': 'Toutes les chaînes de Swift Channels — plus de 8 000 chaînes en direct dans 54 pays, avec recherche par nom ou par pays.',
   '__ch_h1': 'Toutes les chaînes,<br>au <span class="grad">même endroit</span>.',
@@ -58,6 +72,20 @@ fr: {
 
 /* ═════════ SPANISH ═════════ */
 es: {
+  'About this channel list':
+    'Sobre esta lista de canales',
+  'What the list covers':
+    'Qué incluye la lista',
+  'Every channel here is carried on the platform we resell, grouped by the country it broadcasts from. Sport, films, series, news, documentaries and children\'s channels are all in the same line-up — there is no package to upgrade to and no add-on to buy. The list is identical on the monthly plan, the 12-month plan and the free 24-hour test.':
+    'Todos los canales que ves aquí se emiten en la plataforma que revendemos, agrupados por el país desde el que emiten. Deporte, películas, series, informativos, documentales y canales infantiles están en la misma parrilla: no hay paquete superior ni complemento que comprar. La lista es idéntica en el plan mensual, en el de 12 meses y en la prueba gratuita de 24 horas.',
+  'Quality and what you need':
+    'Calidad y qué necesitas',
+  'Channels stream in 4K, Full HD, HD or SD depending on the source broadcaster, and the badge beside each name tells you which. You need roughly 5 Mbps for SD, 15 Mbps for HD and 25 Mbps for 4K. A 7-day catch-up and a full programme guide come with every channel that supports them.':
+    'Los canales se emiten en 4K, Full HD, HD o SD según la cadena de origen, y la etiqueta junto a cada nombre te lo indica. Necesitas unos 5 Mbps para SD, 15 Mbps para HD y 25 Mbps para 4K. La repetición de 7 días y la guía de programación completa acompañan a cada canal que las admite.',
+  'How current this list is':
+    'Hasta qué punto está actualizada',
+  'Line-ups are set by the platform operator, not by us, so channels are added and removed without notice. If a specific channel or a particular match matters to you, ask us before you order, or open the free 24-hour test and check it on your own television first.':
+    'Las parrillas las fija el operador de la plataforma, no nosotros, así que se añaden y se retiran canales sin aviso. Si te importa un canal concreto o un partido en particular, pregúntanos antes de pedir, o abre la prueba gratuita de 24 horas y compruébalo primero en tu propio televisor.',
   '__ch_title': 'Lista de canales IPTV — más de 8.000 por país | Swift Channels',
   '__ch_desc': 'Todos los canales de Swift Channels — más de 8.000 canales en directo de 54 países, con búsqueda por nombre o país.',
   '__ch_h1': 'Todos los canales,<br>en <span class="grad">un solo sitio</span>.',
@@ -102,6 +130,20 @@ es: {
 
 /* ═════════ GERMAN ═════════ */
 de: {
+  'About this channel list':
+    'Über diese Senderliste',
+  'What the list covers':
+    'Was die Liste umfasst',
+  'Every channel here is carried on the platform we resell, grouped by the country it broadcasts from. Sport, films, series, news, documentaries and children\'s channels are all in the same line-up — there is no package to upgrade to and no add-on to buy. The list is identical on the monthly plan, the 12-month plan and the free 24-hour test.':
+    'Jeder Sender hier läuft über die Plattform, die wir weiterverkaufen, gruppiert nach dem Land, aus dem er sendet. Sport, Filme, Serien, Nachrichten, Dokumentationen und Kindersender gehören alle zum selben Angebot — es gibt kein größeres Paket und kein Zusatzmodul zu kaufen. Die Liste ist beim Monatsabo, beim 12-Monats-Abo und beim kostenlosen 24-Stunden-Test dieselbe.',
+  'Quality and what you need':
+    'Qualität und Voraussetzungen',
+  'Channels stream in 4K, Full HD, HD or SD depending on the source broadcaster, and the badge beside each name tells you which. You need roughly 5 Mbps for SD, 15 Mbps for HD and 25 Mbps for 4K. A 7-day catch-up and a full programme guide come with every channel that supports them.':
+    'Die Sender laufen je nach Ursprungssender in 4K, Full HD, HD oder SD — das Kürzel neben jedem Namen sagt Ihnen welches. Sie brauchen etwa 5 Mbps für SD, 15 Mbps für HD und 25 Mbps für 4K. Die 7-Tage-Aufholfunktion und die vollständige Programmzeitschrift gehören zu jedem Sender, der sie unterstützt.',
+  'How current this list is':
+    'Wie aktuell diese Liste ist',
+  'Line-ups are set by the platform operator, not by us, so channels are added and removed without notice. If a specific channel or a particular match matters to you, ask us before you order, or open the free 24-hour test and check it on your own television first.':
+    'Die Programmzusammenstellung legt der Plattformbetreiber fest, nicht wir — Sender kommen hinzu und fallen ohne Ankündigung weg. Wenn Ihnen ein bestimmter Sender oder ein bestimmtes Spiel wichtig ist, fragen Sie uns vor der Bestellung, oder starten Sie den kostenlosen 24-Stunden-Test und prüfen Sie es zuerst auf Ihrem eigenen Fernseher.',
   '__ch_title': 'IPTV Senderliste — über 8.000 Sender nach Land | Swift Channels',
   '__ch_desc': 'Alle Sender von Swift Channels — über 8.000 Live-Sender aus 54 Ländern, durchsuchbar nach Name oder Land.',
   '__ch_h1': 'Alle Sender,<br>an <span class="grad">einem Ort</span>.',
@@ -146,6 +188,20 @@ de: {
 
 /* ═════════ ARABIC ═════════ */
 ar: {
+  'About this channel list':
+    'عن قائمة القنوات هذه',
+  'What the list covers':
+    'ما تشمله القائمة',
+  'Every channel here is carried on the platform we resell, grouped by the country it broadcasts from. Sport, films, series, news, documentaries and children\'s channels are all in the same line-up — there is no package to upgrade to and no add-on to buy. The list is identical on the monthly plan, the 12-month plan and the free 24-hour test.':
+    'كل قناة هنا تُبث عبر المنصة التي نبيع اشتراكاتها، مرتّبة حسب بلد البث. الرياضة والأفلام والمسلسلات والأخبار والوثائقيات وقنوات الأطفال كلها ضمن الباقة نفسها — لا توجد باقة أعلى ولا إضافة تُشترى. والقائمة واحدة في الاشتراك الشهري واشتراك 12 شهرًا وتجربة 24 ساعة المجانية.',
+  'Quality and what you need':
+    'الجودة وما تحتاجه',
+  'Channels stream in 4K, Full HD, HD or SD depending on the source broadcaster, and the badge beside each name tells you which. You need roughly 5 Mbps for SD, 15 Mbps for HD and 25 Mbps for 4K. A 7-day catch-up and a full programme guide come with every channel that supports them.':
+    'تُبث القنوات بدقة 4K أو Full HD أو HD أو SD حسب القناة الأصلية، والشارة بجانب كل اسم تدلّك على ذلك. تحتاج نحو 5 ميغابت/ث للـ SD، و15 للـ HD، و25 للـ 4K. وتأتي خاصية إعادة المشاهدة لسبعة أيام ودليل البرامج الكامل مع كل قناة تدعمهما.',
+  'How current this list is':
+    'إلى أي حد القائمة محدّثة',
+  'Line-ups are set by the platform operator, not by us, so channels are added and removed without notice. If a specific channel or a particular match matters to you, ask us before you order, or open the free 24-hour test and check it on your own television first.':
+    'يحدّد مشغّل المنصة قائمة القنوات، لا نحن، فتُضاف قنوات وتُحذف دون إشعار. وإذا كانت تهمّك قناة بعينها أو مباراة بذاتها، فاسألنا قبل الطلب، أو افتح تجربة 24 ساعة المجانية وتحقّق منها أولًا على تلفزيونك.',
   '__ch_title': 'قائمة قنوات IPTV — أكثر من 8000 قناة حسب البلد | سويفت تشانلز',
   '__ch_desc': 'كل قنوات سويفت تشانلز — أكثر من 8000 قناة مباشرة من 54 دولة، مع البحث بالاسم أو بالدولة.',
   '__ch_h1': 'كل القنوات،<br>في <span class="grad">مكان واحد</span>.',
@@ -190,6 +246,20 @@ ar: {
 
 /* ═══════════════════════ DUTCH ═══════════════════════ */
 nl: {
+  'About this channel list':
+    'Over deze zenderlijst',
+  'What the list covers':
+    'Wat de lijst omvat',
+  'Every channel here is carried on the platform we resell, grouped by the country it broadcasts from. Sport, films, series, news, documentaries and children\'s channels are all in the same line-up — there is no package to upgrade to and no add-on to buy. The list is identical on the monthly plan, the 12-month plan and the free 24-hour test.':
+    'Elke zender hier loopt via het platform waarvan wij abonnementen doorverkopen, gegroepeerd op het land van uitzending. Sport, films, series, nieuws, documentaires en kinderzenders zitten allemaal in hetzelfde aanbod — er is geen duurder pakket en geen extra module te koop. De lijst is identiek bij het maandabonnement, het 12-maandenabonnement en de gratis test van 24 uur.',
+  'Quality and what you need':
+    'Kwaliteit en wat u nodig hebt',
+  'Channels stream in 4K, Full HD, HD or SD depending on the source broadcaster, and the badge beside each name tells you which. You need roughly 5 Mbps for SD, 15 Mbps for HD and 25 Mbps for 4K. A 7-day catch-up and a full programme guide come with every channel that supports them.':
+    'Zenders streamen in 4K, Full HD, HD of SD, afhankelijk van de oorspronkelijke omroep, en het label naast elke naam vertelt u welke. U hebt ongeveer 5 Mbps nodig voor SD, 15 Mbps voor HD en 25 Mbps voor 4K. Replay van 7 dagen en een volledige programmagids horen bij elke zender die ze ondersteunt.',
+  'How current this list is':
+    'Hoe actueel deze lijst is',
+  'Line-ups are set by the platform operator, not by us, so channels are added and removed without notice. If a specific channel or a particular match matters to you, ask us before you order, or open the free 24-hour test and check it on your own television first.':
+    'Het zenderaanbod wordt bepaald door de platformexploitant, niet door ons, dus zenders komen erbij en vallen weg zonder aankondiging. Als een bepaalde zender of een specifieke wedstrijd voor u telt, vraag het ons dan vóór u bestelt, of open de gratis test van 24 uur en controleer het eerst op uw eigen televisie.',
   'Setup guide': 'Installatiegids',
   'Channels': 'Zenders',
   '← Back to the site': '← Terug naar de site',

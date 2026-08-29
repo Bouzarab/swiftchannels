@@ -78,7 +78,7 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
         for (const attr of ['src','href']) {
           const v = el.getAttribute(attr);
           if (!v) continue;
-          if (/^(https?:|mailto:|tel:|#|\/|\.\.\/|data:)/.test(v)) continue;
+          if (/^(https?:|mailto:|tel:|#|\/|\.\.\/|\.\/|data:)/.test(v)) continue;
           if (SAME_FOLDER.includes(v.split('#')[0])) continue;
           el.setAttribute(attr, '../' + v);
         }

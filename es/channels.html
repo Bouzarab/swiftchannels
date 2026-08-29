@@ -145,7 +145,7 @@ h1 .grad{background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 60%,#fff);
   color:var(--muted-2)}
 
 /* ── search ── */
-.search-wrap{max-width:var(--maxw);margin:0 auto;padding:26px var(--pad) 0;width:100%}
+.search-wrap{display:block;max-width:var(--maxw);margin:0 auto;padding:26px var(--pad) 0;width:100%}
 .search{position:relative;max-width:520px}
 .search input{width:100%;background:rgba(8,15,34,.8);color:var(--ice);
   border:1px solid var(--line);border-radius:100px;padding:14px 46px 14px 46px;
@@ -228,6 +228,13 @@ h1 .grad{background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 60%,#fff);
 .empty{padding:50px 10px;text-align:center;color:var(--muted-2);font-size:15px}
 
 /* ── closing band ── */
+.about{border-top:1px solid var(--line-soft);background:rgba(5,10,24,.4)}
+.about-in{max-width:var(--maxw);margin:0 auto;padding:clamp(38px,5vw,60px) var(--pad)}
+.about-in h2{font-size:clamp(21px,2.6vw,28px);margin-bottom:26px}
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,30px)}
+.about-grid article h3{font-size:15.5px;margin-bottom:9px;color:var(--ice)}
+.about-grid article p{font-size:14px;color:var(--muted);line-height:1.72}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:22px}}
 .band{border-top:1px solid var(--line-soft);background:
   radial-gradient(70% 130% at 50% 0%,rgba(47,107,255,.16),transparent 70%)}
 .band-in{max-width:var(--maxw);margin:0 auto;padding:52px var(--pad);text-align:center}
@@ -267,10 +274,10 @@ footer a:hover{color:var(--blue-hi)}
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="index.html">
+    <a class="brand" href="./">
       <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
     </a>
-    <a class="back" href="index.html">← Volver al sitio</a>
+    <a class="back" href="./">← Volver al sitio</a>
     <div class="lang" id="lang">
       <button class="lang-cur" type="button" id="langCur" aria-haspopup="true" aria-expanded="false" aria-label="Language"><img src="../assets/flag-es.webp" alt="" width="32" height="32"></button>
       <div class="lang-opts" id="langOpts">
@@ -282,11 +289,11 @@ footer a:hover{color:var(--blue-hi)}
         <a class="lang-b" href="../nl/channels.html" data-lang="nl" hreflang="nl" aria-current="false" title="Nederlands"><img src="../assets/flag-nl.webp" alt="" width="32" height="32"><span>Nederlands</span></a>
       </div>
     </div>
-    <a class="btn btn-blue btn-sm" href="index.html#order">Contratar</a>
+    <a class="btn btn-blue btn-sm" href="./#order">Contratar</a>
   </div>
 </header>
 
-<div class="head">
+<section class="head">
   <span class="eyebrow">Lista de canales</span>
   <h1 data-i18n-html="__ch_h1">Todos los canales,<br>en <span class="grad">un solo sitio</span>.</h1>
   <p>Navega por país o busca el canal del que no puedes prescindir. Esta es la parrilla completa que ofrece la plataforma — la misma en todos los planes.</p>
@@ -296,17 +303,17 @@ footer a:hover{color:var(--blue-hi)}
     <div class="stat"><b>50,000+</b><span>Películas y series</span></div>
     <div class="stat"><b>7 días</b><span>Repetición</span></div>
   </div>
-</div>
+</section>
 
-<div class="search-wrap">
+<search class="search-wrap">
   <div class="search" id="searchWrap">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
     <input id="q" type="search" placeholder="Busca entre más de 8.000 canales — prueba «Sky Sports» o «beIN»" autocomplete="off" aria-label="Buscar canales">
     <button class="clear" type="button" id="clearQ" aria-label="Borrar búsqueda">×</button>
   </div>
-</div>
+</search>
 
-<div class="split">
+<section class="split">
   <aside class="rail">
     <div class="rail-h" data-i18n-html="__ch_rail">Países</div>
     <div class="rail-list" id="rail" role="tablist" aria-label="Países"><button type="button" class="ct" role="tab" aria-selected="true"><span class="ct-code"><img src="../assets/flags/us.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Estados Unidos</span><span class="ct-n">1372</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/gb.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Reino Unido</span><span class="ct-n">620</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/de.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Alemania</span><span class="ct-n">545</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/tr.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Turquía</span><span class="ct-n">438</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/nl.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Países Bajos</span><span class="ct-n">436</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/rs.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Ex-Yugoslavia</span><span class="ct-n">430</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/fr.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Francia</span><span class="ct-n">314</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/es.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">España</span><span class="ct-n">305</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">ASIA</span><span class="ct-name">Asia</span><span class="ct-n">280</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ro.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Rumanía</span><span class="ct-n">279</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/al.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Albania</span><span class="ct-n">275</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ca.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Canadá</span><span class="ct-n">252</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/pt.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Portugal</span><span class="ct-n">226</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/in.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">India</span><span class="ct-n">181</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/az.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Kurdistán y Azerbaiyán</span><span class="ct-n">172</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/be.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Bélgica</span><span class="ct-n">158</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/dk.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Dinamarca</span><span class="ct-n">149</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/au.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Australia</span><span class="ct-n">143</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">AR</span><span class="ct-name">Deporte árabe</span><span class="ct-n">136</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/pk.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Pakistán</span><span class="ct-n">122</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ma.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Marruecos</span><span class="ct-n">120</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">LAT</span><span class="ct-name">América Latina</span><span class="ct-n">118</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/mt.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Malta</span><span class="ct-n">115</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ru.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Rusia</span><span class="ct-n">103</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/cz.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Chequia</span><span class="ct-n">100</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/eg.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Egipto</span><span class="ct-n">87</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/iq.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Irak</span><span class="ct-n">75</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/cn.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">China y Japón</span><span class="ct-n">61</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">AR</span><span class="ct-name">Árabe — todo</span><span class="ct-n">52</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">F1</span><span class="ct-name">Fórmula 1 y MotoGP</span><span class="ct-n">45</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">DNC</span><span class="ct-name">Baile latino</span><span class="ct-n">42</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/cl.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Chile</span><span class="ct-n">32</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/am.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Armenia</span><span class="ct-n">31</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/dz.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Argelia</span><span class="ct-n">29</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/kw.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Kuwait</span><span class="ct-n">26</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/co.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Colombia</span><span class="ct-n">24</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/sy.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Siria</span><span class="ct-n">24</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/bh.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Baréin y Jordania</span><span class="ct-n">23</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ae.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Emiratos Árabes Unidos</span><span class="ct-n">23</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ie.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Irlanda</span><span class="ct-n">20</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/tn.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Túnez</span><span class="ct-n">16</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ge.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Georgia</span><span class="ct-n">15</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/cy.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Chipre</span><span class="ct-n">13</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/sk.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Eslovaquia</span><span class="ct-n">11</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/lv.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Letonia</span><span class="ct-n">9</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ps.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Palestina</span><span class="ct-n">9</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code">DAZN</span><span class="ct-name">DAZN</span><span class="ct-n">7</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/me.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Montenegro</span><span class="ct-n">7</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/qa.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Catar</span><span class="ct-n">7</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/bh.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Baréin</span><span class="ct-n">6</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/ee.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Estonia</span><span class="ct-n">6</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/pe.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Perú</span><span class="ct-n">6</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/lu.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Luxemburgo</span><span class="ct-n">4</span></button><button type="button" class="ct" role="tab" aria-selected="false"><span class="ct-code"><img src="../assets/flags/np.webp" alt="" width="38" height="38" loading="lazy"></span><span class="ct-name">Nepal</span><span class="ct-n">4</span></button></div>
@@ -321,19 +328,39 @@ footer a:hover{color:var(--blue-hi)}
       <div class="empty" id="empty" hidden="">No hay resultados. Prueba con una palabra más corta — o escríbenos por correo.</div>
     </div>
   </main>
-</div>
+</section>
 
-<div class="band">
+<section class="about">
+  <div class="about-in">
+    <h2>Sobre esta lista de canales</h2>
+    <div class="about-grid">
+      <article>
+        <h3>Qué incluye la lista</h3>
+        <p>Todos los canales que ves aquí se emiten en la plataforma que revendemos, agrupados por el país desde el que emiten. Deporte, películas, series, informativos, documentales y canales infantiles están en la misma parrilla: no hay paquete superior ni complemento que comprar. La lista es idéntica en el plan mensual, en el de 12 meses y en la prueba gratuita de 24 horas.</p>
+      </article>
+      <article>
+        <h3>Calidad y qué necesitas</h3>
+        <p>Los canales se emiten en 4K, Full HD, HD o SD según la cadena de origen, y la etiqueta junto a cada nombre te lo indica. Necesitas unos 5 Mbps para SD, 15 Mbps para HD y 25 Mbps para 4K. La repetición de 7 días y la guía de programación completa acompañan a cada canal que las admite.</p>
+      </article>
+      <article>
+        <h3>Hasta qué punto está actualizada</h3>
+        <p>Las parrillas las fija el operador de la plataforma, no nosotros, así que se añaden y se retiran canales sin aviso. Si te importa un canal concreto o un partido en particular, pregúntanos antes de pedir, o abre la prueba gratuita de 24 horas y compruébalo primero en tu propio televisor.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band">
   <div class="band-in">
     <h3>¿No encuentras un canal?</h3>
     <p>Pregunta antes de contratar. Si está incluido te lo diremos, y si no lo está también — la prueba gratuita de 24 horas te deja comprobarlo en tu propia tele.</p>
-    <a class="btn btn-blue btn-lg" href="index.html#order">Empezar la prueba gratis de 24 h</a>
+    <a class="btn btn-blue btn-lg" href="./#order">Empezar la prueba gratis de 24 h</a>
   </div>
-</div>
+</section>
 
 <footer>
   <span>© <span id="yr">2026</span> Swift Channels · <span>Las parrillas las fija la plataforma y pueden cambiar</span></span>
-  <span><a href="index.html">swiftchannels.com</a> · <a href="install.html">Guía de instalación</a> · <a href="legal.html">Términos y privacidad</a></span>
+  <span><a href="./">swiftchannels.com</a> · <a href="install.html">Guía de instalación</a> · <a href="legal.html">Términos y privacidad</a></span>
 </footer>
 
 <script>window.PAGE_LANG='es';</script><script src="../assets/i18n.js"></script>

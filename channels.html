@@ -146,7 +146,7 @@ h1 .grad{background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 60%,#fff);
   color:var(--muted-2)}
 
 /* ── search ── */
-.search-wrap{max-width:var(--maxw);margin:0 auto;padding:26px var(--pad) 0;width:100%}
+.search-wrap{display:block;max-width:var(--maxw);margin:0 auto;padding:26px var(--pad) 0;width:100%}
 .search{position:relative;max-width:520px}
 .search input{width:100%;background:rgba(8,15,34,.8);color:var(--ice);
   border:1px solid var(--line);border-radius:100px;padding:14px 46px 14px 46px;
@@ -229,6 +229,13 @@ h1 .grad{background:linear-gradient(103deg,var(--blue-hi),var(--cyan) 60%,#fff);
 .empty{padding:50px 10px;text-align:center;color:var(--muted-2);font-size:15px}
 
 /* ── closing band ── */
+.about{border-top:1px solid var(--line-soft);background:rgba(5,10,24,.4)}
+.about-in{max-width:var(--maxw);margin:0 auto;padding:clamp(38px,5vw,60px) var(--pad)}
+.about-in h2{font-size:clamp(21px,2.6vw,28px);margin-bottom:26px}
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,30px)}
+.about-grid article h3{font-size:15.5px;margin-bottom:9px;color:var(--ice)}
+.about-grid article p{font-size:14px;color:var(--muted);line-height:1.72}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:22px}}
 .band{border-top:1px solid var(--line-soft);background:
   radial-gradient(70% 130% at 50% 0%,rgba(47,107,255,.16),transparent 70%)}
 .band-in{max-width:var(--maxw);margin:0 auto;padding:52px var(--pad);text-align:center}
@@ -268,10 +275,10 @@ footer a:hover{color:var(--blue-hi)}
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="index.html">
+    <a class="brand" href="./">
       <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
     </a>
-    <a class="back" href="index.html">← Back to the site</a>
+    <a class="back" href="./">← Back to the site</a>
     <div class="lang" id="lang">
       <button class="lang-cur" type="button" id="langCur" aria-haspopup="true"
               aria-expanded="false" aria-label="Language"><img src="assets/flag-en.webp" alt="" width="32" height="32"></button>
@@ -284,11 +291,11 @@ footer a:hover{color:var(--blue-hi)}
         <a class="lang-b" href="nl/channels.html" data-lang="nl" hreflang="nl" aria-current="false" title="Nederlands"><img src="assets/flag-nl.webp" alt="" width="32" height="32"><span>Nederlands</span></a>
       </div>
     </div>
-    <a class="btn btn-blue btn-sm" href="index.html#order">Order now</a>
+    <a class="btn btn-blue btn-sm" href="./#order">Order now</a>
   </div>
 </header>
 
-<div class="head">
+<section class="head">
   <span class="eyebrow">Channel list</span>
   <h1 data-i18n-html="__ch_h1">Every channel,<br>in <span class="grad">one place</span>.</h1>
   <p>Browse by country or search for the channel you can't do without. This is the full
@@ -299,18 +306,18 @@ footer a:hover{color:var(--blue-hi)}
     <div class="stat"><b>50,000+</b><span>Films &amp; series</span></div>
     <div class="stat"><b>7 days</b><span>Catch-up</span></div>
   </div>
-</div>
+</section>
 
-<div class="search-wrap">
+<search class="search-wrap">
   <div class="search" id="searchWrap">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
     <input id="q" type="search" placeholder="Search 8,000+ channels — try “Sky Sports” or “beIN”"
            autocomplete="off" aria-label="Search channels">
     <button class="clear" type="button" id="clearQ" aria-label="Clear search">&times;</button>
   </div>
-</div>
+</search>
 
-<div class="split">
+<section class="split">
   <aside class="rail">
     <div class="rail-h" data-i18n-html="__ch_rail">Countries</div>
     <div class="rail-list" id="rail" role="tablist" aria-label="Countries"></div>
@@ -325,20 +332,50 @@ footer a:hover{color:var(--blue-hi)}
       <div class="empty" id="empty" hidden>Nothing matches that. Try a shorter word — or email us.</div>
     </div>
   </main>
-</div>
+</section>
 
-<div class="band">
+<section class="about">
+  <div class="about-in">
+    <h2>About this channel list</h2>
+    <div class="about-grid">
+      <article>
+        <h3>What the list covers</h3>
+        <p>Every channel here is carried on the platform we resell, grouped by the country
+          it broadcasts from. Sport, films, series, news, documentaries and children's
+          channels are all in the same line-up — there is no package to upgrade to and no
+          add-on to buy. The list is identical on the monthly plan, the 12-month plan and
+          the free 24-hour test.</p>
+      </article>
+      <article>
+        <h3>Quality and what you need</h3>
+        <p>Channels stream in 4K, Full HD, HD or SD depending on the source broadcaster, and
+          the badge beside each name tells you which. You need roughly 5 Mbps for SD,
+          15 Mbps for HD and 25 Mbps for 4K. A 7-day catch-up and a full programme guide
+          come with every channel that supports them.</p>
+      </article>
+      <article>
+        <h3>How current this list is</h3>
+        <p>Line-ups are set by the platform operator, not by us, so channels are added and
+          removed without notice. If a specific channel or a particular match matters to
+          you, ask us before you order, or open the free 24-hour test and check it on your
+          own television first.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band">
   <div class="band-in">
     <h3>Can't find a channel you need?</h3>
     <p>Ask before you order. If it's carried we'll tell you, and if it isn't we'll say so —
       the free 24-hour test lets you check it on your own TV either way.</p>
-    <a class="btn btn-blue btn-lg" href="index.html#order">Start the free 24-hour test</a>
+    <a class="btn btn-blue btn-lg" href="./#order">Start the free 24-hour test</a>
   </div>
-</div>
+</section>
 
 <footer>
   <span>© <span id="yr"></span> Swift Channels · <span>Line-ups are set by the platform and can change</span></span>
-  <span><a href="index.html">swiftchannels.com</a> · <a href="install.html">Setup guide</a> · <a href="legal.html">Terms &amp; privacy</a></span>
+  <span><a href="./">swiftchannels.com</a> · <a href="install.html">Setup guide</a> · <a href="legal.html">Terms &amp; privacy</a></span>
 </footer>
 
 <script src="assets/i18n.js"></script>

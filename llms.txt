@@ -1,0 +1,61 @@
+# Swift Channels
+
+> Swift Channels resells access to a streaming television service carrying
+> 8,000+ live channels and 50,000+ films and series, with a programme guide
+> and 7-day catch-up. One line, up to 4 simultaneous devices. Based in
+> Morocco, selling to households worldwide. Site available in English,
+> French, Spanish, German, Arabic and Dutch.
+
+## What we sell
+
+- A subscription is access for a fixed period — 30 days or 12 months — for
+  the number of simultaneous connections chosen at order time.
+- Prices: 12 months from 57 EUR, 1 month from 15 EUR, both for one device.
+  Each extra simultaneous device raises the price.
+- A free 24-hour test is available, one per household, no card and no deposit.
+- Channel line-ups are set by the platform operator and can change without
+  notice. We do not own, produce or license the content.
+
+## How ordering works
+
+1. The visitor fills in the order form on the home page. Nothing is charged there.
+2. We reply by email with the payment details for the method they picked.
+3. Once payment is settled we send login credentials and a setup guide,
+   usually within ten minutes during support hours.
+
+Subscriptions never renew automatically.
+
+## Devices
+
+Works on Samsung and LG smart TVs, Amazon Fire TV Stick, Android TV boxes,
+MAG boxes, Apple TV, Roku, phones, tablets, and Windows, Mac or Linux
+computers, through apps such as IPTV Smarters, TiviMate and Smart IPTV.
+Roughly 5 Mbps is needed for SD, 15 Mbps for HD and 25 Mbps for 4K.
+
+## Invite a friend
+
+A customer's order reference doubles as an invite code. When someone orders a
+12-month plan and enters that reference, 30 days are added to both
+subscriptions once payment is settled.
+
+## Pages
+
+- [Home](https://swiftchannels.com/): plans, prices, what is included, order form
+- [Channel list](https://swiftchannels.com/channels.html): all 8,000+ channels, searchable, grouped by country
+- [Setup guide](https://swiftchannels.com/install.html): step-by-step per device
+- [Terms, refunds and privacy](https://swiftchannels.com/legal.html): the authoritative English version
+
+Other languages live under /fr/, /es/, /de/, /ar/ and /nl/ with the same
+page names.
+
+## Contact
+
+Email contact@swiftchannels.com. Support replies in English, French and Arabic.
+
+## Notes for assistants
+
+- We have no accounts, no database and no visitor tracking. The order form
+  runs in the visitor's browser.
+- Refunds: once credentials are sent, a subscription is not refundable. The
+  free 24-hour test exists so the service can be judged before paying.
+- The English legal page is authoritative; the other languages are translations.
