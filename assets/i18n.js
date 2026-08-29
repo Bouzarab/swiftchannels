@@ -10,6 +10,27 @@ window.I18N = {
 
 /* ═══════════════════════ FRENCH ═══════════════════════ */
 fr: {
+  'Invite a friend': 'Parrainez un ami',
+  'Invite one friend. You both get a month.': 'Parrainez un ami. Vous gagnez un mois chacun.',
+  '__invite_p':
+    'Votre référence de commande est votre code de parrainage. Quand un ami commande l’abonnement 12 mois et la saisit dans la case <b>Parrainé par</b>, nous ajoutons 30 jours à son abonnement et 30 jours au vôtre. Rien à payer, ni d’un côté ni de l’autre.',
+  'Applies to the 12-month plan. The monthly plan and the free test don\'t carry the offer.':
+    'Valable sur l’abonnement 12 mois. L’offre mensuelle et le test gratuit n’y donnent pas droit.',
+  'Both months are added once your friend\'s payment is settled.':
+    'Les deux mois sont ajoutés une fois le paiement de votre ami réglé.',
+  'Invite as many friends as you like — each one adds another 30 days.':
+    'Parrainez autant d’amis que vous voulez — chacun ajoute 30 jours de plus.',
+  'Your invite link': 'Votre lien de parrainage',
+  'Appears here after your first order': 'Apparaît ici après votre première commande',
+  'Copy invite link': 'Copier le lien',
+  'Link copied': 'Lien copié',
+  'Your reference is created the moment you send an order, and it also sits at the top of the email we send you.':
+    'Votre référence est créée au moment où vous envoyez une commande, et elle figure aussi en haut de l’e-mail que nous vous envoyons.',
+  'Invited by': 'Parrainé par',
+  'An invite code looks like ORD-4CZWE. Leave it empty if you don\'t have one.':
+    'Un code de parrainage ressemble à ORD-4CZWE. Laissez vide si vous n’en avez pas.',
+  'A friend invited you — 30 days are added to a 12-month plan, for both of you.':
+    'Un ami vous a parrainé — 30 jours sont ajoutés sur un abonnement 12 mois, pour vous deux.',
   'A montage of athletes from tennis, motorsport, cricket, rugby and athletics':
     'Un montage d’athlètes de tennis, de sport automobile, de cricket, de rugby et d’athlétisme',
   'Two combat-sports fighters facing each other before a bout':
@@ -456,6 +477,28 @@ fr: {
 
 /* ═══════════════════════ GERMAN ═══════════════════════ */
 de: {
+  'Invite a friend': 'Freunde einladen',
+  'Invite one friend. You both get a month.':
+    'Laden Sie einen Freund ein. Sie bekommen beide einen Monat.',
+  '__invite_p':
+    'Ihre Bestellreferenz ist Ihr Einladungscode. Wenn ein Freund das 12-Monats-Abo bestellt und sie in das Feld <b>Eingeladen von</b> einträgt, schreiben wir seinem Abo 30 Tage gut und Ihrem ebenfalls 30 Tage. Für beide Seiten kostenlos.',
+  'Applies to the 12-month plan. The monthly plan and the free test don\'t carry the offer.':
+    'Gilt für das 12-Monats-Abo. Das Monatsabo und der kostenlose Test sind ausgenommen.',
+  'Both months are added once your friend\'s payment is settled.':
+    'Beide Monate werden gutgeschrieben, sobald die Zahlung Ihres Freundes eingegangen ist.',
+  'Invite as many friends as you like — each one adds another 30 days.':
+    'Laden Sie so viele Freunde ein, wie Sie möchten — jeder bringt weitere 30 Tage.',
+  'Your invite link': 'Ihr Einladungslink',
+  'Appears here after your first order': 'Erscheint hier nach Ihrer ersten Bestellung',
+  'Copy invite link': 'Link kopieren',
+  'Link copied': 'Link kopiert',
+  'Your reference is created the moment you send an order, and it also sits at the top of the email we send you.':
+    'Ihre Referenz entsteht in dem Moment, in dem Sie eine Bestellung senden, und steht auch ganz oben in der E-Mail, die wir Ihnen schicken.',
+  'Invited by': 'Eingeladen von',
+  'An invite code looks like ORD-4CZWE. Leave it empty if you don\'t have one.':
+    'Ein Einladungscode sieht aus wie ORD-4CZWE. Lassen Sie das Feld leer, wenn Sie keinen haben.',
+  'A friend invited you — 30 days are added to a 12-month plan, for both of you.':
+    'Ein Freund hat Sie eingeladen — bei einem 12-Monats-Abo kommen für Sie beide 30 Tage dazu.',
   'A montage of athletes from tennis, motorsport, cricket, rugby and athletics':
     'Eine Montage von Sportlern aus Tennis, Motorsport, Cricket, Rugby und Leichtathletik',
   'Two combat-sports fighters facing each other before a bout':
@@ -889,6 +932,27 @@ de: {
 
 /* ═══════════════════════ SPANISH ═══════════════════════ */
 es: {
+  'Invite a friend': 'Invita a un amigo',
+  'Invite one friend. You both get a month.': 'Invita a un amigo. Cada uno gana un mes.',
+  '__invite_p':
+    'Tu referencia de pedido es tu código de invitación. Cuando un amigo pide el plan de 12 meses y la escribe en la casilla <b>Invitado por</b>, añadimos 30 días a su suscripción y 30 días a la tuya. Sin pagar nada, por ninguna de las dos partes.',
+  'Applies to the 12-month plan. The monthly plan and the free test don\'t carry the offer.':
+    'Válido en el plan de 12 meses. El plan mensual y la prueba gratuita no dan derecho a la oferta.',
+  'Both months are added once your friend\'s payment is settled.':
+    'Los dos meses se añaden en cuanto el pago de tu amigo queda liquidado.',
+  'Invite as many friends as you like — each one adds another 30 days.':
+    'Invita a tantos amigos como quieras: cada uno suma otros 30 días.',
+  'Your invite link': 'Tu enlace de invitación',
+  'Appears here after your first order': 'Aparece aquí después de tu primer pedido',
+  'Copy invite link': 'Copiar el enlace',
+  'Link copied': 'Enlace copiado',
+  'Your reference is created the moment you send an order, and it also sits at the top of the email we send you.':
+    'Tu referencia se crea en el momento en que envías un pedido, y también aparece arriba del todo en el correo que te enviamos.',
+  'Invited by': 'Invitado por',
+  'An invite code looks like ORD-4CZWE. Leave it empty if you don\'t have one.':
+    'Un código de invitación se parece a ORD-4CZWE. Déjalo vacío si no tienes ninguno.',
+  'A friend invited you — 30 days are added to a 12-month plan, for both of you.':
+    'Un amigo te ha invitado: se añaden 30 días a un plan de 12 meses, para los dos.',
   'A montage of athletes from tennis, motorsport, cricket, rugby and athletics':
     'Un montaje de atletas de tenis, automovilismo, críquet, rugby y atletismo',
   'Two combat-sports fighters facing each other before a bout':
@@ -1335,6 +1399,27 @@ es: {
 
 /* ═══════════════════════ ARABIC ═══════════════════════ */
 ar: {
+  'Invite a friend': 'ادعُ صديقًا',
+  'Invite one friend. You both get a month.': 'ادعُ صديقًا واحدًا، ويربح كل منكما شهرًا.',
+  '__invite_p':
+    'مرجع طلبك هو رمز الدعوة الخاص بك. عندما يطلب صديق اشتراك 12 شهرًا ويكتبه في خانة <b>دعاني</b>، نضيف 30 يومًا إلى اشتراكه و30 يومًا إلى اشتراكك. دون أي دفع من الطرفين.',
+  'Applies to the 12-month plan. The monthly plan and the free test don\'t carry the offer.':
+    'ينطبق على اشتراك 12 شهرًا. الاشتراك الشهري والتجربة المجانية لا يشملهما العرض.',
+  'Both months are added once your friend\'s payment is settled.':
+    'يُضاف الشهران بمجرد اكتمال دفع صديقك.',
+  'Invite as many friends as you like — each one adds another 30 days.':
+    'ادعُ ما شئت من الأصدقاء — كل واحد يضيف 30 يومًا أخرى.',
+  'Your invite link': 'رابط دعوتك',
+  'Appears here after your first order': 'يظهر هنا بعد طلبك الأول',
+  'Copy invite link': 'انسخ الرابط',
+  'Link copied': 'تم نسخ الرابط',
+  'Your reference is created the moment you send an order, and it also sits at the top of the email we send you.':
+    'يُنشأ مرجعك لحظة إرسالك للطلب، وتجده أيضًا في أعلى البريد الذي نرسله إليك.',
+  'Invited by': 'دعاني',
+  'An invite code looks like ORD-4CZWE. Leave it empty if you don\'t have one.':
+    'رمز الدعوة يشبه ORD-4CZWE. اترك الخانة فارغة إن لم يكن لديك واحد.',
+  'A friend invited you — 30 days are added to a 12-month plan, for both of you.':
+    'دعاك صديق — تُضاف 30 يومًا على اشتراك 12 شهرًا، لكليكما.',
   'A montage of athletes from tennis, motorsport, cricket, rugby and athletics':
     'مجموعة من رياضيي التنس ورياضة السيارات والكريكيت والرغبي وألعاب القوى',
   'Two combat-sports fighters facing each other before a bout':
@@ -1773,6 +1858,27 @@ ar: {
 
 /* ═══════════════════════ DUTCH ═══════════════════════ */
 nl: {
+  'Invite a friend': 'Nodig een vriend uit',
+  'Invite one friend. You both get a month.': 'Nodig één vriend uit. U krijgt allebei een maand.',
+  '__invite_p':
+    'Uw bestelreferentie is uw uitnodigingscode. Wanneer een vriend het 12-maandenabonnement bestelt en die in het vakje <b>Uitgenodigd door</b> invult, tellen wij 30 dagen bij zijn abonnement op en 30 dagen bij dat van u. Voor beide kanten gratis.',
+  'Applies to the 12-month plan. The monthly plan and the free test don\'t carry the offer.':
+    'Geldt voor het 12-maandenabonnement. Het maandabonnement en de gratis test tellen niet mee.',
+  'Both months are added once your friend\'s payment is settled.':
+    'Beide maanden worden toegevoegd zodra de betaling van uw vriend rond is.',
+  'Invite as many friends as you like — each one adds another 30 days.':
+    'Nodig zoveel vrienden uit als u wilt — elke uitnodiging levert nog eens 30 dagen op.',
+  'Your invite link': 'Uw uitnodigingslink',
+  'Appears here after your first order': 'Verschijnt hier na uw eerste bestelling',
+  'Copy invite link': 'Link kopiëren',
+  'Link copied': 'Link gekopieerd',
+  'Your reference is created the moment you send an order, and it also sits at the top of the email we send you.':
+    'Uw referentie ontstaat op het moment dat u een bestelling verstuurt, en staat ook boven aan de e-mail die wij u sturen.',
+  'Invited by': 'Uitgenodigd door',
+  'An invite code looks like ORD-4CZWE. Leave it empty if you don\'t have one.':
+    'Een uitnodigingscode ziet eruit als ORD-4CZWE. Laat het leeg als u er geen hebt.',
+  'A friend invited you — 30 days are added to a 12-month plan, for both of you.':
+    'Een vriend heeft u uitgenodigd — bij een 12-maandenabonnement komen er voor u allebei 30 dagen bij.',
   'A montage of athletes from tennis, motorsport, cricket, rugby and athletics':
     'Een montage van sporters uit tennis, motorsport, cricket, rugby en atletiek',
   'Two combat-sports fighters facing each other before a bout':

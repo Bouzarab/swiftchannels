@@ -38,7 +38,10 @@ window.ORDER_CONFIG = {
       method:  'entry.1286162887',   /* Pay by     */
       total:   'entry.1516916128',   /* Total      */
       notes:   'entry.341763312',    /* Notes      */
-      lang:    'entry.1652809889'    /* Language   */
+      lang:    'entry.1652809889',   /* Language   */
+      /* Add an "Invited by" short-answer question to the Google Form, then
+         paste its entry id here. Until you do, the code arrives inside Notes. */
+      invitedBy: ''                  /* Invited by */
     }
   }
 };

@@ -13,6 +13,9 @@
 
 /* ═══════════════════════ FRENCH ═══════════════════════ */
 fr: {
+  'Inviting a friend': 'Parrainer un ami',
+  'If someone orders a 12-month subscription and enters your order reference in the “Invited by” box, we add 30 days to their subscription and 30 days to yours once their payment is settled. The offer applies to 12-month orders only, the reference must be entered on the order itself, and there is no cash alternative. We may decline it where the same household is on both sides of the invitation, or where we believe it is being abused.':
+    'Si quelqu’un commande un abonnement de 12 mois et saisit votre référence de commande dans la case « Parrainé par », nous ajoutons 30 jours à son abonnement et 30 jours au vôtre une fois son paiement réglé. L’offre ne vaut que pour les commandes de 12 mois, la référence doit être saisie sur la commande elle-même, et il n’existe pas d’équivalent en espèces. Nous pouvons la refuser lorsque le même foyer se trouve des deux côtés du parrainage, ou lorsque nous estimons qu’il en est fait un usage abusif.',
   '__legal_title': 'Conditions, remboursements et confidentialité — Swift Channels',
   '__legal_desc': 'Conditions de service, politique de remboursement et notice de confidentialité de Swift Channels.',
   '← Back to the site': '← Retour au site',
@@ -159,6 +162,9 @@ fr: {
 
 /* ═══════════════════════ SPANISH ═══════════════════════ */
 es: {
+  'Inviting a friend': 'Invitar a un amigo',
+  'If someone orders a 12-month subscription and enters your order reference in the “Invited by” box, we add 30 days to their subscription and 30 days to yours once their payment is settled. The offer applies to 12-month orders only, the reference must be entered on the order itself, and there is no cash alternative. We may decline it where the same household is on both sides of the invitation, or where we believe it is being abused.':
+    'Si alguien pide una suscripción de 12 meses y escribe tu referencia de pedido en la casilla «Invitado por», añadimos 30 días a su suscripción y 30 días a la tuya en cuanto su pago quede liquidado. La oferta solo se aplica a pedidos de 12 meses, la referencia debe indicarse en el propio pedido y no existe alternativa en efectivo. Podemos rechazarla cuando el mismo hogar esté en los dos lados de la invitación, o cuando creamos que se está abusando de ella.',
   '__legal_title': 'Términos, reembolsos y privacidad — Swift Channels',
   '__legal_desc': 'Términos del servicio, política de reembolso y aviso de privacidad de Swift Channels.',
   '← Back to the site': '← Volver al sitio',
@@ -305,6 +311,9 @@ es: {
 
 /* ═══════════════════════ GERMAN ═══════════════════════ */
 de: {
+  'Inviting a friend': 'Einen Freund einladen',
+  'If someone orders a 12-month subscription and enters your order reference in the “Invited by” box, we add 30 days to their subscription and 30 days to yours once their payment is settled. The offer applies to 12-month orders only, the reference must be entered on the order itself, and there is no cash alternative. We may decline it where the same household is on both sides of the invitation, or where we believe it is being abused.':
+    'Bestellt jemand ein 12-Monats-Abo und trägt Ihre Bestellreferenz in das Feld „Eingeladen von“ ein, schreiben wir seinem Abo 30 Tage gut und Ihrem 30 Tage, sobald seine Zahlung eingegangen ist. Das Angebot gilt nur für 12-Monats-Bestellungen, die Referenz muss auf der Bestellung selbst angegeben werden, und eine Barauszahlung ist ausgeschlossen. Wir können es ablehnen, wenn derselbe Haushalt auf beiden Seiten der Einladung steht oder wenn wir einen Missbrauch annehmen.',
   '__legal_title': 'AGB, Erstattungen und Datenschutz — Swift Channels',
   '__legal_desc': 'Allgemeine Geschäftsbedingungen, Erstattungsrichtlinie und Datenschutzhinweise von Swift Channels.',
   '← Back to the site': '← Zurück zur Website',
@@ -451,6 +460,9 @@ de: {
 
 /* ═══════════════════════ ARABIC ═══════════════════════ */
 ar: {
+  'Inviting a friend': 'دعوة صديق',
+  'If someone orders a 12-month subscription and enters your order reference in the “Invited by” box, we add 30 days to their subscription and 30 days to yours once their payment is settled. The offer applies to 12-month orders only, the reference must be entered on the order itself, and there is no cash alternative. We may decline it where the same household is on both sides of the invitation, or where we believe it is being abused.':
+    'إذا طلب شخص اشتراكًا لمدة 12 شهرًا وكتب مرجع طلبك في خانة «دعاني»، أضفنا 30 يومًا إلى اشتراكه و30 يومًا إلى اشتراكك بمجرد اكتمال دفعه. ينطبق العرض على طلبات 12 شهرًا فقط، ويجب إدخال المرجع في الطلب نفسه، ولا يوجد بديل نقدي. ولنا أن نرفضه إذا كان المنزل نفسه على طرفي الدعوة، أو إذا رأينا أنه يُستغل.',
   '__legal_title': 'الشروط والاسترجاع والخصوصية — سويفت تشانلز',
   '__legal_desc': 'شروط الخدمة وسياسة الاسترجاع وإشعار الخصوصية لسويفت تشانلز.',
   '← Back to the site': '← العودة إلى الموقع',
@@ -597,6 +609,9 @@ ar: {
 
 /* ═══════════════════════ DUTCH ═══════════════════════ */
 nl: {
+  'Inviting a friend': 'Een vriend uitnodigen',
+  'If someone orders a 12-month subscription and enters your order reference in the “Invited by” box, we add 30 days to their subscription and 30 days to yours once their payment is settled. The offer applies to 12-month orders only, the reference must be entered on the order itself, and there is no cash alternative. We may decline it where the same household is on both sides of the invitation, or where we believe it is being abused.':
+    'Als iemand een abonnement van 12 maanden bestelt en uw bestelreferentie invult in het vakje “Uitgenodigd door”, tellen wij 30 dagen bij zijn abonnement op en 30 dagen bij het uwe zodra zijn betaling rond is. De actie geldt alleen voor bestellingen van 12 maanden, de referentie moet op de bestelling zelf worden ingevuld en uitbetaling in geld is niet mogelijk. Wij kunnen de actie weigeren wanneer hetzelfde huishouden aan beide kanten van de uitnodiging staat, of wanneer wij denken dat er misbruik van wordt gemaakt.',
   '__legal_title': 'Voorwaarden, terugbetalingen en privacy — Swift Channels',
   '__legal_desc':
     'Servicevoorwaarden, terugbetalingsbeleid en privacyverklaring van Swift Channels.',

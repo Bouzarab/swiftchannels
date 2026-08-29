@@ -431,6 +431,34 @@ section{padding:clamp(62px,8.5vw,108px) 0;position:relative}
 .dev span{font-family:var(--mono);font-size:10px;color:var(--muted-2);letter-spacing:.08em}
 
 /* ═══════════════ STEPS ═══════════════ */
+/* ---- invite a friend ---- */
+.invite-card{display:grid;grid-template-columns:1.35fr .95fr;gap:clamp(26px,4vw,54px);
+  align-items:center;padding:clamp(28px,3.4vw,44px);border:1px solid var(--line);
+  border-radius:var(--r);background:
+    radial-gradient(120% 140% at 100% 0%,rgba(47,107,255,.16),transparent 62%),
+    rgba(8,15,34,.72)}
+.invite-card .eyebrow{margin-bottom:14px}
+.invite-card h2{font-size:clamp(24px,3.1vw,36px);margin-bottom:14px}
+.invite-card>.invite-copy>p{color:var(--muted);font-size:16px;max-width:52ch}
+.invite-list{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:9px}
+.invite-list li{position:relative;padding-inline-start:24px;font-size:14.2px;color:var(--muted)}
+.invite-list li::before{content:"";position:absolute;inset-inline-start:0;top:6px;
+  width:11px;height:11px;border-radius:50%;border:2px solid var(--cyan)}
+.invite-share{padding:24px 22px 22px;border:1px solid var(--line-soft);border-radius:var(--r);
+  background:rgba(5,10,24,.66)}
+.invite-lbl{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted-2);margin-bottom:12px}
+.invite-code{font-family:var(--mono);font-size:13px;color:var(--ice);word-break:break-all;
+  direction:ltr;unicode-bidi:isolate;text-align:left;
+  padding:12px 14px;border:1px dashed var(--line);border-radius:var(--r-sm);
+  background:rgba(255,255,255,.03);min-height:44px;display:flex;align-items:center}
+.invite-code.empty{color:var(--muted-2)}
+.invite-actions{display:grid;gap:10px;margin-top:14px}
+.invite-actions .btn{width:100%;justify-content:center}
+.invite-hint{margin-top:12px;font-size:12.5px;color:var(--muted-2);line-height:1.55}
+@media(max-width:900px){
+  .invite-card{grid-template-columns:1fr;gap:26px}
+}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .step{position:relative;padding:28px 26px 30px;border:1px solid var(--line);border-radius:var(--r);
   background:rgba(8,15,34,.72);transition:transform .4s var(--ease),border-color .35s}
@@ -739,7 +767,8 @@ html[dir="rtl"] .brand-name,html[dir="rtl"] .plan-name,html[dir="rtl"] .plan-amo
   font-family:'Cairo','Tajawal',var(--display);letter-spacing:0}
 html[dir="rtl"] .eyebrow,html[dir="rtl"] .hero-note,html[dir="rtl"] .step-n,
 html[dir="rtl"] .conn-hint,html[dir="rtl"] .shot-badge,html[dir="rtl"] .plan-flag,
-html[dir="rtl"] .marquee-track span,html[dir="rtl"] .foot-bottom,html[dir="rtl"] .dev span{
+html[dir="rtl"] .marquee-track span,html[dir="rtl"] .foot-bottom,html[dir="rtl"] .dev span,
+html[dir="rtl"] .invite-lbl{
   font-family:'Tajawal',var(--mono);letter-spacing:.02em}
 html[dir="rtl"] .brand{margin-right:0;margin-left:auto}
 html[dir="rtl"] .nav-links a::after{left:auto;right:0}
@@ -1174,6 +1203,35 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
   </div>
 </section>
 
+<!-- ══════════════ INVITE ══════════════ -->
+<section id="invite" style="padding-top:0">
+  <div class="wrap">
+    <div class="invite-card rv">
+      <div class="invite-copy">
+        <span class="eyebrow">Invite a friend</span>
+        <h2>Invite one friend. You both get a month.</h2>
+        <p data-i18n-html="__invite_p">Your order reference is your invite code. When a friend
+           orders the 12-month plan and enters it in the <b>Invited by</b> box, we add 30 days to
+           their subscription and 30 days to yours. Nothing to pay on either side.</p>
+        <ul class="invite-list">
+          <li>Applies to the 12-month plan. The monthly plan and the free test don't carry the offer.</li>
+          <li>Both months are added once your friend's payment is settled.</li>
+          <li>Invite as many friends as you like — each one adds another 30 days.</li>
+        </ul>
+      </div>
+      <div class="invite-share">
+        <span class="invite-lbl">Your invite link</span>
+        <div class="invite-code empty" id="inviteCode">Appears here after your first order</div>
+        <div class="invite-actions">
+          <button class="btn btn-blue" type="button" id="inviteCopy" disabled>Copy invite link</button>
+        </div>
+        <p class="invite-hint" id="inviteHint">Your reference is created the moment you send an
+           order, and it also sits at the top of the email we send you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════ ORDER ══════════════ -->
 <section id="order" class="order">
   <div class="wrap">
@@ -1255,6 +1313,15 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
           <textarea id="notes" placeholder="Country packs you want, sports you follow, a channel you can't do without."></textarea>
         </div>
 
+        <div class="field" id="f-invitedBy">
+          <label for="invitedBy">Invited by <span class="opt">— optional</span></label>
+          <input id="invitedBy" type="text" class="mono-in" placeholder="ORD-XXXXX"
+                 maxlength="9" autocomplete="off" spellcheck="false">
+          <div class="err">An invite code looks like ORD-4CZWE. Leave it empty if you don't have one.</div>
+        </div>
+        <p class="recall" id="invitedRow" hidden>A friend invited you — 30 days are added to a
+          12-month plan, for both of you.</p>
+
         <label class="check" for="agree">
           <input id="agree" type="checkbox">
           <span data-i18n-html="__consent">I'm ordering for my own household and I accept the
@@ -1276,6 +1343,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
           <div class="trow"><dt>Devices</dt><dd id="t-conn">1 device</dd></div>
           <div class="trow"><dt>Watching on</dt><dd id="t-device">Not chosen</dd></div>
           <div class="trow"><dt>Payment</dt><dd id="t-pay">Not chosen</dd></div>
+          <div class="trow" id="trow-invitedBy" hidden><dt>Invited by</dt><dd id="t-invitedBy">—</dd></div>
         </dl>
         <div class="ticket-total"><span>Total</span><b id="t-total">—</b></div>
         <div class="ticket-actions">
@@ -1734,6 +1802,69 @@ $('forget').addEventListener('click', () => {
    engine has not booted yet at this point, so do not touch it here */
 recall();
 
+/* ═══════════════ INVITE A FRIEND ═══════════════
+   No accounts and no database, so the reward rides on the order reference:
+   it is the invite code, the link carries it in ?ref=, and the field below
+   reads it back. The code is only ever shown to the person it belongs to.
+   ═══════════════════════════════════════════════ */
+const REF_RE = /^ORD-[A-Z0-9]{5}$/;
+const invitedBy = $('invitedBy');
+
+/* the link points at the language the visitor is actually reading */
+function inviteLink(ref){
+  const base = location.origin + location.pathname.replace(/index\.html$/, '');
+  return base + '?ref=' + ref;
+}
+
+(function setupInvite(){
+  /* their own code, from the last order they sent on this device */
+  let mine = '';
+  try {
+    const raw = JSON.parse(localStorage.getItem('order:last') || 'null');
+    if(raw && REF_RE.test(raw.ref || '')) mine = raw.ref;
+  } catch(e){}
+
+  const box = $('inviteCode'), btn = $('inviteCopy');
+  if(mine && box && btn){
+    const link = inviteLink(mine);
+    box.textContent = link;
+    box.classList.remove('empty');
+    btn.disabled = false;
+    btn.addEventListener('click', () => {
+      copyText(link);
+      btn.textContent = t('Link copied');
+      setTimeout(() => { btn.textContent = t('Copy invite link'); }, 2200);
+    });
+  }
+
+  /* a code carried in from a friend's link */
+  const q = new URLSearchParams(location.search).get('ref');
+  const incoming = (q || '').trim().toUpperCase();
+  if(incoming && REF_RE.test(incoming) && incoming !== mine && invitedBy){
+    invitedBy.value = incoming;
+    const row = $('invitedRow');
+    if(row) row.hidden = false;
+  }
+})();
+
+if(invitedBy){
+  invitedBy.addEventListener('input', () => {
+    const p = invitedBy.selectionStart;
+    invitedBy.value = invitedBy.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
+    invitedBy.setSelectionRange(p, p);
+    updateTicket();
+  });
+}
+
+/* '' when the box is empty or not a reference — never a half-typed code.
+   A function declaration, because updateTicket() calls it during recall(),
+   which runs before this line. */
+function inviteCode(){
+  const el = document.getElementById('invitedBy');
+  const v = el ? el.value.trim().toUpperCase() : '';
+  return /^ORD-[A-Z0-9]{5}$/.test(v) ? v : '';
+}
+
 /* Stores the order locally so order.html can show it back before sending. */
 function saveOrder(){
   const p = planById(planSel.value);
@@ -1751,6 +1882,7 @@ function saveOrder(){
       method: paySel.value,
       total:  money(priceFor(p, state.conn)) + ' ' + CONFIG.currency,
       notes:  $('notes').value.trim(),
+      invitedBy: inviteCode(),
       at:     Date.now()
     }));
   } catch(e){}
@@ -1764,6 +1896,13 @@ function updateTicket(){
   $('t-device').textContent = devSel.value ? t(devSel.value) : t('Not chosen');
   $('t-pay').textContent    = free ? t('Not needed') : (paySel.value ? t(paySel.value) : t('Not chosen'));
   $('t-total').innerHTML    = free ? t('Free') : money(cost) + ' <small>' + CONFIG.currency + '</small>';
+
+  const code = inviteCode();
+  const irow = $('trow-invitedBy');
+  if(irow){
+    irow.hidden = !code;
+    $('t-invitedBy').textContent = code;
+  }
 
   $('sendWa').textContent = t('Send my order');
   $('ticketNote').textContent = t(free
@@ -1795,6 +1934,11 @@ function validate(){
   if(!free){ const payBad = !paySel.value; setErr('f-pay', payBad); ok = ok && !payBad; }
   else setErr('f-pay', false);
 
+  /* an invite code is optional, but a wrong one silently loses the free month */
+  const typed = invitedBy ? invitedBy.value.trim().toUpperCase() : '';
+  const inviteBad = !!typed && !REF_RE.test(typed);
+  setErr('f-invitedBy', inviteBad); ok = ok && !inviteBad;
+
   const agreeBad = !$('agree').checked;
   $('agreeErr').style.display = agreeBad ? 'block' : 'none';
   ok = ok && !agreeBad;
@@ -1818,6 +1962,7 @@ function buildMessage(){
   if(MAC_DEVICES.includes(devSel.value)) L.push('MAC:       ' + $('mac').value.trim().toUpperCase());
   L.push('Pay by:    ' + (free ? 'not needed — free test' : paySel.value));
   L.push('Total:     ' + (free ? 'Free' : money(cost) + ' ' + CONFIG.currency));
+  if(inviteCode()) L.push('Invited by: ' + inviteCode());
   if($('notes').value.trim()){ L.push('——————————————'); L.push('Notes: ' + $('notes').value.trim()); }
   L.push('——————————————');
   L.push(free

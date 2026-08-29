@@ -180,7 +180,7 @@ function draw(){
     ['Email', order.email], ['Plan', t(order.plan) + (order.term ? ' — ' + t(order.term) : '')],
     ['Devices', String(order.conn || '')], ['Watch on', order.device],
     ['MAC address', order.mac], ['Pay by', t(order.method || '')],
-    ['Notes', order.notes], ['Total', order.total, 'total']
+    ['Invited by', order.invitedBy], ['Notes', order.notes], ['Total', order.total, 'total']
   ].forEach(([l,v,c]) => { const el = line(l,v,c); if(el) box.appendChild(el); });
 }
 
@@ -191,6 +191,7 @@ function orderText(){
   add('Plan', order.plan + (order.term ? ' (' + order.term + ')' : ''));
   add('Devices', order.conn); add('Watch on', order.device); add('MAC', order.mac);
   add('Pay by', order.method); add('Total', order.total);   add('Notes', order.notes);
+  add('Invited by', order.invitedBy);
   add('Language', document.documentElement.lang);
   return L.join('\n');
 }
@@ -230,7 +231,14 @@ $('send').addEventListener('click', () => {
     put('email', order.email);    put('plan', order.plan + (order.term ? ' (' + order.term + ')' : ''));
     put('devices', String(order.conn || '')); put('device', order.device);
     put('mac', order.mac);        put('method', order.method); put('total', order.total);
-    put('notes', order.notes);    put('lang', document.documentElement.lang);
+    /* Until the form has its own question, the code rides along in the notes
+       so a free month is never lost to a missing column. */
+    const invited = order.invitedBy || '';
+    if(invited && F.fields.invitedBy) put('invitedBy', invited);
+    put('notes', invited && !F.fields.invitedBy
+      ? ('Invited by: ' + invited + (order.notes ? ' — ' + order.notes : ''))
+      : order.notes);
+    put('lang', document.documentElement.lang);
     let fired = false;
     const finish = () => { if(fired) return; fired = true; done(); };
     $('ghost').addEventListener('load', finish);
