@@ -403,6 +403,104 @@ ar: {
     'أعد تشغيل الراوتر وحاول مجددًا. ولا يزال لا شيء؟ راسلنا مع ذكر جهازك وما يظهر على الشاشة.',
 
   'Setup help is included with every plan': 'المساعدة في التثبيت مشمولة مع كل باقة'
+},
+
+/* ═══════════════════════ DUTCH ═══════════════════════ */
+nl: {
+  '← Back to the site': '← Terug naar de site',
+  'Samsung & LG TV': 'Samsung- & LG-tv',
+  'Devices': 'Apparaten',
+  'Your connection': 'Uw verbinding',
+  '__in_title': 'IPTV instellen — Firestick, Smart TV, Smarters | Swift Channels',
+  '__in_desc':
+    'Installeer Swift Channels op een Samsung- of LG-tv, Firestick, Android, iPhone, Apple TV, Windows of Mac. Kies uw apparaat, volg vier stappen.',
+  '__in_h1': 'Kies uw apparaat.<br><span class="grad">Vier stappen.</span>',
+  'Installation guide': 'Installatiegids',
+  'Email us': 'Mail ons',
+  'Copy and paste from our email instead of typing. A stray space is usually the culprit.':
+    'Kopieer en plak uit onze e-mail in plaats van te typen. Een spatie te veel is meestal de boosdoener.',
+  'We send them by email after you order — an activation code, or a server address with a username and password. Which one depends on your device.':
+    'We sturen ze per e-mail nadat u besteld hebt — een activatiecode, of een serveradres met gebruikersnaam en wachtwoord. Welke van de twee hangt af van uw apparaat.',
+  'Ten minutes, once. After that the app remembers everything.':
+    'Tien minuten, één keer. Daarna onthoudt de app alles.',
+  'Before you start': 'Voor u begint',
+  'Firestick': 'Firestick',
+  'Android TV & box': 'Android TV & box',
+  'Android phone': 'Android-telefoon',
+  'iPhone & iPad': 'iPhone & iPad',
+  'Apple TV': 'Apple TV',
+  'Windows & Mac': 'Windows & Mac',
+  'If it will not work': 'Als het niet lukt',
+  'Your details': 'Uw gegevens',
+  'We send them on WhatsApp after you order — an activation code, or a server address with a username and password. Which one depends on your device.':
+    'We sturen ze via WhatsApp nadat u besteld hebt — een activatiecode, of een serveradres met gebruikersnaam en wachtwoord. Welke van de twee hangt af van uw apparaat.',
+  '15 Mbps is enough for HD, 25 for 4K. A cable beats Wi-Fi, and 5 GHz Wi-Fi beats 2.4 GHz.':
+    '15 Mbps is genoeg voor HD, 25 voor 4K. Een kabel wint van wifi, en 5 GHz-wifi wint van 2,4 GHz.',
+  'Your device': 'Uw apparaat',
+  'Pick it from the list. Every guide is four steps or fewer.':
+    'Kies het uit de lijst. Elke gids telt vier stappen of minder.',
+  'Would you rather we did it with you?': 'Liever samen met ons?',
+  'Stuck on this step?': 'Loopt u vast bij deze stap?',
+  'None of these?': 'Staat uw apparaat er niet bij?',
+  'Message us on WhatsApp': 'Stuur ons een bericht op WhatsApp',
+  'Firestick & Fire TV': 'Firestick & Fire TV',
+  'Android phone & tablet': 'Android-telefoon & tablet',
+  'Downloader + TiviMate': 'Downloader + TiviMate',
+  'VLC or Smarters': 'VLC of Smarters',
+  '__s_smarttv1': 'Open <strong>Samsung Apps</strong> of de <strong>LG Content Store</strong>.',
+  '__s_smarttv2':
+    'Installeer <strong>IBO Player</strong>. Smart IPTV, Set IPTV en IPTV Smarters werken ook.',
+  '__s_smarttv3': 'De app toont een <strong>apparaatsleutel</strong>. Mail die naar ons.',
+  '__s_smarttv4': 'We koppelen hem binnen een minuut. Sluit de app en open hem opnieuw.',
+  '__n_smarttv':
+    '<b>Eenmalige kosten:</b> tv-apps rekenen een paar euro voor de activering, betaald aan de maker van de app, één keer per televisie. Dat hoort niet bij uw abonnement.',
+  '__s_firestick1': 'Installeer <strong>Downloader</strong> vanaf het startscherm van de Fire TV.',
+  '__s_firestick2':
+    'Sta in <strong dir="ltr">Settings → My Fire TV → Developer options</strong> toe dat Downloader apps installeert.',
+  '__s_firestick3': 'Open Downloader, voer het adres in dat we u sturen en installeer de speler.',
+  '__s_firestick4': 'Open hem en voer uw gegevens in.',
+  '__n_firestick':
+    '<b>Welke speler?</b> TiviMate heeft de beste programmagids, IPTV Smarters is eenvoudiger. Zeg ons welke en wij sturen het juiste adres.',
+  '__s_androidtv1': 'Open de <strong dir="ltr">Google Play Store</strong>.',
+  '__s_androidtv2': 'Installeer <strong>TiviMate</strong> of <strong>IPTV Smarters Pro</strong>.',
+  '__s_androidtv3': 'Kies ervoor een afspeellijst of een nieuwe gebruiker toe te voegen.',
+  '__s_androidtv4': 'Voer uw gegevens in en wacht op de zenderlijst.',
+  '__s_android1': 'Open de <strong dir="ltr">Google Play Store</strong>.',
+  '__s_android2': 'Installeer <strong>IPTV Smarters Pro</strong>.',
+  '__s_android3': 'Open hem en accepteer de voorwaarden.',
+  '__s_android4': 'Voer uw gegevens in. Zenders, films en series verschijnen.',
+  '__s_ios1': 'Open de <strong dir="ltr">App Store</strong>.',
+  '__s_ios2': 'Installeer <strong>IPTV Smarters Player Lite</strong>.',
+  '__s_ios3': 'Open hem en accepteer de voorwaarden.',
+  '__s_ios4': 'Voer uw gegevens in en begin met kijken.',
+  '__n_ios':
+    '<b>Niet te vinden?</b> Apple hernoemt deze spelers af en toe. Vraag het ons en we zeggen welke er vandaag in de store staat.',
+  '__s_appletv1':
+    'Open de <strong dir="ltr">App Store</strong>. U hebt een Apple TV 4 of nieuwer nodig.',
+  '__s_appletv2': 'Installeer <strong>IPTV Smarters Player Lite</strong>.',
+  '__s_appletv3':
+    'Voer uw gegevens in — gebruik het toetsenbord van uw iPhone als dat wordt aangeboden.',
+  '__s_computer1':
+    'Installeer <strong>VLC</strong> via videolan.org, of <strong>IPTV Smarters for PC</strong>.',
+  '__s_computer2':
+    'VLC: <strong dir="ltr">Media → Open Network Stream</strong>. Smarters: voeg een nieuwe gebruiker toe.',
+  '__s_computer3':
+    'Plak de link die we stuurden, of voer de server, de gebruikersnaam en het wachtwoord in.',
+  '__n_computer':
+    '<b>Let op:</b> VLC speelt de zenders af maar heeft geen programmagids en geen replay. Gebruik IPTV Smarters voor allebei.',
+  'The picture keeps stopping': 'Het beeld blijft haperen',
+  'Almost always the connection. Try a cable, or move closer to the router. If it is one channel only, send us its name.':
+    'Bijna altijd de verbinding. Probeer een kabel, of ga dichter bij de router zitten. Gaat het om één zender, stuur ons dan de naam.',
+  'It says the login is wrong': 'Hij zegt dat de login onjuist is',
+  'Copy and paste from our WhatsApp message instead of typing. A stray space is usually the culprit.':
+    'Kopieer en plak uit ons WhatsApp-bericht in plaats van te typen. Een spatie te veel is meestal de boosdoener.',
+  'A channel is missing': 'Er ontbreekt een zender',
+  'Line-ups change. Send us the name and we will tell you where it is.':
+    'Het aanbod verandert. Stuur ons de naam en we zeggen u waar hij staat.',
+  'Nothing loads at all': 'Er laadt helemaal niets',
+  'Restart the router and try again. Still dead? Message us with your device and what is on screen.':
+    'Herstart de router en probeer opnieuw. Nog steeds niets? Stuur ons een bericht met uw apparaat en wat er op het scherm staat.',
+  'Setup help is included with every plan': 'Installatiehulp zit bij elk abonnement inbegrepen'
 }
 
   };

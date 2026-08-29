@@ -593,6 +593,150 @@ ar: {
   'Changes': 'التعديلات',
   'If we change this notice we will update the date at the top of this page.':
     'إذا عدّلنا هذا الإشعار فسنحدّث التاريخ في أعلى هذه الصفحة.'
+},
+
+/* ═══════════════════════ DUTCH ═══════════════════════ */
+nl: {
+  '__legal_title': 'Voorwaarden, terugbetalingen en privacy — Swift Channels',
+  '__legal_desc':
+    'Servicevoorwaarden, terugbetalingsbeleid en privacyverklaring van Swift Channels.',
+  '← Back to the site': '← Terug naar de site',
+  'Terms, refunds and privacy': 'Voorwaarden, terugbetalingen en privacy',
+  'Last updated 24 August 2026': 'Laatst bijgewerkt op 24 augustus 2026',
+  'Trading name': 'Handelsnaam',
+  'Contact': 'Contact',
+  '1. Terms of service': '1. Servicevoorwaarden',
+  '2. Refund policy': '2. Terugbetalingsbeleid',
+  '3. Privacy notice': '3. Privacyverklaring',
+  'Who we are and what we sell': 'Wie wij zijn en wat wij verkopen',
+  'Swift Channels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.':
+    'Swift Channels verkoopt toegang door tot een streamingtelevisiedienst die door een extern platform wordt geëxploiteerd. Wij leveren u inloggegevens voor dat platform; wij bezitten, produceren, licentiëren of beheren de inhoud ervan niet.',
+  'What you are buying': 'Wat u koopt',
+  'A subscription is access to the platform for a fixed period — 30 days or 12 months — for the number of simultaneous connections you selected. Channel line-ups, on-demand catalogues and programme guides are set by the platform operator and can change at any time without notice. We cannot guarantee that any particular channel, match, film or series will be available for the whole of your subscription.':
+    'Een abonnement is toegang tot het platform voor een vaste periode — 30 dagen of 12 maanden — voor het aantal gelijktijdige verbindingen dat u hebt gekozen. Het zenderaanbod, de on-demandcatalogus en de programmagidsen worden bepaald door de platformexploitant en kunnen op elk moment zonder aankondiging wijzigen. Wij kunnen niet garanderen dat een bepaalde zender, wedstrijd, film of serie gedurende uw hele abonnement beschikbaar blijft.',
+  'Household use only': 'Alleen voor huishoudelijk gebruik',
+  'Your credentials are for private use in a single household. You may not resell them, share them publicly, use them for commercial or public screening, or redistribute the stream. If we find credentials being used this way, we may close the account without a refund.':
+    'Uw inloggegevens zijn bedoeld voor privégebruik binnen één huishouden. U mag ze niet doorverkopen, openbaar delen, gebruiken voor commerciële of openbare vertoning, of de stream herverspreiden. Als wij vaststellen dat inloggegevens zo worden gebruikt, kunnen wij het account sluiten zonder terugbetaling.',
+  'Your responsibilities': 'Uw verantwoordelijkheden',
+  'Give accurate contact details so we can deliver your credentials.':
+    'Geef juiste contactgegevens op zodat wij uw inloggegevens kunnen bezorgen.',
+  'Provide your own internet connection and a compatible device. Roughly 5 Mbps is needed for SD, 15 Mbps for HD and 25 Mbps for 4K.':
+    'Zorg zelf voor een internetverbinding en een geschikt apparaat. U hebt ongeveer 5 Mbps nodig voor SD, 15 Mbps voor HD en 25 Mbps voor 4K.',
+  'Keep your credentials private.': 'Houd uw inloggegevens privé.',
+  'Comply with the laws that apply where you live, including any rules about which broadcast content you may lawfully access. You are responsible for that; we cannot advise on it.':
+    'Houd u aan de wetgeving die geldt op de plaats waar u woont, met inbegrip van regels over welke uitzendinhoud u rechtmatig mag bekijken. U bent daar zelf verantwoordelijk voor; wij kunnen u daarover niet adviseren.',
+  'Delivery': 'Levering',
+  'We aim to send credentials within ten minutes during support hours. Orders placed overnight are handled the following morning. Delivery is by email to the contact details you gave us.':
+    'Wij streven ernaar inloggegevens binnen tien minuten te versturen tijdens de supporturen. Bestellingen die \'s nachts binnenkomen, behandelen wij de volgende ochtend. Levering gebeurt per e-mail naar de contactgegevens die u ons hebt gegeven.',
+  'Availability and interruptions': 'Beschikbaarheid en onderbrekingen',
+  'We target high availability but cannot promise an uninterrupted service. Outages on the platform operator\'s side, on your internet connection, or on your device are outside our control. Where a line is genuinely down for an extended period, we will replace it and extend your subscription by the time lost. That is the remedy we offer.':
+    'Wij mikken op een hoge beschikbaarheid, maar kunnen geen ononderbroken dienst beloven. Storingen bij de platformexploitant, op uw internetverbinding of op uw apparaat vallen buiten onze controle. Als een lijn werkelijk voor langere tijd uitvalt, vervangen wij die en verlengen wij uw abonnement met de verloren tijd. Dat is de oplossing die wij bieden.',
+  'Free 24-hour test': 'Gratis test van 24 uur',
+  'One free test per household, lasting 24 hours from activation. It is the full service so you can judge it before paying. We may decline a test if we believe the offer is being abused.':
+    'Eén gratis test per huishouden, 24 uur geldig vanaf de activering. Het is de volledige dienst, zodat u kunt oordelen voordat u betaalt. Wij kunnen een test weigeren als wij denken dat er misbruik van het aanbod wordt gemaakt.',
+  'Ending a subscription': 'Een abonnement beëindigen',
+  'Subscriptions do not renew automatically. Yours simply ends on its expiry date unless you message us to extend it. You can stop using the service at any time; see the refund policy below for what that means financially.':
+    'Abonnementen worden niet automatisch verlengd. Het uwe loopt gewoon af op de vervaldatum, tenzij u ons vraagt het te verlengen. U kunt op elk moment stoppen met het gebruik van de dienst; wat dat financieel betekent, leest u in het terugbetalingsbeleid hieronder.',
+  'Our liability': 'Onze aansprakelijkheid',
+  'Our liability to you is limited to the amount you paid for your current subscription period. We are not liable for indirect losses. Nothing here limits liability that cannot lawfully be limited.':
+    'Onze aansprakelijkheid jegens u is beperkt tot het bedrag dat u voor uw huidige abonnementsperiode hebt betaald. Wij zijn niet aansprakelijk voor indirecte schade. Niets hierin beperkt aansprakelijkheid die wettelijk niet beperkt mag worden.',
+  'Changes to these terms': 'Wijzigingen in deze voorwaarden',
+  'We may update these terms. The version on this page at the time of your order is the one that applies to that order.':
+    'Wij kunnen deze voorwaarden bijwerken. De versie die op het moment van uw bestelling op deze pagina staat, is de versie die op die bestelling van toepassing is.',
+  'Law': 'Toepasselijk recht',
+  'These terms are governed by Moroccan law. If you are a consumer resident in the EU or UK, this does not deprive you of the protection of mandatory consumer law in your country of residence, and you keep the right to bring proceedings there.':
+    'Op deze voorwaarden is Marokkaans recht van toepassing. Bent u een consument die in de EU of het VK woont, dan ontneemt dit u niet de bescherming van het dwingende consumentenrecht van uw woonland, en behoudt u het recht daar een procedure aanhangig te maken.',
+  'In short': 'Kort gezegd',
+  'Once your credentials have been sent, the subscription is not refundable.':
+    'Zodra uw inloggegevens zijn verstuurd, is het abonnement niet terugbetaalbaar.',
+  'The free 24-hour test exists so you can try the full service on your own device before you pay anything.':
+    'De gratis test van 24 uur bestaat juist zodat u de volledige dienst op uw eigen apparaat kunt uitproberen voordat u iets betaalt.',
+  'Why': 'Waarom',
+  'A subscription is digital content delivered immediately. Once credentials are issued the access has been granted and cannot be returned.':
+    'Een abonnement is digitale inhoud die onmiddellijk wordt geleverd. Zodra de inloggegevens zijn afgegeven, is de toegang verleend en kan die niet worden teruggegeven.',
+  'Your EU right of withdrawal, and how it applies': 'Uw EU-herroepingsrecht en hoe dat werkt',
+  'If you are a consumer in the EU or UK, you normally have 14 days to withdraw from an online purchase. For digital content delivered immediately, that right is lost once delivery begins — but only if you asked for immediate delivery and acknowledged that you would lose the right.':
+    'Bent u consument in de EU of het VK, dan hebt u normaal 14 dagen om een onlineaankoop te herroepen. Bij digitale inhoud die onmiddellijk wordt geleverd, vervalt dat recht zodra de levering begint — maar alleen als u om onmiddellijke levering hebt gevraagd en hebt erkend dat u het recht zou verliezen.',
+  'That is exactly what the confirmation box on our order form does. By ticking it you ask us to supply your credentials straight away and accept that your 14-day withdrawal right ends when we send them.':
+    'Precies dat doet het bevestigingsvakje op ons bestelformulier. Door het aan te vinken vraagt u ons uw inloggegevens meteen te leveren en aanvaardt u dat uw herroepingsrecht van 14 dagen eindigt zodra wij ze versturen.',
+  'If you have not yet received your credentials, the withdrawal right still stands.':
+    'Hebt u uw inloggegevens nog niet ontvangen, dan geldt het herroepingsrecht gewoon.',
+  'Message us before delivery and we will refund you in full.':
+    'Stuur ons een bericht vóór de levering en wij betalen u volledig terug.',
+  'When we do refund': 'Wanneer wij wél terugbetalen',
+  'You paid but we never delivered your credentials.':
+    'U hebt betaald maar wij hebben uw inloggegevens nooit geleverd.',
+  'You were charged twice for the same subscription.':
+    'U bent tweemaal afgerekend voor hetzelfde abonnement.',
+  'We are unable to provide the service at all for a sustained period and cannot replace your line.':
+    'Wij kunnen de dienst gedurende langere tijd helemaal niet leveren en kunnen uw lijn niet vervangen.',
+  'In those cases we refund to the original payment method. Allow up to ten working days for it to appear.':
+    'In die gevallen betalen wij terug via de oorspronkelijke betaalmethode. Houd rekening met maximaal tien werkdagen voordat het bedrag zichtbaar is.',
+  'When we do not refund': 'Wanneer wij niet terugbetalen',
+  'You changed your mind after receiving working credentials.':
+    'U bent van gedachten veranderd nadat u werkende inloggegevens hebt ontvangen.',
+  'A specific channel or event you wanted is not carried, or was removed by the platform.':
+    'Een bepaalde zender of gebeurtenis die u wilde, wordt niet aangeboden of is door het platform verwijderd.',
+  'Your internet connection or device cannot handle the stream.':
+    'Uw internetverbinding of apparaat kan de stream niet aan.',
+  'Your account was closed for breaching the household-use rule.':
+    'Uw account is gesloten wegens schending van de regel voor huishoudelijk gebruik.',
+  'Problems before you ask for money back': 'Problemen, vóór u om geld terug vraagt',
+  'Most faults are fixable in minutes. Email us first — replacing a line, resetting credentials or reconfiguring an app resolves the large majority of issues, and we add any lost time to your subscription.':
+    'De meeste storingen zijn in enkele minuten verholpen. Mail ons eerst — een lijn vervangen, inloggegevens opnieuw instellen of een app opnieuw configureren lost de grote meerderheid van de problemen op, en verloren tijd tellen wij bij uw abonnement op.',
+  'Who controls your data': 'Wie uw gegevens beheert',
+  'Swift Channels. Contact:': 'Swift Channels. Contact:',
+  'Worth knowing': 'Goed om te weten',
+  'This website has no database, no accounts and no tracking. The order form runs entirely in your browser and builds a message for you to send us. Nothing is submitted to a server here.':
+    'Deze website heeft geen database, geen accounts en geen tracking. Het bestelformulier draait volledig in uw browser en stelt een bericht op dat u ons stuurt. Er wordt hier niets naar een server verzonden.',
+  'What we collect and why': 'Wat wij verzamelen en waarom',
+  'What you send us': 'Wat u ons stuurt',
+  '— your name, WhatsApp number, email if you give one, your device and any MAC address, and your order details. We need these to create your account and deliver your credentials. Legal basis: performance of a contract.':
+    '— uw naam, WhatsApp-nummer, e-mailadres als u er een opgeeft, uw apparaat en een eventueel MAC-adres, en uw bestelgegevens. Wij hebben deze nodig om uw account aan te maken en uw inloggegevens te leveren. Rechtsgrond: uitvoering van een overeenkomst.',
+  'Payment records': 'Betaalgegevens',
+  '— we see the name, amount and date associated with your payment, and the receipt you send us. We never see your card number. Legal basis: contract and legal record-keeping.':
+    '— wij zien de naam, het bedrag en de datum die bij uw betaling horen, en het betaalbewijs dat u ons stuurt. Uw kaartnummer zien wij nooit. Rechtsgrond: overeenkomst en wettelijke bewaarplicht.',
+  'Your messages': 'Uw berichten',
+  '— the WhatsApp or email conversation, kept so we can support you and handle renewals or disputes.':
+    '— het WhatsApp- of e-mailgesprek, bewaard zodat wij u kunnen helpen en verlengingen of geschillen kunnen afhandelen.',
+  'What we do not collect': 'Wat wij niet verzamelen',
+  'No cookies, analytics, advertising pixels or visitor tracking on this site. The order form does remember what you typed in your own browser’s storage so you do not have to type it twice — it stays on your device, we never see it until you press send, and one click under the form clears it.':
+    'Geen cookies, geen analyse, geen advertentiepixels en geen bezoekersregistratie op deze site. Het bestelformulier onthoudt wel wat u hebt ingevuld, in de opslag van uw eigen browser, zodat u het niet tweemaal hoeft te typen — het blijft op uw apparaat, wij zien het pas als u op verzenden drukt, en één klik onder het formulier wist het.',
+  'No card or bank details — payments are handled entirely by PayPal.':
+    'Geen kaart- of bankgegevens — betalingen worden volledig door PayPal afgehandeld.',
+  'No record of what you watch. We do not have access to your viewing activity.':
+    'Geen registratie van wat u kijkt. Wij hebben geen toegang tot uw kijkgedrag.',
+  'Local storage': 'Lokale opslag',
+  'When you click through to pay, your order details are saved in your own browser so the confirmation page can show them back to you. This stays on your device, is never transmitted to us, and you can clear it through your browser at any time.':
+    'Wanneer u doorklikt om te betalen, worden uw bestelgegevens in uw eigen browser opgeslagen zodat de bevestigingspagina ze aan u kan tonen. Dit blijft op uw apparaat, wordt nooit naar ons verzonden, en u kunt het op elk moment via uw browser wissen.',
+  'Who we share it with': 'Met wie wij het delen',
+  'The platform operator': 'De platformexploitant',
+  '— the minimum needed to create and maintain your account.':
+    '— het minimum dat nodig is om uw account aan te maken en te onderhouden.',
+  'Payment providers': 'Betaaldienstverleners',
+  '— PayPal, which processes your payment under its own privacy policy.':
+    '— PayPal, dat uw betaling verwerkt onder zijn eigen privacybeleid.',
+  '— as the channel we communicate through, under Meta\'s policies.':
+    '— als het kanaal waarover wij communiceren, onder het beleid van Meta.',
+  'We do not sell your data or share it for marketing.':
+    'Wij verkopen uw gegevens niet en delen ze niet voor marketing.',
+  'International transfers': 'Internationale doorgifte',
+  'We are based in Morocco, so if you are in the EU or UK your data is processed outside your country. We keep transfers to the minimum needed to run your subscription.':
+    'Wij zijn gevestigd in Marokko, dus als u zich in de EU of het VK bevindt, worden uw gegevens buiten uw land verwerkt. Wij beperken de doorgifte tot het minimum dat nodig is om uw abonnement te laten werken.',
+  'How long we keep it': 'Hoelang wij het bewaren',
+  'Order and payment records for three years after your subscription ends, so we can handle disputes and meet record-keeping obligations. Message threads are kept while you are a customer and for a reasonable period afterwards.':
+    'Bestel- en betaalgegevens drie jaar nadat uw abonnement is afgelopen, zodat wij geschillen kunnen afhandelen en aan bewaarplichten kunnen voldoen. Berichtgesprekken bewaren wij zolang u klant bent en nog een redelijke periode daarna.',
+  'Your rights': 'Uw rechten',
+  'If you are in the EU or UK you can ask us to give you a copy of your data, correct it, delete it, restrict how we use it, or object to our using it. Email':
+    'Bevindt u zich in de EU of het VK, dan kunt u ons vragen u een kopie van uw gegevens te geven, ze te corrigeren, te wissen, het gebruik ervan te beperken of bezwaar te maken tegen ons gebruik ervan. Mail',
+  'and we will respond within 30 days. If you are unhappy with our response you can complain to the data protection authority in your country.':
+    'en wij reageren binnen 30 dagen. Bent u niet tevreden met onze reactie, dan kunt u een klacht indienen bij de gegevensbeschermingsautoriteit in uw land.',
+  'Children': 'Kinderen',
+  'This service is not intended for anyone under 18 and we do not knowingly collect data from children.':
+    'Deze dienst is niet bedoeld voor personen onder de 18 jaar en wij verzamelen niet bewust gegevens van kinderen.',
+  'Changes': 'Wijzigingen',
+  'If we change this notice we will update the date at the top of this page.':
+    'Als wij deze verklaring wijzigen, passen wij de datum boven aan deze pagina aan.'
 }
 
   };

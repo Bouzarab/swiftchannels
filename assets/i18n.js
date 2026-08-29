@@ -1769,6 +1769,413 @@ ar: {
   'How do I renew?': 'كيف أجدّد؟',
   'Send us a message before your end date and we extend the same line. Your username, password and favourites all stay exactly as they are.':
     'أرسل لنا رسالة قبل تاريخ الانتهاء ونمدّد الخط نفسه. يبقى اسم المستخدم وكلمة السر والمفضلات كما هي تمامًا.'
+},
+
+/* ═══════════════════════ DUTCH ═══════════════════════ */
+nl: {
+  'A montage of athletes from tennis, motorsport, cricket, rugby and athletics':
+    'Een montage van sporters uit tennis, motorsport, cricket, rugby en atletiek',
+  'Two combat-sports fighters facing each other before a bout':
+    'Twee vechtsporters tegenover elkaar vóór een partij',
+  'A montage of American team-sport players with league trophies':
+    'Een montage van Amerikaanse teamsporters met de trofeeën van hun competities',
+  'A football on the grass of a floodlit stadium at night':
+    'Een voetbal op het gras van een verlicht stadion in de avond',
+  'The numbers 24:7 handwritten in white on a black background':
+    'De cijfers 24:7 met de hand geschreven in wit op een zwarte achtergrond',
+  'Water droplets and melting ice on a clear surface':
+    'Waterdruppels en smeltend ijs op een doorzichtig oppervlak',
+  'The word replay in white on a bright pink background':
+    'Het woord replay in wit op een felroze achtergrond',
+  'The words 4K Ultra HD in gold lettering': 'De woorden 4K Ultra HD in gouden letters',
+  'A grid of film and series poster artwork': 'Een raster van film- en serieposters',
+  'A curved wall of television screens showing many different channels at once':
+    'Een gebogen wand van tv-schermen die veel verschillende zenders tegelijk tonen',
+  '__meta_title': 'IPTV abonnement Nederland — 8.000+ zenders | Swift Channels',
+  '__meta_desc':
+    'IPTV abonnement per maand of per jaar: meer dan 8.000 zenders en 50.000 films. Werkt met IPTV Smarters, TiviMate en Smart IPTV op Firestick, smart-tv en telefoon. Gratis test van 24 uur.',
+  'Quick answers': 'Snelle antwoorden',
+  'Support 09:00–23:00 GMT+1': 'Support 09:00–23:00 GMT+1',
+  'Questions? Answers are one tap away.': 'Vragen? De antwoorden zijn één tik verwijderd.',
+  'I have another question': 'Ik heb nog een vraag',
+  'Hello — I have a question about Swift Channels.':
+    'Hallo — ik heb een vraag over Swift Channels.',
+  'Open quick answers': 'Snelle antwoorden openen',
+  'Close quick answers': 'Snelle antwoorden sluiten',
+  'Dismiss': 'Sluiten',
+  'How much does it cost?': 'Wat kost het?',
+  'Two paid plans, both opening the full library: <strong>15 € a month</strong> or <strong>57 € a year</strong> — about 5 € a month. That covers one screen at a time; 2, 3 or 4 screens cost more. There is also a <strong>free 24-hour test</strong> before you pay anything.':
+    'Twee betaalde abonnementen, allebei met de volledige bibliotheek: <strong>15 € per maand</strong> of <strong>57 € per jaar</strong> — ongeveer 5 € per maand. Dat is voor één scherm tegelijk; 2, 3 of 4 schermen kosten meer. Er is ook een <strong>gratis test van 24 uur</strong> voordat u iets betaalt.',
+  'How do I pay?': 'Hoe betaal ik?',
+  'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.':
+    'Kaart of PayPal. U betaalt niet op deze website — stuur uw bestelling via WhatsApp, wij bevestigen de prijs en sturen u de betaallink, en uw lijn gaat open zodra de betaling binnen is.',
+  'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
+    'Een tv, laptop, tablet en telefoon die sport, films en series streamen op Swift Channels',
+  'Fill in the form': 'Vul het formulier in',
+  'Your name, WhatsApp number, the plan you want, how many devices and how you\'d like to pay. It takes about a minute.':
+    'Uw naam, WhatsApp-nummer, het gewenste abonnement, hoeveel apparaten en hoe u wilt betalen. Het kost ongeveer een minuut.',
+  'One button writes your whole order into a WhatsApp message. Press send — nothing is charged and nothing is committed yet.':
+    'Eén knop zet uw hele bestelling in een WhatsApp-bericht. Druk op versturen — er wordt niets afgeschreven en u zit nog nergens aan vast.',
+  'We take it from there': 'Wij nemen het over',
+  'We confirm the price, send you the payment details for the method you chose, and once it\'s settled your login details and setup guide come straight back.':
+    'Wij bevestigen de prijs, sturen u de betaalgegevens voor de methode die u koos, en zodra dat rond is krijgt u meteen uw inloggegevens en de installatiegids terug.',
+  'Preferred payment method': 'Gewenste betaalmethode',
+  'Pick how you\'d like to pay so we can send the details.':
+    'Kies hoe u wilt betalen, dan sturen wij de gegevens.',
+  'Send my order on WhatsApp': 'Mijn bestelling via WhatsApp versturen',
+  'Nothing is charged here. Send your order and we reply on WhatsApp with the payment details for the method you chose.':
+    'Hier wordt niets afgeschreven. Stuur uw bestelling en wij antwoorden via WhatsApp met de betaalgegevens voor de methode die u koos.',
+  'per year — about 5 a month': 'per jaar — ongeveer 5 per maand',
+  'Order {ref} is open in WhatsApp. Press send there and we\'ll reply with the payment details shortly.':
+    'Bestelling {ref} staat klaar in WhatsApp. Druk daar op versturen, dan sturen wij u zo de betaalgegevens.',
+  'No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}, or use the WhatsApp button.':
+    'Er ging geen e-mailapp open op dit apparaat. Bestelling {ref} is gekopieerd — plak hem in een e-mail aan {mail}, of gebruik de WhatsApp-knop.',
+  '__ty_title': 'Betaling ontvangen — nog één stap',
+  '__ty_h1': 'Betaling ontvangen. <br><span class="grad">Nog één stap.</span>',
+  'We can\'t open your line until we can match the payment to you. Email us the receipt and your login details come straight back — usually within ten minutes.':
+    'We kunnen uw lijn pas openen als we de betaling aan u kunnen koppelen. Mail ons het bewijs en uw inloggegevens komen meteen terug — meestal binnen tien minuten.',
+  'Your order': 'Uw bestelling',
+  'Name': 'Naam',
+  'Payment sent': 'Betaling verstuurd',
+  'PayPal has your payment.': 'PayPal heeft uw betaling.',
+  'Screenshot your receipt': 'Maak een schermafbeelding van het bewijs',
+  'The PayPal confirmation page or the email receipt — anything showing the amount and date.':
+    'De bevestigingspagina van PayPal of de e-mailbevestiging — alles waarop het bedrag en de datum staan.',
+  'The button below opens a chat with your order already written. Attach the screenshot with the paperclip, then press send.':
+    'De knop hieronder opent een gesprek met uw bestelling er al in. Voeg de schermafbeelding toe met de paperclip en druk op versturen.',
+  'Send my receipt on WhatsApp': 'Mijn bewijs via WhatsApp versturen',
+  'Back to the site': 'Terug naar de site',
+  'Your name or order reference': 'Uw naam of bestelreferentie',
+  'We couldn\'t find your order on this device — if you paid from a different browser or phone, just tell us who you are so we can match the payment.':
+    'We vonden uw bestelling niet op dit apparaat — betaalde u vanaf een andere browser of telefoon, zeg dan wie u bent zodat we de betaling kunnen koppelen.',
+  'e.g. Youssef B. — yearly plan': 'bijv. Youssef B. — jaarabonnement',
+  'KEEP THIS RECEIPT UNTIL YOUR LINE IS ACTIVE. IF YOU DON\'T HEAR FROM US WITHIN A FEW HOURS DURING SUPPORT TIMES, MESSAGE US AGAIN — YOUR PAYMENT IS SAFE EITHER WAY.':
+    'BEWAAR DIT BEWIJS TOT UW LIJN ACTIEF IS. HOORT U BINNEN ENKELE UREN TIJDENS DE SUPPORTUREN NIETS VAN ONS, STUUR DAN OPNIEUW EEN BERICHT — UW BETALING IS HOE DAN OOK VEILIG.',
+  'Terms': 'Voorwaarden',
+  'Back to top': 'Terug naar boven',
+  'Plans': 'Abonnementen',
+  'What\'s included': 'Wat erbij zit',
+  'Devices & apps': 'Apparaten & apps',
+  'FAQ': 'FAQ',
+  'Channels': 'Zenders',
+  'Send my order': 'Mijn bestelling versturen',
+  'Send it in one click': 'Versturen met één klik',
+  'One button hands your whole order to us. Nothing is charged and nothing is committed yet.':
+    'Eén knop geeft uw hele bestelling aan ons door. Er wordt niets afgeschreven en u zit nog nergens aan vast.',
+  'One thread with us for setup, renewals and anything that stops working.':
+    'Eén gesprek met ons voor installatie, verlengingen en alles wat het niet meer doet.',
+  'Card or PayPal. You do not pay on this website — send your order from this page, we confirm the price by email and send you the payment link, and your line opens as soon as the payment lands.':
+    'Kaart of PayPal. U betaalt niet op deze website — stuur uw bestelling vanaf deze pagina, wij bevestigen de prijs per e-mail en sturen u de betaallink, en uw lijn gaat open zodra de betaling binnen is.',
+  'Nothing is charged here. Send your order and we reply by email with the payment details for the method you chose.':
+    'Hier wordt niets afgeschreven. Stuur uw bestelling en wij antwoorden per e-mail met de betaalgegevens voor de methode die u koos.',
+  'Order {ref} copied. Paste it into an email to us.':
+    'Bestelling {ref} gekopieerd. Plak hem in een e-mail aan ons.',
+  'No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}.':
+    'Er ging geen e-mailapp open op dit apparaat. Bestelling {ref} is gekopieerd — plak hem in een e-mail aan {mail}.',
+  'Email my receipt': 'Mijn bewijs mailen',
+  'Email it to us': 'Mail het naar ons',
+  'Swipe': 'Vegen',
+  'Everything, on every plan': 'Alles, bij elk abonnement',
+  'One line, one price — sport, films, news and entertainment, with nothing held back on the cheaper plan and nothing sold as an add-on. ESPN, Fox Sports, Sky Sports and beIN Sports are all in it.':
+    'Eén lijn, één prijs — sport, films, nieuws en entertainment, zonder dat er bij het goedkopere abonnement iets wordt achtergehouden en zonder losse bijbetalingen. ESPN, Fox Sports, Sky Sports en beIN Sports zitten er allemaal in.',
+  'Included': 'Inbegrepen',
+  'Sport': 'Sport',
+  'Previous': 'Vorige',
+  'Next': 'Volgende',
+  'Setup': 'Installatie',
+  'Setup guide': 'Installatiegids',
+  'See the full list →': 'Bekijk de volledige lijst →',
+  'Order now': 'Nu bestellen',
+  '__h1':
+    '<span class="hl">Al uw zenders,</span> <span class="hl">op <span class="grad">één lijn</span>.</span>',
+  'Live sports, films, series and news in 4K, HD and SD — with a full programme guide and 7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.':
+    'Live sport, films, series en nieuws in 4K, HD en SD — met een volledige programmagids en 7 dagen replay. Kies een abonnement, zeg ons uw apparaat, en uw inloggegevens komen binnen enkele minuten.',
+  'Start the free 24-hour test': 'Start de gratis test van 24 uur',
+  'See plans and prices': 'Bekijk abonnementen en prijzen',
+  'No contract · Cancel any time · Support 7 days a week':
+    'Geen contract · Altijd opzegbaar · Support 7 dagen per week',
+  'Live now': 'Nu live',
+  'days': 'dagen',
+  'Live channels': 'Live zenders',
+  'Films & series on demand': 'Films & series op aanvraag',
+  'Catch-up TV': 'Replay',
+  'Uptime target': 'Beoogde beschikbaarheid',
+  'Pay for time, not for channels': 'Betaal voor tijd, niet voor zenders',
+  'Every plan opens the same full library. The only things that change are how long it runs and how many screens can play at once.':
+    'Elk abonnement opent dezelfde volledige bibliotheek. Het enige verschil is hoe lang het loopt en hoeveel schermen tegelijk kunnen kijken.',
+  'Devices watching at the same time': 'Apparaten die tegelijk kijken',
+  'One stream at a time. Prices update below.':
+    'Eén stream tegelijk. De prijzen hieronder passen zich aan.',
+  '{n} screens can play different channels at once.':
+    '{n} schermen kunnen tegelijk verschillende zenders afspelen.',
+  'Best value': 'Beste keuze',
+  'Free': 'Gratis',
+  'Free test': 'Gratis test',
+  'Monthly': 'Maandelijks',
+  'Yearly': 'Jaarlijks',
+  '24 hours': '24 uur',
+  '30 days': '30 dagen',
+  '12 months': '12 maanden',
+  'One-time, one per household': 'Eenmalig, één per huishouden',
+  'per month': 'per maand',
+  'per year — about 6 a month': 'per jaar — ongeveer 6 per maand',
+  'Start the free test': 'Start de gratis test',
+  'Choose {plan}': 'Kies {plan}',
+  'The full channel list, nothing held back': 'De volledige zenderlijst, niets achtergehouden',
+  'Runs 24 hours from activation': 'Loopt 24 uur vanaf de activering',
+  'No card, no deposit, no auto-renewal': 'Geen kaart, geen borg, geen automatische verlenging',
+  'Sent within minutes during support hours':
+    'Binnen enkele minuten verstuurd tijdens de supporturen',
+  '8,000+ live channels and 50,000+ VOD': '8.000+ live zenders en 50.000+ VOD',
+  '7-day catch-up and full programme guide': '7 dagen replay en een volledige programmagids',
+  '4K, HD and SD where the source allows': '4K, HD en SD waar de bron dat toelaat',
+  'Free replacement line if yours goes down': 'Gratis vervangende lijn als die van u uitvalt',
+  'Renew by message — nothing automatic': 'Verlengen via een bericht — niets gaat automatisch',
+  'Everything in the monthly plan': 'Alles uit het maandabonnement',
+  'By far the cheapest way to run the service':
+    'Veruit de goedkoopste manier om de dienst te gebruiken',
+  'Priority queue for support replies': 'Voorrang bij antwoorden van de support',
+  'One free device change during the year':
+    'Eén keer gratis van apparaat wisselen tijdens het jaar',
+  'The whole library, on every plan': 'De hele bibliotheek, bij elk abonnement',
+  'Nothing is held back on the cheaper plan and nothing is sold as an add-on. Sports, films, news and entertainment all come with the same line.':
+    'Bij het goedkopere abonnement wordt niets achtergehouden en er wordt niets los bijverkocht. Sport, films, nieuws en entertainment horen allemaal bij dezelfde lijn.',
+  '8,000+ live channels': '8.000+ live zenders',
+  'Sports, movies, news and entertainment from more than 50 countries, in one channel list.':
+    'Sport, films, nieuws en entertainment uit meer dan 50 landen, in één zenderlijst.',
+  '50,000+ on demand': '50.000+ op aanvraag',
+  'Films and full series box sets you can start whenever you like, not just when they air.':
+    'Films en complete seizoenen die u kunt starten wanneer u wilt, niet alleen als ze worden uitgezonden.',
+  '4K, HD and SD': '4K, HD en SD',
+  'Quality follows the source and your connection, so the picture stays steady either way.':
+    'De kwaliteit volgt de bron en uw verbinding, zodat het beeld hoe dan ook stabiel blijft.',
+  'Guide and catch-up': 'Gids en replay',
+  'A full EPG plus 7 days of catch-up TV, so a match you missed last night is still there.':
+    'Een volledige EPG plus 7 dagen replay, zodat de wedstrijd die u gisteravond miste er nog staat.',
+  'Anti-freeze technology': 'Anti-haper-technologie',
+  'Load balancing on the provider\'s side keeps the stream from stalling during big matches.':
+    'Load balancing aan de kant van de aanbieder voorkomt dat de stream hapert tijdens grote wedstrijden.',
+  '24/7 support': '24/7 support',
+  'One thread on WhatsApp for setup, renewals and anything that stops working.':
+    'Eén WhatsApp-gesprek voor installatie, verlengingen en alles wat het niet meer doet.',
+  'Live sports': 'Live sport',
+  'Every match night, no blackout': 'Elke wedstrijdavond, geen blackout',
+  'All major sports channels are included: ESPN, Fox Sports, Sky Sports and beIN Sports, plus international sport from over 50 countries.':
+    'Alle grote sportzenders zitten erbij: ESPN, Fox Sports, Sky Sports en beIN Sports, plus internationale sport uit meer dan 50 landen.',
+  'Football': 'Voetbal',
+  'Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Champions League and Botola.':
+    'Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Champions League en Botola.',
+  'US leagues': 'Amerikaanse competities',
+  'NFL, NBA, MLB and NHL through the full regular season and the play-offs.':
+    'NFL, NBA, MLB en NHL, het hele reguliere seizoen en de play-offs.',
+  'Combat sports': 'Vechtsport',
+  'UFC and boxing, including the pay-per-view events, on the night they happen.':
+    'UFC en boksen, inclusief de pay-per-view-evenementen, op de avond zelf.',
+  'Everything else': 'Al het andere',
+  'Tennis, motorsport, cycling, rugby, athletics and cricket across the international feeds.':
+    'Tennis, motorsport, wielrennen, rugby, atletiek en cricket via de internationale feeds.',
+  'Your connection': 'Uw verbinding',
+  'What internet speed you need': 'Welke internetsnelheid u nodig hebt',
+  'Adaptive streaming adjusts the quality to whatever your line can carry, so you don\'t need fibre to watch comfortably. These are the speeds we\'d aim for.':
+    'Adaptieve streaming past de kwaliteit aan wat uw lijn aankan, dus u hebt geen glasvezel nodig om comfortabel te kijken. Dit zijn de snelheden die wij aanhouden.',
+  'A wired connection or 5 GHz Wi-Fi gives a noticeably steadier picture than 2.4 GHz.':
+    'Een bekabelde verbinding of 5 GHz-wifi geeft een merkbaar stabieler beeld dan 2,4 GHz.',
+  '4K channels': '4K-zenders',
+  'Best on a wired connection. Ultra HD sport and films.':
+    'Het beste met een kabel. Ultra HD-sport en -films.',
+  'HD channels': 'HD-zenders',
+  'The sweet spot for most homes and most channels.':
+    'De beste balans voor de meeste huishoudens en de meeste zenders.',
+  'SD channels': 'SD-zenders',
+  'Works on mobile data and slower ADSL lines.': 'Werkt op mobiele data en tragere ADSL-lijnen.',
+  'Works on what you already own': 'Werkt op wat u al hebt',
+  'Every app below supports the M3U playlist format we send you. Tell us your device when you order and we include the setup steps written for it.':
+    'Elke app hieronder ondersteunt het M3U-afspeellijstformaat dat wij u sturen. Zeg ons uw apparaat bij het bestellen, dan sturen we de installatiestappen die daarbij horen.',
+  'Most devices': 'De meeste apparaten',
+  'The default choice. Android, iOS, Windows, Mac and most TV boxes.':
+    'De standaardkeuze. Android, iOS, Windows, Mac en de meeste tv-boxen.',
+  'Apple devices': 'Apple-apparaten',
+  'Best behaved on iPhone, iPad and Apple TV.': 'Werkt het netst op iPhone, iPad en Apple TV.',
+  'The nicest guide and recording experience on Android TV and Firestick.':
+    'De fijnste gids en opnamefuncties op Android TV en Firestick.',
+  'Samsung & LG': 'Samsung & LG',
+  'Installs straight from the TV store on Samsung and LG sets.':
+    'Installeert rechtstreeks vanuit de tv-store op Samsung- en LG-toestellen.',
+  'Samsung & LG TV': 'Samsung- & LG-tv',
+  'Fire Stick': 'Fire Stick',
+  'MAG box': 'MAG-box',
+  'Phone & tablet': 'Telefoon & tablet',
+  'Computer': 'Computer',
+  'How it works': 'Hoe het werkt',
+  'Three steps, one message': 'Drie stappen, één bericht',
+  'STEP 01': 'STAP 01',
+  'STEP 02': 'STAP 02',
+  'STEP 03': 'STAP 03',
+  'Choose and pay': 'Kiezen en betalen',
+  'Pick your plan and payment method in the form below. The payment details appear straight away — card, Cash Plus, Wafacash or PayPal.':
+    'Kies uw abonnement en betaalmethode in het formulier hieronder. De betaalgegevens verschijnen meteen — kaart, Cash Plus, Wafacash of PayPal.',
+  'Screenshot the receipt': 'Maak een schermafbeelding van het bewijs',
+  'The confirmation page, the SMS, or a photo of the paper receipt from the agent. Anything that shows the amount and the date.':
+    'De bevestigingspagina, de sms, of een foto van het papieren bewijs van de agent. Alles waarop het bedrag en de datum staan.',
+  'Send it on WhatsApp': 'Versturen via WhatsApp',
+  'One button writes your whole order into a WhatsApp message. Attach the screenshot, press send, and your login details come back in minutes.':
+    'Eén knop zet uw hele bestelling in een WhatsApp-bericht. Voeg de schermafbeelding toe, druk op versturen, en uw inloggegevens komen binnen enkele minuten terug.',
+  'Order': 'Bestellen',
+  'Tell us what you need': 'Zeg ons wat u nodig hebt',
+  'This form doesn\'t send anything on its own — it writes your order into a message that you send us. You keep a copy either way.':
+    'Dit formulier verstuurt uit zichzelf niets — het zet uw bestelling in een bericht dat u ons stuurt. U houdt hoe dan ook een kopie.',
+  'Full name': 'Volledige naam',
+  'How we should address you': 'Hoe wij u mogen aanspreken',
+  'Add your name so we can label the account.':
+    'Vul uw naam in zodat we het account kunnen benoemen.',
+  'WhatsApp number': 'WhatsApp-nummer',
+  'We send your credentials here. Include the country code.':
+    'Hier sturen wij uw inloggegevens naartoe. Vermeld de landcode.',
+  'Email': 'E-mail',
+  '— optional backup': '— optioneel, als reserve',
+  '— optional': '— optioneel',
+  'That email address doesn\'t look complete.': 'Dat e-mailadres lijkt niet compleet.',
+  'Plan': 'Abonnement',
+  'Simultaneous devices': 'Gelijktijdige apparaten',
+  '1 device': '1 apparaat',
+  '2 devices': '2 apparaten',
+  '3 devices': '3 apparaten',
+  '4 devices': '4 apparaten',
+  '{n} devices': '{n} apparaten',
+  'What will you watch on?': 'Waarop gaat u kijken?',
+  'Select a device': 'Kies een apparaat',
+  'Samsung Smart TV': 'Samsung Smart TV',
+  'LG Smart TV': 'LG Smart TV',
+  'Android TV box': 'Android TV-box',
+  'Amazon Fire Stick': 'Amazon Fire Stick',
+  'Phone or tablet': 'Telefoon of tablet',
+  'Windows, Mac or Linux': 'Windows, Mac of Linux',
+  'Other': 'Anders',
+  'Pick a device so we send the right setup steps.':
+    'Kies een apparaat, dan sturen we de juiste installatiestappen.',
+  'Device MAC address': 'MAC-adres van het apparaat',
+  'This device needs a MAC in the format 00:1A:79:XX:XX:XX.':
+    'Dit apparaat heeft een MAC nodig in de vorm 00:1A:79:XX:XX:XX.',
+  'How would you like to pay?': 'Hoe wilt u betalen?',
+  'Select a method': 'Kies een methode',
+  'Ready in': 'Klaar in',
+  '~10 minutes': '~10 minuten',
+  'Backup servers': 'Reserveservers',
+  'Filled in from what you typed last time.': 'Ingevuld met wat u de vorige keer hebt getypt.',
+  'Clear the saved details': 'Opgeslagen gegevens wissen',
+  'Credit card': 'Creditcard',
+  'Cash Plus (Morocco only)': 'Cash Plus (alleen Marokko)',
+  'Wafacash (Morocco only)': 'Wafacash (alleen Marokko)',
+  'Choose a payment method.': 'Kies een betaalmethode.',
+  'Anything else': 'Nog iets anders',
+  'Country packs you want, sports you follow, a channel you can\'t do without.':
+    'Landenpakketten die u wilt, sporten die u volgt, een zender die u niet kunt missen.',
+  '__consent':
+    'Ik bestel voor mijn eigen huishouden en ik accepteer de <a href="legal.html" target="_blank">voorwaarden, het terugbetalingsbeleid en de privacyverklaring</a>. Ik vraag om mijn inloggegevens onmiddellijk te ontvangen en begrijp dat mijn herroepingsrecht van 14 dagen vervalt zodra ze geleverd zijn.',
+  'Tick the box to continue.': 'Vink het vakje aan om verder te gaan.',
+  'Pay before you send': 'Betaal voor u verstuurt',
+  'Pay by Credit card': 'Betalen met creditcard',
+  'Pay by PayPal': 'Betalen met PayPal',
+  'Pay by Cash Plus (Morocco only)': 'Betalen met Cash Plus (alleen Marokko)',
+  'Pay by Wafacash (Morocco only)': 'Betalen met Wafacash (alleen Marokko)',
+  'Pay now': 'Nu betalen',
+  'Pay by card': 'Betalen met kaart',
+  'Pay with PayPal': 'Betalen met PayPal',
+  'Copy': 'Kopiëren',
+  'Copied': 'Gekopieerd',
+  'Recipient name': 'Naam van de ontvanger',
+  'Phone number': 'Telefoonnummer',
+  'City': 'Stad',
+  'Pay the amount above': 'Betaal het bedrag hierboven',
+  'Use the exact total so we can match it to your order.':
+    'Gebruik precies dit totaal, zodat we het aan uw bestelling kunnen koppelen.',
+  'The confirmation page, the SMS, or a photo of the paper receipt.':
+    'De bevestigingspagina, de sms, of een foto van het papieren bewijs.',
+  'Press the button in the summary — then attach the screenshot to the message.':
+    'Druk op de knop in het overzicht — voeg daarna de schermafbeelding toe aan het bericht.',
+  'Pay by debit or credit card on the secure PayPal checkout page — in most cases you do not need a PayPal account. Screenshot the confirmation page when it is done.':
+    'Betaal met debet- of creditcard op de beveiligde afrekenpagina van PayPal — meestal hebt u geen PayPal-account nodig. Maak een schermafbeelding van de bevestigingspagina als het klaar is.',
+  'Pay from your PayPal balance or a linked card, then screenshot the receipt.':
+    'Betaal vanaf uw PayPal-saldo of een gekoppelde kaart en maak daarna een schermafbeelding van het bewijs.',
+  'Go to any Cash Plus agent and send the amount to the name and number below. Keep the paper receipt and photograph it.':
+    'Ga naar een Cash Plus-agent en stuur het bedrag naar de naam en het nummer hieronder. Bewaar het papieren bewijs en maak er een foto van.',
+  'Any Wafacash counter can send this. Ask for a cash transfer to the name below and keep the receipt.':
+    'Elk Wafacash-loket kan dit versturen. Vraag om een contante overboeking naar de naam hieronder en bewaar het bewijs.',
+  'Order summary': 'Besteloverzicht',
+  'Runs for': 'Loopt',
+  'Devices': 'Apparaten',
+  'Watching on': 'Kijken op',
+  'Not chosen': 'Niet gekozen',
+  'Not needed': 'Niet nodig',
+  'Payment': 'Betaling',
+  'Total': 'Totaal',
+  'Send order on WhatsApp': 'Bestelling versturen via WhatsApp',
+  'Send payment proof on WhatsApp': 'Betaalbewijs versturen via WhatsApp',
+  'Copy order details': 'Bestelgegevens kopiëren',
+  'Send by email instead': 'Liever per e-mail versturen',
+  'Nothing is charged here. We confirm the price in the chat before you pay, then open your line.':
+    'Hier wordt niets afgeschreven. We bevestigen de prijs in het gesprek voordat u betaalt en openen daarna uw lijn.',
+  'Nothing is charged here. Free tests skip payment entirely — send the order and we open your line.':
+    'Hier wordt niets afgeschreven. Bij een gratis test is er helemaal geen betaling — stuur de bestelling en wij openen uw lijn.',
+  'Pay first using the details in the form, screenshot the receipt, then send it here. We open your line as soon as we see it.':
+    'Betaal eerst met de gegevens in het formulier, maak een schermafbeelding van het bewijs en stuur die hier. We openen uw lijn zodra we hem zien.',
+  'Order {ref} is open in WhatsApp. Press send there and we\'ll reply shortly.':
+    'Bestelling {ref} staat klaar in WhatsApp. Druk daar op versturen, dan antwoorden wij zo.',
+  'Order {ref} is open in WhatsApp. Attach your payment screenshot with the paperclip, then press send.':
+    'Bestelling {ref} staat klaar in WhatsApp. Voeg uw betaalbewijs toe met de paperclip en druk op versturen.',
+  'Order {ref} is open in your email app.': 'Bestelling {ref} staat klaar in uw e-mailapp.',
+  'Order {ref} copied. Paste it to us on WhatsApp or email.':
+    'Bestelling {ref} gekopieerd. Plak hem naar ons in WhatsApp of een e-mail.',
+  'Questions': 'Vragen',
+  'Before you order': 'Voor u bestelt',
+  'Try it tonight. Decide tomorrow.': 'Probeer het vanavond. Beslis morgen.',
+  'The 24-hour test is the whole service, unrestricted. No card, no deposit, no automatic renewal — just watch it on your own TV and see.':
+    'De test van 24 uur is de volledige dienst, zonder beperkingen. Geen kaart, geen borg, geen automatische verlenging — kijk gewoon op uw eigen tv en zie zelf.',
+  'Compare the plans': 'Vergelijk de abonnementen',
+  'Subscriptions opened and supported by us, delivered on a licensed streaming platform.':
+    'Abonnementen die door ons worden geopend en ondersteund, geleverd via een gelicentieerd streamingplatform.',
+  'Pages': 'Pagina\'s',
+  'Terms & privacy': 'Voorwaarden & privacy',
+  'Talk to us': 'Neem contact op',
+  'SUPPORT 09:00–23:00 GMT+1': 'SUPPORT 09:00–23:00 GMT+1',
+  '__footlegal':
+    'Wij verkopen toegang tot een streamingplatform van derden. De content is gelicentieerd en wordt geleverd door de beheerder van dat platform. Abonnementen zijn bedoeld voor privégebruik binnen het huishouden; herdistributie en openbare vertoning zijn niet toegestaan.<br> <a href="legal.html">Servicevoorwaarden · Terugbetalingsbeleid · Privacyverklaring</a>',
+  'MADE IN MOROCCO': 'GEMAAKT IN MAROKKO',
+  '4K · HD · SD': '4K · HD · SD',
+  '7-day catch-up': '7 dagen replay',
+  '8,000+ channels': '8.000+ zenders',
+  '50,000+ films & series': '50.000+ films & series',
+  'Anti-freeze': 'Anti-haper',
+  'Full EPG': 'Volledige EPG',
+  '50+ countries': '50+ landen',
+  'No contract': 'Geen contract',
+  'What\'s included?': 'Wat zit erbij?',
+  'All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support.':
+    'Alle abonnementen bevatten <strong>8.000+ live zenders</strong> met sport, films, nieuws en entertainment, <strong>50.000+ films en series op aanvraag</strong>, 4K- en HD-kwaliteit, een volledige EPG-gids, replay en 24/7 support.',
+  'Can I watch live sports and PPV events?': 'Kan ik live sport en PPV-evenementen kijken?',
+  'Yes. <strong>NFL, NBA, MLB, NHL, Premier League, UFC and boxing</strong> are all there, along with the major sports channels — ESPN, Fox Sports, Sky Sports and beIN Sports — plus international sport from more than 50 countries.':
+    'Ja. <strong>NFL, NBA, MLB, NHL, Premier League, UFC en boksen</strong> zitten er allemaal in, samen met de grote sportzenders — ESPN, Fox Sports, Sky Sports en beIN Sports — plus internationale sport uit meer dan 50 landen.',
+  'What devices are supported?': 'Welke apparaten worden ondersteund?',
+  'It works on Smart TVs (Samsung, LG, Android TV), phones and tablets (iOS and Android), computers (Windows, Mac and Linux), Fire Stick, Roku, Apple TV and more. Use an app like <strong>GSE Smart IPTV</strong> or <strong>IPTV Smarters</strong>.':
+    'Het werkt op smart-tv\'s (Samsung, LG, Android TV), telefoons en tablets (iOS en Android), computers (Windows, Mac en Linux), Fire Stick, Roku, Apple TV en meer. Gebruik een app als <strong>GSE Smart IPTV</strong> of <strong>IPTV Smarters</strong>.',
+  'Which IPTV app should I use on my device?': 'Welke IPTV-app kan ik het beste gebruiken?',
+  'We recommend <strong>IPTV Smarters Pro</strong> for most devices, <strong>GSE Smart IPTV</strong> for Apple devices, <strong>TiviMate</strong> for Android TV and <strong>Smart IPTV</strong> for Samsung and LG sets. All of them support the M3U playlist format we send you.':
+    'Wij raden <strong>IPTV Smarters Pro</strong> aan voor de meeste apparaten, <strong>GSE Smart IPTV</strong> voor Apple-apparaten, <strong>TiviMate</strong> voor Android TV en <strong>Smart IPTV</strong> voor Samsung- en LG-toestellen. Ze ondersteunen allemaal het M3U-afspeellijstformaat dat wij u sturen.',
+  'What internet speed do I need for 4K streaming?': 'Welke internetsnelheid heb ik nodig voor 4K?',
+  'For the best picture: <strong>25 Mbps or more</strong> for 4K channels, <strong>15 Mbps</strong> for HD and <strong>5 Mbps</strong> for SD. Adaptive streaming adjusts the quality automatically to match your connection.':
+    'Voor het beste beeld: <strong>25 Mbps of meer</strong> voor 4K-zenders, <strong>15 Mbps</strong> voor HD en <strong>5 Mbps</strong> voor SD. Adaptieve streaming past de kwaliteit automatisch aan uw verbinding aan.',
+  'Is the free 24-hour test really free?': 'Is de gratis test van 24 uur echt gratis?',
+  'Yes. One 24-hour line per household, no card and no deposit. We open it, you try it on your own device, and if it isn\'t right for you nothing happens next.':
+    'Ja. Eén lijn van 24 uur per huishouden, zonder kaart en zonder borg. Wij openen hem, u probeert hem op uw eigen apparaat, en als het niets voor u is gebeurt er verder niets.',
+  'How fast do I get my login details?': 'Hoe snel krijg ik mijn inloggegevens?',
+  'Usually under ten minutes during support hours. If you order overnight, your details are waiting for you first thing in the morning.':
+    'Meestal binnen tien minuten tijdens de supporturen. Bestelt u \'s nachts, dan liggen uw gegevens \'s ochtends vroeg klaar.',
+  'What if a channel stops working?': 'Wat als een zender het niet meer doet?',
+  'Message us in the same thread. Most issues are fixed within minutes, and if a line is genuinely down we replace it and add the lost time to your subscription.':
+    'Stuur ons een bericht in hetzelfde gesprek. De meeste problemen zijn binnen enkele minuten opgelost, en ligt een lijn er echt uit, dan vervangen we hem en tellen we de verloren tijd bij uw abonnement op.',
+  'How do I renew?': 'Hoe verleng ik?',
+  'Send us a message before your end date and we extend the same line. Your username, password and favourites all stay exactly as they are.':
+    'Stuur ons een bericht voor uw einddatum, dan verlengen we dezelfde lijn. Uw gebruikersnaam, wachtwoord en favorieten blijven precies zoals ze zijn.'
 }
 
 };
@@ -1779,7 +2186,7 @@ ar: {
    ═══════════════════════════════════════════════════════════════════ */
 window.i18n = (function(){
   const DICT  = window.I18N || {};
-  const LANGS = ['en','fr','es','de','ar'];
+  const LANGS = ['en','fr','es','de','ar','nl'];
   let LANG = 'en';
 
   const norm = s => String(s).replace(/\s+/g,' ').trim();

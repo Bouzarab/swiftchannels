@@ -109,6 +109,41 @@ ar: {
   'Reference': 'المرجع', 'Name': 'الاسم', 'Phone': 'الهاتف', 'Email': 'البريد الإلكتروني',
   'Plan': 'الباقة', 'Devices': 'الأجهزة', 'Watch on': 'المشاهدة على',
   'MAC address': 'عنوان MAC', 'Pay by': 'الدفع عبر', 'Notes': 'ملاحظات', 'Total': 'المجموع'
+},
+
+/* ═══════════════════════ DUTCH ═══════════════════════ */
+nl: {
+  'Your order': 'Uw bestelling',
+  'Send my order': 'Mijn bestelling versturen',
+  'Plan': 'Abonnement',
+  'Name': 'Naam',
+  'Email': 'E-mail',
+  'Devices': 'Apparaten',
+  'Total': 'Totaal',
+  '__or_title': 'Uw bestelling versturen — Swift Channels',
+  '__or_desc': 'Controleer uw bestelgegevens en stuur ze ons met één klik.',
+  '__or_h1': 'Eén klik en<br><span class="grad">hij is bij ons</span>.',
+  'Last step': 'Laatste stap',
+  'Check the details below, then press the button. Nothing is charged — we read your order and reply with the payment details for the method you picked.':
+    'Controleer hieronder uw gegevens en druk op de knop. Er wordt niets afgeschreven — wij lezen uw bestelling en sturen u de betaalgegevens voor de methode die u koos.',
+  'Sending…': 'Versturen…',
+  'Change something first': 'Eerst iets wijzigen',
+  '← Change my order': '← Mijn bestelling wijzigen',
+  'We reply to the email or phone number you gave us.':
+    'We antwoorden op het e-mailadres of telefoonnummer dat u ons hebt gegeven.',
+  'We could not find an order on this device. Fill in the short form and come back.':
+    'We vonden geen bestelling op dit apparaat. Vul het korte formulier in en kom terug.',
+  'Go to the order form': 'Naar het bestelformulier',
+  'Order {ref} is on its way to us. We reply within a few hours.':
+    'Bestelling {ref} is onderweg naar ons. We antwoorden binnen enkele uren.',
+  'Order {ref} is with us. We reply with the payment details for the method you picked — usually within a few hours during support hours.':
+    'Bestelling {ref} is bij ons. We sturen u de betaalgegevens voor de methode die u koos — meestal binnen enkele uren tijdens de supporturen.',
+  'Reference': 'Referentie',
+  'Phone': 'Telefoon',
+  'Watch on': 'Kijken op',
+  'MAC address': 'MAC-adres',
+  'Pay by': 'Betalen met',
+  'Notes': 'Opmerkingen'
 }
 
   };

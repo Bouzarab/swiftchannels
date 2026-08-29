@@ -186,6 +186,53 @@ ar: {
   'China & Japan': 'الصين واليابان',
   'Bahrain & Jordan': 'البحرين والأردن',
   'Dazn': 'DAZN'
+},
+
+/* ═══════════════════════ DUTCH ═══════════════════════ */
+nl: {
+  'Setup guide': 'Installatiegids',
+  'Channels': 'Zenders',
+  '← Back to the site': '← Terug naar de site',
+  '__ch_title': 'IPTV zenderlijst — 8.000+ zenders per land | Swift Channels',
+  '__ch_desc':
+    'Alle zenders van Swift Channels — meer dan 8.000 live zenders uit 54 landen, doorzoekbaar op naam of land.',
+  '__ch_h1': 'Alle zenders,<br>op <span class="grad">één plek</span>.',
+  'Channel list': 'Zenderlijst',
+  'Nothing matches that. Try a shorter word — or email us.':
+    'Daar is geen match voor. Probeer een korter woord — of mail ons.',
+  'Browse by country or search for the channel you can\'t do without. This is the full line-up carried on the platform — the same list on every plan.':
+    'Blader per land of zoek de zender die u niet kunt missen. Dit is het volledige aanbod van het platform — dezelfde lijst bij elk abonnement.',
+  '__ch_rail': 'Landen',
+  'Countries': 'Landen',
+  'Films & series': 'Films & series',
+  'Catch-up': 'Replay',
+  '7 days': '7 dagen',
+  'Search 8,000+ channels — try “Sky Sports” or “beIN”':
+    'Zoek in 8.000+ zenders — probeer “Sky Sports” of “beIN”',
+  'Search channels': 'Zenders zoeken',
+  'Clear search': 'Zoekopdracht wissen',
+  'Loading more…': 'Meer laden…',
+  'Nothing matches that. Try a shorter word — or ask us on WhatsApp.':
+    'Daar is geen match voor. Probeer een korter woord — of vraag het ons via WhatsApp.',
+  '{n} channels': '{n} zenders',
+  '{n} matches': '{n} resultaten',
+  'Results for “{q}”': 'Resultaten voor “{q}”',
+  'Can\'t find a channel you need?': 'Vindt u een zender niet?',
+  'Ask before you order. If it\'s carried we\'ll tell you, and if it isn\'t we\'ll say so — the free 24-hour test lets you check it on your own TV either way.':
+    'Vraag het vóór u bestelt. Zit hij in het aanbod, dan zeggen we dat, en zit hij er niet in, dan zeggen we dat ook — met de gratis test van 24 uur controleert u het hoe dan ook op uw eigen tv.',
+  'Line-ups are set by the platform and can change':
+    'Het aanbod wordt bepaald door het platform en kan wijzigen',
+  'Ex-Yu': 'Ex-Joegoslavië',
+  'Asia': 'Azië',
+  'Latin America': 'Latijns-Amerika',
+  'Arabic — Everything': 'Arabisch — Alles',
+  'Arabic Sport': 'Arabische sport',
+  'Formula 1 & MotoGP': 'Formule 1 & MotoGP',
+  'Latin Dance': 'Latin dance',
+  'Kurdistan & Azerbaijan': 'Koerdistan & Azerbeidzjan',
+  'China & Japan': 'China & Japan',
+  'Bahrain & Jordan': 'Bahrein & Jordanië',
+  'Dazn': 'Dazn'
 }
 
   };

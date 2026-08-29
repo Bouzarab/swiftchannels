@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Swift Channels">
 <meta property="og:url" content="https://swiftchannels.com/es/channels.html">
-<meta property="og:title" content="Lista de canales — Swift Channels">
+<meta property="og:title" content="Lista de canales IPTV — más de 8.000 por país | Swift Channels">
 <meta property="og:description" content="Todos los canales de Swift Channels — más de 8.000 canales en directo de 54 países, con búsqueda por nombre o país.">
 <meta property="og:image" content="https://swiftchannels.com/assets/og-card.jpg">
 <meta property="og:locale" content="es_ES">
@@ -237,7 +237,7 @@ footer a:hover{color:var(--blue-hi)}
     scroll-behavior:auto!important}
 }
 </style>
-<link rel="canonical" href="https://swiftchannels.com/es/channels.html"><link rel="alternate" hreflang="en" href="https://swiftchannels.com/channels.html"><link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/channels.html"><link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/channels.html"><link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/channels.html"><link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/channels.html"><link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/channels.html"></head>
+<link rel="canonical" href="https://swiftchannels.com/es/channels.html"><link rel="alternate" hreflang="en" href="https://swiftchannels.com/channels.html"><link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/channels.html"><link rel="alternate" hreflang="es" href="https://swiftchannels.com/es/channels.html"><link rel="alternate" hreflang="de" href="https://swiftchannels.com/de/channels.html"><link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/channels.html"><link rel="alternate" hreflang="nl" href="https://swiftchannels.com/nl/channels.html"><link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/channels.html"></head>
 <body>
 
 <div class="aurora"><i></i><i></i></div>
@@ -256,6 +256,7 @@ footer a:hover{color:var(--blue-hi)}
         <a class="lang-b" href="../es/channels.html" data-lang="es" hreflang="es" aria-current="true" title="Español"><img src="../assets/flag-es.webp" alt="Español" width="32" height="32"></a>
         <a class="lang-b" href="../de/channels.html" data-lang="de" hreflang="de" aria-current="false" title="Deutsch"><img src="../assets/flag-de.webp" alt="Deutsch" width="32" height="32"></a>
         <a class="lang-b" href="../ar/channels.html" data-lang="ar" hreflang="ar" aria-current="false" title="العربية"><img src="../assets/flag-ar.webp" alt="العربية" width="32" height="32"></a>
+        <a class="lang-b" href="../nl/channels.html" data-lang="nl" hreflang="nl" aria-current="false" title="Nederlands"><img src="../assets/flag-nl.webp" alt="Nederlands" width="32" height="32"></a>
       </div>
     </div>
     <a class="btn btn-blue btn-sm" href="index.html#order">Contratar</a>
@@ -333,7 +334,7 @@ const tf = (s, v) => window.i18n ? window.i18n.tf(s, v) : s;
    back to the translation table. */
 let NAMES = null, NUM = 'en-GB';
 function localeSetup(lang){
-  NUM = (lang === 'ar') ? 'en-GB' : ({ en:'en-GB', fr:'fr-FR', es:'es-ES', de:'de-DE' }[lang] || 'en-GB');
+  NUM = (lang === 'ar') ? 'en-GB' : ({ en:'en-GB', fr:'fr-FR', es:'es-ES', de:'de-DE', nl:'nl-NL' }[lang] || 'en-GB');
   try { NAMES = new Intl.DisplayNames([lang], { type: 'region' }); }
   catch(e){ NAMES = null; }
 }
