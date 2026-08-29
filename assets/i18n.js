@@ -2432,6 +2432,13 @@ window.i18n = (function(){
           cur.setAttribute('aria-expanded','false');
         });
       });
+    } else {
+      /* A generated page switches language by going to that page. Where the
+         switcher is built from buttons rather than links, href alone does
+         nothing — so follow it ourselves. */
+      box.querySelectorAll('button.lang-b[href]').forEach(b => {
+        b.addEventListener('click', () => { location.href = b.getAttribute('href'); });
+      });
     }
     const close = () => {
       box.classList.remove('open');

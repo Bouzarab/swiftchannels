@@ -151,17 +151,40 @@ footer a:hover{color:var(--blue-hi)}
 .lang-b[aria-current="true"]{
   opacity:1;filter:none;border-color:transparent;
   box-shadow:0 0 0 2px var(--blue-hi),0 8px 20px -8px var(--glow)}
-.lang-cur{display:none}
-@media(max-width:640px){
-  .lang-cur{display:flex}
-  .lang-opts{position:absolute;top:calc(100% + 12px);inset-inline-end:0;z-index:70;
-    flex-direction:column;gap:6px;padding:7px;border-radius:20px;
-    background:rgba(8,15,34,.94);border:1px solid var(--line);backdrop-filter:blur(14px);
-    box-shadow:0 24px 46px -18px rgba(0,0,0,.85);
-    opacity:0;visibility:hidden;transform:translateY(-8px) scale(.96);transform-origin:top;
-    transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
-  .lang.open .lang-opts{opacity:1;visibility:visible;transform:none}
-}
+.lang-cur{display:flex}
+/* one flag in the bar, the rest in a menu below it — six flags in a row
+   pushed the navigation onto two lines */
+.lang-opts{position:absolute;top:calc(100% + 12px);inset-inline-end:0;z-index:70;
+  flex-direction:column;gap:6px;padding:7px;border-radius:20px;
+  background:rgba(8,15,34,.94);border:1px solid var(--line);backdrop-filter:blur(14px);
+  box-shadow:0 24px 46px -18px rgba(0,0,0,.85);
+  opacity:0;visibility:hidden;transform:translateY(-8px) scale(.96);transform-origin:top;
+  transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s}
+.lang.open .lang-opts{opacity:1;visibility:visible;transform:none}
+/* in the menu each flag is a labelled row; the bar button stays a circle */
+.lang-opts .lang-b{width:auto;height:auto;flex:0 0 auto;border-radius:999px;
+  gap:10px;justify-content:flex-start;padding:4px 14px 4px 4px;overflow:visible;
+  padding-inline:4px 14px}
+.lang-opts .lang-b img{width:26px;height:26px;flex:0 0 26px}
+.lang-opts .lang-b span{font-family:var(--body);font-size:13px;font-weight:500;
+  color:var(--ice);white-space:nowrap;line-height:1}
+/* dim the flag, never the name — a menu you cannot read is not a menu */
+.lang-opts .lang-b{opacity:1;filter:none}
+.lang-opts .lang-b img{opacity:.62;filter:saturate(.5);transition:opacity .25s,filter .3s}
+.lang-opts .lang-b:hover img,
+.lang-opts .lang-b[aria-current="true"] img{opacity:1;filter:none}
+.lang-opts .lang-b:not([aria-current="true"]) span{color:var(--muted)}
+.lang-opts .lang-b:hover span{color:var(--ice)}
+.lang-opts .lang-b:hover{transform:none;background:rgba(255,255,255,.06)}
+.lang-opts .lang-b[aria-current="true"]{box-shadow:none;border-color:var(--blue-hi);
+  background:rgba(47,107,255,.16)}
+
+.lang::after{content:"";width:0;height:0;flex:none;
+  border-left:4px solid transparent;border-right:4px solid transparent;
+  border-top:5px solid var(--muted-2);pointer-events:none;
+  transition:transform .25s var(--ease),border-top-color .25s}
+.lang.open::after{transform:rotate(180deg);border-top-color:var(--blue-hi)}
+.lang.open .lang-cur{border-color:var(--blue-hi);opacity:1;filter:none}
 /* ═══════════════ RIGHT-TO-LEFT (Arabic) ═══════════════ */
 html[dir="rtl"] body{font-family:'Tajawal',var(--body)}
 html[dir="rtl"] h1,html[dir="rtl"] .brand-name,html[dir="rtl"] .steps b{
@@ -190,12 +213,12 @@ html[dir="rtl"] .steps li{grid-template-columns:30px 1fr}
   <div class="lang" id="lang">
     <button class="lang-cur" type="button" id="langCur" aria-haspopup="true" aria-expanded="false" aria-label="Language"><img src="../assets/flag-nl.webp" alt="" width="34" height="34"></button>
     <div class="lang-opts" id="langOpts">
-      <button class="lang-b" type="button" data-lang="en" aria-current="false" aria-label="English" title="English" href="../thank-you.html"><img src="../assets/flag-en.webp" alt="English" width="34" height="34"></button>
-      <button class="lang-b" type="button" data-lang="fr" aria-current="false" aria-label="Français" title="Français" href="../fr/thank-you.html"><img src="../assets/flag-fr.webp" alt="Français" width="34" height="34"></button>
-      <button class="lang-b" type="button" data-lang="es" aria-current="false" aria-label="Español" title="Español" href="../es/thank-you.html"><img src="../assets/flag-es.webp" alt="Español" width="34" height="34"></button>
-      <button class="lang-b" type="button" data-lang="de" aria-current="false" aria-label="Deutsch" title="Deutsch" href="../de/thank-you.html"><img src="../assets/flag-de.webp" alt="Deutsch" width="34" height="34"></button>
-      <button class="lang-b" type="button" data-lang="ar" aria-current="false" aria-label="العربية" title="العربية" href="../ar/thank-you.html"><img src="../assets/flag-ar.webp" alt="العربية" width="34" height="34"></button>
-      <button class="lang-b" type="button" data-lang="nl" aria-current="true" aria-label="Nederlands" title="Nederlands" href="../nl/thank-you.html"><img src="../assets/flag-nl.webp" alt="Nederlands" width="34" height="34"></button>
+      <button class="lang-b" type="button" data-lang="en" aria-current="false" aria-label="English" title="English" href="../thank-you.html"><img src="../assets/flag-en.webp" alt="" width="34" height="34"><span>English</span></button>
+      <button class="lang-b" type="button" data-lang="fr" aria-current="false" aria-label="Français" title="Français" href="../fr/thank-you.html"><img src="../assets/flag-fr.webp" alt="" width="34" height="34"><span>Français</span></button>
+      <button class="lang-b" type="button" data-lang="es" aria-current="false" aria-label="Español" title="Español" href="../es/thank-you.html"><img src="../assets/flag-es.webp" alt="" width="34" height="34"><span>Español</span></button>
+      <button class="lang-b" type="button" data-lang="de" aria-current="false" aria-label="Deutsch" title="Deutsch" href="../de/thank-you.html"><img src="../assets/flag-de.webp" alt="" width="34" height="34"><span>Deutsch</span></button>
+      <button class="lang-b" type="button" data-lang="ar" aria-current="false" aria-label="العربية" title="العربية" href="../ar/thank-you.html"><img src="../assets/flag-ar.webp" alt="" width="34" height="34"><span>العربية</span></button>
+      <button class="lang-b" type="button" data-lang="nl" aria-current="true" aria-label="Nederlands" title="Nederlands" href="../nl/thank-you.html"><img src="../assets/flag-nl.webp" alt="" width="34" height="34"><span>Nederlands</span></button>
     </div>
   </div>
 </div>
