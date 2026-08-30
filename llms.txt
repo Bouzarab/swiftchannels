@@ -1,6 +1,6 @@
-# Swift Channels
+# SwiftChannels
 
-> Swift Channels resells access to a streaming television service carrying
+> SwiftChannels resells access to a streaming television service carrying
 > 8,000+ live channels and 50,000+ films and series, with a programme guide
 > and 7-day catch-up. One line, up to 4 simultaneous devices. Based in
 > Morocco, selling to households worldwide. Site available in English,

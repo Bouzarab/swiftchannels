@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   Swift Channels — legal page translations
+   SwiftChannels — legal page translations
    ───────────────────────────────────────────────────────────────────
    Loaded by legal.html only, after assets/i18n.js, and merged into the
    main table. Keys are the ENGLISH text exactly as it appears on the
@@ -16,8 +16,8 @@ fr: {
   'Inviting a friend': 'Parrainer un ami',
   'If someone orders a 12-month subscription and enters your order reference in the “Invited by” box, we add 30 days to their subscription and 30 days to yours once their payment is settled. The offer applies to 12-month orders only, the reference must be entered on the order itself, and there is no cash alternative. We may decline it where the same household is on both sides of the invitation, or where we believe it is being abused.':
     'Si quelqu’un commande un abonnement de 12 mois et saisit votre référence de commande dans la case « Parrainé par », nous ajoutons 30 jours à son abonnement et 30 jours au vôtre une fois son paiement réglé. L’offre ne vaut que pour les commandes de 12 mois, la référence doit être saisie sur la commande elle-même, et il n’existe pas d’équivalent en espèces. Nous pouvons la refuser lorsque le même foyer se trouve des deux côtés du parrainage, ou lorsque nous estimons qu’il en est fait un usage abusif.',
-  '__legal_title': 'Conditions, remboursements et confidentialité — Swift Channels',
-  '__legal_desc': 'Conditions de service, politique de remboursement et notice de confidentialité de Swift Channels.',
+  '__legal_title': 'Conditions, remboursements et confidentialité — SwiftChannels',
+  '__legal_desc': 'Conditions de service, politique de remboursement et notice de confidentialité de SwiftChannels.',
   '← Back to the site': '← Retour au site',
   'Terms, refunds and privacy': 'Conditions, remboursements et confidentialité',
   'Last updated 24 August 2026': 'Dernière mise à jour : 24 août 2026',
@@ -28,8 +28,8 @@ fr: {
   '3. Privacy notice': '3. Notice de confidentialité',
 
   'Who we are and what we sell': 'Qui nous sommes et ce que nous vendons',
-  'Swift Channels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.':
-    'Swift Channels revend l’accès à un service de télévision en streaming exploité par une plateforme tierce. Nous vous fournissons des identifiants de connexion à cette plateforme ; nous ne possédons, ne produisons, ne concédons sous licence ni ne contrôlons les contenus qu’elle diffuse.',
+  'SwiftChannels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.':
+    'SwiftChannels revend l’accès à un service de télévision en streaming exploité par une plateforme tierce. Nous vous fournissons des identifiants de connexion à cette plateforme ; nous ne possédons, ne produisons, ne concédons sous licence ni ne contrôlons les contenus qu’elle diffuse.',
   'What you are buying': 'Ce que vous achetez',
   'A subscription is access to the platform for a fixed period — 30 days or 12 months — for the number of simultaneous connections you selected. Channel line-ups, on-demand catalogues and programme guides are set by the platform operator and can change at any time without notice. We cannot guarantee that any particular channel, match, film or series will be available for the whole of your subscription.':
     'Un abonnement donne accès à la plateforme pour une durée déterminée — 30 jours ou 12 mois — pour le nombre de connexions simultanées que vous avez choisi. Les grilles de chaînes, les catalogues à la demande et les guides de programmes sont définis par l’opérateur de la plateforme et peuvent changer à tout moment sans préavis. Nous ne pouvons garantir qu’une chaîne, un match, un film ou une série en particulier restera disponible pendant toute la durée de votre abonnement.',
@@ -106,7 +106,7 @@ fr: {
     'La plupart des pannes se règlent en quelques minutes. Écrivez-nous d’abord par e-mail — remplacer une ligne, réinitialiser des identifiants ou reconfigurer une application résout la grande majorité des problèmes, et nous ajoutons le temps perdu à votre abonnement.',
 
   'Who controls your data': 'Qui est responsable de vos données',
-  'Swift Channels. Contact:': 'Swift Channels. Contact :',
+  'SwiftChannels. Contact:': 'SwiftChannels. Contact :',
   'Worth knowing': 'Bon à savoir',
   'This website has no database, no accounts and no tracking. The order form runs entirely in your browser and builds a message for you to send us. Nothing is submitted to a server here.':
     'Ce site n’a ni base de données, ni comptes, ni traçage. Le formulaire de commande fonctionne entièrement dans votre navigateur et compose un message que vous nous envoyez vous-même. Rien n’est transmis à un serveur ici.',
@@ -165,8 +165,8 @@ es: {
   'Inviting a friend': 'Invitar a un amigo',
   'If someone orders a 12-month subscription and enters your order reference in the “Invited by” box, we add 30 days to their subscription and 30 days to yours once their payment is settled. The offer applies to 12-month orders only, the reference must be entered on the order itself, and there is no cash alternative. We may decline it where the same household is on both sides of the invitation, or where we believe it is being abused.':
     'Si alguien pide una suscripción de 12 meses y escribe tu referencia de pedido en la casilla «Invitado por», añadimos 30 días a su suscripción y 30 días a la tuya en cuanto su pago quede liquidado. La oferta solo se aplica a pedidos de 12 meses, la referencia debe indicarse en el propio pedido y no existe alternativa en efectivo. Podemos rechazarla cuando el mismo hogar esté en los dos lados de la invitación, o cuando creamos que se está abusando de ella.',
-  '__legal_title': 'Términos, reembolsos y privacidad — Swift Channels',
-  '__legal_desc': 'Términos del servicio, política de reembolso y aviso de privacidad de Swift Channels.',
+  '__legal_title': 'Términos, reembolsos y privacidad — SwiftChannels',
+  '__legal_desc': 'Términos del servicio, política de reembolso y aviso de privacidad de SwiftChannels.',
   '← Back to the site': '← Volver al sitio',
   'Terms, refunds and privacy': 'Términos, reembolsos y privacidad',
   'Last updated 24 August 2026': 'Última actualización: 24 de agosto de 2026',
@@ -177,8 +177,8 @@ es: {
   '3. Privacy notice': '3. Aviso de privacidad',
 
   'Who we are and what we sell': 'Quiénes somos y qué vendemos',
-  'Swift Channels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.':
-    'Swift Channels revende el acceso a un servicio de televisión en streaming operado por una plataforma de terceros. Te facilitamos los datos de acceso a esa plataforma; no somos propietarios, ni producimos, ni licenciamos ni controlamos los contenidos que ofrece.',
+  'SwiftChannels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.':
+    'SwiftChannels revende el acceso a un servicio de televisión en streaming operado por una plataforma de terceros. Te facilitamos los datos de acceso a esa plataforma; no somos propietarios, ni producimos, ni licenciamos ni controlamos los contenidos que ofrece.',
   'What you are buying': 'Qué estás contratando',
   'A subscription is access to the platform for a fixed period — 30 days or 12 months — for the number of simultaneous connections you selected. Channel line-ups, on-demand catalogues and programme guides are set by the platform operator and can change at any time without notice. We cannot guarantee that any particular channel, match, film or series will be available for the whole of your subscription.':
     'Una suscripción es el acceso a la plataforma durante un periodo determinado — 30 días o 12 meses — para el número de conexiones simultáneas que elegiste. Las listas de canales, los catálogos a la carta y las guías de programación las fija el operador de la plataforma y pueden cambiar en cualquier momento sin aviso. No podemos garantizar que un canal, partido, película o serie concreta esté disponible durante toda tu suscripción.',
@@ -255,7 +255,7 @@ es: {
     'La mayoría de fallos se arreglan en minutos. Escríbenos primero por correo — sustituir una línea, restablecer los accesos o reconfigurar una app resuelve la gran mayoría de incidencias, y añadimos el tiempo perdido a tu suscripción.',
 
   'Who controls your data': 'Quién controla tus datos',
-  'Swift Channels. Contact:': 'Swift Channels. Contacto:',
+  'SwiftChannels. Contact:': 'SwiftChannels. Contacto:',
   'Worth knowing': 'Conviene saberlo',
   'This website has no database, no accounts and no tracking. The order form runs entirely in your browser and builds a message for you to send us. Nothing is submitted to a server here.':
     'Esta web no tiene base de datos, ni cuentas, ni seguimiento. El formulario funciona enteramente en tu navegador y compone un mensaje que nos envías tú. Aquí no se envía nada a ningún servidor.',
@@ -314,8 +314,8 @@ de: {
   'Inviting a friend': 'Einen Freund einladen',
   'If someone orders a 12-month subscription and enters your order reference in the “Invited by” box, we add 30 days to their subscription and 30 days to yours once their payment is settled. The offer applies to 12-month orders only, the reference must be entered on the order itself, and there is no cash alternative. We may decline it where the same household is on both sides of the invitation, or where we believe it is being abused.':
     'Bestellt jemand ein 12-Monats-Abo und trägt Ihre Bestellreferenz in das Feld „Eingeladen von“ ein, schreiben wir seinem Abo 30 Tage gut und Ihrem 30 Tage, sobald seine Zahlung eingegangen ist. Das Angebot gilt nur für 12-Monats-Bestellungen, die Referenz muss auf der Bestellung selbst angegeben werden, und eine Barauszahlung ist ausgeschlossen. Wir können es ablehnen, wenn derselbe Haushalt auf beiden Seiten der Einladung steht oder wenn wir einen Missbrauch annehmen.',
-  '__legal_title': 'AGB, Erstattungen und Datenschutz — Swift Channels',
-  '__legal_desc': 'Allgemeine Geschäftsbedingungen, Erstattungsrichtlinie und Datenschutzhinweise von Swift Channels.',
+  '__legal_title': 'AGB, Erstattungen und Datenschutz — SwiftChannels',
+  '__legal_desc': 'Allgemeine Geschäftsbedingungen, Erstattungsrichtlinie und Datenschutzhinweise von SwiftChannels.',
   '← Back to the site': '← Zurück zur Website',
   'Terms, refunds and privacy': 'AGB, Erstattungen und Datenschutz',
   'Last updated 24 August 2026': 'Zuletzt aktualisiert: 24. August 2026',
@@ -326,8 +326,8 @@ de: {
   '3. Privacy notice': '3. Datenschutzhinweise',
 
   'Who we are and what we sell': 'Wer wir sind und was wir verkaufen',
-  'Swift Channels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.':
-    'Swift Channels vertreibt den Zugang zu einem Streaming-Fernsehdienst, der von einer Plattform eines Drittanbieters betrieben wird. Wir stellen Ihnen Zugangsdaten für diese Plattform bereit; wir besitzen, produzieren, lizenzieren und kontrollieren die dort verfügbaren Inhalte nicht.',
+  'SwiftChannels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.':
+    'SwiftChannels vertreibt den Zugang zu einem Streaming-Fernsehdienst, der von einer Plattform eines Drittanbieters betrieben wird. Wir stellen Ihnen Zugangsdaten für diese Plattform bereit; wir besitzen, produzieren, lizenzieren und kontrollieren die dort verfügbaren Inhalte nicht.',
   'What you are buying': 'Was Sie erwerben',
   'A subscription is access to the platform for a fixed period — 30 days or 12 months — for the number of simultaneous connections you selected. Channel line-ups, on-demand catalogues and programme guides are set by the platform operator and can change at any time without notice. We cannot guarantee that any particular channel, match, film or series will be available for the whole of your subscription.':
     'Ein Abonnement ist der Zugang zur Plattform für einen festen Zeitraum — 30 Tage oder 12 Monate — für die von Ihnen gewählte Zahl gleichzeitiger Verbindungen. Senderlisten, Abrufkataloge und Programmführer werden vom Plattformbetreiber festgelegt und können sich jederzeit ohne Ankündigung ändern. Wir können nicht garantieren, dass ein bestimmter Sender, ein Spiel, ein Film oder eine Serie während der gesamten Laufzeit verfügbar bleibt.',
@@ -404,7 +404,7 @@ de: {
     'Die meisten Störungen sind in Minuten behoben. Schreiben Sie uns zuerst per E-Mail — eine neue Leitung, zurückgesetzte Zugangsdaten oder eine neu eingerichtete App lösen die große Mehrheit der Fälle, und verlorene Zeit schreiben wir Ihrem Abo gut.',
 
   'Who controls your data': 'Wer über Ihre Daten entscheidet',
-  'Swift Channels. Contact:': 'Swift Channels. Kontakt:',
+  'SwiftChannels. Contact:': 'SwiftChannels. Kontakt:',
   'Worth knowing': 'Gut zu wissen',
   'This website has no database, no accounts and no tracking. The order form runs entirely in your browser and builds a message for you to send us. Nothing is submitted to a server here.':
     'Diese Website hat keine Datenbank, keine Konten und kein Tracking. Das Bestellformular läuft vollständig in Ihrem Browser und erstellt eine Nachricht, die Sie uns selbst senden. Hier wird nichts an einen Server übermittelt.',
@@ -475,7 +475,7 @@ ar: {
   '3. Privacy notice': '3. إشعار الخصوصية',
 
   'Who we are and what we sell': 'من نحن وما الذي نبيعه',
-  'Swift Channels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.':
+  'SwiftChannels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.':
     'تعيد سويفت تشانلز بيع الوصول إلى خدمة تلفزيون بالبث تديرها منصة تابعة لطرف ثالث. نحن نزوّدك ببيانات الدخول إلى تلك المنصة؛ ولا نملك المحتوى الذي تبثه ولا ننتجه ولا نرخّصه ولا نتحكم فيه.',
   'What you are buying': 'ما الذي تشتريه',
   'A subscription is access to the platform for a fixed period — 30 days or 12 months — for the number of simultaneous connections you selected. Channel line-ups, on-demand catalogues and programme guides are set by the platform operator and can change at any time without notice. We cannot guarantee that any particular channel, match, film or series will be available for the whole of your subscription.':
@@ -553,7 +553,7 @@ ar: {
     'أغلب الأعطال تُصلَح في دقائق. راسلنا بالبريد الإلكتروني أولًا — فاستبدال خط أو إعادة ضبط بيانات الدخول أو إعادة إعداد التطبيق يحل الغالبية العظمى من المشاكل، ونضيف أي وقت ضائع إلى اشتراكك.',
 
   'Who controls your data': 'من يتحكم في بياناتك',
-  'Swift Channels. Contact:': 'سويفت تشانلز. للتواصل:',
+  'SwiftChannels. Contact:': 'سويفت تشانلز. للتواصل:',
   'Worth knowing': 'من المفيد معرفته',
   'This website has no database, no accounts and no tracking. The order form runs entirely in your browser and builds a message for you to send us. Nothing is submitted to a server here.':
     'هذا الموقع بلا قاعدة بيانات وبلا حسابات وبلا تتبّع. ونموذج الطلب يعمل بالكامل داخل متصفحك ويكوّن رسالة ترسلها أنت إلينا. ولا يُرسَل شيء إلى أي خادم هنا.',
@@ -612,9 +612,9 @@ nl: {
   'Inviting a friend': 'Een vriend uitnodigen',
   'If someone orders a 12-month subscription and enters your order reference in the “Invited by” box, we add 30 days to their subscription and 30 days to yours once their payment is settled. The offer applies to 12-month orders only, the reference must be entered on the order itself, and there is no cash alternative. We may decline it where the same household is on both sides of the invitation, or where we believe it is being abused.':
     'Als iemand een abonnement van 12 maanden bestelt en uw bestelreferentie invult in het vakje “Uitgenodigd door”, tellen wij 30 dagen bij zijn abonnement op en 30 dagen bij het uwe zodra zijn betaling rond is. De actie geldt alleen voor bestellingen van 12 maanden, de referentie moet op de bestelling zelf worden ingevuld en uitbetaling in geld is niet mogelijk. Wij kunnen de actie weigeren wanneer hetzelfde huishouden aan beide kanten van de uitnodiging staat, of wanneer wij denken dat er misbruik van wordt gemaakt.',
-  '__legal_title': 'Voorwaarden, terugbetalingen en privacy — Swift Channels',
+  '__legal_title': 'Voorwaarden, terugbetalingen en privacy — SwiftChannels',
   '__legal_desc':
-    'Servicevoorwaarden, terugbetalingsbeleid en privacyverklaring van Swift Channels.',
+    'Servicevoorwaarden, terugbetalingsbeleid en privacyverklaring van SwiftChannels.',
   '← Back to the site': '← Terug naar de site',
   'Terms, refunds and privacy': 'Voorwaarden, terugbetalingen en privacy',
   'Last updated 24 August 2026': 'Laatst bijgewerkt op 24 augustus 2026',
@@ -624,8 +624,8 @@ nl: {
   '2. Refund policy': '2. Terugbetalingsbeleid',
   '3. Privacy notice': '3. Privacyverklaring',
   'Who we are and what we sell': 'Wie wij zijn en wat wij verkopen',
-  'Swift Channels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.':
-    'Swift Channels verkoopt toegang door tot een streamingtelevisiedienst die door een extern platform wordt geëxploiteerd. Wij leveren u inloggegevens voor dat platform; wij bezitten, produceren, licentiëren of beheren de inhoud ervan niet.',
+  'SwiftChannels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.':
+    'SwiftChannels verkoopt toegang door tot een streamingtelevisiedienst die door een extern platform wordt geëxploiteerd. Wij leveren u inloggegevens voor dat platform; wij bezitten, produceren, licentiëren of beheren de inhoud ervan niet.',
   'What you are buying': 'Wat u koopt',
   'A subscription is access to the platform for a fixed period — 30 days or 12 months — for the number of simultaneous connections you selected. Channel line-ups, on-demand catalogues and programme guides are set by the platform operator and can change at any time without notice. We cannot guarantee that any particular channel, match, film or series will be available for the whole of your subscription.':
     'Een abonnement is toegang tot het platform voor een vaste periode — 30 dagen of 12 maanden — voor het aantal gelijktijdige verbindingen dat u hebt gekozen. Het zenderaanbod, de on-demandcatalogus en de programmagidsen worden bepaald door de platformexploitant en kunnen op elk moment zonder aankondiging wijzigen. Wij kunnen niet garanderen dat een bepaalde zender, wedstrijd, film of serie gedurende uw hele abonnement beschikbaar blijft.',
@@ -700,7 +700,7 @@ nl: {
   'Most faults are fixable in minutes. Email us first — replacing a line, resetting credentials or reconfiguring an app resolves the large majority of issues, and we add any lost time to your subscription.':
     'De meeste storingen zijn in enkele minuten verholpen. Mail ons eerst — een lijn vervangen, inloggegevens opnieuw instellen of een app opnieuw configureren lost de grote meerderheid van de problemen op, en verloren tijd tellen wij bij uw abonnement op.',
   'Who controls your data': 'Wie uw gegevens beheert',
-  'Swift Channels. Contact:': 'Swift Channels. Contact:',
+  'SwiftChannels. Contact:': 'SwiftChannels. Contact:',
   'Worth knowing': 'Goed om te weten',
   'This website has no database, no accounts and no tracking. The order form runs entirely in your browser and builds a message for you to send us. Nothing is submitted to a server here.':
     'Deze website heeft geen database, geen accounts en geen tracking. Het bestelformulier draait volledig in uw browser en stelt een bericht op dat u ons stuurt. Er wordt hier niets naar een server verzonden.',

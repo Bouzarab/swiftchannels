@@ -2,8 +2,8 @@
 <html lang="nl" dir="ltr"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Voorwaarden, terugbetalingen en privacy — Swift Channels</title>
-<meta name="description" content="Servicevoorwaarden, terugbetalingsbeleid en privacyverklaring van Swift Channels.">
+<title>Voorwaarden, terugbetalingen en privacy — SwiftChannels</title>
+<meta name="description" content="Servicevoorwaarden, terugbetalingsbeleid en privacyverklaring van SwiftChannels.">
 
 
 
@@ -99,6 +99,7 @@ html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] .brand-
   background:linear-gradient(135deg,var(--blue),var(--cyan))}
 .brand-mark::after{content:'';width:10px;height:10px;border-radius:50%;background:#fff}
 .brand-name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;color:var(--ice)}
+.brand-hi{color:var(--blue-hi)}
 .brand:hover{text-decoration:none}
 .top a.back{font-size:14px;color:var(--muted)}
 
@@ -151,7 +152,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
 <header class="top">
   <div class="top-in">
     <a class="brand" href="./">
-      <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
+      <span class="brand-mark"></span><span class="brand-name">Swift<span class="brand-hi">Channels</span></span>
     </a>
     <a class="back" href="./">← Terug naar de site</a>
     <div class="lang" id="lang">
@@ -174,7 +175,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
 
   <div class="who">
     <dl>
-      <dt>Handelsnaam</dt><dd>Swift Channels</dd>
+      <dt>Handelsnaam</dt><dd>SwiftChannels</dd>
       <!-- TODO: restore once the company is registered:
       <dt>Operated by</dt><dd>COMPANY NAME</dd>
       <dt>Registered in</dt><dd>JURISDICTION · REGISTRATION NUMBER</dd> -->
@@ -194,7 +195,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
 
     <h3>Wie wij zijn en wat wij verkopen</h3>
     <!-- TODO: name the operating company in this paragraph once it is registered. -->
-    <p>Swift Channels verkoopt toegang door tot een streamingtelevisiedienst die door een extern platform wordt geëxploiteerd. Wij leveren u inloggegevens voor dat platform; wij bezitten, produceren, licentiëren of beheren de inhoud ervan niet.</p>
+    <p>SwiftChannels verkoopt toegang door tot een streamingtelevisiedienst die door een extern platform wordt geëxploiteerd. Wij leveren u inloggegevens voor dat platform; wij bezitten, produceren, licentiëren of beheren de inhoud ervan niet.</p>
 
     <h3>Wat u koopt</h3>
     <p>Een abonnement is toegang tot het platform voor een vaste periode — 30 dagen of 12 maanden — voor het aantal gelijktijdige verbindingen dat u hebt gekozen. Het zenderaanbod, de on-demandcatalogus en de programmagidsen worden bepaald door de platformexploitant en kunnen op elk moment zonder aankondiging wijzigen. Wij kunnen niet garanderen dat een bepaalde zender, wedstrijd, film of serie gedurende uw hele abonnement beschikbaar blijft.</p>
@@ -280,7 +281,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
 
     <h3>Wie uw gegevens beheert</h3>
     <!-- TODO: the data controller must be a named legal entity before EU customers are served. -->
-    <p>Swift Channels. Contact: <a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a>.</p>
+    <p>SwiftChannels. Contact: <a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a>.</p>
 
     <div class="callout">
       <span class="tag">Goed om te weten</span>
@@ -332,7 +333,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
 
 <footer>
   <div class="foot-in">
-    <span>© <span id="yr">2026</span> Swift Channels</span>
+    <span>© <span id="yr">2026</span> SwiftChannels</span>
     <span><a href="./">swiftchannels.com</a></span>
   </div>
 </footer>
@@ -341,7 +342,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
 <script src="../assets/legal-i18n.js"></script>
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
-window.i18n.boot({ titleKey: '__legal_title', descKey: '__legal_desc', lang: 'en' });
+window.i18n.boot({ skip: '.brand-name', titleKey: '__legal_title', descKey: '__legal_desc', lang: 'en' });
 </script>
 
 

@@ -6,7 +6,7 @@
 <meta name="description" content="اشتراك IPTV شهري أو سنوي: أكثر من 8000 قناة و50000 فيلم ومسلسل. يعمل مع IPTV Smarters وTiviMate وSmart IPTV على فاير ستيك والتلفزيون الذكي والهاتف. تجربة مجانية 24 ساعة.">
 <!-- link preview (WhatsApp, Facebook, X, iMessage) -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Swift Channels">
+<meta property="og:site_name" content="SwiftChannels">
 <meta property="og:url" content="https://swiftchannels.com/ar/">
 <meta property="og:title" content="اشتراك IPTV — أكثر من 8000 قناة | سويفت تشانلز">
 <meta property="og:description" content="اشتراك IPTV شهري أو سنوي: أكثر من 8000 قناة و50000 فيلم ومسلسل. يعمل مع IPTV Smarters وTiviMate وSmart IPTV على فاير ستيك والتلفزيون الذكي والهاتف. تجربة مجانية 24 ساعة.">
@@ -146,6 +146,7 @@ h1,h2,h3,.dsp{font-family:var(--display);letter-spacing:-.03em;line-height:1.03;
 .brand-mark::after{content:'';width:11px;height:11px;border-radius:50%;
   background:#fff;box-shadow:0 0 12px #fff}
 .brand-name{font-family:var(--display);font-weight:800;font-size:17.5px;letter-spacing:-.02em}
+.brand-hi{color:var(--blue-hi)}
 .nav-links{display:flex;gap:24px}
 .nav-links a{font-size:14px;white-space:nowrap;color:var(--muted);position:relative;transition:color .25s}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:1.5px;width:0;
@@ -940,7 +941,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
   <div class="nav-in">
     <a class="brand" href="#top">
       <span class="brand-mark"></span>
-      <span class="brand-name" data-brand="">Swift Channels</span>
+      <span class="brand-name">Swift<span class="brand-hi">Channels</span></span>
     </a>
     <nav class="nav-links">
       <a href="#plans">الباقات</a>
@@ -1430,7 +1431,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     <div class="foot-grid">
       <div>
         <a class="brand" href="#top" style="margin-bottom:16px">
-          <span class="brand-mark"></span><span class="brand-name" data-brand="">Swift Channels</span>
+          <span class="brand-mark"></span><span class="brand-name">Swift<span class="brand-hi">Channels</span></span>
         </a>
         <p style="max-width:36ch">اشتراكات نفتحها وندعمها بأنفسنا، وتُقدَّم عبر منصة بث مرخّصة.</p>
       </div>
@@ -1451,7 +1452,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     <div class="legal" data-i18n-html="__footlegal">نحن نعيد بيع الوصول إلى منصة بث تابعة لطرف ثالث. المحتوى مرخّص ويُقدَّم من مشغّل تلك المنصة. الاشتراكات مخصّصة للاستعمال المنزلي الخاص؛ ولا يُسمح بإعادة التوزيع أو العرض العمومي.<br><a href="legal.html">شروط الخدمة · سياسة الاسترجاع · إشعار الخصوصية</a></div>
 
     <div class="foot-bottom">
-      <span>© <span id="yr">2026</span> <span data-brand-plain="">Swift Channels</span></span>
+      <span>© <span id="yr">2026</span> <span data-brand-plain="">SwiftChannels</span></span>
     </div>
   </div>
 </footer>
@@ -1492,7 +1493,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
    1. CONFIG — edit this block only.
    ═══════════════════════════════════════════════════════════ */
 const CONFIG = {
-  brand:    'Swift Channels',
+  brand:    'SwiftChannels',
 
   whatsapp: '',                    // EMPTY = WhatsApp off. See SWITCHING-BACK.md
   email:    'contact@swiftchannels.com',
@@ -1562,7 +1563,7 @@ const tf = (s, v) => window.i18n.tf(s, v);
 Object.defineProperty(window, 'LANG', { get: () => window.i18n.lang });
 
 /* ═══════════════ 2. Brand ═══════════════ */
-document.querySelectorAll('[data-brand],[data-brand-plain]').forEach(e => e.textContent = CONFIG.brand);
+document.querySelectorAll('[data-brand-plain]').forEach(e => e.textContent = CONFIG.brand);
 document.getElementById('yr').textContent = new Date().getFullYear();
 
 const waBase = CONFIG.whatsapp ? 'https://wa.me/' + CONFIG.whatsapp : '';
@@ -2135,9 +2136,9 @@ function renderAsk(){
   });
 
   $('askWa').href = waBase
-    ? waBase + '?text=' + encodeURIComponent(t('Hello — I have a question about Swift Channels.'))
+    ? waBase + '?text=' + encodeURIComponent(t('Hello — I have a question about SwiftChannels.'))
     : 'mailto:' + CONFIG.email + '?subject=' +
-      encodeURIComponent(t('Hello — I have a question about Swift Channels.'));
+      encodeURIComponent(t('Hello — I have a question about SwiftChannels.'));
 }
 
 function askOpen(open){
@@ -2295,7 +2296,7 @@ syncPlanUI();
 })();
 
 window.i18n.boot({
-  skip: '#marq,#planCards,#faqList,#plan,#pay',
+  skip: '#marq,#planCards,#faqList,#plan,#pay,.brand-name',
   lang: 'en',
   onApply: function(){
     renderMarquee();

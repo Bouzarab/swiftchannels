@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IPTV setup guide — Fire Stick, Smart TV, Smarters | Swift Channels</title>
-<meta name="description" content="Set up Swift Channels on a Samsung or LG TV, Firestick, Android, iPhone, Apple TV, Windows or Mac. Pick your device, follow four steps.">
+<title>IPTV setup guide — Fire Stick, Smart TV, Smarters | SwiftChannels</title>
+<meta name="description" content="Set up SwiftChannels on a Samsung or LG TV, Firestick, Android, iPhone, Apple TV, Windows or Mac. Pick your device, follow four steps.">
 <link rel="canonical" href="https://swiftchannels.com/install.html">
 <link rel="alternate" hreflang="en" href="https://swiftchannels.com/install.html">
 <link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/install.html">
@@ -13,9 +13,9 @@
 <link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/install.html"><link rel="alternate" hreflang="nl" href="https://swiftchannels.com/nl/install.html">
 <link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/install.html">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Swift Channels">
+<meta property="og:site_name" content="SwiftChannels">
 <meta property="og:url" content="https://swiftchannels.com/install.html">
-<meta property="og:title" content="Installation guide — Swift Channels">
+<meta property="og:title" content="Installation guide — SwiftChannels">
 <meta property="og:description" content="Pick your device, follow four steps.">
 <meta property="og:image" content="https://swiftchannels.com/assets/og-card.jpg">
 <meta property="og:locale" content="en_GB">
@@ -74,6 +74,7 @@ img,svg{display:block;max-width:100%}
   box-shadow:0 0 12px #fff}
 .brand-name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;
   white-space:nowrap}
+.brand-hi{color:var(--blue-hi)}
 .back{font-size:14px;color:var(--muted)}
 .back:hover{color:var(--ice)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
@@ -257,7 +258,7 @@ html[dir="rtl"] .chip{direction:ltr;unicode-bidi:isolate}
 <header class="top">
   <div class="top-in">
     <a class="brand" href="./">
-      <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
+      <span class="brand-mark"></span><span class="brand-name">Swift<span class="brand-hi">Channels</span></span>
     </a>
     <a class="back" href="./">← Back to the site</a>
     <div class="lang" id="lang">
@@ -508,7 +509,7 @@ html[dir="rtl"] .chip{direction:ltr;unicode-bidi:isolate}
 </div>
 
 <footer>
-  <span>© <span id="yr"></span> Swift Channels · <span>Setup help is included with every plan</span></span>
+  <span>© <span id="yr"></span> SwiftChannels · <span>Setup help is included with every plan</span></span>
   <span><a href="./">swiftchannels.com</a> · <a href="channels.html">Channels</a> · <a href="legal.html">Terms &amp; privacy</a></span>
 </footer>
 
@@ -555,7 +556,7 @@ html[dir="rtl"] .chip{direction:ltr;unicode-bidi:isolate}
     a.href = 'mailto:contact@swiftchannels.com');
 
   window.i18n.boot({
-    skip: '#yr',
+    skip: '#yr,.brand-name',
     titleKey: '__in_title',
     descKey: '__in_desc',
     lang: 'en'

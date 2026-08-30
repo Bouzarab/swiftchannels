@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   Swift Channels — channel-list page translations
+   SwiftChannels — channel-list page translations
    ───────────────────────────────────────────────────────────────────
    Loaded by channels.html only, after assets/i18n.js, and merged into
    the main table. Keys are the ENGLISH text as it appears on the page.
@@ -27,8 +27,8 @@ fr: {
     'À quel point cette liste est à jour',
   'Line-ups are set by the platform operator, not by us, so channels are added and removed without notice. If a specific channel or a particular match matters to you, ask us before you order, or open the free 24-hour test and check it on your own television first.':
     'Les bouquets sont définis par l’opérateur de la plateforme, pas par nous : des chaînes sont ajoutées et retirées sans préavis. Si une chaîne précise ou un match particulier compte pour vous, demandez-nous avant de commander, ou ouvrez le test gratuit de 24 heures et vérifiez-le d’abord sur votre propre téléviseur.',
-  '__ch_title': 'Liste des chaînes IPTV — 8 000+ chaînes par pays | Swift Channels',
-  '__ch_desc': 'Toutes les chaînes de Swift Channels — plus de 8 000 chaînes en direct dans 54 pays, avec recherche par nom ou par pays.',
+  '__ch_title': 'Liste des chaînes IPTV — 8 000+ chaînes par pays | SwiftChannels',
+  '__ch_desc': 'Toutes les chaînes de SwiftChannels — plus de 8 000 chaînes en direct dans 54 pays, avec recherche par nom ou par pays.',
   '__ch_h1': 'Toutes les chaînes,<br>au <span class="grad">même endroit</span>.',
   'Channel list': 'Liste des chaînes',
   'Nothing matches that. Try a shorter word — or email us.':
@@ -86,8 +86,8 @@ es: {
     'Hasta qué punto está actualizada',
   'Line-ups are set by the platform operator, not by us, so channels are added and removed without notice. If a specific channel or a particular match matters to you, ask us before you order, or open the free 24-hour test and check it on your own television first.':
     'Las parrillas las fija el operador de la plataforma, no nosotros, así que se añaden y se retiran canales sin aviso. Si te importa un canal concreto o un partido en particular, pregúntanos antes de pedir, o abre la prueba gratuita de 24 horas y compruébalo primero en tu propio televisor.',
-  '__ch_title': 'Lista de canales IPTV — más de 8.000 por país | Swift Channels',
-  '__ch_desc': 'Todos los canales de Swift Channels — más de 8.000 canales en directo de 54 países, con búsqueda por nombre o país.',
+  '__ch_title': 'Lista de canales IPTV — más de 8.000 por país | SwiftChannels',
+  '__ch_desc': 'Todos los canales de SwiftChannels — más de 8.000 canales en directo de 54 países, con búsqueda por nombre o país.',
   '__ch_h1': 'Todos los canales,<br>en <span class="grad">un solo sitio</span>.',
   'Channel list': 'Lista de canales',
   'Nothing matches that. Try a shorter word — or email us.':
@@ -144,8 +144,8 @@ de: {
     'Wie aktuell diese Liste ist',
   'Line-ups are set by the platform operator, not by us, so channels are added and removed without notice. If a specific channel or a particular match matters to you, ask us before you order, or open the free 24-hour test and check it on your own television first.':
     'Die Programmzusammenstellung legt der Plattformbetreiber fest, nicht wir — Sender kommen hinzu und fallen ohne Ankündigung weg. Wenn Ihnen ein bestimmter Sender oder ein bestimmtes Spiel wichtig ist, fragen Sie uns vor der Bestellung, oder starten Sie den kostenlosen 24-Stunden-Test und prüfen Sie es zuerst auf Ihrem eigenen Fernseher.',
-  '__ch_title': 'IPTV Senderliste — über 8.000 Sender nach Land | Swift Channels',
-  '__ch_desc': 'Alle Sender von Swift Channels — über 8.000 Live-Sender aus 54 Ländern, durchsuchbar nach Name oder Land.',
+  '__ch_title': 'IPTV Senderliste — über 8.000 Sender nach Land | SwiftChannels',
+  '__ch_desc': 'Alle Sender von SwiftChannels — über 8.000 Live-Sender aus 54 Ländern, durchsuchbar nach Name oder Land.',
   '__ch_h1': 'Alle Sender,<br>an <span class="grad">einem Ort</span>.',
   'Channel list': 'Senderliste',
   'Nothing matches that. Try a shorter word — or email us.':
@@ -263,9 +263,9 @@ nl: {
   'Setup guide': 'Installatiegids',
   'Channels': 'Zenders',
   '← Back to the site': '← Terug naar de site',
-  '__ch_title': 'IPTV zenderlijst — 8.000+ zenders per land | Swift Channels',
+  '__ch_title': 'IPTV zenderlijst — 8.000+ zenders per land | SwiftChannels',
   '__ch_desc':
-    'Alle zenders van Swift Channels — meer dan 8.000 live zenders uit 54 landen, doorzoekbaar op naam of land.',
+    'Alle zenders van SwiftChannels — meer dan 8.000 live zenders uit 54 landen, doorzoekbaar op naam of land.',
   '__ch_h1': 'Alle zenders,<br>op <span class="grad">één plek</span>.',
   'Channel list': 'Zenderlijst',
   'Nothing matches that. Try a shorter word — or email us.':

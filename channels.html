@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IPTV channel list — 8,000+ channels by country | Swift Channels</title>
-<meta name="description" content="Every channel on Swift Channels — over 8,000 live channels across 54 countries, searchable by name or country.">
+<title>IPTV channel list — 8,000+ channels by country | SwiftChannels</title>
+<meta name="description" content="Every channel on SwiftChannels — over 8,000 live channels across 54 countries, searchable by name or country.">
 <link rel="canonical" href="https://swiftchannels.com/channels.html">
 <link rel="alternate" hreflang="en" href="https://swiftchannels.com/channels.html">
 <link rel="alternate" hreflang="fr" href="https://swiftchannels.com/fr/channels.html">
@@ -13,9 +13,9 @@
 <link rel="alternate" hreflang="ar" href="https://swiftchannels.com/ar/channels.html"><link rel="alternate" hreflang="nl" href="https://swiftchannels.com/nl/channels.html">
 <link rel="alternate" hreflang="x-default" href="https://swiftchannels.com/channels.html">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Swift Channels">
+<meta property="og:site_name" content="SwiftChannels">
 <meta property="og:url" content="https://swiftchannels.com/channels.html">
-<meta property="og:title" content="Channel list — Swift Channels">
+<meta property="og:title" content="Channel list — SwiftChannels">
 <meta property="og:description" content="Over 8,000 live channels across 54 countries. Search by channel or browse by country.">
 <meta property="og:image" content="https://swiftchannels.com/assets/og-card.jpg">
 <meta property="og:locale" content="en_GB">
@@ -63,6 +63,7 @@ img,svg{display:block;max-width:100%}
   box-shadow:0 0 12px #fff}
 .brand-name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;
   white-space:nowrap}
+.brand-hi{color:var(--blue-hi)}
 .back{font-size:14px;color:var(--muted)}
 .back:hover{color:var(--ice)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
@@ -276,7 +277,7 @@ footer a:hover{color:var(--blue-hi)}
 <header class="top">
   <div class="top-in">
     <a class="brand" href="./">
-      <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
+      <span class="brand-mark"></span><span class="brand-name">Swift<span class="brand-hi">Channels</span></span>
     </a>
     <a class="back" href="./">← Back to the site</a>
     <div class="lang" id="lang">
@@ -374,7 +375,7 @@ footer a:hover{color:var(--blue-hi)}
 </section>
 
 <footer>
-  <span>© <span id="yr"></span> Swift Channels · <span>Line-ups are set by the platform and can change</span></span>
+  <span>© <span id="yr"></span> SwiftChannels · <span>Line-ups are set by the platform and can change</span></span>
   <span><a href="./">swiftchannels.com</a> · <a href="install.html">Setup guide</a> · <a href="legal.html">Terms &amp; privacy</a></span>
 </footer>
 
@@ -514,7 +515,7 @@ function runSearch(raw){
 }
 
 window.i18n.boot({
-  skip: '#rail,#chans,#paneTitle,#paneCount,#sChan,#sCtry',
+  skip: '#rail,#chans,#paneTitle,#paneCount,#sChan,#sCtry,.brand-name',
   titleKey: '__ch_title',
   descKey: '__ch_desc',
   lang: 'en',

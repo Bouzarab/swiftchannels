@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   Swift Channels — installation-guide translations
+   SwiftChannels — installation-guide translations
    ───────────────────────────────────────────────────────────────────
    Loaded by install.html only, after assets/i18n.js, and merged into
    the main table. Plain keys are the ENGLISH text as it appears on the
@@ -15,8 +15,8 @@
 
 /* ═════════════════════════ FRENCH ═════════════════════════ */
 fr: {
-  '__in_title': 'Installer l’IPTV — Firestick, TV Samsung, Smarters | Swift Channels',
-  '__in_desc': 'Installez Swift Channels sur TV Samsung ou LG, Firestick, Android, iPhone, Apple TV, Windows ou Mac. Choisissez votre appareil, suivez quatre étapes.',
+  '__in_title': 'Installer l’IPTV — Firestick, TV Samsung, Smarters | SwiftChannels',
+  '__in_desc': 'Installez SwiftChannels sur TV Samsung ou LG, Firestick, Android, iPhone, Apple TV, Windows ou Mac. Choisissez votre appareil, suivez quatre étapes.',
   '__in_h1': 'Choisissez votre appareil.<br><span class="grad">Quatre étapes.</span>',
   'Installation guide': 'Guide d’installation',
   'Email us': 'Écrivez-nous par e-mail',
@@ -113,8 +113,8 @@ fr: {
 
 /* ═════════════════════════ SPANISH ═════════════════════════ */
 es: {
-  '__in_title': 'Configurar IPTV — Firestick, Smart TV, Smarters | Swift Channels',
-  '__in_desc': 'Instala Swift Channels en una tele Samsung o LG, Firestick, Android, iPhone, Apple TV, Windows o Mac. Elige tu dispositivo y sigue cuatro pasos.',
+  '__in_title': 'Configurar IPTV — Firestick, Smart TV, Smarters | SwiftChannels',
+  '__in_desc': 'Instala SwiftChannels en una tele Samsung o LG, Firestick, Android, iPhone, Apple TV, Windows o Mac. Elige tu dispositivo y sigue cuatro pasos.',
   '__in_h1': 'Elige tu dispositivo.<br><span class="grad">Cuatro pasos.</span>',
   'Installation guide': 'Guía de instalación',
   'Email us': 'Escríbenos por correo',
@@ -211,8 +211,8 @@ es: {
 
 /* ═════════════════════════ GERMAN ═════════════════════════ */
 de: {
-  '__in_title': 'IPTV einrichten — Fire TV Stick, Smart TV, Smarters | Swift Channels',
-  '__in_desc': 'Swift Channels auf Samsung- oder LG-TV, Firestick, Android, iPhone, Apple TV, Windows oder Mac einrichten. Gerät wählen, vier Schritte folgen.',
+  '__in_title': 'IPTV einrichten — Fire TV Stick, Smart TV, Smarters | SwiftChannels',
+  '__in_desc': 'SwiftChannels auf Samsung- oder LG-TV, Firestick, Android, iPhone, Apple TV, Windows oder Mac einrichten. Gerät wählen, vier Schritte folgen.',
   '__in_h1': 'Gerät wählen.<br><span class="grad">Vier Schritte.</span>',
   'Installation guide': 'Installationsanleitung',
   'Email us': 'Schreiben Sie uns eine E-Mail',
@@ -411,9 +411,9 @@ nl: {
   'Samsung & LG TV': 'Samsung- & LG-tv',
   'Devices': 'Apparaten',
   'Your connection': 'Uw verbinding',
-  '__in_title': 'IPTV instellen — Firestick, Smart TV, Smarters | Swift Channels',
+  '__in_title': 'IPTV instellen — Firestick, Smart TV, Smarters | SwiftChannels',
   '__in_desc':
-    'Installeer Swift Channels op een Samsung- of LG-tv, Firestick, Android, iPhone, Apple TV, Windows of Mac. Kies uw apparaat, volg vier stappen.',
+    'Installeer SwiftChannels op een Samsung- of LG-tv, Firestick, Android, iPhone, Apple TV, Windows of Mac. Kies uw apparaat, volg vier stappen.',
   '__in_h1': 'Kies uw apparaat.<br><span class="grad">Vier stappen.</span>',
   'Installation guide': 'Installatiegids',
   'Email us': 'Mail ons',

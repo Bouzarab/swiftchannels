@@ -2,8 +2,8 @@
 <html lang="fr" dir="ltr"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Conditions, remboursements et confidentialité — Swift Channels</title>
-<meta name="description" content="Conditions de service, politique de remboursement et notice de confidentialité de Swift Channels.">
+<title>Conditions, remboursements et confidentialité — SwiftChannels</title>
+<meta name="description" content="Conditions de service, politique de remboursement et notice de confidentialité de SwiftChannels.">
 
 
 
@@ -99,6 +99,7 @@ html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] .brand-
   background:linear-gradient(135deg,var(--blue),var(--cyan))}
 .brand-mark::after{content:'';width:10px;height:10px;border-radius:50%;background:#fff}
 .brand-name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;color:var(--ice)}
+.brand-hi{color:var(--blue-hi)}
 .brand:hover{text-decoration:none}
 .top a.back{font-size:14px;color:var(--muted)}
 
@@ -151,7 +152,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
 <header class="top">
   <div class="top-in">
     <a class="brand" href="./">
-      <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
+      <span class="brand-mark"></span><span class="brand-name">Swift<span class="brand-hi">Channels</span></span>
     </a>
     <a class="back" href="./">← Retour au site</a>
     <div class="lang" id="lang">
@@ -174,7 +175,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
 
   <div class="who">
     <dl>
-      <dt>Nom commercial</dt><dd>Swift Channels</dd>
+      <dt>Nom commercial</dt><dd>SwiftChannels</dd>
       <!-- TODO: restore once the company is registered:
       <dt>Operated by</dt><dd>COMPANY NAME</dd>
       <dt>Registered in</dt><dd>JURISDICTION · REGISTRATION NUMBER</dd> -->
@@ -194,7 +195,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
 
     <h3>Qui nous sommes et ce que nous vendons</h3>
     <!-- TODO: name the operating company in this paragraph once it is registered. -->
-    <p>Swift Channels revend l’accès à un service de télévision en streaming exploité par une plateforme tierce. Nous vous fournissons des identifiants de connexion à cette plateforme ; nous ne possédons, ne produisons, ne concédons sous licence ni ne contrôlons les contenus qu’elle diffuse.</p>
+    <p>SwiftChannels revend l’accès à un service de télévision en streaming exploité par une plateforme tierce. Nous vous fournissons des identifiants de connexion à cette plateforme ; nous ne possédons, ne produisons, ne concédons sous licence ni ne contrôlons les contenus qu’elle diffuse.</p>
 
     <h3>Ce que vous achetez</h3>
     <p>Un abonnement donne accès à la plateforme pour une durée déterminée — 30 jours ou 12 mois — pour le nombre de connexions simultanées que vous avez choisi. Les grilles de chaînes, les catalogues à la demande et les guides de programmes sont définis par l’opérateur de la plateforme et peuvent changer à tout moment sans préavis. Nous ne pouvons garantir qu’une chaîne, un match, un film ou une série en particulier restera disponible pendant toute la durée de votre abonnement.</p>
@@ -280,7 +281,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
 
     <h3>Qui est responsable de vos données</h3>
     <!-- TODO: the data controller must be a named legal entity before EU customers are served. -->
-    <p>Swift Channels. Contact : <a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a>.</p>
+    <p>SwiftChannels. Contact : <a href="mailto:contact@swiftchannels.com">contact@swiftchannels.com</a>.</p>
 
     <div class="callout">
       <span class="tag">Bon à savoir</span>
@@ -332,7 +333,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
 
 <footer>
   <div class="foot-in">
-    <span>© <span id="yr">2026</span> Swift Channels</span>
+    <span>© <span id="yr">2026</span> SwiftChannels</span>
     <span><a href="./">swiftchannels.com</a></span>
   </div>
 </footer>
@@ -341,7 +342,7 @@ footer{border-top:1px solid var(--line-soft);padding:30px var(--pad) 46px}
 <script src="../assets/legal-i18n.js"></script>
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
-window.i18n.boot({ titleKey: '__legal_title', descKey: '__legal_desc', lang: 'en' });
+window.i18n.boot({ skip: '.brand-name', titleKey: '__legal_title', descKey: '__legal_desc', lang: 'en' });
 </script>
 
 

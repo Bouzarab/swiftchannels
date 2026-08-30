@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IPTV subscription — 8,000+ live channels | Swift Channels</title>
+<title>IPTV subscription — 8,000+ live channels | SwiftChannels</title>
 <meta name="description" content="IPTV subscription with 8,000+ live channels and 50,000+ films. Works with IPTV Smarters, TiviMate and Smart IPTV on Fire Stick, Smart TV and phone. Free 24-hour test.">
 <!-- link preview (WhatsApp, Facebook, X, iMessage) -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Swift Channels">
+<meta property="og:site_name" content="SwiftChannels">
 <meta property="og:url" content="https://swiftchannels.com/">
-<meta property="og:title" content="Swift Channels — every channel you watch, on one line">
+<meta property="og:title" content="SwiftChannels — every channel you watch, on one line">
 <meta property="og:description" content="Live sports, films and series in 4K. 15 € a month or 57 € a year — try the whole service free for 24 hours.">
 <meta property="og:image" content="https://swiftchannels.com/assets/og-card.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Swift Channels — every channel you watch, on one line">
+<meta name="twitter:title" content="SwiftChannels — every channel you watch, on one line">
 <meta name="twitter:description" content="Live sports, films and series in 4K. Free 24-hour test, no card needed.">
 <meta name="twitter:image" content="https://swiftchannels.com/assets/og-card.jpg">
 <meta name="theme-color" content="#050A18">
@@ -147,6 +147,7 @@ h1,h2,h3,.dsp{font-family:var(--display);letter-spacing:-.03em;line-height:1.03;
 .brand-mark::after{content:'';width:11px;height:11px;border-radius:50%;
   background:#fff;box-shadow:0 0 12px #fff}
 .brand-name{font-family:var(--display);font-weight:800;font-size:17.5px;letter-spacing:-.02em}
+.brand-hi{color:var(--blue-hi)}
 .nav-links{display:flex;gap:24px}
 .nav-links a{font-size:14px;white-space:nowrap;color:var(--muted);position:relative;transition:color .25s}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:1.5px;width:0;
@@ -941,7 +942,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
   <div class="nav-in">
     <a class="brand" href="#top">
       <span class="brand-mark"></span>
-      <span class="brand-name" data-brand>Swift Channels</span>
+      <span class="brand-name">Swift<span class="brand-hi">Channels</span></span>
     </a>
     <nav class="nav-links">
       <a href="#plans">Plans</a>
@@ -984,7 +985,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     </div>
 
     <div class="shot rv d2" id="shot">
-      <img src="assets/hero-wall.webp" alt="A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels" width="1000" height="1000" fetchpriority="high">
+      <img src="assets/hero-wall.webp" alt="A TV, laptop, tablet and phone streaming sport, films and series on SwiftChannels" width="1000" height="1000" fetchpriority="high">
       <div class="fcards" aria-hidden="true">
         <div class="fcard fc-q">
           <svg viewBox="0 0 24 24"><path d="M4 12.5l5.2 5.2L20 7"/></svg>
@@ -1416,7 +1417,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     <div class="foot-grid">
       <div>
         <a class="brand" href="#top" style="margin-bottom:16px">
-          <span class="brand-mark"></span><span class="brand-name" data-brand>Swift Channels</span>
+          <span class="brand-mark"></span><span class="brand-name">Swift<span class="brand-hi">Channels</span></span>
         </a>
         <p style="max-width:36ch">Subscriptions opened and supported by us, delivered on a licensed
            streaming platform.</p>
@@ -1444,7 +1445,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
     </div>
 
     <div class="foot-bottom">
-      <span>© <span id="yr"></span> <span data-brand-plain>Swift Channels</span></span>
+      <span>© <span id="yr"></span> <span data-brand-plain>SwiftChannels</span></span>
     </div>
   </div>
 </footer>
@@ -1486,7 +1487,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
    1. CONFIG — edit this block only.
    ═══════════════════════════════════════════════════════════ */
 const CONFIG = {
-  brand:    'Swift Channels',
+  brand:    'SwiftChannels',
 
   whatsapp: '',                    // EMPTY = WhatsApp off. See SWITCHING-BACK.md
   email:    'contact@swiftchannels.com',
@@ -1556,7 +1557,7 @@ const tf = (s, v) => window.i18n.tf(s, v);
 Object.defineProperty(window, 'LANG', { get: () => window.i18n.lang });
 
 /* ═══════════════ 2. Brand ═══════════════ */
-document.querySelectorAll('[data-brand],[data-brand-plain]').forEach(e => e.textContent = CONFIG.brand);
+document.querySelectorAll('[data-brand-plain]').forEach(e => e.textContent = CONFIG.brand);
 document.getElementById('yr').textContent = new Date().getFullYear();
 
 const waBase = CONFIG.whatsapp ? 'https://wa.me/' + CONFIG.whatsapp : '';
@@ -2129,9 +2130,9 @@ function renderAsk(){
   });
 
   $('askWa').href = waBase
-    ? waBase + '?text=' + encodeURIComponent(t('Hello — I have a question about Swift Channels.'))
+    ? waBase + '?text=' + encodeURIComponent(t('Hello — I have a question about SwiftChannels.'))
     : 'mailto:' + CONFIG.email + '?subject=' +
-      encodeURIComponent(t('Hello — I have a question about Swift Channels.'));
+      encodeURIComponent(t('Hello — I have a question about SwiftChannels.'));
 }
 
 function askOpen(open){
@@ -2289,7 +2290,7 @@ syncPlanUI();
 })();
 
 window.i18n.boot({
-  skip: '#marq,#planCards,#faqList,#plan,#pay',
+  skip: '#marq,#planCards,#faqList,#plan,#pay,.brand-name',
   lang: 'en',
   onApply: function(){
     renderMarquee();

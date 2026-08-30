@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ═══════════════════════════════════════════════════════════════════════
-   Swift Channels — language page builder
+   SwiftChannels — language page builder
    ───────────────────────────────────────────────────────────────────────
    index.html is the single source of truth, in English.
    This script opens it in a real browser, asks the site's own translation

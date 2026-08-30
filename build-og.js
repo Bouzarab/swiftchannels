@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ═══════════════════════════════════════════════════════════════════════
-   Swift Channels — share-card renderer
+   SwiftChannels — share-card renderer
    ───────────────────────────────────────────────────────────────────────
    Renders assets/og-card.html to assets/og-card.jpg at 1200×630 — the
    image WhatsApp, Facebook, X and iMessage show when the site is shared.

@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   Swift Channels — translations
+   SwiftChannels — translations
    ───────────────────────────────────────────────────────────────────
    Keys are the ENGLISH text exactly as it appears on the page.
    English needs no entries — anything missing falls back to English.
@@ -51,7 +51,7 @@ fr: {
     'Une grille d’affiches de films et de séries',
   'A curved wall of television screens showing many different channels at once':
     'Un mur incurvé d’écrans de télévision diffusant de nombreuses chaînes à la fois',
-  '__meta_title': 'Abonnement IPTV 12 mois — 8 000+ chaînes | Swift Channels',
+  '__meta_title': 'Abonnement IPTV 12 mois — 8 000+ chaînes | SwiftChannels',
   '__meta_desc': 'Abonnement IPTV mensuel ou 12 mois : plus de 8 000 chaînes et 50 000 films. Compatible IPTV Smarters, TiviMate et Smart IPTV sur Firestick, TV Samsung et LG. Test gratuit 24 h.',
 
   /* ── ask panel ── */
@@ -63,8 +63,8 @@ fr: {
     'Une question ? La réponse est à un clic.',
   'I have another question':
     'J’ai une autre question',
-  'Hello — I have a question about Swift Channels.':
-    'Bonjour — j’ai une question au sujet de Swift Channels.',
+  'Hello — I have a question about SwiftChannels.':
+    'Bonjour — j’ai une question au sujet de SwiftChannels.',
   'Open quick answers':
     'Ouvrir les réponses rapides',
   'Close quick answers':
@@ -80,8 +80,8 @@ fr: {
   'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.':
     'Par carte ou PayPal. Vous ne payez pas sur ce site : envoyez votre commande sur WhatsApp, nous confirmons le prix et vous envoyons le lien de paiement, et votre ligne s’ouvre dès réception.',
 
-  'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
-    'Un téléviseur, un ordinateur portable, une tablette et un téléphone diffusant du sport, des films et des séries sur Swift Channels',
+  'A TV, laptop, tablet and phone streaming sport, films and series on SwiftChannels':
+    'Un téléviseur, un ordinateur portable, une tablette et un téléphone diffusant du sport, des films et des séries sur SwiftChannels',
 
   /* ── WhatsApp-first ordering ── */
   'Fill in the form':
@@ -519,7 +519,7 @@ de: {
     'Ein Raster aus Film- und Serienpostern',
   'A curved wall of television screens showing many different channels at once':
     'Eine gebogene Wand aus Fernsehbildschirmen mit vielen Sendern gleichzeitig',
-  '__meta_title': 'IPTV Abo & Anbieter — 8.000+ Sender | Swift Channels',
+  '__meta_title': 'IPTV Abo & Anbieter — 8.000+ Sender | SwiftChannels',
   '__meta_desc': 'IPTV Abo monatlich oder jährlich: über 8.000 Sender und 50.000 Filme. Läuft mit IPTV Smarters, TiviMate und Smart IPTV auf Fire TV Stick, Smart TV und Handy. Kostenloser 24-Stunden-Test.',
 
   /* ── ask panel ── */
@@ -531,8 +531,8 @@ de: {
     'Fragen? Die Antwort ist einen Klick entfernt.',
   'I have another question':
     'Ich habe eine andere Frage',
-  'Hello — I have a question about Swift Channels.':
-    'Hallo — ich habe eine Frage zu Swift Channels.',
+  'Hello — I have a question about SwiftChannels.':
+    'Hallo — ich habe eine Frage zu SwiftChannels.',
   'Open quick answers':
     'Schnelle Antworten öffnen',
   'Close quick answers':
@@ -548,8 +548,8 @@ de: {
   'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.':
     'Karte oder PayPal. Sie zahlen nicht auf dieser Website — senden Sie Ihre Bestellung per WhatsApp, wir bestätigen den Preis und schicken den Zahlungslink; Ihre Leitung wird freigeschaltet, sobald die Zahlung da ist.',
 
-  'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
-    'Ein Fernseher, ein Laptop, ein Tablet und ein Handy mit Sport, Filmen und Serien auf Swift Channels',
+  'A TV, laptop, tablet and phone streaming sport, films and series on SwiftChannels':
+    'Ein Fernseher, ein Laptop, ein Tablet und ein Handy mit Sport, Filmen und Serien auf SwiftChannels',
 
   /* ── WhatsApp-first ordering ── */
   'Fill in the form':
@@ -973,7 +973,7 @@ es: {
     'Una cuadrícula de carteles de películas y series',
   'A curved wall of television screens showing many different channels at once':
     'Un muro curvo de pantallas de televisión mostrando muchos canales a la vez',
-  '__meta_title': 'Suscripción IPTV — más de 8.000 canales | Swift Channels',
+  '__meta_title': 'Suscripción IPTV — más de 8.000 canales | SwiftChannels',
   '__meta_desc': 'Suscripción IPTV mensual o anual: más de 8.000 canales y 50.000 películas. Compatible con IPTV Smarters, TiviMate y Smart IPTV en Firestick, Smart TV y móvil. Prueba gratis de 24 h.',
 
   /* ── ask panel ── */
@@ -985,8 +985,8 @@ es: {
     '¿Alguna duda? La respuesta está a un toque.',
   'I have another question':
     'Tengo otra pregunta',
-  'Hello — I have a question about Swift Channels.':
-    'Hola — tengo una pregunta sobre Swift Channels.',
+  'Hello — I have a question about SwiftChannels.':
+    'Hola — tengo una pregunta sobre SwiftChannels.',
   'Open quick answers':
     'Abrir respuestas rápidas',
   'Close quick answers':
@@ -1002,8 +1002,8 @@ es: {
   'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.':
     'Con tarjeta o PayPal. No se paga en esta web: envía tu pedido por WhatsApp, confirmamos el precio y te mandamos el enlace de pago, y tu línea se activa en cuanto llega.',
 
-  'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
-    'Un televisor, un portátil, una tablet y un móvil reproduciendo deporte, películas y series en Swift Channels',
+  'A TV, laptop, tablet and phone streaming sport, films and series on SwiftChannels':
+    'Un televisor, un portátil, una tablet y un móvil reproduciendo deporte, películas y series en SwiftChannels',
 
   /* ── WhatsApp-first ordering ── */
   'Fill in the form':
@@ -1452,7 +1452,7 @@ ar: {
     'عندك سؤال؟ الجواب على بعد نقرة.',
   'I have another question':
     'لدي سؤال آخر',
-  'Hello — I have a question about Swift Channels.':
+  'Hello — I have a question about SwiftChannels.':
     'مرحبًا — لدي سؤال بخصوص سويفت تشانلز.',
   'Open quick answers':
     'افتح الإجابات السريعة',
@@ -1469,7 +1469,7 @@ ar: {
   'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.':
     'بالبطاقة أو عبر باي بال. أنت لا تدفع في هذا الموقع — أرسل طلبك على واتساب، ونؤكد لك السعر ونرسل رابط الدفع، ويُفتح خطك بمجرد وصول الدفعة.',
 
-  'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
+  'A TV, laptop, tablet and phone streaming sport, films and series on SwiftChannels':
     'تلفاز وحاسوب محمول ولوحي وهاتف تعرض الرياضة والأفلام والمسلسلات على سويفت تشانلز',
 
   /* ── WhatsApp-first ordering ── */
@@ -1897,15 +1897,15 @@ nl: {
   'A grid of film and series poster artwork': 'Een raster van film- en serieposters',
   'A curved wall of television screens showing many different channels at once':
     'Een gebogen wand van tv-schermen die veel verschillende zenders tegelijk tonen',
-  '__meta_title': 'IPTV abonnement Nederland — 8.000+ zenders | Swift Channels',
+  '__meta_title': 'IPTV abonnement Nederland — 8.000+ zenders | SwiftChannels',
   '__meta_desc':
     'IPTV abonnement per maand of per jaar: meer dan 8.000 zenders en 50.000 films. Werkt met IPTV Smarters, TiviMate en Smart IPTV op Firestick, smart-tv en telefoon. Gratis test van 24 uur.',
   'Quick answers': 'Snelle antwoorden',
   'Support 09:00–23:00 GMT+1': 'Support 09:00–23:00 GMT+1',
   'Questions? Answers are one tap away.': 'Vragen? De antwoorden zijn één tik verwijderd.',
   'I have another question': 'Ik heb nog een vraag',
-  'Hello — I have a question about Swift Channels.':
-    'Hallo — ik heb een vraag over Swift Channels.',
+  'Hello — I have a question about SwiftChannels.':
+    'Hallo — ik heb een vraag over SwiftChannels.',
   'Open quick answers': 'Snelle antwoorden openen',
   'Close quick answers': 'Snelle antwoorden sluiten',
   'Dismiss': 'Sluiten',
@@ -1915,8 +1915,8 @@ nl: {
   'How do I pay?': 'Hoe betaal ik?',
   'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.':
     'Kaart of PayPal. U betaalt niet op deze website — stuur uw bestelling via WhatsApp, wij bevestigen de prijs en sturen u de betaallink, en uw lijn gaat open zodra de betaling binnen is.',
-  'A TV, laptop, tablet and phone streaming sport, films and series on Swift Channels':
-    'Een tv, laptop, tablet en telefoon die sport, films en series streamen op Swift Channels',
+  'A TV, laptop, tablet and phone streaming sport, films and series on SwiftChannels':
+    'Een tv, laptop, tablet en telefoon die sport, films en series streamen op SwiftChannels',
   'Fill in the form': 'Vul het formulier in',
   'Your name, WhatsApp number, the plan you want, how many devices and how you\'d like to pay. It takes about a minute.':
     'Uw naam, WhatsApp-nummer, het gewenste abonnement, hoeveel apparaten en hoe u wilt betalen. Het kost ongeveer een minuut.',

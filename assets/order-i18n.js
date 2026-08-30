@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   Swift Channels — order-confirmation page translations
+   SwiftChannels — order-confirmation page translations
    ───────────────────────────────────────────────────────────────────
    Loaded by order.html only, after assets/i18n.js. This page exists
    only while WhatsApp is switched off — see SWITCHING-BACK.md.
@@ -8,7 +8,7 @@
   const EXTRA = {
 
 fr: {
-  '__or_title': 'Envoyer votre commande — Swift Channels',
+  '__or_title': 'Envoyer votre commande — SwiftChannels',
   '__or_desc': 'Vérifiez votre commande et envoyez-la-nous en un clic.',
   '__or_h1': 'Un clic et<br><span class="grad">elle nous parvient</span>.',
   'Last step': 'Dernière étape',
@@ -34,7 +34,7 @@ fr: {
 },
 
 es: {
-  '__or_title': 'Enviar tu pedido — Swift Channels',
+  '__or_title': 'Enviar tu pedido — SwiftChannels',
   '__or_desc': 'Revisa tu pedido y envíanoslo con un clic.',
   '__or_h1': 'Un clic y<br><span class="grad">lo tenemos</span>.',
   'Last step': 'Último paso',
@@ -60,7 +60,7 @@ es: {
 },
 
 de: {
-  '__or_title': 'Bestellung senden — Swift Channels',
+  '__or_title': 'Bestellung senden — SwiftChannels',
   '__or_desc': 'Prüfen Sie Ihre Bestellung und schicken Sie sie mit einem Klick.',
   '__or_h1': 'Ein Klick und<br><span class="grad">sie ist bei uns</span>.',
   'Last step': 'Letzter Schritt',
@@ -120,7 +120,7 @@ nl: {
   'Email': 'E-mail',
   'Devices': 'Apparaten',
   'Total': 'Totaal',
-  '__or_title': 'Uw bestelling versturen — Swift Channels',
+  '__or_title': 'Uw bestelling versturen — SwiftChannels',
   '__or_desc': 'Controleer uw bestelgegevens en stuur ze ons met één klik.',
   '__or_h1': 'Eén klik en<br><span class="grad">hij is bij ons</span>.',
   'Last step': 'Laatste stap',

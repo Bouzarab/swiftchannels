@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Send your order — Swift Channels</title>
+<title>Send your order — SwiftChannels</title>
 <meta name="description" content="Check your order details and send them to us in one click.">
 <meta name="robots" content="noindex,follow">
 <link rel="canonical" href="https://swiftchannels.com/order.html">
@@ -47,6 +47,7 @@ img,svg{display:block;max-width:100%}
 .brand-mark::after{content:'';width:11px;height:11px;border-radius:50%;background:#fff;
   box-shadow:0 0 12px #fff}
 .brand-name{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em}
+.brand-hi{color:var(--blue-hi)}
 .back{font-size:14px;color:var(--muted)}
 .back:hover{color:var(--ice)}
 
@@ -111,7 +112,7 @@ html[dir="rtl"] .row b{direction:rtl}
 <header class="top">
   <div class="top-in">
     <a class="brand" href="./">
-      <span class="brand-mark"></span><span class="brand-name">Swift Channels</span>
+      <span class="brand-mark"></span><span class="brand-name">Swift<span class="brand-hi">Channels</span></span>
     </a>
     <a class="back" href="./#order">← Change my order</a>
   </div>
@@ -138,7 +139,7 @@ html[dir="rtl"] .row b{direction:rtl}
   </div>
 </main>
 
-<footer>© <span id="yr"></span> Swift Channels</footer>
+<footer>© <span id="yr"></span> SwiftChannels</footer>
 
 <iframe name="ghost" id="ghost" style="display:none" title="submit" aria-hidden="true"></iframe>
 <form id="post" method="POST" target="ghost" style="display:none"></form>
@@ -255,7 +256,7 @@ $('send').addEventListener('click', () => {
 });
 
 window.i18n.boot({
-  skip: '#rows,#yr,#sent',
+  skip: '#rows,#yr,#sent,.brand-name',
   titleKey: '__or_title',
   descKey: '__or_desc',
   lang: 'en',
