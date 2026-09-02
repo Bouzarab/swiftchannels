@@ -1098,7 +1098,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
         <span class="fc-tint"></span><span class="fc-scrim"></span>
         <span class="fc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 14.6a2.2 2.2 0 01-2.2 2.2H8.2L3.5 20.5V5.4A2.2 2.2 0 015.7 3.2h13.1A2.2 2.2 0 0121 5.4z"/></svg></span>
         <span class="fc-tag">Included</span>
-        <div class="fc-in"><h3>24/7 support</h3><p>One thread with us for setup, renewals and anything that stops working.</p></div>
+        <div class="fc-in"><h3>24/7 support</h3><p>One thread on WhatsApp for setup, renewals and anything that stops working.</p></div>
       </article>
       <article class="fc" data-k="football" style="--tint:radial-gradient(126% 88% at 16% 6%,rgba(0,112,192,.58),rgba(0,112,192,.12) 46%,transparent 68%),radial-gradient(118% 82% at 90% 24%,rgba(62,192,132,.40),transparent 64%)">
         <img class="fc-img" src="assets/cards/football.webp" alt="A football on the grass of a floodlit stadium at night" width="900" height="1200" loading="lazy" decoding="async">
@@ -1221,8 +1221,8 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
            pay. It takes about a minute.</p></div>
       <div class="step rv d1"><div class="step-n">STEP 02</div>
         <h3>Send it in one click</h3>
-        <p>One button hands your whole order to us. Nothing is charged and nothing is
-           committed yet.</p></div>
+        <p>One button writes your whole order into a WhatsApp message. Press send — nothing is
+           charged and nothing is committed yet.</p></div>
       <div class="step rv d2"><div class="step-n">STEP 03</div>
         <h3>We take it from there</h3>
         <p>We confirm the price, send you the payment details for the method you chose, and once
@@ -1375,7 +1375,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
         </dl>
         <div class="ticket-total"><span>Total</span><b id="t-total">—</b></div>
         <div class="ticket-actions">
-          <button class="btn btn-blue" type="button" id="sendWa">Send my order</button>
+          <button class="btn btn-blue" type="button" id="sendWa">Send my order on WhatsApp</button>
           <button class="btn btn-ghost" type="button" id="copyOrder">Copy order details</button>
           <button class="btn btn-ghost" type="button" id="sendMail">Send by email instead</button>
         </div>
@@ -1489,7 +1489,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
 const CONFIG = {
   brand:    'SwiftChannels',
 
-  whatsapp: '',                    // EMPTY = WhatsApp off. See SWITCHING-BACK.md
+  whatsapp: '393277447010',      // digits only, country code, no + or spaces
   email:    'contact@swiftchannels.com',
 
   currency: '€',
@@ -1526,7 +1526,7 @@ const CONFIG = {
     ['How much does it cost?',
      'Two paid plans, both opening the full library: <strong>15 € a month</strong> or <strong>57 € a year</strong> — about 5 € a month. That covers one screen at a time; 2, 3 or 4 screens cost more. There is also a <strong>free 24-hour test</strong> before you pay anything.'],
     ['How do I pay?',
-     'Card or PayPal. You do not pay on this website — send your order from this page, we confirm the price by email and send you the payment link, and your line opens as soon as the payment lands.'],
+     'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.'],
     ["What's included?",
      "All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support."],
     ['Can I watch live sports and PPV events?',
@@ -1932,10 +1932,10 @@ function updateTicket(){
     $('t-invitedBy').textContent = code;
   }
 
-  $('sendWa').textContent = t('Send my order');
+  $('sendWa').textContent = t('Send my order on WhatsApp');
   $('ticketNote').textContent = t(free
     ? 'Nothing is charged here. Free tests skip payment entirely — send the order and we open your line.'
-    : 'Nothing is charged here. Send your order and we reply by email with the payment details for the method you chose.');
+    : 'Nothing is charged here. Send your order and we reply on WhatsApp with the payment details for the method you chose.');
 }
 
 /* ═══════════════ 7. Validation + send ═══════════════ */
@@ -1980,7 +1980,7 @@ function validate(){
 
 function buildMessage(){
   const p = planById(planSel.value), free = p.price === 0, cost = priceFor(p, state.conn);
-  const L = ['NEW ORDER — ' + REF, '——————————————'];
+  const L = ['NEW ORDER · ' + CONFIG.brand + ' — ' + REF, '——————————————'];
   L.push('Name:      ' + $('name').value.trim());
   L.push('WhatsApp:  ' + $('phone').value.trim());
   if($('email').value.trim()) L.push('Email:     ' + $('email').value.trim());
@@ -2060,7 +2060,7 @@ $('sendMail').addEventListener('click', () => {
 
     confirmSent(handled
       ? tf('Order {ref} is open in your email app.', {ref: REF})
-      : tf('No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}.',
+      : tf('No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}, or use the WhatsApp button.',
            {ref: REF, mail: CONFIG.email}));
   }, 1500);
 });
@@ -2068,7 +2068,7 @@ $('sendMail').addEventListener('click', () => {
 $('copyOrder').addEventListener('click', () => {
   if(!validate()) return;
   copyText(buildMessage());
-  confirmSent(tf('Order {ref} copied. Paste it into an email to us.', {ref: REF}));
+  confirmSent(tf('Order {ref} copied. Paste it to us on WhatsApp or email.', {ref: REF}));
 });
 
 document.querySelectorAll('[data-preselect]').forEach(a => {

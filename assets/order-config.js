@@ -39,7 +39,8 @@ window.ORDER_CONFIG = {
       total:   'entry.1516916128',   /* Total      */
       notes:   'entry.341763312',    /* Notes      */
       lang:    'entry.1652809889',   /* Language   */
-      invitedBy: 'entry.1716936100'  /* Invited by */
+      invitedBy: 'entry.1716936100', /* Invited by */
+      brand:     ''                 /* Brand      */
     }
   }
 };

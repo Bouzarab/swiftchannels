@@ -191,6 +191,7 @@ function orderText(){
   add('Devices', order.conn); add('Watch on', order.device); add('MAC', order.mac);
   add('Pay by', order.method); add('Total', order.total);   add('Notes', order.notes);
   add('Invited by', order.invitedBy);
+  add('Brand', CONFIG.brand || '');
   add('Language', document.documentElement.lang);
   return L.join('\n');
 }
@@ -234,6 +235,7 @@ $('send').addEventListener('click', () => {
        so a free month is never lost to a missing column. */
     const invited = order.invitedBy || '';
     if(invited && F.fields.invitedBy) put('invitedBy', invited);
+    put('brand', CONFIG.brand || '');
     put('notes', invited && !F.fields.invitedBy
       ? ('Invited by: ' + invited + (order.notes ? ' — ' + order.notes : ''))
       : order.notes);

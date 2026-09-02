@@ -249,14 +249,14 @@ html[dir="rtl"] .steps li{grid-template-columns:30px 1fr}
     <li class="done"><b>Pago enviado</b><span>PayPal ya tiene tu pago.</span></li>
     <li><b>Haz una captura del recibo</b>
       <span>La página de confirmación de PayPal o el recibo por correo — cualquier cosa que muestre el importe y la fecha.</span></li>
-    <li><b>Envíanoslo por correo</b>
+    <li><b>Envíalo por WhatsApp</b>
       <span>El botón de abajo abre un chat con tu pedido ya escrito. Adjunta la captura con el clip y pulsa enviar.</span></li>
   </ol>
 
   <div class="cta up u4">
     <button class="btn btn-blue pulse" type="button" id="wa">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.5-1.2-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.6-.1 1.3z"></path></svg>
-      Enviar mi recibo por correo
+      Enviar mi recibo por WhatsApp
     </button>
     <a class="btn btn-ghost" href="./">Volver al sitio</a>
   </div>
@@ -274,7 +274,7 @@ html[dir="rtl"] .steps li{grid-template-columns:30px 1fr}
 
 <footer>
   <span>© <span id="yr">2026</span> <span data-brand="">SwiftChannels</span></span>
-  <span><a href="mailto:contact@swiftchannels.com" id="mail">Correo electrónico</a> · <a href="legal.html">Términos</a></span>
+  <span><a href="https://wa.me/393277447010" id="wa2">WhatsApp</a> · <a href="mailto:contact@swiftchannels.com" id="mail">Correo electrónico</a> · <a href="legal.html">Términos</a></span>
 </footer>
 
 <script>window.PAGE_LANG='es';</script><script src="../assets/i18n.js"></script>
@@ -284,7 +284,7 @@ html[dir="rtl"] .steps li{grid-template-columns:30px 1fr}
    ═══════════════════════════════════════════════════════════ */
 const CONFIG = {
   brand:    'SwiftChannels',
-  whatsapp: '',                    // EMPTY = WhatsApp off. See SWITCHING-BACK.md
+  whatsapp: '393277447010',      // digits only, country code, no + or spaces
   email:    'contact@swiftchannels.com'
 };
 
@@ -358,7 +358,7 @@ function renderRecap(){
 function buildMessage(){
   const L = [];
   if(order && order.plan){
-    L.push('PAYMENT SENT — ' + (order.ref || ''));
+    L.push('PAYMENT SENT · ' + CONFIG.brand + ' — ' + (order.ref || ''));
     L.push('——————————————');
     if(order.name)   L.push('Name:      ' + order.name);
     if(order.phone)  L.push('WhatsApp:  ' + order.phone);
@@ -370,7 +370,7 @@ function buildMessage(){
     if(order.total)  L.push('Total:     ' + order.total);
     if(order.notes){ L.push('——————————————'); L.push('Notes: ' + order.notes); }
   } else {
-    L.push('PAYMENT SENT');
+    L.push('PAYMENT SENT · ' + CONFIG.brand);
     L.push('——————————————');
     const t = $('mref').value.trim();
     L.push(t ? 'From: ' + t : 'From: (name)');
