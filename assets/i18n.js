@@ -10,6 +10,22 @@ window.I18N = {
 
 /* ═══════════════════════ FRENCH ═══════════════════════ */
 fr: {
+
+  /* ── newsletter ── */
+  'New offers, now and then':
+    'Nos offres, de temps en temps',
+  'Subscribe and we write when there is something worth telling you about — a price drop, a new pack, a channel added. Nothing else, and one click to stop.':
+    'Inscrivez-vous et nous écrivons quand il y a vraiment quelque chose à dire : une baisse de prix, un nouveau bouquet, une chaîne ajoutée. Rien d’autre, et un clic pour arrêter.',
+  'Your email address':
+    'Votre adresse e-mail',
+  'Subscribe':
+    'S’inscrire',
+  'By subscribing you agree to receive our offers by email. You can unsubscribe in one click.':
+    'En vous inscrivant, vous acceptez de recevoir nos offres par e-mail. Vous pouvez vous désabonner en un clic.',
+  'Privacy notice':
+    'Politique de confidentialité',
+  'Thank you. Check your inbox and confirm your address.':
+    'Merci. Vérifiez votre boîte de réception et confirmez votre adresse.',
   'Invite a friend': 'Parrainez un ami',
   'Invite one friend. You both get a month.': 'Parrainez un ami. Vous gagnez un mois chacun.',
   '__invite_p':
@@ -477,6 +493,22 @@ fr: {
 
 /* ═══════════════════════ GERMAN ═══════════════════════ */
 de: {
+
+  /* ── newsletter ── */
+  'New offers, now and then':
+    'Unsere Angebote, ab und zu',
+  'Subscribe and we write when there is something worth telling you about — a price drop, a new pack, a channel added. Nothing else, and one click to stop.':
+    'Melden Sie sich an, und wir schreiben, wenn es wirklich etwas zu sagen gibt: eine Preissenkung, ein neues Paket, ein neuer Sender. Sonst nichts — und ein Klick genügt zum Abmelden.',
+  'Your email address':
+    'Ihre E-Mail-Adresse',
+  'Subscribe':
+    'Anmelden',
+  'By subscribing you agree to receive our offers by email. You can unsubscribe in one click.':
+    'Mit der Anmeldung erklären Sie sich einverstanden, unsere Angebote per E-Mail zu erhalten. Abmeldung mit einem Klick.',
+  'Privacy notice':
+    'Datenschutzhinweis',
+  'Thank you. Check your inbox and confirm your address.':
+    'Danke. Prüfen Sie Ihren Posteingang und bestätigen Sie Ihre Adresse.',
   'Invite a friend': 'Freunde einladen',
   'Invite one friend. You both get a month.':
     'Laden Sie einen Freund ein. Sie bekommen beide einen Monat.',
@@ -932,6 +964,22 @@ de: {
 
 /* ═══════════════════════ SPANISH ═══════════════════════ */
 es: {
+
+  /* ── newsletter ── */
+  'New offers, now and then':
+    'Nuestras ofertas, de vez en cuando',
+  'Subscribe and we write when there is something worth telling you about — a price drop, a new pack, a channel added. Nothing else, and one click to stop.':
+    'Suscríbete y te escribimos cuando hay algo que merece la pena contar: una bajada de precio, un paquete nuevo, un canal añadido. Nada más, y un clic para dejarlo.',
+  'Your email address':
+    'Tu dirección de correo',
+  'Subscribe':
+    'Suscribirme',
+  'By subscribing you agree to receive our offers by email. You can unsubscribe in one click.':
+    'Al suscribirte, aceptas recibir nuestras ofertas por correo. Puedes darte de baja en un clic.',
+  'Privacy notice':
+    'Aviso de privacidad',
+  'Thank you. Check your inbox and confirm your address.':
+    'Gracias. Revisa tu bandeja de entrada y confirma tu dirección.',
   'Invite a friend': 'Invita a un amigo',
   'Invite one friend. You both get a month.': 'Invita a un amigo. Cada uno gana un mes.',
   '__invite_p':
@@ -1399,6 +1447,22 @@ es: {
 
 /* ═══════════════════════ ARABIC ═══════════════════════ */
 ar: {
+
+  /* ── newsletter ── */
+  'New offers, now and then':
+    'عروضنا، بين الحين والآخر',
+  'Subscribe and we write when there is something worth telling you about — a price drop, a new pack, a channel added. Nothing else, and one click to stop.':
+    'اشترك وسنكتب إليك عندما يكون هناك ما يستحق فعلاً: انخفاض في السعر، باقة جديدة، قناة أُضيفت. لا شيء غير ذلك، وضغطة واحدة لإيقافه.',
+  'Your email address':
+    'بريدك الإلكتروني',
+  'Subscribe':
+    'اشترك',
+  'By subscribing you agree to receive our offers by email. You can unsubscribe in one click.':
+    'بالاشتراك، أنت توافق على تلقّي عروضنا عبر البريد الإلكتروني. يمكنك إلغاء الاشتراك بضغطة واحدة.',
+  'Privacy notice':
+    'إشعار الخصوصية',
+  'Thank you. Check your inbox and confirm your address.':
+    'شكرًا لك. تحقّق من بريدك وأكّد عنوانك.',
   'Invite a friend': 'ادعُ صديقًا',
   'Invite one friend. You both get a month.': 'ادعُ صديقًا واحدًا، ويربح كل منكما شهرًا.',
   '__invite_p':
@@ -1858,6 +1922,24 @@ ar: {
 
 /* ═══════════════════════ DUTCH ═══════════════════════ */
 nl: {
+
+  /* ── newsletter ── */
+  'New offers, now and then':
+    'Onze aanbiedingen, af en toe',
+  'Subscribe and we write when there is something worth telling you about — a price drop, a new pack, a channel added. Nothing else, and one click to stop.':
+    'Schrijf u in en wij mailen wanneer er echt iets te melden valt: een prijsverlaging, een nieuw pakket, een zender erbij. Verder niets, en één klik om te stoppen.',
+  'Your email address':
+    'Uw e-mailadres',
+  'Subscribe':
+    'Inschrijven',
+  'By subscribing you agree to receive our offers by email. You can unsubscribe in one click.':
+    'Door u in te schrijven gaat u ermee akkoord onze aanbiedingen per e-mail te ontvangen. Uitschrijven kan met één klik.',
+  'Privacy notice':
+    'Privacyverklaring',
+  'Thank you. Check your inbox and confirm your address.':
+    'Bedankt. Controleer uw inbox en bevestig uw adres.',
+  "That email address doesn't look complete.":
+    'Dit e-mailadres lijkt onvolledig.',
   'Invite a friend': 'Nodig een vriend uit',
   'Invite one friend. You both get a month.': 'Nodig één vriend uit. U krijgt allebei een maand.',
   '__invite_p':

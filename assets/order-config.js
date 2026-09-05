@@ -16,6 +16,25 @@ window.ORDER_CONFIG = {
   /* Where order emails should reach you. */
   email: 'contact@swiftchannels.com',
 
+  /* ══════════════════════════════════════════════════════════════════
+     NEWSLETTER — the footer sign-up on every page.
+
+     Paste the POST address of your Brevo subscription form below. In
+     Brevo: Contacts → Forms → create a form → Share → copy the action
+     URL, which looks like
+
+         https://sibforms.com/serve/MUIF...
+
+     While it is empty the sign-up still works: the button opens the
+     visitor's own mail app addressed to `email` instead. Turn on double
+     opt-in in the Brevo form so every address confirms itself — that is
+     what makes the list worth having.
+     ══════════════════════════════════════════════════════════════════ */
+  newsletter: {
+    action: '',
+    field:  'EMAIL'   /* the name Brevo gives the e-mail input */
+  },
+
   orderForm: {
 
     /* STEP 1 — paste your form's POST address here.

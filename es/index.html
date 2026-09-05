@@ -597,6 +597,37 @@ section{padding:clamp(62px,8.5vw,108px) 0;position:relative}
 .band p{margin:18px auto 30px;color:var(--muted);max-width:52ch}
 .band .hero-cta{justify-content:center}
 
+/* ═══════════════ NEWSLETTER ═══════════════
+   Sits above the footer columns. Two columns on a wide screen, stacked
+   below 860, and the field goes full width on a phone. */
+.news{display:grid;grid-template-columns:1.2fr .95fr;gap:clamp(20px,3vw,44px);
+  align-items:center;padding:clamp(22px,3vw,34px);margin-bottom:38px;
+  border:1px solid var(--line);border-radius:var(--r);
+  background:radial-gradient(130% 160% at 0% 0%,rgba(47,107,255,.15),transparent 60%),
+             rgba(8,15,34,.6)}
+.news h4{font-family:var(--display);font-size:clamp(19px,2.1vw,23px);font-weight:700;
+  letter-spacing:-.02em;color:var(--ice);margin-bottom:8px}
+.news-txt p{font-size:14.5px;line-height:1.7;color:var(--muted);max-width:48ch;margin:0}
+.news-side{display:flex;flex-direction:column;gap:11px;min-width:0}
+.news-form{display:flex;gap:9px}
+.news-form input{flex:1;min-width:0;background:rgba(5,10,24,.75);color:var(--ice);
+  border:1px solid var(--line);border-radius:var(--r-sm);padding:13px 15px;
+  font-family:var(--body);font-size:15px;
+  transition:border-color .25s,box-shadow .25s,background .25s}
+.news-form input::placeholder{color:var(--muted-2)}
+.news-form input:focus{outline:none;border-color:var(--blue);background:var(--panel);
+  box-shadow:0 0 0 3px var(--glow)}
+.news-form input.bad{border-color:#FF7C9B}
+.news-form .btn{flex:none;white-space:nowrap}
+.news-note{font-size:11.5px;line-height:1.65;color:var(--muted-2);margin:0}
+.news-note a{color:var(--blue-hi)}
+.news-note a:hover{text-decoration:underline}
+.news-done{display:none;font-size:14.5px;line-height:1.6;color:var(--cyan);margin:0}
+.news.sent .news-form,.news.sent .news-note{display:none}
+.news.sent .news-done{display:block}
+@media(max-width:860px){.news{grid-template-columns:1fr}}
+@media(max-width:460px){.news-form{flex-direction:column}.news-form .btn{width:100%}}
+
 /* ═══════════════ FOOTER ═══════════════ */
 footer{padding:58px 0 40px}
 .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px;margin-bottom:40px}
@@ -1428,6 +1459,21 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
 <!-- ══════════════ FOOTER ══════════════ -->
 <footer>
   <div class="wrap">
+    <div class="news" id="news">
+      <div class="news-txt">
+        <h4>Nuestras ofertas, de vez en cuando</h4>
+        <p>Suscríbete y te escribimos cuando hay algo que merece la pena contar: una bajada de precio, un paquete nuevo, un canal añadido. Nada más, y un clic para dejarlo.</p>
+      </div>
+      <div class="news-side">
+        <form class="news-form" id="newsForm" novalidate="">
+          <input id="newsEmail" type="email" inputmode="email" autocomplete="email" aria-label="Tu dirección de correo" placeholder="you@example.com">
+          <button class="btn btn-blue" type="submit">Suscribirme</button>
+        </form>
+        <p class="news-note">Al suscribirte, aceptas recibir nuestras ofertas por correo. Puedes darte de baja en un clic. <a href="legal.html#privacy">Aviso de privacidad</a></p>
+        <p class="news-done" id="newsDone">Gracias. Revisa tu bandeja de entrada y confirma tu dirección.</p>
+      </div>
+    </div>
+
     <div class="foot-grid">
       <div>
         <a class="brand" href="#top" style="margin-bottom:16px">
@@ -1488,6 +1534,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
 </div>
 
 <!-- translations: English source text → fr / de / ar -->
+<script src="../assets/order-config.js"></script>
 <script>window.PAGE_LANG='es';</script><script src="../assets/i18n.js"></script>
 <script>
 /* ═══════════════════════════════════════════════════════════
@@ -2294,6 +2341,48 @@ syncPlanUI();
     });
   }, { threshold: 0.28 }).observe(flow);
   document.addEventListener('visibilitychange', () => document.hidden ? pause() : (seen && play()));
+})();
+
+/* ═══════════════ 12. Newsletter ═══════════════ */
+/* Posts to Brevo when a form URL is set in assets/order-config.js. The POST
+   is no-cors, like the order form, so the reply is opaque and we simply say
+   thank you; Brevo's double opt-in mail is the real confirmation. With no URL
+   set the button hands the address to the visitor's own mail app instead. */
+(function(){
+  const form = document.getElementById('newsForm');
+  if(!form) return;
+  const box  = document.getElementById('news');
+  const mail = document.getElementById('newsEmail');
+  const CFG  = (window.ORDER_CONFIG && window.ORDER_CONFIG.newsletter) || {};
+  const OK   = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const v = mail.value.trim();
+    if(!OK.test(v)){
+      mail.classList.add('bad');
+      mail.setAttribute('aria-invalid','true');
+      mail.focus();
+      return;
+    }
+    mail.classList.remove('bad');
+    mail.removeAttribute('aria-invalid');
+
+    if(CFG.action){
+      const body = new URLSearchParams();
+      body.append(CFG.field || 'EMAIL', v);
+      body.append('email_address_check', '');
+      body.append('locale', window.i18n ? window.i18n.lang : 'en');
+      fetch(CFG.action, { method:'POST', mode:'no-cors', body }).catch(() => {});
+    } else {
+      location.href = 'mailto:' + CONFIG.email +
+        '?subject=' + encodeURIComponent('Newsletter') +
+        '&body=' + encodeURIComponent('Please add ' + v + ' to the newsletter.');
+    }
+    box.classList.add('sent');
+  });
+
+  mail.addEventListener('input', () => mail.classList.remove('bad'));
 })();
 
 window.i18n.boot({
