@@ -2506,22 +2506,20 @@ window.i18n = (function(){
       const open = box.classList.toggle('open');
       cur.setAttribute('aria-expanded', String(open));
     });
-    if(interactive){
-      box.querySelectorAll('button.lang-b').forEach(b => {
-        b.addEventListener('click', () => {
-          apply(b.dataset.lang);
-          box.classList.remove('open');
-          cur.setAttribute('aria-expanded','false');
-        });
+    /* Every page switches language by going to that language's URL. The
+       generated pages carry an href; the English source pages do not, so
+       derive it from the file we are on — /channels.html → /fr/channels.html.
+       Nothing translates in place any more, which is why an English page can
+       ship with no dictionary at all. */
+    box.querySelectorAll('button.lang-b').forEach(b => {
+      b.addEventListener('click', () => {
+        const href = b.getAttribute('href');
+        if(href){ location.href = href; return; }
+        const to = b.dataset.lang;
+        const file = location.pathname.split('/').pop() || '';
+        location.href = (to === 'en' ? './' : to + '/') + file;
       });
-    } else {
-      /* A generated page switches language by going to that page. Where the
-         switcher is built from buttons rather than links, href alone does
-         nothing — so follow it ourselves. */
-      box.querySelectorAll('button.lang-b[href]').forEach(b => {
-        b.addEventListener('click', () => { location.href = b.getAttribute('href'); });
-      });
-    }
+    });
     const close = () => {
       box.classList.remove('open');
       cur.setAttribute('aria-expanded','false');
