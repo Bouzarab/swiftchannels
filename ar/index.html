@@ -995,6 +995,9 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
             "closes": "23:00"
           }
         }
+      ],
+      "sameAs": [
+        "https://t.me/swiftchannelsofficial"
       ]
     },
     {
@@ -1605,6 +1608,7 @@ html[dir="rtl"] .ask-teaser{right:auto;left:calc(clamp(14px,2.2vw,30px) + 70px)}
       <div>
         <h4>تواصل معنا</h4>
         <a href="https://wa.me/393277447010" data-wa-link="">واتساب</a>
+        <a href="https://t.me/swiftchannelsofficial" data-tg-link="">Telegram</a>
         <a href="mailto:contact@swiftchannels.com" data-mail-link="">البريد الإلكتروني</a>
         <p style="font-family:var(--mono);font-size:11px;letter-spacing:.08em">الدعم من 09:00 إلى 23:00 بتوقيت غرينتش+1</p>
       </div>
@@ -1659,6 +1663,7 @@ const CONFIG = {
   brand:    'SwiftChannels',
 
   whatsapp: '393277447010',      // digits only, country code, no + or spaces
+  telegram: 'swiftchannelsofficial',  // channel username, no @. Empty = link hidden
   email:    'contact@swiftchannels.com',
 
   currency: '€',
@@ -1740,6 +1745,16 @@ if(waLink){
     const sep = waLink.nextSibling;
     if(sep && sep.nodeType === 3) sep.remove();
     waLink.remove();
+  }
+}
+const tgLink = document.querySelector('[data-tg-link]');
+if(tgLink){
+  if(CONFIG.telegram){ tgLink.href = 'https://t.me/' + CONFIG.telegram; }
+  else {
+    /* no channel — drop the link rather than point it at nothing */
+    const sep = tgLink.nextSibling;
+    if(sep && sep.nodeType === 3) sep.remove();
+    tgLink.remove();
   }
 }
 document.querySelector('[data-mail-link]').href = 'mailto:' + CONFIG.email;
