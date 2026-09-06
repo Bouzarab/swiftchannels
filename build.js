@@ -22,6 +22,7 @@
 const { chromium } = require('playwright');
 const fs   = require('fs');
 const path = require('path');
+const { buildBlog } = require('./scripts/blog-build');
 
 const SITE  = 'https://swiftchannels.com';
 const ROOT  = __dirname;
@@ -301,6 +302,8 @@ async function splitDictionaries(browser) {
   ).join('\n') +
   `\n      <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('')}channels.html"/>`;
 
+  const blog = buildBlog({ ROOT, SITE, LANGS });
+
   const entries = LANGS.map(l => `  <url>
     <loc>${urlFor(l.folder)}</loc>
 ${alternates}
@@ -335,9 +338,10 @@ ${installAlternates}
 `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${entries}${extra}
+${entries}${extra}${blog.sitemap ? '\n' + blog.sitemap : ''}
 </urlset>
 `, 'utf8');
+  console.log('  ✓ blog pages');
   console.log('  ✓ sitemap.xml');
   console.log(`\nBuilt ${built.length} pages. Commit and push.`);
 })();

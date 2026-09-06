@@ -4,6 +4,8 @@
   "description": "Static site for swiftchannels.com — build scripts only, nothing is bundled into the site.",
   "scripts": {
     "build": "node build.js",
+    "blog:write": "node scripts/write-blog-posts.js",
+    "blog:preview": "BLOG_PREVIEW_ALL=1 node build.js",
     "og": "node build-og.js",
     "indexnow": "node indexnow.js"
   },
