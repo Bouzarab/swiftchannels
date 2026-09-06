@@ -1446,478 +1446,671 @@ es: {
 },
 
 /* ═══════════════════════ ARABIC ═══════════════════════ */
-ar: {
-
-  /* ── newsletter ── */
-  'New offers, now and then':
-    'عروضنا، بين الحين والآخر',
-  'Subscribe and we write when there is something worth telling you about — a price drop, a new pack, a channel added. Nothing else, and one click to stop.':
-    'اشترك وسنكتب إليك عندما يكون هناك ما يستحق فعلاً: انخفاض في السعر، باقة جديدة، قناة أُضيفت. لا شيء غير ذلك، وضغطة واحدة لإيقافه.',
-  'Your email address':
-    'بريدك الإلكتروني',
-  'Subscribe':
-    'اشترك',
-  'By subscribing you agree to receive our offers by email. You can unsubscribe in one click.':
-    'بالاشتراك، أنت توافق على تلقّي عروضنا عبر البريد الإلكتروني. يمكنك إلغاء الاشتراك بضغطة واحدة.',
-  'Privacy notice':
-    'إشعار الخصوصية',
-  'Thank you. Check your inbox and confirm your address.':
-    'شكرًا لك. تحقّق من بريدك وأكّد عنوانك.',
-  'Invite a friend': 'ادعُ صديقًا',
-  'Invite one friend. You both get a month.': 'ادعُ صديقًا واحدًا، ويربح كل منكما شهرًا.',
-  '__invite_p':
-    'مرجع طلبك هو رمز الدعوة الخاص بك. عندما يطلب صديق اشتراك 12 شهرًا ويكتبه في خانة <b>دعاني</b>، نضيف 30 يومًا إلى اشتراكه و30 يومًا إلى اشتراكك. دون أي دفع من الطرفين.',
-  'Applies to the 12-month plan. The monthly plan and the free test don\'t carry the offer.':
-    'ينطبق على اشتراك 12 شهرًا. الاشتراك الشهري والتجربة المجانية لا يشملهما العرض.',
-  'Both months are added once your friend\'s payment is settled.':
-    'يُضاف الشهران بمجرد اكتمال دفع صديقك.',
-  'Invite as many friends as you like — each one adds another 30 days.':
-    'ادعُ ما شئت من الأصدقاء — كل واحد يضيف 30 يومًا أخرى.',
-  'Your invite link': 'رابط دعوتك',
-  'Appears here after your first order': 'يظهر هنا بعد طلبك الأول',
-  'Copy invite link': 'انسخ الرابط',
-  'Link copied': 'تم نسخ الرابط',
-  'Your reference is created the moment you send an order, and it also sits at the top of the email we send you.':
-    'يُنشأ مرجعك لحظة إرسالك للطلب، وتجده أيضًا في أعلى البريد الذي نرسله إليك.',
-  'Invited by': 'دعاني',
-  'An invite code looks like ORD-4CZWE. Leave it empty if you don\'t have one.':
-    'رمز الدعوة يشبه ORD-4CZWE. اترك الخانة فارغة إن لم يكن لديك واحد.',
-  'A friend invited you — 30 days are added to a 12-month plan, for both of you.':
-    'دعاك صديق — تُضاف 30 يومًا على اشتراك 12 شهرًا، لكليكما.',
-  'A montage of athletes from tennis, motorsport, cricket, rugby and athletics':
-    'مجموعة من رياضيي التنس ورياضة السيارات والكريكيت والرغبي وألعاب القوى',
-  'Two combat-sports fighters facing each other before a bout':
-    'مقاتلان يتواجهان قبل النزال',
-  'A montage of American team-sport players with league trophies':
-    'مجموعة من لاعبي الرياضات الجماعية الأمريكية مع الكؤوس',
-  'A football on the grass of a floodlit stadium at night':
-    'كرة قدم على عشب ملعب مضاء ليلًا',
-  'The numbers 24:7 handwritten in white on a black background':
-    'الرقمان 24:7 مكتوبان بخط اليد بالأبيض على خلفية سوداء',
-  'Water droplets and melting ice on a clear surface':
-    'قطرات ماء وثلج ذائب على سطح شفاف',
-  'The word replay in white on a bright pink background':
-    'كلمة replay بالأبيض على خلفية وردية زاهية',
-  'The words 4K Ultra HD in gold lettering':
-    'عبارة 4K Ultra HD بحروف ذهبية',
-  'A grid of film and series poster artwork':
-    'شبكة من ملصقات الأفلام والمسلسلات',
-  'A curved wall of television screens showing many different channels at once':
-    'جدار منحنٍ من شاشات التلفزيون يعرض قنوات كثيرة في وقت واحد',
-  '__meta_title': 'اشتراك IPTV — أكثر من 8000 قناة | سويفت تشانلز',
-  '__meta_desc': 'اشتراك IPTV شهري أو سنوي: أكثر من 8000 قناة و50000 فيلم ومسلسل. يعمل مع IPTV Smarters وTiviMate وSmart IPTV على فاير ستيك والتلفزيون الذكي والهاتف. تجربة مجانية 24 ساعة.',
-
-  /* ── ask panel ── */
-  'Quick answers':
-    'إجابات سريعة',
-  'Support 09:00–23:00 GMT+1':
-    'الدعم من 09:00 إلى 23:00 بتوقيت غرينتش+1',
-  'Questions? Answers are one tap away.':
-    'عندك سؤال؟ الجواب على بعد نقرة.',
-  'I have another question':
-    'لدي سؤال آخر',
-  'Hello — I have a question about SwiftChannels.':
-    'مرحبًا — لدي سؤال بخصوص سويفت تشانلز.',
-  'Open quick answers':
-    'افتح الإجابات السريعة',
-  'Close quick answers':
-    'أغلق الإجابات السريعة',
-  'Dismiss':
-    'إغلاق',
-  'How much does it cost?':
-    'كم يكلّف؟',
-  'Two paid plans, both opening the full library: <strong>15 € a month</strong> or <strong>57 € a year</strong> — about 5 € a month. That covers one screen at a time; 2, 3 or 4 screens cost more. There is also a <strong>free 24-hour test</strong> before you pay anything.':
-    'باقتان مدفوعتان، وكلتاهما تفتح المكتبة كاملة: <strong>15 € في الشهر</strong> أو <strong>57 € في السنة</strong> — نحو 5 € شهريًا. وهذا لشاشة واحدة في الوقت نفسه؛ أما 2 أو 3 أو 4 شاشات فتكلّف أكثر. وهناك <strong>تجربة مجانية لمدة 24 ساعة</strong> قبل أن تدفع أي شيء.',
-  'How do I pay?':
-    'كيف أدفع؟',
-  'Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.':
-    'بالبطاقة أو عبر باي بال. أنت لا تدفع في هذا الموقع — أرسل طلبك على واتساب، ونؤكد لك السعر ونرسل رابط الدفع، ويُفتح خطك بمجرد وصول الدفعة.',
-
-  'A TV, laptop, tablet and phone streaming sport, films and series on SwiftChannels':
-    'تلفاز وحاسوب محمول ولوحي وهاتف تعرض الرياضة والأفلام والمسلسلات على سويفت تشانلز',
-
-  /* ── WhatsApp-first ordering ── */
-  'Fill in the form':
-    'املأ النموذج',
-  'Your name, WhatsApp number, the plan you want, how many devices and how you\'d like to pay. It takes about a minute.':
-    'اسمك، رقم واتساب، الباقة التي تريدها، عدد الأجهزة، وطريقة الدفع المفضّلة لديك. يستغرق الأمر دقيقة تقريبًا.',
-  'One button writes your whole order into a WhatsApp message. Press send — nothing is charged and nothing is committed yet.':
-    'زر واحد يكتب طلبك كاملًا في رسالة واتساب. اضغط إرسال — لا يُخصم شيء ولا يلزمك شيء بعد.',
-  'We take it from there':
-    'ونتكفّل نحن بالباقي',
-  'We confirm the price, send you the payment details for the method you chose, and once it\'s settled your login details and setup guide come straight back.':
-    'نؤكد السعر، ونرسل لك تفاصيل الدفع للطريقة التي اخترتها، وبمجرد تسويتها تصلك بيانات الدخول ودليل التركيب فورًا.',
-  'Preferred payment method':
-    'طريقة الدفع المفضّلة',
-  'Pick how you\'d like to pay so we can send the details.':
-    'اختر طريقة الدفع حتى نتمكن من إرسال التفاصيل.',
-  'Send my order on WhatsApp':
-    'أرسل طلبي على واتساب',
-  'Nothing is charged here. Send your order and we reply on WhatsApp with the payment details for the method you chose.':
-    'لا يُخصم شيء هنا. أرسل طلبك ونرد عليك على واتساب بتفاصيل الدفع للطريقة التي اخترتها.',
-  'per year — about 5 a month':
-    'في السنة — نحو 5 € في الشهر',
-  'Order {ref} is open in WhatsApp. Press send there and we\'ll reply with the payment details shortly.':
-    'الطلب {ref} مفتوح في واتساب. اضغط إرسال وسنرد عليك قريبًا بتفاصيل الدفع.',
-  'No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}, or use the WhatsApp button.':
-    'لم يُفتح أي تطبيق بريد على هذا الجهاز. الطلب {ref} منسوخ — الصقه في رسالة إلى {mail}، أو استعمل زر واتساب.',
-
-  /* ── thank-you page ── */
-  '__ty_title': 'تم استلام الدفع — خطوة واحدة متبقية',
-  '__ty_h1': 'تم استلام الدفع. <br><span class="grad">بقيت خطوة واحدة.</span>',
+it: {
+  "New offers, now and then":
+    "Offerte nuove, di tanto in tanto",
+  "Subscribe and we write when there is something worth telling you about — a price drop, a new pack, a channel added. Nothing else, and one click to stop.":
+    "Iscriviti e ti scriviamo quando c’è qualcosa che vale la pena raccontare — un calo di prezzo, un nuovo pacchetto, un canale in più. Nient’altro, e basta un clic per smettere.",
+  "Your email address":
+    "Il tuo indirizzo e-mail",
+  "Subscribe":
+    "Iscriviti",
+  "By subscribing you agree to receive our offers by email. You can unsubscribe in one click.":
+    "Iscrivendoti accetti di ricevere le nostre offerte via e-mail. Puoi disiscriverti con un clic.",
+  "Privacy notice":
+    "Informativa sulla privacy",
+  "Thank you. Check your inbox and confirm your address.":
+    "Grazie. Controlla la posta in arrivo e conferma il tuo indirizzo.",
+  "Invite a friend":
+    "Invita un amico",
+  "Invite one friend. You both get a month.":
+    "Invita un amico. Un mese in regalo per entrambi.",
+  "Applies to the 12-month plan. The monthly plan and the free test don't carry the offer.":
+    "Vale per il piano da 12 mesi. Il piano mensile e la prova gratuita non danno diritto all’offerta.",
+  "Both months are added once your friend's payment is settled.":
+    "Entrambi i mesi vengono aggiunti una volta saldato il pagamento del tuo amico.",
+  "Invite as many friends as you like — each one adds another 30 days.":
+    "Invita tutti gli amici che vuoi — ognuno aggiunge altri 30 giorni.",
+  "Your invite link":
+    "Il tuo link d’invito",
+  "Appears here after your first order":
+    "Compare qui dopo il tuo primo ordine",
+  "Copy invite link":
+    "Copia il link d’invito",
+  "Link copied":
+    "Link copiato",
+  "Your reference is created the moment you send an order, and it also sits at the top of the email we send you.":
+    "Il tuo riferimento viene creato nel momento in cui invii un ordine e si trova anche in cima all’e-mail che ti mandiamo.",
+  "Invited by":
+    "Invitato da",
+  "An invite code looks like ORD-4CZWE. Leave it empty if you don't have one.":
+    "Un codice d’invito ha questo aspetto: ORD-4CZWE. Lascia vuoto se non ne hai uno.",
+  "A friend invited you — 30 days are added to a 12-month plan, for both of you.":
+    "Un amico ti ha invitato — 30 giorni in più su un piano da 12 mesi, per entrambi.",
+  "A montage of athletes from tennis, motorsport, cricket, rugby and athletics":
+    "Un montaggio di atleti di tennis, motorsport, cricket, rugby e atletica",
+  "Two combat-sports fighters facing each other before a bout":
+    "Due lottatori uno di fronte all’altro prima di un incontro",
+  "A montage of American team-sport players with league trophies":
+    "Un montaggio di giocatori di sport di squadra americani con i trofei dei rispettivi campionati",
+  "A football on the grass of a floodlit stadium at night":
+    "Un pallone da calcio sull’erba di uno stadio illuminato di notte",
+  "The numbers 24:7 handwritten in white on a black background":
+    "I numeri 24:7 scritti a mano in bianco su sfondo nero",
+  "Water droplets and melting ice on a clear surface":
+    "Gocce d’acqua e ghiaccio che si scioglie su una superficie trasparente",
+  "The word replay in white on a bright pink background":
+    "La parola replay in bianco su sfondo rosa acceso",
+  "The words 4K Ultra HD in gold lettering":
+    "La scritta 4K Ultra HD in lettere dorate",
+  "A grid of film and series poster artwork":
+    "Una griglia di locandine di film e serie",
+  "A curved wall of television screens showing many different channels at once":
+    "Una parete curva di schermi televisivi che mostrano molti canali diversi contemporaneamente",
+  "Quick answers":
+    "Risposte rapide",
+  "Support 09:00–23:00 GMT+1":
+    "Assistenza 09:00–23:00 GMT+1",
+  "Questions? Answers are one tap away.":
+    "Domande? Le risposte sono a un tocco di distanza.",
+  "I have another question":
+    "Ho un’altra domanda",
+  "Hello — I have a question about SwiftChannels.":
+    "Salve — ho una domanda su SwiftChannels.",
+  "Open quick answers":
+    "Apri le risposte rapide",
+  "Close quick answers":
+    "Chiudi le risposte rapide",
+  "Dismiss":
+    "Chiudi",
+  "How much does it cost?":
+    "Quanto costa?",
+  "Two paid plans, both opening the full library: <strong>15 € a month</strong> or <strong>57 € a year</strong> — about 5 € a month. That covers one screen at a time; 2, 3 or 4 screens cost more. There is also a <strong>free 24-hour test</strong> before you pay anything.":
+    "Due piani a pagamento, entrambi con l’intera libreria: <strong>15 € al mese</strong> oppure <strong>57 € all’anno</strong> — circa 5 € al mese. Il prezzo copre uno schermo alla volta; 2, 3 o 4 schermi costano di più. C’è anche una <strong>prova gratuita di 24 ore</strong> prima di pagare qualsiasi cosa.",
+  "How do I pay?":
+    "Come si paga?",
+  "Card or PayPal. You do not pay on this website — send your order on WhatsApp, we confirm the price and send you the payment link, and your line opens as soon as the payment lands.":
+    "Carta o PayPal. Non si paga su questo sito — invia il tuo ordine su WhatsApp, noi confermiamo il prezzo e ti mandiamo il link di pagamento, e la tua linea si apre non appena il pagamento arriva.",
+  "A TV, laptop, tablet and phone streaming sport, films and series on SwiftChannels":
+    "Un televisore, un portatile, un tablet e uno smartphone che trasmettono sport, film e serie su SwiftChannels",
+  "Fill in the form":
+    "Compila il modulo",
+  "Your name, WhatsApp number, the plan you want, how many devices and how you'd like to pay. It takes about a minute.":
+    "Il tuo nome, il numero WhatsApp, il piano che desideri, quanti dispositivi e come preferisci pagare. Ci vuole circa un minuto.",
+  "One button writes your whole order into a WhatsApp message. Press send — nothing is charged and nothing is committed yet.":
+    "Un solo pulsante scrive tutto il tuo ordine in un messaggio WhatsApp. Premi invia — non ti viene addebitato nulla e non ti impegni ancora a niente.",
+  "We take it from there":
+    "Al resto pensiamo noi",
+  "We confirm the price, send you the payment details for the method you chose, and once it's settled your login details and setup guide come straight back.":
+    "Confermiamo il prezzo, ti inviamo i dettagli di pagamento per il metodo che hai scelto e, una volta saldato, ti arrivano subito le credenziali e la guida all’installazione.",
+  "Preferred payment method":
+    "Metodo di pagamento preferito",
+  "Pick how you'd like to pay so we can send the details.":
+    "Scegli come preferisci pagare, così possiamo inviarti i dettagli.",
+  "Send my order on WhatsApp":
+    "Invia il mio ordine su WhatsApp",
+  "Nothing is charged here. Send your order and we reply on WhatsApp with the payment details for the method you chose.":
+    "Qui non viene addebitato nulla. Invia il tuo ordine e ti rispondiamo su WhatsApp con i dettagli di pagamento per il metodo che hai scelto.",
+  "per year — about 5 a month":
+    "all’anno — circa 5 al mese",
+  "Order {ref} is open in WhatsApp. Press send there and we'll reply with the payment details shortly.":
+    "L’ordine {ref} è aperto in WhatsApp. Premi invia lì e ti risponderemo a breve con i dettagli di pagamento.",
+  "No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}, or use the WhatsApp button.":
+    "Nessuna app di posta si è aperta su questo dispositivo. L’ordine {ref} è stato copiato — incollalo in un’e-mail a {mail}, oppure usa il pulsante WhatsApp.",
   "We can't open your line until we can match the payment to you. Email us the receipt and your login details come straight back — usually within ten minutes.":
-    'لا يمكننا فتح خطك قبل أن نربط الدفع باسمك. أرسل لنا الإيصال بالبريد الإلكتروني وتعود إليك بيانات الدخول فورًا — عادة في أقل من عشر دقائق.',
-  'Your order': 'طلبك',
-  'Name': 'الاسم',
-  'Payment sent': 'تم إرسال الدفع',
-  'PayPal has your payment.': 'باي بال استلم دفعتك.',
-  'Screenshot your receipt': 'صوّر إيصالك',
-  'The PayPal confirmation page or the email receipt — anything showing the amount and date.':
-    'صفحة تأكيد باي بال أو إيصال البريد الإلكتروني — أي شيء يُظهر المبلغ والتاريخ.',
-  'The button below opens a chat with your order already written. Attach the screenshot with the paperclip, then press send.':
-    'الزر أدناه يفتح محادثة وطلبك مكتوب فيها. أرفق الصورة بمشبك الورق، ثم اضغط إرسال.',
-  'Send my receipt on WhatsApp': 'أرسل إيصالي على واتساب',
-  'Back to the site': 'العودة إلى الموقع',
-  'Your name or order reference': 'اسمك أو رقم الطلب',
+    "Non possiamo attivare la tua linea finché non riusciamo ad abbinare il pagamento a te. Inviaci la ricevuta via e-mail e le tue credenziali arrivano subito — di solito entro dieci minuti.",
+  "Your order":
+    "Il tuo ordine",
+  "Name":
+    "Nome",
+  "Payment sent":
+    "Pagamento inviato",
+  "PayPal has your payment.":
+    "PayPal ha ricevuto il tuo pagamento.",
+  "Screenshot your receipt":
+    "Fai uno screenshot della ricevuta",
+  "The PayPal confirmation page or the email receipt — anything showing the amount and date.":
+    "La pagina di conferma di PayPal o la ricevuta via e-mail — qualsiasi cosa mostri l’importo e la data.",
+  "The button below opens a chat with your order already written. Attach the screenshot with the paperclip, then press send.":
+    "Il pulsante qui sotto apre una chat con il tuo ordine già scritto. Allega lo screenshot con la graffetta, poi premi invia.",
+  "Send my receipt on WhatsApp":
+    "Invia la mia ricevuta su WhatsApp",
+  "Back to the site":
+    "Torna al sito",
+  "Your name or order reference":
+    "Il tuo nome o il riferimento dell’ordine",
   "We couldn't find your order on this device — if you paid from a different browser or phone, just tell us who you are so we can match the payment.":
-    'لم نجد طلبك على هذا الجهاز — إذا دفعت من متصفح أو هاتف آخر، فقط أخبرنا من أنت حتى نتمكن من ربط الدفع.',
-  'e.g. Youssef B. — yearly plan': 'مثال: يوسف ب. — الباقة السنوية',
+    "Non abbiamo trovato il tuo ordine su questo dispositivo — se hai pagato da un altro browser o telefono, dicci semplicemente chi sei così possiamo abbinare il pagamento.",
+  "e.g. Youssef B. — yearly plan":
+    "es. Youssef B. — piano annuale",
   "KEEP THIS RECEIPT UNTIL YOUR LINE IS ACTIVE. IF YOU DON'T HEAR FROM US WITHIN A FEW HOURS DURING SUPPORT TIMES, MESSAGE US AGAIN — YOUR PAYMENT IS SAFE EITHER WAY.":
-    'احتفظ بهذا الإيصال إلى أن يصبح خطك فعّالًا. إذا لم يصلك ردّ خلال بضع ساعات في أوقات الدعم، راسلنا مرة أخرى — دفعتك في أمان على كل حال.',
-  'Terms': 'الشروط',
-
-  'Back to top': 'العودة إلى الأعلى',
-  'Plans': 'الباقات',
-  "What's included": 'ما الذي يشمله',
-  'Devices & apps': 'الأجهزة والتطبيقات',
-  'FAQ': 'الأسئلة الشائعة',
-  'Channels': 'القنوات',
-  'Send my order': 'أرسل طلبي',
-  'Send it in one click': 'أرسلها بنقرة واحدة',
-  'One button hands your whole order to us. Nothing is charged and nothing is committed yet.':
-    'زر واحد يسلّمنا طلبك كاملًا. لا يُخصم شيء ولا تلتزم بشيء بعد.',
-  'One thread with us for setup, renewals and anything that stops working.':
-    'محادثة واحدة معنا للتثبيت والتجديد وأي شيء يتوقف عن العمل.',
-  'Card or PayPal. You do not pay on this website — send your order from this page, we confirm the price by email and send you the payment link, and your line opens as soon as the payment lands.':
-    'بطاقة أو باي بال. لا تدفع على هذا الموقع — أرسل طلبك من هذه الصفحة، ونؤكد لك السعر بالبريد الإلكتروني ونرسل رابط الدفع، ويُفتح خطك فور وصول المبلغ.',
-  'Nothing is charged here. Send your order and we reply by email with the payment details for the method you chose.':
-    'لا يُخصم أي مبلغ هنا. أرسل طلبك وسنرد عليك بالبريد الإلكتروني ببيانات الدفع بالطريقة التي اخترتها.',
-  'Order {ref} copied. Paste it into an email to us.':
-    'تم نسخ الطلب {ref}. الصقه في رسالة بريد إلكتروني إلينا.',
-  'No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}.':
-    'لم يُفتح أي تطبيق بريد على هذا الجهاز. الطلب {ref} منسوخ — الصقه في رسالة إلى {mail}.',
-  'Email my receipt': 'أرسل إيصالي بالبريد',
-  'Email it to us': 'أرسله إلينا بالبريد',
-  'Swipe': 'اسحب',
-  'Everything, on every plan': 'كل شيء، في كل باقة',
-  "One line, one price — sport, films, news and entertainment, with nothing held back on the cheaper plan and nothing sold as an add-on. ESPN, Fox Sports, Sky Sports and beIN Sports are all in it.": 'خط واحد وسعر واحد — رياضة وأفلام وأخبار وترفيه، دون أي انتقاص في الباقة الأرخص ودون إضافات مدفوعة. وتشمل ESPN و Fox Sports و Sky Sports و beIN Sports.',
-  'Included': 'مشمول',
-  'Sport': 'رياضة',
-  'Previous': 'السابق',
-  'Next': 'التالي',
-  'Setup': 'التثبيت',
-  'Setup guide': 'دليل التثبيت',
-  'See the full list →': '← اطّلع على القائمة الكاملة',
-  'Order now': 'اطلب الآن',
-  '__h1': '<span class="hl">كل قنواتك المفضلة،</span> <span class="hl">على <span class="grad">خط واحد</span>.</span>',
-  'Live sports, films, series and news in 4K, HD and SD — with a full programme guide and 7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.':
-    'رياضة مباشرة وأفلام ومسلسلات وأخبار بجودة 4K و HD و SD — مع دليل برامج كامل وإعادة مشاهدة لسبعة أيام. اختر باقة، أخبرنا بجهازك، وتصلك بيانات الدخول خلال دقائق.',
-  'Start the free 24-hour test': 'ابدأ التجربة المجانية 24 ساعة',
-  'See plans and prices': 'اطّلع على الباقات والأسعار',
-  'No contract · Cancel any time · Support 7 days a week':
-    'بدون التزام · إلغاء في أي وقت · دعم 7 أيام في الأسبوع',
-  'Live now': 'مباشر الآن',
-  'days': 'أيام',
-  'Live channels': 'قناة مباشرة',
-  'Films & series on demand': 'فيلم ومسلسل عند الطلب',
-  'Catch-up TV': 'إعادة المشاهدة',
-  'Uptime target': 'نسبة التشغيل المستهدفة',
-
-  'Pay for time, not for channels': 'ادفع مقابل المدة، لا مقابل القنوات',
-  'Every plan opens the same full library. The only things that change are how long it runs and how many screens can play at once.':
-    'كل الباقات تفتح المكتبة الكاملة نفسها. ما يتغير فقط هو مدة الاشتراك وعدد الشاشات التي تعمل في الوقت نفسه.',
-  'Devices watching at the same time': 'الأجهزة التي تشاهد في الوقت نفسه',
-  'One stream at a time. Prices update below.': 'بث واحد في كل مرة. تتحدّث الأسعار أدناه.',
-  '{n} screens can play different channels at once.': '{n} شاشات يمكنها تشغيل قنوات مختلفة في وقت واحد.',
-  'Best value': 'الأفضل قيمة',
-  'Free': 'مجاني',
-  'Free test': 'تجربة مجانية',
-  'Monthly': 'شهري',
-  'Yearly': 'سنوي',
-  '24 hours': '24 ساعة',
-  '30 days': '30 يومًا',
-  '12 months': '12 شهرًا',
-  'One-time, one per household': 'مرة واحدة، واحدة لكل منزل',
-  'per month': 'في الشهر',
-  'per year — about 6 a month': 'في السنة — نحو 6 € في الشهر',
-  'Start the free test': 'ابدأ التجربة المجانية',
-  'Choose {plan}': 'اختر باقة {plan}',
-
-  'The full channel list, nothing held back': 'قائمة القنوات كاملة، دون أي استثناء',
-  'Runs 24 hours from activation': 'تعمل 24 ساعة من لحظة التفعيل',
-  'No card, no deposit, no auto-renewal': 'بدون بطاقة، بدون ضمان، بدون تجديد تلقائي',
-  'Sent within minutes during support hours': 'تُرسل خلال دقائق في أوقات الدعم',
-  '8,000+ live channels and 50,000+ VOD': 'أكثر من 8,000 قناة مباشرة و 50,000 عمل عند الطلب',
-  '7-day catch-up and full programme guide': 'إعادة مشاهدة 7 أيام ودليل برامج كامل',
-  '4K, HD and SD where the source allows': '4K و HD و SD حسب ما يتيحه المصدر',
-  'Free replacement line if yours goes down': 'خط بديل مجاني إذا توقف خطك',
-  'Renew by message — nothing automatic': 'التجديد برسالة — لا شيء تلقائي',
-  'Everything in the monthly plan': 'كل ما في الباقة الشهرية',
-  'By far the cheapest way to run the service': 'أرخص طريقة لاستعمال الخدمة بفارق كبير',
-  'Priority queue for support replies': 'أولوية في الرد من الدعم',
-  'One free device change during the year': 'تغيير جهاز واحد مجانًا خلال السنة',
-
-  'The whole library, on every plan': 'المكتبة كاملة، في كل باقة',
-  'Nothing is held back on the cheaper plan and nothing is sold as an add-on. Sports, films, news and entertainment all come with the same line.':
-    'لا شيء محجوب في الباقة الأرخص ولا شيء يُباع كإضافة. الرياضة والأفلام والأخبار والترفيه تأتي كلها على الخط نفسه.',
-  '8,000+ live channels': 'أكثر من 8,000 قناة مباشرة',
-  'Sports, movies, news and entertainment from more than 50 countries, in one channel list.':
-    'رياضة وأفلام وأخبار وترفيه من أكثر من 50 دولة، في قائمة قنوات واحدة.',
-  '50,000+ on demand': 'أكثر من 50,000 عند الطلب',
-  'Films and full series box sets you can start whenever you like, not just when they air.':
-    'أفلام ومسلسلات كاملة تبدأها متى شئت، وليس فقط وقت العرض.',
-  '4K, HD and SD': '4K و HD و SD',
-  'Quality follows the source and your connection, so the picture stays steady either way.':
-    'الجودة تتبع المصدر واتصالك، فتبقى الصورة ثابتة في الحالتين.',
-  'Guide and catch-up': 'الدليل وإعادة المشاهدة',
-  'A full EPG plus 7 days of catch-up TV, so a match you missed last night is still there.':
-    'دليل برامج كامل مع 7 أيام من إعادة المشاهدة، فالمباراة التي فاتتك البارحة ما زالت موجودة.',
-  'Anti-freeze technology': 'تقنية منع التقطيع',
+    "CONSERVA QUESTA RICEVUTA FINCHÉ LA TUA LINEA NON È ATTIVA. SE NON RICEVI NOSTRE NOTIZIE ENTRO POCHE ORE NEGLI ORARI DI ASSISTENZA, SCRIVICI DI NUOVO — IL TUO PAGAMENTO È COMUNQUE AL SICURO.",
+  "Terms":
+    "Condizioni",
+  "Back to top":
+    "Torna su",
+  "Plans":
+    "Piani",
+  "What's included":
+    "Cosa è incluso",
+  "Devices & apps":
+    "Dispositivi e app",
+  "FAQ":
+    "FAQ",
+  "Channels":
+    "Canali",
+  "Send my order":
+    "Invia il mio ordine",
+  "Send it in one click":
+    "Invialo con un clic",
+  "One button hands your whole order to us. Nothing is charged and nothing is committed yet.":
+    "Un solo pulsante ci consegna tutto il tuo ordine. Non viene addebitato nulla e non ti impegni ancora a niente.",
+  "One thread with us for setup, renewals and anything that stops working.":
+    "Un’unica conversazione con noi per l’installazione, i rinnovi e qualsiasi cosa smetta di funzionare.",
+  "Card or PayPal. You do not pay on this website — send your order from this page, we confirm the price by email and send you the payment link, and your line opens as soon as the payment lands.":
+    "Carta o PayPal. Non si paga su questo sito — invia il tuo ordine da questa pagina, noi confermiamo il prezzo via e-mail e ti mandiamo il link di pagamento, e la tua linea si apre non appena il pagamento arriva.",
+  "Nothing is charged here. Send your order and we reply by email with the payment details for the method you chose.":
+    "Qui non viene addebitato nulla. Invia il tuo ordine e ti rispondiamo via e-mail con i dettagli di pagamento per il metodo che hai scelto.",
+  "Order {ref} copied. Paste it into an email to us.":
+    "Ordine {ref} copiato. Incollalo in un’e-mail da inviarci.",
+  "No email app opened on this device. Order {ref} is copied — paste it into an email to {mail}.":
+    "Nessuna app di posta si è aperta su questo dispositivo. L’ordine {ref} è stato copiato — incollalo in un’e-mail a {mail}.",
+  "Email my receipt":
+    "Invia la ricevuta via e-mail",
+  "Email it to us":
+    "Inviacelo via e-mail",
+  "Swipe":
+    "Scorri",
+  "Everything, on every plan":
+    "Tutto, con ogni piano",
+  "One line, one price — sport, films, news and entertainment, with nothing held back on the cheaper plan and nothing sold as an add-on. ESPN, Fox Sports, Sky Sports and beIN Sports are all in it.":
+    "Una sola linea, un solo prezzo — sport, film, notizie e intrattenimento, senza nulla di escluso nel piano più economico e nulla venduto a parte. ESPN, Fox Sports, Sky Sports e beIN Sports ci sono tutti.",
+  "Included":
+    "Incluso",
+  "Sport":
+    "Sport",
+  "Previous":
+    "Precedente",
+  "Next":
+    "Successivo",
+  "Setup":
+    "Installazione",
+  "Setup guide":
+    "Guida all’installazione",
+  "See the full list →":
+    "Vedi l’elenco completo →",
+  "Order now":
+    "Ordina ora",
+  "Live sports, films, series and news in 4K, HD and SD — with a full programme guide and 7-day catch-up. Pick a plan, tell us your device, and your login details arrive in minutes.":
+    "Sport in diretta, film, serie e notizie in 4K, HD e SD — con guida ai programmi completa e replay fino a 7 giorni. Scegli un piano, dicci qual è il tuo dispositivo e le credenziali arrivano in pochi minuti.",
+  "Start the free 24-hour test":
+    "Inizia la prova gratuita di 24 ore",
+  "See plans and prices":
+    "Vedi piani e prezzi",
+  "No contract · Cancel any time · Support 7 days a week":
+    "Nessun contratto · Disdici quando vuoi · Assistenza 7 giorni su 7",
+  "Live now":
+    "In diretta ora",
+  "days":
+    "giorni",
+  "Live channels":
+    "Canali in diretta",
+  "Films & series on demand":
+    "Film e serie on demand",
+  "Catch-up TV":
+    "Replay TV",
+  "Uptime target":
+    "Disponibilità garantita",
+  "Pay for time, not for channels":
+    "Paghi il tempo, non i canali",
+  "Every plan opens the same full library. The only things that change are how long it runs and how many screens can play at once.":
+    "Ogni piano apre la stessa libreria completa. Cambiano soltanto la durata e quanti schermi possono guardare contemporaneamente.",
+  "Devices watching at the same time":
+    "Dispositivi che guardano contemporaneamente",
+  "One stream at a time. Prices update below.":
+    "Un solo flusso alla volta. I prezzi si aggiornano qui sotto.",
+  "{n} screens can play different channels at once.":
+    "{n} schermi possono guardare canali diversi contemporaneamente.",
+  "Best value":
+    "Miglior rapporto qualità-prezzo",
+  "Free":
+    "Gratis",
+  "Free test":
+    "Prova gratuita",
+  "Monthly":
+    "Mensile",
+  "Yearly":
+    "Annuale",
+  "24 hours":
+    "24 ore",
+  "30 days":
+    "30 giorni",
+  "12 months":
+    "12 mesi",
+  "One-time, one per household":
+    "Una sola volta, una per nucleo familiare",
+  "per month":
+    "al mese",
+  "per year — about 6 a month":
+    "all’anno — circa 6 al mese",
+  "Start the free test":
+    "Inizia la prova gratuita",
+  "Choose {plan}":
+    "Scegli {plan}",
+  "The full channel list, nothing held back":
+    "L’elenco completo dei canali, senza esclusioni",
+  "Runs 24 hours from activation":
+    "Dura 24 ore dall’attivazione",
+  "No card, no deposit, no auto-renewal":
+    "Nessuna carta, nessuna cauzione, nessun rinnovo automatico",
+  "Sent within minutes during support hours":
+    "Inviata in pochi minuti negli orari di assistenza",
+  "8,000+ live channels and 50,000+ VOD":
+    "Oltre 8.000 canali in diretta e oltre 50.000 titoli on demand",
+  "7-day catch-up and full programme guide":
+    "Replay fino a 7 giorni e guida ai programmi completa",
+  "4K, HD and SD where the source allows":
+    "4K, HD e SD dove la fonte lo consente",
+  "Free replacement line if yours goes down":
+    "Linea sostitutiva gratuita se la tua smette di funzionare",
+  "Renew by message — nothing automatic":
+    "Rinnovo con un messaggio — niente di automatico",
+  "Everything in the monthly plan":
+    "Tutto quello che c’è nel piano mensile",
+  "By far the cheapest way to run the service":
+    "Di gran lunga il modo più economico di usare il servizio",
+  "Priority queue for support replies":
+    "Corsia prioritaria per le risposte dell’assistenza",
+  "One free device change during the year":
+    "Un cambio di dispositivo gratuito durante l’anno",
+  "The whole library, on every plan":
+    "L’intera libreria, con ogni piano",
+  "Nothing is held back on the cheaper plan and nothing is sold as an add-on. Sports, films, news and entertainment all come with the same line.":
+    "Nel piano più economico non è escluso nulla e niente viene venduto a parte. Sport, film, notizie e intrattenimento arrivano tutti con la stessa linea.",
+  "8,000+ live channels":
+    "Oltre 8.000 canali in diretta",
+  "Sports, movies, news and entertainment from more than 50 countries, in one channel list.":
+    "Sport, film, notizie e intrattenimento da più di 50 Paesi, in un unico elenco di canali.",
+  "50,000+ on demand":
+    "Oltre 50.000 titoli on demand",
+  "Films and full series box sets you can start whenever you like, not just when they air.":
+    "Film e serie complete che puoi iniziare quando vuoi, non solo quando vanno in onda.",
+  "4K, HD and SD":
+    "4K, HD e SD",
+  "Quality follows the source and your connection, so the picture stays steady either way.":
+    "La qualità segue la fonte e la tua connessione, così l’immagine resta stabile in ogni caso.",
+  "Guide and catch-up":
+    "Guida e replay",
+  "A full EPG plus 7 days of catch-up TV, so a match you missed last night is still there.":
+    "Una guida EPG completa più 7 giorni di replay, così la partita che ti sei perso ieri sera è ancora lì.",
+  "Anti-freeze technology":
+    "Tecnologia anti-blocco",
   "Load balancing on the provider's side keeps the stream from stalling during big matches.":
-    'توزيع الحمل من جهة المزوّد يمنع توقف البث أثناء المباريات الكبرى.',
-  '24/7 support': 'دعم على مدار الساعة',
-  'One thread on WhatsApp for setup, renewals and anything that stops working.':
-    'محادثة واحدة على واتساب للتركيب والتجديد وأي شيء يتوقف عن العمل.',
-
-  'Live sports': 'الرياضة المباشرة',
-  'Every match night, no blackout': 'كل ليلة مباراة، دون انقطاع',
-  'All major sports channels are included: ESPN, Fox Sports, Sky Sports and beIN Sports, plus international sport from over 50 countries.':
-    'كل القنوات الرياضية الكبرى مشمولة: ESPN و Fox Sports و Sky Sports و beIN Sports، إضافة إلى الرياضة العالمية من أكثر من 50 دولة.',
-  'Football': 'كرة القدم',
-  'Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Champions League and Botola.':
-    'البريميرليغ والليغا والكالتشيو والبوندسليغا والليغ 1 ودوري الأبطال والبطولة المغربية.',
-  'US leagues': 'الدوريات الأمريكية',
-  'NFL, NBA, MLB and NHL through the full regular season and the play-offs.':
-    'NFL و NBA و MLB و NHL طوال الموسم العادي والأدوار الإقصائية.',
-  'Combat sports': 'رياضات القتال',
-  'UFC and boxing, including the pay-per-view events, on the night they happen.':
-    'UFC والملاكمة، بما فيها نزالات الدفع لكل مشاهدة، ليلة إقامتها.',
-  'Everything else': 'وكل ما عدا ذلك',
-  'Tennis, motorsport, cycling, rugby, athletics and cricket across the international feeds.':
-    'التنس وسباقات السيارات والدراجات والرغبي وألعاب القوى والكريكت على القنوات العالمية.',
-
-  'Your connection': 'اتصالك',
-  'What internet speed you need': 'سرعة الإنترنت التي تحتاجها',
+    "Il bilanciamento del carico sui server del fornitore evita che il flusso si blocchi durante le partite più seguite.",
+  "24/7 support":
+    "Assistenza 24 ore su 24",
+  "One thread on WhatsApp for setup, renewals and anything that stops working.":
+    "Un’unica conversazione su WhatsApp per l’installazione, i rinnovi e qualsiasi cosa smetta di funzionare.",
+  "Live sports":
+    "Sport in diretta",
+  "Every match night, no blackout":
+    "Ogni sera di partite, senza oscuramenti",
+  "All major sports channels are included: ESPN, Fox Sports, Sky Sports and beIN Sports, plus international sport from over 50 countries.":
+    "Sono inclusi tutti i principali canali sportivi: ESPN, Fox Sports, Sky Sports e beIN Sports, oltre allo sport internazionale di più di 50 Paesi.",
+  "Football":
+    "Calcio",
+  "Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Champions League and Botola.":
+    "Premier League, Liga, Serie A, Bundesliga, Ligue 1, Champions League e Botola.",
+  "US leagues":
+    "Campionati USA",
+  "NFL, NBA, MLB and NHL through the full regular season and the play-offs.":
+    "NFL, NBA, MLB e NHL per tutta la stagione regolare e i play-off.",
+  "Combat sports":
+    "Sport da combattimento",
+  "UFC and boxing, including the pay-per-view events, on the night they happen.":
+    "UFC e boxe, eventi pay-per-view compresi, la sera stessa in cui si disputano.",
+  "Everything else":
+    "Tutto il resto",
+  "Tennis, motorsport, cycling, rugby, athletics and cricket across the international feeds.":
+    "Tennis, motorsport, ciclismo, rugby, atletica e cricket sui canali internazionali.",
+  "Your connection":
+    "La tua connessione",
+  "What internet speed you need":
+    "Che velocità di connessione serve",
   "Adaptive streaming adjusts the quality to whatever your line can carry, so you don't need fibre to watch comfortably. These are the speeds we'd aim for.":
-    'البث التكيّفي يضبط الجودة حسب ما يتحمله خطك، فلا تحتاج إلى الألياف لتشاهد بارتياح. هذه هي السرعات التي ننصح بها.',
-  'A wired connection or 5 GHz Wi-Fi gives a noticeably steadier picture than 2.4 GHz.':
-    'الاتصال السلكي أو واي فاي 5 GHz يعطي صورة أثبت بوضوح من 2.4 GHz.',
-  '4K channels': 'قنوات 4K',
-  'Best on a wired connection. Ultra HD sport and films.': 'الأفضل عبر اتصال سلكي. رياضة وأفلام بدقة فائقة.',
-  'HD channels': 'قنوات HD',
-  'The sweet spot for most homes and most channels.': 'الخيار المناسب لأغلب المنازل وأغلب القنوات.',
-  'SD channels': 'قنوات SD',
-  'Works on mobile data and slower ADSL lines.': 'تعمل على بيانات الهاتف وخطوط ADSL البطيئة.',
-
-  'Works on what you already own': 'يعمل على ما تملكه أصلًا',
-  'Every app below supports the M3U playlist format we send you. Tell us your device when you order and we include the setup steps written for it.':
-    'كل التطبيقات أدناه تدعم صيغة قائمة M3U التي نرسلها لك. أخبرنا بجهازك عند الطلب ونرفق لك خطوات التركيب المكتوبة له.',
-  'Most devices': 'أغلب الأجهزة',
-  'The default choice. Android, iOS, Windows, Mac and most TV boxes.':
-    'الخيار الافتراضي. أندرويد و iOS وويندوز وماك وأغلب أجهزة الاستقبال.',
-  'Apple devices': 'أجهزة أبل',
-  'Best behaved on iPhone, iPad and Apple TV.': 'الأكثر استقرارًا على آيفون وآيباد وآبل تي في.',
-  'The nicest guide and recording experience on Android TV and Firestick.':
-    'أفضل دليل وأفضل تسجيل على أندرويد تي في وفاير ستيك.',
-  'Samsung & LG': 'سامسونغ و LG',
-  'Installs straight from the TV store on Samsung and LG sets.':
-    'يُثبَّت مباشرة من متجر التلفاز على أجهزة سامسونغ و LG.',
-  'Samsung & LG TV': 'تلفاز سامسونغ و LG',
-  'Fire Stick': 'فاير ستيك',
-  'MAG box': 'جهاز MAG',
-  'Apple TV': 'آبل تي في',
-  'Phone & tablet': 'هاتف ولوحي',
-  'Computer': 'حاسوب',
-  'Android TV': 'أندرويد تي في',
-
-  'How it works': 'كيف تعمل',
-  'Three steps, one message': 'ثلاث خطوات، رسالة واحدة',
-  'STEP 01': 'الخطوة 01',
-  'STEP 02': 'الخطوة 02',
-  'STEP 03': 'الخطوة 03',
-  'Choose and pay': 'اختر وادفع',
-  'Pick your plan and payment method in the form below. The payment details appear straight away — card, Cash Plus, Wafacash or PayPal.':
-    'اختر باقتك وطريقة الدفع في النموذج أدناه. تظهر تفاصيل الدفع فورًا — بطاقة أو كاش بلوس أو وفاكاش أو باي بال.',
-  'Screenshot the receipt': 'صوّر الإيصال',
-  'The confirmation page, the SMS, or a photo of the paper receipt from the agent. Anything that shows the amount and the date.':
-    'صفحة التأكيد أو الرسالة القصيرة أو صورة للإيصال الورقي من الوكالة. أي شيء يُظهر المبلغ والتاريخ.',
-  'Send it on WhatsApp': 'أرسله على واتساب',
-  'One button writes your whole order into a WhatsApp message. Attach the screenshot, press send, and your login details come back in minutes.':
-    'زر واحد يكتب طلبك كاملًا في رسالة واتساب. أرفق الصورة، اضغط إرسال، وتعود إليك بيانات الدخول خلال دقائق.',
-
-  'Order': 'الطلب',
-  'Tell us what you need': 'أخبرنا بما تحتاجه',
+    "Lo streaming adattivo regola la qualità in base a quello che la tua linea riesce a reggere, perciò non serve la fibra per guardare comodamente. Queste sono le velocità a cui puntare.",
+  "A wired connection or 5 GHz Wi-Fi gives a noticeably steadier picture than 2.4 GHz.":
+    "Una connessione via cavo o un Wi-Fi a 5 GHz dà un’immagine molto più stabile rispetto ai 2,4 GHz.",
+  "4K channels":
+    "Canali 4K",
+  "Best on a wired connection. Ultra HD sport and films.":
+    "Meglio con una connessione via cavo. Sport e film in Ultra HD.",
+  "HD channels":
+    "Canali HD",
+  "The sweet spot for most homes and most channels.":
+    "Il compromesso ideale per la maggior parte delle case e dei canali.",
+  "SD channels":
+    "Canali SD",
+  "Works on mobile data and slower ADSL lines.":
+    "Funziona con la rete mobile e con le linee ADSL più lente.",
+  "Works on what you already own":
+    "Funziona con quello che hai già",
+  "Every app below supports the M3U playlist format we send you. Tell us your device when you order and we include the setup steps written for it.":
+    "Tutte le app qui sotto supportano il formato playlist M3U che ti inviamo. Indicaci il tuo dispositivo al momento dell’ordine e includiamo le istruzioni scritte apposta per quello.",
+  "Most devices":
+    "Quasi tutti i dispositivi",
+  "The default choice. Android, iOS, Windows, Mac and most TV boxes.":
+    "La scelta predefinita. Android, iOS, Windows, Mac e la maggior parte dei box TV.",
+  "Apple devices":
+    "Dispositivi Apple",
+  "Best behaved on iPhone, iPad and Apple TV.":
+    "Il più affidabile su iPhone, iPad e Apple TV.",
+  "The nicest guide and recording experience on Android TV and Firestick.":
+    "La migliore guida e la migliore registrazione su Android TV e Firestick.",
+  "Samsung & LG":
+    "Samsung e LG",
+  "Installs straight from the TV store on Samsung and LG sets.":
+    "Si installa direttamente dallo store dei televisori Samsung e LG.",
+  "Samsung & LG TV":
+    "TV Samsung e LG",
+  "Fire Stick":
+    "Fire Stick",
+  "MAG box":
+    "Box MAG",
+  "Apple TV":
+    "Apple TV",
+  "Phone & tablet":
+    "Telefono e tablet",
+  "Computer":
+    "Computer",
+  "Android TV":
+    "Android TV",
+  "How it works":
+    "Come funziona",
+  "Three steps, one message":
+    "Tre passaggi, un solo messaggio",
+  "STEP 01":
+    "PASSO 01",
+  "STEP 02":
+    "PASSO 02",
+  "STEP 03":
+    "PASSO 03",
+  "Choose and pay":
+    "Scegli e paga",
+  "Pick your plan and payment method in the form below. The payment details appear straight away — card, Cash Plus, Wafacash or PayPal.":
+    "Scegli il piano e il metodo di pagamento nel modulo qui sotto. I dettagli di pagamento compaiono subito — carta, Cash Plus, Wafacash o PayPal.",
+  "Screenshot the receipt":
+    "Fai uno screenshot della ricevuta",
+  "The confirmation page, the SMS, or a photo of the paper receipt from the agent. Anything that shows the amount and the date.":
+    "La pagina di conferma, l’SMS o una foto della ricevuta cartacea dell’agente. Qualsiasi cosa mostri l’importo e la data.",
+  "Send it on WhatsApp":
+    "Invialo su WhatsApp",
+  "One button writes your whole order into a WhatsApp message. Attach the screenshot, press send, and your login details come back in minutes.":
+    "Un solo pulsante scrive tutto il tuo ordine in un messaggio WhatsApp. Allega lo screenshot, premi invia e le tue credenziali arrivano in pochi minuti.",
+  "Order":
+    "Ordine",
+  "Tell us what you need":
+    "Dicci di cosa hai bisogno",
   "This form doesn't send anything on its own — it writes your order into a message that you send us. You keep a copy either way.":
-    'هذا النموذج لا يرسل شيئًا من تلقاء نفسه — بل يكتب طلبك في رسالة ترسلها أنت إلينا. وتبقى لديك نسخة في الحالتين.',
-  'Full name': 'الاسم الكامل',
-  'How we should address you': 'كيف نناديك',
-  'Add your name so we can label the account.': 'اكتب اسمك حتى نتمكن من تسمية الحساب.',
-  'WhatsApp number': 'رقم واتساب',
-  'We send your credentials here. Include the country code.':
-    'نرسل بيانات الدخول إلى هذا الرقم. أضف رمز الدولة.',
-  'Email': 'البريد الإلكتروني',
-  '— optional backup': '— احتياطي اختياري',
-  '— optional': '— اختياري',
-  "That email address doesn't look complete.": 'هذا البريد الإلكتروني يبدو ناقصًا.',
-  'Plan': 'الباقة',
-  'Simultaneous devices': 'الأجهزة المتزامنة',
-  '1 device': 'جهاز واحد',
-  '2 devices': 'جهازان',
-  '3 devices': '3 أجهزة',
-  '4 devices': '4 أجهزة',
-  '{n} devices': '{n} أجهزة',
-  'What will you watch on?': 'على أي جهاز ستشاهد؟',
-  'Select a device': 'اختر جهازًا',
-  'Samsung Smart TV': 'تلفاز سامسونغ الذكي',
-  'LG Smart TV': 'تلفاز LG الذكي',
-  'Android TV box': 'جهاز أندرويد تي في',
-  'Amazon Fire Stick': 'أمازون فاير ستيك',
-  'Roku': 'روكو',
-  'Phone or tablet': 'هاتف أو لوحي',
-  'Windows, Mac or Linux': 'ويندوز أو ماك أو لينكس',
-  'Other': 'آخر',
-  'Pick a device so we send the right setup steps.':
-    'اختر جهازًا حتى نرسل لك خطوات التركيب الصحيحة.',
-  'Device MAC address': 'عنوان MAC للجهاز',
-  'This device needs a MAC in the format 00:1A:79:XX:XX:XX.':
-    'هذا الجهاز يحتاج عنوان MAC بالصيغة 00:1A:79:XX:XX:XX.',
-  'How would you like to pay?': 'كيف تريد الدفع؟',
-  'Select a method': 'اختر طريقة',
-  'Ready in': 'جاهز خلال',
-  '~10 minutes': '‏~10 دقائق',
-  'Backup servers': 'خوادم احتياطية',
-  'Filled in from what you typed last time.':
-    'مملوء بما أدخلته في المرة الماضية.',
-  'Clear the saved details':
-    'امسح البيانات المحفوظة',
-  'Credit card': 'بطاقة بنكية',
-  'Cash Plus (Morocco only)': 'كاش بلوس (المغرب فقط)',
-  'Wafacash (Morocco only)': 'وفاكاش (المغرب فقط)',
-  'Choose a payment method.': 'اختر طريقة دفع.',
-  'Anything else': 'شيء آخر',
+    "Questo modulo non invia nulla da solo — scrive il tuo ordine in un messaggio che sei tu a mandarci. In ogni caso ne conservi una copia.",
+  "Full name":
+    "Nome e cognome",
+  "How we should address you":
+    "Come dobbiamo chiamarti",
+  "Add your name so we can label the account.":
+    "Inserisci il tuo nome così possiamo intestare l’account.",
+  "WhatsApp number":
+    "Numero WhatsApp",
+  "We send your credentials here. Include the country code.":
+    "Ti inviamo qui le credenziali. Includi il prefisso internazionale.",
+  "Email":
+    "E-mail",
+  "— optional backup":
+    "— riserva facoltativa",
+  "— optional":
+    "— facoltativo",
+  "That email address doesn't look complete.":
+    "Questo indirizzo e-mail non sembra completo.",
+  "Plan":
+    "Piano",
+  "Simultaneous devices":
+    "Dispositivi simultanei",
+  "1 device":
+    "1 dispositivo",
+  "2 devices":
+    "2 dispositivi",
+  "3 devices":
+    "3 dispositivi",
+  "4 devices":
+    "4 dispositivi",
+  "{n} devices":
+    "{n} dispositivi",
+  "What will you watch on?":
+    "Su cosa guarderai?",
+  "Select a device":
+    "Scegli un dispositivo",
+  "Samsung Smart TV":
+    "Smart TV Samsung",
+  "LG Smart TV":
+    "Smart TV LG",
+  "Android TV box":
+    "Box Android TV",
+  "Amazon Fire Stick":
+    "Amazon Fire Stick",
+  "Roku":
+    "Roku",
+  "Phone or tablet":
+    "Telefono o tablet",
+  "Windows, Mac or Linux":
+    "Windows, Mac o Linux",
+  "Other":
+    "Altro",
+  "Pick a device so we send the right setup steps.":
+    "Scegli un dispositivo così ti inviamo le istruzioni giuste.",
+  "Device MAC address":
+    "Indirizzo MAC del dispositivo",
+  "This device needs a MAC in the format 00:1A:79:XX:XX:XX.":
+    "Questo dispositivo richiede un indirizzo MAC nel formato 00:1A:79:XX:XX:XX.",
+  "How would you like to pay?":
+    "Come preferisci pagare?",
+  "Select a method":
+    "Scegli un metodo",
+  "Ready in":
+    "Pronta in",
+  "~10 minutes":
+    "~10 minuti",
+  "Backup servers":
+    "Server di riserva",
+  "Filled in from what you typed last time.":
+    "Compilato con quello che avevi scritto l’ultima volta.",
+  "Clear the saved details":
+    "Cancella i dati salvati",
+  "Credit card":
+    "Carta di credito",
+  "Cash Plus (Morocco only)":
+    "Cash Plus (solo Marocco)",
+  "Wafacash (Morocco only)":
+    "Wafacash (solo Marocco)",
+  "Choose a payment method.":
+    "Scegli un metodo di pagamento.",
+  "Anything else":
+    "Altro da segnalare",
   "Country packs you want, sports you follow, a channel you can't do without.":
-    'باقات الدول التي تريدها، الرياضات التي تتابعها، قناة لا تستغني عنها.',
-  '__consent': 'أطلب لحساب منزلي الخاص وأوافق على <a href="legal.html" target="_blank">الشروط وسياسة الاسترجاع وإشعار الخصوصية</a>. وأطلب إرسال بيانات الدخول فورًا، وأفهم أن حقي في التراجع خلال 14 يومًا ينتهي بمجرد تسليمها.',
-  'Tick the box to continue.': 'ضع علامة في المربع للمتابعة.',
-
-  'Pay before you send': 'ادفع قبل الإرسال',
-  'Pay by Credit card': 'الدفع بالبطاقة البنكية',
-  'Pay by PayPal': 'الدفع عبر باي بال',
-  'Pay by Cash Plus (Morocco only)': 'الدفع عبر كاش بلوس',
-  'Pay by Wafacash (Morocco only)': 'الدفع عبر وفاكاش',
-  'Pay now': 'ادفع الآن',
-  'Pay by card': 'الدفع بالبطاقة',
-  'Pay with PayPal': 'الدفع عبر باي بال',
-  'Copy': 'نسخ',
-  'Copied': 'تم النسخ',
-  'Recipient name': 'اسم المستفيد',
-  'Phone number': 'رقم الهاتف',
-  'City': 'المدينة',
-  'Pay the amount above': 'ادفع المبلغ أعلاه',
-  'Use the exact total so we can match it to your order.':
-    'استعمل المبلغ بالضبط حتى نتمكن من ربطه بطلبك.',
-  'The confirmation page, the SMS, or a photo of the paper receipt.':
-    'صفحة التأكيد أو الرسالة القصيرة أو صورة الإيصال الورقي.',
-  'Press the button in the summary — then attach the screenshot to the message.':
-    'اضغط الزر في ملخّص الطلب — ثم أرفق الصورة بالرسالة.',
-  'Pay by debit or credit card on the secure PayPal checkout page — in most cases you do not need a PayPal account. Screenshot the confirmation page when it is done.':
-    'ادفع ببطاقة الخصم أو الائتمان على صفحة باي بال الآمنة — في أغلب الحالات لا تحتاج حساب باي بال. صوّر صفحة التأكيد بعد الانتهاء.',
-  'Pay from your PayPal balance or a linked card, then screenshot the receipt.':
-    'ادفع من رصيد باي بال أو من بطاقة مرتبطة، ثم صوّر الإيصال.',
-  'Go to any Cash Plus agent and send the amount to the name and number below. Keep the paper receipt and photograph it.':
-    'توجّه إلى أي وكالة كاش بلوس وأرسل المبلغ إلى الاسم والرقم أدناه. احتفظ بالإيصال الورقي وصوّره.',
-  'Any Wafacash counter can send this. Ask for a cash transfer to the name below and keep the receipt.':
-    'أي شباك وفاكاش يمكنه إرسال المبلغ. اطلب تحويلًا نقديًا إلى الاسم أدناه واحتفظ بالإيصال.',
-
-  'Order summary': 'ملخّص الطلب',
-  'Runs for': 'المدة',
-  'Devices': 'الأجهزة',
-  'Watching on': 'المشاهدة على',
-  'Not chosen': 'لم يُختر',
-  'Not needed': 'غير مطلوب',
-  'Payment': 'الدفع',
-  'Total': 'المجموع',
-  'Send order on WhatsApp': 'أرسل الطلب على واتساب',
-  'Send payment proof on WhatsApp': 'أرسل إثبات الدفع على واتساب',
-  'Copy order details': 'انسخ تفاصيل الطلب',
-  'Send by email instead': 'أرسل بالبريد بدلًا من ذلك',
-  'Nothing is charged here. We confirm the price in the chat before you pay, then open your line.':
-    'لا يُخصم شيء هنا. نؤكد السعر في المحادثة قبل أن تدفع، ثم نفتح خطك.',
-  'Nothing is charged here. Free tests skip payment entirely — send the order and we open your line.':
-    'لا يُخصم شيء هنا. التجربة المجانية بلا دفع إطلاقًا — أرسل الطلب ونفتح خطك.',
-  'Pay first using the details in the form, screenshot the receipt, then send it here. We open your line as soon as we see it.':
-    'ادفع أولًا باستعمال التفاصيل الموجودة في النموذج، صوّر الإيصال، ثم أرسله هنا. نفتح خطك فور رؤيته.',
-  'Order {ref} is open in WhatsApp. Press send there and we\'ll reply shortly.':
-    'الطلب {ref} مفتوح في واتساب. اضغط إرسال هناك وسنرد بعد قليل.',
-  'Order {ref} is open in WhatsApp. Attach your payment screenshot with the paperclip, then press send.':
-    'الطلب {ref} مفتوح في واتساب. أرفق صورة الدفع بمشبك الورق، ثم اضغط إرسال.',
-  'Order {ref} is open in your email app.': 'الطلب {ref} مفتوح في تطبيق البريد لديك.',
-  'Order {ref} copied. Paste it to us on WhatsApp or email.':
-    'تم نسخ الطلب {ref}. الصقه لنا على واتساب أو بالبريد.',
-
-  'Questions': 'أسئلة',
-  'Before you order': 'قبل أن تطلب',
-  'Try it tonight. Decide tomorrow.': 'جرّبها الليلة. وقرّر غدًا.',
-  'The 24-hour test is the whole service, unrestricted. No card, no deposit, no automatic renewal — just watch it on your own TV and see.':
-    'تجربة 24 ساعة هي الخدمة كاملة بلا قيود. بدون بطاقة، بدون ضمان، بدون تجديد تلقائي — شاهدها على تلفازك واحكم بنفسك.',
-  'Compare the plans': 'قارن بين الباقات',
-  'Subscriptions opened and supported by us, delivered on a licensed streaming platform.':
-    'اشتراكات نفتحها وندعمها بأنفسنا، وتُقدَّم عبر منصة بث مرخّصة.',
-  'Pages': 'الصفحات',
-  'Terms & privacy': 'الشروط والخصوصية',
-  'Talk to us': 'تواصل معنا',
-  'WhatsApp': 'واتساب',
-  'SUPPORT 09:00–23:00 GMT+1': 'الدعم من 09:00 إلى 23:00 بتوقيت غرينتش+1',
-  '__footlegal': 'نحن نعيد بيع الوصول إلى منصة بث تابعة لطرف ثالث. المحتوى مرخّص ويُقدَّم من مشغّل تلك المنصة. الاشتراكات مخصّصة للاستعمال المنزلي الخاص؛ ولا يُسمح بإعادة التوزيع أو العرض العمومي.<br><a href="legal.html">شروط الخدمة · سياسة الاسترجاع · إشعار الخصوصية</a>',
-  'MADE IN MOROCCO': 'صُنع في المغرب',
-
-  '4K · HD · SD': '4K · HD · SD',
-  '7-day catch-up': 'إعادة مشاهدة 7 أيام',
-  '8,000+ channels': 'أكثر من 8,000 قناة',
-  '50,000+ films & series': 'أكثر من 50,000 فيلم ومسلسل',
-  'Anti-freeze': 'منع التقطيع',
-  'Full EPG': 'دليل برامج كامل',
-  '24/7 support': 'دعم على مدار الساعة',
-  '50+ countries': 'أكثر من 50 دولة',
-  'No contract': 'بدون التزام',
-
-  "What's included?": 'ما الذي يشمله الاشتراك؟',
-  'All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support.':
-    'كل الباقات تشمل <strong>أكثر من 8,000 قناة مباشرة</strong> تغطي الرياضة والأفلام والأخبار والترفيه، و<strong>أكثر من 50,000 فيلم ومسلسل عند الطلب</strong>، وجودة 4K و HD، ودليل برامج كامل، وإعادة مشاهدة، ودعمًا على مدار الساعة.',
-  'Can I watch live sports and PPV events?': 'هل يمكنني مشاهدة الرياضة المباشرة ونزالات الدفع لكل مشاهدة؟',
-  'Yes. <strong>NFL, NBA, MLB, NHL, Premier League, UFC and boxing</strong> are all there, along with the major sports channels — ESPN, Fox Sports, Sky Sports and beIN Sports — plus international sport from more than 50 countries.':
-    'نعم. <strong>NFL و NBA و MLB و NHL والبريميرليغ و UFC والملاكمة</strong> كلها موجودة، مع القنوات الرياضية الكبرى — ESPN و Fox Sports و Sky Sports و beIN Sports — إضافة إلى الرياضة العالمية من أكثر من 50 دولة.',
-  'What devices are supported?': 'ما الأجهزة المدعومة؟',
-  'It works on Smart TVs (Samsung, LG, Android TV), phones and tablets (iOS and Android), computers (Windows, Mac and Linux), Fire Stick, Roku, Apple TV and more. Use an app like <strong>GSE Smart IPTV</strong> or <strong>IPTV Smarters</strong>.':
-    'يعمل على التلفازات الذكية (سامسونغ و LG وأندرويد تي في)، والهواتف واللوحيات (iOS وأندرويد)، والحواسيب (ويندوز وماك ولينكس)، وفاير ستيك وروكو وآبل تي في وغيرها. استعمل تطبيقًا مثل <strong>GSE Smart IPTV</strong> أو <strong>IPTV Smarters</strong>.',
-  'Which IPTV app should I use on my device?': 'أي تطبيق IPTV أستعمل على جهازي؟',
-  'We recommend <strong>IPTV Smarters Pro</strong> for most devices, <strong>GSE Smart IPTV</strong> for Apple devices, <strong>TiviMate</strong> for Android TV and <strong>Smart IPTV</strong> for Samsung and LG sets. All of them support the M3U playlist format we send you.':
-    'ننصح بـ <strong>IPTV Smarters Pro</strong> لأغلب الأجهزة، و<strong>GSE Smart IPTV</strong> لأجهزة أبل، و<strong>TiviMate</strong> لأندرويد تي في، و<strong>Smart IPTV</strong> لتلفازات سامسونغ و LG. وكلها تدعم صيغة M3U التي نرسلها لك.',
-  'What internet speed do I need for 4K streaming?': 'ما السرعة اللازمة للبث بجودة 4K؟',
-  'For the best picture: <strong>25 Mbps or more</strong> for 4K channels, <strong>15 Mbps</strong> for HD and <strong>5 Mbps</strong> for SD. Adaptive streaming adjusts the quality automatically to match your connection.':
-    'لأفضل صورة: <strong>25 ميغابت/ث أو أكثر</strong> لقنوات 4K، و<strong>15 ميغابت/ث</strong> لـ HD، و<strong>5 ميغابت/ث</strong> لـ SD. والبث التكيّفي يضبط الجودة تلقائيًا حسب اتصالك.',
-  'Is the free 24-hour test really free?': 'هل تجربة 24 ساعة مجانية فعلًا؟',
+    "I pacchetti Paese che ti interessano, gli sport che segui, un canale di cui non puoi fare a meno.",
+  "Tick the box to continue.":
+    "Spunta la casella per continuare.",
+  "Pay before you send":
+    "Paga prima di inviare",
+  "Pay by Credit card":
+    "Paga con carta di credito",
+  "Pay by PayPal":
+    "Paga con PayPal",
+  "Pay by Cash Plus (Morocco only)":
+    "Paga con Cash Plus (solo Marocco)",
+  "Pay by Wafacash (Morocco only)":
+    "Paga con Wafacash (solo Marocco)",
+  "Pay now":
+    "Paga ora",
+  "Pay by card":
+    "Paga con carta",
+  "Pay with PayPal":
+    "Paga con PayPal",
+  "Copy":
+    "Copia",
+  "Copied":
+    "Copiato",
+  "Recipient name":
+    "Nome del destinatario",
+  "Phone number":
+    "Numero di telefono",
+  "City":
+    "Città",
+  "Pay the amount above":
+    "Paga l’importo indicato sopra",
+  "Use the exact total so we can match it to your order.":
+    "Usa il totale esatto così possiamo abbinarlo al tuo ordine.",
+  "The confirmation page, the SMS, or a photo of the paper receipt.":
+    "La pagina di conferma, l’SMS o una foto della ricevuta cartacea.",
+  "Press the button in the summary — then attach the screenshot to the message.":
+    "Premi il pulsante nel riepilogo — poi allega lo screenshot al messaggio.",
+  "Pay by debit or credit card on the secure PayPal checkout page — in most cases you do not need a PayPal account. Screenshot the confirmation page when it is done.":
+    "Paga con carta di debito o di credito sulla pagina sicura di PayPal — nella maggior parte dei casi non serve un account PayPal. Quando hai finito, fai uno screenshot della pagina di conferma.",
+  "Pay from your PayPal balance or a linked card, then screenshot the receipt.":
+    "Paga con il saldo PayPal o con una carta collegata, poi fai uno screenshot della ricevuta.",
+  "Go to any Cash Plus agent and send the amount to the name and number below. Keep the paper receipt and photograph it.":
+    "Recati in una qualsiasi agenzia Cash Plus e invia l’importo al nome e al numero indicati qui sotto. Conserva la ricevuta cartacea e fotografala.",
+  "Any Wafacash counter can send this. Ask for a cash transfer to the name below and keep the receipt.":
+    "Qualsiasi sportello Wafacash può effettuare l’operazione. Chiedi un trasferimento in contanti al nome indicato qui sotto e conserva la ricevuta.",
+  "Order summary":
+    "Riepilogo dell’ordine",
+  "Runs for":
+    "Durata",
+  "Devices":
+    "Dispositivi",
+  "Watching on":
+    "Guarderai su",
+  "Not chosen":
+    "Non scelto",
+  "Not needed":
+    "Non necessario",
+  "Payment":
+    "Pagamento",
+  "Total":
+    "Totale",
+  "Send order on WhatsApp":
+    "Invia l’ordine su WhatsApp",
+  "Send payment proof on WhatsApp":
+    "Invia la prova di pagamento su WhatsApp",
+  "Copy order details":
+    "Copia i dettagli dell’ordine",
+  "Send by email instead":
+    "Invia invece via e-mail",
+  "Nothing is charged here. We confirm the price in the chat before you pay, then open your line.":
+    "Qui non viene addebitato nulla. Confermiamo il prezzo in chat prima che tu paghi, poi attiviamo la tua linea.",
+  "Nothing is charged here. Free tests skip payment entirely — send the order and we open your line.":
+    "Qui non viene addebitato nulla. Le prove gratuite saltano del tutto il pagamento — invia l’ordine e attiviamo la tua linea.",
+  "Pay first using the details in the form, screenshot the receipt, then send it here. We open your line as soon as we see it.":
+    "Paga prima usando i dettagli indicati nel modulo, fai uno screenshot della ricevuta e inviacela qui. Attiviamo la tua linea non appena la vediamo.",
+  "Order {ref} is open in WhatsApp. Press send there and we'll reply shortly.":
+    "L’ordine {ref} è aperto in WhatsApp. Premi invia lì e ti risponderemo a breve.",
+  "Order {ref} is open in WhatsApp. Attach your payment screenshot with the paperclip, then press send.":
+    "L’ordine {ref} è aperto in WhatsApp. Allega lo screenshot del pagamento con la graffetta, poi premi invia.",
+  "Order {ref} is open in your email app.":
+    "L’ordine {ref} è aperto nella tua app di posta.",
+  "Order {ref} copied. Paste it to us on WhatsApp or email.":
+    "Ordine {ref} copiato. Incollacelo su WhatsApp o via e-mail.",
+  "Questions":
+    "Domande",
+  "Before you order":
+    "Prima di ordinare",
+  "Try it tonight. Decide tomorrow.":
+    "Provalo stasera. Decidi domani.",
+  "The 24-hour test is the whole service, unrestricted. No card, no deposit, no automatic renewal — just watch it on your own TV and see.":
+    "La prova di 24 ore è il servizio completo, senza limitazioni. Nessuna carta, nessuna cauzione, nessun rinnovo automatico — guardalo sul tuo televisore e giudica tu.",
+  "Compare the plans":
+    "Confronta i piani",
+  "Subscriptions opened and supported by us, delivered on a licensed streaming platform.":
+    "Abbonamenti attivati e assistiti da noi, erogati su una piattaforma di streaming con licenza.",
+  "Pages":
+    "Pagine",
+  "Terms & privacy":
+    "Condizioni e privacy",
+  "Talk to us":
+    "Parla con noi",
+  "WhatsApp":
+    "WhatsApp",
+  "SUPPORT 09:00–23:00 GMT+1":
+    "ASSISTENZA 09:00–23:00 GMT+1",
+  "MADE IN MOROCCO":
+    "MADE IN MOROCCO",
+  "4K · HD · SD":
+    "4K · HD · SD",
+  "7-day catch-up":
+    "Replay fino a 7 giorni",
+  "8,000+ channels":
+    "Oltre 8.000 canali",
+  "50,000+ films & series":
+    "Oltre 50.000 film e serie",
+  "Anti-freeze":
+    "Anti-blocco",
+  "Full EPG":
+    "Guida EPG completa",
+  "50+ countries":
+    "Oltre 50 Paesi",
+  "No contract":
+    "Nessun contratto",
+  "What's included?":
+    "Cosa è incluso?",
+  "All plans include <strong>8,000+ live channels</strong> covering sports, movies, news and entertainment, <strong>50,000+ films and series on demand</strong>, 4K and HD quality, a full EPG guide, catch-up TV and 24/7 support.":
+    "Tutti i piani includono <strong>oltre 8.000 canali in diretta</strong> tra sport, film, notizie e intrattenimento, <strong>oltre 50.000 film e serie on demand</strong>, qualità 4K e HD, una guida EPG completa, il replay TV e l’assistenza 24 ore su 24.",
+  "Can I watch live sports and PPV events?":
+    "Posso guardare lo sport in diretta e gli eventi PPV?",
+  "Yes. <strong>NFL, NBA, MLB, NHL, Premier League, UFC and boxing</strong> are all there, along with the major sports channels — ESPN, Fox Sports, Sky Sports and beIN Sports — plus international sport from more than 50 countries.":
+    "Sì. Ci sono <strong>NFL, NBA, MLB, NHL, Premier League, UFC e boxe</strong>, insieme ai principali canali sportivi — ESPN, Fox Sports, Sky Sports e beIN Sports — oltre allo sport internazionale di più di 50 Paesi.",
+  "What devices are supported?":
+    "Quali dispositivi sono supportati?",
+  "It works on Smart TVs (Samsung, LG, Android TV), phones and tablets (iOS and Android), computers (Windows, Mac and Linux), Fire Stick, Roku, Apple TV and more. Use an app like <strong>GSE Smart IPTV</strong> or <strong>IPTV Smarters</strong>.":
+    "Funziona su Smart TV (Samsung, LG, Android TV), telefoni e tablet (iOS e Android), computer (Windows, Mac e Linux), Fire Stick, Roku, Apple TV e altro ancora. Usa un’app come <strong>GSE Smart IPTV</strong> o <strong>IPTV Smarters</strong>.",
+  "Which IPTV app should I use on my device?":
+    "Quale app IPTV devo usare sul mio dispositivo?",
+  "We recommend <strong>IPTV Smarters Pro</strong> for most devices, <strong>GSE Smart IPTV</strong> for Apple devices, <strong>TiviMate</strong> for Android TV and <strong>Smart IPTV</strong> for Samsung and LG sets. All of them support the M3U playlist format we send you.":
+    "Consigliamo <strong>IPTV Smarters Pro</strong> per la maggior parte dei dispositivi, <strong>GSE Smart IPTV</strong> per i dispositivi Apple, <strong>TiviMate</strong> per Android TV e <strong>Smart IPTV</strong> per i televisori Samsung e LG. Tutte supportano il formato playlist M3U che ti inviamo.",
+  "What internet speed do I need for 4K streaming?":
+    "Che velocità di connessione serve per lo streaming in 4K?",
+  "For the best picture: <strong>25 Mbps or more</strong> for 4K channels, <strong>15 Mbps</strong> for HD and <strong>5 Mbps</strong> for SD. Adaptive streaming adjusts the quality automatically to match your connection.":
+    "Per la resa migliore: <strong>25 Mbps o più</strong> per i canali 4K, <strong>15 Mbps</strong> per l’HD e <strong>5 Mbps</strong> per l’SD. Lo streaming adattivo regola automaticamente la qualità in base alla tua connessione.",
+  "Is the free 24-hour test really free?":
+    "La prova gratuita di 24 ore è davvero gratuita?",
   "Yes. One 24-hour line per household, no card and no deposit. We open it, you try it on your own device, and if it isn't right for you nothing happens next.":
-    'نعم. خط واحد لمدة 24 ساعة لكل منزل، بدون بطاقة وبدون ضمان. نفتحه، وتجرّبه على جهازك، وإن لم يناسبك فلا شيء بعد ذلك.',
-  'How fast do I get my login details?': 'متى تصلني بيانات الدخول؟',
-  'Usually under ten minutes during support hours. If you order overnight, your details are waiting for you first thing in the morning.':
-    'عادة في أقل من عشر دقائق خلال أوقات الدعم. وإذا طلبت ليلًا، تجد بياناتك في انتظارك أول الصباح.',
-  'What if a channel stops working?': 'ماذا لو توقفت قناة عن العمل؟',
-  'Message us in the same thread. Most issues are fixed within minutes, and if a line is genuinely down we replace it and add the lost time to your subscription.':
-    'راسلنا في المحادثة نفسها. أغلب المشاكل تُحل في دقائق، وإذا توقف خط فعلًا نستبدله ونضيف الوقت الضائع إلى اشتراكك.',
-  'How do I renew?': 'كيف أجدّد؟',
-  'Send us a message before your end date and we extend the same line. Your username, password and favourites all stay exactly as they are.':
-    'أرسل لنا رسالة قبل تاريخ الانتهاء ونمدّد الخط نفسه. يبقى اسم المستخدم وكلمة السر والمفضلات كما هي تمامًا.'
+    "Sì. Una linea di 24 ore per nucleo familiare, senza carta e senza cauzione. La attiviamo, tu la provi sul tuo dispositivo e, se non fa per te, non succede altro.",
+  "How fast do I get my login details?":
+    "Quanto ci vuole per ricevere le credenziali?",
+  "Usually under ten minutes during support hours. If you order overnight, your details are waiting for you first thing in the morning.":
+    "Di solito meno di dieci minuti negli orari di assistenza. Se ordini di notte, le tue credenziali ti aspettano la mattina presto.",
+  "What if a channel stops working?":
+    "E se un canale smette di funzionare?",
+  "Message us in the same thread. Most issues are fixed within minutes, and if a line is genuinely down we replace it and add the lost time to your subscription.":
+    "Scrivici nella stessa conversazione. La maggior parte dei problemi si risolve in pochi minuti e, se una linea è davvero fuori servizio, la sostituiamo e aggiungiamo al tuo abbonamento il tempo perso.",
+  "How do I renew?":
+    "Come si rinnova?",
+  "Send us a message before your end date and we extend the same line. Your username, password and favourites all stay exactly as they are.":
+    "Scrivici un messaggio prima della data di scadenza e prolunghiamo la stessa linea. Nome utente, password e preferiti restano esattamente come sono.",
+  "__invite_p":
+    "Il tuo riferimento d’ordine è il tuo codice d’invito. Quando un amico ordina il piano da 12 mesi e lo inserisce nella casella <b>Invitato da</b>, aggiungiamo 30 giorni al suo abbonamento e 30 giorni al tuo. Niente da pagare, né da una parte né dall’altra.",
+  "__meta_title":
+    "Abbonamento IPTV 12 mesi — oltre 8.000 canali | SwiftChannels",
+  "__meta_desc":
+    "Abbonamento IPTV mensile o annuale: oltre 8.000 canali e 50.000 film. Compatibile con IPTV Smarters, TiviMate e Smart IPTV su Fire Stick, Smart TV Samsung e LG. Prova gratuita di 24 ore.",
+  "__ty_title":
+    "Pagamento ricevuto — manca un ultimo passo",
+  "__ty_h1":
+    "Pagamento ricevuto. <br><span class=\"grad\">Manca un ultimo passo.</span>",
+  "__h1":
+    "<span class=\"hl\">Tutti i tuoi canali,</span> <span class=\"hl\">su <span class=\"grad\">una sola linea</span>.</span>",
+  "__consent":
+    "Ordino per il mio nucleo familiare e accetto le <a href=\"legal.html\" target=\"_blank\">condizioni, la politica di rimborso e l’informativa sulla privacy</a>. Chiedo che le mie credenziali mi vengano inviate immediatamente e comprendo che il mio diritto di recesso di 14 giorni si estingue con la loro consegna.",
+  "__footlegal":
+    "Rivendiamo l’accesso a una piattaforma di streaming di terze parti. I contenuti sono concessi in licenza e trasmessi dall’operatore di quella piattaforma. Gli abbonamenti sono destinati all’uso privato all’interno del nucleo familiare; la ridistribuzione e la proiezione pubblica non sono consentite.<br><a href=\"legal.html\">Condizioni di servizio · Politica di rimborso · Privacy</a>",
 },
 
 /* ═══════════════════════ DUTCH ═══════════════════════ */
@@ -2374,7 +2567,7 @@ nl: {
    ═══════════════════════════════════════════════════════════════════ */
 window.i18n = (function(){
   const DICT  = window.I18N || {};
-  const LANGS = ['en','fr','es','de','ar','nl'];
+  const LANGS = ['en','fr','es','de','it','nl'];
   let LANG = 'en';
 
   const norm = s => String(s).replace(/\s+/g,' ').trim();

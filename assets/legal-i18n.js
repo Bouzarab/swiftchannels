@@ -459,152 +459,195 @@ de: {
 },
 
 /* ═══════════════════════ ARABIC ═══════════════════════ */
-ar: {
-  'Inviting a friend': 'دعوة صديق',
-  'If someone orders a 12-month subscription and enters your order reference in the “Invited by” box, we add 30 days to their subscription and 30 days to yours once their payment is settled. The offer applies to 12-month orders only, the reference must be entered on the order itself, and there is no cash alternative. We may decline it where the same household is on both sides of the invitation, or where we believe it is being abused.':
-    'إذا طلب شخص اشتراكًا لمدة 12 شهرًا وكتب مرجع طلبك في خانة «دعاني»، أضفنا 30 يومًا إلى اشتراكه و30 يومًا إلى اشتراكك بمجرد اكتمال دفعه. ينطبق العرض على طلبات 12 شهرًا فقط، ويجب إدخال المرجع في الطلب نفسه، ولا يوجد بديل نقدي. ولنا أن نرفضه إذا كان المنزل نفسه على طرفي الدعوة، أو إذا رأينا أنه يُستغل.',
-  '__legal_title': 'الشروط والاسترجاع والخصوصية — سويفت تشانلز',
-  '__legal_desc': 'شروط الخدمة وسياسة الاسترجاع وإشعار الخصوصية لسويفت تشانلز.',
-  '← Back to the site': '← العودة إلى الموقع',
-  'Terms, refunds and privacy': 'الشروط والاسترجاع والخصوصية',
-  'Last updated 24 August 2026': 'آخر تحديث: 24 غشت 2026',
-  'Trading name': 'الاسم التجاري',
-  'Contact': 'التواصل',
-  '1. Terms of service': '1. شروط الخدمة',
-  '2. Refund policy': '2. سياسة الاسترجاع',
-  '3. Privacy notice': '3. إشعار الخصوصية',
-
-  'Who we are and what we sell': 'من نحن وما الذي نبيعه',
-  'SwiftChannels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.':
-    'تعيد سويفت تشانلز بيع الوصول إلى خدمة تلفزيون بالبث تديرها منصة تابعة لطرف ثالث. نحن نزوّدك ببيانات الدخول إلى تلك المنصة؛ ولا نملك المحتوى الذي تبثه ولا ننتجه ولا نرخّصه ولا نتحكم فيه.',
-  'What you are buying': 'ما الذي تشتريه',
-  'A subscription is access to the platform for a fixed period — 30 days or 12 months — for the number of simultaneous connections you selected. Channel line-ups, on-demand catalogues and programme guides are set by the platform operator and can change at any time without notice. We cannot guarantee that any particular channel, match, film or series will be available for the whole of your subscription.':
-    'الاشتراك هو وصول إلى المنصة لمدة محددة — 30 يومًا أو 12 شهرًا — بعدد الاتصالات المتزامنة الذي اخترته. قوائم القنوات وكتالوجات المحتوى عند الطلب وأدلة البرامج يحددها مشغّل المنصة ويمكن أن تتغير في أي وقت دون إشعار. ولا يمكننا ضمان بقاء قناة أو مباراة أو فيلم أو مسلسل بعينه متاحًا طوال مدة اشتراكك.',
-  'Household use only': 'للاستعمال المنزلي فقط',
-  'Your credentials are for private use in a single household. You may not resell them, share them publicly, use them for commercial or public screening, or redistribute the stream. If we find credentials being used this way, we may close the account without a refund.':
-    'بيانات الدخول مخصّصة للاستعمال الخاص داخل منزل واحد. ولا يجوز لك إعادة بيعها أو مشاركتها علنًا أو استعمالها للعرض التجاري أو العمومي أو إعادة توزيع البث. وإذا وجدنا استعمالًا من هذا النوع، جاز لنا إغلاق الحساب دون استرجاع.',
-  'Your responsibilities': 'مسؤولياتك',
-  'Give accurate contact details so we can deliver your credentials.':
-    'تقديم بيانات تواصل صحيحة حتى نتمكن من تسليم بيانات الدخول.',
-  'Provide your own internet connection and a compatible device. Roughly 5 Mbps is needed for SD, 15 Mbps for HD and 25 Mbps for 4K.':
-    'توفير اتصال إنترنت خاص بك وجهاز متوافق. يلزم نحو 5 ميغابت/ث لجودة SD، و15 ميغابت/ث لـ HD، و25 ميغابت/ث لـ 4K.',
-  'Keep your credentials private.': 'الحفاظ على سرية بيانات الدخول.',
-  'Comply with the laws that apply where you live, including any rules about which broadcast content you may lawfully access. You are responsible for that; we cannot advise on it.':
-    'الالتزام بالقوانين السارية في مكان إقامتك، بما فيها القواعد المتعلقة بالمحتوى المُذاع الذي يحق لك الوصول إليه قانونًا. وهذه مسؤوليتك أنت؛ ولا يمكننا تقديم المشورة بشأنها.',
-  'Delivery': 'التسليم',
-  'We aim to send credentials within ten minutes during support hours. Orders placed overnight are handled the following morning. Delivery is by email to the contact details you gave us.':
-    'نسعى لإرسال بيانات الدخول خلال عشر دقائق في أوقات الدعم. والطلبات الليلية تُعالَج صباح اليوم التالي. ويتم التسليم عبر البريد الإلكتروني إلى البيانات التي زوّدتنا بها.',
-  'Availability and interruptions': 'التوفّر والانقطاعات',
+it: {
+  "Inviting a friend":
+    "Invita un amico",
+  "If someone orders a 12-month subscription and enters your order reference in the “Invited by” box, we add 30 days to their subscription and 30 days to yours once their payment is settled. The offer applies to 12-month orders only, the reference must be entered on the order itself, and there is no cash alternative. We may decline it where the same household is on both sides of the invitation, or where we believe it is being abused.":
+    "Se qualcuno ordina un abbonamento di 12 mesi e inserisce il tuo riferimento d’ordine nella casella «Invitato da», aggiungiamo 30 giorni al suo abbonamento e 30 giorni al tuo una volta saldato il suo pagamento. L’offerta vale solo per gli ordini di 12 mesi, il riferimento va inserito sull’ordine stesso e non esiste un’alternativa in denaro. Possiamo rifiutarla quando lo stesso nucleo familiare si trova da entrambi i lati dell’invito o quando riteniamo che ne venga fatto un uso abusivo.",
+  "← Back to the site":
+    "← Torna al sito",
+  "Terms, refunds and privacy":
+    "Condizioni, rimborsi e privacy",
+  "Last updated 24 August 2026":
+    "Ultimo aggiornamento 24 agosto 2026",
+  "Trading name":
+    "Denominazione commerciale",
+  "Contact":
+    "Contatti",
+  "1. Terms of service":
+    "1. Condizioni di servizio",
+  "2. Refund policy":
+    "2. Politica di rimborso",
+  "3. Privacy notice":
+    "3. Informativa sulla privacy",
+  "Who we are and what we sell":
+    "Chi siamo e cosa vendiamo",
+  "SwiftChannels resells access to a streaming television service operated by a third-party platform. We supply you with login credentials for that platform; we do not own, produce, license or control the content it carries.":
+    "SwiftChannels rivende l’accesso a un servizio di televisione in streaming gestito da una piattaforma terza. Ti forniamo le credenziali di accesso a quella piattaforma; non possediamo, non produciamo, non concediamo in licenza e non controlliamo i contenuti che essa trasmette.",
+  "What you are buying":
+    "Che cosa acquisti",
+  "A subscription is access to the platform for a fixed period — 30 days or 12 months — for the number of simultaneous connections you selected. Channel line-ups, on-demand catalogues and programme guides are set by the platform operator and can change at any time without notice. We cannot guarantee that any particular channel, match, film or series will be available for the whole of your subscription.":
+    "Un abbonamento è l’accesso alla piattaforma per un periodo determinato — 30 giorni o 12 mesi — per il numero di connessioni simultanee che hai scelto. L’elenco dei canali, i cataloghi on demand e le guide ai programmi sono stabiliti dall’operatore della piattaforma e possono cambiare in qualsiasi momento senza preavviso. Non possiamo garantire che un determinato canale, una partita, un film o una serie resti disponibile per tutta la durata del tuo abbonamento.",
+  "Household use only":
+    "Solo per uso domestico",
+  "Your credentials are for private use in a single household. You may not resell them, share them publicly, use them for commercial or public screening, or redistribute the stream. If we find credentials being used this way, we may close the account without a refund.":
+    "Le tue credenziali sono destinate all’uso privato all’interno di un solo nucleo familiare. Non puoi rivenderle, condividerle pubblicamente, utilizzarle per proiezioni commerciali o pubbliche, né ridistribuire il flusso. Se riscontriamo un utilizzo di questo tipo, possiamo chiudere l’account senza rimborso.",
+  "Your responsibilities":
+    "Le tue responsabilità",
+  "Give accurate contact details so we can deliver your credentials.":
+    "Fornisci recapiti esatti affinché possiamo consegnarti le credenziali.",
+  "Provide your own internet connection and a compatible device. Roughly 5 Mbps is needed for SD, 15 Mbps for HD and 25 Mbps for 4K.":
+    "Procurati una tua connessione a internet e un dispositivo compatibile. Servono circa 5 Mbps per l’SD, 15 Mbps per l’HD e 25 Mbps per il 4K.",
+  "Keep your credentials private.":
+    "Mantieni riservate le tue credenziali.",
+  "Comply with the laws that apply where you live, including any rules about which broadcast content you may lawfully access. You are responsible for that; we cannot advise on it.":
+    "Rispetta le leggi in vigore nel luogo in cui vivi, comprese le norme su quali contenuti televisivi puoi legittimamente guardare. La responsabilità è tua; non possiamo fornirti consulenza in merito.",
+  "Delivery":
+    "Consegna",
+  "We aim to send credentials within ten minutes during support hours. Orders placed overnight are handled the following morning. Delivery is by email to the contact details you gave us.":
+    "Puntiamo a inviare le credenziali entro dieci minuti durante gli orari di assistenza. Gli ordini effettuati di notte vengono gestiti la mattina successiva. La consegna avviene via e-mail ai recapiti che ci hai indicato.",
+  "Availability and interruptions":
+    "Disponibilità e interruzioni",
   "We target high availability but cannot promise an uninterrupted service. Outages on the platform operator's side, on your internet connection, or on your device are outside our control. Where a line is genuinely down for an extended period, we will replace it and extend your subscription by the time lost. That is the remedy we offer.":
-    'نستهدف توفّرًا عاليًا لكننا لا نستطيع الوعد بخدمة بلا انقطاع. فالأعطال لدى مشغّل المنصة أو في اتصالك بالإنترنت أو في جهازك خارجة عن سيطرتنا. وحين يتوقف خط فعلًا لمدة طويلة، نستبدله ونمدّد اشتراكك بمقدار الوقت الضائع. وهذا هو الحل الذي نقدّمه.',
-  'Free 24-hour test': 'تجربة مجانية 24 ساعة',
-  'One free test per household, lasting 24 hours from activation. It is the full service so you can judge it before paying. We may decline a test if we believe the offer is being abused.':
-    'تجربة مجانية واحدة لكل منزل، مدتها 24 ساعة من التفعيل. وهي الخدمة كاملة حتى تحكم عليها قبل الدفع. ويجوز لنا رفض التجربة إذا رأينا أن العرض يُساء استعماله.',
-  'Ending a subscription': 'إنهاء الاشتراك',
-  'Subscriptions do not renew automatically. Yours simply ends on its expiry date unless you message us to extend it. You can stop using the service at any time; see the refund policy below for what that means financially.':
-    'الاشتراكات لا تتجدّد تلقائيًا. فاشتراكك ينتهي ببساطة في تاريخ انتهائه ما لم تراسلنا لتمديده. ويمكنك التوقف عن استعمال الخدمة في أي وقت؛ وانظر سياسة الاسترجاع أدناه لمعرفة الأثر المالي لذلك.',
-  'Our liability': 'مسؤوليتنا',
-  'Our liability to you is limited to the amount you paid for your current subscription period. We are not liable for indirect losses. Nothing here limits liability that cannot lawfully be limited.':
-    'تقتصر مسؤوليتنا تجاهك على المبلغ الذي دفعته عن فترة اشتراكك الحالية. ولا نتحمل مسؤولية الخسائر غير المباشرة. ولا شيء هنا يحدّ من مسؤولية لا يجوز قانونًا الحدّ منها.',
-  'Changes to these terms': 'تعديل هذه الشروط',
-  'We may update these terms. The version on this page at the time of your order is the one that applies to that order.':
-    'يجوز لنا تحديث هذه الشروط. والنسخة الموجودة في هذه الصفحة وقت طلبك هي التي تسري على ذلك الطلب.',
-  'Law': 'القانون المطبّق',
-  'These terms are governed by Moroccan law. If you are a consumer resident in the EU or UK, this does not deprive you of the protection of mandatory consumer law in your country of residence, and you keep the right to bring proceedings there.':
-    'تخضع هذه الشروط للقانون المغربي. وإذا كنت مستهلكًا مقيمًا في الاتحاد الأوروبي أو المملكة المتحدة، فإن ذلك لا يحرمك من حماية القواعد الآمرة لحماية المستهلك في بلد إقامتك، وتحتفظ بحق التقاضي هناك.',
-
-  'In short': 'باختصار',
-  'Once your credentials have been sent, the subscription is not refundable.':
-    'بمجرد إرسال بيانات الدخول، لا يكون الاشتراك قابلًا للاسترجاع.',
-  'The free 24-hour test exists so you can try the full service on your own device before you pay anything.':
-    'التجربة المجانية لمدة 24 ساعة موجودة تحديدًا لتجرّب الخدمة كاملة على جهازك قبل أن تدفع أي شيء.',
-  'Why': 'لماذا',
-  'A subscription is digital content delivered immediately. Once credentials are issued the access has been granted and cannot be returned.':
-    'الاشتراك محتوى رقمي يُسلَّم فورًا. وبمجرد إصدار بيانات الدخول يكون الوصول قد مُنح ولا يمكن إعادته.',
-  'Your EU right of withdrawal, and how it applies': 'حقك في التراجع داخل الاتحاد الأوروبي وكيف يسري',
-  'If you are a consumer in the EU or UK, you normally have 14 days to withdraw from an online purchase. For digital content delivered immediately, that right is lost once delivery begins — but only if you asked for immediate delivery and acknowledged that you would lose the right.':
-    'إذا كنت مستهلكًا في الاتحاد الأوروبي أو المملكة المتحدة، فلك عادةً 14 يومًا للتراجع عن شراء إلكتروني. وفي المحتوى الرقمي المسلَّم فورًا يسقط هذا الحق بمجرد بدء التسليم — لكن فقط إذا طلبت التسليم الفوري وأقررت بأنك ستفقد هذا الحق.',
-  'That is exactly what the confirmation box on our order form does. By ticking it you ask us to supply your credentials straight away and accept that your 14-day withdrawal right ends when we send them.':
-    'وهذا بالضبط ما يفعله مربع التأكيد في نموذج الطلب لدينا. فبوضع العلامة فيه تطلب منا تزويدك ببيانات الدخول فورًا وتقبل أن حقك في التراجع خلال 14 يومًا ينتهي عند إرسالها.',
-  'If you have not yet received your credentials, the withdrawal right still stands.':
-    'وإذا لم تكن قد استلمت بيانات الدخول بعد، فحق التراجع ما يزال قائمًا.',
-  'Message us before delivery and we will refund you in full.':
-    'راسلنا قبل التسليم وسنعيد لك المبلغ كاملًا.',
-  'When we do refund': 'متى نُرجع المبلغ',
-  'You paid but we never delivered your credentials.':
-    'دفعت ولم نسلّمك بيانات الدخول إطلاقًا.',
-  'You were charged twice for the same subscription.':
-    'خُصم منك مرتين مقابل الاشتراك نفسه.',
-  'We are unable to provide the service at all for a sustained period and cannot replace your line.':
-    'عجزنا تمامًا عن تقديم الخدمة لفترة ممتدة ولم نستطع استبدال خطك.',
-  'In those cases we refund to the original payment method. Allow up to ten working days for it to appear.':
-    'في هذه الحالات نُرجع المبلغ إلى وسيلة الدفع الأصلية. وقد يستغرق ظهوره حتى عشرة أيام عمل.',
-  'When we do not refund': 'متى لا نُرجع المبلغ',
-  'You changed your mind after receiving working credentials.':
-    'غيّرت رأيك بعد استلام بيانات دخول تعمل.',
-  'A specific channel or event you wanted is not carried, or was removed by the platform.':
-    'قناة أو حدث بعينه أردته غير متوفر، أو أزالته المنصة.',
-  'Your internet connection or device cannot handle the stream.':
-    'اتصالك بالإنترنت أو جهازك لا يتحمّل البث.',
-  'Your account was closed for breaching the household-use rule.':
-    'أُغلق حسابك لمخالفة قاعدة الاستعمال المنزلي.',
-  'Problems before you ask for money back': 'المشاكل قبل طلب استرجاع المال',
-  'Most faults are fixable in minutes. Email us first — replacing a line, resetting credentials or reconfiguring an app resolves the large majority of issues, and we add any lost time to your subscription.':
-    'أغلب الأعطال تُصلَح في دقائق. راسلنا بالبريد الإلكتروني أولًا — فاستبدال خط أو إعادة ضبط بيانات الدخول أو إعادة إعداد التطبيق يحل الغالبية العظمى من المشاكل، ونضيف أي وقت ضائع إلى اشتراكك.',
-
-  'Who controls your data': 'من يتحكم في بياناتك',
-  'SwiftChannels. Contact:': 'سويفت تشانلز. للتواصل:',
-  'Worth knowing': 'من المفيد معرفته',
-  'This website has no database, no accounts and no tracking. The order form runs entirely in your browser and builds a message for you to send us. Nothing is submitted to a server here.':
-    'هذا الموقع بلا قاعدة بيانات وبلا حسابات وبلا تتبّع. ونموذج الطلب يعمل بالكامل داخل متصفحك ويكوّن رسالة ترسلها أنت إلينا. ولا يُرسَل شيء إلى أي خادم هنا.',
-  'What we collect and why': 'ما الذي نجمعه ولماذا',
-  'What you send us': 'ما ترسله إلينا',
-  '— your name, WhatsApp number, email if you give one, your device and any MAC address, and your order details. We need these to create your account and deliver your credentials. Legal basis: performance of a contract.':
-    '— اسمك ورقم واتساب وبريدك الإلكتروني إن قدّمته وجهازك وعنوان MAC إن وُجد وتفاصيل طلبك. ونحتاج هذه البيانات لإنشاء حسابك وتسليم بيانات الدخول. الأساس القانوني: تنفيذ عقد.',
-  'Payment records': 'سجلات الدفع',
-  '— we see the name, amount and date associated with your payment, and the receipt you send us. We never see your card number. Legal basis: contract and legal record-keeping.':
-    '— نرى الاسم والمبلغ والتاريخ المرتبطة بدفعتك، والإيصال الذي ترسله إلينا. ولا نرى رقم بطاقتك أبدًا. الأساس القانوني: العقد وحفظ السجلات القانونية.',
-  'Your messages': 'رسائلك',
-  '— the WhatsApp or email conversation, kept so we can support you and handle renewals or disputes.':
-    '— محادثة واتساب أو البريد، تُحفَظ لنتمكن من دعمك ومعالجة التجديدات أو النزاعات.',
-  'What we do not collect': 'ما لا نجمعه',
-  'No cookies, analytics, advertising pixels or visitor tracking on this site. The order form does remember what you typed in your own browser’s storage so you do not have to type it twice — it stays on your device, we never see it until you press send, and one click under the form clears it.':
-    'لا ملفات تعريف ارتباط ولا تحليلات ولا بكسلات إعلانية ولا تتبّع للزوار في هذا الموقع. غير أن نموذج الطلب يحتفظ بما كتبته في تخزين متصفّحك حتى لا تعيد كتابته — ويبقى على جهازك، ولا نراه إلا عند ضغطك على إرسال، ونقرة واحدة أسفل النموذج تمسحه.',
-  'No card or bank details — payments are handled entirely by PayPal.':
-    'لا بيانات بطاقات أو بنوك — المدفوعات يعالجها باي بال بالكامل.',
-  'No record of what you watch. We do not have access to your viewing activity.':
-    'لا سجل لما تشاهده. ولا نملك أي وصول إلى نشاط مشاهدتك.',
-  'Local storage': 'التخزين المحلي',
-  'When you click through to pay, your order details are saved in your own browser so the confirmation page can show them back to you. This stays on your device, is never transmitted to us, and you can clear it through your browser at any time.':
-    'عند انتقالك إلى الدفع تُحفَظ تفاصيل طلبك داخل متصفحك أنت لتتمكن صفحة التأكيد من عرضها عليك. وتبقى هذه البيانات على جهازك ولا تُرسَل إلينا أبدًا، ويمكنك مسحها من متصفحك في أي وقت.',
-  'Who we share it with': 'مع من نتشاركها',
-  'The platform operator': 'مشغّل المنصة',
-  '— the minimum needed to create and maintain your account.':
-    '— الحد الأدنى اللازم لإنشاء حسابك والحفاظ عليه.',
-  'Payment providers': 'مزوّدو الدفع',
-  '— PayPal, which processes your payment under its own privacy policy.':
-    '— باي بال، الذي يعالج دفعتك وفق سياسة الخصوصية الخاصة به.',
+    "Puntiamo a un’elevata disponibilità, ma non possiamo promettere un servizio senza interruzioni. I guasti dal lato dell’operatore della piattaforma, della tua connessione a internet o del tuo dispositivo sono al di fuori del nostro controllo. Se una linea risulta effettivamente fuori servizio per un periodo prolungato, la sostituiamo e prolunghiamo il tuo abbonamento del tempo perso. È questo il rimedio che offriamo.",
+  "Free 24-hour test":
+    "Prova gratuita di 24 ore",
+  "One free test per household, lasting 24 hours from activation. It is the full service so you can judge it before paying. We may decline a test if we believe the offer is being abused.":
+    "Una sola prova gratuita per nucleo familiare, della durata di 24 ore dall’attivazione. È il servizio completo, così puoi valutarlo prima di pagare. Possiamo rifiutare una prova se riteniamo che dell’offerta venga fatto un uso abusivo.",
+  "Ending a subscription":
+    "Fine dell’abbonamento",
+  "Subscriptions do not renew automatically. Yours simply ends on its expiry date unless you message us to extend it. You can stop using the service at any time; see the refund policy below for what that means financially.":
+    "Gli abbonamenti non si rinnovano automaticamente. Il tuo termina semplicemente alla data di scadenza, salvo che tu ci scriva per prolungarlo. Puoi smettere di usare il servizio in qualsiasi momento; per le conseguenze economiche consulta la politica di rimborso qui sotto.",
+  "Our liability":
+    "La nostra responsabilità",
+  "Our liability to you is limited to the amount you paid for your current subscription period. We are not liable for indirect losses. Nothing here limits liability that cannot lawfully be limited.":
+    "La nostra responsabilità nei tuoi confronti è limitata all’importo che hai pagato per il periodo di abbonamento in corso. Non rispondiamo dei danni indiretti. Nulla di quanto qui previsto limita le responsabilità che per legge non possono essere limitate.",
+  "Changes to these terms":
+    "Modifiche alle presenti condizioni",
+  "We may update these terms. The version on this page at the time of your order is the one that applies to that order.":
+    "Possiamo aggiornare le presenti condizioni. La versione pubblicata su questa pagina al momento del tuo ordine è quella che si applica a quell’ordine.",
+  "Law":
+    "Legge applicabile",
+  "These terms are governed by Moroccan law. If you are a consumer resident in the EU or UK, this does not deprive you of the protection of mandatory consumer law in your country of residence, and you keep the right to bring proceedings there.":
+    "Le presenti condizioni sono regolate dalla legge marocchina. Se sei un consumatore residente nell’UE o nel Regno Unito, ciò non ti priva della tutela garantita dalle norme imperative a protezione dei consumatori del tuo Paese di residenza e conservi il diritto di agire in giudizio in quella sede.",
+  "In short":
+    "In breve",
+  "Once your credentials have been sent, the subscription is not refundable.":
+    "Una volta inviate le credenziali, l’abbonamento non è rimborsabile.",
+  "The free 24-hour test exists so you can try the full service on your own device before you pay anything.":
+    "La prova gratuita di 24 ore esiste proprio perché tu possa provare il servizio completo sul tuo dispositivo prima di pagare qualsiasi cosa.",
+  "Why":
+    "Perché",
+  "A subscription is digital content delivered immediately. Once credentials are issued the access has been granted and cannot be returned.":
+    "Un abbonamento è un contenuto digitale consegnato immediatamente. Una volta emesse le credenziali, l’accesso è stato concesso e non può essere restituito.",
+  "Your EU right of withdrawal, and how it applies":
+    "Il tuo diritto di recesso UE e come si applica",
+  "If you are a consumer in the EU or UK, you normally have 14 days to withdraw from an online purchase. For digital content delivered immediately, that right is lost once delivery begins — but only if you asked for immediate delivery and acknowledged that you would lose the right.":
+    "Se sei un consumatore nell’UE o nel Regno Unito, di norma hai 14 giorni per recedere da un acquisto online. Per i contenuti digitali consegnati immediatamente, tale diritto viene meno all’inizio della consegna — ma solo se hai chiesto la consegna immediata e hai riconosciuto che avresti perso il diritto.",
+  "That is exactly what the confirmation box on our order form does. By ticking it you ask us to supply your credentials straight away and accept that your 14-day withdrawal right ends when we send them.":
+    "È esattamente ciò che fa la casella di conferma nel nostro modulo d’ordine. Spuntandola ci chiedi di fornirti subito le credenziali e accetti che il tuo diritto di recesso di 14 giorni cessi nel momento in cui te le inviamo.",
+  "If you have not yet received your credentials, the withdrawal right still stands.":
+    "Se non hai ancora ricevuto le credenziali, il diritto di recesso resta valido.",
+  "Message us before delivery and we will refund you in full.":
+    "Scrivici prima della consegna e ti rimborseremo per intero.",
+  "When we do refund":
+    "Quando rimborsiamo",
+  "You paid but we never delivered your credentials.":
+    "Hai pagato ma non ti abbiamo mai consegnato le credenziali.",
+  "You were charged twice for the same subscription.":
+    "Ti è stato addebitato due volte lo stesso abbonamento.",
+  "We are unable to provide the service at all for a sustained period and cannot replace your line.":
+    "Non siamo affatto in grado di erogare il servizio per un periodo prolungato e non possiamo sostituire la tua linea.",
+  "In those cases we refund to the original payment method. Allow up to ten working days for it to appear.":
+    "In questi casi rimborsiamo sul metodo di pagamento originale. Possono servire fino a dieci giorni lavorativi perché l’importo compaia.",
+  "When we do not refund":
+    "Quando non rimborsiamo",
+  "You changed your mind after receiving working credentials.":
+    "Hai cambiato idea dopo aver ricevuto credenziali funzionanti.",
+  "A specific channel or event you wanted is not carried, or was removed by the platform.":
+    "Un canale o un evento specifico che desideravi non è disponibile, oppure è stato rimosso dalla piattaforma.",
+  "Your internet connection or device cannot handle the stream.":
+    "La tua connessione a internet o il tuo dispositivo non reggono il flusso.",
+  "Your account was closed for breaching the household-use rule.":
+    "Il tuo account è stato chiuso per violazione della regola sull’uso domestico.",
+  "Problems before you ask for money back":
+    "Problemi, prima di chiedere il rimborso",
+  "Most faults are fixable in minutes. Email us first — replacing a line, resetting credentials or reconfiguring an app resolves the large majority of issues, and we add any lost time to your subscription.":
+    "La maggior parte dei guasti si risolve in pochi minuti. Scrivici prima — sostituire una linea, reimpostare le credenziali o riconfigurare un’app risolve la grande maggioranza dei problemi, e aggiungiamo al tuo abbonamento il tempo perso.",
+  "Who controls your data":
+    "Chi è titolare dei tuoi dati",
+  "SwiftChannels. Contact:":
+    "SwiftChannels. Contatto:",
+  "Worth knowing":
+    "Da sapere",
+  "This website has no database, no accounts and no tracking. The order form runs entirely in your browser and builds a message for you to send us. Nothing is submitted to a server here.":
+    "Questo sito non ha database, né account, né tracciamento. Il modulo d’ordine funziona interamente nel tuo browser e compone un messaggio che sei tu a inviarci. Qui non viene trasmesso nulla a un server.",
+  "What we collect and why":
+    "Che cosa raccogliamo e perché",
+  "What you send us":
+    "Ciò che ci invii",
+  "— your name, WhatsApp number, email if you give one, your device and any MAC address, and your order details. We need these to create your account and deliver your credentials. Legal basis: performance of a contract.":
+    "— il tuo nome, il numero WhatsApp, l’e-mail se ce la fornisci, il tuo dispositivo ed eventuale indirizzo MAC, e i dettagli dell’ordine. Ci servono per creare il tuo account e consegnarti le credenziali. Base giuridica: esecuzione di un contratto.",
+  "Payment records":
+    "Registrazioni dei pagamenti",
+  "— we see the name, amount and date associated with your payment, and the receipt you send us. We never see your card number. Legal basis: contract and legal record-keeping.":
+    "— vediamo il nome, l’importo e la data associati al tuo pagamento, oltre alla ricevuta che ci invii. Non vediamo mai il numero della tua carta. Base giuridica: contratto e obblighi legali di conservazione.",
+  "Your messages":
+    "I tuoi messaggi",
+  "— the WhatsApp or email conversation, kept so we can support you and handle renewals or disputes.":
+    "— la conversazione su WhatsApp o via e-mail, conservata per poterti assistere e gestire rinnovi o contestazioni.",
+  "What we do not collect":
+    "Che cosa non raccogliamo",
+  "No cookies, analytics, advertising pixels or visitor tracking on this site. The order form does remember what you typed in your own browser’s storage so you do not have to type it twice — it stays on your device, we never see it until you press send, and one click under the form clears it.":
+    "Nessun cookie, nessuna analitica, nessun pixel pubblicitario e nessun tracciamento dei visitatori su questo sito. Il modulo d’ordine ricorda quello che hai digitato nella memoria del tuo browser, così non devi scriverlo due volte — resta sul tuo dispositivo, non lo vediamo finché non premi invia, e un clic sotto il modulo lo cancella.",
+  "No card or bank details — payments are handled entirely by PayPal.":
+    "Nessun dato bancario o di carta — i pagamenti sono gestiti interamente da PayPal.",
+  "No record of what you watch. We do not have access to your viewing activity.":
+    "Nessuna registrazione di ciò che guardi. Non abbiamo accesso alla tua attività di visione.",
+  "Local storage":
+    "Memoria locale",
+  "When you click through to pay, your order details are saved in your own browser so the confirmation page can show them back to you. This stays on your device, is never transmitted to us, and you can clear it through your browser at any time.":
+    "Quando passi al pagamento, i dettagli del tuo ordine vengono salvati nel tuo browser affinché la pagina di conferma possa mostrarteli. Restano sul tuo dispositivo, non ci vengono mai trasmessi e puoi cancellarli dal browser in qualsiasi momento.",
+  "Who we share it with":
+    "Con chi li condividiamo",
+  "The platform operator":
+    "L’operatore della piattaforma",
+  "— the minimum needed to create and maintain your account.":
+    "— il minimo necessario per creare e mantenere il tuo account.",
+  "Payment providers":
+    "Fornitori di pagamento",
+  "— PayPal, which processes your payment under its own privacy policy.":
+    "— PayPal, che tratta il tuo pagamento secondo la propria informativa sulla privacy.",
   "— as the channel we communicate through, under Meta's policies.":
-    '— بوصفه قناة التواصل بيننا، وفق سياسات ميتا.',
-  'We do not sell your data or share it for marketing.':
-    'نحن لا نبيع بياناتك ولا نتشاركها لأغراض تسويقية.',
-  'International transfers': 'النقل الدولي للبيانات',
-  'We are based in Morocco, so if you are in the EU or UK your data is processed outside your country. We keep transfers to the minimum needed to run your subscription.':
-    'مقرّنا في المغرب، لذا إذا كنت في الاتحاد الأوروبي أو المملكة المتحدة فإن بياناتك تُعالَج خارج بلدك. ونُبقي عمليات النقل عند الحد الأدنى اللازم لتشغيل اشتراكك.',
-  'How long we keep it': 'مدة الاحتفاظ بها',
-  'Order and payment records for three years after your subscription ends, so we can handle disputes and meet record-keeping obligations. Message threads are kept while you are a customer and for a reasonable period afterwards.':
-    'سجلات الطلب والدفع لمدة ثلاث سنوات بعد انتهاء اشتراكك، لنتمكن من معالجة النزاعات والوفاء بالتزامات حفظ السجلات. أما المحادثات فتُحفَظ ما دمت زبونًا ولمدة معقولة بعد ذلك.',
-  'Your rights': 'حقوقك',
-  'If you are in the EU or UK you can ask us to give you a copy of your data, correct it, delete it, restrict how we use it, or object to our using it. Email':
-    'إذا كنت في الاتحاد الأوروبي أو المملكة المتحدة، يمكنك أن تطلب منا نسخة من بياناتك أو تصحيحها أو حذفها أو تقييد استعمالنا لها أو الاعتراض عليه. راسلنا على',
-  'and we will respond within 30 days. If you are unhappy with our response you can complain to the data protection authority in your country.':
-    'وسنرد خلال 30 يومًا. وإذا لم يُرضك ردّنا، يمكنك تقديم شكوى إلى سلطة حماية البيانات في بلدك.',
-  'Children': 'القاصرون',
-  'This service is not intended for anyone under 18 and we do not knowingly collect data from children.':
-    'هذه الخدمة ليست موجّهة لمن هم دون 18 سنة، ولا نجمع عن علم أي بيانات تخص الأطفال.',
-  'Changes': 'التعديلات',
-  'If we change this notice we will update the date at the top of this page.':
-    'إذا عدّلنا هذا الإشعار فسنحدّث التاريخ في أعلى هذه الصفحة.'
+    "— in quanto canale attraverso cui comunichiamo, secondo le politiche di Meta.",
+  "We do not sell your data or share it for marketing.":
+    "Non vendiamo i tuoi dati e non li condividiamo per finalità di marketing.",
+  "International transfers":
+    "Trasferimenti internazionali",
+  "We are based in Morocco, so if you are in the EU or UK your data is processed outside your country. We keep transfers to the minimum needed to run your subscription.":
+    "Abbiamo sede in Marocco, quindi se ti trovi nell’UE o nel Regno Unito i tuoi dati sono trattati fuori dal tuo Paese. Limitiamo i trasferimenti al minimo necessario per gestire il tuo abbonamento.",
+  "How long we keep it":
+    "Per quanto tempo li conserviamo",
+  "Order and payment records for three years after your subscription ends, so we can handle disputes and meet record-keeping obligations. Message threads are kept while you are a customer and for a reasonable period afterwards.":
+    "I dati di ordini e pagamenti per tre anni dalla fine del tuo abbonamento, per poter gestire eventuali contestazioni e rispettare gli obblighi di conservazione. Le conversazioni sono conservate finché sei cliente e per un periodo ragionevole successivo.",
+  "Your rights":
+    "I tuoi diritti",
+  "If you are in the EU or UK you can ask us to give you a copy of your data, correct it, delete it, restrict how we use it, or object to our using it. Email":
+    "Se ti trovi nell’UE o nel Regno Unito puoi chiederci una copia dei tuoi dati, la loro rettifica o cancellazione, la limitazione del trattamento oppure opporti al loro utilizzo. Scrivi a",
+  "and we will respond within 30 days. If you are unhappy with our response you can complain to the data protection authority in your country.":
+    "e ti risponderemo entro 30 giorni. Se la nostra risposta non ti soddisfa, puoi presentare reclamo all’autorità di protezione dei dati del tuo Paese.",
+  "Children":
+    "Minori",
+  "This service is not intended for anyone under 18 and we do not knowingly collect data from children.":
+    "Questo servizio non è destinato ai minori di 18 anni e non raccogliamo consapevolmente dati di minori.",
+  "Changes":
+    "Modifiche",
+  "If we change this notice we will update the date at the top of this page.":
+    "Se modifichiamo la presente informativa, aggiorneremo la data in cima a questa pagina.",
+  "__legal_title":
+    "Condizioni, rimborsi e privacy — SwiftChannels",
+  "__legal_desc":
+    "Condizioni di servizio, politica di rimborso e informativa sulla privacy di SwiftChannels.",
 },
 
 /* ═══════════════════════ DUTCH ═══════════════════════ */

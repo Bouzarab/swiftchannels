@@ -85,30 +85,59 @@ de: {
   'MAC address': 'MAC-Adresse', 'Pay by': 'Zahlen mit', 'Notes': 'Anmerkungen', 'Total': 'Gesamt'
 },
 
-ar: {
-  '__or_title': 'إرسال طلبك — سويفت تشانلز',
-  '__or_desc': 'راجع طلبك وأرسله إلينا بنقرة واحدة.',
-  '__or_h1': 'نقرة واحدة<br><span class="grad">ويصلنا طلبك</span>.',
-  'Last step': 'الخطوة الأخيرة',
-  'Check the details below, then press the button. Nothing is charged — we read your order and reply with the payment details for the method you picked.':
-    'راجع البيانات أدناه ثم اضغط الزر. لا يُخصم أي مبلغ — نقرأ طلبك ونرد عليك ببيانات الدفع بالطريقة التي اخترتها.',
-  'Your order': 'طلبك',
-  'Send my order': 'أرسل طلبي',
-  'Sending…': 'جارٍ الإرسال…',
-  'Change something first': 'تعديل شيء أولًا',
-  '← Change my order': '← تعديل طلبي',
-  'We reply to the email or phone number you gave us.':
-    'نرد على البريد الإلكتروني أو الرقم الذي أعطيتنا إياه.',
-  'We could not find an order on this device. Fill in the short form and come back.':
-    'لم نعثر على طلب على هذا الجهاز. املأ النموذج القصير ثم عد إلى هنا.',
-  'Go to the order form': 'اذهب إلى نموذج الطلب',
-  'Order {ref} is on its way to us. We reply within a few hours.':
-    'الطلب {ref} في طريقه إلينا. سنرد خلال ساعات قليلة.',
-  'Order {ref} is with us. We reply with the payment details for the method you picked — usually within a few hours during support hours.':
-    'وصلنا طلبك {ref}. سنرد عليك ببيانات الدفع للطريقة التي اخترتها — عادة خلال ساعات قليلة في أوقات الدعم.',
-  'Reference': 'المرجع', 'Name': 'الاسم', 'Phone': 'الهاتف', 'Email': 'البريد الإلكتروني',
-  'Plan': 'الباقة', 'Devices': 'الأجهزة', 'Watch on': 'المشاهدة على',
-  'MAC address': 'عنوان MAC', 'Pay by': 'الدفع عبر', 'Notes': 'ملاحظات', 'Total': 'المجموع'
+it: {
+  "__or_title":
+    "Invia il tuo ordine — SwiftChannels",
+  "__or_desc":
+    "Controlla il tuo ordine e inviacelo con un clic.",
+  "__or_h1":
+    'Un clic e<br><span class="grad">ci arriva</span>.',
+  "Last step":
+    "Ultimo passaggio",
+  "Check the details below, then press the button. Nothing is charged — we read your order and reply with the payment details for the method you picked.":
+    "Controlla i dati qui sotto, poi premi il pulsante. Non viene addebitato nulla: leggiamo il tuo ordine e rispondiamo con le istruzioni di pagamento per il metodo che hai scelto.",
+  "Your order":
+    "Il tuo ordine",
+  "Send my order":
+    "Invia il mio ordine",
+  "Sending…":
+    "Invio in corso…",
+  "Change something first":
+    "Vuoi modificare qualcosa?",
+  "← Change my order":
+    "← Modifica il mio ordine",
+  "We reply to the email or phone number you gave us.":
+    "Rispondiamo all’e-mail o al numero che ci hai indicato.",
+  "We could not find an order on this device. Fill in the short form and come back.":
+    "Non abbiamo trovato nessun ordine su questo dispositivo. Compila il modulo e torna qui.",
+  "Go to the order form":
+    "Vai al modulo d’ordine",
+  "Order {ref} is on its way to us. We reply within a few hours.":
+    "L’ordine {ref} è in arrivo da noi. Rispondiamo entro poche ore.",
+  "Order {ref} is with us. We reply with the payment details for the method you picked — usually within a few hours during support hours.":
+    "L’ordine {ref} è arrivato. Rispondiamo con le istruzioni di pagamento per il metodo che hai scelto, di solito entro poche ore negli orari di assistenza.",
+  "Reference":
+    "Riferimento",
+  "Name":
+    "Nome",
+  "Phone":
+    "Telefono",
+  "Email":
+    "E-mail",
+  "Plan":
+    "Piano",
+  "Devices":
+    "Dispositivi",
+  "Watch on":
+    "Guardi su",
+  "MAC address":
+    "Indirizzo MAC",
+  "Pay by":
+    "Paghi con",
+  "Notes":
+    "Note",
+  "Total":
+    "Totale",
 },
 
 /* ═══════════════════════ DUTCH ═══════════════════════ */

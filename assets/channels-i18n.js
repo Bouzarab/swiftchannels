@@ -187,61 +187,93 @@ de: {
 },
 
 /* ═════════ ARABIC ═════════ */
-ar: {
-  'About this channel list':
-    'عن قائمة القنوات هذه',
-  'What the list covers':
-    'ما تشمله القائمة',
-  'Every channel here is carried on the platform we resell, grouped by the country it broadcasts from. Sport, films, series, news, documentaries and children\'s channels are all in the same line-up — there is no package to upgrade to and no add-on to buy. The list is identical on the monthly plan, the 12-month plan and the free 24-hour test.':
-    'كل قناة هنا تُبث عبر المنصة التي نبيع اشتراكاتها، مرتّبة حسب بلد البث. الرياضة والأفلام والمسلسلات والأخبار والوثائقيات وقنوات الأطفال كلها ضمن الباقة نفسها — لا توجد باقة أعلى ولا إضافة تُشترى. والقائمة واحدة في الاشتراك الشهري واشتراك 12 شهرًا وتجربة 24 ساعة المجانية.',
-  'Quality and what you need':
-    'الجودة وما تحتاجه',
-  'Channels stream in 4K, Full HD, HD or SD depending on the source broadcaster, and the badge beside each name tells you which. You need roughly 5 Mbps for SD, 15 Mbps for HD and 25 Mbps for 4K. A 7-day catch-up and a full programme guide come with every channel that supports them.':
-    'تُبث القنوات بدقة 4K أو Full HD أو HD أو SD حسب القناة الأصلية، والشارة بجانب كل اسم تدلّك على ذلك. تحتاج نحو 5 ميغابت/ث للـ SD، و15 للـ HD، و25 للـ 4K. وتأتي خاصية إعادة المشاهدة لسبعة أيام ودليل البرامج الكامل مع كل قناة تدعمهما.',
-  'How current this list is':
-    'إلى أي حد القائمة محدّثة',
-  'Line-ups are set by the platform operator, not by us, so channels are added and removed without notice. If a specific channel or a particular match matters to you, ask us before you order, or open the free 24-hour test and check it on your own television first.':
-    'يحدّد مشغّل المنصة قائمة القنوات، لا نحن، فتُضاف قنوات وتُحذف دون إشعار. وإذا كانت تهمّك قناة بعينها أو مباراة بذاتها، فاسألنا قبل الطلب، أو افتح تجربة 24 ساعة المجانية وتحقّق منها أولًا على تلفزيونك.',
-  '__ch_title': 'قائمة قنوات IPTV — أكثر من 8000 قناة حسب البلد | سويفت تشانلز',
-  '__ch_desc': 'كل قنوات سويفت تشانلز — أكثر من 8000 قناة مباشرة من 54 دولة، مع البحث بالاسم أو بالدولة.',
-  '__ch_h1': 'كل القنوات،<br>في <span class="grad">مكان واحد</span>.',
-  'Channel list': 'قائمة القنوات',
-  'Nothing matches that. Try a shorter word — or email us.':
-    'لا نتائج. جرّب كلمة أقصر — أو راسلنا بالبريد الإلكتروني.',
-  'Setup guide': 'دليل التثبيت',
+it: {
+  "About this channel list":
+    "Informazioni su questo elenco",
+  "What the list covers":
+    "Che cosa comprende l’elenco",
+  "Every channel here is carried on the platform we resell, grouped by the country it broadcasts from. Sport, films, series, news, documentaries and children's channels are all in the same line-up — there is no package to upgrade to and no add-on to buy. The list is identical on the monthly plan, the 12-month plan and the free 24-hour test.":
+    "Ogni canale qui elencato è presente sulla piattaforma che rivendiamo, raggruppato per paese di trasmissione. Sport, film, serie, notizie, documentari e canali per bambini fanno parte dello stesso elenco: non c’è nessun pacchetto da sbloccare né alcun extra da comprare. L’elenco è identico sul piano mensile, sul piano di 12 mesi e sulla prova gratuita di 24 ore.",
+  "Quality and what you need":
+    "Qualità e requisiti",
+  "Channels stream in 4K, Full HD, HD or SD depending on the source broadcaster, and the badge beside each name tells you which. You need roughly 5 Mbps for SD, 15 Mbps for HD and 25 Mbps for 4K. A 7-day catch-up and a full programme guide come with every channel that supports them.":
+    "I canali trasmettono in 4K, Full HD, HD o SD a seconda dell’emittente d’origine, e l’etichetta accanto a ogni nome indica quale. Servono circa 5 Mbps per l’SD, 15 Mbps per l’HD e 25 Mbps per il 4K. Il replay di 7 giorni e la guida completa dei programmi sono inclusi su ogni canale che li supporta.",
+  "How current this list is":
+    "Quanto è aggiornato questo elenco",
+  "Line-ups are set by the platform operator, not by us, so channels are added and removed without notice. If a specific channel or a particular match matters to you, ask us before you order, or open the free 24-hour test and check it on your own television first.":
+    "L’elenco dei canali è deciso dall’operatore della piattaforma, non da noi, quindi i canali vengono aggiunti e rimossi senza preavviso. Se ti interessa un canale preciso o una partita in particolare, chiedici prima di ordinare, oppure apri la prova gratuita di 24 ore e verificalo sul tuo televisore.",
+  "__ch_title":
+    "Elenco canali IPTV — oltre 8.000 canali per paese | SwiftChannels",
+  "__ch_desc":
+    "Tutti i canali SwiftChannels: oltre 8.000 canali in diretta da 54 paesi, con ricerca per nome o per paese.",
+  "__ch_h1":
+    'Tutti i canali,<br>in <span class="grad">un solo posto</span>.',
+  "__ch_rail":
+    "Paesi",
+  "Channel list":
+    "Elenco canali",
+  "Nothing matches that. Try a shorter word — or email us.":
+    "Nessun risultato. Prova con una parola più corta — oppure scrivici.",
+  "Setup guide":
+    "Guida all’installazione",
   "Browse by country or search for the channel you can't do without. This is the full line-up carried on the platform — the same list on every plan.":
-    'تصفّح حسب الدولة أو ابحث عن القناة التي لا تستغني عنها. هذه هي الشبكة الكاملة المتوفرة على المنصة — وهي نفسها في كل الباقات.',
-    '__ch_rail': 'الدول',
-  'Channels': 'قناة',
-  'Countries': 'دولة',
-  'Films & series': 'فيلم ومسلسل',
-  'Catch-up': 'إعادة المشاهدة',
-  '7 days': '7 أيام',
-  'Search 8,000+ channels — try “Sky Sports” or “beIN”': 'ابحث في أكثر من 8000 قناة — جرّب «Sky Sports» أو «beIN»',
-  'Search channels': 'البحث عن القنوات',
-  'Clear search': 'مسح البحث',
-  'Loading more…': 'جارٍ التحميل…',
-  'Nothing matches that. Try a shorter word — or ask us on WhatsApp.':
-    'لا نتائج. جرّب كلمة أقصر — أو اسألنا على واتساب.',
-  '{n} channels': '{n} قناة',
-  '{n} matches': '{n} نتيجة',
-  'Results for “{q}”': 'نتائج البحث عن «{q}»',
-  '← Back to the site': '← العودة إلى الموقع',
-  "Can't find a channel you need?": 'لم تجد القناة التي تريدها؟',
+    "Sfoglia per paese o cerca il canale di cui non puoi fare a meno. Questo è l’elenco completo presente sulla piattaforma, identico su ogni piano.",
+  "Channels":
+    "Canali",
+  "Countries":
+    "Paesi",
+  "Films & series":
+    "Film e serie",
+  "Catch-up":
+    "Replay",
+  "7 days":
+    "7 giorni",
+  "Search 8,000+ channels — try “Sky Sports” or “beIN”":
+    "Cerca tra oltre 8.000 canali — prova “Sky Sport” o “beIN”",
+  "Search channels":
+    "Cerca canali",
+  "Clear search":
+    "Cancella la ricerca",
+  "Loading more…":
+    "Caricamento…",
+  "Nothing matches that. Try a shorter word — or ask us on WhatsApp.":
+    "Nessun risultato. Prova con una parola più corta — oppure chiedici su WhatsApp.",
+  "{n} channels":
+    "{n} canali",
+  "{n} matches":
+    "{n} risultati",
+  "Results for “{q}”":
+    "Risultati per “{q}”",
+  "← Back to the site":
+    "← Torna al sito",
+  "Can't find a channel you need?":
+    "Non trovi un canale che ti serve?",
   "Ask before you order. If it's carried we'll tell you, and if it isn't we'll say so — the free 24-hour test lets you check it on your own TV either way.":
-    'اسأل قبل أن تطلب. إن كانت متوفرة سنخبرك، وإن لم تكن سنقول ذلك أيضًا — وتجربة 24 ساعة المجانية تتيح لك التأكد بنفسك على تلفازك.',
-  'Line-ups are set by the platform and can change': 'الشبكة تحددها المنصة وقد تتغير',
-  'Ex-Yu': 'يوغوسلافيا السابقة',
-  'Asia': 'آسيا',
-  'Latin America': 'أمريكا اللاتينية',
-  'Arabic — Everything': 'عربية — الكل',
-  'Arabic Sport': 'الرياضة العربية',
-  'Formula 1 & MotoGP': 'فورمولا 1 وموتو جي بي',
-  'Latin Dance': 'الرقص اللاتيني',
-  'Kurdistan & Azerbaijan': 'كردستان وأذربيجان',
-  'China & Japan': 'الصين واليابان',
-  'Bahrain & Jordan': 'البحرين والأردن',
-  'Dazn': 'DAZN'
+    "Chiedi prima di ordinare. Se c’è te lo diciamo, e se non c’è te lo diciamo lo stesso — con la prova gratuita di 24 ore puoi comunque verificarlo sul tuo televisore.",
+  "Line-ups are set by the platform and can change":
+    "L’elenco è deciso dalla piattaforma e può cambiare",
+  "Ex-Yu":
+    "Ex Jugoslavia",
+  "Asia":
+    "Asia",
+  "Latin America":
+    "America Latina",
+  "Arabic — Everything":
+    "Arabo — Tutto",
+  "Arabic Sport":
+    "Sport arabo",
+  "Formula 1 & MotoGP":
+    "Formula 1 e MotoGP",
+  "Latin Dance":
+    "Danza latina",
+  "Kurdistan & Azerbaijan":
+    "Kurdistan e Azerbaigian",
+  "China & Japan":
+    "Cina e Giappone",
+  "Bahrain & Jordan":
+    "Bahrein e Giordania",
+  "Dazn":
+    "DAZN",
 },
 
 /* ═══════════════════════ DUTCH ═══════════════════════ */

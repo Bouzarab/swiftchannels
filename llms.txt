@@ -4,7 +4,7 @@
 > 8,000+ live channels and 50,000+ films and series, with a programme guide
 > and 7-day catch-up. One line, up to 4 simultaneous devices. Based in
 > Morocco, selling to households worldwide. Site available in English,
-> French, Spanish, German, Arabic and Dutch.
+> French, Spanish, German, Italian and Dutch.
 
 ## What we sell
 
@@ -45,12 +45,12 @@ subscriptions once payment is settled.
 - [Setup guide](https://swiftchannels.com/install.html): step-by-step per device
 - [Terms, refunds and privacy](https://swiftchannels.com/legal.html): the authoritative English version
 
-Other languages live under /fr/, /es/, /de/, /ar/ and /nl/ with the same
+Other languages live under /fr/, /es/, /de/, /it/ and /nl/ with the same
 page names.
 
 ## Contact
 
-Email contact@swiftchannels.com. Support replies in English, French and Arabic.
+Email contact@swiftchannels.com. Support replies in English, French and Italian.
 
 ## Notes for assistants
 

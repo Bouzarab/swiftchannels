@@ -308,101 +308,151 @@ de: {
 },
 
 /* ═════════════════════════ ARABIC ═════════════════════════ */
-ar: {
-  '__in_title': 'تثبيت IPTV — فاير ستيك، التلفزيون الذكي، Smarters | سويفت تشانلز',
-  '__in_desc': 'ثبّت سويفت تشانلز على تلفاز سامسونغ أو إل جي، أو Firestick أو أندرويد أو آيفون أو Apple TV أو ويندوز أو ماك. اختر جهازك واتبع أربع خطوات.',
-  '__in_h1': 'اختر جهازك.<br><span class="grad">أربع خطوات.</span>',
-  'Installation guide': 'دليل التثبيت',
-  'Email us': 'راسلنا بالبريد الإلكتروني',
-  'Copy and paste from our email instead of typing. A stray space is usually the culprit.':
-    'انسخ البيانات من رسالتنا بدل كتابتها. المسافة الزائدة هي السبب عادةً.',
-  'We send them by email after you order — an activation code, or a server address with a username and password. Which one depends on your device.':
-    'نرسلها لك بالبريد الإلكتروني بعد الطلب: رمز تفعيل، أو عنوان خادم مع اسم مستخدم وكلمة مرور. ويتوقّف ذلك على جهازك.',
-  '← Back to the site': '← العودة إلى الموقع',
-  'Ten minutes, once. After that the app remembers everything.':
-    'عشر دقائق، مرة واحدة فقط. بعدها يحفظ التطبيق كل شيء.',
-
-  'Before you start': 'قبل أن تبدأ',
-  'Samsung & LG TV': 'تلفاز سامسونغ وإل جي',
-  'Firestick': 'Firestick',
-  'Android TV & box': 'أندرويد تي في والبوكس',
-  'Android phone': 'هاتف أندرويد',
-  'iPhone & iPad': 'آيفون وآيباد',
-  'Apple TV': 'Apple TV',
-  'Windows & Mac': 'ويندوز وماك',
-  'If it will not work': 'إذا لم يعمل',
-  'Devices': 'الأجهزة',
-
-  'Your details': 'بياناتك',
-  'We send them on WhatsApp after you order — an activation code, or a server address with a username and password. Which one depends on your device.':
-    'نرسلها لك على واتساب بعد الطلب: رمز تفعيل، أو عنوان خادم مع اسم مستخدم وكلمة مرور. ويتوقّف ذلك على جهازك.',
-  'Your connection': 'اتصالك',
-  '15 Mbps is enough for HD, 25 for 4K. A cable beats Wi-Fi, and 5 GHz Wi-Fi beats 2.4 GHz.':
-    '15 ميغابت في الثانية تكفي لجودة HD، و25 للجودة 4K. الكابل أفضل من الواي فاي، وواي فاي 5 غيغاهرتز أفضل من 2.4 غيغاهرتز.',
-  'Your device': 'جهازك',
-  'Pick it from the list. Every guide is four steps or fewer.':
-    'اختره من القائمة. كل دليل من أربع خطوات أو أقل.',
-  'Would you rather we did it with you?': 'تفضّل أن نضبطه معك؟',
-  'Stuck on this step?': 'تعثّرت في هذه الخطوة؟',
-  'None of these?': 'ولا واحدة من هذه؟',
-  'Message us on WhatsApp': 'راسلنا على واتساب',
-
-  'Firestick & Fire TV': 'Firestick و Fire TV',
-  'Android phone & tablet': 'هاتف وجهاز لوحي بأندرويد',
-  'Downloader + TiviMate': 'Downloader + TiviMate',
-  'VLC or Smarters': 'VLC / Smarters',
-
-  '__s_smarttv1': 'افتح <strong dir="ltr">Samsung Apps</strong> أو <strong dir="ltr">LG Content Store</strong>.',
-  '__s_smarttv2': 'ثبّت <strong dir="ltr">IBO Player</strong>. وتعمل أيضًا <span dir="ltr">Smart IPTV</span> و<span dir="ltr">Set IPTV</span> و<span dir="ltr">IPTV Smarters</span>.',
-  '__s_smarttv3': 'يعرض التطبيق <strong>مفتاح الجهاز</strong>. أرسله إلينا بالبريد الإلكتروني.',
-  '__s_smarttv4': 'نربطه خلال دقيقة. أغلق التطبيق ثم افتحه من جديد.',
-  '__n_smarttv': '<b>رسم لمرة واحدة:</b> تطلب تطبيقات التلفاز بضعة يوروهات للتفعيل، تُدفع لمطوّر التطبيق، مرة واحدة لكل تلفاز. وليست جزءًا من اشتراكك.',
-
-  '__s_firestick1': 'ثبّت <strong dir="ltr">Downloader</strong> من الشاشة الرئيسية لجهاز Fire TV.',
-  '__s_firestick2': 'من <strong dir="ltr">Settings → My Fire TV → Developer options</strong> اسمح لتطبيق Downloader بتثبيت التطبيقات.',
-  '__s_firestick3': 'افتح Downloader، وأدخل العنوان الذي نرسله، وثبّت المشغّل.',
-  '__s_firestick4': 'افتحه وأدخل بياناتك.',
-  '__n_firestick': '<b>أي مشغّل؟</b> <span dir="ltr">TiviMate</span> دليل برامجه أفضل، و<span dir="ltr">IPTV Smarters</span> أبسط. أخبرنا بأيّهما ونرسل لك العنوان المناسب.',
-
-  '__s_androidtv1': 'افتح <strong dir="ltr">Google Play Store</strong>.',
-  '__s_androidtv2': 'ثبّت <strong dir="ltr">TiviMate</strong> أو <strong dir="ltr">IPTV Smarters Pro</strong>.',
-  '__s_androidtv3': 'اختر إضافة قائمة تشغيل أو مستخدم جديد.',
-  '__s_androidtv4': 'أدخل بياناتك وانتظر قائمة القنوات.',
-
-  '__s_android1': 'افتح <strong dir="ltr">Google Play Store</strong>.',
-  '__s_android2': 'ثبّت <strong dir="ltr">IPTV Smarters Pro</strong>.',
-  '__s_android3': 'افتحه ووافق على الشروط.',
-  '__s_android4': 'أدخل بياناتك. تظهر القنوات والأفلام والمسلسلات.',
-
-  '__s_ios1': 'افتح <strong dir="ltr">App Store</strong>.',
-  '__s_ios2': 'ثبّت <strong dir="ltr">IPTV Smarters Player Lite</strong>.',
-  '__s_ios3': 'افتحه ووافق على الشروط.',
-  '__s_ios4': 'أدخل بياناتك وابدأ المشاهدة.',
-  '__n_ios': '<b>لم تجده؟</b> تغيّر آبل أسماء هذه المشغّلات بين حين وآخر. اسألنا وسنخبرك بالموجود في المتجر اليوم.',
-
-  '__s_appletv1': 'افتح <strong dir="ltr">App Store</strong>. يلزم جهاز <span dir="ltr">Apple TV 4</span> أو أحدث.',
-  '__s_appletv2': 'ثبّت <strong dir="ltr">IPTV Smarters Player Lite</strong>.',
-  '__s_appletv3': 'أدخل بياناتك — استخدم لوحة مفاتيح آيفون عندما يعرض عليك ذلك.',
-
-  '__s_computer1': 'ثبّت <strong dir="ltr">VLC</strong> من videolan.org، أو <strong dir="ltr">IPTV Smarters for PC</strong>.',
-  '__s_computer2': 'في VLC: <strong dir="ltr">Media → Open Network Stream</strong>. وفي Smarters: أضف مستخدمًا جديدًا.',
-  '__s_computer3': 'الصق الرابط الذي أرسلناه، أو أدخل الخادم واسم المستخدم وكلمة المرور.',
-  '__n_computer': '<b>ملاحظة:</b> يشغّل VLC القنوات لكن بلا دليل برامج وبلا إعادة مشاهدة. استخدم IPTV Smarters للأمرين.',
-
-  'The picture keeps stopping': 'الصورة تتوقّف باستمرار',
-  'Almost always the connection. Try a cable, or move closer to the router. If it is one channel only, send us its name.':
-    'السبب غالبًا هو الاتصال. جرّب كابلًا أو اقترب من الراوتر. وإن كانت قناة واحدة فقط، أرسل لنا اسمها.',
-  'It says the login is wrong': 'يقول إنّ بيانات الدخول خاطئة',
-  'Copy and paste from our WhatsApp message instead of typing. A stray space is usually the culprit.':
-    'انسخ البيانات من رسالتنا على واتساب بدل كتابتها. المسافة الزائدة هي السبب عادةً.',
-  'A channel is missing': 'قناة ناقصة',
-  'Line-ups change. Send us the name and we will tell you where it is.':
-    'الشبكة تتغيّر. أرسل لنا الاسم وسنخبرك أين تجدها.',
-  'Nothing loads at all': 'لا يُحمَّل شيء',
-  'Restart the router and try again. Still dead? Message us with your device and what is on screen.':
-    'أعد تشغيل الراوتر وحاول مجددًا. ولا يزال لا شيء؟ راسلنا مع ذكر جهازك وما يظهر على الشاشة.',
-
-  'Setup help is included with every plan': 'المساعدة في التثبيت مشمولة مع كل باقة'
+it: {
+  "__in_title":
+    "Installare l’IPTV — Firestick, TV Samsung, Smarters | SwiftChannels",
+  "__in_desc":
+    "Installa SwiftChannels su TV Samsung o LG, Firestick, Android, iPhone, Apple TV, Windows o Mac. Scegli il tuo dispositivo e segui quattro passaggi.",
+  "__in_h1":
+    "Scegli il tuo dispositivo.<br><span class=\"grad\">Quattro passaggi.</span>",
+  "Installation guide":
+    "Guida all’installazione",
+  "Email us":
+    "Scrivici",
+  "Copy and paste from our email instead of typing. A stray space is usually the culprit.":
+    "Copia e incolla dalla nostra e-mail invece di digitare. Di solito il colpevole è uno spazio di troppo.",
+  "We send them by email after you order — an activation code, or a server address with a username and password. Which one depends on your device.":
+    "Te li inviamo per e-mail dopo l’ordine: un codice di attivazione, oppure un indirizzo del server con nome utente e password. Quale dei due dipende dal tuo dispositivo.",
+  "← Back to the site":
+    "← Torna al sito",
+  "Ten minutes, once. After that the app remembers everything.":
+    "Dieci minuti, una volta sola. Dopo, l’app ricorda tutto.",
+  "Before you start":
+    "Prima di cominciare",
+  "Samsung & LG TV":
+    "TV Samsung e LG",
+  "Firestick":
+    "Firestick",
+  "Android TV & box":
+    "Android TV e box",
+  "Android phone":
+    "Telefono Android",
+  "iPhone & iPad":
+    "iPhone e iPad",
+  "Apple TV":
+    "Apple TV",
+  "Windows & Mac":
+    "Windows e Mac",
+  "If it will not work":
+    "Se qualcosa non funziona",
+  "Devices":
+    "Dispositivi",
+  "Your details":
+    "I tuoi dati",
+  "We send them on WhatsApp after you order — an activation code, or a server address with a username and password. Which one depends on your device.":
+    "Te li inviamo su WhatsApp dopo l’ordine: un codice di attivazione, oppure un indirizzo del server con nome utente e password. Quale dei due dipende dal tuo dispositivo.",
+  "Your connection":
+    "La tua connessione",
+  "15 Mbps is enough for HD, 25 for 4K. A cable beats Wi-Fi, and 5 GHz Wi-Fi beats 2.4 GHz.":
+    "15 Mbps bastano per l’HD, 25 per il 4K. Il cavo batte il Wi-Fi, e il Wi-Fi a 5 GHz batte quello a 2,4 GHz.",
+  "Your device":
+    "Il tuo dispositivo",
+  "Pick it from the list. Every guide is four steps or fewer.":
+    "Scegli dall’elenco. Ogni guida sta in quattro passaggi o meno.",
+  "Would you rather we did it with you?":
+    "Preferisci che lo facciamo insieme?",
+  "Stuck on this step?":
+    "Bloccato su questo passaggio?",
+  "None of these?":
+    "Nessuno di questi?",
+  "Message us on WhatsApp":
+    "Scrivici su WhatsApp",
+  "Firestick & Fire TV":
+    "Firestick e Fire TV",
+  "Android phone & tablet":
+    "Telefono e tablet Android",
+  "Downloader + TiviMate":
+    "Downloader + TiviMate",
+  "VLC or Smarters":
+    "VLC o Smarters",
+  "__s_smarttv1":
+    "Apri <strong>Samsung Apps</strong> o il <strong>LG Content Store</strong>.",
+  "__s_smarttv2":
+    "Installa <strong>IBO Player</strong>. Funzionano anche Smart IPTV, Set IPTV e IPTV Smarters.",
+  "__s_smarttv3":
+    "L’app mostra una <strong>chiave del dispositivo</strong>. Inviacela per e-mail.",
+  "__s_smarttv4":
+    "La colleghiamo in un minuto. Chiudi l’app e riaprila.",
+  "__n_smarttv":
+    "<b>Costo una tantum:</b> le app per TV chiedono qualche euro per l’attivazione, pagati allo sviluppatore, una volta per televisore. Non fa parte del tuo abbonamento.",
+  "__s_firestick1":
+    "Installa <strong>Downloader</strong> dalla schermata iniziale del Fire TV.",
+  "__s_firestick2":
+    "In <strong dir=\"ltr\">Settings → My Fire TV → Developer options</strong>, consenti a Downloader di installare app.",
+  "__s_firestick3":
+    "Apri Downloader, inserisci l’indirizzo che ti inviamo e installa il lettore.",
+  "__s_firestick4":
+    "Aprilo e inserisci i tuoi dati.",
+  "__n_firestick":
+    "<b>Quale lettore?</b> TiviMate ha la guida dei programmi migliore, IPTV Smarters è più semplice. Dicci quale preferisci e ti mandiamo l’indirizzo giusto.",
+  "__s_androidtv1":
+    "Apri il <strong dir=\"ltr\">Google Play Store</strong>.",
+  "__s_androidtv2":
+    "Installa <strong>TiviMate</strong> o <strong>IPTV Smarters Pro</strong>.",
+  "__s_androidtv3":
+    "Scegli di aggiungere una playlist o un nuovo utente.",
+  "__s_androidtv4":
+    "Inserisci i tuoi dati e attendi l’elenco dei canali.",
+  "__s_android1":
+    "Apri il <strong dir=\"ltr\">Google Play Store</strong>.",
+  "__s_android2":
+    "Installa <strong>IPTV Smarters Pro</strong>.",
+  "__s_android3":
+    "Aprilo e accetta le condizioni.",
+  "__s_android4":
+    "Inserisci i tuoi dati. Compaiono canali, film e serie.",
+  "__s_ios1":
+    "Apri l’<strong dir=\"ltr\">App Store</strong>.",
+  "__s_ios2":
+    "Installa <strong>IPTV Smarters Player Lite</strong>.",
+  "__s_ios3":
+    "Aprilo e accetta le condizioni.",
+  "__s_ios4":
+    "Inserisci i tuoi dati e guarda.",
+  "__n_ios":
+    "<b>Non lo trovi?</b> Apple rinomina questi lettori ogni tanto. Chiedici e ti diciamo qual è oggi sullo store.",
+  "__s_appletv1":
+    "Apri l’<strong dir=\"ltr\">App Store</strong>. Serve una Apple TV 4 o più recente.",
+  "__s_appletv2":
+    "Installa <strong>IPTV Smarters Player Lite</strong>.",
+  "__s_appletv3":
+    "Inserisci i tuoi dati — usa la tastiera dell’iPhone quando te lo propone.",
+  "__s_computer1":
+    "Installa <strong>VLC</strong> da videolan.org, oppure <strong>IPTV Smarters for PC</strong>.",
+  "__s_computer2":
+    "VLC: <strong dir=\"ltr\">Media → Open Network Stream</strong>. Smarters: aggiungi un nuovo utente.",
+  "__s_computer3":
+    "Incolla il link che ti inviamo, oppure inserisci server, nome utente e password.",
+  "__n_computer":
+    "<b>Da sapere:</b> VLC riproduce i canali ma non ha né guida dei programmi né replay. Per averli entrambi usa IPTV Smarters.",
+  "The picture keeps stopping":
+    "L’immagine si blocca in continuazione",
+  "Almost always the connection. Try a cable, or move closer to the router. If it is one channel only, send us its name.":
+    "Quasi sempre è la connessione. Prova con un cavo, o avvicinati al router. Se riguarda un solo canale, mandaci il nome.",
+  "It says the login is wrong":
+    "Dice che le credenziali non sono corrette",
+  "Copy and paste from our WhatsApp message instead of typing. A stray space is usually the culprit.":
+    "Copia e incolla dal nostro messaggio WhatsApp invece di digitare. Di solito il colpevole è uno spazio di troppo.",
+  "A channel is missing":
+    "Manca un canale",
+  "Line-ups change. Send us the name and we will tell you where it is.":
+    "Gli elenchi cambiano. Mandaci il nome e ti diciamo dove si trova.",
+  "Nothing loads at all":
+    "Non si carica proprio niente",
+  "Restart the router and try again. Still dead? Message us with your device and what is on screen.":
+    "Riavvia il router e riprova. Ancora nulla? Scrivici indicando il dispositivo e cosa vedi sullo schermo.",
+  "Setup help is included with every plan":
+    "L’assistenza all’installazione è inclusa in ogni piano",
 },
 
 /* ═══════════════════════ DUTCH ═══════════════════════ */

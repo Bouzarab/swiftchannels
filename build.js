@@ -30,7 +30,7 @@ const LANGS = [
   { code:'fr', dir:'ltr', folder:'fr', ogLocale:'fr_FR' },
   { code:'es', dir:'ltr', folder:'es', ogLocale:'es_ES' },
   { code:'de', dir:'ltr', folder:'de', ogLocale:'de_DE' },
-  { code:'ar', dir:'rtl', folder:'ar', ogLocale:'ar_MA' },
+  { code:'it', dir:'ltr', folder:'it', ogLocale:'it_IT' },
   { code:'nl', dir:'ltr', folder:'nl', ogLocale:'nl_NL' }
 ];
 

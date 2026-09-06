@@ -7,7 +7,7 @@ window.I18N = window.I18N || {};
    ═══════════════════════════════════════════════════════════════════ */
 window.i18n = (function(){
   const DICT  = window.I18N || {};
-  const LANGS = ['en','fr','es','de','ar','nl'];
+  const LANGS = ['en','fr','es','de','it','nl'];
   let LANG = 'en';
 
   const norm = s => String(s).replace(/\s+/g,' ').trim();
