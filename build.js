@@ -84,6 +84,41 @@ const urlFor = f => f ? `${SITE}/${f}/` : `${SITE}/`;
         }
       });
 
+      /* Structured data. The path rewriter above only touches src/href
+         attributes, and these URLs live inside JSON — so repoint the ones
+         that name a page of this site at this language's copy, leave asset
+         URLs alone, and stamp the language. */
+      document.querySelectorAll('script[type="application/ld+json"]').forEach(el => {
+        const page = /^https:\/\/swiftchannels\.com\/((?:[a-z-]+\.html)?(?:#.*)?)$/;
+        const walk = o => {
+          if (Array.isArray(o)) return o.map(walk);
+          if (o && typeof o === 'object') {
+            /* Organization, WebSite and Product are one entity each, shared by
+               every language, so their @id stays global — six @ids for one
+               company would split the entity. Page-scoped nodes are the ones
+               that must name this language's copy. */
+            const SCOPED = ['WebPage','BreadcrumbList','ListItem'];
+            const pageScoped = SCOPED.includes(o['@type']) || o['@type'] === undefined;
+            const out = {};
+            for (const k of Object.keys(o)) {
+              const v = o[k];
+              if (k === 'inLanguage') { out[k] = code; continue; }
+              if (typeof v === 'string' && ['@id','url','item'].includes(k) && pageScoped) {
+                const m = page.exec(v);
+                out[k] = m ? abs(folder) + m[1] : v;
+                continue;
+              }
+              out[k] = walk(v);
+            }
+            return out;
+          }
+          return o;
+        };
+        try {
+          el.textContent = JSON.stringify(walk(JSON.parse(el.textContent)), null, 2);
+        } catch (e) { /* leave malformed JSON exactly as it was */ }
+      });
+
       /* head: canonical, hreflang, Open Graph */
       const head = document.head;
       head.querySelectorAll('link[rel="canonical"],link[rel="alternate"]').forEach(e => e.remove());
