@@ -15,10 +15,10 @@ Questa guida SwiftChannels resta pratica: se ti piace l’horror psicologico, gu
 
 ## La selezione
 
-1. **Rosemary's Baby** (1968) - Rosemary's Baby mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « se ti piace l’horror psicologico, guarda questi » e il suo voto IMDb è 8/10. [IMDb](https://www.imdb.com/title/tt0063522/)
-2. **The Shining** (1980) - The Shining mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « se ti piace l’horror psicologico, guarda questi » e il suo voto IMDb è 8.4/10. [IMDb](https://www.imdb.com/title/tt0081505/)
-3. **Black Swan** (2010) - Black Swan mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « se ti piace l’horror psicologico, guarda questi » e il suo voto IMDb è 8/10. [IMDb](https://www.imdb.com/title/tt0947798/)
-4. **The Witch** (2015) - The Witch mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « se ti piace l’horror psicologico, guarda questi » e il suo voto IMDb è 7/10. [IMDb](https://www.imdb.com/title/tt4263482/)
-5. **Hereditary** (2018) - Hereditary mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « se ti piace l’horror psicologico, guarda questi » e il suo voto IMDb è 7.3/10. [IMDb](https://www.imdb.com/title/tt7784604/)
+1. **Rosemary's Baby** (1968) - Rosemary's Baby mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « se ti piace l’horror psicologico, guarda questi ». [IMDb 8/10](https://www.imdb.com/title/tt0063522/)
+2. **The Shining** (1980) - The Shining mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « se ti piace l’horror psicologico, guarda questi ». [IMDb 8.4/10](https://www.imdb.com/title/tt0081505/)
+3. **Black Swan** (2010) - Black Swan mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « se ti piace l’horror psicologico, guarda questi ». [IMDb 8/10](https://www.imdb.com/title/tt0947798/)
+4. **The Witch** (2015) - The Witch mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « se ti piace l’horror psicologico, guarda questi ». [IMDb 7/10](https://www.imdb.com/title/tt4263482/)
+5. **Hereditary** (2018) - Hereditary mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « se ti piace l’horror psicologico, guarda questi ». [IMDb 7.3/10](https://www.imdb.com/title/tt7784604/)
 
 Usala come una coda semplice per la serata. Molti titoli di questo tipo compaiono nelle librerie di film e serie offerte con SwiftChannels, quindi non esitare a guardarli tramite la tua linea SwiftChannels dopo la prova gratuita.

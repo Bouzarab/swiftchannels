@@ -15,10 +15,10 @@ Dieser SwiftChannels-Guide bleibt praktisch: wenn du spionagethriller magst, sch
 
 ## Die Auswahl
 
-1. **Tinker Tailor Soldier Spy** (2011) - Tinker Tailor Soldier Spy behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du spionagethriller magst, schau diese“ und liegt bei IMDb bei 7/10. [IMDb](https://www.imdb.com/title/tt1340800/)
-2. **Munich** (2005) - Munich behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du spionagethriller magst, schau diese“ und liegt bei IMDb bei 7.5/10. [IMDb](https://www.imdb.com/title/tt0408306/)
-3. **Bridge of Spies** (2015) - Bridge of Spies behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du spionagethriller magst, schau diese“ und liegt bei IMDb bei 7.6/10. [IMDb](https://www.imdb.com/title/tt3682448/)
-4. **The Lives of Others** (2006) - The Lives of Others behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du spionagethriller magst, schau diese“ und liegt bei IMDb bei 8.4/10. [IMDb](https://www.imdb.com/title/tt0405094/)
-5. **The Bourne Ultimatum** (2007) - The Bourne Ultimatum behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du spionagethriller magst, schau diese“ und liegt bei IMDb bei 8/10. [IMDb](https://www.imdb.com/title/tt0440963/)
+1. **Tinker Tailor Soldier Spy** (2011) - Tinker Tailor Soldier Spy behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du spionagethriller magst, schau diese“. [IMDb 7/10](https://www.imdb.com/title/tt1340800/)
+2. **Munich** (2005) - Munich behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du spionagethriller magst, schau diese“. [IMDb 7.5/10](https://www.imdb.com/title/tt0408306/)
+3. **Bridge of Spies** (2015) - Bridge of Spies behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du spionagethriller magst, schau diese“. [IMDb 7.6/10](https://www.imdb.com/title/tt3682448/)
+4. **The Lives of Others** (2006) - The Lives of Others behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du spionagethriller magst, schau diese“. [IMDb 8.4/10](https://www.imdb.com/title/tt0405094/)
+5. **The Bourne Ultimatum** (2007) - The Bourne Ultimatum behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du spionagethriller magst, schau diese“. [IMDb 8/10](https://www.imdb.com/title/tt0440963/)
 
 Nutze die Liste als einfache Abend-Warteschlange. Viele Titel dieser Art findest du in den Film- und Serienbibliotheken, die mit SwiftChannels angeboten werden. Schau sie gern über deine SwiftChannels-Leitung nach dem Gratistest.

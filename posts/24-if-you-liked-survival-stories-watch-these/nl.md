@@ -15,10 +15,10 @@ Deze SwiftChannels-gids blijft praktisch: als je overlevingsverhalen goed vindt,
 
 ## De selectie
 
-1. **Cast Away** (2000) - Cast Away behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je overlevingsverhalen goed vindt, kijk dan deze“ en de IMDb-score is 7.8/10. [IMDb](https://www.imdb.com/title/tt0162222/)
-2. **Life of Pi** (2012) - Life of Pi behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je overlevingsverhalen goed vindt, kijk dan deze“ en de IMDb-score is 7.9/10. [IMDb](https://www.imdb.com/title/tt0454876/)
-3. **Apollo 13** (1995) - Apollo 13 behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je overlevingsverhalen goed vindt, kijk dan deze“ en de IMDb-score is 7.7/10. [IMDb](https://www.imdb.com/title/tt0112384/)
-4. **The Martian** (2015) - The Martian behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je overlevingsverhalen goed vindt, kijk dan deze“ en de IMDb-score is 8/10. [IMDb](https://www.imdb.com/title/tt3659388/)
-5. **Touching the Void** (2003) - Touching the Void behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je overlevingsverhalen goed vindt, kijk dan deze“ en de IMDb-score is 7.9/10. [IMDb](https://www.imdb.com/title/tt0379557/)
+1. **Cast Away** (2000) - Cast Away behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je overlevingsverhalen goed vindt, kijk dan deze“. [IMDb 7.8/10](https://www.imdb.com/title/tt0162222/)
+2. **Life of Pi** (2012) - Life of Pi behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je overlevingsverhalen goed vindt, kijk dan deze“. [IMDb 7.9/10](https://www.imdb.com/title/tt0454876/)
+3. **Apollo 13** (1995) - Apollo 13 behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je overlevingsverhalen goed vindt, kijk dan deze“. [IMDb 7.7/10](https://www.imdb.com/title/tt0112384/)
+4. **The Martian** (2015) - The Martian behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je overlevingsverhalen goed vindt, kijk dan deze“. [IMDb 8/10](https://www.imdb.com/title/tt3659388/)
+5. **Touching the Void** (2003) - Touching the Void behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je overlevingsverhalen goed vindt, kijk dan deze“. [IMDb 7.9/10](https://www.imdb.com/title/tt0379557/)
 
 Gebruik dit als eenvoudige kijklijst voor de avond. Veel van dit soort titels staan in de film- en seriebibliotheken die met SwiftChannels worden aangeboden, dus kijk ze gerust via je SwiftChannels-lijn na je gratis test.

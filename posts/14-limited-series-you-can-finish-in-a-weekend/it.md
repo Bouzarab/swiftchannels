@@ -15,10 +15,10 @@ Questa guida SwiftChannels resta pratica: miniserie da finire in un weekend, tut
 
 ## La selezione
 
-1. **Chernobyl** (2019) - Chernobyl mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « miniserie da finire in un weekend » e il suo voto IMDb è 9.3/10. [IMDb](https://www.imdb.com/title/tt7366338/)
-2. **Band of Brothers** (2001) - Band of Brothers mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « miniserie da finire in un weekend » e il suo voto IMDb è 9.4/10. [IMDb](https://www.imdb.com/title/tt0185906/)
-3. **The Queen's Gambit** (2020) - The Queen's Gambit mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « miniserie da finire in un weekend » e il suo voto IMDb è 8.5/10. [IMDb](https://www.imdb.com/title/tt10048342/)
-4. **Mare of Easttown** (2021) - Mare of Easttown mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « miniserie da finire in un weekend » e il suo voto IMDb è 8.4/10. [IMDb](https://www.imdb.com/title/tt10155688/)
-5. **When They See Us** (2019) - When They See Us mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « miniserie da finire in un weekend » e il suo voto IMDb è 8.8/10. [IMDb](https://www.imdb.com/title/tt7137906/)
+1. **Chernobyl** (2019) - Chernobyl mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « miniserie da finire in un weekend ». [IMDb 9.3/10](https://www.imdb.com/title/tt7366338/)
+2. **Band of Brothers** (2001) - Band of Brothers mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « miniserie da finire in un weekend ». [IMDb 9.4/10](https://www.imdb.com/title/tt0185906/)
+3. **The Queen's Gambit** (2020) - The Queen's Gambit mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « miniserie da finire in un weekend ». [IMDb 8.5/10](https://www.imdb.com/title/tt10048342/)
+4. **Mare of Easttown** (2021) - Mare of Easttown mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « miniserie da finire in un weekend ». [IMDb 8.4/10](https://www.imdb.com/title/tt10155688/)
+5. **When They See Us** (2019) - When They See Us mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « miniserie da finire in un weekend ». [IMDb 8.8/10](https://www.imdb.com/title/tt7137906/)
 
 Usala come una coda semplice per la serata. Molti titoli di questo tipo compaiono nelle librerie di film e serie offerte con SwiftChannels, quindi non esitare a guardarli tramite la tua linea SwiftChannels dopo la prova gratuita.

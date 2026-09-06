@@ -15,10 +15,10 @@ Deze SwiftChannels-gids blijft praktisch: documentaires die je anders laten kijk
 
 ## De selectie
 
-1. **13th** (2016) - 13th behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „documentaires die je anders laten kijken“ en de IMDb-score is 8.2/10. [IMDb](https://www.imdb.com/title/tt5895028/)
-2. **Free Solo** (2018) - Free Solo behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „documentaires die je anders laten kijken“ en de IMDb-score is 8.1/10. [IMDb](https://www.imdb.com/title/tt7775622/)
-3. **Won't You Be My Neighbor?** (2018) - Won't You Be My Neighbor? behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „documentaires die je anders laten kijken“ en de IMDb-score is 8.3/10. [IMDb](https://www.imdb.com/title/tt7681902/)
-4. **Man on Wire** (2008) - Man on Wire behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „documentaires die je anders laten kijken“ en de IMDb-score is 7.7/10. [IMDb](https://www.imdb.com/title/tt1155592/)
-5. **Searching for Sugar Man** (2012) - Searching for Sugar Man behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „documentaires die je anders laten kijken“ en de IMDb-score is 8.2/10. [IMDb](https://www.imdb.com/title/tt2125608/)
+1. **13th** (2016) - 13th behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „documentaires die je anders laten kijken“. [IMDb 8.2/10](https://www.imdb.com/title/tt5895028/)
+2. **Free Solo** (2018) - Free Solo behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „documentaires die je anders laten kijken“. [IMDb 8.1/10](https://www.imdb.com/title/tt7775622/)
+3. **Won't You Be My Neighbor?** (2018) - Won't You Be My Neighbor? behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „documentaires die je anders laten kijken“. [IMDb 8.3/10](https://www.imdb.com/title/tt7681902/)
+4. **Man on Wire** (2008) - Man on Wire behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „documentaires die je anders laten kijken“. [IMDb 7.7/10](https://www.imdb.com/title/tt1155592/)
+5. **Searching for Sugar Man** (2012) - Searching for Sugar Man behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „documentaires die je anders laten kijken“. [IMDb 8.2/10](https://www.imdb.com/title/tt2125608/)
 
 Gebruik dit als eenvoudige kijklijst voor de avond. Veel van dit soort titels staan in de film- en seriebibliotheken die met SwiftChannels worden aangeboden, dus kijk ze gerust via je SwiftChannels-lijn na je gratis test.

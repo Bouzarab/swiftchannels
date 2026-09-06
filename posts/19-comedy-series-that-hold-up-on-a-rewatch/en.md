@@ -15,10 +15,10 @@ This SwiftChannels guide keeps the list practical: comedy series that hold up on
 
 ## The shortlist
 
-1. **The Office** (2005) - The Office keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for comedy series that hold up on a rewatch and its IMDb score is 9/10. [IMDb](https://www.imdb.com/title/tt0386676/)
-2. **Parks and Recreation** (2009) - Parks and Recreation keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for comedy series that hold up on a rewatch and its IMDb score is 8.6/10. [IMDb](https://www.imdb.com/title/tt1266020/)
-3. **Fleabag** (2016) - Fleabag keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for comedy series that hold up on a rewatch and its IMDb score is 8.7/10. [IMDb](https://www.imdb.com/title/tt5687612/)
-4. **Schitt's Creek** (2015) - Schitt's Creek keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for comedy series that hold up on a rewatch and its IMDb score is 8.5/10. [IMDb](https://www.imdb.com/title/tt3526078/)
-5. **Brooklyn Nine-Nine** (2013) - Brooklyn Nine-Nine keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for comedy series that hold up on a rewatch and its IMDb score is 8.4/10. [IMDb](https://www.imdb.com/title/tt2467372/)
+1. **The Office** (2005) - The Office keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for comedy series that hold up on a rewatch. [IMDb 9/10](https://www.imdb.com/title/tt0386676/)
+2. **Parks and Recreation** (2009) - Parks and Recreation keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for comedy series that hold up on a rewatch. [IMDb 8.6/10](https://www.imdb.com/title/tt1266020/)
+3. **Fleabag** (2016) - Fleabag keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for comedy series that hold up on a rewatch. [IMDb 8.7/10](https://www.imdb.com/title/tt5687612/)
+4. **Schitt's Creek** (2015) - Schitt's Creek keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for comedy series that hold up on a rewatch. [IMDb 8.5/10](https://www.imdb.com/title/tt3526078/)
+5. **Brooklyn Nine-Nine** (2013) - Brooklyn Nine-Nine keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for comedy series that hold up on a rewatch. [IMDb 8.4/10](https://www.imdb.com/title/tt2467372/)
 
 You can use this as a simple evening queue. Many titles like these appear in the film and series libraries offered with SwiftChannels, so do not hesitate to watch them through your SwiftChannels line after your free test.

@@ -15,10 +15,10 @@ This SwiftChannels guide keeps the list practical: if you liked spy thrillers, w
 
 ## The shortlist
 
-1. **Tinker Tailor Soldier Spy** (2011) - Tinker Tailor Soldier Spy keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked spy thrillers, watch these and its IMDb score is 7/10. [IMDb](https://www.imdb.com/title/tt1340800/)
-2. **Munich** (2005) - Munich keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked spy thrillers, watch these and its IMDb score is 7.5/10. [IMDb](https://www.imdb.com/title/tt0408306/)
-3. **Bridge of Spies** (2015) - Bridge of Spies keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked spy thrillers, watch these and its IMDb score is 7.6/10. [IMDb](https://www.imdb.com/title/tt3682448/)
-4. **The Lives of Others** (2006) - The Lives of Others keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked spy thrillers, watch these and its IMDb score is 8.4/10. [IMDb](https://www.imdb.com/title/tt0405094/)
-5. **The Bourne Ultimatum** (2007) - The Bourne Ultimatum keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked spy thrillers, watch these and its IMDb score is 8/10. [IMDb](https://www.imdb.com/title/tt0440963/)
+1. **Tinker Tailor Soldier Spy** (2011) - Tinker Tailor Soldier Spy keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked spy thrillers, watch these. [IMDb 7/10](https://www.imdb.com/title/tt1340800/)
+2. **Munich** (2005) - Munich keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked spy thrillers, watch these. [IMDb 7.5/10](https://www.imdb.com/title/tt0408306/)
+3. **Bridge of Spies** (2015) - Bridge of Spies keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked spy thrillers, watch these. [IMDb 7.6/10](https://www.imdb.com/title/tt3682448/)
+4. **The Lives of Others** (2006) - The Lives of Others keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked spy thrillers, watch these. [IMDb 8.4/10](https://www.imdb.com/title/tt0405094/)
+5. **The Bourne Ultimatum** (2007) - The Bourne Ultimatum keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked spy thrillers, watch these. [IMDb 8/10](https://www.imdb.com/title/tt0440963/)
 
 You can use this as a simple evening queue. Many titles like these appear in the film and series libraries offered with SwiftChannels, so do not hesitate to watch them through your SwiftChannels line after your free test.

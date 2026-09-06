@@ -15,10 +15,10 @@ Dieser SwiftChannels-Guide bleibt praktisch: wenn du heist-filme magst, schau di
 
 ## Die Auswahl
 
-1. **The Sting** (1973) - The Sting behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du heist-filme magst, schau diese“ und liegt bei IMDb bei 8.2/10. [IMDb](https://www.imdb.com/title/tt0070735/)
-2. **Rififi** (1955) - Rififi behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du heist-filme magst, schau diese“ und liegt bei IMDb bei 8.1/10. [IMDb](https://www.imdb.com/title/tt0048021/)
-3. **Thief** (1981) - Thief behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du heist-filme magst, schau diese“ und liegt bei IMDb bei 7.4/10. [IMDb](https://www.imdb.com/title/tt0083190/)
-4. **Logan Lucky** (2017) - Logan Lucky behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du heist-filme magst, schau diese“ und liegt bei IMDb bei 7/10. [IMDb](https://www.imdb.com/title/tt5439796/)
-5. **The Town** (2010) - The Town behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du heist-filme magst, schau diese“ und liegt bei IMDb bei 7.5/10. [IMDb](https://www.imdb.com/title/tt0840361/)
+1. **The Sting** (1973) - The Sting behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du heist-filme magst, schau diese“. [IMDb 8.2/10](https://www.imdb.com/title/tt0070735/)
+2. **Rififi** (1955) - Rififi behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du heist-filme magst, schau diese“. [IMDb 8.1/10](https://www.imdb.com/title/tt0048021/)
+3. **Thief** (1981) - Thief behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du heist-filme magst, schau diese“. [IMDb 7.4/10](https://www.imdb.com/title/tt0083190/)
+4. **Logan Lucky** (2017) - Logan Lucky behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du heist-filme magst, schau diese“. [IMDb 7/10](https://www.imdb.com/title/tt5439796/)
+5. **The Town** (2010) - The Town behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du heist-filme magst, schau diese“. [IMDb 7.5/10](https://www.imdb.com/title/tt0840361/)
 
 Nutze die Liste als einfache Abend-Warteschlange. Viele Titel dieser Art findest du in den Film- und Serienbibliotheken, die mit SwiftChannels angeboten werden. Schau sie gern über deine SwiftChannels-Leitung nach dem Gratistest.

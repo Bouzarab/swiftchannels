@@ -15,10 +15,10 @@ Deze SwiftChannels-gids blijft praktisch: sportfilms die werken ook als je de sp
 
 ## De selectie
 
-1. **Rocky** (1976) - Rocky behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „sportfilms die werken ook als je de sport niet volgt“ en de IMDb-score is 8.1/10. [IMDb](https://www.imdb.com/title/tt0075148/)
-2. **Raging Bull** (1980) - Raging Bull behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „sportfilms die werken ook als je de sport niet volgt“ en de IMDb-score is 8.1/10. [IMDb](https://www.imdb.com/title/tt0081398/)
-3. **The Wrestler** (2008) - The Wrestler behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „sportfilms die werken ook als je de sport niet volgt“ en de IMDb-score is 7.9/10. [IMDb](https://www.imdb.com/title/tt1125849/)
-4. **Rush** (2013) - Rush behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „sportfilms die werken ook als je de sport niet volgt“ en de IMDb-score is 8.1/10. [IMDb](https://www.imdb.com/title/tt1979320/)
-5. **Ford v Ferrari** (2019) - Ford v Ferrari behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „sportfilms die werken ook als je de sport niet volgt“ en de IMDb-score is 8.1/10. [IMDb](https://www.imdb.com/title/tt1950186/)
+1. **Rocky** (1976) - Rocky behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „sportfilms die werken ook als je de sport niet volgt“. [IMDb 8.1/10](https://www.imdb.com/title/tt0075148/)
+2. **Raging Bull** (1980) - Raging Bull behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „sportfilms die werken ook als je de sport niet volgt“. [IMDb 8.1/10](https://www.imdb.com/title/tt0081398/)
+3. **The Wrestler** (2008) - The Wrestler behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „sportfilms die werken ook als je de sport niet volgt“. [IMDb 7.9/10](https://www.imdb.com/title/tt1125849/)
+4. **Rush** (2013) - Rush behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „sportfilms die werken ook als je de sport niet volgt“. [IMDb 8.1/10](https://www.imdb.com/title/tt1979320/)
+5. **Ford v Ferrari** (2019) - Ford v Ferrari behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „sportfilms die werken ook als je de sport niet volgt“. [IMDb 8.1/10](https://www.imdb.com/title/tt1950186/)
 
 Gebruik dit als eenvoudige kijklijst voor de avond. Veel van dit soort titels staan in de film- en seriebibliotheken die met SwiftChannels worden aangeboden, dus kijk ze gerust via je SwiftChannels-lijn na je gratis test.

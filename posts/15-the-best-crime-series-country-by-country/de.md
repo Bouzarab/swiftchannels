@@ -15,10 +15,10 @@ Dieser SwiftChannels-Guide bleibt praktisch: die besten krimiserien nach länder
 
 ## Die Auswahl
 
-1. **The Wire** (2002) - The Wire behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „die besten krimiserien nach ländern“ und liegt bei IMDb bei 9.3/10. [IMDb](https://www.imdb.com/title/tt0306414/)
-2. **Broadchurch** (2013) - Broadchurch behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „die besten krimiserien nach ländern“ und liegt bei IMDb bei 8.3/10. [IMDb](https://www.imdb.com/title/tt2249364/)
-3. **Gomorrah** (2014) - Gomorrah behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „die besten krimiserien nach ländern“ und liegt bei IMDb bei 8.6/10. [IMDb](https://www.imdb.com/title/tt2049116/)
-4. **Unbelievable** (2019) - Unbelievable behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „die besten krimiserien nach ländern“ und liegt bei IMDb bei 8.3/10. [IMDb](https://www.imdb.com/title/tt7909970/)
-5. **The Bridge** (2011) - The Bridge behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „die besten krimiserien nach ländern“ und liegt bei IMDb bei 8.6/10. [IMDb](https://www.imdb.com/title/tt1733785/)
+1. **The Wire** (2002) - The Wire behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „die besten krimiserien nach ländern“. [IMDb 9.3/10](https://www.imdb.com/title/tt0306414/)
+2. **Broadchurch** (2013) - Broadchurch behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „die besten krimiserien nach ländern“. [IMDb 8.3/10](https://www.imdb.com/title/tt2249364/)
+3. **Gomorrah** (2014) - Gomorrah behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „die besten krimiserien nach ländern“. [IMDb 8.6/10](https://www.imdb.com/title/tt2049116/)
+4. **Unbelievable** (2019) - Unbelievable behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „die besten krimiserien nach ländern“. [IMDb 8.3/10](https://www.imdb.com/title/tt7909970/)
+5. **The Bridge** (2011) - The Bridge behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „die besten krimiserien nach ländern“. [IMDb 8.6/10](https://www.imdb.com/title/tt1733785/)
 
 Nutze die Liste als einfache Abend-Warteschlange. Viele Titel dieser Art findest du in den Film- und Serienbibliotheken, die mit SwiftChannels angeboten werden. Schau sie gern über deine SwiftChannels-Leitung nach dem Gratistest.

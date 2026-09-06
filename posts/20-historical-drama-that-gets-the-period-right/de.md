@@ -15,10 +15,10 @@ Dieser SwiftChannels-Guide bleibt praktisch: historische dramen mit gefühl für
 
 ## Die Auswahl
 
-1. **The Crown** (2016) - The Crown behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „historische dramen mit gefühl für die zeit“ und liegt bei IMDb bei 8.6/10. [IMDb](https://www.imdb.com/title/tt4786824/)
-2. **Rome** (2005) - Rome behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „historische dramen mit gefühl für die zeit“ und liegt bei IMDb bei 8.7/10. [IMDb](https://www.imdb.com/title/tt0384766/)
-3. **Deadwood** (2004) - Deadwood behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „historische dramen mit gefühl für die zeit“ und liegt bei IMDb bei 8.6/10. [IMDb](https://www.imdb.com/title/tt0348914/)
-4. **John Adams** (2008) - John Adams behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „historische dramen mit gefühl für die zeit“ und liegt bei IMDb bei 8.4/10. [IMDb](https://www.imdb.com/title/tt0472027/)
-5. **The Last Kingdom** (2015) - The Last Kingdom behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „historische dramen mit gefühl für die zeit“ und liegt bei IMDb bei 8.5/10. [IMDb](https://www.imdb.com/title/tt4179452/)
+1. **The Crown** (2016) - The Crown behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „historische dramen mit gefühl für die zeit“. [IMDb 8.6/10](https://www.imdb.com/title/tt4786824/)
+2. **Rome** (2005) - Rome behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „historische dramen mit gefühl für die zeit“. [IMDb 8.7/10](https://www.imdb.com/title/tt0384766/)
+3. **Deadwood** (2004) - Deadwood behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „historische dramen mit gefühl für die zeit“. [IMDb 8.6/10](https://www.imdb.com/title/tt0348914/)
+4. **John Adams** (2008) - John Adams behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „historische dramen mit gefühl für die zeit“. [IMDb 8.4/10](https://www.imdb.com/title/tt0472027/)
+5. **The Last Kingdom** (2015) - The Last Kingdom behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „historische dramen mit gefühl für die zeit“. [IMDb 8.5/10](https://www.imdb.com/title/tt4179452/)
 
 Nutze die Liste als einfache Abend-Warteschlange. Viele Titel dieser Art findest du in den Film- und Serienbibliotheken, die mit SwiftChannels angeboten werden. Schau sie gern über deine SwiftChannels-Leitung nach dem Gratistest.

@@ -15,10 +15,10 @@ Deze SwiftChannels-gids blijft praktisch: komedies die echt werken, allemaal uit
 
 ## De selectie
 
-1. **The Grand Budapest Hotel** (2014) - The Grand Budapest Hotel behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „komedies die echt werken“ en de IMDb-score is 8.1/10. [IMDb](https://www.imdb.com/title/tt2278388/)
-2. **Groundhog Day** (1993) - Groundhog Day behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „komedies die echt werken“ en de IMDb-score is 8/10. [IMDb](https://www.imdb.com/title/tt0107048/)
-3. **The Big Lebowski** (1998) - The Big Lebowski behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „komedies die echt werken“ en de IMDb-score is 8.1/10. [IMDb](https://www.imdb.com/title/tt0118715/)
-4. **Superbad** (2007) - Superbad behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „komedies die echt werken“ en de IMDb-score is 7.6/10. [IMDb](https://www.imdb.com/title/tt0829482/)
-5. **Paddington 2** (2017) - Paddington 2 behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „komedies die echt werken“ en de IMDb-score is 7.8/10. [IMDb](https://www.imdb.com/title/tt4468740/)
+1. **The Grand Budapest Hotel** (2014) - The Grand Budapest Hotel behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „komedies die echt werken“. [IMDb 8.1/10](https://www.imdb.com/title/tt2278388/)
+2. **Groundhog Day** (1993) - Groundhog Day behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „komedies die echt werken“. [IMDb 8/10](https://www.imdb.com/title/tt0107048/)
+3. **The Big Lebowski** (1998) - The Big Lebowski behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „komedies die echt werken“. [IMDb 8.1/10](https://www.imdb.com/title/tt0118715/)
+4. **Superbad** (2007) - Superbad behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „komedies die echt werken“. [IMDb 7.6/10](https://www.imdb.com/title/tt0829482/)
+5. **Paddington 2** (2017) - Paddington 2 behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „komedies die echt werken“. [IMDb 7.8/10](https://www.imdb.com/title/tt4468740/)
 
 Gebruik dit als eenvoudige kijklijst voor de avond. Veel van dit soort titels staan in de film- en seriebibliotheken die met SwiftChannels worden aangeboden, dus kijk ze gerust via je SwiftChannels-lijn na je gratis test.

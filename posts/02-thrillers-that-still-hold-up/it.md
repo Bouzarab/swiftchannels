@@ -15,10 +15,10 @@ Questa guida SwiftChannels resta pratica: thriller che reggono ancora, tutti usc
 
 ## La selezione
 
-1. **Seven** (1995) - Seven mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « thriller che reggono ancora » e il suo voto IMDb è 8.6/10. [IMDb](https://www.imdb.com/title/tt0114369/)
-2. **Zodiac** (2007) - Zodiac mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « thriller che reggono ancora » e il suo voto IMDb è 7.7/10. [IMDb](https://www.imdb.com/title/tt0443706/)
-3. **Prisoners** (2013) - Prisoners mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « thriller che reggono ancora » e il suo voto IMDb è 8.2/10. [IMDb](https://www.imdb.com/title/tt1392214/)
-4. **Gone Girl** (2014) - Gone Girl mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « thriller che reggono ancora » e il suo voto IMDb è 8.1/10. [IMDb](https://www.imdb.com/title/tt2267998/)
-5. **The Fugitive** (1993) - The Fugitive mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « thriller che reggono ancora » e il suo voto IMDb è 7.8/10. [IMDb](https://www.imdb.com/title/tt0106977/)
+1. **Seven** (1995) - Seven mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « thriller che reggono ancora ». [IMDb 8.6/10](https://www.imdb.com/title/tt0114369/)
+2. **Zodiac** (2007) - Zodiac mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « thriller che reggono ancora ». [IMDb 7.7/10](https://www.imdb.com/title/tt0443706/)
+3. **Prisoners** (2013) - Prisoners mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « thriller che reggono ancora ». [IMDb 8.2/10](https://www.imdb.com/title/tt1392214/)
+4. **Gone Girl** (2014) - Gone Girl mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « thriller che reggono ancora ». [IMDb 8.1/10](https://www.imdb.com/title/tt2267998/)
+5. **The Fugitive** (1993) - The Fugitive mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « thriller che reggono ancora ». [IMDb 7.8/10](https://www.imdb.com/title/tt0106977/)
 
 Usala come una coda semplice per la serata. Molti titoli di questo tipo compaiono nelle librerie di film e serie offerte con SwiftChannels, quindi non esitare a guardarli tramite la tua linea SwiftChannels dopo la prova gratuita.

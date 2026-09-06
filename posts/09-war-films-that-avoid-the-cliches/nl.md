@@ -15,10 +15,10 @@ Deze SwiftChannels-gids blijft praktisch: oorlogsfilms die clichés vermijden, a
 
 ## De selectie
 
-1. **Come and See** (1985) - Come and See behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „oorlogsfilms die clichés vermijden“ en de IMDb-score is 8.3/10. [IMDb](https://www.imdb.com/title/tt0091251/)
-2. **Saving Private Ryan** (1998) - Saving Private Ryan behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „oorlogsfilms die clichés vermijden“ en de IMDb-score is 8.6/10. [IMDb](https://www.imdb.com/title/tt0120815/)
-3. **The Thin Red Line** (1998) - The Thin Red Line behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „oorlogsfilms die clichés vermijden“ en de IMDb-score is 7.6/10. [IMDb](https://www.imdb.com/title/tt0120863/)
-4. **1917** (2019) - 1917 behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „oorlogsfilms die clichés vermijden“ en de IMDb-score is 8.2/10. [IMDb](https://www.imdb.com/title/tt8579674/)
-5. **The Hurt Locker** (2008) - The Hurt Locker behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „oorlogsfilms die clichés vermijden“ en de IMDb-score is 7.5/10. [IMDb](https://www.imdb.com/title/tt0887912/)
+1. **Come and See** (1985) - Come and See behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „oorlogsfilms die clichés vermijden“. [IMDb 8.3/10](https://www.imdb.com/title/tt0091251/)
+2. **Saving Private Ryan** (1998) - Saving Private Ryan behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „oorlogsfilms die clichés vermijden“. [IMDb 8.6/10](https://www.imdb.com/title/tt0120815/)
+3. **The Thin Red Line** (1998) - The Thin Red Line behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „oorlogsfilms die clichés vermijden“. [IMDb 7.6/10](https://www.imdb.com/title/tt0120863/)
+4. **1917** (2019) - 1917 behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „oorlogsfilms die clichés vermijden“. [IMDb 8.2/10](https://www.imdb.com/title/tt8579674/)
+5. **The Hurt Locker** (2008) - The Hurt Locker behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „oorlogsfilms die clichés vermijden“. [IMDb 7.5/10](https://www.imdb.com/title/tt0887912/)
 
 Gebruik dit als eenvoudige kijklijst voor de avond. Veel van dit soort titels staan in de film- en seriebibliotheken die met SwiftChannels worden aangeboden, dus kijk ze gerust via je SwiftChannels-lijn na je gratis test.

@@ -15,10 +15,10 @@ Dieser SwiftChannels-Guide bleibt praktisch: dokumentationen, die den blick ver�
 
 ## Die Auswahl
 
-1. **13th** (2016) - 13th behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „dokumentationen, die den blick verändern“ und liegt bei IMDb bei 8.2/10. [IMDb](https://www.imdb.com/title/tt5895028/)
-2. **Free Solo** (2018) - Free Solo behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „dokumentationen, die den blick verändern“ und liegt bei IMDb bei 8.1/10. [IMDb](https://www.imdb.com/title/tt7775622/)
-3. **Won't You Be My Neighbor?** (2018) - Won't You Be My Neighbor? behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „dokumentationen, die den blick verändern“ und liegt bei IMDb bei 8.3/10. [IMDb](https://www.imdb.com/title/tt7681902/)
-4. **Man on Wire** (2008) - Man on Wire behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „dokumentationen, die den blick verändern“ und liegt bei IMDb bei 7.7/10. [IMDb](https://www.imdb.com/title/tt1155592/)
-5. **Searching for Sugar Man** (2012) - Searching for Sugar Man behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „dokumentationen, die den blick verändern“ und liegt bei IMDb bei 8.2/10. [IMDb](https://www.imdb.com/title/tt2125608/)
+1. **13th** (2016) - 13th behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „dokumentationen, die den blick verändern“. [IMDb 8.2/10](https://www.imdb.com/title/tt5895028/)
+2. **Free Solo** (2018) - Free Solo behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „dokumentationen, die den blick verändern“. [IMDb 8.1/10](https://www.imdb.com/title/tt7775622/)
+3. **Won't You Be My Neighbor?** (2018) - Won't You Be My Neighbor? behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „dokumentationen, die den blick verändern“. [IMDb 8.3/10](https://www.imdb.com/title/tt7681902/)
+4. **Man on Wire** (2008) - Man on Wire behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „dokumentationen, die den blick verändern“. [IMDb 7.7/10](https://www.imdb.com/title/tt1155592/)
+5. **Searching for Sugar Man** (2012) - Searching for Sugar Man behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „dokumentationen, die den blick verändern“. [IMDb 8.2/10](https://www.imdb.com/title/tt2125608/)
 
 Nutze die Liste als einfache Abend-Warteschlange. Viele Titel dieser Art findest du in den Film- und Serienbibliotheken, die mit SwiftChannels angeboten werden. Schau sie gern über deine SwiftChannels-Leitung nach dem Gratistest.

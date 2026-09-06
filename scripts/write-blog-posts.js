@@ -14,7 +14,7 @@ const T = {
     note:title=>`${title} keeps its reputation because the direction, pacing and performances still feel sharp instead of dated.`,
     list:'The shortlist',
     close:'You can use this as a simple evening queue. Many titles like these appear in the film and series libraries offered with SwiftChannels, so do not hesitate to watch them through your SwiftChannels line after your free test.',
-    item:(x,topic)=>`${x.note} It is an easy fit for ${topic.toLowerCase()} and its IMDb score is ${x.rating}/10.`,
+    item:(x,topic)=>`${x.note} It is an easy fit for ${topic.toLowerCase()}.`,
     summary:t=>`${t}, selected with IMDb ratings of 7.0/10 or higher.`
   },
   fr: {
@@ -24,7 +24,7 @@ const T = {
     note:title=>`${title} garde sa réputation grâce à une mise en scène, un rythme et des performances qui restent précis plutôt que datés.`,
     list:'La sélection',
     close:"Gardez cette liste comme file d'attente pour le soir. Beaucoup de titres de ce genre figurent dans les bibliothèques films et séries proposées avec SwiftChannels ; n'hésitez pas à les regarder via votre ligne SwiftChannels après le test gratuit.",
-    item:(x,topic)=>`${x.noteFr || x.note} Il convient bien à « ${topic.toLowerCase()} » et sa note IMDb est de ${x.rating}/10.`,
+    item:(x,topic)=>`${x.noteFr || x.note} Il convient bien à « ${topic.toLowerCase()} ».`,
     summary:t=>`${t}, sélectionnés avec des notes IMDb de 7,0/10 ou plus.`
   },
   es: {
@@ -34,7 +34,7 @@ const T = {
     note:title=>`${title} conserva su reputación porque la dirección, el ritmo y las actuaciones siguen sintiéndose frescos en vez de anticuados.`,
     list:'La selección',
     close:'Úsala como una cola sencilla para la noche. Muchos títulos de este estilo aparecen en las bibliotecas de películas y series ofrecidas con SwiftChannels, así que no dudes en verlos con tu línea SwiftChannels después de la prueba gratis.',
-    item:(x,topic)=>`${x.noteEs || x.note} Encaja muy bien con « ${topic.toLowerCase()} » y su puntuación IMDb es ${x.rating}/10.`,
+    item:(x,topic)=>`${x.noteEs || x.note} Encaja muy bien con « ${topic.toLowerCase()} ».`,
     summary:t=>`${t}, seleccionadas con puntuaciones IMDb de 7,0/10 o más.`
   },
   de: {
@@ -44,7 +44,7 @@ const T = {
     note:title=>`${title} behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet.`,
     list:'Die Auswahl',
     close:'Nutze die Liste als einfache Abend-Warteschlange. Viele Titel dieser Art findest du in den Film- und Serienbibliotheken, die mit SwiftChannels angeboten werden. Schau sie gern über deine SwiftChannels-Leitung nach dem Gratistest.',
-    item:(x,topic)=>`${x.noteDe || x.note} Er passt gut zu „${topic.toLowerCase()}“ und liegt bei IMDb bei ${x.rating}/10.`,
+    item:(x,topic)=>`${x.noteDe || x.note} Er passt gut zu „${topic.toLowerCase()}“.`,
     summary:t=>`${t}, ausgewählt mit IMDb-Bewertungen ab 7,0/10.`
   },
   it: {
@@ -54,7 +54,7 @@ const T = {
     note:title=>`${title} mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati.`,
     list:'La selezione',
     close:'Usala come una coda semplice per la serata. Molti titoli di questo tipo compaiono nelle librerie di film e serie offerte con SwiftChannels, quindi non esitare a guardarli tramite la tua linea SwiftChannels dopo la prova gratuita.',
-    item:(x,topic)=>`${x.noteIt || x.note} Funziona bene per « ${topic.toLowerCase()} » e il suo voto IMDb è ${x.rating}/10.`,
+    item:(x,topic)=>`${x.noteIt || x.note} Funziona bene per « ${topic.toLowerCase()} ».`,
     summary:t=>`${t}, scelti con voti IMDb da 7,0/10 in su.`
   },
   nl: {
@@ -64,7 +64,7 @@ const T = {
     note:title=>`${title} behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd.`,
     list:'De selectie',
     close:'Gebruik dit als eenvoudige kijklijst voor de avond. Veel van dit soort titels staan in de film- en seriebibliotheken die met SwiftChannels worden aangeboden, dus kijk ze gerust via je SwiftChannels-lijn na je gratis test.',
-    item:(x,topic)=>`${x.noteNl || x.note} Hij past goed bij „${topic.toLowerCase()}“ en de IMDb-score is ${x.rating}/10.`,
+    item:(x,topic)=>`${x.noteNl || x.note} Hij past goed bij „${topic.toLowerCase()}“.`,
     summary:t=>`${t}, gekozen met IMDb-scores van 7,0/10 of hoger.`
   }
 };
@@ -140,7 +140,7 @@ for (let i = 0; i < topics.length; i++) {
     const items = titles.map((name, idx) => {
       const [year, rating, imdbId] = imdb[name];
       const x = { rating, note: tr.note(name) };
-      return `${idx + 1}. **${name}** (${year}) - ${tr.item(x, title)} [IMDb](https://www.imdb.com/title/${imdbId}/)`;
+      return `${idx + 1}. **${name}** (${year}) - ${tr.item(x, title)} [IMDb ${rating}/10](https://www.imdb.com/title/${imdbId}/)`;
     }).join('\n');
     const body = `${tr.intro(title)} ${tr.aim}\n\n## ${tr.list}\n\n${items}\n\n${tr.close}\n`;
     const meta = {

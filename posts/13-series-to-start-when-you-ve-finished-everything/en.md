@@ -15,10 +15,10 @@ This SwiftChannels guide keeps the list practical: series to start when you've f
 
 ## The shortlist
 
-1. **Breaking Bad** (2008) - Breaking Bad keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to start when you've finished everything and its IMDb score is 9.5/10. [IMDb](https://www.imdb.com/title/tt0903747/)
-2. **The Wire** (2002) - The Wire keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to start when you've finished everything and its IMDb score is 9.3/10. [IMDb](https://www.imdb.com/title/tt0306414/)
-3. **The Sopranos** (1999) - The Sopranos keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to start when you've finished everything and its IMDb score is 9.2/10. [IMDb](https://www.imdb.com/title/tt0141842/)
-4. **Succession** (2018) - Succession keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to start when you've finished everything and its IMDb score is 8.8/10. [IMDb](https://www.imdb.com/title/tt7660850/)
-5. **Better Call Saul** (2015) - Better Call Saul keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to start when you've finished everything and its IMDb score is 9/10. [IMDb](https://www.imdb.com/title/tt3032476/)
+1. **Breaking Bad** (2008) - Breaking Bad keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to start when you've finished everything. [IMDb 9.5/10](https://www.imdb.com/title/tt0903747/)
+2. **The Wire** (2002) - The Wire keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to start when you've finished everything. [IMDb 9.3/10](https://www.imdb.com/title/tt0306414/)
+3. **The Sopranos** (1999) - The Sopranos keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to start when you've finished everything. [IMDb 9.2/10](https://www.imdb.com/title/tt0141842/)
+4. **Succession** (2018) - Succession keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to start when you've finished everything. [IMDb 8.8/10](https://www.imdb.com/title/tt7660850/)
+5. **Better Call Saul** (2015) - Better Call Saul keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to start when you've finished everything. [IMDb 9/10](https://www.imdb.com/title/tt3032476/)
 
 You can use this as a simple evening queue. Many titles like these appear in the film and series libraries offered with SwiftChannels, so do not hesitate to watch them through your SwiftChannels line after your free test.

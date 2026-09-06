@@ -15,10 +15,10 @@ This SwiftChannels guide keeps the list practical: if you liked psychological ho
 
 ## The shortlist
 
-1. **Rosemary's Baby** (1968) - Rosemary's Baby keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked psychological horror, watch these and its IMDb score is 8/10. [IMDb](https://www.imdb.com/title/tt0063522/)
-2. **The Shining** (1980) - The Shining keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked psychological horror, watch these and its IMDb score is 8.4/10. [IMDb](https://www.imdb.com/title/tt0081505/)
-3. **Black Swan** (2010) - Black Swan keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked psychological horror, watch these and its IMDb score is 8/10. [IMDb](https://www.imdb.com/title/tt0947798/)
-4. **The Witch** (2015) - The Witch keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked psychological horror, watch these and its IMDb score is 7/10. [IMDb](https://www.imdb.com/title/tt4263482/)
-5. **Hereditary** (2018) - Hereditary keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked psychological horror, watch these and its IMDb score is 7.3/10. [IMDb](https://www.imdb.com/title/tt7784604/)
+1. **Rosemary's Baby** (1968) - Rosemary's Baby keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked psychological horror, watch these. [IMDb 8/10](https://www.imdb.com/title/tt0063522/)
+2. **The Shining** (1980) - The Shining keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked psychological horror, watch these. [IMDb 8.4/10](https://www.imdb.com/title/tt0081505/)
+3. **Black Swan** (2010) - Black Swan keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked psychological horror, watch these. [IMDb 8/10](https://www.imdb.com/title/tt0947798/)
+4. **The Witch** (2015) - The Witch keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked psychological horror, watch these. [IMDb 7/10](https://www.imdb.com/title/tt4263482/)
+5. **Hereditary** (2018) - Hereditary keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked psychological horror, watch these. [IMDb 7.3/10](https://www.imdb.com/title/tt7784604/)
 
 You can use this as a simple evening queue. Many titles like these appear in the film and series libraries offered with SwiftChannels, so do not hesitate to watch them through your SwiftChannels line after your free test.

@@ -15,10 +15,10 @@ This SwiftChannels guide keeps the list practical: series to watch with the whol
 
 ## The shortlist
 
-1. **Avatar: The Last Airbender** (2005) - Avatar: The Last Airbender keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to watch with the whole family and its IMDb score is 9.3/10. [IMDb](https://www.imdb.com/title/tt0417299/)
-2. **Bluey** (2018) - Bluey keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to watch with the whole family and its IMDb score is 9.3/10. [IMDb](https://www.imdb.com/title/tt7678620/)
-3. **Anne with an E** (2017) - Anne with an E keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to watch with the whole family and its IMDb score is 8.6/10. [IMDb](https://www.imdb.com/title/tt5421602/)
-4. **Merlin** (2008) - Merlin keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to watch with the whole family and its IMDb score is 7.9/10. [IMDb](https://www.imdb.com/title/tt1199099/)
-5. **The Muppet Show** (1976) - The Muppet Show keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to watch with the whole family and its IMDb score is 8.4/10. [IMDb](https://www.imdb.com/title/tt0074028/)
+1. **Avatar: The Last Airbender** (2005) - Avatar: The Last Airbender keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to watch with the whole family. [IMDb 9.3/10](https://www.imdb.com/title/tt0417299/)
+2. **Bluey** (2018) - Bluey keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to watch with the whole family. [IMDb 9.3/10](https://www.imdb.com/title/tt7678620/)
+3. **Anne with an E** (2017) - Anne with an E keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to watch with the whole family. [IMDb 8.6/10](https://www.imdb.com/title/tt5421602/)
+4. **Merlin** (2008) - Merlin keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to watch with the whole family. [IMDb 7.9/10](https://www.imdb.com/title/tt1199099/)
+5. **The Muppet Show** (1976) - The Muppet Show keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for series to watch with the whole family. [IMDb 8.4/10](https://www.imdb.com/title/tt0074028/)
 
 You can use this as a simple evening queue. Many titles like these appear in the film and series libraries offered with SwiftChannels, so do not hesitate to watch them through your SwiftChannels line after your free test.

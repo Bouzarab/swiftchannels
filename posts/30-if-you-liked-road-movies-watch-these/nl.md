@@ -15,10 +15,10 @@ Deze SwiftChannels-gids blijft praktisch: als je roadmovies goed vindt, kijk dan
 
 ## De selectie
 
-1. **Thelma & Louise** (1991) - Thelma & Louise behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je roadmovies goed vindt, kijk dan deze“ en de IMDb-score is 7.6/10. [IMDb](https://www.imdb.com/title/tt0103074/)
-2. **Little Miss Sunshine** (2006) - Little Miss Sunshine behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je roadmovies goed vindt, kijk dan deze“ en de IMDb-score is 7.8/10. [IMDb](https://www.imdb.com/title/tt0449059/)
-3. **Y tu mamá también** (2001) - Y tu mamá también behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je roadmovies goed vindt, kijk dan deze“ en de IMDb-score is 7.7/10. [IMDb](https://www.imdb.com/title/tt0245574/)
-4. **Paris, Texas** (1984) - Paris, Texas behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je roadmovies goed vindt, kijk dan deze“ en de IMDb-score is 8.1/10. [IMDb](https://www.imdb.com/title/tt0087884/)
-5. **Nebraska** (2013) - Nebraska behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je roadmovies goed vindt, kijk dan deze“ en de IMDb-score is 7.7/10. [IMDb](https://www.imdb.com/title/tt1821549/)
+1. **Thelma & Louise** (1991) - Thelma & Louise behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je roadmovies goed vindt, kijk dan deze“. [IMDb 7.6/10](https://www.imdb.com/title/tt0103074/)
+2. **Little Miss Sunshine** (2006) - Little Miss Sunshine behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je roadmovies goed vindt, kijk dan deze“. [IMDb 7.8/10](https://www.imdb.com/title/tt0449059/)
+3. **Y tu mamá también** (2001) - Y tu mamá también behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je roadmovies goed vindt, kijk dan deze“. [IMDb 7.7/10](https://www.imdb.com/title/tt0245574/)
+4. **Paris, Texas** (1984) - Paris, Texas behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je roadmovies goed vindt, kijk dan deze“. [IMDb 8.1/10](https://www.imdb.com/title/tt0087884/)
+5. **Nebraska** (2013) - Nebraska behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „als je roadmovies goed vindt, kijk dan deze“. [IMDb 7.7/10](https://www.imdb.com/title/tt1821549/)
 
 Gebruik dit als eenvoudige kijklijst voor de avond. Veel van dit soort titels staan in de film- en seriebibliotheken die met SwiftChannels worden aangeboden, dus kijk ze gerust via je SwiftChannels-lijn na je gratis test.

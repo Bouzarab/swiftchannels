@@ -15,10 +15,10 @@ Questa guida SwiftChannels resta pratica: film per una serata in famiglia, tutti
 
 ## La selezione
 
-1. **Spirited Away** (2001) - Spirited Away mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « film per una serata in famiglia » e il suo voto IMDb è 8.6/10. [IMDb](https://www.imdb.com/title/tt0245429/)
-2. **The Incredibles** (2004) - The Incredibles mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « film per una serata in famiglia » e il suo voto IMDb è 8/10. [IMDb](https://www.imdb.com/title/tt0317705/)
-3. **Toy Story** (1995) - Toy Story mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « film per una serata in famiglia » e il suo voto IMDb è 8.3/10. [IMDb](https://www.imdb.com/title/tt0114709/)
-4. **The Iron Giant** (1999) - The Iron Giant mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « film per una serata in famiglia » e il suo voto IMDb è 8.1/10. [IMDb](https://www.imdb.com/title/tt0129167/)
-5. **Coco** (2017) - Coco mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « film per una serata in famiglia » e il suo voto IMDb è 8.4/10. [IMDb](https://www.imdb.com/title/tt2380307/)
+1. **Spirited Away** (2001) - Spirited Away mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « film per una serata in famiglia ». [IMDb 8.6/10](https://www.imdb.com/title/tt0245429/)
+2. **The Incredibles** (2004) - The Incredibles mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « film per una serata in famiglia ». [IMDb 8/10](https://www.imdb.com/title/tt0317705/)
+3. **Toy Story** (1995) - Toy Story mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « film per una serata in famiglia ». [IMDb 8.3/10](https://www.imdb.com/title/tt0114709/)
+4. **The Iron Giant** (1999) - The Iron Giant mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « film per una serata in famiglia ». [IMDb 8.1/10](https://www.imdb.com/title/tt0129167/)
+5. **Coco** (2017) - Coco mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati. Funziona bene per « film per una serata in famiglia ». [IMDb 8.4/10](https://www.imdb.com/title/tt2380307/)
 
 Usala come una coda semplice per la serata. Molti titoli di questo tipo compaiono nelle librerie di film e serie offerte con SwiftChannels, quindi non esitare a guardarli tramite la tua linea SwiftChannels dopo la prova gratuita.

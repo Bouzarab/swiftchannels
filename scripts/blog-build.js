@@ -88,15 +88,15 @@ function fallbackPoster(title, label) {
 }
 
 function recoCard(raw, idx, posterMap, prefix, label) {
-  const m = /^\*\*([^*]+)\*\* \((\d{4})\) - ([\s\S]+?) \[IMDb\]\(([^)]+)\)$/.exec(raw);
+  const m = /^\*\*([^*]+)\*\* \((\d{4})\) - ([\s\S]+?) \[(IMDb [^\]]+)\]\(([^)]+)\)$/.exec(raw);
   if (!m) return `<li>${mdInline(raw)}</li>`;
-  const [, title, year, note, imdb] = m;
+  const [, title, year, note, imdbLabel, imdb] = m;
   const poster = posterFor(title, posterMap, prefix);
   return `<li class="reco-card">
     <a class="poster-card" href="${attr(imdb)}" aria-label="${attr(title)} on IMDb">
       ${poster ? `<img src="${attr(poster)}" alt="${attr(title)} poster" loading="lazy" decoding="async"><span class="poster-year">${esc(year)}</span>` : fallbackPoster(title, year)}
     </a>
-    <div class="reco-copy"><span>${String(idx).padStart(2, '0')}</span><h3>${esc(title)}</h3><p>${mdInline(note)}</p><a href="${attr(imdb)}">IMDb</a></div>
+    <div class="reco-copy"><span>${String(idx).padStart(2, '0')}</span><h3>${esc(title)}</h3><p>${mdInline(note)}</p><a href="${attr(imdb)}">${esc(imdbLabel)}</a></div>
   </li>`;
 }
 

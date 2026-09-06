@@ -15,10 +15,10 @@ Dieser SwiftChannels-Guide bleibt praktisch: wenn du gerichtsdramen magst, schau
 
 ## Die Auswahl
 
-1. **12 Angry Men** (1957) - 12 Angry Men behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du gerichtsdramen magst, schau diese“ und liegt bei IMDb bei 9/10. [IMDb](https://www.imdb.com/title/tt0050083/)
-2. **Anatomy of a Murder** (1959) - Anatomy of a Murder behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du gerichtsdramen magst, schau diese“ und liegt bei IMDb bei 8/10. [IMDb](https://www.imdb.com/title/tt0052561/)
-3. **The Verdict** (1982) - The Verdict behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du gerichtsdramen magst, schau diese“ und liegt bei IMDb bei 7.7/10. [IMDb](https://www.imdb.com/title/tt0084855/)
-4. **A Few Good Men** (1992) - A Few Good Men behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du gerichtsdramen magst, schau diese“ und liegt bei IMDb bei 7.8/10. [IMDb](https://www.imdb.com/title/tt0104257/)
-5. **Witness for the Prosecution** (1957) - Witness for the Prosecution behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du gerichtsdramen magst, schau diese“ und liegt bei IMDb bei 8.4/10. [IMDb](https://www.imdb.com/title/tt0051201/)
+1. **12 Angry Men** (1957) - 12 Angry Men behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du gerichtsdramen magst, schau diese“. [IMDb 9/10](https://www.imdb.com/title/tt0050083/)
+2. **Anatomy of a Murder** (1959) - Anatomy of a Murder behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du gerichtsdramen magst, schau diese“. [IMDb 8/10](https://www.imdb.com/title/tt0052561/)
+3. **The Verdict** (1982) - The Verdict behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du gerichtsdramen magst, schau diese“. [IMDb 7.7/10](https://www.imdb.com/title/tt0084855/)
+4. **A Few Good Men** (1992) - A Few Good Men behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du gerichtsdramen magst, schau diese“. [IMDb 7.8/10](https://www.imdb.com/title/tt0104257/)
+5. **Witness for the Prosecution** (1957) - Witness for the Prosecution behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „wenn du gerichtsdramen magst, schau diese“. [IMDb 8.4/10](https://www.imdb.com/title/tt0051201/)
 
 Nutze die Liste als einfache Abend-Warteschlange. Viele Titel dieser Art findest du in den Film- und Serienbibliotheken, die mit SwiftChannels angeboten werden. Schau sie gern über deine SwiftChannels-Leitung nach dem Gratistest.

@@ -15,10 +15,10 @@ This SwiftChannels guide keeps the list practical: crime films to watch in one s
 
 ## The shortlist
 
-1. **GoodFellas** (1990) - GoodFellas keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for crime films to watch in one sitting and its IMDb score is 8.7/10. [IMDb](https://www.imdb.com/title/tt0099685/)
-2. **Heat** (1995) - Heat keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for crime films to watch in one sitting and its IMDb score is 8.3/10. [IMDb](https://www.imdb.com/title/tt0113277/)
-3. **The Departed** (2006) - The Departed keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for crime films to watch in one sitting and its IMDb score is 8.5/10. [IMDb](https://www.imdb.com/title/tt0407887/)
-4. **City of God** (2002) - City of God keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for crime films to watch in one sitting and its IMDb score is 8.6/10. [IMDb](https://www.imdb.com/title/tt0317248/)
-5. **L.A. Confidential** (1997) - L.A. Confidential keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for crime films to watch in one sitting and its IMDb score is 8.2/10. [IMDb](https://www.imdb.com/title/tt0119488/)
+1. **GoodFellas** (1990) - GoodFellas keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for crime films to watch in one sitting. [IMDb 8.7/10](https://www.imdb.com/title/tt0099685/)
+2. **Heat** (1995) - Heat keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for crime films to watch in one sitting. [IMDb 8.3/10](https://www.imdb.com/title/tt0113277/)
+3. **The Departed** (2006) - The Departed keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for crime films to watch in one sitting. [IMDb 8.5/10](https://www.imdb.com/title/tt0407887/)
+4. **City of God** (2002) - City of God keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for crime films to watch in one sitting. [IMDb 8.6/10](https://www.imdb.com/title/tt0317248/)
+5. **L.A. Confidential** (1997) - L.A. Confidential keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for crime films to watch in one sitting. [IMDb 8.2/10](https://www.imdb.com/title/tt0119488/)
 
 You can use this as a simple evening queue. Many titles like these appear in the film and series libraries offered with SwiftChannels, so do not hesitate to watch them through your SwiftChannels line after your free test.

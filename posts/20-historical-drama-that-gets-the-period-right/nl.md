@@ -15,10 +15,10 @@ Deze SwiftChannels-gids blijft praktisch: historisch drama dat de periode goed r
 
 ## De selectie
 
-1. **The Crown** (2016) - The Crown behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „historisch drama dat de periode goed raakt“ en de IMDb-score is 8.6/10. [IMDb](https://www.imdb.com/title/tt4786824/)
-2. **Rome** (2005) - Rome behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „historisch drama dat de periode goed raakt“ en de IMDb-score is 8.7/10. [IMDb](https://www.imdb.com/title/tt0384766/)
-3. **Deadwood** (2004) - Deadwood behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „historisch drama dat de periode goed raakt“ en de IMDb-score is 8.6/10. [IMDb](https://www.imdb.com/title/tt0348914/)
-4. **John Adams** (2008) - John Adams behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „historisch drama dat de periode goed raakt“ en de IMDb-score is 8.4/10. [IMDb](https://www.imdb.com/title/tt0472027/)
-5. **The Last Kingdom** (2015) - The Last Kingdom behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „historisch drama dat de periode goed raakt“ en de IMDb-score is 8.5/10. [IMDb](https://www.imdb.com/title/tt4179452/)
+1. **The Crown** (2016) - The Crown behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „historisch drama dat de periode goed raakt“. [IMDb 8.6/10](https://www.imdb.com/title/tt4786824/)
+2. **Rome** (2005) - Rome behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „historisch drama dat de periode goed raakt“. [IMDb 8.7/10](https://www.imdb.com/title/tt0384766/)
+3. **Deadwood** (2004) - Deadwood behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „historisch drama dat de periode goed raakt“. [IMDb 8.6/10](https://www.imdb.com/title/tt0348914/)
+4. **John Adams** (2008) - John Adams behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „historisch drama dat de periode goed raakt“. [IMDb 8.4/10](https://www.imdb.com/title/tt0472027/)
+5. **The Last Kingdom** (2015) - The Last Kingdom behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd. Hij past goed bij „historisch drama dat de periode goed raakt“. [IMDb 8.5/10](https://www.imdb.com/title/tt4179452/)
 
 Gebruik dit als eenvoudige kijklijst voor de avond. Veel van dit soort titels staan in de film- en seriebibliotheken die met SwiftChannels worden aangeboden, dus kijk ze gerust via je SwiftChannels-lijn na je gratis test.

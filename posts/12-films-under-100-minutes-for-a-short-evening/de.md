@@ -15,10 +15,10 @@ Dieser SwiftChannels-Guide bleibt praktisch: filme unter 100 minuten für einen 
 
 ## Die Auswahl
 
-1. **Before Sunset** (2004) - Before Sunset behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „filme unter 100 minuten für einen kurzen abend“ und liegt bei IMDb bei 8.1/10. [IMDb](https://www.imdb.com/title/tt0381681/)
-2. **My Neighbor Totoro** (1988) - My Neighbor Totoro behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „filme unter 100 minuten für einen kurzen abend“ und liegt bei IMDb bei 8.1/10. [IMDb](https://www.imdb.com/title/tt0096283/)
-3. **Stand by Me** (1986) - Stand by Me behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „filme unter 100 minuten für einen kurzen abend“ und liegt bei IMDb bei 8.1/10. [IMDb](https://www.imdb.com/title/tt0092005/)
-4. **The Nightmare Before Christmas** (1993) - The Nightmare Before Christmas behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „filme unter 100 minuten für einen kurzen abend“ und liegt bei IMDb bei 7.9/10. [IMDb](https://www.imdb.com/title/tt0107688/)
-5. **Fruitvale Station** (2013) - Fruitvale Station behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „filme unter 100 minuten für einen kurzen abend“ und liegt bei IMDb bei 7.5/10. [IMDb](https://www.imdb.com/title/tt2334649/)
+1. **Before Sunset** (2004) - Before Sunset behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „filme unter 100 minuten für einen kurzen abend“. [IMDb 8.1/10](https://www.imdb.com/title/tt0381681/)
+2. **My Neighbor Totoro** (1988) - My Neighbor Totoro behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „filme unter 100 minuten für einen kurzen abend“. [IMDb 8.1/10](https://www.imdb.com/title/tt0096283/)
+3. **Stand by Me** (1986) - Stand by Me behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „filme unter 100 minuten für einen kurzen abend“. [IMDb 8.1/10](https://www.imdb.com/title/tt0092005/)
+4. **The Nightmare Before Christmas** (1993) - The Nightmare Before Christmas behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „filme unter 100 minuten für einen kurzen abend“. [IMDb 7.9/10](https://www.imdb.com/title/tt0107688/)
+5. **Fruitvale Station** (2013) - Fruitvale Station behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet. Er passt gut zu „filme unter 100 minuten für einen kurzen abend“. [IMDb 7.5/10](https://www.imdb.com/title/tt2334649/)
 
 Nutze die Liste als einfache Abend-Warteschlange. Viele Titel dieser Art findest du in den Film- und Serienbibliotheken, die mit SwiftChannels angeboten werden. Schau sie gern über deine SwiftChannels-Leitung nach dem Gratistest.

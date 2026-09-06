@@ -15,10 +15,10 @@ This SwiftChannels guide keeps the list practical: if you liked survival stories
 
 ## The shortlist
 
-1. **Cast Away** (2000) - Cast Away keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked survival stories, watch these and its IMDb score is 7.8/10. [IMDb](https://www.imdb.com/title/tt0162222/)
-2. **Life of Pi** (2012) - Life of Pi keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked survival stories, watch these and its IMDb score is 7.9/10. [IMDb](https://www.imdb.com/title/tt0454876/)
-3. **Apollo 13** (1995) - Apollo 13 keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked survival stories, watch these and its IMDb score is 7.7/10. [IMDb](https://www.imdb.com/title/tt0112384/)
-4. **The Martian** (2015) - The Martian keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked survival stories, watch these and its IMDb score is 8/10. [IMDb](https://www.imdb.com/title/tt3659388/)
-5. **Touching the Void** (2003) - Touching the Void keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked survival stories, watch these and its IMDb score is 7.9/10. [IMDb](https://www.imdb.com/title/tt0379557/)
+1. **Cast Away** (2000) - Cast Away keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked survival stories, watch these. [IMDb 7.8/10](https://www.imdb.com/title/tt0162222/)
+2. **Life of Pi** (2012) - Life of Pi keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked survival stories, watch these. [IMDb 7.9/10](https://www.imdb.com/title/tt0454876/)
+3. **Apollo 13** (1995) - Apollo 13 keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked survival stories, watch these. [IMDb 7.7/10](https://www.imdb.com/title/tt0112384/)
+4. **The Martian** (2015) - The Martian keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked survival stories, watch these. [IMDb 8/10](https://www.imdb.com/title/tt3659388/)
+5. **Touching the Void** (2003) - Touching the Void keeps its reputation because the direction, pacing and performances still feel sharp instead of dated. It is an easy fit for if you liked survival stories, watch these. [IMDb 7.9/10](https://www.imdb.com/title/tt0379557/)
 
 You can use this as a simple evening queue. Many titles like these appear in the film and series libraries offered with SwiftChannels, so do not hesitate to watch them through your SwiftChannels line after your free test.
