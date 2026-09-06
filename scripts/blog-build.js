@@ -5,7 +5,7 @@ const LABELS = {
   en: {
     blog: 'Blog', home: 'Home', channels: 'Channels', setup: 'Setup', order: 'Order now',
     intro: 'Films, series and watch-next guides selected around strong IMDb ratings.',
-    latest: 'Publication schedule', upcoming: 'Upcoming', read: 'Read article',
+    upcoming: 'No articles are published yet.', read: 'Read article',
     published: 'Published', imdb: 'IMDb rating', minutes: 'min read',
     footer: 'Free 24-hour test, 8,000+ live channels, and a large film and series library.',
     rss: 'RSS feed'
@@ -13,7 +13,7 @@ const LABELS = {
   fr: {
     blog: 'Blog', home: 'Accueil', channels: 'Chaînes', setup: 'Installation', order: 'Commander',
     intro: 'Films, séries et idées à regarder ensuite, choisis autour de bonnes notes IMDb.',
-    latest: 'Calendrier de publication', upcoming: 'À venir', read: "Lire l'article",
+    upcoming: 'Aucun article publié pour le moment.', read: "Lire l'article",
     published: 'Publié', imdb: 'Note IMDb', minutes: 'min de lecture',
     footer: 'Test gratuit de 24 heures, 8 000+ chaînes en direct et une grande bibliothèque films et séries.',
     rss: 'Flux RSS'
@@ -21,7 +21,7 @@ const LABELS = {
   es: {
     blog: 'Blog', home: 'Inicio', channels: 'Canales', setup: 'Instalación', order: 'Pedir ahora',
     intro: 'Películas, series y guías para seguir viendo, elegidas con buenas puntuaciones IMDb.',
-    latest: 'Calendario de publicación', upcoming: 'Próximamente', read: 'Leer artículo',
+    upcoming: 'Todavía no hay artículos publicados.', read: 'Leer artículo',
     published: 'Publicado', imdb: 'Puntuación IMDb', minutes: 'min de lectura',
     footer: 'Prueba gratis de 24 horas, más de 8.000 canales en vivo y una gran biblioteca de películas y series.',
     rss: 'RSS'
@@ -29,7 +29,7 @@ const LABELS = {
   de: {
     blog: 'Blog', home: 'Start', channels: 'Sender', setup: 'Einrichtung', order: 'Jetzt bestellen',
     intro: 'Filme, Serien und Watch-next-Guides, ausgewählt nach starken IMDb-Bewertungen.',
-    latest: 'Veröffentlichungsplan', upcoming: 'Demnächst', read: 'Artikel lesen',
+    upcoming: 'Noch keine Artikel veröffentlicht.', read: 'Artikel lesen',
     published: 'Veröffentlicht', imdb: 'IMDb-Bewertung', minutes: 'Min. Lesezeit',
     footer: 'Kostenloser 24-Stunden-Test, 8.000+ Live-Sender und eine große Film- und Serienbibliothek.',
     rss: 'RSS-Feed'
@@ -37,7 +37,7 @@ const LABELS = {
   it: {
     blog: 'Blog', home: 'Home', channels: 'Canali', setup: 'Configurazione', order: 'Ordina ora',
     intro: 'Film, serie e guide su cosa vedere dopo, scelti con forti valutazioni IMDb.',
-    latest: 'Calendario di pubblicazione', upcoming: 'In arrivo', read: "Leggi l'articolo",
+    upcoming: 'Nessun articolo pubblicato per ora.', read: "Leggi l'articolo",
     published: 'Pubblicato', imdb: 'Valutazione IMDb', minutes: 'min di lettura',
     footer: 'Prova gratuita di 24 ore, oltre 8.000 canali live e una grande libreria di film e serie.',
     rss: 'Feed RSS'
@@ -45,7 +45,7 @@ const LABELS = {
   nl: {
     blog: 'Blog', home: 'Home', channels: 'Kanalen', setup: 'Installatie', order: 'Bestel nu',
     intro: 'Films, series en kijktips, gekozen rond sterke IMDb-scores.',
-    latest: 'Publicatieschema', upcoming: 'Binnenkort', read: 'Lees artikel',
+    upcoming: 'Nog geen artikelen gepubliceerd.', read: 'Lees artikel',
     published: 'Gepubliceerd', imdb: 'IMDb-score', minutes: 'min leestijd',
     footer: 'Gratis 24 uur testen, 8.000+ livekanalen en een grote film- en seriebibliotheek.',
     rss: 'RSS-feed'
@@ -133,6 +133,15 @@ function langPath(lang, slug) {
   return `${prefix}blog/${slug ? slug + '/index.html' : 'index.html'}`;
 }
 
+function localDate() {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Africa/Casablanca',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).format(new Date());
+}
+
 function languageSwitcher(rootPrefix, langs, postsByLang, currentLang, postId) {
   const names = { en:'English', fr:'Français', es:'Español', de:'Deutsch', it:'Italiano', nl:'Nederlands' };
   return langs.map(L => {
@@ -201,7 +210,7 @@ function posterDeck(meta, variant, posterMap, prefix) {
 
 function buildBlog({ ROOT, SITE, LANGS }) {
   const srcDir = path.join(ROOT, 'posts');
-  const today = process.env.BLOG_BUILD_DATE || new Date().toISOString().slice(0, 10);
+  const today = process.env.BLOG_BUILD_DATE || localDate();
   const previewAll = process.env.BLOG_PREVIEW_ALL === '1';
   const posts = [];
   if (!fs.existsSync(srcDir)) return { sitemap: '' };
@@ -236,7 +245,6 @@ function buildBlog({ ROOT, SITE, LANGS }) {
       ${articleArt(p.meta, prefix, posterMap)}
       <div><span class="chip">${esc(p.meta.familyLabel)}</span><h2><a href="${p.meta.slug}/">${esc(p.meta.title)}</a></h2><p>${esc(p.meta.summary)}</p><small>${labels.published}: ${p.meta.publishDate} · IMDb 7.0+</small><a class="read" href="${p.meta.slug}/">${labels.read}</a></div>
     </article>`).join('\n');
-    const upcoming = langPosts.filter(p => !due(p)).slice(0, 12).map(p => `<li><time>${p.meta.publishDate}</time><span>${esc(p.meta.title)}</span></li>`).join('\n');
     const doc = `${head({ title: `SwiftChannels ${labels.blog}`, description: labels.intro, url: indexUrl, image: `${SITE}/assets/og-card.jpg`, lang: L.code, alternates, rss: `${pageUrl(SITE, L.code, '')}feed.xml` })}
 <body>
 <div class="bg"></div>
@@ -244,7 +252,6 @@ function buildBlog({ ROOT, SITE, LANGS }) {
 <main class="wrap">
   <header class="blog-hero"><p>SwiftChannels Blog</p><h1>${esc(labels.blog)}</h1><span>${esc(labels.intro)}</span></header>
   <section class="grid">${cards || `<p>${esc(labels.upcoming)}</p>`}</section>
-  <section class="schedule"><h2>${esc(labels.latest)}</h2><ol>${upcoming}</ol></section>
 </main>
 <footer><b>SwiftChannels</b><span>${esc(labels.footer)}</span><a href="${prefix}legal.html">Terms</a><a href="feed.xml">${esc(labels.rss)}</a></footer>`;
     const out = path.join(ROOT, langPath(L.code, ''));
