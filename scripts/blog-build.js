@@ -78,21 +78,29 @@ function mdInline(s) {
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 }
 
-function recoCard(raw, idx) {
+function posterFor(title, posterMap, prefix) {
+  const item = posterMap[title];
+  return item ? prefix + item.src : '';
+}
+
+function fallbackPoster(title, label) {
+  return `<span>${esc(label)}</span><strong>${esc(title)}</strong><em>IMDb 7+</em>`;
+}
+
+function recoCard(raw, idx, posterMap, prefix, label) {
   const m = /^\*\*([^*]+)\*\* \((\d{4})\) - ([\s\S]+?) \[IMDb\]\(([^)]+)\)$/.exec(raw);
   if (!m) return `<li>${mdInline(raw)}</li>`;
   const [, title, year, note, imdb] = m;
+  const poster = posterFor(title, posterMap, prefix);
   return `<li class="reco-card">
     <a class="poster-card" href="${attr(imdb)}" aria-label="${attr(title)} on IMDb">
-      <span class="poster-year">${esc(year)}</span>
-      <strong>${esc(title)}</strong>
-      <em>IMDb</em>
+      ${poster ? `<img src="${attr(poster)}" alt="${attr(title)} poster" loading="lazy" decoding="async"><span class="poster-year">${esc(year)}</span>` : fallbackPoster(title, year)}
     </a>
     <div class="reco-copy"><span>${String(idx).padStart(2, '0')}</span><h3>${esc(title)}</h3><p>${mdInline(note)}</p><a href="${attr(imdb)}">IMDb</a></div>
   </li>`;
 }
 
-function markdownToHtml(md) {
+function markdownToHtml(md, posterMap, prefix, label) {
   const lines = md.split(/\r?\n/);
   const out = [];
   let list = false;
@@ -102,7 +110,7 @@ function markdownToHtml(md) {
     const h = /^(#{2,3})\s+(.+)$/.exec(line);
     if (h) { closeList(); out.push(`<h${h[1].length}>${mdInline(h[2])}</h${h[1].length}>`); continue; }
     const li = /^\d+\.\s+(.+)$/.exec(line);
-    if (li) { if (!list) { out.push('<ol class="reco-list">'); list = true; } out.push(recoCard(li[1], out.filter(x => x.includes('reco-card')).length + 1)); continue; }
+    if (li) { if (!list) { out.push('<ol class="reco-list">'); list = true; } out.push(recoCard(li[1], out.filter(x => x.includes('reco-card')).length + 1, posterMap, prefix, label)); continue; }
     closeList();
     out.push(`<p>${mdInline(line)}</p>`);
   }
@@ -175,14 +183,19 @@ if(cur&&box){cur.addEventListener('click',()=>{const open=box.classList.toggle('
 `;
 }
 
-function articleArt(meta) {
-  return `<div class="art art-${meta.family}"><span>${esc(meta.family)}</span><strong>${esc(meta.number)}</strong></div>`;
+function articleArt(meta, prefix = '', posterMap = {}) {
+  const title = String(meta.picks || '').split('|').filter(Boolean)[0];
+  const poster = title ? posterFor(title, posterMap, prefix) : '';
+  return `<div class="art art-${meta.family}">${poster ? `<img src="${attr(poster)}" alt="${attr(title)} poster" loading="lazy" decoding="async">` : ''}<span>${esc(meta.family)}</span><strong>${esc(meta.number)}</strong></div>`;
 }
 
-function posterDeck(meta, variant) {
+function posterDeck(meta, variant, posterMap, prefix) {
   const titles = String(meta.picks || '').split('|').filter(Boolean).slice(0, 5);
   return `<div class="poster-deck poster-deck-${variant}" aria-label="Featured titles">
-    ${titles.map(title => `<div class="mini-poster"><span>${esc(meta.familyLabel)}</span><strong>${esc(title)}</strong><em>IMDb 7+</em></div>`).join('')}
+    ${titles.map(title => {
+      const poster = posterFor(title, posterMap, prefix);
+      return `<div class="mini-poster">${poster ? `<img src="${attr(poster)}" alt="${attr(title)} poster" loading="lazy" decoding="async"><span>${esc(meta.familyLabel)}</span>` : fallbackPoster(title, meta.familyLabel)}</div>`;
+    }).join('')}
   </div>`;
 }
 
@@ -202,6 +215,8 @@ function buildBlog({ ROOT, SITE, LANGS }) {
     }
   }
   const postsByLang = new Map(posts.map(p => [`${p.id}:${p.lang}`, p]));
+  const posterFile = path.join(ROOT, 'assets/blog/posters/posters.json');
+  const posterMap = fs.existsSync(posterFile) ? JSON.parse(fs.readFileSync(posterFile, 'utf8')) : {};
   const due = p => previewAll || p.meta.publishDate <= today;
   const duePosts = posts.filter(due);
   const sitemap = [];
@@ -218,7 +233,7 @@ function buildBlog({ ROOT, SITE, LANGS }) {
     const indexUrl = pageUrl(SITE, L.code, '');
     const alternates = LANGS.map(x => `<link rel="alternate" hreflang="${x.code}" href="${pageUrl(SITE, x.code, '')}">`).join('\n') + `\n<link rel="alternate" hreflang="x-default" href="${pageUrl(SITE, 'en', '')}">`;
     const cards = visible.map(p => `<article class="post-card">
-      ${articleArt(p.meta)}
+      ${articleArt(p.meta, prefix, posterMap)}
       <div><span class="chip">${esc(p.meta.familyLabel)}</span><h2><a href="${p.meta.slug}/">${esc(p.meta.title)}</a></h2><p>${esc(p.meta.summary)}</p><small>${labels.published}: ${p.meta.publishDate} · IMDb 7.0+</small><a class="read" href="${p.meta.slug}/">${labels.read}</a></div>
     </article>`).join('\n');
     const upcoming = langPosts.filter(p => !due(p)).slice(0, 12).map(p => `<li><time>${p.meta.publishDate}</time><span>${esc(p.meta.title)}</span></li>`).join('\n');
@@ -270,8 +285,8 @@ function buildBlog({ ROOT, SITE, LANGS }) {
 <!--NAV-->
 <main class="article article-v${variant} wrap">
   <a class="crumb" href="../">${esc(labels.blog)}</a>
-  <header><div class="headline"><span class="chip">${esc(p.meta.familyLabel)}</span><h1>${esc(p.meta.title)}</h1><p>${esc(p.meta.summary)}</p><div class="meta">${labels.published}: ${p.meta.publishDate} · ${labels.imdb}: 7.0+ · 4 ${labels.minutes}</div></div>${posterDeck(p.meta, variant)}</header>
-  <article class="content">${markdownToHtml(p.body)}</article>
+  <header><div class="headline"><span class="chip">${esc(p.meta.familyLabel)}</span><h1>${esc(p.meta.title)}</h1><p>${esc(p.meta.summary)}</p><div class="meta">${labels.published}: ${p.meta.publishDate} · ${labels.imdb}: 7.0+ · 4 ${labels.minutes}</div></div>${posterDeck(p.meta, variant, posterMap, prefix)}</header>
+  <article class="content">${markdownToHtml(p.body, posterMap, prefix, p.meta.familyLabel)}</article>
 </main>
 <footer><b>SwiftChannels</b><span>${esc(labels.footer)}</span><a href="${prefix}legal.html">Terms</a><a href="${prefix}blog/feed.xml">${esc(labels.rss)}</a></footer>
 <script type="application/ld+json">${JSON.stringify(json, null, 2)}</script>`;

@@ -1,0 +1,712 @@
+{
+  "1917": {
+    "src": "assets/blog/posters/1917.jpg",
+    "page": "https://en.wikipedia.org/wiki/1917_(2019_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/f/fe/1917_%282019%29_Film_Poster.jpeg"
+  },
+  "12 Angry Men": {
+    "src": "assets/blog/posters/12-angry-men.jpg",
+    "page": "https://en.wikipedia.org/wiki/12_Angry_Men",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/b/b5/12_Angry_Men_%281957_film_poster%29.jpg"
+  },
+  "A Few Good Men": {
+    "src": "assets/blog/posters/a-few-good-men.jpg",
+    "page": "https://en.wikipedia.org/wiki/A_Few_Good_Men",
+    "source": "https://upload.wikimedia.org/wikipedia/en/4/45/A_Few_Good_Men_poster.jpg"
+  },
+  "Anatomy of a Murder": {
+    "src": "assets/blog/posters/anatomy-of-a-murder.jpg",
+    "page": "https://en.wikipedia.org/wiki/Anatomy_of_a_Murder",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/2/2f/AnatomyMurder2.jpg"
+  },
+  "Anne with an E": {
+    "src": "assets/blog/posters/anne-with-an-e.png",
+    "page": "https://en.wikipedia.org/wiki/Anne_with_an_E",
+    "source": "https://upload.wikimedia.org/wikipedia/en/7/79/Anne_TV_series_intertitle.png"
+  },
+  "Arrival": {
+    "src": "assets/blog/posters/arrival.jpg",
+    "page": "https://en.wikipedia.org/wiki/Arrival_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/d/df/Arrival%2C_Movie_Poster.jpg"
+  },
+  "Coco": {
+    "src": "assets/blog/posters/coco.jpg",
+    "page": "https://en.wikipedia.org/wiki/Coco_(2017_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/9/98/Coco_%282017_film%29_poster.jpg"
+  },
+  "John Adams": {
+    "src": "assets/blog/posters/john-adams.jpg",
+    "page": "https://en.wikipedia.org/wiki/John_Adams",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/John_Adams_Portrait.jpg/3840px-John_Adams_Portrait.jpg"
+  },
+  "John Wick: Chapter 4": {
+    "src": "assets/blog/posters/john-wick-chapter-4.jpg",
+    "page": "https://en.wikipedia.org/wiki/John_Wick%3A_Chapter_4",
+    "source": "https://upload.wikimedia.org/wikipedia/en/d/d0/John_Wick_-_Chapter_4_promotional_poster.jpg"
+  },
+  "Nebraska": {
+    "src": "assets/blog/posters/nebraska.jpg",
+    "page": "https://en.wikipedia.org/wiki/Nebraska_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/7/76/Nebraska_Poster.jpg"
+  },
+  "Superbad": {
+    "src": "assets/blog/posters/superbad.png",
+    "page": "https://en.wikipedia.org/wiki/Superbad",
+    "source": "https://upload.wikimedia.org/wikipedia/en/8/8b/Superbad_Poster.png"
+  },
+  "The Matrix": {
+    "src": "assets/blog/posters/the-matrix.png",
+    "page": "https://en.wikipedia.org/wiki/The_Matrix",
+    "source": "https://upload.wikimedia.org/wikipedia/en/d/db/The_Matrix.png"
+  },
+  "Tinker Tailor Soldier Spy": {
+    "src": "assets/blog/posters/tinker-tailor-soldier-spy.jpg",
+    "page": "https://en.wikipedia.org/wiki/Tinker_Tailor_Soldier_Spy",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/13/JohnLeCarre_TinkerTailorSoldierSpy.jpg"
+  },
+  "13th": {
+    "src": "assets/blog/posters/13th.png",
+    "page": "https://en.wikipedia.org/wiki/13th_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/6/6b/13th_%28film%29.png"
+  },
+  "Apollo 13": {
+    "src": "assets/blog/posters/apollo-13.png",
+    "page": "https://en.wikipedia.org/wiki/Apollo_13",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Apollo_13-insignia.png/330px-Apollo_13-insignia.png"
+  },
+  "Avatar: The Last Airbender": {
+    "src": "assets/blog/posters/avatar-the-last-airbender.png",
+    "page": "https://en.wikipedia.org/wiki/Avatar%3A_The_Last_Airbender",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Avatar_The_Last_Airbender_logo.svg/330px-Avatar_The_Last_Airbender_logo.svg.png"
+  },
+  "Band of Brothers": {
+    "src": "assets/blog/posters/band-of-brothers.jpg",
+    "page": "https://en.wikipedia.org/wiki/Band_of_Brothers_(miniseries)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/BandofBrothersIntertitle.jpg/330px-BandofBrothersIntertitle.jpg"
+  },
+  "Before Sunset": {
+    "src": "assets/blog/posters/before-sunset.jpg",
+    "page": "https://en.wikipedia.org/wiki/Before_Sunset",
+    "source": "https://upload.wikimedia.org/wikipedia/en/d/d1/Before_Sunset_poster.jpg"
+  },
+  "Better Call Saul": {
+    "src": "assets/blog/posters/better-call-saul.png",
+    "page": "https://en.wikipedia.org/wiki/Better_Call_Saul",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Better_Call_Saul_logo.svg/330px-Better_Call_Saul_logo.svg.png"
+  },
+  "Black Swan": {
+    "src": "assets/blog/posters/black-swan.jpg",
+    "page": "https://en.wikipedia.org/wiki/Black_Swan_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/6/68/Black_Swan_poster.jpg"
+  },
+  "Blade Runner 2049": {
+    "src": "assets/blog/posters/blade-runner-2049.png",
+    "page": "https://en.wikipedia.org/wiki/Blade_Runner_2049",
+    "source": "https://upload.wikimedia.org/wikipedia/en/9/9b/Blade_Runner_2049_poster.png"
+  },
+  "Breaking Bad": {
+    "src": "assets/blog/posters/breaking-bad.png",
+    "page": "https://en.wikipedia.org/wiki/Breaking_Bad",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Breaking_Bad_official_logo.svg/330px-Breaking_Bad_official_logo.svg.png"
+  },
+  "Broadchurch": {
+    "src": "assets/blog/posters/broadchurch.jpg",
+    "page": "https://en.wikipedia.org/wiki/Broadchurch",
+    "source": "https://upload.wikimedia.org/wikipedia/en/7/7e/Broadchurch_titlecard.jpg"
+  },
+  "Brooklyn Nine-Nine": {
+    "src": "assets/blog/posters/brooklyn-nine-nine.png",
+    "page": "https://en.wikipedia.org/wiki/Brooklyn_Nine-Nine",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Brooklyn_Nine-Nine_Logo.png/330px-Brooklyn_Nine-Nine_Logo.png"
+  },
+  "Burning": {
+    "src": "assets/blog/posters/burning.png",
+    "page": "https://en.wikipedia.org/wiki/Burning_(2018_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/4/45/Burning.png"
+  },
+  "Call My Agent!": {
+    "src": "assets/blog/posters/call-my-agent.png",
+    "page": "https://en.wikipedia.org/wiki/Call_My_Agent!",
+    "source": "https://upload.wikimedia.org/wikipedia/en/b/bc/Call_My_Agent%21.png"
+  },
+  "Cast Away": {
+    "src": "assets/blog/posters/cast-away.jpg",
+    "page": "https://en.wikipedia.org/wiki/Cast_Away",
+    "source": "https://upload.wikimedia.org/wikipedia/en/a/a7/Cast_away_film_poster.jpg"
+  },
+  "Chernobyl": {
+    "src": "assets/blog/posters/chernobyl.jpg",
+    "page": "https://en.wikipedia.org/wiki/Chernobyl_(miniseries)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/a/a7/Chernobyl_2019_Miniseries.jpg"
+  },
+  "City of God": {
+    "src": "assets/blog/posters/city-of-god.jpg",
+    "page": "https://en.wikipedia.org/wiki/City_of_God_(2002_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/10/CidadedeDeus.jpg"
+  },
+  "Come and See": {
+    "src": "assets/blog/posters/come-and-see.jpg",
+    "page": "https://en.wikipedia.org/wiki/Come_and_See",
+    "source": "https://upload.wikimedia.org/wikipedia/en/0/08/Come_and_See_%28poster%29.jpg"
+  },
+  "Deadwood": {
+    "src": "assets/blog/posters/deadwood.jpg",
+    "page": "https://en.wikipedia.org/wiki/Deadwood_(TV_series)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/1/18/Deadwood_titleimage.jpg/330px-Deadwood_titleimage.jpg"
+  },
+  "Dear Zachary: A Letter to a Son About His Father": {
+    "src": "assets/blog/posters/dear-zachary-a-letter-to-a-son-about-his-father.jpg",
+    "page": "https://en.wikipedia.org/wiki/Dear_Zachary%3A_A_Letter_to_a_Son_About_His_Father",
+    "source": "https://upload.wikimedia.org/wikipedia/en/f/f5/DearZacharyTheatricalPoster.jpg"
+  },
+  "Diego Maradona": {
+    "src": "assets/blog/posters/diego-maradona.jpg",
+    "page": "https://en.wikipedia.org/wiki/Diego_Maradona",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Argentina_celebrando_copa_%28cropped%29.jpg/330px-Argentina_celebrando_copa_%28cropped%29.jpg"
+  },
+  "Ex Machina": {
+    "src": "assets/blog/posters/ex-machina.jpg",
+    "page": "https://en.wikipedia.org/wiki/Ex_Machina_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Ex-machina-uk-poster.jpg/330px-Ex-machina-uk-poster.jpg"
+  },
+  "Fleabag": {
+    "src": "assets/blog/posters/fleabag.png",
+    "page": "https://en.wikipedia.org/wiki/Fleabag",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Fleabag_titlecard.png/330px-Fleabag_titlecard.png"
+  },
+  "Ford v Ferrari": {
+    "src": "assets/blog/posters/ford-v-ferrari.png",
+    "page": "https://en.wikipedia.org/wiki/Ford_v_Ferrari",
+    "source": "https://upload.wikimedia.org/wikipedia/en/a/a4/Ford_v._Ferrari_%282019_film_poster%29.png"
+  },
+  "Free Solo": {
+    "src": "assets/blog/posters/free-solo.png",
+    "page": "https://en.wikipedia.org/wiki/Free_Solo",
+    "source": "https://upload.wikimedia.org/wikipedia/en/9/9c/Free_Solo.png"
+  },
+  "Fruitvale Station": {
+    "src": "assets/blog/posters/fruitvale-station.jpg",
+    "page": "https://en.wikipedia.org/wiki/Fruitvale_Station",
+    "source": "https://upload.wikimedia.org/wikipedia/en/5/5c/Fruitvale_Station_poster.jpg"
+  },
+  "Get Out": {
+    "src": "assets/blog/posters/get-out.png",
+    "page": "https://en.wikipedia.org/wiki/Get_Out",
+    "source": "https://upload.wikimedia.org/wikipedia/en/a/a3/Get_Out_poster.png"
+  },
+  "Gomorrah": {
+    "src": "assets/blog/posters/gomorrah.png",
+    "page": "https://en.wikipedia.org/wiki/Gomorrah_(TV_series)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Gomorra_La_serie.png/330px-Gomorra_La_serie.png"
+  },
+  "Gone Girl": {
+    "src": "assets/blog/posters/gone-girl.jpg",
+    "page": "https://en.wikipedia.org/wiki/Gone_Girl_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/0/05/Gone_Girl_Poster.jpg"
+  },
+  "GoodFellas": {
+    "src": "assets/blog/posters/goodfellas.jpg",
+    "page": "https://en.wikipedia.org/wiki/Goodfellas",
+    "source": "https://upload.wikimedia.org/wikipedia/en/7/7b/Goodfellas.jpg"
+  },
+  "Groundhog Day": {
+    "src": "assets/blog/posters/groundhog-day.jpg",
+    "page": "https://en.wikipedia.org/wiki/Groundhog_Day_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/b/b1/Groundhog_Day_%28movie_poster%29.jpg"
+  },
+  "Halt and Catch Fire": {
+    "src": "assets/blog/posters/halt-and-catch-fire.jpg",
+    "page": "https://en.wikipedia.org/wiki/Halt_and_Catch_Fire_(TV_series)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/9/92/Halt_and_Catch_Fire_Intertitle.jpg"
+  },
+  "Heat": {
+    "src": "assets/blog/posters/heat.jpg",
+    "page": "https://en.wikipedia.org/wiki/Heat_(1995_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/6/6c/Heatposter.jpg"
+  },
+  "Hereditary": {
+    "src": "assets/blog/posters/hereditary.png",
+    "page": "https://en.wikipedia.org/wiki/Hereditary_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/d/d9/Hereditary.png"
+  },
+  "Hoop Dreams": {
+    "src": "assets/blog/posters/hoop-dreams.jpg",
+    "page": "https://en.wikipedia.org/wiki/Hoop_Dreams",
+    "source": "https://upload.wikimedia.org/wikipedia/en/4/4f/Hoop_dreamsposter.jpg"
+  },
+  "Inside Man": {
+    "src": "assets/blog/posters/inside-man.jpg",
+    "page": "https://en.wikipedia.org/wiki/Inside_Man",
+    "source": "https://upload.wikimedia.org/wikipedia/en/a/a2/Inside_Man_%28film_poster%29.jpg"
+  },
+  "Interstellar": {
+    "src": "assets/blog/posters/interstellar.jpg",
+    "page": "https://en.wikipedia.org/wiki/Interstellar_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"
+  },
+  "L.A. Confidential": {
+    "src": "assets/blog/posters/l-a-confidential.jpg",
+    "page": "https://en.wikipedia.org/wiki/L.A._Confidential",
+    "source": "https://upload.wikimedia.org/wikipedia/en/3/3c/LAconfidentialcvr.jpg"
+  },
+  "Life of Pi": {
+    "src": "assets/blog/posters/life-of-pi.png",
+    "page": "https://en.wikipedia.org/wiki/Life_of_Pi",
+    "source": "https://upload.wikimedia.org/wikipedia/en/4/45/Life_of_Pi_cover.png"
+  },
+  "Little Miss Sunshine": {
+    "src": "assets/blog/posters/little-miss-sunshine.jpg",
+    "page": "https://en.wikipedia.org/wiki/Little_Miss_Sunshine",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/16/Little_miss_sunshine_poster.jpg"
+  },
+  "Logan Lucky": {
+    "src": "assets/blog/posters/logan-lucky.png",
+    "page": "https://en.wikipedia.org/wiki/Logan_Lucky",
+    "source": "https://upload.wikimedia.org/wikipedia/en/e/e6/Logan_Lucky.png"
+  },
+  "Mad Max: Fury Road": {
+    "src": "assets/blog/posters/mad-max-fury-road.jpg",
+    "page": "https://en.wikipedia.org/wiki/Mad_Max%3A_Fury_Road",
+    "source": "https://upload.wikimedia.org/wikipedia/en/6/6e/Mad_Max_Fury_Road.jpg"
+  },
+  "Mad Men": {
+    "src": "assets/blog/posters/mad-men.jpg",
+    "page": "https://en.wikipedia.org/wiki/Mad_Men",
+    "source": "https://upload.wikimedia.org/wikipedia/en/3/33/Mad-men-title-card.jpg"
+  },
+  "Making a Murderer": {
+    "src": "assets/blog/posters/making-a-murderer.jpg",
+    "page": "https://en.wikipedia.org/wiki/Making_a_Murderer",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/8/83/Making_a_Murderer_titlecard.jpg/330px-Making_a_Murderer_titlecard.jpg"
+  },
+  "Man on Wire": {
+    "src": "assets/blog/posters/man-on-wire.jpg",
+    "page": "https://en.wikipedia.org/wiki/Man_on_Wire",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Man_on_wire_ver2.jpg/330px-Man_on_wire_ver2.jpg"
+  },
+  "Mare of Easttown": {
+    "src": "assets/blog/posters/mare-of-easttown.png",
+    "page": "https://en.wikipedia.org/wiki/Mare_of_Easttown",
+    "source": "https://upload.wikimedia.org/wikipedia/en/2/26/Mare_of_Easttown_2021_Television_Series_poster.png"
+  },
+  "Memories of Murder": {
+    "src": "assets/blog/posters/memories-of-murder.jpg",
+    "page": "https://en.wikipedia.org/wiki/Memories_of_Murder",
+    "source": "https://upload.wikimedia.org/wikipedia/en/0/01/Salinui-chueok-south-korean-movie-poster-md.jpg"
+  },
+  "Merlin": {
+    "src": "assets/blog/posters/merlin.jpg",
+    "page": "https://en.wikipedia.org/wiki/Merlin_(2008_TV_series)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/8/84/Merlin_-_Screen_Capture.jpg"
+  },
+  "My Neighbor Totoro": {
+    "src": "assets/blog/posters/my-neighbor-totoro.jpg",
+    "page": "https://en.wikipedia.org/wiki/My_Neighbor_Totoro",
+    "source": "https://upload.wikimedia.org/wikipedia/en/0/02/My_Neighbor_Totoro_-_Tonari_no_Totoro_%28Movie_Poster%29.jpg"
+  },
+  "Ocean's Eleven": {
+    "src": "assets/blog/posters/ocean-s-eleven.jpg",
+    "page": "https://en.wikipedia.org/wiki/Ocean's_Eleven",
+    "source": "https://upload.wikimedia.org/wikipedia/en/6/68/Ocean%27s_Eleven_2001_Poster.jpg"
+  },
+  "Paddington 2": {
+    "src": "assets/blog/posters/paddington-2.jpg",
+    "page": "https://en.wikipedia.org/wiki/Paddington_2",
+    "source": "https://upload.wikimedia.org/wikipedia/en/b/b6/Paddington_2_poster.jpg"
+  },
+  "Paris, Texas": {
+    "src": "assets/blog/posters/paris-texas.png",
+    "page": "https://en.wikipedia.org/wiki/Paris%2C_Texas",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Lamar_County_Paris.svg/330px-Lamar_County_Paris.svg.png"
+  },
+  "Prisoners": {
+    "src": "assets/blog/posters/prisoners.jpg",
+    "page": "https://en.wikipedia.org/wiki/Prisoners_(2013_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/6/63/Prisoners2013Poster.jpg"
+  },
+  "Raging Bull": {
+    "src": "assets/blog/posters/raging-bull.jpg",
+    "page": "https://en.wikipedia.org/wiki/Raging_Bull",
+    "source": "https://upload.wikimedia.org/wikipedia/en/5/5f/Raging_Bull_poster.jpg"
+  },
+  "Rififi": {
+    "src": "assets/blog/posters/rififi.jpg",
+    "page": "https://en.wikipedia.org/wiki/Rififi",
+    "source": "https://upload.wikimedia.org/wikipedia/en/8/80/Rifififrenchposter.jpg"
+  },
+  "Rocky": {
+    "src": "assets/blog/posters/rocky.jpg",
+    "page": "https://en.wikipedia.org/wiki/Rocky",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/18/Rocky_poster.jpg"
+  },
+  "Rome": {
+    "src": "assets/blog/posters/rome.jpg",
+    "page": "https://en.wikipedia.org/wiki/Rome_(TV_series)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/e/e6/Rome_title_card.jpg"
+  },
+  "Rosemary's Baby": {
+    "src": "assets/blog/posters/rosemary-s-baby.jpg",
+    "page": "https://en.wikipedia.org/wiki/Rosemary's_Baby_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/e/ef/Rosemarys_baby_poster.jpg"
+  },
+  "Rush": {
+    "src": "assets/blog/posters/rush.jpg",
+    "page": "https://en.wikipedia.org/wiki/Rush_(2013_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/d/d0/Rush_UK_poster.jpeg"
+  },
+  "Saving Private Ryan": {
+    "src": "assets/blog/posters/saving-private-ryan.jpg",
+    "page": "https://en.wikipedia.org/wiki/Saving_Private_Ryan",
+    "source": "https://upload.wikimedia.org/wikipedia/en/a/ac/Saving_Private_Ryan_poster.jpg"
+  },
+  "Schitt's Creek": {
+    "src": "assets/blog/posters/schitt-s-creek.png",
+    "page": "https://en.wikipedia.org/wiki/Schitt's_Creek",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Schitt%27s_Creek_logo.svg/330px-Schitt%27s_Creek_logo.svg.png"
+  },
+  "Searching for Sugar Man": {
+    "src": "assets/blog/posters/searching-for-sugar-man.jpg",
+    "page": "https://en.wikipedia.org/wiki/Searching_for_Sugar_Man",
+    "source": "https://upload.wikimedia.org/wikipedia/en/5/54/Searching-for-sugar-man--poster.jpg"
+  },
+  "Senna": {
+    "src": "assets/blog/posters/senna.jpg",
+    "page": "https://en.wikipedia.org/wiki/Senna_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/8/89/Senna_film_poster.jpg"
+  },
+  "Seven": {
+    "src": "assets/blog/posters/seven.jpg",
+    "page": "https://en.wikipedia.org/wiki/Seven_(1995_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/6/68/Seven_%28movie%29_poster.jpg"
+  },
+  "Six Feet Under": {
+    "src": "assets/blog/posters/six-feet-under.jpg",
+    "page": "https://en.wikipedia.org/wiki/Six_Feet_Under_(TV_series)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/2/23/Sixfeetunderlogo.jpg"
+  },
+  "Spirited Away": {
+    "src": "assets/blog/posters/spirited-away.png",
+    "page": "https://en.wikipedia.org/wiki/Spirited_Away",
+    "source": "https://upload.wikimedia.org/wikipedia/en/d/db/Spirited_Away_Japanese_poster.png"
+  },
+  "Stand by Me": {
+    "src": "assets/blog/posters/stand-by-me.jpg",
+    "page": "https://en.wikipedia.org/wiki/Stand_by_Me_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/7/74/Stand_By_Me_1986_American_Theatrical_Release_Poster.jpg"
+  },
+  "The Act of Killing": {
+    "src": "assets/blog/posters/the-act-of-killing.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Act_of_Killing",
+    "source": "https://upload.wikimedia.org/wikipedia/en/c/ca/The_Act_of_Killing_%282012_film%29.jpg"
+  },
+  "The Americans": {
+    "src": "assets/blog/posters/the-americans.png",
+    "page": "https://en.wikipedia.org/wiki/The_Americans",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/The_americans_2013_title_logo.svg/330px-The_americans_2013_title_logo.svg.png"
+  },
+  "The Big Lebowski": {
+    "src": "assets/blog/posters/the-big-lebowski.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Big_Lebowski",
+    "source": "https://upload.wikimedia.org/wikipedia/en/3/35/Biglebowskiposter.jpg"
+  },
+  "The Bourne Ultimatum": {
+    "src": "assets/blog/posters/the-bourne-ultimatum.png",
+    "page": "https://en.wikipedia.org/wiki/The_Bourne_Ultimatum",
+    "source": "https://upload.wikimedia.org/wikipedia/en/b/bb/Ludlum_-_The_Bourne_Ultimatum_Coverart.png"
+  },
+  "The Conversation": {
+    "src": "assets/blog/posters/the-conversation.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Conversation",
+    "source": "https://upload.wikimedia.org/wikipedia/en/e/e0/Theconversation.jpg"
+  },
+  "The Dark Knight": {
+    "src": "assets/blog/posters/the-dark-knight.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Dark_Knight",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg"
+  },
+  "The Departed": {
+    "src": "assets/blog/posters/the-departed.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Departed",
+    "source": "https://upload.wikimedia.org/wikipedia/en/5/50/Departed234.jpg"
+  },
+  "The Fugitive": {
+    "src": "assets/blog/posters/the-fugitive.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Fugitive_(1993_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/c/c7/The_Fugitive_movie.jpg"
+  },
+  "The Grand Budapest Hotel": {
+    "src": "assets/blog/posters/the-grand-budapest-hotel.png",
+    "page": "https://en.wikipedia.org/wiki/The_Grand_Budapest_Hotel",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Grand_Budapest_Hotel.png"
+  },
+  "The Hurt Locker": {
+    "src": "assets/blog/posters/the-hurt-locker.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Hurt_Locker",
+    "source": "https://upload.wikimedia.org/wikipedia/en/6/6c/HLposterUSA2.jpg"
+  },
+  "The Incredibles": {
+    "src": "assets/blog/posters/the-incredibles.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Incredibles",
+    "source": "https://upload.wikimedia.org/wikipedia/en/2/27/The_Incredibles_%282004_animated_feature_film%29.jpg"
+  },
+  "The Innocents": {
+    "src": "assets/blog/posters/the-innocents.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Innocents_(1961_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/13/The_Innocents_%281961_film%29.jpg"
+  },
+  "The Iron Giant": {
+    "src": "assets/blog/posters/the-iron-giant.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Iron_Giant",
+    "source": "https://upload.wikimedia.org/wikipedia/en/d/d3/The_Iron_Giant_poster.JPG"
+  },
+  "The Jinx: The Life and Deaths of Robert Durst": {
+    "src": "assets/blog/posters/the-jinx-the-life-and-deaths-of-robert-durst.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Jinx_(TV_series)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/c/cc/The_Jinx_%28miniseries%29_POSTER.jpg"
+  },
+  "The Last Dance": {
+    "src": "assets/blog/posters/the-last-dance.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Last_Dance_(miniseries)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/14/The_Last_Dance_2020.jpg"
+  },
+  "The Last Kingdom": {
+    "src": "assets/blog/posters/the-last-kingdom.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Last_Kingdom_(TV_series)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/7/75/The_Last_Kingdom_TV_series_titlecard.jpg/330px-The_Last_Kingdom_TV_series_titlecard.jpg"
+  },
+  "The Leftovers": {
+    "src": "assets/blog/posters/the-leftovers.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Leftovers_(TV_series)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/3/39/LeftoversS2Logo.jpg/330px-LeftoversS2Logo.jpg"
+  },
+  "The Lives of Others": {
+    "src": "assets/blog/posters/the-lives-of-others.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Lives_of_Others",
+    "source": "https://upload.wikimedia.org/wikipedia/en/9/9f/Leben_der_anderen.jpg"
+  },
+  "The Martian": {
+    "src": "assets/blog/posters/the-martian.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Martian_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/c/cd/The_Martian_film_poster.jpg"
+  },
+  "The Muppet Show": {
+    "src": "assets/blog/posters/the-muppet-show.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Muppet_Show",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Tv_muppet_show_opening.jpg/330px-Tv_muppet_show_opening.jpg"
+  },
+  "The Nightmare Before Christmas": {
+    "src": "assets/blog/posters/the-nightmare-before-christmas.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Nightmare_Before_Christmas",
+    "source": "https://upload.wikimedia.org/wikipedia/en/9/9a/The_nightmare_before_christmas_poster.jpg"
+  },
+  "The Others": {
+    "src": "assets/blog/posters/the-others.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Others_(2001_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/4/4c/TheOthers.jpg"
+  },
+  "The Queen's Gambit": {
+    "src": "assets/blog/posters/the-queen-s-gambit.png",
+    "page": "https://en.wikipedia.org/wiki/The_Queen's_Gambit_(miniseries)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/12/The_Queen%27s_Gambit_%28miniseries%29.png"
+  },
+  "The Secret in Their Eyes": {
+    "src": "assets/blog/posters/the-secret-in-their-eyes.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Secret_in_Their_Eyes",
+    "source": "https://upload.wikimedia.org/wikipedia/en/9/91/Cartel-nuevo-de-el-secreto-de-sus-ojos.jpg"
+  },
+  "The Shining": {
+    "src": "assets/blog/posters/the-shining.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Shining_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/1d/The_Shining_%281980%29_U.K._release_poster_-_The_tide_of_terror_that_swept_America_IS_HERE.jpg"
+  },
+  "The Sixth Sense": {
+    "src": "assets/blog/posters/the-sixth-sense.png",
+    "page": "https://en.wikipedia.org/wiki/The_Sixth_Sense",
+    "source": "https://upload.wikimedia.org/wikipedia/en/a/a4/The_Sixth_Sense_poster.png"
+  },
+  "The Sting": {
+    "src": "assets/blog/posters/the-sting.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Sting",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/The_Sting_%281973_alt_poster%29.jpeg/330px-The_Sting_%281973_alt_poster%29.jpeg"
+  },
+  "The Thin Red Line": {
+    "src": "assets/blog/posters/the-thin-red-line.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Thin_Red_Line_(1998_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/a/ae/The_Thin_Red_Line_Poster.jpg"
+  },
+  "The Town": {
+    "src": "assets/blog/posters/the-town.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Town_(2010_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/d/da/The_Town_Poster.jpg"
+  },
+  "The Verdict": {
+    "src": "assets/blog/posters/the-verdict.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Verdict",
+    "source": "https://upload.wikimedia.org/wikipedia/en/e/ea/Verdict1.jpg"
+  },
+  "The Wire": {
+    "src": "assets/blog/posters/the-wire.png",
+    "page": "https://en.wikipedia.org/wiki/The_Wire",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/The_Wire_logo.svg/330px-The_Wire_logo.svg.png"
+  },
+  "The Witch": {
+    "src": "assets/blog/posters/the-witch.png",
+    "page": "https://en.wikipedia.org/wiki/The_Witch_(2015_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/b/bf/The_Witch_poster.png"
+  },
+  "The Wrestler": {
+    "src": "assets/blog/posters/the-wrestler.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Wrestler_(2008_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/3/3e/The_Wrestler_poster.jpg"
+  },
+  "The X-Files": {
+    "src": "assets/blog/posters/the-x-files.webp",
+    "page": "https://en.wikipedia.org/wiki/The_X-Files",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/The_X-Files_original_title_screen.webp/330px-The_X-Files_original_title_screen.webp"
+  },
+  "Thelma & Louise": {
+    "src": "assets/blog/posters/thelma-and-louise.png",
+    "page": "https://en.wikipedia.org/wiki/Thelma_%26_Louise",
+    "source": "https://upload.wikimedia.org/wikipedia/en/8/8f/Thelma_%26_Louise_poster.png"
+  },
+  "Thief": {
+    "src": "assets/blog/posters/thief.jpg",
+    "page": "https://en.wikipedia.org/wiki/Thief_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/6/65/Thief_1981.jpg"
+  },
+  "Top Gun: Maverick": {
+    "src": "assets/blog/posters/top-gun-maverick.jpg",
+    "page": "https://en.wikipedia.org/wiki/Top_Gun%3A_Maverick",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/13/Top_Gun_Maverick_Poster.jpg"
+  },
+  "Toy Story": {
+    "src": "assets/blog/posters/toy-story.jpg",
+    "page": "https://en.wikipedia.org/wiki/Toy_Story",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg"
+  },
+  "Unbelievable": {
+    "src": "assets/blog/posters/unbelievable.jpg",
+    "page": "https://en.wikipedia.org/wiki/Unbelievable_(miniseries)",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Unbelievable_%28miniseries%29_Title_Card.jpg"
+  },
+  "Wind River": {
+    "src": "assets/blog/posters/wind-river.png",
+    "page": "https://en.wikipedia.org/wiki/Wind_River_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/2/2e/Wind_River_%282017_film%29.png"
+  },
+  "Y tu mamá también": {
+    "src": "assets/blog/posters/y-tu-mama-tambien.png",
+    "page": "https://en.wikipedia.org/wiki/Y_tu_mam%C3%A1_tambi%C3%A9n",
+    "source": "https://upload.wikimedia.org/wikipedia/en/6/63/Y_tu_mam%C3%A1_tambi%C3%A9n_poster.png"
+  },
+  "Zodiac": {
+    "src": "assets/blog/posters/zodiac.jpg",
+    "page": "https://en.wikipedia.org/wiki/Zodiac_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/3/3a/Zodiac2007Poster.jpg"
+  },
+  "Mission: Impossible - Fallout": {
+    "src": "assets/blog/posters/mission-impossible-fallout.jpg",
+    "page": "https://en.wikipedia.org/wiki/Mission%3A_Impossible_%E2%80%93_Fallout",
+    "source": "https://upload.wikimedia.org/wikipedia/en/f/ff/MI_%E2%80%93_Fallout.jpg"
+  },
+  "The Bridge": {
+    "src": "assets/blog/posters/the-bridge.png",
+    "page": "https://en.wikipedia.org/wiki/The_Bridge_(2011_TV_series)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/1/1f/The_Bridge_season_one.png"
+  },
+  "When They See Us": {
+    "src": "assets/blog/posters/when-they-see-us.png",
+    "page": "https://en.wikipedia.org/wiki/When_They_See_Us",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Title_Screen_for_When_They_See_Us.png/330px-Title_Screen_for_When_They_See_Us.png"
+  },
+  "Bluey": {
+    "src": "assets/blog/posters/bluey.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "Borgen": {
+    "src": "assets/blog/posters/borgen.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "Bridge of Spies": {
+    "src": "assets/blog/posters/bridge-of-spies.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "Dark": {
+    "src": "assets/blog/posters/dark.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "ER": {
+    "src": "assets/blog/posters/er.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "Let the Right One In": {
+    "src": "assets/blog/posters/let-the-right-one-in.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "Money Heist": {
+    "src": "assets/blog/posters/money-heist.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "Munich": {
+    "src": "assets/blog/posters/munich.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "Parks and Recreation": {
+    "src": "assets/blog/posters/parks-and-recreation.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "Succession": {
+    "src": "assets/blog/posters/succession.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "The Crown": {
+    "src": "assets/blog/posters/the-crown.jpg",
+    "page": "https://en.wikipedia.org/wiki/The_Crown_(TV_series)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/thumb/1/18/The_Crown_Title_Card.jpg/330px-The_Crown_Title_Card.jpg"
+  },
+  "The Office": {
+    "src": "assets/blog/posters/the-office.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "The Sopranos": {
+    "src": "assets/blog/posters/the-sopranos.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "The Staircase": {
+    "src": "assets/blog/posters/the-staircase.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "The West Wing": {
+    "src": "assets/blog/posters/the-west-wing.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "Touching the Void": {
+    "src": "assets/blog/posters/touching-the-void.svg",
+    "page": "",
+    "source": "Generated SwiftChannels fallback artwork"
+  },
+  "Witness for the Prosecution": {
+    "src": "assets/blog/posters/witness-for-the-prosecution.jpg",
+    "page": "https://en.wikipedia.org/wiki/Witness_for_the_Prosecution_(1957_film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/c/cf/Witness_for_the_Prosecution_%281957_film%29_poster.jpg"
+  },
+  "Won't You Be My Neighbor?": {
+    "src": "assets/blog/posters/won-t-you-be-my-neighbor.png",
+    "page": "https://en.wikipedia.org/wiki/Won't_You_Be_My_Neighbor%3F_(film)",
+    "source": "https://upload.wikimedia.org/wikipedia/en/7/7d/Won%27t_You_Be_My_Neighbor%3F.png"
+  }
+}

@@ -5,6 +5,7 @@
   "scripts": {
     "build": "node build.js",
     "blog:write": "node scripts/write-blog-posts.js",
+    "blog:posters": "node scripts/fetch-blog-posters.js",
     "blog:preview": "BLOG_PREVIEW_ALL=1 node build.js",
     "og": "node build-og.js",
     "indexnow": "node indexnow.js"
