@@ -23,6 +23,7 @@ const { chromium } = require('playwright');
 const fs   = require('fs');
 const path = require('path');
 const { buildBlog } = require('./scripts/blog-build');
+const { buildSeoPages } = require('./scripts/seo-pages');
 
 const SITE  = 'https://swiftchannels.com';
 const ROOT  = __dirname;
@@ -139,7 +140,9 @@ async function splitDictionaries(browser) {
       /* The page now lives one folder down, so relative paths need ../ —
          except links to pages that also have a copy in this folder. */
       const SAME_FOLDER = ['legal.html', 'index.html', 'channels.html', 'install.html',
-                          'order.html', 'thank-you.html'];
+                          'order.html', 'thank-you.html', 'faq.html', 'about.html',
+                          'best-iptv-for-sports.html', 'best-iptv-for-movies.html',
+                          'iptv-for-firestick.html', 'iptv-for-smart-tv.html'];
       document.querySelectorAll('[src],[href]').forEach(el => {
         for (const attr of ['src','href']) {
           const v = el.getAttribute(attr);
@@ -302,6 +305,7 @@ async function splitDictionaries(browser) {
   ).join('\n') +
   `\n      <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('')}channels.html"/>`;
 
+  const seoPages = buildSeoPages({ ROOT, SITE, LANGS, today });
   const blog = buildBlog({ ROOT, SITE, LANGS });
 
   const entries = LANGS.map(l => `  <url>
@@ -338,9 +342,10 @@ ${installAlternates}
 `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${entries}${extra}${blog.sitemap ? '\n' + blog.sitemap : ''}
+${entries}${extra}${seoPages.sitemap ? '\n' + seoPages.sitemap : ''}${blog.sitemap ? '\n' + blog.sitemap : ''}
 </urlset>
 `, 'utf8');
+  console.log('  ✓ SEO pages');
   console.log('  ✓ blog pages');
   console.log('  ✓ sitemap.xml');
   console.log(`\nBuilt ${built.length} pages. Commit and push.`);

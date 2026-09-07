@@ -8,7 +8,9 @@ const LABELS = {
     upcoming: 'No articles are published yet.', read: 'Read article',
     published: 'Published', imdb: 'IMDb rating', minutes: 'min read',
     footer: 'Free 24-hour test, 8,000+ live channels, and a large film and series library.',
-    rss: 'RSS feed', cta: 'Watch it via SwiftChannels IPTV'
+    rss: 'RSS feed', cta: 'Watch it via SwiftChannels IPTV', related: 'Keep exploring',
+    relPlans: 'Compare SwiftChannels plans', relChannels: 'See the full channel list', relSetup: 'Open the setup guide', relFaq: 'Read the IPTV FAQ',
+    about: 'About', faq: 'FAQ', terms: 'Terms'
   },
   fr: {
     blog: 'Blog', home: 'Accueil', channels: 'Chaînes', setup: 'Installation', order: 'Commander',
@@ -16,7 +18,9 @@ const LABELS = {
     upcoming: 'Aucun article publié pour le moment.', read: "Lire l'article",
     published: 'Publié', imdb: 'Note IMDb', minutes: 'min de lecture',
     footer: 'Test gratuit de 24 heures, 8 000+ chaînes en direct et une grande bibliothèque films et séries.',
-    rss: 'Flux RSS', cta: 'Le regarder via SwiftChannels IPTV'
+    rss: 'Flux RSS', cta: 'Le regarder via SwiftChannels IPTV', related: 'Continuer à explorer',
+    relPlans: 'Comparer les offres SwiftChannels', relChannels: 'Voir la liste des chaînes', relSetup: 'Ouvrir le guide d’installation', relFaq: 'Lire la FAQ IPTV',
+    about: 'À propos', faq: 'FAQ', terms: 'Conditions'
   },
   es: {
     blog: 'Blog', home: 'Inicio', channels: 'Canales', setup: 'Instalación', order: 'Pedir ahora',
@@ -24,7 +28,9 @@ const LABELS = {
     upcoming: 'Todavía no hay artículos publicados.', read: 'Leer artículo',
     published: 'Publicado', imdb: 'Puntuación IMDb', minutes: 'min de lectura',
     footer: 'Prueba gratis de 24 horas, más de 8.000 canales en vivo y una gran biblioteca de películas y series.',
-    rss: 'RSS', cta: 'Verlo vía SwiftChannels IPTV'
+    rss: 'RSS', cta: 'Verlo vía SwiftChannels IPTV', related: 'Seguir explorando',
+    relPlans: 'Comparar planes SwiftChannels', relChannels: 'Ver la lista de canales', relSetup: 'Abrir la guía de instalación', relFaq: 'Leer la FAQ IPTV',
+    about: 'Sobre nosotros', faq: 'FAQ', terms: 'Términos'
   },
   de: {
     blog: 'Blog', home: 'Start', channels: 'Sender', setup: 'Einrichtung', order: 'Jetzt bestellen',
@@ -32,7 +38,9 @@ const LABELS = {
     upcoming: 'Noch keine Artikel veröffentlicht.', read: 'Artikel lesen',
     published: 'Veröffentlicht', imdb: 'IMDb-Bewertung', minutes: 'Min. Lesezeit',
     footer: 'Kostenloser 24-Stunden-Test, 8.000+ Live-Sender und eine große Film- und Serienbibliothek.',
-    rss: 'RSS-Feed', cta: 'Über SwiftChannels IPTV ansehen'
+    rss: 'RSS-Feed', cta: 'Über SwiftChannels IPTV ansehen', related: 'Weiter ansehen',
+    relPlans: 'SwiftChannels Tarife vergleichen', relChannels: 'Vollständige Senderliste ansehen', relSetup: 'Einrichtungsanleitung öffnen', relFaq: 'IPTV FAQ lesen',
+    about: 'Über uns', faq: 'FAQ', terms: 'AGB'
   },
   it: {
     blog: 'Blog', home: 'Home', channels: 'Canali', setup: 'Configurazione', order: 'Ordina ora',
@@ -40,7 +48,9 @@ const LABELS = {
     upcoming: 'Nessun articolo pubblicato per ora.', read: "Leggi l'articolo",
     published: 'Pubblicato', imdb: 'Valutazione IMDb', minutes: 'min di lettura',
     footer: 'Prova gratuita di 24 ore, oltre 8.000 canali live e una grande libreria di film e serie.',
-    rss: 'Feed RSS', cta: 'Guardalo via SwiftChannels IPTV'
+    rss: 'Feed RSS', cta: 'Guardalo via SwiftChannels IPTV', related: 'Continua a esplorare',
+    relPlans: 'Confronta i piani SwiftChannels', relChannels: 'Vedi la lista canali', relSetup: 'Apri la guida alla configurazione', relFaq: 'Leggi la FAQ IPTV',
+    about: 'Chi siamo', faq: 'FAQ', terms: 'Condizioni'
   },
   nl: {
     blog: 'Blog', home: 'Home', channels: 'Kanalen', setup: 'Installatie', order: 'Bestel nu',
@@ -48,7 +58,9 @@ const LABELS = {
     upcoming: 'Nog geen artikelen gepubliceerd.', read: 'Lees artikel',
     published: 'Gepubliceerd', imdb: 'IMDb-score', minutes: 'min leestijd',
     footer: 'Gratis 24 uur testen, 8.000+ livekanalen en een grote film- en seriebibliotheek.',
-    rss: 'RSS-feed', cta: 'Kijk via SwiftChannels IPTV'
+    rss: 'RSS-feed', cta: 'Kijk via SwiftChannels IPTV', related: 'Verder kijken',
+    relPlans: 'Vergelijk SwiftChannels pakketten', relChannels: 'Bekijk de volledige zenderlijst', relSetup: 'Open de installatiegids', relFaq: 'Lees de IPTV FAQ',
+    about: 'Over ons', faq: 'FAQ', terms: 'Voorwaarden'
   }
 };
 
@@ -100,6 +112,14 @@ function recoCard(raw, idx, posterMap, prefix, label) {
   </li>`;
 }
 
+function parseRecommendations(md) {
+  return md.split(/\r?\n/).map(line => {
+    const m = /^\d+\.\s+\*\*([^*]+)\*\* \((\d{4})\) - ([\s\S]+?) \[(IMDb [^\]]+)\]\(([^)]+)\)$/.exec(line.trim());
+    if (!m) return null;
+    return { title: m[1], year: m[2], description: m[3], imdbLabel: m[4], imdb: m[5] };
+  }).filter(Boolean);
+}
+
 function markdownToHtml(md, posterMap, prefix, label) {
   const lines = md.split(/\r?\n/);
   const out = [];
@@ -118,9 +138,17 @@ function markdownToHtml(md, posterMap, prefix, label) {
   return out.join('\n');
 }
 
+function relatedLinks(labels, prefix) {
+  return `<section class="related-links"><h2>${esc(labels.related)}</h2><div><a href="${prefix}#plans">${esc(labels.relPlans)}</a><a href="${prefix}channels.html">${esc(labels.relChannels)}</a><a href="${prefix}install.html">${esc(labels.relSetup)}</a><a href="${prefix}faq.html">${esc(labels.relFaq)}</a></div></section>`;
+}
+
 function relPrefix(lang, isPost) {
   if (lang === 'en') return isPost ? '../../' : '../';
   return isPost ? '../../../' : '../../';
+}
+
+function localPrefix(isPost) {
+  return isPost ? '../../' : '../';
 }
 
 function pageUrl(site, lang, slug) {
@@ -181,8 +209,8 @@ ${rss ? `<link rel="alternate" type="application/rss+xml" title="${esc(title)} R
 </head>`;
 }
 
-function shell({ body, labels, lang, prefix, switcher }) {
-  return `${body.replace('<!--NAV-->', `<nav class="top"><a class="brand" href="${prefix}"><span class="brand-mark"></span><b>Swift<span>Channels</span></b></a><div class="links"><a href="${prefix}channels.html">${labels.channels}</a><a href="${prefix}install.html">${labels.setup}</a><a href="${prefix}blog/">${labels.blog}</a></div><div class="lang"><button class="lang-cur" type="button" id="langCur" aria-expanded="false"><img src="${prefix}assets/flag-${lang}.webp" alt="" width="32" height="32"></button><div class="lang-opts" id="langOpts">${switcher}</div></div><a class="btn" href="${prefix}#order">${labels.order}</a></nav>`)}
+function shell({ body, labels, lang, assetPrefix, localPrefix, switcher }) {
+  return `${body.replace('<!--NAV-->', `<nav class="top"><a class="brand" href="${localPrefix}"><span class="brand-mark"></span><b>Swift<span>Channels</span></b></a><div class="links"><a href="${localPrefix}channels.html">${labels.channels}</a><a href="${localPrefix}install.html">${labels.setup}</a><a href="${localPrefix}blog/">${labels.blog}</a></div><div class="lang"><button class="lang-cur" type="button" id="langCur" aria-expanded="false"><img src="${assetPrefix}assets/flag-${lang}.webp" alt="" width="32" height="32"></button><div class="lang-opts" id="langOpts">${switcher}</div></div><a class="btn" href="${localPrefix}#order">${labels.order}</a></nav>`)}
 <script>
 const cur=document.getElementById('langCur'), box=document.querySelector('.lang');
 if(cur&&box){cur.addEventListener('click',()=>{const open=box.classList.toggle('open');cur.setAttribute('aria-expanded',String(open));});document.addEventListener('click',e=>{if(!box.contains(e.target)){box.classList.remove('open');cur.setAttribute('aria-expanded','false');}});}
@@ -241,11 +269,12 @@ function buildBlog({ ROOT, SITE, LANGS }) {
     const labels = LABELS[L.code];
     const langPosts = posts.filter(p => p.lang === L.code).sort((a, b) => a.meta.number - b.meta.number);
     const visible = langPosts.filter(due);
-    const prefix = L.code === 'en' ? '../' : '../../';
+    const assetPrefix = relPrefix(L.code, false);
+    const pagePrefix = localPrefix(false);
     const indexUrl = pageUrl(SITE, L.code, '');
     const alternates = LANGS.map(x => `<link rel="alternate" hreflang="${x.code}" href="${pageUrl(SITE, x.code, '')}">`).join('\n') + `\n<link rel="alternate" hreflang="x-default" href="${pageUrl(SITE, 'en', '')}">`;
     const cards = visible.map(p => `<article class="post-card">
-      ${articleArt(p.meta, prefix, posterMap, `${p.meta.slug}/`)}
+      ${articleArt(p.meta, assetPrefix, posterMap, `${p.meta.slug}/`)}
       <div><span class="chip">${esc(p.meta.familyLabel)}</span><h2><a href="${p.meta.slug}/">${esc(p.meta.title)}</a></h2><p>${esc(p.meta.summary)}</p><small>${labels.published}: ${p.meta.publishDate} · IMDb 7.0+</small><a class="read" href="${p.meta.slug}/">${labels.read}</a></div>
     </article>`).join('\n');
     const doc = `${head({ title: `SwiftChannels ${labels.blog}`, description: labels.intro, url: indexUrl, image: `${SITE}/assets/og-card.jpg`, lang: L.code, alternates, rss: `${pageUrl(SITE, L.code, '')}feed.xml` })}
@@ -256,10 +285,10 @@ function buildBlog({ ROOT, SITE, LANGS }) {
   <header class="blog-hero"><p>SwiftChannels Blog</p><h1>${esc(labels.blog)}</h1><span>${esc(labels.intro)}</span></header>
   <section class="grid">${cards || `<p>${esc(labels.upcoming)}</p>`}</section>
 </main>
-<footer><b>SwiftChannels</b><span>${esc(labels.footer)}</span><a href="${prefix}legal.html">Terms</a><a href="feed.xml">${esc(labels.rss)}</a></footer>`;
+<footer><b>SwiftChannels</b><span>${esc(labels.footer)}</span><a href="${pagePrefix}legal.html">${esc(labels.terms)}</a><a href="feed.xml">${esc(labels.rss)}</a></footer>`;
     const out = path.join(ROOT, langPath(L.code, ''));
     fs.mkdirSync(path.dirname(out), { recursive: true });
-    fs.writeFileSync(out, shell({ body: doc, labels, lang: L.code, prefix, switcher: languageSwitcher(prefix, LANGS, postsByLang, L.code, null) }), 'utf8');
+    fs.writeFileSync(out, shell({ body: doc, labels, lang: L.code, assetPrefix, localPrefix: pagePrefix, switcher: languageSwitcher(assetPrefix, LANGS, postsByLang, L.code, null) }), 'utf8');
     sitemap.push({ loc: indexUrl, lastmod: today, priority: L.code === 'en' ? '0.8' : '0.7', alternates: LANGS.map(x => [x.code, pageUrl(SITE, x.code, '')]) });
 
     const feedItems = visible.slice(0, 20).map(p => `<item><title>${esc(p.meta.title)}</title><link>${pageUrl(SITE, L.code, p.meta.slug)}</link><guid>${pageUrl(SITE, L.code, p.meta.slug)}</guid><pubDate>${new Date(p.meta.publishDate + 'T08:00:00Z').toUTCString()}</pubDate><description>${esc(p.meta.summary)}</description></item>`).join('\n');
@@ -268,25 +297,68 @@ function buildBlog({ ROOT, SITE, LANGS }) {
 
   for (const p of duePosts) {
     const labels = LABELS[p.lang];
-    const L = LANGS.find(x => x.code === p.lang);
-    const prefix = relPrefix(p.lang, true);
+    const assetPrefix = relPrefix(p.lang, true);
+    const pagePrefix = localPrefix(true);
     const url = pageUrl(SITE, p.lang, p.meta.slug);
     const alternates = LANGS.map(x => {
       const peer = postsByLang.get(`${p.id}:${x.code}`);
       return `<link rel="alternate" hreflang="${x.code}" href="${pageUrl(SITE, x.code, peer.meta.slug)}">`;
     }).join('\n') + `\n<link rel="alternate" hreflang="x-default" href="${pageUrl(SITE, 'en', postsByLang.get(`${p.id}:en`).meta.slug)}">`;
+    const recs = parseRecommendations(p.body);
     const json = {
       '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: p.meta.title,
-      description: p.meta.summary,
-      datePublished: p.meta.publishDate,
-      dateModified: p.meta.publishDate,
-      inLanguage: p.lang,
-      image: `${SITE}/assets/og-card.jpg`,
-      author: { '@type': 'Organization', name: 'SwiftChannels' },
-      publisher: { '@type': 'Organization', name: 'SwiftChannels', logo: { '@type': 'ImageObject', url: `${SITE}/assets/logo-512.png` } },
-      mainEntityOfPage: url
+      '@graph': [
+        {
+          '@type': 'BlogPosting',
+          '@id': `${url}#blogposting`,
+          headline: p.meta.title,
+          description: p.meta.summary,
+          datePublished: p.meta.publishDate,
+          dateModified: p.meta.publishDate,
+          inLanguage: p.lang,
+          image: `${SITE}/assets/og-card.jpg`,
+          author: { '@type': 'Organization', name: 'SwiftChannels' },
+          publisher: { '@type': 'Organization', name: 'SwiftChannels', logo: { '@type': 'ImageObject', url: `${SITE}/assets/logo-512.png` } },
+          mainEntityOfPage: { '@id': `${url}#webpage` }
+        },
+        {
+          '@type': 'WebPage',
+          '@id': `${url}#webpage`,
+          url,
+          name: p.meta.title,
+          description: p.meta.summary,
+          inLanguage: p.lang,
+          breadcrumb: { '@id': `${url}#breadcrumb` }
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': `${url}#breadcrumb`,
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'SwiftChannels', item: `${SITE}/` },
+            { '@type': 'ListItem', position: 2, name: labels.blog, item: pageUrl(SITE, p.lang, '') },
+            { '@type': 'ListItem', position: 3, name: p.meta.title, item: url }
+          ]
+        },
+        {
+          '@type': 'ItemList',
+          '@id': `${url}#recommendations`,
+          name: p.meta.title,
+          itemListOrder: 'https://schema.org/ItemListOrderAscending',
+          numberOfItems: recs.length,
+          itemListElement: recs.map((r, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            url: r.imdb,
+            item: {
+              '@type': p.meta.family === 'series' ? 'TVSeries' : 'Movie',
+              name: r.title,
+              datePublished: r.year,
+              description: r.description,
+              sameAs: r.imdb
+            }
+          }))
+        }
+      ]
     };
     const variant = (Number(p.meta.number) % 4) + 1;
     const doc = `${head({ title: `${p.meta.title} | SwiftChannels`, description: p.meta.summary, url, image: `${SITE}/assets/og-card.jpg`, lang: p.lang, alternates, type: 'article' })}
@@ -295,15 +367,16 @@ function buildBlog({ ROOT, SITE, LANGS }) {
 <!--NAV-->
 <main class="article article-v${variant} wrap">
   <a class="crumb" href="../">${esc(labels.blog)}</a>
-  <header><div class="headline"><span class="chip">${esc(p.meta.familyLabel)}</span><h1>${esc(p.meta.title)}</h1><p>${esc(p.meta.summary)}</p><div class="meta">${labels.published}: ${p.meta.publishDate} · ${labels.imdb}: 7.0+ · 4 ${labels.minutes}</div></div>${posterDeck(p.meta, variant, posterMap, prefix)}</header>
-  <article class="content">${markdownToHtml(p.body, posterMap, prefix, p.meta.familyLabel)}</article>
-  <div class="watch-cta"><a class="btn cta-btn" href="${prefix}#plans">${esc(labels.cta)}</a></div>
+  <header><div class="headline"><span class="chip">${esc(p.meta.familyLabel)}</span><h1>${esc(p.meta.title)}</h1><p>${esc(p.meta.summary)}</p><div class="meta">${labels.published}: ${p.meta.publishDate} · ${labels.imdb}: 7.0+ · 4 ${labels.minutes}</div></div>${posterDeck(p.meta, variant, posterMap, assetPrefix)}</header>
+  <article class="content">${markdownToHtml(p.body, posterMap, assetPrefix, p.meta.familyLabel)}</article>
+  <div class="watch-cta"><a class="btn cta-btn" href="${pagePrefix}#plans">${esc(labels.cta)}</a></div>
+  ${relatedLinks(labels, pagePrefix)}
 </main>
-<footer><b>SwiftChannels</b><span>${esc(labels.footer)}</span><a href="${prefix}legal.html">Terms</a><a href="${prefix}blog/feed.xml">${esc(labels.rss)}</a></footer>
+<footer><b>SwiftChannels</b><span>${esc(labels.footer)}</span><a href="${pagePrefix}about.html">${esc(labels.about)}</a><a href="${pagePrefix}faq.html">${esc(labels.faq)}</a><a href="${pagePrefix}legal.html">${esc(labels.terms)}</a><a href="${pagePrefix}blog/feed.xml">${esc(labels.rss)}</a></footer>
 <script type="application/ld+json">${JSON.stringify(json, null, 2)}</script>`;
     const out = path.join(ROOT, langPath(p.lang, p.meta.slug));
     fs.mkdirSync(path.dirname(out), { recursive: true });
-    fs.writeFileSync(out, shell({ body: doc, labels, lang: p.lang, prefix, switcher: languageSwitcher(prefix, LANGS, postsByLang, p.lang, p.id) }), 'utf8');
+    fs.writeFileSync(out, shell({ body: doc, labels, lang: p.lang, assetPrefix, localPrefix: pagePrefix, switcher: languageSwitcher(assetPrefix, LANGS, postsByLang, p.lang, p.id) }), 'utf8');
     sitemap.push({ loc: url, lastmod: p.meta.publishDate, priority: '0.6', alternates: LANGS.map(x => [x.code, pageUrl(SITE, x.code, postsByLang.get(`${p.id}:${x.code}`).meta.slug)]) });
   }
 

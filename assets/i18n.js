@@ -445,6 +445,12 @@ fr: {
   'Subscriptions opened and supported by us, delivered on a licensed streaming platform.':
     'Abonnements ouverts et suivis par nos soins, livrés sur une plateforme de streaming sous licence.',
   'Pages': 'Pages',
+  'IPTV FAQ': 'FAQ IPTV',
+  'About SwiftChannels': 'À propos de SwiftChannels',
+  'IPTV for sports': 'IPTV pour le sport',
+  'IPTV for movies': 'IPTV pour films',
+  'Fire Stick IPTV': 'IPTV Fire Stick',
+  'Smart TV IPTV': 'IPTV Smart TV',
   'Terms & privacy': 'Conditions et confidentialité',
   'Talk to us': 'Nous contacter',
   'SUPPORT 09:00–23:00 GMT+1': 'SUPPORT 09:00–23:00 GMT+1',
@@ -918,6 +924,12 @@ de: {
   'Subscriptions opened and supported by us, delivered on a licensed streaming platform.':
     'Abos werden von uns eröffnet und betreut, ausgeliefert über eine lizenzierte Streaming-Plattform.',
   'Pages': 'Seiten',
+  'IPTV FAQ': 'IPTV FAQ',
+  'About SwiftChannels': 'Über SwiftChannels',
+  'IPTV for sports': 'IPTV für Sport',
+  'IPTV for movies': 'IPTV für Filme',
+  'Fire Stick IPTV': 'IPTV für Fire Stick',
+  'Smart TV IPTV': 'IPTV für Smart TV',
   'Terms & privacy': 'AGB & Datenschutz',
   'Talk to us': 'Kontakt',
   'SUPPORT 09:00–23:00 GMT+1': 'SUPPORT 09:00–23:00 GMT+1',
@@ -1399,6 +1411,12 @@ es: {
   'Subscriptions opened and supported by us, delivered on a licensed streaming platform.':
     'Suscripciones activadas y atendidas por nosotros, servidas en una plataforma de streaming con licencia.',
   'Pages': 'Páginas',
+  'IPTV FAQ': 'FAQ IPTV',
+  'About SwiftChannels': 'Sobre SwiftChannels',
+  'IPTV for sports': 'IPTV para deportes',
+  'IPTV for movies': 'IPTV para películas',
+  'Fire Stick IPTV': 'IPTV para Fire Stick',
+  'Smart TV IPTV': 'IPTV para Smart TV',
   'Terms & privacy': 'Términos y privacidad',
   'Talk to us': 'Habla con nosotros',
   'SUPPORT 09:00–23:00 GMT+1': 'SOPORTE 09:00–23:00 GMT+1',
@@ -2033,6 +2051,18 @@ it: {
     "Abbonamenti attivati e assistiti da noi, erogati su una piattaforma di streaming con licenza.",
   "Pages":
     "Pagine",
+  "IPTV FAQ":
+    "FAQ IPTV",
+  "About SwiftChannels":
+    "Chi siamo: SwiftChannels",
+  "IPTV for sports":
+    "IPTV per sport",
+  "IPTV for movies":
+    "IPTV per film",
+  "Fire Stick IPTV":
+    "IPTV per Fire Stick",
+  "Smart TV IPTV":
+    "IPTV per Smart TV",
   "Terms & privacy":
     "Condizioni e privacy",
   "Talk to us":
@@ -2516,6 +2546,12 @@ nl: {
   'Subscriptions opened and supported by us, delivered on a licensed streaming platform.':
     'Abonnementen die door ons worden geopend en ondersteund, geleverd via een gelicentieerd streamingplatform.',
   'Pages': 'Pagina\'s',
+  'IPTV FAQ': 'IPTV FAQ',
+  'About SwiftChannels': 'Over SwiftChannels',
+  'IPTV for sports': 'IPTV voor sport',
+  'IPTV for movies': 'IPTV voor films',
+  'Fire Stick IPTV': 'IPTV voor Fire Stick',
+  'Smart TV IPTV': 'IPTV voor Smart TV',
   'Terms & privacy': 'Voorwaarden & privacy',
   'Talk to us': 'Neem contact op',
   'SUPPORT 09:00–23:00 GMT+1': 'SUPPORT 09:00–23:00 GMT+1',
