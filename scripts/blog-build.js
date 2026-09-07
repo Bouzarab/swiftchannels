@@ -192,10 +192,13 @@ if(cur&&box){cur.addEventListener('click',()=>{const open=box.classList.toggle('
 `;
 }
 
-function articleArt(meta, prefix = '', posterMap = {}) {
+function articleArt(meta, prefix = '', posterMap = {}, href = '') {
   const title = String(meta.picks || '').split('|').filter(Boolean)[0];
   const poster = title ? posterFor(title, posterMap, prefix) : '';
-  return `<div class="art art-${meta.family}">${poster ? `<img src="${attr(poster)}" alt="${attr(title)} poster" loading="lazy" decoding="async">` : ''}<span>${esc(meta.family)}</span><strong>${esc(meta.number)}</strong></div>`;
+  const inner = `${poster ? `<img src="${attr(poster)}" alt="${attr(title)} poster" loading="lazy" decoding="async">` : ''}<span>${esc(meta.family)}</span><strong>${esc(meta.number)}</strong>`;
+  return href
+    ? `<a class="art art-${meta.family}" href="${attr(href)}" aria-label="${attr(meta.title)}">${inner}</a>`
+    : `<div class="art art-${meta.family}">${inner}</div>`;
 }
 
 function posterDeck(meta, variant, posterMap, prefix) {
@@ -242,7 +245,7 @@ function buildBlog({ ROOT, SITE, LANGS }) {
     const indexUrl = pageUrl(SITE, L.code, '');
     const alternates = LANGS.map(x => `<link rel="alternate" hreflang="${x.code}" href="${pageUrl(SITE, x.code, '')}">`).join('\n') + `\n<link rel="alternate" hreflang="x-default" href="${pageUrl(SITE, 'en', '')}">`;
     const cards = visible.map(p => `<article class="post-card">
-      ${articleArt(p.meta, prefix, posterMap)}
+      ${articleArt(p.meta, prefix, posterMap, `${p.meta.slug}/`)}
       <div><span class="chip">${esc(p.meta.familyLabel)}</span><h2><a href="${p.meta.slug}/">${esc(p.meta.title)}</a></h2><p>${esc(p.meta.summary)}</p><small>${labels.published}: ${p.meta.publishDate} · IMDb 7.0+</small><a class="read" href="${p.meta.slug}/">${labels.read}</a></div>
     </article>`).join('\n');
     const doc = `${head({ title: `SwiftChannels ${labels.blog}`, description: labels.intro, url: indexUrl, image: `${SITE}/assets/og-card.jpg`, lang: L.code, alternates, rss: `${pageUrl(SITE, L.code, '')}feed.xml` })}
