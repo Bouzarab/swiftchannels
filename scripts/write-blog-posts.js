@@ -5,66 +5,187 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const START = '2026-09-07';
 const LANGS = ['en', 'fr', 'es', 'de', 'it', 'nl'];
+const NOTES = JSON.parse(fs.readFileSync(path.join(ROOT, 'assets/blog/title-notes.json'), 'utf8'));
 
 const T = {
   en: {
     Films:'Films', Series:'Series', liked:'If you liked',
-    intro:t=>`This SwiftChannels guide keeps the list practical: ${t.toLowerCase()}, all released in 2025 or earlier and all sitting at IMDb 7.0/10 or higher.`,
+    intro:t=>`This **SwiftChannels** guide keeps the list practical: ${t.toLowerCase()}, all released in 2025 or earlier and all sitting at IMDb 7.0/10 or higher.`,
     aim:'The aim is not to list everything; it is to give you a reliable queue with famous, well-rated titles.',
-    note:title=>`${title} keeps its reputation because the direction, pacing and performances still feel sharp instead of dated.`,
     list:'The shortlist',
-    close:'You can use this as a simple evening queue. Many titles like these appear in the film and series libraries offered with SwiftChannels, so do not hesitate to watch them through your SwiftChannels line after your free test.',
-    item:(x,topic)=>`${x.note} It is an easy fit for ${topic.toLowerCase()}.`,
+    close:'You can use this as a simple evening queue. Many titles like these appear in the film and series libraries offered with **SwiftChannels**, so do not hesitate to watch them through your **SwiftChannels IPTV** line after your free test.',
+    angles:[
+      'The useful viewer signal is the execution: performances, pacing and visual choices make the premise easy to understand before you decide whether to commit the evening.',
+      'Its appeal is not just the genre label; the scenes build with enough clarity and personality that you can feel why people keep recommending it.',
+      'This is the kind of pick that helps a mixed group decide quickly because the hook is readable, the tone is specific and the craft does not feel anonymous.',
+      'What matters here is how the story moves: the stakes stay visible, the characters have a clean dramatic function and the best moments pay off what came before.',
+      'Use it when you want more than background viewing. It rewards attention through atmosphere, structure and performances rather than leaning only on the headline idea.'
+    ],
+    fit:(topic, idx)=>[
+      `For a "${topic}" list, it gives the category a distinct angle instead of simply repeating familiar genre beats.`,
+      'It is especially useful when you want a recommendation that feels familiar enough to trust but specific enough to remember afterward.',
+      'Use it as the accessible entry in the set: the premise is easy to sell, while the filmmaking gives the choice more weight.',
+      'It belongs here because the entertainment value is clear, but the texture around it gives viewers something to talk about after the credits.',
+      'It rounds out the queue by covering a different mood, so the list does not collapse into five versions of the same evening.'
+    ][idx % 5],
+    caveats:[
+      'Skip it tonight only if you need something completely light, very short or deliberately low-stakes.',
+      'Choose another title if your mood is for comfort viewing with no tension or moral pressure.',
+      'It may not be the first choice for distracted viewing, but it works very well when you want a film or series to hold the room.',
+      'If you want pure noise in the background, save it for later; it plays better when the details can land.',
+      'The rating is helpful, but the better test is mood: pick it when this exact tone sounds inviting.'
+    ],
+    item:(x, topic, idx)=>`${x.note} ${T.en.angles[idx % T.en.angles.length]} ${T.en.fit(topic, idx)} ${T.en.caveats[idx % T.en.caveats.length]}`,
     summary:t=>`${t}, selected with IMDb ratings of 7.0/10 or higher.`
   },
   fr: {
     Films:'Films', Series:'Séries', liked:'Si vous avez aimé',
-    intro:t=>`Ce guide SwiftChannels reste pratique : ${t.toLowerCase()}, tous sortis en 2025 ou avant, avec une note IMDb de 7,0/10 ou plus.`,
+    intro:t=>`Ce guide **SwiftChannels** reste pratique : ${t.toLowerCase()}, tous sortis en 2025 ou avant, avec une note IMDb de 7,0/10 ou plus.`,
     aim:"Le but n'est pas de tout lister, mais de donner une file d'attente fiable avec des titres connus et bien notés.",
-    note:title=>`${title} garde sa réputation grâce à une mise en scène, un rythme et des performances qui restent précis plutôt que datés.`,
     list:'La sélection',
-    close:"Gardez cette liste comme file d'attente pour le soir. Beaucoup de titres de ce genre figurent dans les bibliothèques films et séries proposées avec SwiftChannels ; n'hésitez pas à les regarder via votre ligne SwiftChannels après le test gratuit.",
-    item:(x,topic)=>`${x.noteFr || x.note} Il convient bien à « ${topic.toLowerCase()} ».`,
+    close:"Gardez cette liste comme file d'attente pour le soir. Beaucoup de titres de ce genre figurent dans les bibliothèques films et séries proposées avec **SwiftChannels** ; n'hésitez pas à les regarder via votre ligne **SwiftChannels IPTV** après le test gratuit.",
+    angles:[
+      "Le vrai signal pour le spectateur est l'exécution : jeu, rythme et choix visuels rendent la proposition lisible avant même de décider d'y consacrer la soirée.",
+      "Son intérêt ne vient pas seulement de l'étiquette de genre ; les scènes avancent avec assez de précision et de personnalité pour expliquer les recommandations persistantes.",
+      "C'est un choix utile pour un groupe partagé, car l'accroche se comprend vite, le ton est net et la mise en scène ne paraît pas interchangeable.",
+      "Ce qui compte ici, c'est la manière dont le récit avance : enjeux visibles, personnages bien placés et moments forts préparés plutôt que plaqués.",
+      "À choisir quand vous voulez plus qu'un fond sonore. Le titre récompense l'attention par son atmosphère, sa structure et ses interprétations."
+    ],
+    fit:(topic, idx)=>[
+      `Dans une liste "${topic}", il donne une couleur précise à la catégorie au lieu d'empiler des réflexes connus.`,
+      "Il est utile quand vous voulez une recommandation assez familière pour rassurer, mais assez précise pour rester en tête après le visionnage.",
+      "Servez-vous-en comme entrée accessible : l'idée se vend vite, tandis que la mise en scène donne plus de poids au choix.",
+      "Il appartient ici parce que le plaisir de visionnage est évident, mais les détails donnent aussi matière à discussion après le générique.",
+      "Il complète la file en apportant une humeur différente, afin que la liste ne devienne pas cinq variantes de la même soirée."
+    ][idx % 5],
+    caveats:[
+      "Gardez-le pour plus tard seulement si vous cherchez quelque chose de très léger, très court ou sans tension.",
+      "Choisissez un autre titre si l'envie du soir est un pur confort sans pression morale ni suspense.",
+      "Ce n'est pas le meilleur choix en visionnage distrait, mais il fonctionne très bien quand vous voulez qu'un film ou une série capte la pièce.",
+      "Si vous voulez seulement un bruit de fond, mieux vaut le garder ; il gagne quand les détails peuvent compter.",
+      "La note aide, mais le meilleur test reste l'humeur : lancez-le quand ce ton précis vous attire."
+    ],
+    item:(x, topic, idx)=>`${x.note} ${T.fr.angles[idx % T.fr.angles.length]} ${T.fr.fit(topic, idx)} ${T.fr.caveats[idx % T.fr.caveats.length]}`,
     summary:t=>`${t}, sélectionnés avec des notes IMDb de 7,0/10 ou plus.`
   },
   es: {
     Films:'Películas', Series:'Series', liked:'Si te gustó',
-    intro:t=>`Esta guía de SwiftChannels va al grano: ${t.toLowerCase()}, todo estrenado en 2025 o antes y con una puntuación IMDb de 7,0/10 o más.`,
+    intro:t=>`Esta guía de **SwiftChannels** va al grano: ${t.toLowerCase()}, todo estrenado en 2025 o antes y con una puntuación IMDb de 7,0/10 o más.`,
     aim:'La idea no es enumerarlo todo, sino darte una cola fiable con títulos famosos y bien valorados.',
-    note:title=>`${title} conserva su reputación porque la dirección, el ritmo y las actuaciones siguen sintiéndose frescos en vez de anticuados.`,
     list:'La selección',
-    close:'Úsala como una cola sencilla para la noche. Muchos títulos de este estilo aparecen en las bibliotecas de películas y series ofrecidas con SwiftChannels, así que no dudes en verlos con tu línea SwiftChannels después de la prueba gratis.',
-    item:(x,topic)=>`${x.noteEs || x.note} Encaja muy bien con « ${topic.toLowerCase()} ».`,
+    close:'Úsala como una cola sencilla para la noche. Muchos títulos de este estilo aparecen en las bibliotecas de películas y series ofrecidas con **SwiftChannels**, así que no dudes en verlos con tu línea **SwiftChannels IPTV** después de la prueba gratis.',
+    angles:[
+      'La señal útil para el espectador está en la ejecución: interpretaciones, ritmo y decisiones visuales hacen que la propuesta se entienda antes de comprometer la noche.',
+      'Su atractivo no depende solo de la etiqueta de género; las escenas avanzan con claridad y personalidad suficiente para entender por qué se recomienda tanto.',
+      'Funciona bien para decidir en grupo porque el gancho se lee rápido, el tono es concreto y el acabado no parece una opción genérica más.',
+      'Lo importante es cómo se mueve la historia: los riesgos se ven, los personajes tienen una función dramática clara y los mejores momentos están preparados.',
+      'Elígela cuando quieras algo más que compañía de fondo. Recompensa la atención con atmósfera, estructura e interpretaciones, no solo con la idea principal.'
+    ],
+    fit:(topic, idx)=>[
+      `Dentro de una lista como "${topic}", aporta un ángulo reconocible a la categoría en vez de repetir fórmulas conocidas.`,
+      'Sirve cuando quieres una recomendación lo bastante familiar para confiar, pero lo bastante concreta para recordarla después.',
+      'Funciona como entrada accesible del grupo: la premisa se explica rápido y la realización le da más peso a la elección.',
+      'Está aquí porque el valor de entretenimiento se nota enseguida, pero los detalles dejan conversación después de los créditos.',
+      'Completa la cola con un estado de ánimo distinto, para que la lista no parezca cinco versiones de la misma noche.'
+    ][idx % 5],
+    caveats:[
+      'Déjala para otro día solo si buscas algo totalmente ligero, muy breve o sin tensión.',
+      'Elige otro título si hoy quieres puro confort sin suspense ni presión moral.',
+      'No es la primera opción para verla distraído, pero funciona muy bien cuando quieres que una película o serie sostenga la sala.',
+      'Si solo necesitas ruido de fondo, guárdala para después; mejora cuando los detalles pueden pesar.',
+      'La nota ayuda, pero la prueba real es el ánimo: ponla cuando este tono concreto te apetezca.'
+    ],
+    item:(x, topic, idx)=>`${x.note} ${T.es.angles[idx % T.es.angles.length]} ${T.es.fit(topic, idx)} ${T.es.caveats[idx % T.es.caveats.length]}`,
     summary:t=>`${t}, seleccionadas con puntuaciones IMDb de 7,0/10 o más.`
   },
   de: {
     Films:'Filme', Series:'Serien', liked:'Wenn dir das gefallen hat',
-    intro:t=>`Dieser SwiftChannels-Guide bleibt praktisch: ${t.toLowerCase()}, alle 2025 oder früher erschienen und alle mit IMDb 7,0/10 oder höher.`,
+    intro:t=>`Dieser **SwiftChannels**-Guide bleibt praktisch: ${t.toLowerCase()}, alle 2025 oder früher erschienen und alle mit IMDb 7,0/10 oder höher.`,
     aim:'Ziel ist nicht, alles aufzuzählen, sondern eine verlässliche Warteschlange mit bekannten, stark bewerteten Titeln zu geben.',
-    note:title=>`${title} behält seinen Ruf, weil Regie, Tempo und Leistungen immer noch präzise wirken statt veraltet.`,
     list:'Die Auswahl',
-    close:'Nutze die Liste als einfache Abend-Warteschlange. Viele Titel dieser Art findest du in den Film- und Serienbibliotheken, die mit SwiftChannels angeboten werden. Schau sie gern über deine SwiftChannels-Leitung nach dem Gratistest.',
-    item:(x,topic)=>`${x.noteDe || x.note} Er passt gut zu „${topic.toLowerCase()}“.`,
+    close:'Nutze die Liste als einfache Abend-Warteschlange. Viele Titel dieser Art findest du in den Film- und Serienbibliotheken, die mit **SwiftChannels** angeboten werden. Schau sie gern über deine **SwiftChannels IPTV**-Leitung nach dem Gratistest.',
+    angles:[
+      'Das hilfreiche Zuschauersignal liegt in der Ausführung: Spiel, Tempo und visuelle Entscheidungen machen den Ansatz verständlich, bevor man den Abend investiert.',
+      'Der Reiz besteht nicht nur im Genre-Etikett; die Szenen entwickeln genug Klarheit und Persönlichkeit, um die häufigen Empfehlungen nachvollziehbar zu machen.',
+      'Das ist ein guter Gruppenvorschlag, weil der Haken schnell lesbar ist, der Ton klar bleibt und die Inszenierung nicht beliebig wirkt.',
+      'Entscheidend ist, wie die Geschichte vorankommt: sichtbare Einsätze, klare Figurenfunktionen und starke Momente, die vorbereitet statt nur behauptet werden.',
+      'Wähle es, wenn du mehr als Hintergrundunterhaltung willst. Atmosphäre, Struktur und Darstellerleistungen belohnen Aufmerksamkeit stärker als nur die Grundidee.'
+    ],
+    fit:(topic, idx)=>[
+      `In einer Liste wie "${topic}" gibt der Titel der Kategorie eine eigene Farbe statt nur bekannte Muster zu wiederholen.`,
+      'Er ist nützlich, wenn eine Empfehlung vertraut genug wirken soll, aber trotzdem nach dem Schauen hängen bleibt.',
+      'Nutze ihn als zugänglichen Einstieg im Set: Die Prämisse ist schnell vermittelbar, die Umsetzung gibt der Wahl zusätzliches Gewicht.',
+      'Er gehört hierher, weil der Unterhaltungswert klar ist und die Details danach noch Gesprächsstoff liefern.',
+      'Er ergänzt die Warteschlange mit einer anderen Stimmung, damit die Liste nicht wie fünf Varianten desselben Abends wirkt.'
+    ][idx % 5],
+    caveats:[
+      'Heb ihn nur auf, wenn du heute etwas völlig Leichtes, sehr Kurzes oder bewusst Spannungsarmes brauchst.',
+      'Nimm einen anderen Titel, wenn du reines Wohlfühlsehen ohne Druck, Spannung oder moralische Reibung suchst.',
+      'Für nebenbei ist er weniger ideal, aber er funktioniert stark, wenn Film oder Serie den Raum wirklich halten soll.',
+      'Wenn du nur Hintergrundrauschen brauchst, spare ihn dir lieber auf; er wirkt besser, wenn Details ankommen dürfen.',
+      'Die Bewertung hilft, aber der bessere Test ist die Stimmung: einschalten, wenn genau dieser Ton reizvoll klingt.'
+    ],
+    item:(x, topic, idx)=>`${x.note} ${T.de.angles[idx % T.de.angles.length]} ${T.de.fit(topic, idx)} ${T.de.caveats[idx % T.de.caveats.length]}`,
     summary:t=>`${t}, ausgewählt mit IMDb-Bewertungen ab 7,0/10.`
   },
   it: {
     Films:'Film', Series:'Serie', liked:'Se ti è piaciuto',
-    intro:t=>`Questa guida SwiftChannels resta pratica: ${t.toLowerCase()}, tutti usciti nel 2025 o prima e tutti con voto IMDb pari o superiore a 7,0/10.`,
+    intro:t=>`Questa guida **SwiftChannels** resta pratica: ${t.toLowerCase()}, tutti usciti nel 2025 o prima e tutti con voto IMDb pari o superiore a 7,0/10.`,
     aim:'Lo scopo non è elencare tutto, ma darti una coda affidabile con titoli famosi e ben valutati.',
-    note:title=>`${title} mantiene la sua reputazione perché regia, ritmo e interpretazioni risultano ancora solidi invece che datati.`,
     list:'La selezione',
-    close:'Usala come una coda semplice per la serata. Molti titoli di questo tipo compaiono nelle librerie di film e serie offerte con SwiftChannels, quindi non esitare a guardarli tramite la tua linea SwiftChannels dopo la prova gratuita.',
-    item:(x,topic)=>`${x.noteIt || x.note} Funziona bene per « ${topic.toLowerCase()} ».`,
+    close:'Usala come una coda semplice per la serata. Molti titoli di questo tipo compaiono nelle librerie di film e serie offerte con **SwiftChannels**, quindi non esitare a guardarli tramite la tua linea **SwiftChannels IPTV** dopo la prova gratuita.',
+    angles:[
+      "Il segnale utile per chi guarda è l'esecuzione: interpretazioni, ritmo e scelte visive rendono chiara la proposta prima di dedicarle la serata.",
+      "Il suo fascino non dipende solo dall'etichetta di genere; le scene hanno abbastanza chiarezza e personalità da spiegare perché continua a essere consigliato.",
+      "È una scelta pratica per decidere in gruppo, perché l'aggancio si capisce subito, il tono è riconoscibile e la fattura non sembra anonima.",
+      "Conta soprattutto il modo in cui la storia procede: posta in gioco visibile, personaggi con funzione chiara e momenti forti preparati con cura.",
+      "Sceglilo quando vuoi più di un sottofondo. Ripaga l'attenzione con atmosfera, struttura e interpretazioni, non solo con l'idea di partenza."
+    ],
+    fit:(topic, idx)=>[
+      `In una lista come "${topic}", dà alla categoria un taglio preciso invece di ripetere formule già note.`,
+      'È utile quando vuoi un consiglio abbastanza familiare da ispirare fiducia, ma abbastanza specifico da restare in mente.',
+      "Funziona come porta d'ingresso accessibile del gruppo: la premessa si spiega subito e la regia dà più peso alla scelta.",
+      "Sta qui perché il valore d'intrattenimento è chiaro, ma i dettagli lasciano qualcosa di cui parlare dopo i titoli.",
+      'Completa la coda con un umore diverso, così la lista non diventa cinque versioni della stessa serata.'
+    ][idx % 5],
+    caveats:[
+      'Rimandalo solo se stasera cerchi qualcosa di completamente leggero, molto breve o senza tensione.',
+      'Scegli un altro titolo se vuoi puro comfort senza suspense, pressione morale o attrito emotivo.',
+      'Non è la prima opzione per una visione distratta, ma funziona benissimo quando vuoi che film o serie tengano la stanza.',
+      'Se ti serve solo rumore di fondo, meglio conservarlo; rende di più quando i dettagli possono arrivare.',
+      "Il voto aiuta, ma il test migliore è l'umore: guardalo quando questo tono preciso ti attira."
+    ],
+    item:(x, topic, idx)=>`${x.note} ${T.it.angles[idx % T.it.angles.length]} ${T.it.fit(topic, idx)} ${T.it.caveats[idx % T.it.caveats.length]}`,
     summary:t=>`${t}, scelti con voti IMDb da 7,0/10 in su.`
   },
   nl: {
     Films:'Films', Series:'Series', liked:'Als je dit goed vond',
-    intro:t=>`Deze SwiftChannels-gids blijft praktisch: ${t.toLowerCase()}, allemaal uitgebracht in 2025 of eerder en allemaal met IMDb 7,0/10 of hoger.`,
+    intro:t=>`Deze **SwiftChannels**-gids blijft praktisch: ${t.toLowerCase()}, allemaal uitgebracht in 2025 of eerder en allemaal met IMDb 7,0/10 of hoger.`,
     aim:'Het doel is niet alles op te sommen, maar je een betrouwbare kijklijst te geven met bekende, sterk beoordeelde titels.',
-    note:title=>`${title} behoudt zijn reputatie omdat regie, tempo en acteerwerk nog steeds scherp voelen in plaats van gedateerd.`,
     list:'De selectie',
-    close:'Gebruik dit als eenvoudige kijklijst voor de avond. Veel van dit soort titels staan in de film- en seriebibliotheken die met SwiftChannels worden aangeboden, dus kijk ze gerust via je SwiftChannels-lijn na je gratis test.',
-    item:(x,topic)=>`${x.noteNl || x.note} Hij past goed bij „${topic.toLowerCase()}“.`,
+    close:'Gebruik dit als eenvoudige kijklijst voor de avond. Veel van dit soort titels staan in de film- en seriebibliotheken die met **SwiftChannels** worden aangeboden, dus kijk ze gerust via je **SwiftChannels IPTV**-lijn na je gratis test.',
+    angles:[
+      'Het nuttige kijkerssignaal zit in de uitvoering: spel, tempo en visuele keuzes maken duidelijk wat je krijgt voordat je de avond eraan geeft.',
+      'De aantrekkingskracht komt niet alleen van het genrelabel; de scènes hebben genoeg helderheid en persoonlijkheid om de blijvende aanbevelingen te verklaren.',
+      'Dit is handig voor een groep die snel wil kiezen, omdat de haak meteen leesbaar is, de toon scherp staat en de afwerking niet anoniem voelt.',
+      'Belangrijk is hoe het verhaal beweegt: zichtbare inzet, personages met een duidelijke functie en sterke momenten die netjes worden opgebouwd.',
+      'Kies dit wanneer je meer wilt dan achtergrondkijken. Sfeer, structuur en acteerwerk belonen aandacht sterker dan alleen het uitgangsidee.'
+    ],
+    fit:(topic, idx)=>[
+      `Binnen een lijst als "${topic}" geeft deze titel de categorie een eigen invalshoek in plaats van bekende patronen te herhalen.`,
+      'Hij is nuttig wanneer je een aanbeveling wilt die vertrouwd genoeg voelt, maar specifiek genoeg blijft hangen na het kijken.',
+      'Gebruik hem als toegankelijke ingang in de set: de premisse is snel uit te leggen en de uitvoering geeft de keuze meer gewicht.',
+      'Hij hoort hier omdat de amusementswaarde duidelijk is, terwijl de details na afloop nog gesprek opleveren.',
+      'Hij rondt de kijklijst af met een andere stemming, zodat de selectie niet voelt als vijf versies van dezelfde avond.'
+    ][idx % 5],
+    caveats:[
+      'Bewaar hem alleen voor later als je nu iets volledig lichts, heel korts of bewust spanningsloos zoekt.',
+      'Kies iets anders als je stemming puur comfort vraagt zonder spanning, morele druk of emotionele wrijving.',
+      'Voor afgeleid kijken is dit minder geschikt, maar het werkt sterk wanneer een film of serie de kamer echt mag vasthouden.',
+      'Als je alleen achtergrondgeluid nodig hebt, bewaar hem dan; hij werkt beter wanneer details mogen landen.',
+      'De score helpt, maar de betere test is je stemming: zet hem op wanneer precies deze toon aantrekkelijk klinkt.'
+    ],
+    item:(x, topic, idx)=>`${x.note} ${T.nl.angles[idx % T.nl.angles.length]} ${T.nl.fit(topic, idx)} ${T.nl.caveats[idx % T.nl.caveats.length]}`,
     summary:t=>`${t}, gekozen met IMDb-scores van 7,0/10 of hoger.`
   }
 };
@@ -139,8 +260,9 @@ for (let i = 0; i < topics.length; i++) {
     const familyLabel = family === 'films' ? tr.Films : family === 'series' ? tr.Series : tr.liked;
     const items = titles.map((name, idx) => {
       const [year, rating, imdbId] = imdb[name];
-      const x = { rating, note: tr.note(name) };
-      return `${idx + 1}. **${name}** (${year}) - ${tr.item(x, title)} [IMDb ${rating}/10](https://www.imdb.com/title/${imdbId}/)`;
+      const note = NOTES[name]?.[lang] || NOTES[name]?.en;
+      const x = { rating, note };
+      return `${idx + 1}. **${name}** (${year}) - ${tr.item(x, title, idx)} [IMDb ${rating}/10](https://www.imdb.com/title/${imdbId}/)`;
     }).join('\n');
     const body = `${tr.intro(title)} ${tr.aim}\n\n## ${tr.list}\n\n${items}\n\n${tr.close}\n`;
     const meta = {
@@ -153,7 +275,7 @@ for (let i = 0; i < topics.length; i++) {
       familyLabel,
       summary: tr.summary(title),
       picks: titles.join('|'),
-      source: 'IMDb public datasets, ratings checked 2026-09-06'
+      source: 'IMDb public datasets and public synopsis/reception references, checked 2026-09-07'
     };
     fs.writeFileSync(path.join(dir, `${lang}.md`), front(meta) + body, 'utf8');
   }

@@ -8,7 +8,7 @@ const LABELS = {
     upcoming: 'No articles are published yet.', read: 'Read article',
     published: 'Published', imdb: 'IMDb rating', minutes: 'min read',
     footer: 'Free 24-hour test, 8,000+ live channels, and a large film and series library.',
-    rss: 'RSS feed'
+    rss: 'RSS feed', cta: 'Watch it via SwiftChannels IPTV'
   },
   fr: {
     blog: 'Blog', home: 'Accueil', channels: 'Chaînes', setup: 'Installation', order: 'Commander',
@@ -16,7 +16,7 @@ const LABELS = {
     upcoming: 'Aucun article publié pour le moment.', read: "Lire l'article",
     published: 'Publié', imdb: 'Note IMDb', minutes: 'min de lecture',
     footer: 'Test gratuit de 24 heures, 8 000+ chaînes en direct et une grande bibliothèque films et séries.',
-    rss: 'Flux RSS'
+    rss: 'Flux RSS', cta: 'Le regarder via SwiftChannels IPTV'
   },
   es: {
     blog: 'Blog', home: 'Inicio', channels: 'Canales', setup: 'Instalación', order: 'Pedir ahora',
@@ -24,7 +24,7 @@ const LABELS = {
     upcoming: 'Todavía no hay artículos publicados.', read: 'Leer artículo',
     published: 'Publicado', imdb: 'Puntuación IMDb', minutes: 'min de lectura',
     footer: 'Prueba gratis de 24 horas, más de 8.000 canales en vivo y una gran biblioteca de películas y series.',
-    rss: 'RSS'
+    rss: 'RSS', cta: 'Verlo vía SwiftChannels IPTV'
   },
   de: {
     blog: 'Blog', home: 'Start', channels: 'Sender', setup: 'Einrichtung', order: 'Jetzt bestellen',
@@ -32,7 +32,7 @@ const LABELS = {
     upcoming: 'Noch keine Artikel veröffentlicht.', read: 'Artikel lesen',
     published: 'Veröffentlicht', imdb: 'IMDb-Bewertung', minutes: 'Min. Lesezeit',
     footer: 'Kostenloser 24-Stunden-Test, 8.000+ Live-Sender und eine große Film- und Serienbibliothek.',
-    rss: 'RSS-Feed'
+    rss: 'RSS-Feed', cta: 'Über SwiftChannels IPTV ansehen'
   },
   it: {
     blog: 'Blog', home: 'Home', channels: 'Canali', setup: 'Configurazione', order: 'Ordina ora',
@@ -40,7 +40,7 @@ const LABELS = {
     upcoming: 'Nessun articolo pubblicato per ora.', read: "Leggi l'articolo",
     published: 'Pubblicato', imdb: 'Valutazione IMDb', minutes: 'min di lettura',
     footer: 'Prova gratuita di 24 ore, oltre 8.000 canali live e una grande libreria di film e serie.',
-    rss: 'Feed RSS'
+    rss: 'Feed RSS', cta: 'Guardalo via SwiftChannels IPTV'
   },
   nl: {
     blog: 'Blog', home: 'Home', channels: 'Kanalen', setup: 'Installatie', order: 'Bestel nu',
@@ -48,7 +48,7 @@ const LABELS = {
     upcoming: 'Nog geen artikelen gepubliceerd.', read: 'Lees artikel',
     published: 'Gepubliceerd', imdb: 'IMDb-score', minutes: 'min leestijd',
     footer: 'Gratis 24 uur testen, 8.000+ livekanalen en een grote film- en seriebibliotheek.',
-    rss: 'RSS-feed'
+    rss: 'RSS-feed', cta: 'Kijk via SwiftChannels IPTV'
   }
 };
 
@@ -294,6 +294,7 @@ function buildBlog({ ROOT, SITE, LANGS }) {
   <a class="crumb" href="../">${esc(labels.blog)}</a>
   <header><div class="headline"><span class="chip">${esc(p.meta.familyLabel)}</span><h1>${esc(p.meta.title)}</h1><p>${esc(p.meta.summary)}</p><div class="meta">${labels.published}: ${p.meta.publishDate} · ${labels.imdb}: 7.0+ · 4 ${labels.minutes}</div></div>${posterDeck(p.meta, variant, posterMap, prefix)}</header>
   <article class="content">${markdownToHtml(p.body, posterMap, prefix, p.meta.familyLabel)}</article>
+  <div class="watch-cta"><a class="btn cta-btn" href="${prefix}#plans">${esc(labels.cta)}</a></div>
 </main>
 <footer><b>SwiftChannels</b><span>${esc(labels.footer)}</span><a href="${prefix}legal.html">Terms</a><a href="${prefix}blog/feed.xml">${esc(labels.rss)}</a></footer>
 <script type="application/ld+json">${JSON.stringify(json, null, 2)}</script>`;
