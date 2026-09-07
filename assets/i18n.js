@@ -67,8 +67,8 @@ fr: {
     'Une grille d’affiches de films et de séries',
   'A curved wall of television screens showing many different channels at once':
     'Un mur incurvé d’écrans de télévision diffusant de nombreuses chaînes à la fois',
-  '__meta_title': 'Abonnement IPTV 12 mois — 8 000+ chaînes | SwiftChannels',
-  '__meta_desc': 'Abonnement IPTV mensuel ou 12 mois : plus de 8 000 chaînes et 50 000 films. Compatible IPTV Smarters, TiviMate et Smart IPTV sur Firestick, TV Samsung et LG. Test gratuit 24 h.',
+  '__meta_title': "Abonnement IPTV — Test gratuit 24 h | SwiftChannels",
+  '__meta_desc': "8 000+ chaînes et 50 000 films dès 5 € par mois. Testez tout gratuitement pendant 24 h, sans carte bancaire. Firestick, TV Samsung et LG, mobile.",
 
   /* ── ask panel ── */
   'Quick answers':
@@ -551,8 +551,8 @@ de: {
     'Ein Raster aus Film- und Serienpostern',
   'A curved wall of television screens showing many different channels at once':
     'Eine gebogene Wand aus Fernsehbildschirmen mit vielen Sendern gleichzeitig',
-  '__meta_title': 'IPTV Abo & Anbieter — 8.000+ Sender | SwiftChannels',
-  '__meta_desc': 'IPTV Abo monatlich oder jährlich: über 8.000 Sender und 50.000 Filme. Läuft mit IPTV Smarters, TiviMate und Smart IPTV auf Fire TV Stick, Smart TV und Handy. Kostenloser 24-Stunden-Test.',
+  '__meta_title': "IPTV Abo — 24 Stunden kostenlos testen | SwiftChannels",
+  '__meta_desc': "Über 8.000 Sender und 50.000 Filme ab 5 € im Monat. Alles 24 Stunden kostenlos testen, ohne Karte. Für Fire TV Stick, Samsung und LG Smart TV.",
 
   /* ── ask panel ── */
   'Quick answers':
@@ -1021,8 +1021,8 @@ es: {
     'Una cuadrícula de carteles de películas y series',
   'A curved wall of television screens showing many different channels at once':
     'Un muro curvo de pantallas de televisión mostrando muchos canales a la vez',
-  '__meta_title': 'Suscripción IPTV — más de 8.000 canales | SwiftChannels',
-  '__meta_desc': 'Suscripción IPTV mensual o anual: más de 8.000 canales y 50.000 películas. Compatible con IPTV Smarters, TiviMate y Smart IPTV en Firestick, Smart TV y móvil. Prueba gratis de 24 h.',
+  '__meta_title': "Suscripción IPTV — Prueba gratis de 24 h | SwiftChannels",
+  '__meta_desc': "Más de 8.000 canales y 50.000 películas desde 5 € al mes. Prueba todo gratis 24 h, sin tarjeta. Fire Stick, Smart TV Samsung y LG, móvil.",
 
   /* ── ask panel ── */
   'Quick answers':
@@ -2098,9 +2098,9 @@ it: {
   "__invite_p":
     "Il tuo riferimento d’ordine è il tuo codice d’invito. Quando un amico ordina il piano da 12 mesi e lo inserisce nella casella <b>Invitato da</b>, aggiungiamo 30 giorni al suo abbonamento e 30 giorni al tuo. Niente da pagare, né da una parte né dall’altra.",
   "__meta_title":
-    "Abbonamento IPTV 12 mesi — oltre 8.000 canali | SwiftChannels",
+    "Abbonamento IPTV — Prova gratuita 24 ore | SwiftChannels",
   "__meta_desc":
-    "Abbonamento IPTV mensile o annuale: oltre 8.000 canali e 50.000 film. Compatibile con IPTV Smarters, TiviMate e Smart IPTV su Fire Stick, Smart TV Samsung e LG. Prova gratuita di 24 ore.",
+    "Oltre 8.000 canali e 50.000 film da 5 € al mese. Prova tutto gratis per 24 ore, senza carta. Fire Stick, Smart TV Samsung e LG, telefono.",
   "__ty_title":
     "Pagamento ricevuto — manca un ultimo passo",
   "__ty_h1":
@@ -2172,9 +2172,9 @@ nl: {
   'A grid of film and series poster artwork': 'Een raster van film- en serieposters',
   'A curved wall of television screens showing many different channels at once':
     'Een gebogen wand van tv-schermen die veel verschillende zenders tegelijk tonen',
-  '__meta_title': 'IPTV abonnement Nederland — 8.000+ zenders | SwiftChannels',
+  '__meta_title': "IPTV abonnement — 24 uur gratis testen | SwiftChannels",
   '__meta_desc':
-    'IPTV abonnement per maand of per jaar: meer dan 8.000 zenders en 50.000 films. Werkt met IPTV Smarters, TiviMate en Smart IPTV op Firestick, smart-tv en telefoon. Gratis test van 24 uur.',
+    "Meer dan 8.000 zenders en 50.000 films vanaf 5 € per maand. Test alles 24 uur gratis, zonder creditcard. Fire Stick, Samsung en LG smart-tv.",
   'Quick answers': 'Snelle antwoorden',
   'Support 09:00–23:00 GMT+1': 'Support 09:00–23:00 GMT+1',
   'Questions? Answers are one tap away.': 'Vragen? De antwoorden zijn één tik verwijderd.',
