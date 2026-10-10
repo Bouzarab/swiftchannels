@@ -3,7 +3,17 @@
   "private": true,
   "description": "Static site for swiftchannels.com — build scripts only, nothing is bundled into the site.",
   "scripts": {
+    "gift:prepare": "node scripts/gift-setup.js prepare",
+    "gift:setup": "node scripts/gift-setup.js connect",
+    "gift:check": "node scripts/gift-setup.js check",
+    "gift:update": "node scripts/gift-setup.js update",
+    "gift:pause": "node scripts/gift-setup.js pause",
+    "gift:resend": "node scripts/gift-setup.js resend",
+    "gift:email-preview": "node scripts/gift-email-preview.js",
+    "test:gift-email": "node scripts/gift-email.test.js",
     "build": "node build.js",
+    "test:gift": "node --test scripts/gift.test.js scripts/gift-setup.test.js",
+    "test:gift-ui": "node scripts/gift-ui.test.js",
     "blog:write": "node scripts/write-blog-posts.js",
     "blog:notes": "node scripts/write-blog-notes.js",
     "blog:posters": "node scripts/fetch-blog-posters.js",
@@ -14,6 +24,7 @@
   "devDependencies": {
     "@fontsource/inter": "^5.0.0",
     "@fontsource/sora": "^5.0.0",
+    "@google/clasp": "3.4.1",
     "playwright": "^1.40.0"
   }
 }

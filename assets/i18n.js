@@ -447,6 +447,7 @@ fr: {
   'Pages': 'Pages',
   'IPTV FAQ': 'FAQ IPTV',
   'About SwiftChannels': 'À propos de SwiftChannels',
+  'Free IPTV gift': 'Cadeau IPTV gratuit',
   'IPTV for sports': 'IPTV pour le sport',
   'IPTV for movies': 'IPTV pour films',
   'Fire Stick IPTV': 'IPTV Fire Stick',
@@ -926,6 +927,7 @@ de: {
   'Pages': 'Seiten',
   'IPTV FAQ': 'IPTV FAQ',
   'About SwiftChannels': 'Über SwiftChannels',
+  'Free IPTV gift': 'Kostenloses IPTV-Geschenk',
   'IPTV for sports': 'IPTV für Sport',
   'IPTV for movies': 'IPTV für Filme',
   'Fire Stick IPTV': 'IPTV für Fire Stick',
@@ -1413,6 +1415,7 @@ es: {
   'Pages': 'Páginas',
   'IPTV FAQ': 'FAQ IPTV',
   'About SwiftChannels': 'Sobre SwiftChannels',
+  'Free IPTV gift': 'Regalo IPTV gratuito',
   'IPTV for sports': 'IPTV para deportes',
   'IPTV for movies': 'IPTV para películas',
   'Fire Stick IPTV': 'IPTV para Fire Stick',
@@ -2055,6 +2058,7 @@ it: {
     "FAQ IPTV",
   "About SwiftChannels":
     "Chi siamo: SwiftChannels",
+  "Free IPTV gift": "Regalo IPTV gratuito",
   "IPTV for sports":
     "IPTV per sport",
   "IPTV for movies":
@@ -2548,6 +2552,7 @@ nl: {
   'Pages': 'Pagina\'s',
   'IPTV FAQ': 'IPTV FAQ',
   'About SwiftChannels': 'Over SwiftChannels',
+  'Free IPTV gift': 'Gratis IPTV-cadeau',
   'IPTV for sports': 'IPTV voor sport',
   'IPTV for movies': 'IPTV voor films',
   'Fire Stick IPTV': 'IPTV voor Fire Stick',

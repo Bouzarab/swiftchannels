@@ -6,3 +6,9 @@ CLAUDE.md
 _to_delete/
 notes/
 marketing/
+# Keep Google logins and private gift inventory out of the public repository.
+.clasp.json
+.clasprc.json
+PrivateInventory.gs
+PrivateSettings.gs
+SwiftChannels-private-gifts/

@@ -280,7 +280,7 @@ const LANDING = {
 for (const [slug, data] of Object.entries(LANDING)) {
   PAGES[slug] = {
     type:'WebPage', priority:data.priority, changefreq:'monthly',
-    ...Object.fromEntries(Object.entries(data).map(([lang, arr]) => [lang, {
+    ...Object.fromEntries(Object.entries(data).filter(([, arr]) => Array.isArray(arr)).map(([lang, arr]) => [lang, {
       title:arr[0], desc:arr[1], label:arr[2], h1:arr[2], intro:arr[3],
       sections:[[arr[4], [arr[5], (COMMON[lang] || COMMON.en).note]]],
       faqs:[
